@@ -1,0 +1,12 @@
+{
+	ingredientPattern: "A_	BS	F_",
+	ingredients: {
+		"A": { type: "item", code: "primitive-arrowhead-bone", },
+		"B": { type: "item", code: "bamboo-arrow-shaft" },
+		"S": { type: "item", code: "neolithicmod:animal-leatherstrips" },
+		"F": { type: "item", code: "feather" }
+	},
+	width: 2,
+	height: 3,
+	output: { type: "item", code: "arrow-primitive", quantity: 1  }
+}

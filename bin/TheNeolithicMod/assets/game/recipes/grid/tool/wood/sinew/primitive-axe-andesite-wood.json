@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "A_	BS",
+	ingredients: {
+		"A": { type: "item", code: "axehead-andesite" },
+		"B": {type: "block", code: "neolithicmod:branch-very-thin-*-debarked-ud" , allowedVariants: ["acacia", "birch", "kapok", "maple", "oak", "pine" ], name: "wood"},
+		"S": { type: "item", code: "neolithicmod:byproducts-sinew-thread" }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "item", code: "axe-primitive-andesite-{wood}", quantity: 1  }
+}

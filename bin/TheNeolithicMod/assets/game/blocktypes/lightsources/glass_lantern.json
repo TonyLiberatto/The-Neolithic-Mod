@@ -1,0 +1,22 @@
+{
+	code: "glass_lantern",
+	creativeinventory: { "general": ["*"], "decorative": ["*"], "neolithicdeco": ["*"] },
+	blockmaterial: "Metal",
+	lightAbsorption: 0,
+	lightHsv: [8, 2, 31],
+	glowLevel: 32,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	drawtype: "json",
+	shape: { base: "block/lightsources/glass_lantern" },
+	replaceable: 1000,
+	resistance: 1,
+	sounds: {
+		"place": "player/buildhigh",
+		"break": "block/glass"
+	}
+}

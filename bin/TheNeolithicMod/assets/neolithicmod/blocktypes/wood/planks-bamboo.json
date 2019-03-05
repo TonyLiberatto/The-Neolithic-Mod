@@ -1,0 +1,25 @@
+{
+	code: "planks",
+	variantgroups: [
+		{ code: "type", states: ["bamboo-brown", "bamboo-green"] },
+	],
+	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicblocks": ["*"] },
+	shape: { base: "game:block/basic/cube" },
+	blockmaterial: "Wood",
+	drawtype: "cube",
+	textures: {
+		horizontals: { base: "block/wood/planks/{type}-side" },
+		verticals: { base: "block/wood/planks/{type}-top" },
+	},
+	resistance: 2.75,
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	combustibleProps: {
+		burnTemperature: 800,
+		burnDuration: 24,
+	},
+	maxStackSize: 64,
+	materialDensity: 400
+}

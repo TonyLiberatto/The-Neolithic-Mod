@@ -1,0 +1,89 @@
+{
+	code: "bowl",
+	behaviors: [{name: "UnstableFalling"} ],
+	variantgroups: [
+		{ code:"type", states: ["raw", "burned", "honey", "glue", "sinew-fibers"] },
+	],
+	combustiblePropsByType: {
+		"bowl-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "bowl-burned" },
+			requiresContainer: false
+		},
+		"*bowl-sinew-fibers": {
+			meltingPoint: 110,
+			meltingDuration: 20,
+			smeltedRatio: 1,
+			smeltingType: "cook",
+			smeltedStack: { type: "block", code: "bowl-glue" },
+			requiresContainer: false
+		}
+	},
+	shapeByType: {
+		"*-honey": { base: "block/clay/bowl-ground" },
+		"*-glue": { base: "block/clay/bowl-ground" },
+		"*-fibers": { base: "block/clay/bowl-ground" },
+		"*": { base: "block/clay/bowl-empty-ground" },
+	},
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": ["*"], "decorative": ["*"], "neolithicitems": ["*"]},
+	replaceable: 300,
+	resistance: 0.75,
+	maxStackSize: 8,
+	lightAbsorption: 0,
+	texturesByType: {
+		"*-raw": { 
+			all: { base: "block/clay/blueclay" }
+		},
+		"*-honey": {
+			content: { base: "block/liquid/honey" }
+		},
+		"*-glue": {
+			content: { base: "block/liquid/glue"}
+		},
+		"*-sinew-fibers": {
+			content: { base: "block/liquid/fibers"}
+		}
+		
+	},
+	sounds: {
+		walk: "walk/stone",
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	collisionbox: { x1: 0.3125, y1: 0, z1: 0.3125, x2: 0.6875, y2: 0.125, z2: 0.6875 },
+	selectionbox: { x1: 0.3125, y1: 0, z1: 0.3125, x2: 0.6875, y2: 0.125, z2: 0.6875 },
+	guiTransform: {
+		translation: { x: 0, y: 3, z: 0 },
+		origin: { x: 0.5, y: 0.0625, z: 0.5 },
+		scale: 3
+	},
+	groundTransform: {
+		scale: 2.5
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0.4, z: 0 },
+		rotation: { x: 0, y: -14, z: 0 },
+		scale: 2
+	},
+	tpHandTransform: {
+		translation: { x: -0.9, y: -0.1, z: -0.8 },
+		rotation: { x: 0, y: -56, z: 0 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 0.66
+	},
+	nutritionPropsByType: {
+		"*-honey": { 
+			saturation: 0, 
+			health: 4,
+			eatenStack: { type: "block", code: "bowl-burned" }
+		},
+	}
+}

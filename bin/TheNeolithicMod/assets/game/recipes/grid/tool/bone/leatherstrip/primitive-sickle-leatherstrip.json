@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "H_	BS",
+	ingredients: {
+		"H": { type: "item", code: "sicklehead-*", allowedVariants: ["granite", "andesite", "basalt", "obsidian", "flint" ], name: "stone"  },
+		"B": {type: "item", code: "neolithicmod:animal-large-bone"},
+		"S": { type: "item", code: "neolithicmod:animal-leatherstrips" }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "item", code: "primitive-sickle-{stone}", quantity: 1  }
+}

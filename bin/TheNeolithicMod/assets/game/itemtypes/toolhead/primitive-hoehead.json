@@ -1,0 +1,36 @@
+{
+	code: "primitive-hoehead",
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint" ] },
+	],
+	shape: { base: "item/tool/primitive-hoe" },
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"bone": { base: "block/transparent" },
+		"sinew": { base: "block/transparent" },
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithictools": ["*"], "neolithicitems": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 34, y: 16, z: 87 },
+		origin: { x: 0.4, y: 0.35, z: -0.3 },
+		scale: 2.5
+	},
+		guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -52, y: -131, z: -180 },
+		origin: { x: 0.6, y: 0.5, z: 0.5 },
+		scale: 2.5
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: 0.2, y: -0.4, z: -0.13 },
+		rotation: { x: 0, y: -80, z: -10 },
+		origin: { x: 0.2, y: 0.5, z: 0.8 },
+		scale: 1
+	}
+}

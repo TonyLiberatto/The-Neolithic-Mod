@@ -1,0 +1,48 @@
+{
+	code: "spear",
+	class: "ItemSpear",
+	damagedby: ["attacking"],
+	tool: "spear",
+	variantgroups: [
+		{code: "type", states: ["javelin"]} 
+		],
+	drawtype: "json",
+	shape: { base: "item/tool/primitive-javelin" },
+	heldTpHitAnimation: "breaktool",
+	MaxStackSize: 32,
+	textures: {
+		"bamboo-side": { base: "block/wood/planks/bamboo-brown-side" },
+		"bone": { base: "block/bone" },
+		"sinew": { base: "block/sinew" },
+	},
+	attackRange: 2.5,
+	attackpower: 1,
+	"__comment": "Thrown damage",
+	attributes: {
+	damage: 2.5,
+	spearEntityCode: "spear-javelin"
+	},
+	durability: 8,
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithictools": ["*"] },
+	fpHandTransform: {
+		translation: { x: -0.1, y: 0.3, z: 0 },
+		rotation: { x: -85, y: 0, z: 75 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: 3, z: 0 },
+		rotation: { x: 90, y: -45, z: -35 },
+		origin: { x: 0.6, y: -0.8, z: 0.55 },
+		scale: 1.4299
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -1.7, y: -0.7, z: -0.5 },
+		rotation: { x: 0, y: 0, z: -10 },
+		scale: 1
+	}
+}

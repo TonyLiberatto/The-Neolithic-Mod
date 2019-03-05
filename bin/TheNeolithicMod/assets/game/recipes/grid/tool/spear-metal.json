@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "S	B	B",
+	ingredients: {
+		"S": { type: "item", code: "game:spearhead-*", allowedVariants: [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver" ],  name: "material"  },
+		"B": { type: "block", code: "neolithicmod:branch-very-thin-*-debarked-ud" }
+	},
+	width: 1,
+	height: 3,
+	output: { type: "item", code: "spear-{material}", quantity: 1  }
+}

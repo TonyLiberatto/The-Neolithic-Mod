@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "H,C,S",
+	ingredients: {
+        "H": { type: "item", code: "game:hammer-*", isTool: true },
+        "C": { type: "item", code: "game:chisel-*", isTool: true },
+		"S": { type: "item", code: "game:stone-*", name: "rock", quantity: 4 , allowedVariants: ["andesite", "chalk", "claystone", "granite", "sandstone", "shale", "basalt"] }
+	},
+	width: 1,
+	height: 3,
+	output: { type: "item", code: "stonebrick-{rock}" }
+}

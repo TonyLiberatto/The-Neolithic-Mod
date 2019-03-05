@@ -1,0 +1,8 @@
+{
+	code: "bamboo-javelin-shaft",
+	texture: { base: "item/tool/shafts/bamboo-javelin-shaft" },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithictools": ["*"] },
+	maxstacksize: 64,
+	materialDensity: 500,
+	attackRange: 2.5,
+}

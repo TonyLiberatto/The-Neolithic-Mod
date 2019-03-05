@@ -1,0 +1,55 @@
+{
+	code: "adze",
+	class: "ItemAdze",
+	variantgroups: [
+		{code: "type", states: ["primitive"]},
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint",] },
+		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
+	],
+	tool: "chisel",
+	heldTpHitAnimation: "breaktool",
+	shape: { base: "item/tool/branch-adze" },
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"wood": { base: "game:block/wood/debarked/{wood}" },
+		"rope": { base: "neolithicmod:block/rope" },
+	},
+	durabilitybytype: 
+	{
+		"adze-primitive-granite-*": 800,
+		"adze-primitive-andesite-*": 800,
+		"adze-primitive-basalt-*": 800,
+		"adze-primitive-obsidian-*": 1000,
+		"adze-primitive-flint-*": 900,
+	},
+	attackpowerbytype: 
+	{
+		"adze-primitive-granite-*": 0.75,
+		"adze-primitive-andesite-*": 0.75,
+		"adze-primitive-basalt-*": 0.75,
+		"adze-primitive-obsidian-*": 1.5,
+		"adze-primitive-flint-*": 1,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithictools": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: 5, z: 0 },
+		rotation: { x: -77, y: -135, z: 160 },
+		origin: { x: 0.54, y: 0.5, z: 0.48 },
+		scale: 2.6
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.75, y: -0.48, z: -0.52 },
+		rotation: { x: 90, y: 1, z: 0 },
+		scale: 1
+	}
+}

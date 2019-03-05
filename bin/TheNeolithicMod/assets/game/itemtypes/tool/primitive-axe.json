@@ -1,0 +1,89 @@
+{
+	code: "axe",
+	class: "ItemAxe",
+	variantgroups: [
+		{code: "type", states: ["primitive"]},
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", ] },
+	],
+	tool: "axe",
+	damagedby: ["blockbreaking", "attacking"],
+	shape: { base: "item/tool/primitive-axe" },
+	heldTpHitAnimation: "axechop",
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"bone": { base: "block/bone" },
+		"sinew": { base: "block/sinew" },
+	},
+	attackRange: 2,
+	miningtierbytype: {
+		"axe-primitive-granite": 1,
+		"axe-primitive-andesite": 1,
+		"axe-primitive-basalt": 1,
+		"axe-primitive-obsidian": 1,
+		"axe-primitive-flint": 1,
+	},
+	miningspeedbytype: {
+		"axe-primitive-granite": {
+			"wood": 3.3,
+			"plant": 2.2,
+			"leaves": 1.7
+		},
+		"axe-primitive-andesite": {
+			"wood": 3.3,
+			"plant": 2.2,
+			"leaves": 1.7
+		},
+		"axe-primitive-basalt": {
+			"wood": 3.3,
+			"plant": 2.2,
+			"leaves": 1.7
+		},
+		"axe-primitive-obsidian": {
+			"wood": 4,
+			"plant": 2.7,
+			"leaves": 2.4
+		},
+		"axe-primitive-flint": {
+			"wood": 3,
+			"plant": 2.2,
+			"leaves": 1.6
+		},
+	},
+	durabilitybytype: {
+		"axe-primitive-granite": 200,
+		"axe-primitive-andesite": 200,
+		"axe-primitive-basalt": 200,
+		"axe-primitive-obsidian": 250,
+		"axe-primitive-flint": 220,
+	},
+	attackpowerbytype: {
+		"axe-primitive-granite": 0.75,
+		"axe-primitive-andesite": 0.75,
+		"axe-primitive-basalt": 0.75,
+		"axe-primitive-obsidian": 1.5,
+		"axe-primitive-flint": 1.25,
+
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithictools": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -56, y: -127, z: -180 },
+		origin: { x: 0.6, y: 0.45, z: 0.5 },
+		scale: 2.1
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.75, y: -0.5, z: -0.55 },
+		rotation: { x: 90, y: 0, z: -10 },
+		scale: 1
+	}
+}

@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "BB,BB",
+	ingredients: {
+		"B": { type: "item", code: "stonebrick-*", name: "rock", allowedVariants: ["andesite", "chalk", "claystone", "granite", "sandstone", "shale", "basalt"] }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "block", code: "game:stonebricks-{rock}", quantity: 1  }
+}

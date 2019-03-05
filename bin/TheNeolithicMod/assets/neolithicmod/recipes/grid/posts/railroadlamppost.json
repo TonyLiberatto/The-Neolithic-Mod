@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "P",
+	ingredients: {
+		"P": { type: "block", code: "post-industrial-e" }
+	},
+	width: 1,
+	height: 1,
+	output: { type: "block", code: "post-railroad-e", quantity: 1 } 
+}

@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "T_T	___	T_T",
+	ingredients: {
+		"T": { type: "block", code: "branch-thin-*-barked-ud", allowedVariants: ["acacia", "birch", "kapok", "maple", "oak", "pine"], name: "wood" }
+	},
+	width: 3,
+	height: 3,
+	shapeless: false,
+	output: { type: "block", code: "primitivefence-midsection-{wood}-we", quantity: 1  }
+}

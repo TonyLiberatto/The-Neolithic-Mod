@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "BB	BB	BB",
+	ingredients: {
+		"B": { type: "block", code: "game:planks-pine" },
+	},
+	width: 2,
+	height: 3,
+	output: { type: "block", code: "doorpine-north-down-closed-left"  }
+}

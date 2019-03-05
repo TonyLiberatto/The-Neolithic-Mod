@@ -1,0 +1,12 @@
+{
+	ingredientPattern: "SBS	_G_	_L_",
+	ingredients: {
+		"S": { type: "item", code: "flake-*", allowedVariants: ["obsidian", "flint" ], name: "stone", quantity: 5  },
+		"B": {type: "block", code: "neolithicmod:branch-thin-*"},
+		"L": { type: "item", code: "neolithicmod:animal-leatherstrips" },
+		"G": { type: "block", code: "bowl-glue", returnedStack: { type: "block", code: "bowl-burned" } },
+	},
+	width: 3,
+	height: 3,
+	output: { type: "item", code: "sword-primitive-{stone}", quantity: 1  }
+}

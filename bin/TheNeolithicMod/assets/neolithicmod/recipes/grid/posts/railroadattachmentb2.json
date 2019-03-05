@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "P",
+	ingredients: {
+		"P": { type: "block", code: "attachment-industrial-east-long" }
+	},
+	width: 1,
+	height: 1,
+	output: { type: "block", code: "attachment-railroad-east-long", quantity: 1 } 
+}

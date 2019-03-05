@@ -1,0 +1,92 @@
+﻿{
+	"game:tabname-totems": "Totems",
+	
+	"block-totem-pig-new-acacia-lit-north": "Lit New Acacia Pig Totem",
+	"block-totem-pig-bowl-acacia-lit-north": "Lit Acacia Pig Totem with bowl",
+	"block-totem-pig-tusk-acacia-lit-north": "Lit Acacia Pig Totem with Tusks",
+	"block-totem-pig-eyes-acacia-lit-north": "Lit Acacia Pig Totem with Eyes",
+	
+	"block-totem-pig-new-acacia-unlit-north": "Unlit New Acacia Pig Totem",
+	"block-totem-pig-bowl-acacia-unlit-north": "Unlit Acacia Pig Totem with bowl",
+	"block-totem-pig-tusk-acacia-unlit-north": "Unlit Acacia Pig Totem with Tusks",
+	"block-totem-pig-eyes-acacia-unlit-north": "Unlit Acacia Pig Totem with Eyes",
+	"block-totem-pig-crucible-acacia-north": "Finished Acacia Pig Totem with Crucible",
+	
+	"block-totem-pig-new-birch-lit-north": "New Lit Birch Pig Totem",
+	"block-totem-pig-bowl-birch-lit-north": "Lit Birch Pig Totem with bowl",
+	"block-totem-pig-tusk-birch-lit-north": "Lit Birch Pig Totem with Tusks",
+	"block-totem-pig-eyes-birch-lit-north": "Lit Birch Pig Totem with Eyes",
+	
+	"block-totem-pig-new-birch-unlit-north": "New Unlit Birch Pig Totem",
+	"block-totem-pig-bowl-birch-unlit-north": "Unlit Birch Pig Totem with bowl",
+	"block-totem-pig-tusk-birch-unlit-north": "Unlit Birch Pig Totem with Tusks",
+	"block-totem-pig-eyes-birch-unlit-north": "Unlit Birch Pig Totem with Eyes",
+	
+	"block-totem-pig-crucible-birch-north": "Finished Birch Pig Totem with Crucible",
+	
+	"block-totem-pig-new-kapok-lit-north": "New Lit Kapok Pig Totem",
+	"block-totem-pig-bowl-kapok-lit-north": "Lit Kapok Pig Totem with bowl",
+	"block-totem-pig-tusk-kapok-lit-north": "Lit Kapok Pig Totem with Tusks",
+	"block-totem-pig-eyes-kapok-lit-north": "Lit Kapok Pig Totem with Eyes",
+	
+	"block-totem-pig-new-kapok-unlit-north": "New Unlit Kapok Pig Totem",
+	"block-totem-pig-bowl-kapok-unlit-north": "Unlit Kapok Pig Totem with bowl",
+	"block-totem-pig-tusk-kapok-unlit-north": "Unlit Kapok Pig Totem with Tusks",
+	"block-totem-pig-eyes-kapok-unlit-north": "Unlit Kapok Pig Totem with Eyes",
+	
+	"block-totem-pig-crucible-kapok-north": "Finished Kapok Pig Totem with Crucible",
+	
+	"block-totem-pig-new-maple-lit-north": "New Lit Maple Pig Totem",
+	"block-totem-pig-bowl-maple-lit-north": "Lit Maple Pig Totem with bowl",
+	"block-totem-pig-tusk-maple-lit-north": "Lit Maple Pig Totem with Tusks",
+	"block-totem-pig-eyes-maple-lit-north": "Lit Maple Pig Totem with Eyes",
+	
+	"block-totem-pig-new-maple-unlit-north": "New Unlit Maple Pig Totem",
+	"block-totem-pig-bowl-maple-unlit-north": "Unlit Maple Pig Totem with bowl",
+	"block-totem-pig-tusk-maple-unlit-north": "Unlit Maple Pig Totem with Tusks",
+	"block-totem-pig-eyes-maple-unlit-north": "Unlit Maple Pig Totem with Eyes",
+	
+	"block-totem-pig-crucible-maple-north": "Finished Maple Pig Totem with Crucible",
+	
+	"block-totem-pig-new-oak-lit-north": "New Lit Oak Pig Totem",
+	"block-totem-pig-bowl-oak-lit-north": "lit Oak Pig Totem with bowl",
+	"block-totem-pig-tusk-oak-lit-north": "Lit Oak Pig Totem with Tusks",
+	"block-totem-pig-eyes-oak-lit-north": "Lit Oak Pig Totem with Eyes",
+	
+	"block-totem-pig-new-oak-unlit-north": "New Unlit Oak Pig Totem",
+	"block-totem-pig-bowl-oak-unlit-north": "Unlit Oak Pig Totem with bowl",
+	"block-totem-pig-tusk-oak-unlit-north": "Unlit Oak Pig Totem with Tusks",
+	"block-totem-pig-eyes-oak-unlit-north": "Unlit Oak Pig Totem with Eyes",
+	
+	"block-totem-pig-crucible-oak-north": "Finished Oak Pig Totem with Crucible",
+	
+	"block-totem-pig-new-pine-lit-north": "New Lit Pine Pig Totem",
+	"block-totem-pig-bowl-pine-lit-north": "lit Acacia Pine Totem with bowl",
+	"block-totem-pig-tusk-pine-lit-north": "Lit Acacia Pine Totem with Tusks",
+	"block-totem-pig-eyes-pine-lit-north": "Lit Acacia Pine Totem with Eyes",
+	
+	"block-totem-pig-new-pine-unlit-north": "New Unlit Pine Pig Totem",
+	"block-totem-pig-bowl-pine-unlit-north": "Unlit Acacia Pine Totem with bowl",
+	"block-totem-pig-tusk-pine-unlit-north": "Unlit Acacia Pine Totem with Tusks",
+	"block-totem-pig-eyes-pine-unlit-north": "Unlit Acacia Pine Totem with Eyes",
+	
+	"block-totem-pig-crucible-pine-north": "Finished Pine Pig Totem with Crucible",
+	
+	"blockdesc-totem-pig-new-*": "crafting grid with a fruit offering bowl for next step",
+	"blockdesc-totem-pig-bowl-*": "crafting grid with a vegetable offering bowl for next step",
+	"blockdesc-totem-pig-tusk-*": "crafting grid with a meat offering bowl for next step",
+	"blockdesc-totem-pig-eyes-*": "crafting grid with a bread offering bowl for next step",
+	"blockdesc-totem-pig-crucible-*": "Right click with clay in your hand to make crucibles",
+	
+	"item-offering-bowl-bread": "Bread Offering Bowl ",
+	"item-offering-bowl-fruit": "Fruit Offering Bowl",
+	"item-offering-bowl-vegetable": "Vegetable Offering Bowl ",
+	"item-offering-bowl-meat": "Meat Offering Bowl",
+	"item-offering-bowl-empty": "Empty Offering Bowl",
+	
+	"itemdesc-offering-bowl-empty": "Fill with Food",
+	"itemdesc-offering-bowl-bread": "use with Pig Totem Eyes ",
+	"itemdesc-offering-bowl-fruit": "use with New Pig Totem  ",
+	"itemdesc-offering-bowl-vegetable": "use with Pig Totem Bowl ",
+	"itemdesc-offering-bowl-meat": "use with Pig Totem Tusk ",
+	}

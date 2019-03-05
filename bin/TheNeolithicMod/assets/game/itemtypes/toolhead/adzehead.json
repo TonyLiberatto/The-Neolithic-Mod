@@ -1,0 +1,34 @@
+{
+	code: "adzehead",
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint",  ] },
+	],
+	shape: { base: "item/tool/primitive-adze" },
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"bone": { base: "block/transparent" },
+		"sinew": { base: "block/transparent" },
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"], "neolithictools": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.4, y: -0.4, z: 0 },
+		rotation: { x: 25, y: 0, z: 86 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 3, y: 0, z: 120 },
+		rotation: { x: -52, y: -131, z: -180 },
+		origin: { x: 0.55, y: 1.1, z: 0.1 },
+		scale: 3.4
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.3, y: -0.8, z: -0.5 },
+		rotation: { x: 90, y: -49, z: 0 },
+		scale: 1
+	}
+}

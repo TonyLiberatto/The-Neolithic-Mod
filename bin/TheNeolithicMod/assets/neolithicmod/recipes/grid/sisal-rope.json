@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "TTT	TTT	TTT",
+	ingredients: {
+		"T": { type: "item", code: "sisal-twine", name: "Sisal Twine"  }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "item", code: "sisal-rope", quantity: 3  }
+}

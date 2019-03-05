@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "T_	BS	B_",
+	ingredients: {
+		"T": { type: "item", code: "shovelhead-*", allowedVariants: ["granite", "andesite", "basalt", "obsidian", "flint" ], name: "stone"  },
+		"B": {type: "item", code: "neolithicmod:animal-large-bone"},
+		"S": { type: "item", code: "neolithicmod:byproducts-sinew-thread" }
+	},
+	width: 2,
+	height: 3,
+	output: { type: "item", code: "shovel-primitive-{stone}", quantity: 1  }
+}

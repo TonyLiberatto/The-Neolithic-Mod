@@ -1,0 +1,77 @@
+{
+	code: "spear",
+	class: "ItemSpear",
+	damagedby: ["attacking"],
+	tool: "spear",
+	variantgroups: [
+		{code: "type", states: ["primitive"]},
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint" ] },
+	],
+	shape: { base: "item/tool/primitive-spear" },
+	heldTpHitAnimation: "spearhit",
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"bamboo": { base: "block/wood/planks/bamboo-green-side" },
+		"sinew": {base: "block/sinew"}
+	},
+	attackRange: 3.5,
+	attackpowerbytype: {
+		"spear-primitive-granite": 2,
+		"spear-primitive-andesite": 2,
+		"spear-primitive-basalt": 2,
+		"spear-primitive-flint": 2.25,
+		"spear-primitive-obsidian": 2.5,
+	},
+	"__comment": "Thrown damage",
+	attributesByType: {
+		"spear-primitive-granite": {
+			damage: 3,
+			spearEntityCode: "spear-primitive"
+		},
+		"spear-primitive-andesite": {
+			damage: 3,
+			spearEntityCode: "spear-primitive"
+		},
+		"spear-primitive-basalt": {
+			damage: 3,
+			spearEntityCode: "spear-primitive"
+		},
+		"spear-primitive-obsidian": {
+			damage: 4.25,
+			spearEntityCode: "spear-primitive"
+		},
+		"spear-primitive-flint": {
+			damage: 4,
+			spearEntityCode: "spear-primitive"
+		},
+	},
+	durabilitybytype: {
+		"spear-primitive-granite": 50,
+		"spear-primitive-andesite": 50,
+		"spear-primitive-basalt": 50,
+		"spear-primitive-obsidian": 90,
+		"spear-primitive-flint": 70,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithictools": ["*"]  },
+	fpHandTransform: {
+		translation: { x: -0.1, y: 0.3, z: 0 },
+		rotation: { x: -85, y: 0, z: 75 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: 3, z: 0 },
+		rotation: { x: 90, y: -45, z: -35 },
+		origin: { x: 0.6, y: -0.8, z: 0.55 },
+		scale: 1.4299
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -1.7, y: -0.7, z: -0.5 },
+		rotation: { x: 0, y: 0, z: -10 },
+		scale: 1
+	}
+}

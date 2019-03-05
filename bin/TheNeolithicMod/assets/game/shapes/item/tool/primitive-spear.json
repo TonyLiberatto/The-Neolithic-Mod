@@ -1,0 +1,102 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+		"bamboo": "block/wood/planks/bamboo-green-side",
+		"stone": "item/tool/material/granite",
+		"sinew": "block/sinew"
+	},
+	"elements": [
+		{
+			"name": "bamboo",
+			"from": [ -21.0, 7.5, 7.5 ], 
+			"to": [ 8.0, 8.5, 8.5 ], 
+			"rotationOrigin": [ 11.0, 8.0, 8.0 ],
+			"faces": {
+				"north": { "texture": "#bamboo", "uv": [ 0.0, 0.0, 2.0, 16.0 ], "rotation": 90, "autoUv": false },
+				"east": { "texture": "#bamboo", "uv": [ 4.0, 5.0, 6.0, 7.0 ], "autoUv": false },
+				"south": { "texture": "#bamboo", "uv": [ 0.0, 0.0, 2.0, 16.0 ], "rotation": 90, "autoUv": false },
+				"west": { "texture": "#bamboo", "uv": [ 4.0, 2.0, 6.0, 4.0 ], "autoUv": false },
+				"up": { "texture": "#bamboo", "uv": [ 0.0, 0.0, 2.0, 16.0 ], "rotation": 90, "autoUv": false },
+				"down": { "texture": "#bamboo", "uv": [ 0.0, 0.0, 2.0, 16.0 ], "rotation": 90, "autoUv": false }
+			},
+			"children": [
+				{
+					"name": "stone1",
+					"from": [ 26.0, 0.4, -0.5 ], 
+					"to": [ 32.0, 0.6, 1.5 ], 
+					"rotationOrigin": [ 21.0, -0.5, -0.5 ],
+					"faces": {
+						"north": { "texture": "#stone", "uv": [ 1.0, 2.0, 7.0, 2.0 ] },
+						"east": { "texture": "#stone", "uv": [ 3.0, 3.0, 5.0, 3.0 ] },
+						"south": { "texture": "#stone", "uv": [ 0.0, 7.0, 6.0, 7.0 ] },
+						"west": { "texture": "#stone", "uv": [ 2.0, 5.0, 4.0, 5.0 ] },
+						"up": { "texture": "#stone", "uv": [ 3.0, 4.0, 9.0, 6.0 ] },
+						"down": { "texture": "#stone", "uv": [ 1.0, 2.0, 7.0, 4.0 ] }
+					},
+					"children": [
+						{
+							"name": "sinew",
+							"from": [ 0.6, -0.5, -0.1 ], 
+							"to": [ 1.8, 0.7, 2.1 ], 
+							"rotationOrigin": [ 0.6, -0.5, -0.1 ],
+							"faces": {
+								"north": { "texture": "#sinew", "uv": [ 4.0, 10.0, 11.0, 13.0 ], "autoUv": false },
+								"east": { "texture": "#sinew", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+								"south": { "texture": "#sinew", "uv": [ 2.0, 3.0, 8.0, 6.0 ], "autoUv": false },
+								"west": { "texture": "#sinew", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+								"up": { "texture": "#sinew", "uv": [ 2.0, 7.0, 8.0, 10.0 ], "autoUv": false },
+								"down": { "texture": "#sinew", "uv": [ 1.0, 2.0, 8.0, 5.0 ], "autoUv": false }
+							}
+						}
+					]
+				},
+				{
+					"name": "stone2",
+					"from": [ 32.0, 0.4, 0.0 ], 
+					"to": [ 34.0, 0.6, 1.0 ], 
+					"rotationOrigin": [ 23.0, 0.5, -0.4 ],
+					"faces": {
+						"north": { "texture": "#stone", "uv": [ 2.0, 2.0, 4.0, 2.0 ] },
+						"east": { "texture": "#stone", "uv": [ 1.0, 5.0, 2.0, 5.0 ] },
+						"south": { "texture": "#stone", "uv": [ 3.0, 0.0, 5.0, 0.0 ] },
+						"west": { "texture": "#stone", "uv": [ 0.0, 0.0, 1.0, 0.0 ], "enabled": false },
+						"up": { "texture": "#stone", "uv": [ 5.0, 3.0, 7.0, 4.0 ] },
+						"down": { "texture": "#stone", "uv": [ 0.0, 3.0, 2.0, 4.0 ] }
+					}
+				},
+				{
+					"name": "stone3",
+					"from": [ 27.5, 0.4, -1.0 ], 
+					"to": [ 30.5, 0.6, -0.5 ], 
+					"rotationOrigin": [ 23.5, 0.5, -1.4 ],
+					"faces": {
+						"north": { "texture": "#stone", "uv": [ 1.0, 5.0, 4.0, 5.0 ] },
+						"east": { "texture": "#stone", "uv": [ 0.0, 2.0, 0.5, 2.0 ] },
+						"south": { "texture": "#stone", "uv": [ 0.0, 0.0, 3.0, 0.0 ], "enabled": false },
+						"west": { "texture": "#stone", "uv": [ 2.0, 3.0, 2.5, 3.0 ] },
+						"up": { "texture": "#stone", "uv": [ 3.0, 1.0, 6.0, 1.5 ] },
+						"down": { "texture": "#stone", "uv": [ 4.0, 4.0, 7.0, 4.5 ] }
+					}
+				},
+				{
+					"name": "stone4",
+					"from": [ 27.5, 0.4, 1.5 ], 
+					"to": [ 30.5, 0.6, 2.0 ], 
+					"rotationOrigin": [ 23.5, 0.5, -1.4 ],
+					"faces": {
+						"north": { "texture": "#stone", "uv": [ 0.0, 0.0, 4.0, 0.0 ], "enabled": false },
+						"east": { "texture": "#stone", "uv": [ 1.0, 1.0, 1.5, 1.0 ] },
+						"south": { "texture": "#stone", "uv": [ 3.0, 5.0, 7.0, 5.0 ] },
+						"west": { "texture": "#stone", "uv": [ 3.0, 2.0, 3.5, 2.0 ] },
+						"up": { "texture": "#stone", "uv": [ 4.0, 1.0, 8.0, 1.5 ] },
+						"down": { "texture": "#stone", "uv": [ 1.0, 2.0, 5.0, 2.5 ] }
+					}
+				}
+			]
+		}
+	]}

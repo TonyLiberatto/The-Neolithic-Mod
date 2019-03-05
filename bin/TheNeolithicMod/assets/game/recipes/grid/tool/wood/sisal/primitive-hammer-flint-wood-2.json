@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "A_	BS",
+	ingredients: {
+		"A": { type: "item", code: "hammer-hand-flint" },
+		"B": {type: "block", code: "neolithicmod:branch-very-thin-*-debarked-ud" , allowedVariants: ["acacia", "birch", "kapok", "maple", "oak", "pine" ], name: "wood" },
+		"S": { type: "item", code: "neolithicmod:sisal-twine" }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "item", code: "hammer-primitive-flint-{wood}", quantity: 1  }
+}

@@ -1,0 +1,5 @@
+[
+	{ file: "game:worldgen/blockpatchconfig", op: "add", path: "/enabled",  value: false },
+	{ file: "game:worldgen/treengenproperties", op: "add", path: "/enabled",  value: false },
+		
+]

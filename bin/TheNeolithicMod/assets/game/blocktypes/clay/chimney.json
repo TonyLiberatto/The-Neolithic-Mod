@@ -1,0 +1,231 @@
+{
+  code: "claybrickchimney",
+  entityclass: "BlockEntityChimney",
+  attributes: {
+    searchRadius: 2,
+    lookFor: [
+      [ "game:firepit-lit", "game:claybrickchimney-blue-unlit-we", "game:claybrickchimney-blue-lit-we" ],
+      [ "game:firepit-lit", "game:claybrickchimney-brown-unlit-we", "game:claybrickchimney-brown-lit-we" ],
+      [ "game:firepit-lit", "game:claybrickchimney-fire-unlit-we", "game:claybrickchimney-fire-lit-we" ],
+      [ "game:firepit-lit", "game:claybrickchimney-red-unlit-we", "game:claybrickchimney-red-lit-we" ],
+      [ "game:firepit-lit", "game:claybrickchimney-blue-unlit-ns", "game:claybrickchimney-blue-lit-ns" ],
+      [ "game:firepit-lit", "game:claybrickchimney-brown-unlit-ns", "game:claybrickchimney-brown-lit-ns" ],
+      [ "game:firepit-lit", "game:claybrickchimney-fire-unlit-ns", "game:claybrickchimney-fire-lit-ns" ],
+      [ "game:firepit-lit", "game:claybrickchimney-red-unlit-ns", "game:claybrickchimney-red-lit-ns" ],
+    ],
+  },
+  behaviors: [
+    { name: "NoParticles" },
+    { name: "NWOrientable" },
+  ],
+  variantgroups: [
+    {
+      code: "type",
+      states: [ "blue", "brown", "fire", "red" ]
+    },
+    {
+      code: "state",
+      states: [ "unlit", "lit" ]
+    },
+    {
+      code: "orientation",
+      states: [ "ns", "we" ]
+    },
+  ],
+  shapeByType: {
+    "*-ns": { base: "block/clay/chimney" },
+    "*-we": {
+      base: "block/clay/chimney",
+      rotateY: 90
+    }
+  },
+  blockmaterial: "Ceramic",
+  creativeinventory: {
+    "general": [ "claybrickchimney-*-ns" ],
+    "decorative": [ "claybrickchimney-*-ns" ]
+  },
+  replaceable: 700,
+  resistance: 3,
+  lightAbsorption: 1,
+  textures: {
+    brick: {
+      base: "block/clay/brick/{type}1",
+      alternates: [ { base: "block/clay/brick/{type}2" } ]
+    },
+  },
+  sounds: {
+    walk: "walk/stone",
+  },
+  sideopaque: {
+    all: false
+  },
+  sidesolid: {
+    all: false
+  },
+  particlePropertiesByType: {
+    "*-lit-ns": [
+      {
+        hsvaColor: [
+          {
+            avg: 0,
+            var: 0
+          },
+          {
+            avg: 0,
+            var: 0
+          },
+          {
+            avg: 140,
+            var: 20
+          },
+          {
+            avg: 220,
+            var: 50
+          }
+        ],
+        opacityEvolve: {
+          transform: "quadratic",
+          factor: -24
+        },
+        gravityEffect: {
+          avg: 0,
+          var: 0
+        },
+        posOffset: [
+          {
+            avg: 0,
+            var: 0.1
+          },
+          {
+            avg: 0.3,
+            var: 0
+          },
+          {
+            avg: 0,
+            var: 0.4
+          }
+        ],
+        velocity: [
+          {
+            avg: 0,
+            var: 0.05
+          },
+          {
+            avg: 0.4,
+            var: 0.05
+          },
+          {
+            avg: 0,
+            var: 0.05
+          }
+        ],
+        quantity: { avg: 0.2 },
+        size: {
+          avg: 0.6,
+          var: 0.08
+        },
+        sizeEvolve: {
+          transform: "linear",
+          factor: 3
+        },
+        particleModel: "Quad",
+        lifeLength: { avg: 8 },
+        selfPropelled: true
+      }
+    ],
+    "*-lit-we": [
+      {
+        hsvaColor: [
+          {
+            avg: 0,
+            var: 0
+          },
+          {
+            avg: 0,
+            var: 0
+          },
+          {
+            avg: 140,
+            var: 20
+          },
+          {
+            avg: 220,
+            var: 50
+          }
+        ],
+        opacityEvolve: {
+          transform: "quadratic",
+          factor: -24
+        },
+        gravityEffect: {
+          avg: 0,
+          var: 0
+        },
+        posOffset: [
+          {
+            avg: 0,
+            var: 0.4
+          },
+          {
+            avg: 0.3,
+            var: 0
+          },
+          {
+            avg: 0,
+            var: 0.1
+          }
+        ],
+        velocity: [
+          {
+            avg: 0,
+            var: 0.05
+          },
+          {
+            avg: 0.4,
+            var: 0.05
+          },
+          {
+            avg: 0,
+            var: 0.05
+          }
+        ],
+        quantity: { avg: 0.2 },
+        size: {
+          avg: 0.6,
+          var: 0.08
+        },
+        sizeEvolve: {
+          transform: "linear",
+          factor: 3
+        },
+        particleModel: "Quad",
+        lifeLength: { avg: 8 },
+        selfPropelled: true
+      }
+    ],
+  },
+  collisionbox: {
+    x1: 0.25,
+    y1: 0,
+    z1: 0.0625,
+    x2: 0.75,
+    y2: 0.5,
+    z2: 0.9375,
+    rotateYByType: {
+      "*-ns": 0,
+      "*-we": 90
+    }
+  },
+  selectionbox: {
+    x1: 0.25,
+    y1: 0,
+    z1: 0.0625,
+    x2: 0.75,
+    y2: 0.75,
+    z2: 0.9375,
+    rotateYByType: {
+      "*-ns": 0,
+      "*-we": 90
+    }
+  },
+}

@@ -1,0 +1,55 @@
+{
+	code: "knife",
+	damagedby: ["blockbreaking", "attacking"],
+	tool: "knife",
+	variantgroups: [
+		{code: "type", states: ["primitive"]},
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint",] },
+	],
+	shape: { base: "item/tool/primitive-knife" },
+	heldTpHitAnimation: "breaktool",
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"bone": { base: "block/bone" },
+		"sinew": { base: "block/sinew" },
+	},
+
+	durabilitybytype: 
+	{
+		"knife-primitive-granite": 200,
+		"knife-primitive-andesite": 200,
+		"knife-primitive-basalt": 200,
+		"knife-primitive-obsidian": 300,
+		"knife-primitive-flint": 250
+	},
+	attackpowerbytype: 
+	{
+		"knife-primitive-granite": 0.75,
+		"knife-primitive-andesite": 0.75,
+		"knife-primitive-basalt": 0.75,
+		"knife-primitive-obsidian": 1.5,
+		"knife-primitive-flint": 1,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithictools": ["*"] },
+	fpHandTransform: {
+		translation: { x: -0.1, y: 0.2, z: 0.4 },
+		rotation: { x: -20, y: -93, z: -75 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: -1, z: 0 },
+		rotation: { x: -157, y: 180, z: -46 },
+		origin: { x: 0.59, y: 0.535, z: 0.5 },
+		scale: 2.7
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.78, y: -0.44, z: -0.5 },
+		rotation: { x: 0, y: 180, z: -10 },
+		scale: 1
+	}
+}

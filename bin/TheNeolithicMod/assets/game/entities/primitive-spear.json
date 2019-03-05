@@ -1,0 +1,38 @@
+{
+	code: "spear-primitive",
+	class: "EntityProjectile",
+	hitboxSize: { x: 0.125, y: 0.125 },
+	client: {
+		renderer: "Shape",
+		shape: { base: "entity/primitive-spear" },
+		behaviors: [
+			{ 
+				code: "passivephysics", 
+				groundDragFactor: 1,
+				airDragFallingFactor: 4
+			}, 
+			{ code: "interpolateposition" }
+		],
+	},
+	server: {
+		behaviors: [
+			{ 
+				code: "passivephysics", 
+				groundDragFactor: 1,
+				airDragFallingFactor: 4
+			}, 
+			{ code: "despawn", minSeconds: 300 }
+		]
+	},
+	sounds: {
+	},
+	attributes: {
+		texturealternateByType: {
+			"granite": 0,
+			"andesite": 1,
+			"basalt": 2,
+			"obsidian": 3,
+			"flint": 4,
+		}
+	}
+}

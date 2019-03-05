@@ -1,0 +1,61 @@
+{
+  code: "softroad",
+  behaviors: [
+    { name: "UnstableFalling" },
+    {
+      name: "HorizontalOrientable",
+      properties: { dropBlockFace: "east" }
+    }
+  ],
+  variantgroups: [
+    {
+      code: "material",
+      states: [ "sand", "gravel" ]
+    },
+    {
+      code: "materialtype",
+      states: [ "andesite", "chalk", "claystone", "granite", "sandstone", "shale", "basalt" ]
+    },
+    { loadFromProperties: "block/rockwithobsidian" },
+    {
+      code: "side",
+      loadFromProperties: "abstract/horizontalorientation"
+    }
+  ],
+  drawtype: "Cube",
+  creativeinventory: {
+    "general": [ "*-east" ],
+    "neolithicdeco": [ "*-east" ]
+  },
+  blockmaterial: "Gravel",
+  replaceable: 900,
+  lightAbsorption: 99,
+  textures: {
+    all: {
+      base: "game:block/stone/{material}/{materialtype}",
+      overlays: [ "game:block/stone/roads/stones/{rockwithobsidian}_stones_1" ],
+      alternates: [
+        {
+          base: "game:block/stone/{material}/{materialtype}",
+          overlays: [ "game:block/stone/roads/stones/{rockwithobsidian}_stones_2" ]
+        },
+        {
+          base: "game:block/stone/{material}/{materialtype}",
+          overlays: [ "game:block/stone/roads/stones/{rockwithobsidian}_stones_3" ]
+        },
+        {
+          base: "game:block/stone/{material}/{materialtype}",
+          overlays: [ "game:block/stone/roads/stones/{rockwithobsidian}_stones_4" ]
+        }
+      ]
+    }
+  },
+  resistance: 3,
+  walkspeedmultiplier: 1.20,
+  sideopaque: {
+    all: true
+  },
+  sidesolid: {
+    all: true
+  }
+}

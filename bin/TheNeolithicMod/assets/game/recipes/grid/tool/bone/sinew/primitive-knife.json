@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "K_	BS",
+	ingredients: {
+		"K": { type: "item", code: "knifeblade-*", allowedVariants: ["granite", "andesite", "basalt", "obsidian", "flint" ], name: "stone"  },
+		"B": {type: "item", code: "neolithicmod:animal-large-bone"},
+		"S": { type: "item", code: "neolithicmod:byproducts-sinew-thread" }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "item", code: "knife-primitive-{stone}", quantity: 1  }
+}

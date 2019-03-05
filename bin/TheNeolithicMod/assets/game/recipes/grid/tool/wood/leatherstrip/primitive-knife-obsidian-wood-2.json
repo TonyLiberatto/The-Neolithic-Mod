@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "K_	BS",
+	ingredients: {
+		"K": { type: "item", code: "knifeblade-obsidian" },
+		"B": {type: "block", code: "neolithicmod:branch-very-thin-*-debarked-ud" , allowedVariants: ["acacia", "birch", "kapok", "maple", "oak", "pine" ], name: "wood" },
+		"S": { type: "item", code: "neolithicmod:animal-leatherstrips" }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "item", code: "knife-primitive-obsidian-{wood}", quantity: 1  }
+}

@@ -1,0 +1,10 @@
+ {
+	ingredientPattern: "F,T",
+	ingredients: {
+		"F": { type: "item", code: "sisal-twine"  },
+		"T": { type: "item", code: "game:tallow"  }
+	},
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "game:tallowcandle" }
+}

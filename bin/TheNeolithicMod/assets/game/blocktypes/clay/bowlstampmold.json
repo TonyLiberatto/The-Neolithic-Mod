@@ -1,0 +1,64 @@
+{
+    code: "bowlstampmold",
+    classByType: {
+        "bowlstampmold-raw": "Block",
+        "bowlstampmold-burned": "BlockToolMold",
+    },
+    behaviors: [{name: "UnstableFalling"}],
+    variantgroups: [
+        { code:"materialtype", states: ["raw", "burned"] },
+    ],
+    attributesByType: {
+        "bowlstampmold-burned": {
+            "requiredUnits": 400,
+            "fillHeight": 3,
+			"fillQuadsByLevel": [
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+			],
+            "drop": { class:"Block", code: "bowlstamp-{metal}" }
+			}
+        },
+	entityClassByType: {
+		"bowlstampmold-burned": "ToolMold",
+	},
+    combustiblePropsByType: {
+        "bowlstampmold-raw": {
+            meltingPoint: 600,
+            meltingDuration: 45,
+            smeltedRatio: 1,
+            smeltingType: "bake",
+            smeltedStack: { type: "block", code: "bowlstampmold-burned" },
+            requiresContainer: false
+        }
+    },
+    blockmaterial: "Ceramic",
+    creativeinventory: { "general": ["*"], "construction": ["*"] },
+    replaceable: 700,
+    resistance: 1.5,
+    maxStackSize: 8,
+    lightAbsorption: 0,
+    texturesByType: {
+        "bowlstampmold-raw": {  all: { base: "block/clay/blueclay" } },
+        "bowlstampmold-burned": {  floor: { base: "block/clay/ceramic-dark" }, other: { base: "block/clay/ceramic" } }
+    },
+    drawtype: "json",
+    shape: { base: "block/clay/mold/bowlstampmold", rotateY: 90 },
+    sounds: {
+        walk: "game:walk/stone",
+    },
+    collisionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.3875, z2: 0.9375 },
+    selectionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.3875, z2: 1 },
+    sideopaque: {
+        all: false
+    },
+    sidesolid: {
+        all: false
+    },
+    guiTransform: {
+        translation: { x: 0, y: 3, z: 0 },
+        origin: { x: 0.5, y: 0.3, z: 0.5 },
+        scale: 1.33
+    },
+}

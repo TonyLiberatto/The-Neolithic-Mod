@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "T_	BS	B_",
+	ingredients: {
+		"T": { type: "item", code: "shovelhead-flint" },
+		"B": {type: "block", code: "neolithicmod:branch-very-thin-*-debarked-ud" , allowedVariants: ["acacia", "birch", "kapok", "maple", "oak", "pine" ], name: "wood" },
+		"S": { type: "item", code: "neolithicmod:byproducts-sinew-thread" }
+	},
+	width: 2,
+	height: 3,
+	output: { type: "item", code: "shovel-primitive-flint-{wood}", quantity: 1  }
+}

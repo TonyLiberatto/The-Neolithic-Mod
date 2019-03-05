@@ -1,0 +1,81 @@
+{
+	code: "spear",
+	class: "ItemSpear",
+	damagedby: ["attacking"],
+	tool: "spear",
+	variantgroups: [
+		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver" ] },
+	],
+	shape: { base: "item/tool/spear" },
+	heldTpHitAnimation: "spearhit",
+	textures: {
+		"metal": { base: "item/tool/material/{material}" },
+		"wood": { base: "item/tool/material/wood" }
+	},
+	attackRange: 3.5,
+	attackpowerbytype: {
+		"spear-copper": 2.5,
+		"spear-gold": 3,
+		"spear-silver": 3,
+		"spear-bismuthbronze": 3,
+		"spear-tinbronze": 3.5,
+		"spear-blackbronze": 4,
+	},
+	"__comment": "Thrown damage",
+	attributesByType: {
+		"spear-copper": {
+			damage: 4.25,
+			spearEntityCode: "spear"
+		},
+		"spear-tinbronze": {
+			damage: 4.75,
+			spearEntityCode: "spear"
+		},
+		"spear-bismuthbronze": {
+			damage: 4.75,
+			spearEntityCode: "spear"
+		},
+		"spear-blackbronze": {
+			damage: 5.25,
+			spearEntityCode: "spear"
+		},
+		"spear-gold": {
+			damage: 4.5,
+			spearEntityCode: "spear"
+		},
+		"spear-silver": {
+			damage: 4.5,
+			spearEntityCode: "spear"
+		}
+	},
+	durabilitybytype: {
+		"spear-copper": 100,
+		"spear-gold": 90,
+		"spear-silver": 90,
+		"spear-tinbronze": 200,
+		"spear-bismuthbronze": 180,
+		"spear-blackbronze": 220
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	fpHandTransform: {
+		translation: { x: -0.1, y: 0.3, z: 0 },
+		rotation: { x: -85, y: 0, z: 75 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: 3, z: 0 },
+		rotation: { x: 90, y: -45, z: -35 },
+		origin: { x: 0.6, y: -0.8, z: 0.55 },
+		scale: 1.4299
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -1.7, y: -0.7, z: -0.5 },
+		rotation: { x: 0, y: 0, z: -10 },
+		scale: 1
+	}
+}

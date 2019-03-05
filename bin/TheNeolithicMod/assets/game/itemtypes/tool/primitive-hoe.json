@@ -1,0 +1,69 @@
+{
+	code: "primitive-hoe",
+	class: "ItemHoe",
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint" ] },
+	],
+	damagedby: ["blockbreaking", "attacking"],
+	shape: { base: "item/tool/primitive-hoe" },
+	heldTpHitAnimation: "breaktool",
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"bone": { base: "block/bone" },
+		"sinew": { base: "block/sinew" },
+	},
+	tool: "hoe",
+	miningspeedbytype: {
+		"primitive-hoe-granite": {
+			"soil": 2.2
+		},
+		"primitive-hoe-andesite": {
+			"soil": 2.6
+		},
+		"primitive-hoe-basalt": {
+			"soil": 3.2
+		},
+		"primitive-hoe-obsidian": {
+			"soil": 3.6
+		},
+		"primitive-hoe-flint": {
+			"soil": 3.6
+		},
+	},
+	durabilitybytype: {
+		"primitive-hoe-granite": 150,
+		"primitive-hoe-andesite": 150,
+		"primitive-hoe-basalt": 150,
+		"primitive-hoe-obsidian": 200,
+		"primitive-hoe-flint": 180,
+	},
+	attackpowerbytype: {
+		"primitive-hoe-granite": 1,
+		"primitive-hoe-andesite": 1.25,
+		"primitive-hoe-basalt": 1.5,
+		"primitive-hoe-obsidian": 1.5,
+		"primitive-hoe-flint": 1.5,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithictools": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: 2, z: 0 },
+		rotation: { x: -133, y: -157, z: 132 },
+		scale: 2.02,
+		origin: { x: 0.5, y: 0.5, z: 0.5 }
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.76, y: -0.5, z: -0.53 },
+		rotation: { x: 90, y: 0, z: -10 },
+		scale: 1
+	}
+}

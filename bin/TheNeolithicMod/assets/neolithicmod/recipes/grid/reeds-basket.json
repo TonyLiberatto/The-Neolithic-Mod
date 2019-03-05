@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "L_L	LLL",
+	ingredients: {
+		"L": { type: "item", code: "game:reeds", quantity: 2 }
+	},
+	name: "basket",
+	width: 3,
+	height: 2,
+	output: { type: "item", code: "game:basket"  }
+}

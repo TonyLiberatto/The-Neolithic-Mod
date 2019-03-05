@@ -1,0 +1,81 @@
+{
+	code: "shovel",
+	variantgroups: [
+		{ code: "type", states: ["primitive"] },
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint" ] },
+	],
+	tool: "shovel",
+	damagedby: ["blockbreaking", "attacking"],
+	shape: { base: "item/tool/primitive-shovel" },
+	heldTpHitAnimation: "breaktool",
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"bone": { base: "block/bone" },
+		"sinew": { base: "block/sinew" },
+	},
+	miningspeedbytype: {
+		"shovel-primitive-granite": {
+			"soil": 2.2,
+			"sand": 2.2,
+			"gravel": 1.9
+		},
+		"shovel-primitive-andesite": {
+			"soil": 2.2,
+			"sand": 2.2,
+			"gravel": 1.9
+		},
+		"shovel-primitive-basalt": {
+			"soil": 2.2,
+			"sand": 2.2,
+			"gravel": 1.9
+		},
+		"shovel-primitive-obsidian": {
+			"soil": 3,
+			"sand": 3,
+			"gravel": 2.2
+		},
+
+		"shovel-primitive-flint": {
+			"soil": 2.5,
+			"sand": 2.5,
+			"gravel": 2.1
+		},
+	},
+	attackpowerbytype: {
+		"shovel-primitive-granite": 0.75,
+		"shovel-primitive-andesite": 0.75,
+		"shovel-primitive-basalt": 0.75,
+		"shovel-primitive-obsidian": 1.25,
+		"shovel-primitive-flint": 1,
+	},
+	durabilitybytype: {
+		"shovel-primitive-granite": 200,
+		"shovel-primitive-andesite": 200,
+		"shovel-primitive-basalt": 200,
+		"shovel-primitive-obsidian": 300,
+		"shovel-primitive-flint": 250,
+
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithictools": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 6, y: -3, z: 0 },
+		rotation: { x: -112, y: -131, z: -180 },
+		scale: 1.74,
+		origin: { x: 0.5, y: 0.5, z: 0.5 }
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.796875, y: -0.53125, z: -0.5 },
+		rotation: { x: 0, y: 0, z: -10 },
+		scale: 1
+	}
+}

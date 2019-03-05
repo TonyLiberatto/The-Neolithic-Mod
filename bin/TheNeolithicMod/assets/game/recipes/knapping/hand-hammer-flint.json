@@ -1,0 +1,14 @@
+{
+	ingredient: { type: "item", code: "game:flint" },
+	pattern: [
+		"____##____",
+		"___####___",
+		"___####___",
+		"___####___",
+		"___####___",
+		"____##____",
+
+	],
+	name: "Hand Hammer",
+	output: { type: "item", code: "hammer-hand-flint"  }
+}

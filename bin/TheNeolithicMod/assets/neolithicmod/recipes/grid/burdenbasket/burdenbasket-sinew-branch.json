@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "RTR	SRS	SRS",
+	ingredients: {
+		"T": { type: "item", code: "byproducts-sinew" },
+		"R": { type: "item", code: "game:reeds" },
+		"S": { type: "block", code: "branch-very-thin-*-bark-ud", allowedVariants: ["acacia", "birch", "kapok", "maple", "oak", "pine"], name: "wood" },
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "burdenbasket"  }
+}

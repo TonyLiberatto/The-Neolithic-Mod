@@ -1,0 +1,10 @@
+{
+	ingredient: { type: "item", code: "stone-*", name: "rock", allowedVariants: ["granite", "andesite", "basalt", "obsidian", ] },
+	pattern: [
+		"__########",
+		"________##",
+		"_________#"
+	],
+	name: "Hoe Head",
+	output: { type: "item", code: "primitive-hoehead-{rock}"  }
+}

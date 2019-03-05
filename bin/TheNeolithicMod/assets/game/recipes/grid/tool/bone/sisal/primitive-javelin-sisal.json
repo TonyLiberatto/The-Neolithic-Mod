@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "A_	BS",
+	ingredients: {
+		"A": { type: "item", code: "primitive-arrowhead-bone" },
+		"B": {type: "item", code: "bamboo-javelin-shaft"},
+		"S": { type: "item", code: "neolithicmod:sisal-twine" }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "item", code: "spear-javelin", quantity: 1  }
+}

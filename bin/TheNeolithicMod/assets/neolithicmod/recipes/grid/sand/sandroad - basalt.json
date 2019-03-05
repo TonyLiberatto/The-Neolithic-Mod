@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "L,S",
+	ingredients: {
+		"L": { type: "item", code: "game:stone-*", name: "rock", quantity: 4, allowedVariants: ["andesite", "chalk", "claystone", "granite", "sandstone", "shale", "basalt"] },
+		"S": { type: "block", code: "game:sand-basalt" }
+	},
+	width: 1,
+	height: 2,
+	output: { type: "block", code: "softroad-sand-basalt-{rock}-east", quantity: 1 }
+}

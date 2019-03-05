@@ -1,0 +1,13 @@
+
+{
+	"type": "code",
+	"name": "The Neolithic Mod",
+	"modid": "theneolithicmod",
+	"description" : "Adds more Animals, Plants, blocks and tools",
+	"authors": [ "Tony Liberatto","Balduranne", "Novocain"],
+	"contributors": ["Tyron", "Milo", "Stroam","Elwood","copygirl"],
+	"version": "1.3.37",
+	"dependencies": {
+	"game": "1.7.8",
+	}
+}

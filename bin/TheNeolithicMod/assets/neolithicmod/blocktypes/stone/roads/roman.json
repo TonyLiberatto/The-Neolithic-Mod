@@ -1,0 +1,59 @@
+{
+  code: "romanroad",
+  behaviors: [
+    {
+      name: "HorizontalOrientable",
+      properties: { dropBlockFace: "east" }
+    }
+  ],
+  variantgroups: [
+    { loadFromProperties: "block/rock" },
+    {
+      code: "pattern",
+      states: [ "brick", "circle", "fish", "square", "brickb" ]
+    },
+    {
+      code: "side",
+      loadFromProperties: "abstract/horizontalorientation"
+    }
+  ],
+  drawtype: "Cube",
+  creativeinventory: {
+    "general": [ "*-east" ],
+    "neolithicdeco": [ "*-east" ]
+  },
+  blockmaterial: "Stone",
+  replaceable: 900,
+  lightAbsorption: 99,
+  textures: {
+    all: {
+      base: "game:block/stone/roads/roman/{pattern}-{rock}",
+    }
+  },
+  resistance: 3,
+  walkspeedmultiplier: 1.25,
+  sideopaque: {
+    all: true
+  },
+  sidesolid: {
+    all: true
+  },
+  collisionSelectionBoxbytype: {
+    "*-normal": {
+      x1: 0,
+      y1: 0,
+      z1: 0,
+      x2: 1,
+      y2: 0.9375,
+      z2: 1
+    },
+    "*-step": {
+      x1: 0,
+      y1: -0.0625,
+      z1: 0,
+      x2: 1,
+      y2: 0.4375,
+      z2: 1
+    }
+  }
+}

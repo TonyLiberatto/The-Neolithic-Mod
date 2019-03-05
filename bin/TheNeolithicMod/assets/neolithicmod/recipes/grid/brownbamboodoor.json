@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "BBL	BB_	BBL",
+	ingredients: {
+		"B": { type: "block", code: "planks-bamboo-brown" },
+		"L": { type: "item", code: "animal-leatherstrips" }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "browndoor-north-down-closed-left"  }
+}

@@ -1,0 +1,17 @@
+{
+	ingredient: { type: "item", code: "stone-*", name: "rock", allowedVariants: ["granite", "andesite", "basalt", "obsidian", "flint"] },
+	pattern: [
+		"___#__#___",
+		"___#__#___",
+		"___#__#___",
+		"___#__#___",
+		"___#__#___",
+		"__##__##__",
+		"__##__##__",
+		"__##__##__",
+		"__##__##__",
+		"__##__##__"
+	],
+	name: "Stone Adze",
+	output: { type: "item", code: "adzehead-{rock}", stacksize: 2  }
+}

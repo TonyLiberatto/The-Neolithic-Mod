@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "H,C,S",
+	ingredients: {
+        "H": { type: "item", code: "game:hammer-*", isTool: true },
+        "C": { type: "item", code: "game:chisel-*", isTool: true },
+		"S": { type: "block", code: "game:rock-*", name: "rock", quantity: 1}
+	},
+	width: 1,
+	height: 3,
+	output: { type: "block", code: "game:rockpolished-{rock}" }
+}

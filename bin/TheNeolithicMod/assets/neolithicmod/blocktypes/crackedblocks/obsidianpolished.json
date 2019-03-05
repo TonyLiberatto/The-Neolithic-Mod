@@ -1,0 +1,13 @@
+{
+	code: "obsidianpolished",
+	replaceable: 120,
+	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicblocks": ["*"] },
+	shape: { base: "block/basic/cube" },
+	drawtype: "cube",
+	textures: {
+		all: { base: "block/stone/rockpolished/obsidian" },
+	},
+	sounds: {
+		"walk": "game:walk/stone"
+	}
+}

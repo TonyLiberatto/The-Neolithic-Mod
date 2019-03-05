@@ -1,0 +1,74 @@
+{
+	code: "chest",
+	entityclass: "GenericContainer",
+	attributes: {
+		inventoryClassName: "chest",
+		quantitySlots: 64,
+		dialogTitleLangCode: "chestcontents",
+	},
+	behaviors: [
+		{
+			name: "Carryable",
+			properties: {
+			translation: [ 0.0625, 0, 0 ],
+			rotation: [ 0, 180, 0 ],
+			}
+		},
+		{name: "Container"}, 
+		{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}	
+	],
+	variantgroups: [
+		{ code: "wood", states: ["aged", "bamboo-green", "bamboo-brown"], loadFromProperties: "block/wood" },
+		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	creativeinventory: { "general": ["chest-{wood}-east"], "decorative": ["chest-{wood}-east"], "neolithicdeco": ["chest-{wood}-east"] },
+	heldTpIdleAnimation: "holdunderarm",
+	drawtype: "json",
+	shapebytype: {
+		"*-north": { base: "block/wood/chest", rotateY: 0 },
+		"*-east": { base: "block/wood/chest", rotateY: 270 },
+		"*-south": { base: "block/wood/chest", rotateY: 180 },
+		"*-west": { base: "block/wood/chest", rotateY: 90 }
+	},
+	textures: {
+		corners: { base: "block/chest/{wood}/Corners" },
+		lid: { base: "block/chest/{wood}/Lid" },
+		sides: { base: "block/chest/{wood}/Sides" },
+		floor: { base: "block/chest/{wood}/Floor" },
+	},
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 2,
+	lightAbsorption: 0,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	collisionbox: {
+		x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.75, z2: 0.9375
+	},
+	selectionbox: {
+		x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.75, z2: 0.9375
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 35,
+	},
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	materialDensity: 600,
+	tpHandTransform: {
+		translation: { x: -0.9, y: -0.5, z: -0.3 },
+		rotation: { x: 0, y: 90, z: -102 },
+		scale: 0.56
+	},
+	guiTransform: {
+		origin: { x: 0.5, y: 0.4, z: 0.5 },
+		scale: 1.16
+	}
+
+}

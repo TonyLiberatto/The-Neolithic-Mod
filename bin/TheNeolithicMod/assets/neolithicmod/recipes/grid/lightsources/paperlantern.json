@@ -1,0 +1,12 @@
+{
+	ingredientPattern: "SFS,FLF,SFS",
+	ingredients: {
+		"S": { type: "item", code: "game:stick" },
+		"F": { type: "block", code: "game:linen-*" },
+		"L": { type: "block", code: "game:lantern-*" }
+	},
+	width: 3,
+	height: 3,
+	name: "paperlantern",
+	output: { type: "block", code: "game:paperlantern-on"  }
+}

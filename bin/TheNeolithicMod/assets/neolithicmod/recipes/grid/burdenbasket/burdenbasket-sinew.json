@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "RTR	SRS	SRS",
+	ingredients: {
+		"T": { type: "item", code: "byproducts-sinew" },
+		"R": { type: "item", code: "game:reeds" },
+		"S": { type: "item", code: "game:stick" },
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "burdenbasket"  }
+}

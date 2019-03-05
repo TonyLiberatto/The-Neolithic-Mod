@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "WWW	W_W	WWW",
+	ingredients: {
+		"W": { type: "block", code: "planks-*", allowedVariants: [ "bamboo-green", "bamboo-brown"], name: "wood" }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "chest-{wood}-east"  }
+}

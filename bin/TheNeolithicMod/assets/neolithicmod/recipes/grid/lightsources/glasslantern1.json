@@ -1,0 +1,12 @@
+{
+    ingredientPattern: "GMG,MLM,GMG",
+    ingredients: {
+        "G": { type: "block", code: "game:glass-plain" },
+        "M": { type: "item", code: "game:metalplate-iron" },
+        "L": { type: "block", code: "game:lantern-*", attributes: { lining: ["gold", "silver"] } }
+    },
+    width: 3,
+    height: 3,
+    name: "glass lantern",
+    output: { type: "block", code: "game:glass_lantern", quantity: 1  }
+}

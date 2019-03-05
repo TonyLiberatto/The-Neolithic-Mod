@@ -1,0 +1,57 @@
+{
+	code: "sword",
+	damagedby: ["blockbreaking", "attacking"],
+	tool: "sword",
+	variantgroups: [
+		{code: "type", states: ["primitive"]},
+		{ code: "stone", states: ["obsidian", "flint",] },
+	],
+	shape: { base: "item/tool/primitive-sword" },
+	heldTpHitAnimation: "swordhit",
+	textures: {
+		"leatherstraps": { base: "block/leatherstraps" },
+		"kapok": { base: "block/wood/debarked/kapok" },
+		"stone": { base: "item/tool/material/{stone}"},
+	},
+	attackRange: 2.5,
+	miningspeedbytype: {
+		"sword-primitive-flint": {
+			"wood": 1.5,
+			"leaves": 1
+		},
+		"sword-primitive-obsidian": {
+			"wood": 2,
+			"leaves": 1.2
+		},
+	},
+	attackpowerbytype: {
+		"sword-primitive-flint": 1.5,
+		"sword-primitive-obsidian": 2,
+	},
+	durabilitybytype: {
+		"sword-primitive-flint": 100,
+		"sword-primitive-obsidian": 150,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"],"neolithictools": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0.1, z: 0 },
+		rotation: { x: 170, y: -25, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 5, y: 1, z: 0 },
+		rotation: { x: -55, y: 42, z: 180 },
+		scale: 2.16,
+		origin: { x: 0.5, y: 0.5, z: 0.5 }
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.95, y: -0.4312, z: -0.56 },
+		rotation: { x: -90, y: 180, z: -7 },
+		scale: 1
+	}
+}

@@ -1,0 +1,17 @@
+{
+	code: "obsidianbricks",
+	class: "Block",
+	shape: { base: "block/basic/cube" },
+	drawtype: "Cube",
+	blockmaterial: "Stone",
+	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicblocks": ["*"] },
+	replaceable: 200,
+	resistance: 3,
+	lightAbsorption: 99,
+	textures: {
+		all: { base: "block/stone/brick/obsidian" },
+	},
+	sounds: {
+		walk: "game:walk/stone",
+	}
+}

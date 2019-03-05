@@ -1,0 +1,49 @@
+{
+	code: "primitive-sickle",
+	damagedby: ["blockbreaking"],
+	class: "ItemSickle",
+	tool: "knife",
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint",] },
+	],
+	attributes: {
+		codePrefixes: ["crop", "tallgrass", "frostedtallgrass"]
+	},
+	shape: { base: "item/tool/primitive-sickle" },
+	heldTpHitAnimation: "breaktool",
+	textures: 
+	{
+		"stone": { base: "item/tool/material/{stone}" },
+		"bone": { base: "block/bone" },
+		"sinew": { base: "block/sinew" },
+	},
+	durabilitybytype: {
+		"primitive-sickle-granite": 200,
+		"primitive-sickle-andesite": 200,
+		"primitive-sickle-basalt": 200,
+		"primitive-sickle-obsidian": 300,
+		"primitive-sickle-flint": 250,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithictools": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 90, y: -51, z: 20 },
+		origin: { x: 0.5, y: 0.8, z: 0.4 },
+		scale: 1.45
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.8, y: -0.54, z: -0.5 },
+		rotation: { x: 0, y: 0, z: -10 },
+		scale: 1
+	}
+}
