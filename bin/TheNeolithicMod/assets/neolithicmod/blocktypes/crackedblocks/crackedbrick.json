@@ -1,6 +1,6 @@
 {
 	code: "crackedbrick",
-	class: "BlockPlaceOnDrop",
+	class: "BlockPlaceOnDropNew",
 	variantgroups: [
 		{ code: "type", states: ["andesite", "basalt", "chalk", "claystone", "granite", "obsidian", "sandstone", "shale"] },
 	],
