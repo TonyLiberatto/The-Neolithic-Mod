@@ -100,10 +100,6 @@
       <HintPath>..\..\Vintagestory\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Vintagestory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Vintagestory\Vintagestory.exe</HintPath>
-    </Reference>
     <Reference Include="VintagestoryAPI">
       <HintPath>E:\Games\VintageStory\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
