@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheNeolithicMod.Utility;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
@@ -15,7 +16,7 @@ namespace TheNeolithicMod
         public override void OnLoaded(ICoreAPI api)
         {
             base.OnLoaded(api);
-            around = AreaAroundOffsetList().ToArray();
+            around = AreaMethods.AreaAroundOffsetList().ToArray();
         }
 
         public override void OnGroundIdle(EntityItem entityItem)
@@ -34,22 +35,6 @@ namespace TheNeolithicMod
                     return;
                 }
             }
-        }
-
-        public List<BlockPos> AreaAroundOffsetList()
-        {
-            List<BlockPos> positions = new List<BlockPos>();
-            for (int x = -1; x <= 1; x++)
-            {
-                for (int y = -1; y <= 1; y++)
-                {
-                    for (int z = -1; z <= 1; z++)
-                    {
-                        positions.Add(new BlockPos(x, y, z));
-                    }
-                }
-            }
-            return positions;
         }
     }
 }

@@ -140,6 +140,7 @@
     <Compile Include="Neolithic\Content\Block Behavior\ChimneyBehavior.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
+    <Compile Include="Neolithic\Content\Utility\AreaMethods.cs" />
     <Compile Include="TasksLib\BehaviorsLib.cs" />
     <Compile Include="TasksLib\Tasks\AiTaskFleePOI.cs" />
     <Compile Include="TasksLib\Tasks\AiTaskSleep.cs" />
