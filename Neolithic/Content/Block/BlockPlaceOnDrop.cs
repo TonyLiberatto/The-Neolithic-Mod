@@ -31,6 +31,7 @@ namespace TheNeolithicMod
                 if (bA.GetBlock(pos).IsReplacableBy(this) && !bA.GetBlock(pos.DownCopy()).IsReplacableBy(this))
                 {
                     bA.SetBlock(BlockId, pos);
+                    if (EntityClass != null) bA.SpawnBlockEntity(EntityClass, pos);
                     entityItem.Die(EnumDespawnReason.Removed, null);
                     return;
                 }
