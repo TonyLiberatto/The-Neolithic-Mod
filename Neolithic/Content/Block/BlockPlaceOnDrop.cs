@@ -5,30 +5,51 @@ using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Util;
 
 namespace TheNeolithicMod
 {
     class BlockPlaceOnDropNew : Block
     {
+        BlockPos[] around;
+        public override void OnLoaded(ICoreAPI api)
+        {
+            base.OnLoaded(api);
+            around = AreaAroundOffsetList().ToArray();
+        }
+
         public override void OnGroundIdle(EntityItem entityItem)
         {
             IBlockAccessor bA = entityItem.World.BulkBlockAccessor;
             BlockPos pos = entityItem.Pos.AsBlockPos;
+            if (entityItem.World.Side == EnumAppSide.Client) return;
+            around.Shuffle(entityItem.World.Rand);
 
-            if (entityItem.World.Side == EnumAppSide.Client || !bA.GetBlock(pos).IsReplacableBy(this)) return;
-
-            bA.SetBlock(BlockId, pos);
-            entityItem.Die(EnumDespawnReason.Removed, null);
+            foreach (BlockPos ipos in around)
+            {
+                if (bA.GetBlock(pos.X + ipos.X, pos.Y + ipos.Y, pos.Z + ipos.Z).IsReplacableBy(this))
+                {
+                    bA.SetBlock(BlockId, pos);
+                    entityItem.Die(EnumDespawnReason.Removed, null);
+                    break;
+                }
+            }
         }
 
-        public override void OnHeldInteractStart(IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handHandling)
+        public List<BlockPos> AreaAroundOffsetList()
         {
-            base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, ref handHandling);
-        }
-
-        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
-        {
-            return base.OnBlockInteractStart(world, byPlayer, blockSel);
+            List<BlockPos> positions = new List<BlockPos>();
+            for (int x = -1; x <= 1; x++)
+            {
+                for (int y = -1; y <= 1; y++)
+                {
+                    for (int z = -1; z <= 1; z++)
+                    {
+                        positions.Add(new BlockPos(x, y, z));
+                    }
+                }
+            }
+            return positions;
         }
     }
 }
