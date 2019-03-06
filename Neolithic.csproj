@@ -170,7 +170,6 @@
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\generic\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\bag\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\entity\" />
-    <Folder Include="Neolithic\Content\Entity\" />
     <Folder Include="TasksLib\EntityBehaviors\" />
   </ItemGroup>
   <ItemGroup>

@@ -27,7 +27,7 @@ namespace TheNeolithicMod
 
             foreach (BlockPos ipos in around)
             {
-                if (bA.GetBlock(pos.X + ipos.X, pos.Y + ipos.Y, pos.Z + ipos.Z).IsReplacableBy(this))
+                if (bA.GetBlock(pos.X + ipos.X, pos.Y + ipos.Y, pos.Z + ipos.Z).IsReplacableBy(this) && bA.GetBlock(pos.X + ipos.X, pos.Y + ipos.Y - 1, pos.Z + ipos.Z).CollisionBoxes != null)
                 {
                     bA.SetBlock(BlockId, pos);
                     entityItem.Die(EnumDespawnReason.Removed, null);
