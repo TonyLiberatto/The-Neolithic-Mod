@@ -15,7 +15,7 @@
 		renderer: "Shape",
 		shape: { base: "entity/land/rabbit/female" },
 		texture: { base: "entity/rabbit/{color}" },
-		behaviors: [{ code: "repulseagents" }, { code: "controlledphysics", stepHeight: 1.0001 }, { code: "interpolateposition" }, { code: "fixedmultiply" }],
+		behaviors: [{ code: "repulseagents" }, { code: "controlledphysics", stepHeight: 1.0001 }, { code: "interpolateposition" }, { code: "multiply" }],
 		animations: [
 			{
 				code: "hurt",

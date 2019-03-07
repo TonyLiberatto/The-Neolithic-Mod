@@ -1,18 +1,20 @@
 {
-	code: "hyena-wild-pup",
+	code: "hyena-pup",
 	class: "EntityAgent",
 	hitboxSize: { x: 0.7, y: 0.5 },
+	deadHitboxSize: { x: 0.7, y: 0.3 },
 	eyeHeight: 0.4,
 	drops: [
 		
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/hyena/pup" },
-		texture: { base: "entity/hyena/wild-pup" }, 
+		shape: { base: "entity/land/hyena-pup" },
+		texture: { base: "entity/hyena/pup" }, 
 		behaviors: [
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "interpolateposition" },
 		],
 		animations: [
@@ -23,6 +25,13 @@
 				weight: 10,
 				blendMode: "AddAverage" 
 			},
+			{
+				code: "die",
+				animation: "die", 
+				animationSpeed: 1.75,
+				weight: 10,
+				blendMode: "AddAverage" 
+			}
 		]
 	},
 	server: {
@@ -31,6 +40,7 @@
 			{ code: "controlledphysics", stepHeight: 1.0001 },
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ code: "health", currenthealth: 5, maxhealth: 5 },
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "breathe" },
 			{ 
 				hoursToGrow: 336,
@@ -60,7 +70,7 @@
 					{
 						code: "stayclosetoentity",
 						priority: 1.4,
-						entityCode: "hyena-wild-female-*",
+						entityCode: "hyena-wild-female",
 						movespeed: 0.02,
 						animationSpeed: 3,
 						maxDistance: 5,

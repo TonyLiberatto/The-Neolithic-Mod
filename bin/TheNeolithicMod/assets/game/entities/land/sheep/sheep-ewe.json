@@ -2,6 +2,7 @@
 	code: "sheep-ewe",
 	class: "EntityAgent",
 	hitboxSize: { x: 1.3, y: 1.4 },
+	deadHitboxSize: { x: 1.3, y: 0.75 },
 	eyeHeight: 1.4,
 	drops: [
 		{
@@ -11,12 +12,13 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/sheep/ewe" },
+		shape: { base: "entity/land/sheep-bighorn-female" },
 		texture: { base: "entity/sheep/sheep-bighorn-female" },
 		behaviors: [
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
 			{ code: "interpolateposition" }, 
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "multiply" },
 		],
 		animations: [
@@ -27,6 +29,13 @@
 				weight: 10,
 				blendMode: "AddAverage" 
 			},
+			{
+				code: "die",
+				animation: "death", 
+				animationSpeed: 1.25,
+				weight: 10,
+				blendMode: "AddAverage" 
+			}
 		]
 	},
 	server: {
@@ -45,11 +54,12 @@
 				currenthealth: 20,
 				maxhealth: 20
 			}, 
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "breathe" },
 			{ 
 				code: "multiply",
-				spawnEntityCode: "sheep-lamb",
-				requiresNearbyEntityCode: "sheep-ram",
+				spawnEntityCode: "sheep-bighorn-lamb",
+				requiresNearbyEntityCode: "sheep-bighorn-male",
 				requiresNearbyEntityRange: 10,
 				spawnQuantityMin: 1,
 				spawnQuantityMax: 1,

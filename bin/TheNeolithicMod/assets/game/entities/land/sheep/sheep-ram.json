@@ -2,15 +2,22 @@
 	code: "sheep-ram",
 	class: "EntityAgent",
 	hitboxSize: { x: 1.3, y: 1.4 },
+	deadHitboxSize: { x: 1.3, y: 0.75 },
 	eyeHeight: 1.4,
-	drops: [],
+	drops: [
+		{
+			type: "block", 
+			code: "neolithicmod:dead-sheep-ram", 
+		},
+	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/sheep/ram" },
-		texture: { base: "game:entity/sheep/sheep-bighorn-male" },
+		shape: { base: "entity/land/sheep-bighorn-male" },
+		texture: { base: "entity/sheep/sheep-bighorn-male" },
 		behaviors: [
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "interpolateposition" },
 		],
 		animations: [
@@ -21,6 +28,13 @@
 				weight: 10,
 				blendMode: "AddAverage" 
 			},
+			{
+				code: "die",
+				animation: "death", 
+				animationSpeed: 1.25,
+				weight: 10,
+				blendMode: "AddAverage" 
+			}
 		]
 	},
 	server: {
@@ -35,6 +49,7 @@
 			{ code: "controlledphysics", stepHeight: 1.0001 },
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ code: "health", currenthealth: 25, maxhealth: 25, },
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "breathe" },
 			{ 
 				code: "emotionstates",
@@ -160,7 +175,7 @@
 				minTemp: -10,
 				maxTemp: 20,
 				minRain: 0.43,
-				companions: ["sheep-ewe", "sheep-lamb"]
+				companions: ["sheep-bighorn-female", "sheep-bighorn-lamb"]
 			},
 			runtime: {
 				group: "neutral",
@@ -173,7 +188,7 @@
 				minTemp: -10,
 				maxTemp: 20,
 				minRain: 0.43,
-				companions: ["sheep-ewe", "sheep-lamb"]
+				companions: ["sheep-bighorn-female", "sheep-bighorn-lamb"]
 			}
 		}
 	},

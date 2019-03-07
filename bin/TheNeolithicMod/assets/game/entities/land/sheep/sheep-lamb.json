@@ -2,6 +2,7 @@
 	code: "sheep-lamb",
 	class: "EntityAgent",
 	hitboxSize: { x: 1.0, y: 0.5 },
+	deadHitboxSize: { x: 1, y: 0.25 },
 	eyeHeight: 0.4,
 	drops: [
 		{
@@ -12,11 +13,12 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/sheep/lamb" },
+		shape: { base: "entity/land/sheep-bighorn-lamb" },
 		texture: { base: "entity/sheep/sheep-bighorn-lamb" },
 		behaviors: [
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "interpolateposition" },
 		],
 		animations: [
@@ -27,6 +29,13 @@
 				weight: 10,
 				blendMode: "AddAverage" 
 			},
+			{
+				code: "die",
+				animation: "die", 
+				animationSpeed: 1.25,
+				weight: 10,
+				blendMode: "AddAverage" 
+			}
 		]
 	},
 	server: {
@@ -46,7 +55,7 @@
 			{ 
 				code: "grow",
 				hoursToGrow: 336,
-				adultEntityCodes: ["sheep-ram", "sheep-ewe"],
+				adultEntityCodes: ["sheep-bighorn-male", "sheep-bighorn-female"],
 			},
 			{ 
 				code: "taskai",
@@ -71,7 +80,7 @@
 					{
 						code: "stayclosetoentity",
 						priority: 1.4,
-						entityCode: "sheep-ewe",
+						entityCode: "sheep-bighorn-female",
 						movespeed: 0.025,
 						maxDistance: 5,
 						searchRange: 25,
