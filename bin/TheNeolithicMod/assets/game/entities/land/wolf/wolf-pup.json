@@ -55,6 +55,25 @@
 					{
 						code: "fleeentity",
 						entityCodes: ["player"],
+						priority: 1.7,
+						movespeed: 0.02,
+						animationSpeed: 2.2,
+						seekingRange: 5,
+						animation: "Run",
+						sound: "creature/wolf/wolf-pup-bark"
+					},
+					{
+						code: "AiTaskSleep",
+						priority: 1.6,
+						priorityForCancel: 1.35,
+						animation: "sleep",
+						isnocturnal: true,
+						cancelOnHurt: true,
+						animationSpeed: 0.20,
+					},
+					{
+						code: "fleeentity",
+						entityCodes: ["player"],
 						priority: 1.5,
 						movespeed: 0.02,
 						animationSpeed: 2.2,
