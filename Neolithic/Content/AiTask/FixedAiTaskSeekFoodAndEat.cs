@@ -9,7 +9,7 @@ using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
-namespace BehaviorsLib
+namespace TheNeolithicMod
 {
     class FailedAttempt
     {

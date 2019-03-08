@@ -1,4 +1,5 @@
 using Vintagestory.API.Common;
+using Vintagestory.GameContent;
 
 namespace TheNeolithicMod
 {
@@ -30,6 +31,10 @@ namespace TheNeolithicMod
             api.RegisterBlockEntityClass("FixedBESapling", typeof(FixedBESapling));
             api.RegisterBlockEntityClass("BEMortarAndPestle", typeof(BEMortarAndPestle));
             api.RegisterBlockEntityClass("BlockEntityChimney", typeof(BlockEntityChimney));
+
+            AiTaskRegistry.Register("fleepoi", typeof(AiTaskFleePOI));
+            AiTaskRegistry.Register("sleep", typeof(AiTaskSleep));
+            AiTaskRegistry.Register("neolithicseekfoodandeat", typeof(AiTaskSeekFoodAndEat));
         }
     }
 }
