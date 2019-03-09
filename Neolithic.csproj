@@ -100,6 +100,10 @@
       <HintPath>..\..\Vintagestory\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Vintagestory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Vintagestory\Vintagestory.exe</HintPath>
+    </Reference>
     <Reference Include="VintagestoryAPI">
       <HintPath>E:\Games\VintageStory\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
@@ -141,10 +145,6 @@
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
     <Compile Include="Neolithic\Content\Utility\AreaMethods.cs" />
-    <Compile Include="TasksLib\BehaviorsLib.cs" />
-    <Compile Include="TasksLib\Tasks\AiTaskFleePOI.cs" />
-    <Compile Include="TasksLib\Tasks\AiTaskSleep.cs" />
-    <Compile Include="TasksLib\Tasks\FixedAiTaskSeekFoodAndEat.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\LampConnectorBehavior.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\LampPostBehavior.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\RotateNinety.cs" />
@@ -163,6 +163,10 @@
     <Compile Include="Neolithic\Content\Item\ItemGiantReedsRoot.cs" />
     <Compile Include="Neolithic\Content\Item\ItemSickle.cs" />
     <Compile Include="Neolithic\TheNeolithicMod.cs" />
+    <Compile Include="TasksLib\BehaviorsLib.cs" />
+    <Compile Include="TasksLib\Tasks\AiTaskFleePOI.cs" />
+    <Compile Include="TasksLib\Tasks\AiTaskSleep.cs" />
+    <Compile Include="TasksLib\Tasks\FixedAiTaskSeekFoodAndEat.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".vs\Neolithic\v15\" />
