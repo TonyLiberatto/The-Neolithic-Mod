@@ -3,7 +3,7 @@ using Vintagestory.API;
 using Vintagestory.API.Common;
 using Vintagestory.GameContent;
 
-namespace BehaviorsLib
+namespace TheNeolithicMod
 {
     public class AiTaskSleep : AiTaskBase
     {

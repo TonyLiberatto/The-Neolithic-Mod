@@ -43,23 +43,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\Vintagestory\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>E:\Games\VintageStory\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\Vintagestory\Lib\CommandLine.dll</HintPath>
+      <HintPath>E:\Games\VintageStory\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\Vintagestory\Lib\csogg.dll</HintPath>
+      <HintPath>E:\Games\VintageStory\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\Vintagestory\Lib\csvorbis.dll</HintPath>
+      <HintPath>E:\Games\VintageStory\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\Vintagestory\Lib\ENet.dll</HintPath>
+      <HintPath>E:\Games\VintageStory\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
@@ -67,15 +67,15 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Vintagestory\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>E:\Games\VintageStory\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\Vintagestory\Lib\OpenTK.dll</HintPath>
+      <HintPath>E:\Games\VintageStory\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\Vintagestory\Lib\protobuf-net.dll</HintPath>
+      <HintPath>E:\Games\VintageStory\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -97,12 +97,8 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\Vintagestory\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>E:\Games\VintageStory\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
-    </Reference>
-    <Reference Include="Vintagestory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Vintagestory\Vintagestory.exe</HintPath>
     </Reference>
     <Reference Include="VintagestoryAPI">
       <HintPath>E:\Games\VintageStory\VintagestoryAPI.dll</HintPath>
@@ -113,15 +109,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\Vintagestory\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>E:\Games\VintageStory\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\Vintagestory\Mods\VSEssentials.dll</HintPath>
+      <HintPath>E:\Games\VintageStory\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\Vintagestory\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>E:\Games\VintageStory\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -145,6 +141,9 @@
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
     <Compile Include="Neolithic\Content\Utility\AreaMethods.cs" />
+    <Compile Include="Neolithic\Content\AiTask\AiTaskFleePOI.cs" />
+    <Compile Include="Neolithic\Content\AiTask\AiTaskSleep.cs" />
+    <Compile Include="Neolithic\Content\AiTask\FixedAiTaskSeekFoodAndEat.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\LampConnectorBehavior.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\LampPostBehavior.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\RotateNinety.cs" />
@@ -163,10 +162,6 @@
     <Compile Include="Neolithic\Content\Item\ItemGiantReedsRoot.cs" />
     <Compile Include="Neolithic\Content\Item\ItemSickle.cs" />
     <Compile Include="Neolithic\TheNeolithicMod.cs" />
-    <Compile Include="TasksLib\BehaviorsLib.cs" />
-    <Compile Include="TasksLib\Tasks\AiTaskFleePOI.cs" />
-    <Compile Include="TasksLib\Tasks\AiTaskSleep.cs" />
-    <Compile Include="TasksLib\Tasks\FixedAiTaskSeekFoodAndEat.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".vs\Neolithic\v15\" />
@@ -175,7 +170,6 @@
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\generic\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\bag\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\entity\" />
-    <Folder Include="TasksLib\EntityBehaviors\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowl.json" />

@@ -73,7 +73,7 @@
 						whenNotInEmotionState: "saturated"
 					},
 					{
-                        code: "fixedseekfoodandeat",
+                        code: "neolithicseekfoodandeat",
                         priority: 1.85,
                         eatSound: "player/eat",
                         eatTime: 7,
@@ -87,7 +87,7 @@
                         doConsumePortion: true
                     },
 					{
-						code: "AiTaskSleep",
+						code: "sleep",
 						priority: 1.8,
 						priorityForCancel: 1.35,
 						animation: "sleep",
