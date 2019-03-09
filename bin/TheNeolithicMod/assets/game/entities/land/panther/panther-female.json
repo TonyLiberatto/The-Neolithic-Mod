@@ -82,6 +82,29 @@
 						whenNotInEmotionState: "saturated"
 					},
 					{
+                        code: "neolithicseekfoodandeat",
+                        priority: 1.85,
+                        eatSound: "player/eat",
+                        eatTime: 7,
+                        movespeed: 0.02,
+                        animation: "Walk",
+                        animationSpeed: 1.0,
+                        eatanimation: "Eat",
+                        eatanimationspeed: 1.0,
+                        mincooldownHours: 1,
+                        maxcooldownHours: 4,
+                        doConsumePortion: true
+                    },
+					{
+						code: "sleep",
+						priority: 1.8,
+						priorityForCancel: 1.35,
+						animation: "sleep",
+						isnocturnal: true,
+						cancelOnHurt: true,
+						animationSpeed: 0.20,
+					},
+					{
 						code: "seekentity",
 						entityCodes: ["player", "chicken-*", "rabbit-*"],
 						priority: 1.5,

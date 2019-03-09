@@ -51,6 +51,15 @@
 						sound: "creature/wolf/wolf-pup-bark"
 					},
 					{
+						code: "sleep",
+						priority: 1.6,
+						priorityForCancel: 1.35,
+						animation: "sleep",
+						isnocturnal: true,
+						cancelOnHurt: true,
+						animationSpeed: 0.20,
+					},
+					{
 						code: "fleeentity",
 						entityCodes: ["player"],
 						priority: 1.5,

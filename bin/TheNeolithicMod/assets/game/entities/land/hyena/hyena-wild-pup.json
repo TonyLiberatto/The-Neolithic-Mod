@@ -1,5 +1,5 @@
 {
-	code: "hyena-pup",
+	code: "hyena-wild-pup",
 	class: "EntityAgent",
 	hitboxSize: { x: 0.7, y: 0.5 },
 	deadHitboxSize: { x: 0.7, y: 0.3 },
@@ -9,8 +9,8 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/hyena-pup" },
-		texture: { base: "entity/hyena/pup" }, 
+		shape: { base: "entity/land/hyena/pup" },
+		texture: { base: "entity/hyena/wild-pup" }, 
 		behaviors: [
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
@@ -53,6 +53,25 @@
 					{
 						code: "fleeentity",
 						entityCodes: ["player"],
+						priority: 1.7,
+						movespeed: 0.02,
+						animationSpeed: 2.2,
+						seekingRange: 5,
+						animation: "Run",
+						sound: "creature/wolf/wolf-pup-bark"
+					},
+					{
+						code: "sleep",
+						priority: 1.6,
+						priorityForCancel: 1.35,
+						animation: "sleep",
+						isnocturnal: true,
+						cancelOnHurt: true,
+						animationSpeed: 0.20,
+					},
+					{
+						code: "fleeentity",
+						entityCodes: ["player"],
 						priority: 1.5,
 						movespeed: 0.02,
 						animationSpeed: 2.2,
@@ -60,6 +79,7 @@
 						animation: "Run",
 						sound: "creature/wolf/pup-bark"
 					},
+					
 					{
 						code: "getoutofwater",
 						priority: 1.45,
