@@ -43,23 +43,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>E:\Games\VintageStory\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\Vintagestory\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>E:\Games\VintageStory\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\Vintagestory\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>E:\Games\VintageStory\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\Vintagestory\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>E:\Games\VintageStory\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\Vintagestory\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>E:\Games\VintageStory\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\Vintagestory\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
@@ -67,15 +67,15 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Games\VintageStory\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\Vintagestory\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>E:\Games\VintageStory\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\Vintagestory\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>E:\Games\VintageStory\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\Vintagestory\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -97,7 +97,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>E:\Games\VintageStory\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\..\Vintagestory\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI">
@@ -109,15 +109,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>E:\Games\VintageStory\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\Vintagestory\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>E:\Games\VintageStory\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\Vintagestory\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>E:\Games\VintageStory\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\Vintagestory\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -192,6 +192,8 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\trough-small.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\air\butterfly.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\arrow-primitive.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\armadillo\armadillo-female.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\armadillo\armadillo-male.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\chicken\chicken-chick.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\chicken\chicken-hen.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\chicken\chicken-rooster.json" />
@@ -450,6 +452,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\plant\sisal\sisal8.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\plant\sisal\sisalleaf.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\air\butterfly.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\armadillo\armadillo.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\chicken\chick.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\chicken\hen.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\chicken\rooster.json" />
@@ -519,6 +522,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bone\skulls\skullsow.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bone\skulls\skullwolf.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\building\mudwall.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-armadillo.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-chicken.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-fox.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-hyena.json" />
@@ -1304,6 +1308,10 @@
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\wood\planks\bamboo-brown-top.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\wood\planks\bamboo-green-side.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\wood\planks\bamboo-green-top.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\armadillo\armadillo.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\armadillo\armadillo_dirt.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\armadillo\armadillo_tail.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\armadillo\dirt.gif" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\arrow\arrowbone.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\arrow\bone.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\arrow\silver.png" />
