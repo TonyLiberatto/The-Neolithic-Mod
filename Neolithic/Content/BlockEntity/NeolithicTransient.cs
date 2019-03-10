@@ -47,8 +47,12 @@ namespace TheNeolithicMod
         public override void Initialize(ICoreAPI api)
         {
             base.Initialize(api);
-            RegisterGameTickListener(OnTick, 50);
-            ownBlock = api.World.BlockAccessor.GetBlock(pos) as Block;
+            ownBlock = api.World.BlockAccessor.GetBlock(pos);
+
+            ownBlock = ownBlock == null ? api.World.BlockAccessor.GetBlock(pos) : ownBlock;
+            flies = ownBlock.Attributes["flies"].AsBool(true);
+
+
             facing = BlockFacing.FromCode(ownBlock.LastCodePart());
             if (nltConfig == null)
             {
@@ -63,28 +67,29 @@ namespace TheNeolithicMod
 
             if (api.Side == EnumAppSide.Server)
             {
-                //api.World.Logger.Notification("AddedPOI: " + this);
                 api.ModLoader.GetModSystem<POIRegistry>().AddPOI(this);
                 RegisterGameTickListener(CheckTransition, 2000);
+            }
+            if (api.Side == EnumAppSide.Client && flies)
+            {
+                RegisterGameTickListener(FliesTick, 100);
             }
 
         }
 
-        private void OnTick(float dt)
+        private void FliesTick(float dt)
         {
-            //Block block = api.World.BlockAccessor.GetBlock(pos);
-            bool flies = ownBlock.Attributes["flies"].AsBool(true);
-            if (api.Side == EnumAppSide.Client && flies && api.World.Calendar.DayLightStrength > 0.5 )
+            if (api.Side == EnumAppSide.Client && api.World.Calendar.DayLightStrength > 0.5 )
             {
                 double modx = api.World.Rand.NextDouble();
                 double modz = api.World.Rand.NextDouble();
                 double mody = api.World.Rand.NextDouble();
 
-                int modc = Convert.ToInt32((modx + mody + modz / 3) * 25);
+                int modc = (int)((modx + mody + modz / 3) * 25);
 
                 Flies.minPos.Set(pos.X + modx, pos.Y + mody, pos.Z + modz);
                 Flies.color = ColorUtil.ToRgba(100, 0, modc, modc);
-                Flies.glowLevel = Convert.ToByte(api.World.Calendar.DayLightStrength * 50);
+                Flies.glowLevel = (byte)(api.World.Calendar.DayLightStrength * 50);
 
                 api.World.SpawnParticles(Flies);
             }
