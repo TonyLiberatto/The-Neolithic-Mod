@@ -72,7 +72,7 @@ namespace TheNeolithicMod
             }
             if (api.Side == EnumAppSide.Client && flies)
             {
-                RegisterGameTickListener(FliesTick, 50);
+                RegisterGameTickListener(FliesTick, 100);
             }
 
         }

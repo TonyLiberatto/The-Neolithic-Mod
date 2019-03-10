@@ -204,7 +204,7 @@
 		],
 	},
 	sounds: {
-		"place": "morbid/squish1",
-		"break": "morbid/squish2"
+		"place": "game:effect/squish1",
+		"break": "game:effect/squish2"
 	},
 }

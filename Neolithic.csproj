@@ -1069,8 +1069,6 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\food\meat\rabbit.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\resource\stonebrick.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\tool\woodenmallet.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\sounds\morbid\squish1.ogg" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\sounds\morbid\squish2.ogg" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\adobe\3DLayer.obj" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\adobe\adobe1.psd" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\adobe\newadobe.psd" />
