@@ -69,12 +69,15 @@ namespace TheNeolithicMod
             {
                 api.ModLoader.GetModSystem<POIRegistry>().AddPOI(this);
                 RegisterGameTickListener(CheckTransition, 2000);
-                if (flies) RegisterGameTickListener(OnTick, 50);
+            }
+            if (api.Side == EnumAppSide.Client && flies)
+            {
+                RegisterGameTickListener(FliesTick, 50);
             }
 
         }
 
-        private void OnTick(float dt)
+        private void FliesTick(float dt)
         {
             if (api.Side == EnumAppSide.Client && api.World.Calendar.DayLightStrength > 0.5 )
             {
