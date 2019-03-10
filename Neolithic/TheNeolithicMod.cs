@@ -34,7 +34,7 @@ namespace TheNeolithicMod
 
             AiTaskRegistry.Register("fleepoi", typeof(AiTaskFleePOI));
             AiTaskRegistry.Register("sleep", typeof(AiTaskSleep));
-            AiTaskRegistry.Register("neolithicseekfoodandeat", typeof(AiTaskSeekFoodAndEat));
+            AiTaskRegistry.Register("neolithicseekfoodandeat", typeof(FixedAiTaskSeekFoodAndEat));
         }
     }
 }
