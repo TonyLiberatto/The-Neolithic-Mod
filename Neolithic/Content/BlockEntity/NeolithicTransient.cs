@@ -48,7 +48,7 @@ namespace TheNeolithicMod
         {
             base.Initialize(api);
             RegisterGameTickListener(OnTick, 50);
-            ownBlock = api.World.BlockAccessor.GetBlock(pos) as Block;
+            ownBlock = api.World.BlockAccessor.GetBlock(pos);
             facing = BlockFacing.FromCode(ownBlock.LastCodePart());
             if (nltConfig == null)
             {
@@ -72,7 +72,7 @@ namespace TheNeolithicMod
 
         private void OnTick(float dt)
         {
-            //Block block = api.World.BlockAccessor.GetBlock(pos);
+            ownBlock = ownBlock == null ? api.World.BlockAccessor.GetBlock(pos) : ownBlock;
             bool flies = ownBlock.Attributes["flies"].AsBool(true);
             if (api.Side == EnumAppSide.Client && flies && api.World.Calendar.DayLightStrength > 0.5 )
             {
