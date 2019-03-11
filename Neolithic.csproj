@@ -137,6 +137,7 @@
     <Compile Include="carrycapacity\Network\SwapSlotsMessage.cs" />
     <Compile Include="carrycapacity\Utility\Extensions.cs" />
     <Compile Include="carrycapacity\Utility\LockedItemSlot.cs" />
+    <Content Include="CC4.txt" />
     <Compile Include="Neolithic\Content\Block Behavior\ChimneyBehavior.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Neolithic\Content\Block\BlockBowlNew.cs" />
@@ -194,6 +195,8 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\trough-small.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\air\butterfly.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\arrow-primitive.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\armadillo\armadillo-female.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\armadillo\armadillo-male.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\chicken\chicken-chick.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\chicken\chicken-hen.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\chicken\chicken-rooster.json" />
@@ -452,6 +455,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\plant\sisal\sisal8.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\plant\sisal\sisalleaf.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\air\butterfly.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\armadillo\armadillo.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\chicken\chick.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\chicken\hen.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\chicken\rooster.json" />
@@ -521,6 +525,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bone\skulls\skullsow.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bone\skulls\skullwolf.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\building\mudwall.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-armadillo.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-chicken.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-fox.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-hyena.json" />
@@ -1306,6 +1311,10 @@
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\wood\planks\bamboo-brown-top.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\wood\planks\bamboo-green-side.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\wood\planks\bamboo-green-top.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\armadillo\armadillo.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\armadillo\armadillo_dirt.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\armadillo\armadillo_tail.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\armadillo\dirt.gif" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\arrow\arrowbone.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\arrow\bone.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\arrow\silver.png" />
