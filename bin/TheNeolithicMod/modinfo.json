@@ -4,7 +4,7 @@
 	"name": "The Neolithic Mod",
 	"modid": "theneolithicmod",
 	"description" : "Adds more Animals, Plants, blocks and tools",
-	"authors": [ "Tony Liberatto","Novocain","Balduranne","tenabrae" ],
+	"authors": [ "Tony Liberatto","Novocain","Balduranne","BunnyViking" ],
 	"contributors": ["Tyron", "Milo", "Stroam","Elwood","copygirl"],
 	"version": "1.4.2",
 	"dependencies": {

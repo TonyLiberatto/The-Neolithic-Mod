@@ -62,7 +62,8 @@
 		},
 	textureByType: 
 		{
-		"creature-armadillo-*": { base: "entity/armadillo/armadillo"},
+		"creature-armadillo-*": {"armadillo": { base: "game: entity/armadillo/armadillo" },
+		"armadillo_tail": { base: "game:entity/armadillo/armadillo_tail" }},
 		"creature-humanoid-*": { base: "entity/humanoid/trader" },
 		"creature-butterfly-bloodredglider": { base: "entity/butterfly/blood-red-glider" },
 		"creature-butterfly-commonbrimstone": { base: "entity/butterfly/commonbrimstone" },
