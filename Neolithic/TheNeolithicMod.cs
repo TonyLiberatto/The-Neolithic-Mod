@@ -19,6 +19,7 @@ namespace TheNeolithicMod
             api.RegisterBlockClass("BlockPlaceOnDrop", typeof(BlockPlaceOnDropNew));
             api.RegisterBlockClass("BlockGiantReeds", typeof(BlockGiantReeds));
             api.RegisterBlockClass("BlockMortarAndPestle", typeof(BlockMortarAndPestle));
+            api.RegisterBlockClass("BlockBowl", typeof(BlockBowlNew));
 
             api.RegisterItemClass("ItemSickle", typeof(ItemSickle));
             api.RegisterItemClass("ItemGiantReedsRoot", typeof(ItemGiantReedsRoot));
@@ -35,6 +36,8 @@ namespace TheNeolithicMod
             AiTaskRegistry.Register("fleepoi", typeof(AiTaskFleePOI));
             AiTaskRegistry.Register("sleep", typeof(AiTaskSleep));
             AiTaskRegistry.Register("neolithicseekfoodandeat", typeof(FixedAiTaskSeekFoodAndEat));
+
+            api.RegisterEntityBehaviorClass("milkable", typeof(BehaviorMilkable));
         }
     }
 }

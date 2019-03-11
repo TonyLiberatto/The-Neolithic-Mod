@@ -1,0 +1,53 @@
+[
+  {
+    "op": "add",
+    "path": "/maxStackSizeByType/*-milk",
+    "value": 8,
+    "file": "blocktypes/clay/bowl.json"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/*-milk",
+    "value": {
+      "base": "block/clay/bowl-ground"
+    },
+    "file": "blocktypes/clay/bowl.json"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/*",
+    "value": {
+      "base": "block/clay/bowl-empty-ground"
+    },
+    "file": "blocktypes/clay/bowl.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType/*-milk",
+    "value": {
+      "content": {
+        "base": "block/liquid/milk"
+      }
+    },
+    "file": "blocktypes/clay/bowl.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/3",
+    "value": "milk",
+    "file": "blocktypes/clay/bowl.json"
+  },
+  {
+    "op": "add",
+    "path": "/nutritionPropsByType/*-milk",
+    "value": {
+      "saturation": 60,
+      "health": 0.5,
+      "eatenStack": {
+        "type": "block",
+        "code": "bowl-burned"
+      }
+    },
+    "file": "blocktypes/clay/bowl.json"
+  }
+]

@@ -1,0 +1,125 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Vintagestory.API;
+using Vintagestory.API.Common;
+using Vintagestory.API.Common.Entities;
+using Vintagestory.API.Datastructures;
+using Vintagestory.API.MathTools;
+using Vintagestory.API.Server;
+using Vintagestory.GameContent;
+
+namespace TheNeolithicMod
+{
+    class BehaviorMilkable : EntityBehavior
+    {
+        public Item milk;
+        public WaterTightContainableProps milkProps;
+        ITreeAttribute tree;
+        long id;
+        double NextTimeMilkable;
+        int defaultvalue;
+
+        public int RemainingLiters
+        {
+            get { return tree.GetInt("remainingliters"); }
+            set { tree.SetInt("remainingliters", value); entity.WatchedAttributes.MarkPathDirty("remainingliters"); }
+        }
+
+        public BehaviorMilkable(Entity entity) : base(entity)
+        {
+        }
+
+        public override void Initialize(EntityProperties properties, JsonObject attributes)
+        {
+            base.Initialize(properties, attributes);
+            milk = entity.World.GetItem(new AssetLocation("milkportion"));
+            milkProps = milk.Attributes["waterTightContainerProps"].AsObject<WaterTightContainableProps>();
+            defaultvalue = attributes["startingliters"].AsInt(24);
+
+            tree = entity.WatchedAttributes.GetTreeAttribute("milkingprops");
+
+            if (tree == null)
+            {
+                entity.WatchedAttributes.SetAttribute("milkingprops", tree = new TreeAttribute());
+                RemainingLiters = defaultvalue;
+            }
+
+            if (entity.World.Side is EnumAppSide.Server && RemainingLiters < defaultvalue)
+            {
+                NextTimeMilkable = GetNextTimeMilkable();
+                id = entity.World.RegisterGameTickListener(MilkListener, 1000);
+            }
+        }
+
+        public override string PropertyName()
+        {
+            return "milkable";
+        }
+
+        public override void GetInfoText(StringBuilder infotext)
+        {
+            base.GetInfoText(infotext);
+            infotext.AppendLine("Liters Of Milk Remaining: " + RemainingLiters / milkProps.ItemsPerLitre);
+        }
+
+        public override void OnInteract(EntityAgent byEntity, IItemSlot itemslot, Vec3d hitPosition, EnumInteractMode mode, ref EnumHandling handled)
+        {
+            handled = EnumHandling.PreventDefault;
+            if (itemslot.Itemstack.Block is BlockBucket)
+            {
+                BlockBucket bucket = itemslot.Itemstack.Block as BlockBucket;
+                ItemStack contents = bucket.GetContent(byEntity.World, itemslot.Itemstack);
+                if ((contents == null || contents.Item == milk) && RemainingLiters > 0)
+                {
+                    if (bucket.TryAddContent(byEntity.World, itemslot.Itemstack, new ItemStack(milk), 1) > 0)
+                    {
+                        RemainingLiters -= 1;
+                        itemslot.MarkDirty();
+                        if (id == 0 && RemainingLiters < defaultvalue && byEntity.World.Side is EnumAppSide.Server)
+                        {
+                            NextTimeMilkable = GetNextTimeMilkable();
+                            id = entity.World.RegisterGameTickListener(MilkListener, 1000);
+                        }
+                    }
+                }
+            }
+
+            base.OnInteract(byEntity, itemslot, hitPosition, mode, ref handled);
+        }
+
+        public override void OnEntityDeath(DamageSource damageSourceForDeath)
+        {
+            base.OnEntityDeath(damageSourceForDeath);
+            if (id != 0)
+            {
+                entity.World.UnregisterGameTickListener(id);
+            }
+        }
+
+        public override void OnEntityDespawn(EntityDespawnReason despawn)
+        {
+            base.OnEntityDespawn(despawn);
+            if (id != 0)
+            {
+                entity.World.UnregisterGameTickListener(id);
+            }
+        }
+
+        public double GetNextTimeMilkable()
+        {
+            return entity.World.Calendar.TotalHours + 12 + (entity.World.Rand.NextDouble() * 8);
+        }
+
+        public void MilkListener(float dt)
+        {
+            if (entity.World.Calendar.TotalHours > NextTimeMilkable)
+            {
+                RemainingLiters = defaultvalue;
+                entity.World.UnregisterGameTickListener(id);
+            }
+        }
+    }
+}

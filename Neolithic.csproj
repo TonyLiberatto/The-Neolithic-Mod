@@ -139,7 +139,9 @@
     <Compile Include="carrycapacity\Utility\LockedItemSlot.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\ChimneyBehavior.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
+    <Compile Include="Neolithic\Content\Block\BlockBowlNew.cs" />
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
+    <Compile Include="Neolithic\Content\EntityBehavior\BehaviorMilkable.cs" />
     <Compile Include="Neolithic\Content\Utility\AreaMethods.cs" />
     <Compile Include="Neolithic\Content\AiTask\AiTaskFleePOI.cs" />
     <Compile Include="Neolithic\Content\AiTask\AiTaskSleep.cs" />

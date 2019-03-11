@@ -16,6 +16,7 @@
 		texture: { base: "entity/sheep/sheep-bighorn-female" },
 		behaviors: [
 			{ code: "repulseagents" }, 
+      { code: "milkable" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
 			{ code: "interpolateposition" }, 
 			{ code: "floatupwhenstuck", onlyWhenDead: true },
@@ -47,6 +48,7 @@
 		},
 		behaviors: [
 			{ code: "repulseagents" }, 
+      { code: "milkable" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ 

@@ -1,0 +1,10 @@
+[
+  {
+    "op": "add",
+    "path": "/textures/milkportion",
+    "value": {
+      "base": "block/liquid/milk"
+    },
+    "file": "blocktypes/wood/generic/bucket.json"
+  }
+]
