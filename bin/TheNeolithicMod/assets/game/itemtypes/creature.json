@@ -3,7 +3,9 @@
 	class: "ItemCreature",
 	maxstacksize: 64,
 	variantgroups: [
-		{ code: "type", states: ["panther-male-black", "panther-female-black","panther-kitty-black",
+		{ code: "type", states: [
+		"armadillo-male", "armadillo-female",
+		"panther-male-black", "panther-female-black","panther-kitty-black",
 		"hyena-wild-male", "hyena-wild-female-tan", "hyena-wild-female-brown", "hyena-wild-pup", 
 		"fox-red-male", "fox-red-female", "fox-snow-male", "fox-snow-female", 
 		"rabbit-male-black","rabbit-male-brown","rabbit-male-darkgrey","rabbit-male-grey","rabbit-male-lightgrey", "rabbit-male-tan","rabbit-male-white", 
@@ -26,6 +28,7 @@
 		],
 	shapeByType: 
 		{
+		"creature-armadillo-*": { base: "entity/land/armadillo/armadillo" },
 		"creature-butterfly-*": { base: "entity/air/butterfly" },
 		"creature-humanoid-*": { base: "entity/humanoid/trader" },
 		"creature-panther-male-black": { base: "entity/land/panther/male"},
@@ -59,6 +62,8 @@
 		},
 	textureByType: 
 		{
+		"creature-armadillo-*": {"armadillo": { base: "game: entity/armadillo/armadillo" },
+		"armadillo_tail": { base: "game:entity/armadillo/armadillo_tail" }},
 		"creature-humanoid-*": { base: "entity/humanoid/trader" },
 		"creature-butterfly-bloodredglider": { base: "entity/butterfly/blood-red-glider" },
 		"creature-butterfly-commonbrimstone": { base: "entity/butterfly/commonbrimstone" },
@@ -167,6 +172,13 @@
 	materialDensity: 600,
 	guiTransformByType: 
 		{
+		"creature-armadillo-*": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
 		"creature-humanoid-trader-*": {
 			rotation: { x: 0, y: -90, z: -178 },
 			origin: { x: 0.6, y: 0.78, z: 0.5 }
@@ -377,6 +389,11 @@
 	},
 	
 	tpHandTransformByType: {
+		"creature-armadillo-*": {
+			translation: { x: -1, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.5
+		},
 		"creature-humanoid-trader-*": {
 			translation: { x: -0.6, y: -1.1, z: -0.4 },
 			rotation: { x: -85, y: -11, z: 89 },
@@ -555,6 +572,11 @@
 	
 	fpHandTransformByType: 
 		{
+		"creature-armadillo-*": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+			scale: 1.16
+		},
 		"creature-humanoid-trader-*": {
 			translation: { x: 0.05, y: -0.3, z: 0 },
 			rotation: { x: 165, y: 76, z: -180 }
