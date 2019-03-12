@@ -13,8 +13,7 @@
 			translation: [ 0.0625, 0, 0 ],
 			rotation: [ 0, 180, 0 ],
 			}
-		},
-		{name: "Container"}, 
+		}, 
 		{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}	
 	],
 	variantgroups: [

@@ -12,7 +12,7 @@
 		"rabbit-female-black","rabbit-female-brown","rabbit-female-darkgrey","rabbit-female-grey", "rabbit-female-lightgrey","rabbit-female-tan","rabbit-female-white", 
 		"rabbit-baby-black","rabbit-baby-brown","rabbit-baby-darkgrey",	"rabbit-baby-grey","rabbit-baby-lightgrey","rabbit-baby-tan","rabbit-baby-white", 
 		"sheep-ram", "sheep-ewe", "sheep-lamb",
-		"sheep-wild-ram", "sheep-wild-ewe", "sheep-wild-lamb",
+		"wild-sheep-ram", "wild-sheep-ewe", "wild-sheep-lamb",
 		"chicken-rooster-ashgrey", "chicken-rooster-black", "chicken-rooster-brown", "chicken-rooster-cream", "chicken-rooster-golden",	"chicken-rooster-white", 
 		"chicken-hen-ashgrey", "chicken-hen-black", "chicken-hen-brown", "chicken-hen-cream", "chicken-hen-golden",	"chicken-hen-white", 
 		"chicken-chick-ashgrey", "chicken-chick-black", "chicken-chick-brown", "chicken-chick-cream", "chicken-chick-golden", "chicken-chick-white", 
@@ -52,9 +52,9 @@
 		"creature-pig-boar-*": { base: "entity/land/pig/boar" },
 		"creature-pig-sow-*": { base: "entity/land/pig/sow" },
 		"creature-pig-piglet": { base: "entity/land/pig-wild-piglet" },
-		"creature-sheep-wild-ram": { base: "entity/land/wild-sheep/ram" },
-		"creature-sheep-wild-ewe": { base: "entity/land/wild-sheep/ewe" },
-		"creature-sheep-wild-lamb": { base: "entity/land/wild-sheep/lamb" },
+		"creature-wild-sheep-ram": { base: "entity/land/wild-sheep/ram" },
+		"creature-wild-sheep-ewe": { base: "entity/land/wild-sheep/ewe" },
+		"creature-wild-sheep-lamb": { base: "entity/land/wild-sheep/lamb" },
 		"creature-sheep-ram": { base: "entity/land/sheep/ram" },
 		"creature-sheep-ewe": { base: "entity/land/sheep/ewe" },
 		"creature-sheep-lamb": { base: "entity/land/sheep/lamb" },
@@ -107,9 +107,9 @@
 		"creature-rabbit-baby-lightgrey":{ base: "entity/rabbit/baby/lightgrey"},
 		"creature-rabbit-baby-tan":{ base: "entity/rabbit/baby/tan"},
 		"creature-rabbit-baby-white":{ base: "entity/rabbit/baby/white"},
-		"creature-sheep-wild-ram":{ base: "entity/wild-sheep/ram"},
-		"creature-sheep-wild-ewe":{ base: "entity/wild-sheep/ewe"},
-		"creature-sheep-wild-lamb":{ base: "entity/wild-sheep/lamb"},
+		"creature-wild-sheep-ram":{ base: "entity/wild-sheep/ram"},
+		"creature-wild-sheep-ewe":{ base: "entity/wild-sheep/ewe"},
+		"creature-wild-sheep-lamb":{ base: "entity/wild-sheep/lamb"},
 		"creature-sheep-ram":{ base: "entity/sheep/ram"},
 		"creature-sheep-ewe":{ base: "entity/sheep/ewe"},
 		"creature-sheep-lamb":{ base: "entity/sheep/lamb"},
@@ -316,21 +316,21 @@
 			origin: { x: 0.5, y: 0.3, z: 0.5 },
 			scale: 2.18
 		},
-		"creature-sheep-wild-ram": {
+		"creature-wild-sheep-ram": {
 			rotate: true,
 			translation: { x: 3, y: 0, z: 0 },
 			rotation: { x: -11, y: -52, z: -180 },
 			origin: { x: 0.5, y: 0.8, z: 0.5 },
 			scale: 0.97
 		},
-		"creature-sheep-wild--ewe": {
+		"creature-wild-sheep--ewe": {
 			rotate: true,
 			translation: { x: 3, y: 0, z: 0 },
 			rotation: { x: -11, y: -52, z: -180 },
 			origin: { x: 0.5, y: 0.8, z: 0.5 },
 			scale: 0.97
 		},
-		"creature-sheep-wild-lamb": {
+		"creature-wild-sheep-lamb": {
 			rotate: true,
 			translation: { x: 1, y: -1, z: 0 },
 			rotation: { x: -11, y: -52, z: -180 },
@@ -534,17 +534,17 @@
 			origin: { x: 0.5, y: 0.1, z: 0.5 },
 			scale: 0.92
 		},
-		"creature-sheep-wild-ram": {
+		"creature-wild-sheep-ram": {
 			translation: { x: -0.9, y: -0.9, z: -0.7 },
 			rotation: { x: -180, y: 0, z: -156 },
 			scale: 0.45
 		},
-		"creature-sheep-wild-ewe": {
+		"creature-wild-sheep-ewe": {
 			translation: { x: -0.9, y: -0.9, z: -0.7 },
 			rotation: { x: -180, y: 0, z: -156 },
 			scale: 0.45
 		},
-		"creature-sheep-wild-lamb": {
+		"creature-wild-sheep-lamb": {
 			translation: { x: -0.4, y: 0, z: -0.6 },
 			rotation: { x: -160, y: -26, z: -90 },
 			origin: { x: 0.5, y: 0.1, z: 0.5 },
@@ -714,15 +714,15 @@
 			rotation: { x: -180, y: -78, z: -180 },
 			scale: 1.21
 		},
-		"creature-sheep-wild-ram": {
+		"creature-wild-sheep-ram": {
 			translation: { x: 0.2, y: 0, z: 0 },
 			rotation: { x: -8, y: -63, z: -7 }
 		},
-		"creature-sheep-wild-ewe": {
+		"creature-wild-sheep-ewe": {
 			translation: { x: 0.2, y: 0, z: 0 },
 			rotation: { x: -8, y: -63, z: -7 }
 		},
-		"creature-sheep-wild-lamb": {
+		"creature-wild-sheep-lamb": {
 			translation: { x: 0.4, y: 0, z: 0 },
 			rotation: { x: -8, y: -63, z: -7 }
 		},
