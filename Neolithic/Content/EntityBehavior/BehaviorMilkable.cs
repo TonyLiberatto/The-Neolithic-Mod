@@ -75,9 +75,10 @@ namespace TheNeolithicMod
 
         public override void OnInteract(EntityAgent byEntity, IItemSlot itemslot, Vec3d hitPosition, EnumInteractMode mode, ref EnumHandling handled)
         {
-            handled = EnumHandling.PreventDefault;
+            
             if (itemslot.Itemstack.Block is BlockBucket)
             {
+                handled = EnumHandling.PreventDefault;
                 ItemStack milkstack = new ItemStack(milk);
                 BlockBucket bucket = itemslot.Itemstack.Block as BlockBucket;
                 ItemStack contents = bucket.GetContent(byEntity.World, itemslot.Itemstack);
@@ -86,7 +87,7 @@ namespace TheNeolithicMod
                     if (bucket.TryAddContent(byEntity.World, itemslot.Itemstack, milkstack, 1) > 0)
                     {
                         RemainingLiters -= 1;
-                        byEntity.World.SpawnCubeParticles(entity.Pos.XYZ + new Vec3d(0,0.5,0), milkstack, 0.3f, 4, 0.5f, (byEntity as EntityPlayer)?.Player);
+                        if (byEntity.World.Side == EnumAppSide.Client) byEntity.World.SpawnCubeParticles(entity.Pos.XYZ + new Vec3d(0,0.5,0), milkstack, 0.3f, 4, 0.5f, (byEntity as EntityPlayer)?.Player);
                         itemslot.MarkDirty();
                         if (id == 0 && RemainingLiters < defaultvalue && byEntity.World.Side is EnumAppSide.Server)
                         {
