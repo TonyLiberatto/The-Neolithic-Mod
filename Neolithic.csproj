@@ -137,7 +137,6 @@
     <Compile Include="carrycapacity\Network\SwapSlotsMessage.cs" />
     <Compile Include="carrycapacity\Utility\Extensions.cs" />
     <Compile Include="carrycapacity\Utility\LockedItemSlot.cs" />
-    <Content Include="CC4.txt" />
     <Compile Include="Neolithic\Content\Block Behavior\ChimneyBehavior.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Neolithic\Content\Block\BlockBowlNew.cs" />
