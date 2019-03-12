@@ -1,5 +1,5 @@
 {
-	code: "sheep-lamb",
+	code: "wild-sheep-lamb",
 	class: "EntityAgent",
 	hitboxSize: { x: 1.0, y: 0.5 },
 	deadHitboxSize: { x: 1, y: 0.25 },
@@ -13,8 +13,8 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/sheep/lamb" },
-		texture: { base: "entity/sheep/lamb" },
+		shape: { base: "entity/land/sheep-bighorn-lamb" },
+		texture: { base: "entity/sheep/sheep-bighorn-lamb" },
 		behaviors: [
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
@@ -55,11 +55,21 @@
 			{ 
 				code: "grow",
 				hoursToGrow: 336,
-				adultEntityCodes: ["sheep-ram", "sheep-ewe"],
+				adultEntityCodes: ["wild-sheep-ram", "wild-sheep-ewe"],
 			},
 			{ 
 				code: "taskai",
 				aitasks: [
+					{
+						code: "fleeentity",
+						entityCodes: ["player"],
+						priority: 1.5,
+						movespeed: 0.025,
+						seekingRange: 9,
+						animationSpeed: 4,
+						animation: "Run",
+						sound: "creature/sheep/lamb-hurt2"
+					},
 					{
 						code: "getoutofwater",
 						priority: 1.4,
@@ -70,7 +80,7 @@
 					{
 						code: "stayclosetoentity",
 						priority: 1.4,
-						entityCode: "sheep-ewe",
+						entityCode: "wild-sheep-ewe",
 						movespeed: 0.025,
 						maxDistance: 5,
 						searchRange: 25,
