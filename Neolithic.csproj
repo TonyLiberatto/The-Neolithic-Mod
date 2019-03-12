@@ -1081,6 +1081,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\adobe\Thumbs.db" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\rammedearth\Thumbs.db" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\plant\wicker\wicker1.psd" />
+    <None Include="bin\TheNeolithicMod\LICENSE" />
     <None Include="bin\TheNeolithicMod\modinfo.json" />
     <None Include="bin\Totems\assets\totems\blocktypes\totem-pig-crucible.json" />
     <None Include="bin\Totems\assets\totems\blocktypes\totem-pig.json" />
@@ -1106,9 +1107,9 @@
     <None Include="bin\Totems\assets\totems\shapes\block\wood\totem\pig\new.json" />
     <None Include="bin\Totems\assets\totems\shapes\block\wood\totem\pig\tusk.json" />
     <None Include="bin\Totems\modinfo.json" />
+    <None Include="LICENSE" />
     <None Include="packages.config" />
     <None Include="README.md" />
-    <None Include="UNLICENSE" />
     <None Include="WIPAssets\Novocain\shapes\road-cobble-circle.json" />
     <None Include="WIPAssets\Novocain\shapes\road-cobble-shuffled.json" />
     <None Include="WIPAssets\Novocain\shapes\road-cobble-square.json" />
