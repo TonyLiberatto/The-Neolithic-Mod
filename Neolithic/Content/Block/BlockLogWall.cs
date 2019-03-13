@@ -52,7 +52,7 @@ namespace TheNeolithicMod
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
             IItemSlot activeslot = byPlayer.InventoryManager.ActiveHotbarSlot;
-            if (activeslot.Itemstack.Item.Tool is EnumTool.Hammer && world.Side is EnumAppSide.Server)
+            if (activeslot.Itemstack.Item.Tool == EnumTool.Hammer && world.Side == EnumAppSide.Server)
             {
                 world.RegisterCallback((dt) =>
                 {
@@ -61,8 +61,12 @@ namespace TheNeolithicMod
                     world.SpawnCubeParticles(blockSel.Position, blockSel.Position.ToVec3d().Add(0.5, 0.5, 0.5), 2, 32);
                 }, 50);
             }
-            /*
-            if (world.Side is EnumAppSide.Client)
+            return true;
+        }
+
+        public override bool OnBlockInteractStep(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
+        {
+            if (world.Side == EnumAppSide.Client)
             {
                 ModelTransform tf = new ModelTransform();
 
@@ -70,11 +74,11 @@ namespace TheNeolithicMod
 
                 tf.Origin.Set(0f, 0f, 0f);
 
-                tf.Rotation.Y += (float)Math.Sin(world.Rand.Next())*360;
+                tf.Rotation.X -= (float)Math.Sin(secondsUsed*8) * 45;
 
                 byPlayer.Entity.Controls.UsingHeldItemTransformAfter = tf;
+                return tf.Rotation.X > -44;
             }
-            */
             return true;
         }
 
@@ -87,21 +91,23 @@ namespace TheNeolithicMod
 
             if (byPlayer.Entity.Controls.Sneak)
             {
-                rotationindex = rotationindex < directions.Length ? rotationindex + 1 : 0;
+                rotationindex = rotationindex < directions.Length - 1 ? rotationindex + 1 : 0;
                 AssetLocation nextAsset = CodeWithPart(directions[rotationindex], 5);
                 nextBlock = api.World.BlockAccessor.GetBlock(nextAsset);
                 if (nextBlock.Id == Id)
                 {
-                    rotationindex = rotationindex < directions.Length ? rotationindex + 1 : 0;
+                    rotationindex = rotationindex < directions.Length - 1 ? rotationindex + 1 : 0;
+                    nextBlock = api.World.BlockAccessor.GetBlock(nextAsset);
                 }
             }
             else
             {
-                i = i < variants.Length ? i + 1 : 0;
+                i = i < variants.Length - 1 ? i + 1 : 0;
                 nextBlock = world.BlockAccessor.GetBlock(variants[i]);
                 if (nextBlock.Id == Id)
                 {
-                    i = i < variants.Length ? i + 1 : 0;
+                    i = i < variants.Length - 1 ? i + 1 : 0;
+                    nextBlock = world.BlockAccessor.GetBlock(variants[i]);
                 }
             }
             world.BlockAccessor.SetBlock(nextBlock.BlockId, pos);
