@@ -30,11 +30,6 @@ namespace TheNeolithicMod
             "corner", "cornerin","cornertop","slope","slopewall","top", "topwall", "topend",
         };
 
-        public string[] stairrooftypes = new string[]
-        {
-            "corner","cornerin", "cornertop","slope", "slopewall", "top", "topwall", "topend", "flat1", "flat2", "flat3", "flat4"
-        };
-
         public string[] directions = new string[]
         {
             "north",
@@ -59,15 +54,10 @@ namespace TheNeolithicMod
                     wood = LastCodePart(3);
                     VariantsDictionary.Add(Id, GenLogwallVariants());
                 }
-                else if (FirstCodePart() == "rooframp")
+                else if (FirstCodePart() == "rooframp" || FirstCodePart() == "roofstairs")
                 {
                     wood = LastCodePart(2);
                     VariantsDictionary.Add(Id, GenRoofVariants());
-                }
-                else if (FirstCodePart() == "roofstairs")
-                {
-                    wood = LastCodePart(2);
-                    VariantsDictionary.Add(Id, GenStairRoofVariants());
                 }
             }
         }
@@ -163,16 +153,6 @@ namespace TheNeolithicMod
         {
             List<AssetLocation> variantslist = new List<AssetLocation>();
             foreach (string type in rooftypes)
-            {
-                variantslist.Add(new AssetLocation("neolithicmod:" + FirstCodePart() + "-" + type + "-" + wood + "-" + LastCodePart(1) + "-" + LastCodePart()));
-            }
-            return variantslist.ToArray();
-        }
-
-        public AssetLocation[] GenStairRoofVariants()
-        {
-            List<AssetLocation> variantslist = new List<AssetLocation>();
-            foreach (string type in stairrooftypes)
             {
                 variantslist.Add(new AssetLocation("neolithicmod:" + FirstCodePart() + "-" + type + "-" + wood + "-" + LastCodePart(1) + "-" + LastCodePart()));
             }

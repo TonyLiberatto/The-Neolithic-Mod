@@ -4,7 +4,7 @@
 	behaviors: [{name: "HorizontalOrientable"}],
 	creativeinventory: { "general": ["*-north"], "construction": ["*-north"], "neolithicblocks": ["*-north"] },
 		variantgroups: [
-		{ code: "type", states: [ "corner","cornerin", "cornertop","slope", "slopewall", "top", "topwall", "topend", "flat1", "flat2", "flat3", "flat4" ]},
+		{ code: "type", states: [ "corner","cornerin", "cornertop","slope", "slopewall", "top", "topwall", "topend" ]},
 		{ loadFromProperties: "block/wood" },
 		{ code: "style", states: ["bark", "debarked"]},
 		{ code:"orientation", loadFromProperties: "abstract/horizontalorientation" },
