@@ -13,8 +13,8 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/sheep-bighorn-lamb" },
-		texture: { base: "entity/sheep/sheep-bighorn-lamb" },
+		shape: { base: "entity/land/wild-sheep/lamb" },
+		texture: { base: "entity/wild-sheep/lamb" },
 		behaviors: [
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 

@@ -12,8 +12,8 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/sheep-bighorn-female" },
-		texture: { base: "entity/sheep/sheep-bighorn-female" },
+		shape: { base: "entity/land/wild-sheep/ewe" },
+		texture: { base: "entity/wild-sheep/ewe" },
 		behaviors: [
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 

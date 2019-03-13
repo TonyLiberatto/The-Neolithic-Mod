@@ -11,6 +11,17 @@
 			quantity: { avg: 0.5, var: 0.5 } 
 		}
 	],
+	behaviors: [
+		{
+			name: "Carryable",
+			properties: {
+			translation: [ 0.0625, 0, 0 ],
+			rotation: [ 0, 180, 0 ],
+			}
+		},
+		{name: "Container"}, 
+		{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}	
+	],
 	client: {
 		renderer: "Shape",
 		shape: { base: "entity/land/sheep/lamb" },
