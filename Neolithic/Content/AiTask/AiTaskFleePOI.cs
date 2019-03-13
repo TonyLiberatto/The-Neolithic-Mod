@@ -15,7 +15,6 @@ namespace TheNeolithicMod
     {
         POIRegistry porregistry;
         IPointOfInterest target;
-        //Vec3d pos;
 
         float moveSpeed = 0.02f;
         float fleeingDistance = 31f;
@@ -24,7 +23,6 @@ namespace TheNeolithicMod
         bool nowStuck = false;
         long fleeStartMs;
         float fleeDurationMs = 5000;
-        Vec3d pos;
         bool stuck;
 
         Dictionary<IPointOfInterest, FailedAttempt> failedSeekTargets = new Dictionary<IPointOfInterest, FailedAttempt>();
@@ -85,7 +83,7 @@ namespace TheNeolithicMod
 
         public float MinDistanceToTarget()
         {
-            return System.Math.Max(0.8f, (entity.CollisionBox.X2 - entity.CollisionBox.X1) / 2 + 0.05f);
+            return Math.Max(0.8f, (entity.CollisionBox.X2 - entity.CollisionBox.X1) / 2 + 0.05f);
         }
 
         public override void StartExecute()
@@ -93,7 +91,6 @@ namespace TheNeolithicMod
             Vec3d pos = target.Position;
             UpdateTargetPos(pos);
             base.StartExecute();
-            entity.World.Logger.Notification("AiTaskFleePOI:" + entity.ServerPos.XYZ + ": I Started :^|");
             stuckatMs = -9999;
             nowStuck = false;
             pathTraverser.GoTo(pos, moveSpeed, MinDistanceToTarget(), OnGoalReached, OnStuck);
@@ -106,16 +103,16 @@ namespace TheNeolithicMod
         {
             Vec3d pos = target.Position;
             UpdateTargetPos(pos);
-            //if (pos == null) return false;
+
             pathTraverser.CurrentTarget.X = pos.X;
             pathTraverser.CurrentTarget.Y = pos.Y;
             pathTraverser.CurrentTarget.Z = pos.Z;
-            //entity.World.Logger.Notification("" + pathTraverser.CurrentTarget);
 
             Cuboidd targetBox = entity.CollisionBox.ToDouble().Translate(entity.ServerPos.X, entity.ServerPos.Y, entity.ServerPos.Z);
             double distance = targetBox.ShortestDistanceFrom(pos);
             float minDist = MinDistanceToTarget();
             entity.World.Logger.Notification(""+entity.ServerPos.XYZ.SquareDistanceTo(pos));
+
             if (entity.ServerPos.XYZ.SquareDistanceTo(pos) > fleeingDistance * fleeingDistance)
             {
                 return false;

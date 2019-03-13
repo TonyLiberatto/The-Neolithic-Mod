@@ -43,7 +43,6 @@ namespace TheNeolithicMod
             milk = entity.World.GetItem(new AssetLocation("milkportion"));
             milkProps = milk.Attributes["waterTightContainerProps"].AsObject<WaterTightContainableProps>();
             defaultvalue = attributes["startingliters"].AsInt(24);
-
             tree = entity.WatchedAttributes.GetTreeAttribute("milkingprops");
 
             if (tree == null)
@@ -129,12 +128,29 @@ namespace TheNeolithicMod
 
         public void MilkListener(float dt)
         {
+            float sat = GetSaturation(entity);
             if (entity.World.Calendar.TotalHours > NextTimeMilkable)
             {
                 RemainingLiters = defaultvalue;
                 NextTimeMilkable = GetNextTimeMilkable();
                 entity.World.UnregisterGameTickListener(id);
             }
+        }
+
+        public float GetSaturation(Entity entity)
+        {
+            ITreeAttribute tree = entity.WatchedAttributes.GetTreeAttribute("hunger");
+            if (tree == null) entity.WatchedAttributes["hunger"] = tree = new TreeAttribute();
+
+            return tree.GetFloat("currentsaturation");
+        }
+
+        public float GetMaxSaturation(Entity entity)
+        {
+            ITreeAttribute tree = entity.WatchedAttributes.GetTreeAttribute("hunger");
+            if (tree == null) entity.WatchedAttributes["hunger"] = tree = new TreeAttribute();
+
+            return tree.GetFloat("maxsaturation");
         }
     }
 }

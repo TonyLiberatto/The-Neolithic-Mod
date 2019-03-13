@@ -1,5 +1,6 @@
 {
 	code: "logwall",
+  class: "BlockLogWall",
 	behaviors: [
 		{
 			name: "OmniRotatable",
@@ -10,29 +11,6 @@
 				"facing": "block",
 			}
 		},
-		 {
-		 name: "BlockSwapBehavior",
-		 properties: {
-			"swapBlocks": [
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-up-north", "neolithicmod:logwall-{type}-{wood}-{style}-up-west", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-up-west", "neolithicmod:logwall-{type}-{wood}-{style}-up-south", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-up-south", "neolithicmod:logwall-{type}-{wood}-{style}-up-east", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-up-east", "neolithicmod:logwall-{type}-{wood}-{style}-left-north", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-left-north", "neolithicmod:logwall-{type}-{wood}-{style}-left-west", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-left-west", "neolithicmod:logwall-{type}-{wood}-{style}-left-south", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-left-south", "neolithicmod:logwall-{type}-{wood}-{style}-left-east", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-left-east", "neolithicmod:logwall-{type}-{wood}-{style}-down-north", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-down-north", "neolithicmod:logwall-{type}-{wood}-{style}-down-west", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-down-west", "neolithicmod:logwall-{type}-{wood}-{style}-down-south", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-down-south", "neolithicmod:logwall-{type}-{wood}-{style}-down-east", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-down-east", "neolithicmod:logwall-{type}-{wood}-{style}-right-north", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-right-north", "neolithicmod:logwall-{type}-{wood}-{style}-right-west", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-right-west", "neolithicmod:logwall-{type}-{wood}-{style}-right-south", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-right-south", "neolithicmod:logwall-{type}-{wood}-{style}-right-east", 0 ],
-			 [ "game:hammer-*", "neolithicmod:logwall-{type}-{wood}-{style}-right-east", "neolithicmod:logwall-{type}-{wood}-{style}-up-north", 0 ]
-			]
-		 }
-	  }
 	],
 	creativeinventory: { "general": ["*"], "construction": ["*-north"], "neolithicblocks": ["*"] },
 		variantgroups: [

@@ -20,6 +20,7 @@ namespace TheNeolithicMod
             api.RegisterBlockClass("BlockGiantReeds", typeof(BlockGiantReeds));
             api.RegisterBlockClass("BlockMortarAndPestle", typeof(BlockMortarAndPestle));
             api.RegisterBlockClass("BlockBowl", typeof(BlockBowlNew));
+            api.RegisterBlockClass("BlockLogWall", typeof(BlockLogWall));
 
             api.RegisterItemClass("ItemSickle", typeof(ItemSickle));
             api.RegisterItemClass("ItemGiantReedsRoot", typeof(ItemGiantReedsRoot));
