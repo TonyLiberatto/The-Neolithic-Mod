@@ -106,15 +106,7 @@ namespace TheNeolithicMod
             if (byPlayer.Entity.Controls.Sneak)
             {
                 rotationindex = rotationindex < directions.Length - 1 ? rotationindex + 1 : 0;
-
-                if (FirstCodePart() == "rooframp" || FirstCodePart() == "roofstairs")
-                {
-                    nextAsset = CodeWithPart(directions[rotationindex], 4);
-                }
-                else
-                {
-                    nextAsset = CodeWithPart(directions[rotationindex], 5);
-                }
+                nextAsset = FirstCodePart() == "rooframp" || FirstCodePart() == "roofstairs" ? CodeWithPart(directions[rotationindex], 4) : CodeWithPart(directions[rotationindex], 5);
 
                 nextBlock = api.World.BlockAccessor.GetBlock(nextAsset);
                 if (nextBlock.Id == Id)
