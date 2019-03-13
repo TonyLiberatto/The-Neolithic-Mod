@@ -10,19 +10,29 @@ namespace TheNeolithicMod
 {
     class BlockLogWall : Block
     {
-        public string[] types = new string[]
+        public string[] walltypes = new string[]
         {
             "wall",
             "corner",
             "jut",
         };
 
-        public string[] verticals = new string[]
+        public string[] wallverticals = new string[]
         {
             "up",
             "left",
             "down",
             "right",
+        };
+
+        public string[] rooftypes = new string[]
+        {
+            "corner", "cornerin","cornertop","slope","slopewall","top", "topwall", "topend",
+        };
+
+        public string[] stairrooftypes = new string[]
+        {
+            "corner","cornerin", "cornertop","slope", "slopewall", "top", "topwall", "topend", "flat1", "flat2", "flat3", "flat4"
         };
 
         public string[] directions = new string[]
@@ -36,16 +46,29 @@ namespace TheNeolithicMod
         string wood;
         private static int i;
         private static int rotationindex;
-        
+
         public static Dictionary<int, AssetLocation[]> VariantsDictionary = new Dictionary<int, AssetLocation[]>();
 
         public override void OnLoaded(ICoreAPI api)
         {
             base.OnLoaded(api);
-            wood = LastCodePart(3);
             if (api.Side == EnumAppSide.Server)
             {
-                VariantsDictionary.Add(Id, GenVariants());
+                if (FirstCodePart() == "logwall")
+                {
+                    wood = LastCodePart(3);
+                    VariantsDictionary.Add(Id, GenLogwallVariants());
+                }
+                else if (FirstCodePart() == "rooframp")
+                {
+                    wood = LastCodePart(2);
+                    VariantsDictionary.Add(Id, GenRoofVariants());
+                }
+                else if (FirstCodePart() == "roofstairs")
+                {
+                    wood = LastCodePart(2);
+                    VariantsDictionary.Add(Id, GenStairRoofVariants());
+                }
             }
         }
 
@@ -74,7 +97,7 @@ namespace TheNeolithicMod
 
                 tf.Origin.Set(0f, 0f, 0f);
 
-                tf.Rotation.X -= (float)Math.Sin(secondsUsed*8) * 45;
+                tf.Rotation.X -= (float)Math.Sin(secondsUsed * 8) * 45;
 
                 byPlayer.Entity.Controls.UsingHeldItemTransformAfter = tf;
                 return tf.Rotation.X > -44;
@@ -86,13 +109,23 @@ namespace TheNeolithicMod
         {
             BlockPos pos = blockSel.Position;
             AssetLocation[] variants;
+            AssetLocation nextAsset;
             Block nextBlock;
             VariantsDictionary.TryGetValue(Id, out variants);
 
             if (byPlayer.Entity.Controls.Sneak)
             {
                 rotationindex = rotationindex < directions.Length - 1 ? rotationindex + 1 : 0;
-                AssetLocation nextAsset = CodeWithPart(directions[rotationindex], 5);
+
+                if (FirstCodePart() == "rooframp" || FirstCodePart() == "roofstairs")
+                {
+                    nextAsset = CodeWithPart(directions[rotationindex], 4);
+                }
+                else
+                {
+                    nextAsset = CodeWithPart(directions[rotationindex], 5);
+                }
+
                 nextBlock = api.World.BlockAccessor.GetBlock(nextAsset);
                 if (nextBlock.Id == Id)
                 {
@@ -113,15 +146,35 @@ namespace TheNeolithicMod
             world.BlockAccessor.SetBlock(nextBlock.BlockId, pos);
         }
 
-        public AssetLocation[] GenVariants()
+        public AssetLocation[] GenLogwallVariants()
         {
             List<AssetLocation> variantslist = new List<AssetLocation>();
-            foreach (string type in types)
+            foreach (string type in walltypes)
             {
-                foreach (string vertical in verticals)
+                foreach (string vertical in wallverticals)
                 {
-                    variantslist.Add(new AssetLocation("neolithicmod:logwall-" + type + "-" + wood + "-" + LastCodePart(2) + "-" + vertical + "-" + LastCodePart()));
+                    variantslist.Add(new AssetLocation("neolithicmod:" + FirstCodePart() + "-" + type + "-" + wood + "-" + LastCodePart(2) + "-" + vertical + "-" + LastCodePart()));
                 }
+            }
+            return variantslist.ToArray();
+        }
+
+        public AssetLocation[] GenRoofVariants()
+        {
+            List<AssetLocation> variantslist = new List<AssetLocation>();
+            foreach (string type in rooftypes)
+            {
+                variantslist.Add(new AssetLocation("neolithicmod:" + FirstCodePart() + "-" + type + "-" + wood + "-" + LastCodePart(1) + "-" + LastCodePart()));
+            }
+            return variantslist.ToArray();
+        }
+
+        public AssetLocation[] GenStairRoofVariants()
+        {
+            List<AssetLocation> variantslist = new List<AssetLocation>();
+            foreach (string type in stairrooftypes)
+            {
+                variantslist.Add(new AssetLocation("neolithicmod:" + FirstCodePart() + "-" + type + "-" + wood + "-" + LastCodePart(1) + "-" + LastCodePart()));
             }
             return variantslist.ToArray();
         }

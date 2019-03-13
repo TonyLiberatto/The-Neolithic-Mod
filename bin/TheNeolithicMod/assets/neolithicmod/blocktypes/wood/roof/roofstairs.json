@@ -1,5 +1,6 @@
 {
 	code: "roofstairs",
+  class: "BlockLogWall",
 	behaviors: [{name: "HorizontalOrientable"}],
 	creativeinventory: { "general": ["*-north"], "construction": ["*-north"], "neolithicblocks": ["*-north"] },
 		variantgroups: [
