@@ -65,16 +65,12 @@ namespace TheNeolithicMod
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
             IItemSlot activeslot = byPlayer.InventoryManager.ActiveHotbarSlot;
-            if (activeslot.Itemstack.Item.Tool == EnumTool.Hammer && world.Side == EnumAppSide.Server)
+            if (activeslot.Itemstack == null || activeslot.Itemstack.Item == null) return false;
+            if (activeslot.Itemstack.Item.Tool == EnumTool.Hammer)
             {
-                world.RegisterCallback((dt) =>
-                {
-                    world.PlaySoundAt(Sounds.Place, byPlayer);
-                    Swap(world, byPlayer, blockSel);
-                    world.SpawnCubeParticles(blockSel.Position, blockSel.Position.ToVec3d().Add(0.5, 0.5, 0.5), 2, 32);
-                }, 50);
+                return true;
             }
-            return true;
+            return false;
         }
 
         public override bool OnBlockInteractStep(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
@@ -87,12 +83,23 @@ namespace TheNeolithicMod
 
                 tf.Origin.Set(0f, 0f, 0f);
 
-                tf.Rotation.X -= (float)Math.Sin(secondsUsed * 8) * 45;
+                tf.Rotation.X -= (float)Math.Sin(secondsUsed * 6) * 90;
 
                 byPlayer.Entity.Controls.UsingHeldItemTransformAfter = tf;
-                return tf.Rotation.X > -44;
+                return tf.Rotation.X > -80;
             }
             return true;
+        }
+
+        public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
+        {
+            IItemSlot activeslot = byPlayer.InventoryManager.ActiveHotbarSlot;
+            if (activeslot.Itemstack.Item.Tool == EnumTool.Hammer && world.Side == EnumAppSide.Server)
+            {
+                world.PlaySoundAt(Sounds.Place, byPlayer);
+                Swap(world, byPlayer, blockSel);
+                world.SpawnCubeParticles(blockSel.Position, blockSel.Position.ToVec3d().Add(0.5, 0.5, 0.5), 2, 32);
+            }
         }
 
         public void Swap(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
