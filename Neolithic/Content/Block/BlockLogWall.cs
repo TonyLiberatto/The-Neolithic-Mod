@@ -33,8 +33,8 @@ namespace TheNeolithicMod
         public string[] directions = new string[]
         {
             "north",
-            "south",
             "east",
+            "south",
             "west",
         };
 
