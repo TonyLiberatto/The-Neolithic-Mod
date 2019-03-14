@@ -808,6 +808,11 @@
   "block-post-railroad-*": "Railroad style post",
   "block-gate-gap-*": "Fence Gap",
   "block-haybale-*": "Bale of hay",
-  "block-planks-bamboo-*": "Bamboo planks"
+  "block-planks-bamboo-*": "Bamboo planks",
+  
+  "block-trough-genericwood-large-head-north": "Large trough",
+  "blockdesc-trough-genericwood-large-head-north": "For feeding large animals with grain (2 per portion) or dry grass (8 per portion)",
+  "block-trough-genericwood-small-ns": "Small trough",
+  "blockdesc-trough-genericwood-small-ns": "For feeding small animals with grain (1 per portion)",
 
 }
