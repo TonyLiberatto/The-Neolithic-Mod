@@ -49,6 +49,7 @@ namespace TheNeolithicMod
             base.OnLoaded(api);
             if (api.Side == EnumAppSide.Server)
             {
+                if (VariantsDictionary.ContainsKey(Id)) return;
                 if (FirstCodePart() == "logwall")
                 {
                     wood = LastCodePart(3);
