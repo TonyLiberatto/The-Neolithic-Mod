@@ -128,7 +128,7 @@ namespace TheNeolithicMod
 
         public void MilkListener(float dt)
         {
-            if (entity.World.Calendar.TotalHours > NextTimeMilkable && GetSaturation() > 2)
+            if (entity.World.Calendar.TotalHours > NextTimeMilkable)
             {
                 RemainingLiters = defaultvalue;
                 NextTimeMilkable = GetNextTimeMilkable();
