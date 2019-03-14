@@ -10,14 +10,14 @@ namespace TheNeolithicMod
 {
     class BlockLogWall : Block
     {
-        public string[] walltypes = new string[]
+        public readonly string[] walltypes =
         {
             "wall",
             "corner",
             "jut",
         };
 
-        public string[] wallverticals = new string[]
+        public readonly string[] wallverticals =
         {
             "up",
             "left",
@@ -25,12 +25,19 @@ namespace TheNeolithicMod
             "right",
         };
 
-        public string[] rooftypes = new string[]
+        public readonly string[] rooftypes =
         {
-            "corner", "cornerin","cornertop","slope","slopewall","top", "topwall", "topend",
+            "corner",
+            "cornerin",
+            "cornertop",
+            "slope",
+            "slopewall",
+            "top",
+            "topwall",
+            "topend",
         };
 
-        public string[] directions = new string[]
+        public readonly string[] directions =
         {
             "north",
             "east",
