@@ -71,7 +71,7 @@ namespace TheNeolithicMod
 
         public override void OnInteract(EntityAgent byEntity, IItemSlot itemslot, Vec3d hitPosition, EnumInteractMode mode, ref EnumHandling handled)
         {
-            
+            if (itemslot.Itemstack == null) return;
             if (itemslot.Itemstack.Block is BlockBucket)
             {
                 handled = EnumHandling.PreventDefault;
@@ -128,13 +128,21 @@ namespace TheNeolithicMod
 
         public void MilkListener(float dt)
         {
-            if (entity.World.Calendar.TotalHours > NextTimeMilkable)
+            if (entity.World.Calendar.TotalHours > NextTimeMilkable && GetSaturation() > 2)
             {
                 RemainingLiters = defaultvalue;
                 NextTimeMilkable = GetNextTimeMilkable();
                 entity.World.UnregisterGameTickListener(id);
                 id = 0;
             }
+        }
+
+        public float GetSaturation()
+        {
+            ITreeAttribute tree = entity.WatchedAttributes.GetTreeAttribute("hunger");
+            if (tree == null) return 0;
+
+            return tree.GetFloat("saturation", 0);
         }
     }
 }
