@@ -20,9 +20,9 @@ namespace TheNeolithicMod
         public readonly string[] wallverticals =
         {
             "up",
-            "left",
-            "down",
             "right",
+            "down",
+            "left",
         };
 
         public readonly string[] rooftypes =
@@ -48,6 +48,7 @@ namespace TheNeolithicMod
         string wood;
         private static int i;
         private static int rotationindex;
+        private static int verticalindex;
 
         public static Dictionary<int, AssetLocation[]> VariantsDictionary = new Dictionary<int, AssetLocation[]>();
 
@@ -130,6 +131,18 @@ namespace TheNeolithicMod
                     nextBlock = api.World.BlockAccessor.GetBlock(nextAsset);
                 }
             }
+            else if (byPlayer.Entity.Controls.Sprint && FirstCodePart() != "rooframp" && FirstCodePart() != "roofstairs")
+            {
+                verticalindex = verticalindex < wallverticals.Length - 1 ? rotationindex + 1 : 0;
+                nextAsset = CodeWithPart(wallverticals[rotationindex], 4);
+
+                nextBlock = api.World.BlockAccessor.GetBlock(nextAsset);
+                if (nextBlock.Id == Id)
+                {
+                    rotationindex = rotationindex < wallverticals.Length - 1 ? rotationindex + 1 : 0;
+                    nextBlock = api.World.BlockAccessor.GetBlock(nextAsset);
+                }
+            }
             else
             {
                 i = i < variants.Length - 1 ? i + 1 : 0;
@@ -148,10 +161,7 @@ namespace TheNeolithicMod
             List<AssetLocation> variantslist = new List<AssetLocation>();
             foreach (string type in walltypes)
             {
-                foreach (string vertical in wallverticals)
-                {
-                    variantslist.Add(new AssetLocation("neolithicmod:" + FirstCodePart() + "-" + type + "-" + wood + "-" + LastCodePart(2) + "-" + vertical + "-" + LastCodePart()));
-                }
+                variantslist.Add(new AssetLocation("neolithicmod:" + FirstCodePart() + "-" + type + "-" + wood + "-" + LastCodePart(2) + "-" + LastCodePart(1) + "-" + LastCodePart()));
             }
             return variantslist.ToArray();
         }
