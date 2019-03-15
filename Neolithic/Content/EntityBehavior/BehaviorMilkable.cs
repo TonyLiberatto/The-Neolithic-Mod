@@ -51,14 +51,11 @@ namespace TheNeolithicMod
                 RemainingLiters = defaultvalue;
             }
 
-            if (entity.World.Side is EnumAppSide.Server)
+            if (NextTimeMilkable == 0)
             {
-                if (NextTimeMilkable == 0)
-                {
-                    NextTimeMilkable = GetNextTimeMilkable();
-                }
-                id = entity.World.RegisterGameTickListener(MilkListener, 1000);
+                NextTimeMilkable = GetNextTimeMilkable();
             }
+            id = entity.World.RegisterGameTickListener(MilkListener, 1000);
         }
 
         public override string PropertyName()
@@ -74,7 +71,7 @@ namespace TheNeolithicMod
 
         public override void OnInteract(EntityAgent byEntity, IItemSlot itemslot, Vec3d hitPosition, EnumInteractMode mode, ref EnumHandling handled)
         {
-            
+            if (itemslot.Itemstack == null) return;
             if (itemslot.Itemstack.Block is BlockBucket)
             {
                 handled = EnumHandling.PreventDefault;
@@ -86,9 +83,11 @@ namespace TheNeolithicMod
                     if (bucket.TryAddContent(byEntity.World, itemslot.Itemstack, milkstack, 1) > 0)
                     {
                         RemainingLiters -= 1;
-                        if (byEntity.World.Side == EnumAppSide.Client) byEntity.World.SpawnCubeParticles(entity.Pos.XYZ + new Vec3d(0,0.5,0), milkstack, 0.3f, 4, 0.5f, (byEntity as EntityPlayer)?.Player);
-                        itemslot.MarkDirty();
-                        if (id == 0 && RemainingLiters < defaultvalue && byEntity.World.Side is EnumAppSide.Server)
+                        if (byEntity.World.Side == EnumAppSide.Client)
+                        {
+                            byEntity.World.SpawnCubeParticles(entity.Pos.XYZ + new Vec3d(0, 0.5, 0), milkstack, 0.3f, 4, 0.5f, (byEntity as EntityPlayer)?.Player);
+                        }
+                        if (id == 0 && RemainingLiters < defaultvalue)
                         {
                             if (NextTimeMilkable == 0)
                             {
@@ -96,6 +95,7 @@ namespace TheNeolithicMod
                             }
                             id = entity.World.RegisterGameTickListener(MilkListener, 1000);
                         }
+                        itemslot.MarkDirty();
                     }
                 }
             }
@@ -128,29 +128,21 @@ namespace TheNeolithicMod
 
         public void MilkListener(float dt)
         {
-            float sat = GetSaturation(entity);
             if (entity.World.Calendar.TotalHours > NextTimeMilkable)
             {
                 RemainingLiters = defaultvalue;
                 NextTimeMilkable = GetNextTimeMilkable();
                 entity.World.UnregisterGameTickListener(id);
+                id = 0;
             }
         }
 
-        public float GetSaturation(Entity entity)
+        public float GetSaturation()
         {
             ITreeAttribute tree = entity.WatchedAttributes.GetTreeAttribute("hunger");
-            if (tree == null) entity.WatchedAttributes["hunger"] = tree = new TreeAttribute();
+            if (tree == null) return 0;
 
-            return tree.GetFloat("currentsaturation");
-        }
-
-        public float GetMaxSaturation(Entity entity)
-        {
-            ITreeAttribute tree = entity.WatchedAttributes.GetTreeAttribute("hunger");
-            if (tree == null) entity.WatchedAttributes["hunger"] = tree = new TreeAttribute();
-
-            return tree.GetFloat("maxsaturation");
+            return tree.GetFloat("saturation", 0);
         }
     }
 }
