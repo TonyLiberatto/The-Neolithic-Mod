@@ -44,9 +44,9 @@ namespace TheNeolithicMod
             "south",
             "west",
         };
-        private static int typeindex;
-        private static int rotationindex;
-        private static int verticalindex;
+        private static byte typeindex;
+        private static byte rotationindex;
+        private static byte verticalindex;
 
         public override void OnLoaded(ICoreAPI api)
         {
@@ -73,6 +73,7 @@ namespace TheNeolithicMod
                 tf.EnsureDefaultValues();
 
                 tf.Origin.Set(0f, 0f, 0f);
+                tf.Translation.Set(0f, 0f, 0f);
 
                 tf.Rotation.X -= (float)Math.Sin(secondsUsed * 6) * 90;
 
@@ -97,28 +98,21 @@ namespace TheNeolithicMod
         {
             BlockPos pos = blockSel.Position;
             AssetLocation nextAsset;
-            Block nextBlock;
             string[] types = FirstCodePart() == "rooframp" || FirstCodePart() == "roofstairs" ? rooftypes : walltypes;
 
             if (byPlayer.Entity.Controls.Sneak) 
             {
-                rotationindex = rotationindex < directions.Length - 1 ? rotationindex + 1 : 0;
-                nextAsset = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + directions[rotationindex]);
-                nextBlock = world.BlockAccessor.GetBlock(nextAsset);
+                nextAsset = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + directions[++rotationindex%directions.Length]);
             }
-            else if (byPlayer.Entity.Controls.Sprint && FirstCodePart() != "rooframp" && FirstCodePart() != "roofstairs") 
+            else if (byPlayer.Entity.Controls.Sprint && FirstCodePart() == "logwall") 
             {
-                verticalindex = verticalindex < wallverticals.Length - 1 ? verticalindex + 1 : 0;
-                nextAsset = CodeWithPart(wallverticals[verticalindex], 4);
-                nextBlock = world.BlockAccessor.GetBlock(nextAsset);
+                nextAsset = CodeWithPart(wallverticals[++verticalindex%wallverticals.Length], 4);
             }
             else 
             {
-                typeindex = typeindex < types.Length - 1 ? typeindex + 1 : 0;
-                nextAsset = CodeWithPart(types[typeindex], 1);
-                nextBlock = world.BlockAccessor.GetBlock(nextAsset);
+                nextAsset = CodeWithPart(types[++typeindex%types.Length], 1);
             }
-            world.BlockAccessor.SetBlock(nextBlock.BlockId, pos);
+            world.BlockAccessor.SetBlock(world.BlockAccessor.GetBlock(nextAsset).BlockId, pos);
         }
     }
 }
