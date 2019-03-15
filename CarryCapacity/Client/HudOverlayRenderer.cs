@@ -101,14 +101,16 @@ namespace CarryCapacity.Client
 				x = API.Input.MouseX;
 				y = API.Input.MouseY;
 			}
-			
-			rend.GlPushMatrix();
-				rend.GlTranslate(x, y, 0);
+
+#pragma warning disable CS0618 // Type or member is obsolete
+            rend.GlPushMatrix();
+            rend.GlTranslate(x, y, 0);
 				rend.GlScale(OUTER_RADIUS, OUTER_RADIUS, 0);
 				shader.UniformMatrix("modelViewMatrix", rend.CurrentModelviewMatrix);
 			rend.GlPopMatrix();
-			
-			rend.RenderMesh(_circleMesh);
+#pragma warning restore CS0618 // Type or member is obsolete
+
+            rend.RenderMesh(_circleMesh);
 		}
 		
 		public void Dispose()
