@@ -44,31 +44,13 @@ namespace TheNeolithicMod
             "south",
             "west",
         };
-
-        string wood;
-        private static int i;
+        private static int typeindex;
         private static int rotationindex;
         private static int verticalindex;
-
-        public static Dictionary<int, AssetLocation[]> VariantsDictionary = new Dictionary<int, AssetLocation[]>();
 
         public override void OnLoaded(ICoreAPI api)
         {
             base.OnLoaded(api);
-            if (api.Side == EnumAppSide.Server)
-            {
-                if (VariantsDictionary.ContainsKey(Id)) return;
-                if (FirstCodePart() == "logwall")
-                {
-                    wood = LastCodePart(3);
-                    VariantsDictionary.Add(Id, GenLogwallVariants());
-                }
-                else if (FirstCodePart() == "rooframp" || FirstCodePart() == "roofstairs")
-                {
-                    wood = LastCodePart(2);
-                    VariantsDictionary.Add(Id, GenRoofVariants());
-                }
-            }
         }
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
@@ -114,66 +96,29 @@ namespace TheNeolithicMod
         public void Swap(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
             BlockPos pos = blockSel.Position;
-            AssetLocation[] variants;
             AssetLocation nextAsset;
             Block nextBlock;
-            VariantsDictionary.TryGetValue(Id, out variants);
+            string[] types = FirstCodePart() == "rooframp" || FirstCodePart() == "roofstairs" ? rooftypes : walltypes;
 
-            if (byPlayer.Entity.Controls.Sneak)
+            if (byPlayer.Entity.Controls.Sneak) 
             {
                 rotationindex = rotationindex < directions.Length - 1 ? rotationindex + 1 : 0;
-                nextAsset = FirstCodePart() == "rooframp" || FirstCodePart() == "roofstairs" ? CodeWithPart(directions[rotationindex], 4) : CodeWithPart(directions[rotationindex], 5);
-
-                nextBlock = api.World.BlockAccessor.GetBlock(nextAsset);
-                if (nextBlock.Id == Id)
-                {
-                    rotationindex = rotationindex < directions.Length - 1 ? rotationindex + 1 : 0;
-                    nextBlock = api.World.BlockAccessor.GetBlock(nextAsset);
-                }
+                nextAsset = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + directions[rotationindex]);
+                nextBlock = world.BlockAccessor.GetBlock(nextAsset);
             }
-            else if (byPlayer.Entity.Controls.Sprint && FirstCodePart() != "rooframp" && FirstCodePart() != "roofstairs")
+            else if (byPlayer.Entity.Controls.Sprint && FirstCodePart() != "rooframp" && FirstCodePart() != "roofstairs") 
             {
-                verticalindex = verticalindex < wallverticals.Length - 1 ? rotationindex + 1 : 0;
-                nextAsset = CodeWithPart(wallverticals[rotationindex], 4);
-
-                nextBlock = api.World.BlockAccessor.GetBlock(nextAsset);
-                if (nextBlock.Id == Id)
-                {
-                    rotationindex = rotationindex < wallverticals.Length - 1 ? rotationindex + 1 : 0;
-                    nextBlock = api.World.BlockAccessor.GetBlock(nextAsset);
-                }
+                verticalindex = verticalindex < wallverticals.Length - 1 ? verticalindex + 1 : 0;
+                nextAsset = CodeWithPart(wallverticals[verticalindex], 4);
+                nextBlock = world.BlockAccessor.GetBlock(nextAsset);
             }
-            else
+            else 
             {
-                i = i < variants.Length - 1 ? i + 1 : 0;
-                nextBlock = world.BlockAccessor.GetBlock(variants[i]);
-                if (nextBlock.Id == Id)
-                {
-                    i = i < variants.Length - 1 ? i + 1 : 0;
-                    nextBlock = world.BlockAccessor.GetBlock(variants[i]);
-                }
+                typeindex = typeindex < types.Length - 1 ? typeindex + 1 : 0;
+                nextAsset = CodeWithPart(types[typeindex], 1);
+                nextBlock = world.BlockAccessor.GetBlock(nextAsset);
             }
             world.BlockAccessor.SetBlock(nextBlock.BlockId, pos);
-        }
-
-        public AssetLocation[] GenLogwallVariants()
-        {
-            List<AssetLocation> variantslist = new List<AssetLocation>();
-            foreach (string type in walltypes)
-            {
-                variantslist.Add(new AssetLocation("neolithicmod:" + FirstCodePart() + "-" + type + "-" + wood + "-" + LastCodePart(2) + "-" + LastCodePart(1) + "-" + LastCodePart()));
-            }
-            return variantslist.ToArray();
-        }
-
-        public AssetLocation[] GenRoofVariants()
-        {
-            List<AssetLocation> variantslist = new List<AssetLocation>();
-            foreach (string type in rooftypes)
-            {
-                variantslist.Add(new AssetLocation("neolithicmod:" + FirstCodePart() + "-" + type + "-" + wood + "-" + LastCodePart(1) + "-" + LastCodePart()));
-            }
-            return variantslist.ToArray();
         }
     }
 }
