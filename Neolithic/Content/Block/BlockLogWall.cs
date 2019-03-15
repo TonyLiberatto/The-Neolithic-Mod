@@ -102,15 +102,15 @@ namespace TheNeolithicMod
 
             if (byPlayer.Entity.Controls.Sneak) 
             {
-                nextAsset = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + directions[++rotationindex%directions.Length]);
+                nextAsset = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + directions.Next());
             }
             else if (byPlayer.Entity.Controls.Sprint && FirstCodePart() == "logwall") 
             {
-                nextAsset = CodeWithPart(wallverticals[++verticalindex%wallverticals.Length], 4);
+                nextAsset = CodeWithPart(wallverticals.Next(), 4);
             }
             else 
             {
-                nextAsset = CodeWithPart(types[++typeindex%types.Length], 1);
+                nextAsset = CodeWithPart(types.Next(), 1);
             }
             world.BlockAccessor.SetBlock(world.BlockAccessor.GetBlock(nextAsset).BlockId, pos);
         }
