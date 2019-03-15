@@ -8,9 +8,7 @@ namespace TheNeolithicMod
 {
     public static class ArrayStuff
     {
-        public static uint index;
-
-        public static T Next<T>(this T[] array)
+        public static T Next<T>(this T[] array, ref uint index)
         {
             return array[++index % array.Length];
         }

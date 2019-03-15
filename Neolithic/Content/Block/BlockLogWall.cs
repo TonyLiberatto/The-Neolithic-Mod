@@ -45,6 +45,10 @@ namespace TheNeolithicMod
             "west",
         };
 
+        private static uint dIndex;
+        private static uint tIndex;
+        private static uint vIndex;
+
         public override void OnLoaded(ICoreAPI api)
         {
             base.OnLoaded(api);
@@ -99,15 +103,15 @@ namespace TheNeolithicMod
 
             if (byPlayer.Entity.Controls.Sneak) 
             {
-                nextAsset = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + directions.Next());
+                nextAsset = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + directions.Next(ref dIndex));
             }
             else if (byPlayer.Entity.Controls.Sprint && FirstCodePart() == "logwall") 
             {
-                nextAsset = CodeWithPart(wallverticals.Next(), 4);
+                nextAsset = CodeWithPart(wallverticals.Next(ref vIndex), 4);
             }
             else 
             {
-                nextAsset = CodeWithPart(types.Next(), 1);
+                nextAsset = CodeWithPart(types.Next(ref tIndex), 1);
             }
             world.BlockAccessor.SetBlock(world.BlockAccessor.GetBlock(nextAsset).BlockId, pos);
         }
