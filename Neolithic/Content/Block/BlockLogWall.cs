@@ -44,9 +44,6 @@ namespace TheNeolithicMod
             "south",
             "west",
         };
-        private static byte typeindex;
-        private static byte rotationindex;
-        private static byte verticalindex;
 
         public override void OnLoaded(ICoreAPI api)
         {
