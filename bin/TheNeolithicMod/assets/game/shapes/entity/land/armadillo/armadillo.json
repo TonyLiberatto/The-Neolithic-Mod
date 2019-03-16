@@ -6,7 +6,7 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-		"armadillo": "game: entity/armadillo/armadillo",
+		"armadillo": "game:entity/armadillo/armadillo",
 		"armadillo_tail": "game:entity/armadillo/armadillo_tail"
 	},
 	"elements": [

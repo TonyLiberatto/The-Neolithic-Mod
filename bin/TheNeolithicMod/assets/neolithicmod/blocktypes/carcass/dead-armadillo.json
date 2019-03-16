@@ -32,7 +32,7 @@
 		{ code: "type", states: ["male", "female"] },
 	],
 	textures: {
-		"armadillo": { base: "game: entity/armadillo/armadillo" },
+		"armadillo": { base: "game:entity/armadillo/armadillo" },
 		"armadillo_tail": { base: "game:entity/armadillo/armadillo_tail" }
 	},
 	shape: { base: "block/dead/armadillo/armadillo_dead" },

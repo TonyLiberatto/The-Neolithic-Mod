@@ -5,5 +5,5 @@
 	},
 	width: 3,
 	height: 2,
-	output: { type: "block", code: "trough-neolithic-genericwood-small-ns"  }
+	output: { type: "block", code: "trough-genericwood-small-ns"  }
 }
