@@ -1,39 +1,210 @@
 {
 	code: "chest",
-	entityclass: "GenericContainer",
+	class: "BlockGenericTypedContainer",
+	entityclass: "GenericTypedContainer",
 	attributes: {
 		inventoryClassName: "chest",
-		quantitySlots: 64,
-		dialogTitleLangCode: "chestcontents",
+		defaultType: "normal-generic",
+		types: [ "normal-generic", "golden", "owl", "collapsed1", "collapsed2", "collapsed3",
+		"bamboo-green", "bamboo-brown", "birch", "oak", "maple", "pine", "acacia", "kapok" ],
+		drop: {
+			"normal-generic": true,
+			golden: true,
+			owl: true,
+			bamboo-green: true,
+			bamboo-brown: true,
+			birch: true,
+			oak: true,
+			maple: true,
+			pine: true,
+			acacia: true,
+			kapok: true,
+			collapsed1: false,
+			collapsed2: false,
+			collapsed3: false,
+		},
+		quantitySlots: {
+			bamboo-green: 32,
+			bamboo-brown: 32,
+			birch: 64,
+			oak: 64,
+			maple: 64,
+			pine: 64,
+			acacia: 64,
+			kapok: 64
+			"normal-generic": 16,
+			golden: 4,
+			owl: 4,
+			collapsed1: 8,
+			collapsed2: 8,
+			collapsed3: 8,
+		},
+		dialogTitleLangCode: {
+			bamboo-green: "chestcontents",
+			bamboo-brown: "chestcontents",
+			birch: "chestcontents",
+			oak: "chestcontents",
+			maple: "chestcontents",
+			pine: "chestcontents",
+			acacia: "chestcontents",
+			kapok: "chestcontents",
+			"normal-generic": "chestcontents",
+			golden: "chestcontents",
+			owl: "chestcontents",
+			collapsed1: "chestcontents",
+			collapsed2: "chestcontents",
+			collapsed3: "chestcontents",
+		},
+		storageType: {
+			bamboo-green: 189,
+			bamboo-brown: 189,
+			birch: 189,
+			oak: 189,
+			maple: 189,
+			pine: 189,
+			acacia: 189,
+			kapok: 189,
+			"normal-generic": 189,
+			golden: 72,
+			owl: 72,
+			collapsed1: 189,
+			collapsed2: 189,
+			collapsed3: 189,
+		},
+		retrieveOnly: {
+			bamboo-green: false,
+			bamboo-brown: false,
+			birch: false,
+			oak: false,
+			maple: false,
+			pine: false,
+			acacia: false,
+			kapok: false,
+			"normal-generic": false,
+			golden: false,
+			owl: false,
+			collapsed1: true,
+			collapsed2: true,
+			collapsed3: true,
+		},
+		shape: {
+			"normal-generic": "game:block/wood/chest/normal",
+			bamboo-green: "block/wood/chest",
+			bamboo-brown: "block/wood/chest",
+			birch: "block/wood/chest",
+			oak: "block/wood/chest",
+			maple: "block/wood/chest",
+			pine: "block/wood/chest",
+			acacia: "block/wood/chest",
+			kapok: "block/wood/chest",
+			golden: "game:block/wood/chest/treasure-golden-closed",
+			owl: "game:block/wood/chest/treasure-owl-closed",
+			collapsed1: "game:block/wood/chest/collapsed1",
+			collapsed2: "game:block/wood/chest/collapsed2",
+			collapsed3: "game:block/wood/chest/collapsed3",
+		}
 	},
-	behaviors: [
-		{
-			name: "Carryable",
-			properties: {
-			translation: [ 0.0625, 0, 0 ],
-			rotation: [ 0, 180, 0 ],
-			}
-		}, 
-		{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}	
-	],
+	behaviors: [{name: "Container"}, {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
 	variantgroups: [
-		{ code: "wood", states: ["aged", "bamboo-green", "bamboo-brown"], loadFromProperties: "block/wood" },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
 	],
-	creativeinventory: { "general": ["chest-{wood}-east"], "decorative": ["chest-{wood}-east"], "neolithicdeco": ["chest-{wood}-east"] },
-	heldTpIdleAnimation: "holdunderarm",
-	drawtype: "json",
-	shapebytype: {
-		"*-north": { base: "block/wood/chest", rotateY: 0 },
-		"*-east": { base: "block/wood/chest", rotateY: 270 },
-		"*-south": { base: "block/wood/chest", rotateY: 180 },
-		"*-west": { base: "block/wood/chest", rotateY: 90 }
+	creativeinventory: {  },
+	creativeinventoryStacksByType: {
+		"*-east": [
+			{
+				tabs: [ "general", "decorative", "neolithicdeco" ],
+				stacks: [
+					{ type: "block", code: "chest-east", attributes: { type: "normal-generic" } },
+					{ type: "block", code: "chest-east", attributes: { type: "bamboo-green" } },
+					{ type: "block", code: "chest-east", attributes: { type: "bamboo-brown" } },
+					{ type: "block", code: "chest-east", attributes: { type: "birch" } },
+					{ type: "block", code: "chest-east", attributes: { type: "oak" } },
+					{ type: "block", code: "chest-east", attributes: { type: "maple" } },
+					{ type: "block", code: "chest-east", attributes: { type: "pine" } },
+					{ type: "block", code: "chest-east", attributes: { type: "acacia" } },
+					{ type: "block", code: "chest-east", attributes: { type: "kapok" } },
+					{ type: "block", code: "chest-east", attributes: { type: "golden" } },
+					{ type: "block", code: "chest-east", attributes: { type: "owl" } },
+					{ type: "block", code: "chest-east", attributes: { type: "collapsed1" } },
+					{ type: "block", code: "chest-east", attributes: { type: "collapsed2" } },
+					{ type: "block", code: "chest-east", attributes: { type: "collapsed3" } },
+				]
+			}
+		]
 	},
+	heldTpIdleAnimation: "holdunderarm",
+	shape: { base: "block/wood/chest/normal", rotateY: 270 },
+	"_comment": "Must declare textures so they get added to the block texture atlas",
 	textures: {
-		corners: { base: "block/chest/{wood}/Corners" },
-		lid: { base: "block/chest/{wood}/Lid" },
-		sides: { base: "block/chest/{wood}/Sides" },
-		floor: { base: "block/chest/{wood}/Floor" },
+		"bamboo-green-corners": { base: "block/wood/chest/bamboo-green/corners" },
+		"bamboo-green-lid": { base: "block/wood/chest/bamboo-green/lid" },
+		"bamboo-green-sides": { base: "block/wood/chest/bamboo-green/sides" },
+		"bamboo-green-floor": { base: "block/wood/chest/bamboo-green/floor" },
+		
+		"bamboo-brown-corners": { base: "block/wood/chest/bamboo-brown/corners" },
+		"bamboo-brown-lid": { base: "block/wood/chest/bamboo-brown/lid" },
+		"bamboo-brown-sides": { base: "block/wood/chest/bamboo-brown/sides" },
+		"bamboo-brown-floor": { base: "block/wood/chest/bamboo-brown/floor" },
+		
+		"birch-corners": { base: "block/wood/chest/birch/corners" },
+		"birch-lid": { base: "block/wood/chest/birch/lid" },
+		"birch-sides": { base: "block/wood/chest/birch/sides" },
+		"birch-floor": { base: "block/wood/chest/birch/floor" },
+		
+		"oak-corners": { base: "block/wood/chest/oak/corners" },
+		"oak-lid": { base: "block/wood/chest/oak/lid" },
+		"oak-sides": { base: "block/wood/chest/oak/sides" },
+		"oak-floor": { base: "block/wood/chest/oak/floor" },
+		
+		"maple-corners": { base: "block/wood/chest/maple/corners" },
+		"maple-lid": { base: "block/wood/chest/maple/lid" },
+		"maple-sides": { base: "block/wood/chest/maple/sides" },
+		"maple-floor": { base: "block/wood/chest/maple/floor" },
+		
+		"pine-corners": { base: "block/wood/chest/pine/corners" },
+		"pine-lid": { base: "block/wood/chest/pine/lid" },
+		"pine-sides": { base: "block/wood/chest/pine/sides" },
+		"pine-floor": { base: "block/wood/chest/pine/floor" },
+		
+		"acacia-corners": { base: "block/wood/chest/acacia/corners" },
+		"acacia-lid": { base: "block/wood/chest/acacia/lid" },
+		"acacia-sides": { base: "block/wood/chest/acacia/sides" },
+		"acacia-floor": { base: "block/wood/chest/acacia/floor" },
+		
+		"kapok-corners": { base: "block/wood/chest/kapok/corners" },
+		"kapok-lid": { base: "block/wood/chest/kapok/lid" },
+		"kapok-sides": { base: "block/wood/chest/kapok/sides" },
+		"kapok-floor": { base: "block/wood/chest/kapok/floor" },
+		
+		"normal-generic-corners": { base: "game:block/wood/chest/corners" },
+		"normal-generic-lid": { base: "game:block/wood/chest/lid" },
+		"normal-generic-sides": { base: "game:block/wood/chest/sides" },
+		"normal-generic-floor": { base: "game:block/wood/chest/floor" },
+
+		"collapsed1-corners": { base: "game:block/wood/chest/aged/corners" },
+		"collapsed1-lid": { base: "game:block/wood/chest/aged/lid" },
+		"collapsed1-sides": { base: "game:block/wood/chest/aged/sides" },
+		"collapsed1-floor": { base: "game:block/wood/chest/aged/floor" },
+
+		"collapsed2-corners": { base: "game:block/wood/chest/aged/corners" },
+		"collapsed2-lid": { base: "game:block/wood/chest/aged/lid" },
+		"collapsed2-sides": { base: "game:block/wood/chest/aged/sides" },
+		"collapsed2-floor": { base: "game:block/wood/chest/aged/floor" },
+
+		"collapsed3-corners": { base: "game:block/wood/chest/aged/corners" },
+		"collapsed3-lid": { base: "game:block/wood/chest/aged/lid" },
+		"collapsed3-sides": { base: "game:block/wood/chest/aged/sides" },
+		"collapsed3-floor": { base: "game:block/wood/chest/aged/floor" },
+
+		"golden-top": { base: "game:block/wood/treasurechest/golden/top" },
+		"golden-sides2": { base: "game:block/wood/treasurechest/golden/sides2" },
+		"golden-sides1":{ base: "game:block/wood/treasurechest/golden/sides1" },
+		"golden-inside": { base: "game:block/wood/treasurechest/golden/inside" },
+
+		"owl-top": { base: "game:block/wood/treasurechest/owl/top" },
+		"owl-sides2": { base: "game:block/wood/treasurechest/owl/sides2" },
+		"owl-sides1": { base: "game:block/wood/treasurechest/owl/sides1" },
+		"owl-inside": { base: "game:block/wood/treasurechest/owl/inside" }
 	},
 	blockmaterial: "Wood",
 	replaceable: 900,
@@ -46,18 +217,20 @@
 		all: false
 	},
 	collisionbox: {
-		x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.75, z2: 0.9375
+		x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.8125, z2: 0.9375
 	},
 	selectionbox: {
-		x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.75, z2: 0.9375
+		x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.8125, z2: 0.9375
 	},
 	combustibleProps: {
 		burnTemperature: 600,
 		burnDuration: 35,
 	},
 	sounds: {
-		"place": "game:block/planks",
-		"walk": "game:walk/wood"
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
 	},
 	materialDensity: 600,
 	tpHandTransform: {
@@ -69,5 +242,4 @@
 		origin: { x: 0.5, y: 0.4, z: 0.5 },
 		scale: 1.16
 	}
-
 }
