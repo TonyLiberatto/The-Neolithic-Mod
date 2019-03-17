@@ -1,9 +1,10 @@
 {
-	ingredientPattern: "WWW	W_W	WWW",
+	ingredientPattern: "WWW	WLW	WWW",
 	ingredients: {
-		"W": { type: "block", code: "planks-*", allowedVariants: [ "bamboo-green", "bamboo-brown"], name: "wood" }
+		"W": { type: "block", code: "planks-*", allowedVariants: [ "bamboo-green", "bamboo-brown"], name: "wood" },
+		"L": { type: "item", code: "animal-leatherstrips", quantity:2 }
 	},
 	width: 3,
 	height: 3,
-	output: { type: "block", code: "chest-{wood}-east"  }
+	output: { type: "block", code: "chest-neolithic-{wood}-east"  }
 }

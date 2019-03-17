@@ -3,7 +3,7 @@
 	entityclass: "GenericContainer",
 	attributes: {
 		inventoryClassName: "chest",
-		quantitySlots: 64,
+		quantitySlots: 32,
 		dialogTitleLangCode: "chestcontents",
 	},
 	behaviors: [
