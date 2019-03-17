@@ -13,14 +13,16 @@
 			translation: [ 0.0625, 0, 0 ],
 			rotation: [ 0, 180, 0 ],
 			}
-		}, 
+		},
+		{name: "Container"}, 
 		{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}	
 	],
 	variantgroups: [
-		{ code: "wood", states: ["aged", "bamboo-green", "bamboo-brown"], loadFromProperties: "block/wood" },
+		{ code: "type", states: [ "neolithic"] },
+		{ code: "wood", states: [ "bamboo-green", "bamboo-brown"], loadFromProperties: "block/wood" },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
 	],
-	creativeinventory: { "general": ["chest-{wood}-east"], "decorative": ["chest-{wood}-east"], "neolithicdeco": ["chest-{wood}-east"] },
+	creativeinventory: { "general": ["chest-neolithic-{wood}-east"], "decorative": ["chest-neolithic-{wood}-east"], "neolithicdeco": ["chest-neolithic-{wood}-east"] },
 	heldTpIdleAnimation: "holdunderarm",
 	drawtype: "json",
 	shapebytype: {
@@ -30,10 +32,10 @@
 		"*-west": { base: "block/wood/chest", rotateY: 90 }
 	},
 	textures: {
-		corners: { base: "block/chest/{wood}/Corners" },
-		lid: { base: "block/chest/{wood}/Lid" },
-		sides: { base: "block/chest/{wood}/Sides" },
-		floor: { base: "block/chest/{wood}/Floor" },
+		corners: { base: "block/wood/chest/{wood}/corners" },
+		lid: { base: "block/wood/chest/{wood}/lid" },
+		sides: { base: "block/wood/chest/{wood}/sides" },
+		floor: { base: "block/wood/chest/{wood}/floor" },
 	},
 	blockmaterial: "Wood",
 	replaceable: 900,

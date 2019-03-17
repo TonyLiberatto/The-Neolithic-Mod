@@ -13,7 +13,7 @@
 		renderer: "Shape",
 		shape: { base: "entity/land/armadillo/armadillo" },
 		textures: {
-		"armadillo": { base: "game: entity/armadillo/armadillo" },
+		"armadillo": { base: "game:entity/armadillo/armadillo" },
 		"armadillo_tail": { base: "game:entity/armadillo/armadillo_tail" }
 	},
 		behaviors: [
