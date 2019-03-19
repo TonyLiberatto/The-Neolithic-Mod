@@ -1,6 +1,14 @@
 ﻿{
 	"game:tabname-totems": "Totems",
 	
+	
+	"block-totem-pig-crucible-birch-east": "Totem Pig Crucible Birch",
+	"block-totem-pig-crucible-oak-east": "Totem Pig Crucible Oak",
+	"block-totem-pig-crucible-maple-east": "Totem Pig Crucible Maple",
+	"block-totem-pig-crucible-pine-east": "Totem Pig Crucible Pine",
+	"block-totem-pig-crucible-acacia-east": "Totem Pig Crucible Acacia",
+	"block-totem-pig-crucible-kapok-east": "Totem Pig Crucible Kapok",
+	
 	"block-totem-pig-new-acacia-lit-north": "Lit New Acacia Pig Totem",
 	"block-totem-pig-bowl-acacia-lit-north": "Lit Acacia Pig Totem with bowl",
 	"block-totem-pig-tusk-acacia-lit-north": "Lit Acacia Pig Totem with Tusks",
