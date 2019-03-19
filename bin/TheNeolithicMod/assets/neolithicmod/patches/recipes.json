@@ -11,4 +11,6 @@
 	{ file: "game:recipes/grid/door", op: "add", path: "/enabled",  value: false },
 	{ file: "game:recipes/grid/trough-large", op: "add", path: "/enabled",  value: false },
 	{ file: "game:recipes/grid/trough-small", op: "add", path: "/enabled",  value: false },
+	{ file: "game:recipes/grid/firewood", op: "add", path: "/enabled",  value: false },
+	{ file: "game:recipes/grid/firewood-kapok", op: "add", path: "/enabled",  value: false },
 ]
