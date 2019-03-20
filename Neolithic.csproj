@@ -166,6 +166,7 @@
     <Compile Include="Neolithic\Content\Item\ItemGiantReedsRoot.cs" />
     <Compile Include="Neolithic\Content\Item\ItemSickle.cs" />
     <Compile Include="Neolithic\Content\Utility\ArrayStuff.cs" />
+    <Compile Include="Neolithic\Content\Utility\HandAnimations.cs" />
     <Compile Include="Neolithic\TheNeolithicMod.cs" />
   </ItemGroup>
   <ItemGroup>
