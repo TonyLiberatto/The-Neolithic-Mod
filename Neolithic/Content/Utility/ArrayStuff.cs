@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.MathTools;
+using Vintagestory.API.Server;
 
 namespace TheNeolithicMod
 {
@@ -36,6 +39,34 @@ namespace TheNeolithicMod
             }
             woodtype = null;
             return false;
+        }
+
+        public static Block GetBlock(this BlockPos pos)
+        {
+            return GetAPI.coreapi.World.BlockAccessor.GetBlock(pos);
+        }
+    }
+    public class GetAPI : ModSystem
+    {
+        public static ICoreServerAPI sapi;
+        public static ICoreClientAPI capi;
+        public static ICoreAPI coreapi;
+
+        public override double ExecuteOrder() => 0;
+
+        public override void StartServerSide(ICoreServerAPI api)
+        {
+            sapi = api;
+        }
+
+        public override void StartClientSide(ICoreClientAPI api)
+        {
+            capi = api;
+        }
+
+        public override void Start(ICoreAPI api)
+        {
+            coreapi = api;
         }
     }
 }
