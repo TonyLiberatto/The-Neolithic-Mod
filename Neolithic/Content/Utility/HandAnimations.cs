@@ -9,7 +9,7 @@ namespace TheNeolithicMod
 {
     public static class HandAnimations
     {
-        public static bool Hit(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
+        public static bool Hit(IWorldAccessor world, IPlayer byPlayer, float secondsUsed)
         {
             if (world.Side == EnumAppSide.Client)
             {
