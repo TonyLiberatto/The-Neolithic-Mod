@@ -6,10 +6,6 @@
 	"textureWidth": 64,
 	"textureHeight": 64,
 	"textures": {
-		"wood": "game:block/wood/debarked/pine",
-		"bone": "game:block/bone",
-		"ceramic": "game:block/clay/ceramic",
-		"pig-eyes": "block/pig-eyes"
 	},
 	"elements": [
 		{
@@ -80,7 +76,7 @@
 							"rotationZ": 11.0,
 							"faces": {
 								"north": { "texture": "#wood", "uv": [ 2.0, 3.5, 56.5, 58.5 ], "rotation": 270, "autoUv": false },
-								"east": { "texture": "#wood", "uv": [ 57.0, 28.0, 0.0, 0.0 ], "rotation": 180, "enabled": false },
+								"east": { "texture": "#wood", "uv": [ 57.0, 28.0, 59.0, 29.0 ], "rotation": 180, "enabled": false },
 								"south": { "texture": "#wood", "uv": [ 3.0, 2.5, 58.0, 59.0 ], "rotation": 90, "autoUv": false },
 								"west": { "texture": "#wood", "uv": [ 3.5, 3.5, 58.0, 58.0 ], "autoUv": false },
 								"up": { "texture": "#wood", "uv": [ 4.0, 1.5, 57.5, 58.5 ], "rotation": 90, "autoUv": false },
@@ -135,7 +131,7 @@
 								"south": { "texture": "#wood", "uv": [ 21.0, 2.0, 43.0, 29.5 ], "autoUv": false },
 								"west": { "texture": "#wood", "uv": [ 19.0, 2.0, 47.5, 30.0 ], "autoUv": false },
 								"up": { "texture": "#wood", "uv": [ 19.0, 1.0, 45.0, 26.0 ], "rotation": 90, "autoUv": false },
-								"down": { "texture": "#wood", "uv": [ 19.0, 5.0, 0.0, 0.0 ], "rotation": 90, "enabled": false }
+								"down": { "texture": "#wood", "uv": [ 19.0, 5.0, 21.0, 6.0 ], "rotation": 90, "enabled": false }
 							}
 						},
 						{
@@ -152,7 +148,7 @@
 								"south": { "texture": "#wood", "uv": [ 29.0, 2.0, 49.5, 43.5 ], "autoUv": false },
 								"west": { "texture": "#wood", "uv": [ 27.0, 2.0, 52.5, 33.5 ], "autoUv": false },
 								"up": { "texture": "#wood", "uv": [ 27.0, 1.0, 52.5, 27.5 ], "rotation": 90, "autoUv": false },
-								"down": { "texture": "#wood", "uv": [ 27.0, 5.0, 0.0, 0.0 ], "rotation": 90, "enabled": false }
+								"down": { "texture": "#wood", "uv": [ 27.0, 5.0, 29.0, 6.0 ], "rotation": 90, "enabled": false }
 							}
 						},
 						{
@@ -178,7 +174,7 @@
 									"to": [ 2.5, 1.2, 2.5 ], 
 									"rotationOrigin": [ 1.5, 1.2, 1.5 ],
 									"rotationX": 5.0,
-									"rotationY": 22.0,
+									"rotationY": 40.0,
 									"rotationZ": -53.0,
 									"faces": {
 										"north": { "texture": "#wood", "uv": [ 12.0, 6.5, 52.0, 58.0 ], "autoUv": false },
@@ -214,7 +210,7 @@
 									"to": [ 2.5, 1.2, 2.5 ], 
 									"rotationOrigin": [ 1.5, 1.2, 1.5 ],
 									"rotationX": -5.0,
-									"rotationY": -22.0,
+									"rotationY": -40.0,
 									"rotationZ": -53.0,
 									"faces": {
 										"north": { "texture": "#wood", "uv": [ 11.0, 5.5, 50.5, 55.5 ], "autoUv": false },
