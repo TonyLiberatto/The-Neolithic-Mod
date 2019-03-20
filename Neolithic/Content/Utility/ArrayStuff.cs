@@ -45,7 +45,23 @@ namespace TheNeolithicMod
         {
             return GetAPI.coreapi.World.BlockAccessor.GetBlock(pos);
         }
+
+        public static Block GetBlock(this AssetLocation asset)
+        {
+            return GetAPI.coreapi.World.BlockAccessor.GetBlock(asset);
+        }
+
+        public static Item GetItem(this AssetLocation asset)
+        {
+            return GetAPI.coreapi.World.GetItem(asset);
+        }
+
+        public static AssetLocation ToAsset(this string asset)
+        {
+            return new AssetLocation(asset);
+        }
     }
+
     public class GetAPI : ModSystem
     {
         public static ICoreServerAPI sapi;

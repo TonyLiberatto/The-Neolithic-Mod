@@ -43,14 +43,14 @@ namespace TheNeolithicMod
                     if (world.Side == EnumAppSide.Client) world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
                     if (count < 0 && active.Itemstack.StackSize >= 64 )
                     {
-                        world.SpawnItemEntity(new ItemStack(active.Itemstack.Collectible, -count), pos.ToVec3d().Add(0.5, 0.5, 0.5), new Vec3d(0.0, 0.05, 0.0));
+                        world.SpawnItemEntity(new ItemStack(active.Itemstack.Collectible, -count), pos.ToVec3d().Add(0.5, 0.5, 0.5), new Vec3d(0.0, 0.1, 0.0));
                     }
                     else
                     {
                         active.Itemstack.StackSize -= count;
                     }
                     if (active.Itemstack.StackSize <= 0) active.Itemstack = null;
-                    world.SpawnItemEntity(new ItemStack(world.GetBlock(makes)), pos.ToVec3d().Add(0.5, 0.5, 0.5), new Vec3d(0.0, 0.05, 0.0));
+                    world.SpawnItemEntity(new ItemStack(world.GetBlock(makes)), pos.ToVec3d().Add(0.5, 0.5, 0.5), new Vec3d(0.0, 0.1, 0.0));
 
                     active.MarkDirty();
                     return true;

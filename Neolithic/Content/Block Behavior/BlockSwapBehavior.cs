@@ -5,6 +5,7 @@ using Vintagestory.API.MathTools;
 
 namespace TheNeolithicMod
 {
+    [Obsolete("This Class is obsolete, use NewBlockSwapBehavior Instead")]
     class BlockSwapBehavior : BlockBehavior
     {
         private object[][] swapBlocks;
