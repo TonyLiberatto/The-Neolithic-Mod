@@ -12,11 +12,22 @@
 	attributes: {
 		convertFrom: "*-lit-*", 
 		convertTo: "*-unlit-*", 
-		inGameHours: "0.2",
+		inGameHours: "0.0002",
 	},
 	drawtype: "json",
 	behaviors: [
 		{name: "HorizontalOrientable"},
+		{
+      name: "BlockSwapBehavior",
+      properties: {
+        "swapBlocks": [
+          [ "offering-bowl-fruit", "totem-pig-bowl-acacia-lit-north", "totem-pig-new-acacia-unlit-north", 1 ],
+		  [ "offering-bowl-vegetable","totem-pig-tusk-acacia-lit-north", "totem-pig-bowl-acacia-unlit-north",  1 ],
+		  [ "offering-bowl-meat", "totem-pig-eyes-acacia-lit-north","totem-pig-tusk-acacia-unlit-north",  1 ],
+		  [ "offering-bowl-bread", "totem-pig-crucible-acacia-north","totem-pig-eyes-acacia-unlit-north",  1 ],
+        ],
+      },
+    },
 	],
 	shapebytype: {
 		"*-north": { base: "block/wood/totem/pig/{type}", rotateY: 0 },
