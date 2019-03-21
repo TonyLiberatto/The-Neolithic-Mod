@@ -1,0 +1,39 @@
+{
+	code: "slaughteringaxe",
+	class: "ItemSlaughteringAxe",
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", ] },
+	],
+	tool: "axe",
+	damagedby: ["blockbreaking", "attacking"],
+	shape: { base: "item/tool/slaughtering-axe" },
+	heldTpHitAnimation: "axechop",
+	textures: {
+		"material": { base: "item/tool/material/{stone}" },
+		"handle": { base: "block/bone" },
+	},
+	attackRange: 2,
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithictools": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.0468, y: 0, z: 0 },
+		rotation: { x: -77, y: -2, z: 102 },
+		scale: 2.36
+	},
+	guiTransform: {
+		translation: { x: 8, y: 9, z: 0 },
+		rotation: { x: -104, y: 135, z: -166 },
+		origin: { x: 0.6, y: 0.45, z: 0.5 },
+		scale: 1.77
+	},
+	groundTransform: {
+		translation: { x: 0.0468, y: 0, z: 0 },
+		rotation: { x: 1, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.5, z: 0.5299 },
+		scale: 4
+	},
+	tpHandTransform: {
+		translation: { x: -0.85, y: -0.3, z: -0.523 },
+		rotation: { x: 87, y: 48, z: -10 },
+		scale: 1
+	}
+}

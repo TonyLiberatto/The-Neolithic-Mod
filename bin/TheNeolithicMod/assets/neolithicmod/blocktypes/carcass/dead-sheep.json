@@ -1,5 +1,5 @@
 {
-	code: "dead-sheep",
+	code: "dead-sheep-domestic",
 	class: "BlockPlaceOnDrop",
 	maxStackSize: 1,
 	resistance: 13,
@@ -34,7 +34,7 @@
 	],
 	textures: 
 	{
-		all: { base: "entity/sheep/{type}" },
+		all: { base: "game:entity/sheep/{type}" },
 	},
 	shapeByType: 
 	{

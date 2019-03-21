@@ -67,7 +67,7 @@ namespace TheNeolithicMod
 
         public override bool OnBlockInteractStep(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            return HandAnimations.Hit(world, byPlayer, secondsUsed);
+            return HandAnimations.Hit(world, byPlayer.Entity, secondsUsed);
         }
 
         public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)

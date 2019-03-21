@@ -7,7 +7,7 @@
 	drops: [
 		{
 			type: "block", 
-			code: "neolithicmod:dead-sheep-ram", 
+			code: "neolithicmod:dead-sheep-domestic-ram", 
 		},
 	],
 	client: {
@@ -16,6 +16,7 @@
 		texture: { base: "entity/sheep/ram" },
 		behaviors: [
 			{ code: "repulseagents" }, 
+      { code: "slaughterable" },
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
 			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "interpolateposition" },
@@ -46,6 +47,7 @@
 		},
 		behaviors: [
 			{ code: "repulseagents" }, 
+      { code: "slaughterable" },
 			{ code: "controlledphysics", stepHeight: 1.0001 },
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ code: "health", currenthealth: 25, maxhealth: 25, },
