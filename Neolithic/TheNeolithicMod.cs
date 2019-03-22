@@ -41,6 +41,7 @@ namespace TheNeolithicMod
 
             api.RegisterEntityBehaviorClass("milkable", typeof(BehaviorMilkable));
             api.RegisterEntityBehaviorClass("slaughterable", typeof(BehaviorSlaughterable));
+            api.RegisterEntityBehaviorClass("featherpluck", typeof(BehaviorFeatherPluck));
         }
     }
 }

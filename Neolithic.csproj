@@ -143,6 +143,7 @@
     <Compile Include="Neolithic\Content\Block\BlockBowlNew.cs" />
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLogWall.cs" />
+    <Compile Include="Neolithic\Content\EntityBehavior\BehaviorFeatherPluck.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorMilkable.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorSlaughterable.cs" />
     <Compile Include="Neolithic\Content\Item\ItemSlaughteringAxe.cs" />

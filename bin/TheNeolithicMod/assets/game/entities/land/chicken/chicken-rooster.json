@@ -29,6 +29,7 @@
     textures: {all: { base: "entity/chicken/rooster/{color}" } },
     behaviors: [
       { code: "repulseagents" },
+      { code: "featherpluck" },
       {
         code: "controlledphysics",
         stepHeight: 1.0001
@@ -55,6 +56,7 @@
     },
     behaviors: [
       { code: "repulseagents" },
+      { code: "featherpluck" },
       {
         code: "controlledphysics",
         stepHeight: 1.0001
