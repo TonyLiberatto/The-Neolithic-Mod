@@ -127,12 +127,12 @@
 					"to": [ 1.1, 1.1, 2.0 ], 
 					"rotationOrigin": [ -0.1, -0.1, 1.0 ],
 					"faces": {
-						"north": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 2.5, 2.5 ], "autoUv": false },
-						"east": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 2.5, 2.5 ], "autoUv": false },
-						"south": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 2.5, 2.5 ], "autoUv": false },
-						"west": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 2.5, 2.5 ], "autoUv": false },
-						"up": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 3.0, 2.5 ], "autoUv": false },
-						"down": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 2.5, 2.5 ], "autoUv": false }
+						"north": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "autoUv": false },
+						"east": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "autoUv": false },
+						"south": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "autoUv": false },
+						"west": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "autoUv": false },
+						"up": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "autoUv": false },
+						"down": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "autoUv": false }
 					},
 					"children": [
 						{
@@ -146,7 +146,7 @@
 							"faces": {
 								"north": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false },
 								"east": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 0.5, 1.0 ], "enabled": false },
-								"south": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 4.0, 2.5 ], "autoUv": false },
+								"south": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 1.5, 1.0 ], "autoUv": false },
 								"west": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 0.5, 1.0 ], "enabled": false },
 								"up": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 1.0, 0.5 ], "enabled": false },
 								"down": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 1.0, 0.5 ], "enabled": false }
@@ -162,7 +162,7 @@
 							"faces": {
 								"north": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false },
 								"east": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 0.5, 1.0 ], "enabled": false },
-								"south": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 4.0, 2.5 ], "autoUv": false },
+								"south": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 1.5, 1.0 ], "autoUv": false },
 								"west": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 0.5, 1.0 ], "enabled": false },
 								"up": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 1.0, 0.5 ], "enabled": false },
 								"down": { "texture": "#ribbon", "uv": [ 0.0, 0.0, 1.0, 0.5 ], "enabled": false }
