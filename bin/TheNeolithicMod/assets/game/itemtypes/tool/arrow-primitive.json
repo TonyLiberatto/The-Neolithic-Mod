@@ -12,7 +12,7 @@
 	},
 	drawtype: "json",
 	shape: { base: "entity/primitive-arrow" },
-	creativeinventory: { "general": ["arrow-primitive"], "items": ["arrow-primitive"], "neolithictools": ["arrow-primitive"] },
+	creativeinventory: { "general": ["arrow-primitive"], "items": ["arrow-primitive"], "neolithicweapons": ["arrow-primitive"] },
 	attributes: 
 	{
 		damage: 0,
