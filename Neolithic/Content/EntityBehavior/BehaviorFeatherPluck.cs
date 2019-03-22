@@ -13,6 +13,7 @@ namespace TheNeolithicMod
     class BehaviorFeatherPluck : EntityBehavior
     {
         private bool notplucking = true;
+        DamageSource source = new DamageSource();
         public BehaviorFeatherPluck(Entity entity) : base(entity)
         {
         }
@@ -25,6 +26,7 @@ namespace TheNeolithicMod
         public override void Initialize(EntityProperties properties, JsonObject attributes)
         {
             base.Initialize(properties, attributes);
+            source.Source = EnumDamageSource.Player;
         }
 
         public override void OnInteract(EntityAgent byEntity, IItemSlot itemslot, Vec3d hitPosition, EnumInteractMode mode, ref EnumHandling handled)
@@ -33,9 +35,12 @@ namespace TheNeolithicMod
             {
                 notplucking = false;
                 ItemStack feather = new ItemStack(entity.World.GetItem(new AssetLocation("game:feather")), 1);
-                feather.StackSize = 1;
+                feather.StackSize = entity.World.Rand.Next(1,2);
 
-                entity.ReceiveDamage(new DamageSource(), (float)(byEntity.World.Rand.NextDouble() * 0.5));
+                source.sourcePos = hitPosition;
+                source.SourceEntity = byEntity;
+
+                entity.ReceiveDamage(source, (float)(entity.World.Rand.NextDouble() * 0.25));
                 if (!byEntity.TryGiveItemStack(feather))
                 {
                     entity.World.SpawnItemEntity(feather, entity.Pos.XYZ);
