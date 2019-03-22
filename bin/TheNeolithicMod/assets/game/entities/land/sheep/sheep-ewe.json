@@ -7,7 +7,7 @@
 	drops: [
 		{
 			type: "block", 
-			code: "neolithicmod:dead-sheep-ewe", 
+			code: "neolithicmod:dead-sheep-domestic-ewe", 
 		},
 	],
 	client: {
@@ -17,6 +17,7 @@
 		behaviors: [
 			{ code: "repulseagents" }, 
       { code: "milkable" }, 
+      { code: "slaughterable" },
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
 			{ code: "interpolateposition" }, 
 			{ code: "floatupwhenstuck", onlyWhenDead: true },
@@ -44,11 +45,12 @@
 			pathfinder: {
 				minTurnAnglePerSec: 90,
 				maxTurnAnglePerSec: 180
-			}
+			},
 		},
 		behaviors: [
 			{ code: "repulseagents" }, 
       { code: "milkable" }, 
+      { code: "slaughterable" },
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ 

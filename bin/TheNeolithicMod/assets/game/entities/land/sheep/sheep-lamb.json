@@ -11,23 +11,13 @@
 			quantity: { avg: 0.5, var: 0.5 } 
 		}
 	],
-	behaviors: [
-		{
-			name: "Carryable",
-			properties: {
-			translation: [ 0.0625, 0, 0 ],
-			rotation: [ 0, 180, 0 ],
-			}
-		},
-		{name: "Container"}, 
-		{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}	
-	],
 	client: {
 		renderer: "Shape",
 		shape: { base: "entity/land/sheep/lamb" },
 		texture: { base: "entity/sheep/lamb" },
 		behaviors: [
 			{ code: "repulseagents" }, 
+      { code: "slaughterable" },
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
 			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "interpolateposition" },
@@ -58,6 +48,7 @@
 		},
 		behaviors: [
 			{ code: "repulseagents" }, 
+      { code: "slaughterable" },
 			{ code: "controlledphysics", stepHeight: 1.0001 },
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ code: "health", currenthealth: 10, maxhealth: 10, },

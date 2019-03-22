@@ -23,22 +23,30 @@ namespace TheNeolithicMod
         {
             if (entityItem.World.Side == EnumAppSide.Client || !entityItem.CollidedVertically) return;
             IBlockAccessor bA = entityItem.World.BlockAccessor;
+            BlockPos pos = entityItem.LocalPos.AsBlockPos;
+            if (TryPlace(bA, pos, entityItem)) return;
 
             around.Shuffle(entityItem.World.Rand);
 
             foreach (BlockPos ipos in around)
             {
-                BlockPos pos = entityItem.LocalPos.AsBlockPos.Add(ipos);
-                Block rBlock = bA.GetBlock(pos);
-                Block dBlock = bA.GetBlock(pos.DownCopy());
-
-                if (rBlock.IsReplacableBy(this) && !dBlock.IsReplacableBy(this))
-                {
-                    bA.SetBlock(BlockId, pos);
-                    entityItem.Die(EnumDespawnReason.Removed, null);
-                    return;
-                }
+                BlockPos tpos = pos.Add(ipos);
+                if (TryPlace(bA, tpos, entityItem)) return;
             }
+        }
+
+        public bool TryPlace(IBlockAccessor bA, BlockPos pos, EntityItem item)
+        {
+            Block rBlock = bA.GetBlock(pos);
+            Block dBlock = bA.GetBlock(pos.DownCopy());
+
+            if (rBlock.IsReplacableBy(this) && !dBlock.IsReplacableBy(this))
+            {
+                bA.SetBlock(BlockId, pos);
+                item.Die(EnumDespawnReason.Removed, null);
+                return true;
+            }
+            return false;
         }
     }
 }

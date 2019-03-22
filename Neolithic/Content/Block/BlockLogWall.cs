@@ -67,21 +67,7 @@ namespace TheNeolithicMod
 
         public override bool OnBlockInteractStep(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            if (world.Side == EnumAppSide.Client)
-            {
-                ModelTransform tf = new ModelTransform();
-
-                tf.EnsureDefaultValues();
-
-                tf.Origin.Set(0f, 0f, 0f);
-                tf.Translation.Set(0f, 0f, 0f);
-
-                tf.Rotation.X -= (float)Math.Sin(secondsUsed * 6) * 90;
-
-                byPlayer.Entity.Controls.UsingHeldItemTransformAfter = tf;
-                return tf.Rotation.X > -80;
-            }
-            return true;
+            return HandAnimations.Hit(world, byPlayer.Entity, secondsUsed);
         }
 
         public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
