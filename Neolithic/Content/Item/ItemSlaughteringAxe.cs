@@ -42,6 +42,8 @@ namespace TheNeolithicMod
                 if (entity.HasBehavior("slaughterable"))
                 {
                     if (byEntity.World.Side.IsServer()) { entitySel.Entity.Die(); }
+                    slot.Itemstack.Collectible.DamageItem(byEntity.World, byEntity, slot);
+                    slot.MarkDirty();
                 }
             }
         }
