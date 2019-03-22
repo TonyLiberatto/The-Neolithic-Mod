@@ -11,6 +11,7 @@
 	textures: {
 		"material": { base: "item/tool/material/{stone}" },
 		"handle": { base: "block/bone" },
+		"cordage": { base: "block/leatherstraps"},
 	},
 	attackRange: 2,
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithictools": ["*"] },
