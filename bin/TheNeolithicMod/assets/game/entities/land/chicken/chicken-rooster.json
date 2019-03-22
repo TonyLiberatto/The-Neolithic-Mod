@@ -11,7 +11,7 @@
   },
   eyeHeight: 0.5,
   variantgroups: [
-		{ code: "color", states: ["ashgrey", "black", "brown", "cream", "golden", "white"] } ],
+		{ code: "color", states: ["ashgrey", "black", "brown", "cream", "golden", "savanna", "white", "woodland"] } ],
   drops: [
 		{
 			type: "block",

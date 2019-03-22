@@ -13,7 +13,7 @@
   variantgroups: [
     {
       code: "color",
-      states: [ "ashgrey", "black", "brown", "cream", "golden", "white" ]
+      states: [ "ashgrey", "black", "brown", "cream", "golden", "savanna", "white", "woodland" ]
     }
   ],
   client: {
@@ -76,7 +76,9 @@
           "chicken-chick-brown": [ "chicken-hen-brown", "chicken-hen-brown", "chicken-hen-brown", "chicken-hen-brown", "chicken-hen-brown", "chicken-hen-brown", "chicken-hen-brown", "chicken-hen-brown", "chicken-hen-brown", "chicken-rooster-brown" ],
           "chicken-chick-cream": [ "chicken-hen-cream", "chicken-hen-cream", "chicken-hen-cream", "chicken-hen-cream", "chicken-hen-cream", "chicken-hen-cream", "chicken-hen-cream", "chicken-hen-cream", "chicken-hen-cream", "chicken-rooster-cream" ],
           "chicken-chick-golden": [ "chicken-hen-golden", "chicken-hen-golden", "chicken-hen-golden", "chicken-hen-golden", "chicken-hen-golden", "chicken-hen-golden", "chicken-hen-golden", "chicken-hen-golden", "chicken-hen-golden", "chicken-rooster-golden" ],
+          "chicken-chick-savanna": [ "chicken-hen-savanna", "chicken-hen-savanna", "chicken-hen-savanna", "chicken-hen-savanna", "chicken-hen-savanna", "chicken-hen-savanna", "chicken-hen-savanna", "chicken-hen-savanna", "chicken-hen-savanna", "chicken-rooster-savanna" ],
           "chicken-chick-white": [ "chicken-hen-white", "chicken-hen-white", "chicken-hen-white", "chicken-hen-white", "chicken-hen-white", "chicken-hen-white", "chicken-hen-white", "chicken-hen-white", "chicken-hen-white", "chicken-rooster-white" ],
+          "chicken-chick-woodland": [ "chicken-hen-woodland", "chicken-hen-woodland", "chicken-hen-woodland", "chicken-hen-woodland", "chicken-hen-woodland", "chicken-hen-woodland", "chicken-hen-woodland", "chicken-hen-woodland", "chicken-hen-woodland", "chicken-rooster-woodland" ],
         },
       },
       { code: "breathe" },

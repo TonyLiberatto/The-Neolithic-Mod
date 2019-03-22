@@ -12,7 +12,7 @@
   variantgroups: [
     {
       code: "color",
-      states: [ "ashgrey", "black", "brown", "cream", "golden", "white" ]
+      states: [ "ashgrey", "black", "brown", "cream", "golden", "savanna", "white", "woodland" ]
     }
   ],
   eyeHeight: 0.5,
