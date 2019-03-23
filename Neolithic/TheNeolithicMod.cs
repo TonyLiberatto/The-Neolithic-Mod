@@ -1,10 +1,22 @@
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.GameContent;
+using Vintagestory;
+using Vintagestory.Client;
 
 namespace TheNeolithicMod
 {
     public class Neolithic : ModSystem
     {
+        public override double ExecuteOrder() => 0;
+
+        public override void StartPre(ICoreAPI api)
+        {
+            ClientSettings._lhbuqUjwz7r0BVEAqsVqK9fC7ho.Int["maxTextureAtlasSize"] = 
+                ClientSettings._lhbuqUjwz7r0BVEAqsVqK9fC7ho.Int["maxTextureAtlasSize"] < 4096 ? 4096 : 
+                ClientSettings._lhbuqUjwz7r0BVEAqsVqK9fC7ho.Int["maxTextureAtlasSize"];
+        }
+
         public override void Start(ICoreAPI api)
         {
             base.Start(api);
