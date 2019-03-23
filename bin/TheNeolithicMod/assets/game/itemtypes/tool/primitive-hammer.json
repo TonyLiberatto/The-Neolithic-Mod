@@ -1,6 +1,11 @@
 {
 	code: "hammer",
 	class: "ItemHammer",
+	ttributes: {
+		handbook: {
+			groupBy: ["hammer-primitive-*"]
+		}
+	},
 	variantgroups: [
 		{code: "type", states: ["primitive"]},
 		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint",] },

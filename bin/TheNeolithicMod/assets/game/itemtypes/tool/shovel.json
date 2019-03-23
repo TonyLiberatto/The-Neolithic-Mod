@@ -1,5 +1,10 @@
 {
 	code: "shovel",
+	attributes: {
+		handbook: {
+			groupBy: ["shovel-*"]
+		}
+	},
 	variantgroups: [
 		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
 	],

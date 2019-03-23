@@ -22,30 +22,18 @@
 		"spear-blackbronze": 4,
 	},
 	"__comment": "Thrown damage",
-	attributesByType: {
-		"spear-copper": {
-			damage: 4.25,
-			spearEntityCode: "spear"
+	attributes: {
+		damageByType: {
+			"*-copper": 5.75,
+			"*-gold": 6,
+			"*-silver": 6,
+			"*-bismuthbronze": 6.5,
+			"*-tinbronze": 7.5,
+			"*-blackbronze": 8,
 		},
-		"spear-tinbronze": {
-			damage: 4.75,
-			spearEntityCode: "spear"
-		},
-		"spear-bismuthbronze": {
-			damage: 4.75,
-			spearEntityCode: "spear"
-		},
-		"spear-blackbronze": {
-			damage: 5.25,
-			spearEntityCode: "spear"
-		},
-		"spear-gold": {
-			damage: 4.5,
-			spearEntityCode: "spear"
-		},
-		"spear-silver": {
-			damage: 4.5,
-			spearEntityCode: "spear"
+		spearEntityCode: "spear",
+		handbook: {
+			groupBy: ["spear-*"]
 		}
 	},
 	durabilitybytype: {

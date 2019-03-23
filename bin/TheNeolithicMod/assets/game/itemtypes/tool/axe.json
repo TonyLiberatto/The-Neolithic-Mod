@@ -1,6 +1,11 @@
 {
 	code: "axe",
 	class: "ItemAxe",
+	attributes: {
+		handbook: {
+			groupBy: ["axe-*"]
+		}
+	},
 	variantgroups: [
 		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
 	],

@@ -1,6 +1,11 @@
 {
 	code: "slaughteringaxe",
 	class: "ItemSlaughteringAxe",
+	attributes: {
+		handbook: {
+			groupBy: ["slaughteringaxe-*"]
+		}
+	},
 	variantgroups: [
 		{ code: "material", states: ["granite", "andesite", "basalt", "obsidian", "flint", "bismuthbronze", "blackbronze", "brass", "copper", "gold", "iron", "lead", "silver", "tinbronze" ] },
     { code: "handle", states: ["bone", "wood"] },

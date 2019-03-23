@@ -1,6 +1,11 @@
 {
 	code: "axe",
 	class: "ItemAxe",
+	attributes: {
+		handbook: {
+			groupBy: ["axe-primitive-*"]
+		}
+	},
 	variantgroups: [
 		{code: "type", states: ["primitive"]},
 		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint",] },

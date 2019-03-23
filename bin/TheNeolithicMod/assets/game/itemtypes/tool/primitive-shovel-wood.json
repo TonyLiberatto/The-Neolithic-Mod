@@ -1,5 +1,10 @@
 {
 	code: "shovel",
+	attributes: {
+		handbook: {
+			groupBy: ["shovel-primitive-*"]
+		}
+	},
 	variantgroups: [
 		{ code: "type", states: ["primitive"] },
 		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint" ] },

@@ -7,6 +7,11 @@
 		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
 	],
 	tool: "chisel",
+	attributes: {
+		handbook: {
+			groupBy: ["adze-*"]
+		}
+	},
 	heldTpHitAnimation: "breaktool",
 	shape: { base: "item/tool/branch-adze" },
 	textures: {

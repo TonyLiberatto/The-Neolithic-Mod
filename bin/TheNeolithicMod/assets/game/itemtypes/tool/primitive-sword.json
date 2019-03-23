@@ -2,6 +2,11 @@
 	code: "sword",
 	damagedby: ["blockbreaking", "attacking"],
 	tool: "sword",
+	attributes: {
+		handbook: {
+			groupBy: ["sword-primitive-*"]
+		}
+	},
 	variantgroups: [
 		{code: "type", states: ["primitive"]},
 		{ code: "stone", states: ["obsidian", "flint",] },

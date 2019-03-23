@@ -3,12 +3,14 @@
 	damagedby: ["blockbreaking"],
 	class: "ItemSickle",
 	tool: "knife",
+	
 	variantgroups: [
 		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint",] },
 		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
 	],
 	attributes: {
-		codePrefixes: ["crop", "tallgrass", "frostedtallgrass"]
+		codePrefixes: ["crop", "tallgrass", "frostedtallgrass"],
+		handbook: { groupBy: ["primitive-sicle-*"] }
 	},
 	shape: { base: "item/tool/branch-sickle" },
 	heldTpHitAnimation: "breaktool",

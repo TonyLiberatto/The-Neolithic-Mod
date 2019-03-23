@@ -2,6 +2,11 @@
 	code: "knife",
 	damagedby: ["blockbreaking", "attacking"],
 	tool: "knife",
+	attributes: {
+		handbook: {
+			groupBy: ["knife-hand-*"]
+		}
+	},
 	variantgroups: [
 		{code: "type", states: ["hand"]},
 		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint",] },

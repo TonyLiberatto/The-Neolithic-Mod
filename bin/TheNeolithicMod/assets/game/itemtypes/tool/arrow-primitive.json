@@ -13,8 +13,12 @@
 	drawtype: "json",
 	shape: { base: "entity/primitive-arrow" },
 	creativeinventory: { "general": ["arrow-primitive"], "items": ["arrow-primitive"], "neolithicweapons": ["arrow-primitive"] },
-	attributes: 
-	{
-		damage: 0,
-	}
+	attributes: {
+		damageByType: {
+			"primitive": 0,
+		},
+		handbook: {
+			groupBy: ["arrow-*"]
+		}
+	},
 }

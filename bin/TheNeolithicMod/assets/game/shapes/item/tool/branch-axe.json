@@ -6,7 +6,7 @@
 	"textureWidth": 16,
 	"textureHeight": 8,
 	"textures": {
-		"wood": "block/wood/debarked/maple",
+		"wood": "neolithicmod:block/wood/debarked/maple",
 		"stone": "item/tool/material/flint",
 		"rope": "neolithicmod:block/rope"
 	},

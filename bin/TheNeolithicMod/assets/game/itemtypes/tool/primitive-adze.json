@@ -6,6 +6,11 @@
 		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },
 	],
 	tool: "chisel",
+	attributes: {
+		handbook: {
+			groupBy: ["adze-*"]
+		}
+	},
 	heldTpHitAnimation: "breaktool",
 	shape: { base: "item/tool/primitive-adze" },
 	textures: {

@@ -1,6 +1,11 @@
 {
 	code: "hammer",
 	class: "ItemHammer",
+	ttributes: {
+		handbook: {
+			groupBy: ["hammer-hand-*"]
+		}
+	},
 	variantgroups: [
 		{code: "type", states: ["hand"]},
 		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint" ] },

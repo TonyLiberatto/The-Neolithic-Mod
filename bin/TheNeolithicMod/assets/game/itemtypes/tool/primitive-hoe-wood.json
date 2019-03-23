@@ -1,6 +1,11 @@
 {
 	code: "primitive-hoe",
 	class: "ItemHoe",
+	attributes: {
+		handbook: {
+			groupBy: ["hoe-primitive-*"]
+		}
+	},
 	variantgroups: [
 		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint" ] },
 		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },

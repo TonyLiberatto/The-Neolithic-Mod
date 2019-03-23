@@ -23,27 +23,18 @@
 		"spear-primitive-obsidian": 2.5,
 	},
 	"__comment": "Thrown damage",
-	attributesByType: {
-		"spear-primitive-granite": {
-			damage: 3,
-			spearEntityCode: "spear-primitive"
+	attributes: {
+		damageByType: {
+			"*-granite": 4,
+			"*-andesite": 4,
+			"*-basalt": 4,
+			"*-flint": 5,
+			"*-obsidian": 5.25,
 		},
-		"spear-primitive-andesite": {
-			damage: 3,
-			spearEntityCode: "spear-primitive"
-		},
-		"spear-primitive-basalt": {
-			damage: 3,
-			spearEntityCode: "spear-primitive"
-		},
-		"spear-primitive-obsidian": {
-			damage: 4.25,
-			spearEntityCode: "spear-primitive"
-		},
-		"spear-primitive-flint": {
-			damage: 4,
-			spearEntityCode: "spear-primitive"
-		},
+		spearEntityCode: "spear-primitive",
+		handbook: {
+			groupBy: ["spear-primitive-*"]
+		}
 	},
 	durabilitybytype: {
 		"spear-primitive-granite": 50,

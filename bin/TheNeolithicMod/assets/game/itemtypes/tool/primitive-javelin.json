@@ -3,6 +3,11 @@
 	class: "ItemSpear",
 	damagedby: ["attacking"],
 	tool: "spear",
+	attributes: {
+		handbook: {
+			groupBy: ["spear-javelin-*"]
+		}
+	},
 	variantgroups: [
 		{code: "type", states: ["javelin"]} 
 		],

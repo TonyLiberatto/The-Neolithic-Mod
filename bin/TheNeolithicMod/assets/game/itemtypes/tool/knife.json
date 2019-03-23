@@ -2,6 +2,11 @@
 	code: "knife",
 	damagedby: ["blockbreaking", "attacking"],
 	tool: "knife",
+	attributes: {
+		handbook: {
+			groupBy: ["knife-*"]
+		}
+	},
 	variantgroups: [
 		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
 	],
