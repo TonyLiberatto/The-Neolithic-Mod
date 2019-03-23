@@ -2,6 +2,11 @@
 	code: "roofstairs",
   class: "BlockLogWall",
 	behaviors: [{name: "HorizontalOrientable"}],
+	attributes: {
+		handbook: {
+			groupBy: ["roofstairs-*"]
+		},
+	},
 	creativeinventory: { "general": ["*-north"], "construction": ["*-north"], "neolithicblocks": ["*-north"] },
 		variantgroups: [
 		{ code: "type", states: [ "corner","cornerin", "cornertop","slope", "slopewall", "top", "topwall", "topend" ]},

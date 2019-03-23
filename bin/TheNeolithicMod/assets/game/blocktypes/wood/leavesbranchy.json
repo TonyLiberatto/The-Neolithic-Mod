@@ -2,7 +2,12 @@
 	code: "leavesbranchy",
 	class: "BlockLeaves",
 	behaviorsByType: {
-		"*-grown-*": [{name: "PushEventOnBlockBroken",	properties:	{eventName: "checkLeafDecay"}}]
+		"*-grown-*": [{name: "PushEventOnBlockBroken",	properties: {eventName: "testForDecay"}}]
+	},
+	attributes: {
+		handbook: {
+			groupBy: ["leavesbranchy-*"]
+		},
 	},
 	variantgroups: [
 		{ code: "type", states: ["grown", "placed"] },

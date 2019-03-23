@@ -1,5 +1,10 @@
 {
 	code: "table",
+	attributes: {
+		handbook: {
+			groupBy: ["table-*"]
+		},
+	},
 	variantgroups: [
 		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bamboo-brown", "bamboo-green"] },
 	],

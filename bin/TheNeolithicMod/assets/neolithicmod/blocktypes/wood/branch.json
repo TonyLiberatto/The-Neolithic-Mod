@@ -1,6 +1,11 @@
 {
 	code: "branch",
 	behaviors: [{name: "Pillar"}],
+	attributes: {
+		handbook: {
+			groupBy: ["branch-*"]
+		},
+	},
 	variantgroups: [
 		{ code: "size", states: ["very-thin", "thin", "medium", "thick"] },
 		{ loadFromProperties: "block/wood" },

@@ -26,6 +26,11 @@
   replaceable: 900,
   lightAbsorption: 99,
   behaviors: [ { name: "UnstableFalling" } ],
+  attributes: {
+		handbook: {
+			groupBy: ["3dcobble-*"]
+		},
+	},
   sounds: {
     walk: "game:walk/stone",
     place: "game:block/gravel",

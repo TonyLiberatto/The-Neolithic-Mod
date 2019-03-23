@@ -1,6 +1,9 @@
 {
 	code: "bamboostakes",
-	maxstacksize: 32,
+	maxstacksize: 64,
+	attributes: {
+		firepitConstructable: true
+	},
 	variantgroups: [ 
 		{ code: "type", states: ["brown", "green"] },
 		],

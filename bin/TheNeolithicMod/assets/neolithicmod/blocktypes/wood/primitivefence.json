@@ -1,6 +1,11 @@
 {
 	code: "primitivefence",
 	behaviors: [{name: "NWOrientable"}],
+	attributes: {
+		handbook: {
+			groupBy: ["primitivefence-*"]
+		},
+	},
 	variantgroups: [
 		{ code: "type", states: ["support", "midsection"]},
 		{ loadFromProperties: "block/wood" },

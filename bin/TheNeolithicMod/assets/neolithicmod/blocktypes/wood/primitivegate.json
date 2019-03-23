@@ -1,6 +1,11 @@
 {
 	code: "primitivegate",
 	class: "BlockFenceGate",
+	attributes: {
+		handbook: {
+			groupBy: ["primitivegate-*"]
+		},
+	},
 	variantgroups: [
 		{ loadFromProperties: "block/wood" },
 		{ code: "type", states: ["n", "w"] },

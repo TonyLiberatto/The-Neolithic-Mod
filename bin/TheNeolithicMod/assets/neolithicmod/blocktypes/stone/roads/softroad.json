@@ -7,6 +7,11 @@
       properties: { dropBlockFace: "east" }
     }
   ],
+  attributes: {
+		handbook: {
+			groupBy: ["softroad-*"]
+		},
+	},
   variantgroups: [
     {
       code: "material",

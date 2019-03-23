@@ -3,6 +3,11 @@
 	variantgroups: [
 		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bamboo-brown", "bamboo-green"] },
 	],
+	attributes: {
+		handbook: {
+			groupBy: ["chair-*"]
+		},
+	},
 	shape: { base: "block/wood/furniture/chair" },
 	creativeinventory: { "general": ["chair-{wood}"], "decorative": ["chair-{wood}"], "neolithicdeco": ["chair-{wood}"] },
 	blockmaterial: "Wood",

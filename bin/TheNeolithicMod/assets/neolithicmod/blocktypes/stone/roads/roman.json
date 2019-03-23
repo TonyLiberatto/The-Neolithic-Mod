@@ -6,6 +6,11 @@
       properties: { dropBlockFace: "east" }
     }
   ],
+  attributes: {
+		handbook: {
+			groupBy: ["romanroad-*"]
+		},
+	},
   variantgroups: [
     { loadFromProperties: "block/rock" },
     {

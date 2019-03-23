@@ -12,6 +12,11 @@
 			}
 		},
 	],
+	attributes: {
+		handbook: {
+			groupBy: ["logwall-*"]
+		},
+	},
 	creativeinventory: { "general": ["*"], "construction": ["*-north"], "neolithicblocks": ["*"] },
 		variantgroups: [
 		{ code: "type", states: ["wall", "corner", "jut"]},
