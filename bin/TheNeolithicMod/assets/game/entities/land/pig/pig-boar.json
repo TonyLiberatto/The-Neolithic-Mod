@@ -61,6 +61,15 @@
 						whenInEmotionState: "aggressiveondamage",
 						sound: "creature/pig/pig-attack",
 					},
+ 					{
+						code: "sleep",
+						priority: 1.8,
+						priorityForCancel: 1.35,
+						animation: "sleep",
+						isnocturnal: false,
+						cancelOnHurt: true,
+						animationSpeed: 0.20,
+					},
 					{
 						code: "seekentity",
 						entityCodes: ["player"],

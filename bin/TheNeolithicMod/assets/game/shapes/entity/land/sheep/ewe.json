@@ -1091,6 +1091,40 @@
 					}
 				}
 			]
+		},
+
+		{
+			"name": "Sleep",
+			"code": "sleep",
+			"quantityframes": 60,
+			"onActivityStopped": "Rewind",
+			"onAnimationEnd": "Repeat",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"Body": { "offsetX": 0.0, "offsetY": -10.0, "offsetZ": 0.0 },
+						"L front leg": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 1.0, "rotationX": 0.0, "rotationY": 0.0, "rotationZ": -74.0 },
+						"L front foot": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": -15.0 },
+						"R front leg": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": -1.0, "rotationX": 0.0, "rotationY": 0.0, "rotationZ": -74.0 },
+						"R front foot": { "rotationX": -20.0, "rotationY": 0.0, "rotationZ": -15.0 },
+						"L back leg": { "offsetX": -3.0, "offsetY": 0.0, "offsetZ": 0.0, "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 80.0 },
+						"R back leg": { "offsetX": -3.0, "offsetY": 0.0, "offsetZ": 0.0, "rotationX": 0.0, "rotationY": -8.0, "rotationZ": 80.0 },
+						"neck": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 10.0 },
+						"head": {  },
+						"mouth down": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 3.0 }
+					}
+				},
+				{
+					"frame": 29,
+					"elements": {
+						"Body": {  },
+						"neck": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 5.0 },
+						"head": {  },
+						"mouth down": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 7.0 }
+					}
+				}
+			]
 		}
 	]
 }

@@ -13,7 +13,6 @@ namespace TheNeolithicMod
 
         public bool isNocturnal = true;
         public double WakeRNG = 0.0d;
-        public bool doOnce = true;
 
         public override void LoadConfig(JsonObject taskConfig, JsonObject aiConfig)
         {
@@ -22,17 +21,12 @@ namespace TheNeolithicMod
                 isNocturnal = taskConfig["isnocturnal"].AsBool(true);
             }
 
+            WakeRNG = entity.World.Rand.NextDouble() / 5.00d;
             base.LoadConfig(taskConfig, aiConfig);
         }
 
         public override bool ShouldExecute()
         {
-            if (doOnce)
-            {
-                WakeRNG = entity.World.Rand.NextDouble() / 5.00d;
-                //entity.World.Logger.Notification("Entity at position " + entity.ServerPos + " is set to a WakeRNG of " + WakeRNG);
-                doOnce = false;
-            }
             if (isNocturnal && entity.World.Calendar.DayLightStrength > 0.50f + WakeRNG || !isNocturnal && entity.World.Calendar.DayLightStrength < 0.50f + WakeRNG) return true;
             return false;
         }
