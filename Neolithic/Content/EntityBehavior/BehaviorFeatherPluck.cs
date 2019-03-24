@@ -31,7 +31,7 @@ namespace TheNeolithicMod
 
         public override void OnInteract(EntityAgent byEntity, IItemSlot itemslot, Vec3d hitPosition, EnumInteractMode mode, ref EnumHandling handled)
         {
-            if (notplucking)
+            if (notplucking && itemslot.Empty)
             {
                 notplucking = false;
                 ItemStack feather = new ItemStack(entity.World.GetItem(new AssetLocation("game:feather")), 1);
