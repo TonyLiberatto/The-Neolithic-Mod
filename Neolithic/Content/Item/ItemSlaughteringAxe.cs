@@ -11,9 +11,13 @@ namespace TheNeolithicMod
 {
     class ItemSlaughteringAxe : Item
     {
+        public bool notslaughtering = true;
+        DamageSource source = new DamageSource();
+
         public override void OnLoaded(ICoreAPI api)
         {
             base.OnLoaded(api);
+            source.Source = EnumDamageSource.Player;
         }
 
         public override void OnHeldAttackStart(IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handling)
@@ -39,11 +43,18 @@ namespace TheNeolithicMod
             if (entitySel != null)
             {
                 Entity entity = entitySel.Entity;
-                if (entity.HasBehavior("slaughterable"))
+                if (entity.HasBehavior("slaughterable") && notslaughtering)
                 {
-                    if (byEntity.World.Side.IsServer()) { entitySel.Entity.Die(); }
+                    notslaughtering = false;
+                    if (byEntity.World.Side.IsServer()) { entitySel.Entity.Die(EnumDespawnReason.Death, source); }
+
                     slot.Itemstack.Collectible.DamageItem(byEntity.World, byEntity, slot);
                     slot.MarkDirty();
+
+                    entity.World.RegisterCallback(dt =>
+                    {
+                        notslaughtering = true;
+                    }, 2000);
                 }
             }
         }
