@@ -11,27 +11,39 @@ namespace TheNeolithicMod
 {
     class BEBucketOverride : BlockEntityBucket
     {
-        new ICoreAPI api;
         BlockBucket bucket;
         public double updateTime;
         long id;
 
         public override void Initialize(ICoreAPI api)
         {
-            this.api = api;
+            base.Initialize(api);
 
             bucket = new BlockBucket();
             if (api.World.Side.IsServer())
             {
                 if (updateTime == 0) updateTime = ResetTimer();
-                id = api.World.RegisterGameTickListener(OnGameTick, 30);
+                id = RegisterGameTickListener(OnGameTick, 30);
             }
-            base.Initialize(api);
         }
 
         public double ResetTimer()
         {
             return api.World.Calendar.TotalHours + 42;
+        }
+
+        public override string GetBlockInfo(IPlayer forPlayer)
+        {
+            string a = "\n";
+            ItemStack contents = bucket.GetContent(api.World, pos);
+            if (contents != null)
+            {
+                if (contents.Item.FirstCodePart() == "milkportion")
+                {
+                    a += "Becomes Curds In " + (int)(updateTime - api.World.Calendar.TotalHours) + " Hours";
+                }
+            }
+            return a + base.GetBlockInfo(forPlayer);
         }
 
         public void OnGameTick(float dt)
@@ -49,26 +61,6 @@ namespace TheNeolithicMod
                     }
                 }
                 updateTime = ResetTimer();
-            }
-        }
-
-        public override void OnBlockUnloaded()
-        {
-            Unregister();
-            base.OnBlockUnloaded();
-        }
-
-        public override void OnBlockRemoved()
-        {
-            Unregister();
-            base.OnBlockRemoved();
-        }
-
-        public void Unregister()
-        {
-            if (id != 0)
-            {
-                api.World.UnregisterGameTickListener(id);
             }
         }
     }
