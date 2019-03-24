@@ -9,7 +9,6 @@ namespace TheNeolithicMod
     public class Neolithic : ModSystem
     {
         ICoreClientAPI capi;
-        public override double ExecuteOrder() => 0;
 
         public override void StartClientSide(ICoreClientAPI api)
         {
