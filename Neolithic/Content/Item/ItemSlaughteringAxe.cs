@@ -27,7 +27,7 @@ namespace TheNeolithicMod
 
         public override bool OnHeldAttackStep(float secondsPassed, IItemSlot slot, EntityAgent byEntity, BlockSelection blockSelection, EntitySelection entitySel)
         {
-            if (entitySel != null)
+            if (notslaughtering && entitySel != null)
             {
                 Entity entity = entitySel.Entity;
                 if (entity.HasBehavior("slaughterable"))
