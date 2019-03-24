@@ -53,6 +53,7 @@ namespace TheNeolithicMod
             api.RegisterBlockEntityClass("FixedBESapling", typeof(FixedBESapling));
             api.RegisterBlockEntityClass("BEMortarAndPestle", typeof(BEMortarAndPestle));
             api.RegisterBlockEntityClass("BlockEntityChimney", typeof(BlockEntityChimney));
+            api.RegisterBlockEntityClass("BucketB", typeof(BEBucketOverride));
 
             AiTaskRegistry.Register("fleepoi", typeof(AiTaskFleePOI));
             AiTaskRegistry.Register("sleep", typeof(AiTaskSleep));

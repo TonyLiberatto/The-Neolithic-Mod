@@ -6,5 +6,19 @@
       "base": "block/liquid/milk"
     },
     "file": "blocktypes/wood/generic/bucket.json"
-  }
+  },
+  {
+    "op": "add",
+    "path": "/textures/curdsportion",
+    "value": {
+      "base": "block/liquid/curds"
+    },
+    "file": "blocktypes/wood/generic/bucket.json"
+  },
+  {
+    "op": "replace",
+    "path": "/entityClass",
+    "value": "BucketB",
+    "file": "blocktypes/wood/generic/bucket.json"
+  },
 ]
