@@ -31,19 +31,22 @@ namespace TheNeolithicMod
 
         public override void OnInteract(EntityAgent byEntity, IItemSlot itemslot, Vec3d hitPosition, EnumInteractMode mode, ref EnumHandling handled)
         {
-            if (entity.World.Side.IsServer() && notplucking)
+            if (notplucking)
             {
                 notplucking = false;
                 ItemStack feather = new ItemStack(entity.World.GetItem(new AssetLocation("game:feather")), 1);
-                feather.StackSize = entity.World.Rand.Next(1,2);
+                feather.StackSize = entity.World.Rand.Next(1, 2);
 
                 source.sourcePos = hitPosition;
                 source.SourceEntity = byEntity;
 
-                entity.ReceiveDamage(source, (float)(entity.World.Rand.NextDouble() * 0.25));
-                if (!byEntity.TryGiveItemStack(feather))
+                entity.ReceiveDamage(source, (float)((entity.World.Rand.NextDouble() * 0.25) / 2));
+                if (byEntity.World.Side.IsServer())
                 {
-                    entity.World.SpawnItemEntity(feather, entity.Pos.XYZ);
+                    if (!byEntity.TryGiveItemStack(feather))
+                    {
+                        entity.World.SpawnItemEntity(feather, entity.Pos.XYZ);
+                    }
                 }
 
                 entity.World.RegisterCallback(dt =>
