@@ -13,29 +13,21 @@ namespace TheNeolithicMod
     {
         public override void OnHeldInteractStart(IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handling)
         {
-            if (slot.Itemstack.Collectible.LastCodePart() != "none") return;
+            if (blockSel == null || slot.Itemstack.Collectible.LastCodePart() == "curds" || slot.Itemstack.Collectible.LastCodePart() == "cheese") return;
 
             Block selBlock = api.World.BlockAccessor.GetBlock(blockSel.Position);
             if (selBlock is BlockBucket)
             {
-                BlockBucket bucket = selBlock as BlockBucket;
-                if (bucket.GetContent(byEntity.World, blockSel.Position) != null)
-                {
-                    if (bucket.GetContent(byEntity.World, blockSel.Position).Item.Code.Path == "curdsportion")
-                    {
-                        handling = EnumHandHandling.PreventDefault;
-                    }
-                }
+                handling = EnumHandHandling.PreventDefault;
             }
         }
 
         public override bool OnHeldInteractStep(float secondsPassed, IItemSlot slot, EntityAgent byEntity, BlockSelection blockSelection, EntitySelection entitySel)
         {
-            if (slot.Itemstack.Collectible.LastCodePart() != "none") return false;
+            if (blockSelection == null || slot.Itemstack.Collectible.LastCodePart() == "curds" || slot.Itemstack.Collectible.LastCodePart() == "cheese") return false;
             Block selBlock = api.World.BlockAccessor.GetBlock(blockSelection.Position);
             if (selBlock is BlockBucket)
             {
-                BlockBucket bucket = selBlock as BlockBucket;
                 return HandAnimations.Collect(api.World, byEntity, secondsPassed);
             }
             return false;
@@ -48,36 +40,51 @@ namespace TheNeolithicMod
 
         public override void OnHeldInteractStop(float secondsUsed, IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
+            if (blockSel == null || slot.Itemstack.Collectible.LastCodePart() == "curds" || slot.Itemstack.Collectible.LastCodePart() == "cheese") return;
             BlockPos pos = blockSel.Position;
             Block selBlock = api.World.BlockAccessor.GetBlock(pos);
-            if (slot.Itemstack.Collectible.LastCodePart() != "none") return;
 
-            if (selBlock is BlockBucket)
+            if (api.World.Side.IsServer())
             {
-                BlockBucket bucket = selBlock as BlockBucket;
-                ItemStack contents = bucket.GetContent(byEntity.World, pos);
-                WaterTightContainableProps contentProps = bucket.GetContentProps(byEntity.World, pos);
-                if (contents != null)
+                if (selBlock is BlockBucket)
                 {
-                    if (contents.Item.Code.Path == "curdsportion")
+                    BlockBucket bucket = selBlock as BlockBucket;
+                    WaterTightContainableProps contentProps = bucket.GetContentProps(byEntity.World, pos);
+                    if (bucket.GetContent(byEntity.World, pos) != null)
                     {
-                        if (api.World.Side.IsServer())
+                        ItemStack contents = bucket.GetContent(byEntity.World, pos);
+                        if (contents.Item.Code.Path == "curdsportion" && slot.Itemstack.Collectible.LastCodePart() == "none")
                         {
                             ItemStack curdsandwhey = new ItemStack(CodeWithPart("curdsandwhey", 2).GetBlock(), 1);
 
-                            bucket.TryTakeContent(api.World, pos, 1);
+                            bucket.TryTakeContent(api.World, pos, 2);
 
-                            slot.TakeOut(1);
-                            if (!byEntity.TryGiveItemStack(curdsandwhey))
-                            {
-                                api.World.SpawnItemEntity(curdsandwhey, pos.ToVec3d());
-                            }
-
-                            api.World.PlaySoundAt(contentProps.FillSpillSound, pos.X, pos.Y, pos.Z);
+                            TryGiveItem(curdsandwhey, slot, byEntity, contentProps, pos);
+                            return;
                         }
+                    }
+                    if ((bucket.GetContent(byEntity.World, pos) == null || bucket.GetContent(byEntity.World, pos).Item.Code.Path == "wheyportion") && slot.Itemstack.Collectible.LastCodePart() == "curdsandwhey")
+                    {
+                        ItemStack curds = new ItemStack(CodeWithPart("curds", 2).GetBlock(), 1);
+                        ItemStack wheyportion = new ItemStack(new AssetLocation("wheyportion").GetItem(), 1);
+                        bucket.TryAddContent(api.World, pos, wheyportion, 1);
+
+                        TryGiveItem(curds, slot, byEntity, contentProps, pos);
+                        return;
                     }
                 }
             }
+            slot.MarkDirty();
+        }
+
+        public void TryGiveItem(ItemStack stack, IItemSlot slot, EntityAgent byEntity, WaterTightContainableProps props, BlockPos pos)
+        {
+            slot.TakeOut(1);
+            if (!byEntity.TryGiveItemStack(stack))
+            {
+                api.World.SpawnItemEntity(stack, pos.ToVec3d());
+            }
+            api.World.PlaySoundAt(props.FillSpillSound, pos.X, pos.Y, pos.Z);
         }
     }
 }

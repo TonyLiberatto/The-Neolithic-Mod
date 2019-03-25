@@ -16,6 +16,14 @@
     "file": "blocktypes/wood/generic/bucket.json"
   },
   {
+    "op": "add",
+    "path": "/textures/wheyportion",
+    "value": {
+      "base": "block/liquid/whey"
+    },
+    "file": "blocktypes/wood/generic/bucket.json"
+  },
+  {
     "op": "replace",
     "path": "/entityClass",
     "value": "BucketB",
