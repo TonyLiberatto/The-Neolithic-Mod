@@ -38,6 +38,21 @@ namespace TheNeolithicMod
             return true;
         }
 
+        public static bool Collect(IWorldAccessor world, EntityAgent byEntity, float secondsUsed)
+        {
+            if (world.Side == EnumAppSide.Client)
+            {
+                ModelTransform tf = Transform();
+                float scale = ((float)Math.Sin(secondsUsed*2) * 0.5f);
+                tf.ScaleXYZ.Add(-scale, -scale, -scale);
+                tf.Translation.Z -= (scale*2);
+                byEntity.Controls.UsingHeldItemTransformBefore = tf;
+
+                return scale > 0.0;
+            }
+            return true;
+        }
+
         public static ModelTransform Transform()
         {
             ModelTransform tf = new ModelTransform();
