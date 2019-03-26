@@ -1,0 +1,28 @@
+{
+	code: "jar",
+	variantgroups: [
+		{ code:"size", states: ["smallest", "small", "medium", "large", "largest"] },
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },
+		{ code:"type", states: ["raw", "burned" ] }
+	],
+	attributes: {
+		handbook: {
+			groupBy: ["jar-*"]
+		},
+	},
+	creativeinventory: { "general": ["jar-*"], "neolithicdeco": ["jar-*"] },
+	shape: { base: "block/clay/jar/{size}" },
+	drawtype: "json",
+	sidesolid: { all: true },
+	sideopaque: { all: false },
+	blockmaterial: "Ceramic",
+	replaceable: 600,
+	resistance: 2.5,
+	lightAbsorption: 0,
+	textures: {
+		all: { base: "block/clay/{color}-{type}" },
+	},
+	sounds: {
+		walk: "walk/stone",
+	}
+}
