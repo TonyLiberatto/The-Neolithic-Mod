@@ -18,7 +18,7 @@ namespace TheNeolithicMod
         public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref EnumHandling handling)
         {
             handling = EnumHandling.PreventDefault;
-            if (!world.BlockAccessor.GetBlock(blockSel.Position).IsReplacableBy(this.block))
+            if (!world.BlockAccessor.GetBlock(blockSel.Position).IsReplacableBy(block))
             {
                 return false;
             }
@@ -86,7 +86,7 @@ namespace TheNeolithicMod
 
         private bool IsLantern(IWorldAccessor world, BlockPos blockPos)
         {
-            return ((AssetLocation)((CollectibleObject)world.BlockAccessor.GetBlock(blockPos)).Code).Path.Contains("lantern");
+            return world.BlockAccessor.GetBlock(blockPos).Code.Path.Contains("lantern");
         }
 
         public override void Initialize(JsonObject properties)

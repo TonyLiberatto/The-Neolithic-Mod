@@ -8,13 +8,13 @@ namespace TheNeolithicMod
 		private string ownFirstCodePart;
 
         public LampPostBehavior(Block block) : base(block) {
-			this.ownFirstCodePart = ((CollectibleObject) block).FirstCodePart(0);
+			ownFirstCodePart = block.FirstCodePart(0);
 		}
 
         public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref EnumHandling handling)
         {
             handling = EnumHandling.PreventDefault;
-            if (!world.BlockAccessor.GetBlock(blockSel.Position).IsReplacableBy(this.block))
+            if (!world.BlockAccessor.GetBlock(blockSel.Position).IsReplacableBy(block))
             {
                 return false;
             }
@@ -73,7 +73,7 @@ namespace TheNeolithicMod
             
             if (ownFirstCodePart == block.FirstCodePart())
                     return true;
-            return (bool)block.SideSolid[side.GetOpposite().Index]; //test if neighbor face is solid
+            return block.SideSolid[side.GetOpposite().Index]; //test if neighbor face is solid
         }
 
         public override ItemStack[] GetDrops(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropChanceMultiplier, ref EnumHandling handling)
@@ -90,7 +90,7 @@ namespace TheNeolithicMod
         }
         private bool IsLantern(IWorldAccessor world, BlockPos blockPos)
         {
-            return ((AssetLocation)((CollectibleObject)world.BlockAccessor.GetBlock(blockPos)).Code).Path.Contains("lantern");
+            return world.BlockAccessor.GetBlock(blockPos).Code.Path.Contains("lantern");
         }
 
         private BlockFacing GetDirection(BlockPos origin, BlockPos neighbor)

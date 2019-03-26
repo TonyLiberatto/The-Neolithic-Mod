@@ -25,7 +25,7 @@ namespace CarryCapacity.Utility
 		
 		public static T GetBehaviorOrDefault<T>(this Block block, T @default)
 			where T : BlockBehavior
-				=> (T)block.GetBehavior<T>() ?? @default;
+				=> block.GetBehavior<T>() ?? @default;
 		
 		
 		public static IAttribute TryGet(this IAttribute attr, params string[] keys)

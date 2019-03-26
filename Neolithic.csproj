@@ -141,9 +141,11 @@
     <Compile Include="Neolithic\Content\Block Behavior\ChimneyBehavior.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\NewBlockSwapBehavior.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
+    <Compile Include="Neolithic\Content\BlockEntity\CookedContainerFixBE.cs" />
     <Compile Include="Neolithic\Content\Block\BlockBowlNew.cs" />
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLogWall.cs" />
+    <Compile Include="Neolithic\Content\Block\CookedContainerFix.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorFeatherPluck.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorMilkable.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorSlaughterable.cs" />
@@ -182,6 +184,7 @@
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\entity\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowl-meal-colors.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowl.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowlstampmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\chimney.json" />

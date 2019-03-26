@@ -30,7 +30,7 @@ namespace TheNeolithicMod
 
         public PestleRenderer(ICoreClientAPI coreClientAPI, BlockPos pos, MeshData mesh)
         {
-            this.api = coreClientAPI;
+            api = coreClientAPI;
             this.pos = pos;
             MeshRef test = new MeshRef();
 
