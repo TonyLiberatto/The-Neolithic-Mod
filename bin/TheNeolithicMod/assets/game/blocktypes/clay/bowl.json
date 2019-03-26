@@ -3,23 +3,25 @@
 	class: "BlockBowl",
 	behaviors: [{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"} ],
 	variantgroups: [
-		{ code:"type", states: ["raw", "burned", "honey", "glue", "sinew-fibers"] },
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },
+		{ code:"type", states: ["raw", "burned"] },
+		{ code: "content", states: ["honey", "glue", "sinew-fibers", "empty"]}
 	],
 	combustiblePropsByType: {
-		"bowl-raw": {
+		"*-raw-empty": {
 			meltingPoint: 600,
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "bowl-burned" },
+			smeltedStack: { type: "block", code: "bowl-{color}-burned-empty" },
 			requiresContainer: false
 		},
-		"*bowl-sinew-fibers": {
+		"*-burned-sinew-fibers": {
 			meltingPoint: 110,
 			meltingDuration: 20,
 			smeltedRatio: 1,
 			smeltingType: "cook",
-			smeltedStack: { type: "block", code: "bowl-glue" },
+			smeltedStack: { type: "block", code: "bowl-{color}-burned-glue" },
 			requiresContainer: false
 		}
 	},
@@ -38,16 +40,22 @@
 	},
 	lightAbsorption: 0,
 	texturesByType: {
-		"*-raw": { 
-			all: { base: "block/clay/blueclay" }
+		"*-raw-empty": { 
+			all: { base: "block/clay/{color}-raw" }
+		},
+		"*-burned-empty": { 
+			all: { base: "block/clay/{color}-burned" }
 		},
 		"*-honey": {
+			all: { base: "block/clay/{color}-burned" },
 			content: { base: "block/liquid/honey" }
 		},
 		"*-glue": {
+			all: { base: "block/clay/{color}-burned" },
 			content: { base: "block/liquid/glue"}
 		},
 		"*-sinew-fibers": {
+			all: { base: "block/clay/{color}-burned" },
 			content: { base: "block/liquid/fibers"}
 		}
 		
@@ -86,7 +94,7 @@
 		"*-honey": { 
 			saturation: 60, 
 			health: 0.5,
-			eatenStack: { type: "block", code: "bowl-burned" }
+			eatenStack: { type: "block", code: "bowl-{color}-burned-empty" }
 		},
 	}
 }

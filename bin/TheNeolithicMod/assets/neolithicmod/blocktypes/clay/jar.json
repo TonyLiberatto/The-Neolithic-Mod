@@ -12,15 +12,26 @@
 	},
 	creativeinventory: { "general": ["jar-*"], "neolithicdeco": ["jar-*"] },
 	shape: { base: "block/clay/jar/{size}" },
+	textures: {
+		all: { base: "block/clay/{color}-{type}" },
+	},
 	drawtype: "json",
 	sidesolid: { all: true },
 	sideopaque: { all: false },
+	
 	blockmaterial: "Ceramic",
 	replaceable: 600,
 	resistance: 2.5,
 	lightAbsorption: 0,
-	textures: {
-		all: { base: "block/clay/{color}-{type}" },
+	combustiblePropsByType: {
+		"jar-*-raw": {
+			meltingPoint: 600,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "jar-{size}-{color}-burned" },
+			requiresContainer: false
+		}
 	},
 	sounds: {
 		walk: "walk/stone",
