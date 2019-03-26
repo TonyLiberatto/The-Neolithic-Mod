@@ -22,7 +22,7 @@
 	},
 	textures: {
 		"transparent": { base: "block/transparent" },
-		"ceramic": { base: "block/clay/ceramic" },
+		"ceramic": { base: "block/clay/{color}-burned" },
 	},
 	sideopaque: {
 		all: false
