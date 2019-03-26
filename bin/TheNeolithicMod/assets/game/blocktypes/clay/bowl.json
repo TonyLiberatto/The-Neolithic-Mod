@@ -7,12 +7,12 @@
     { code:"type", states: ["raw", "burned", "honey", "glue", "sinewfibers", "milk"] },
 	],
 	combustiblePropsByType: {
-		"*-raw-empty": {
+		"*-raw": {
 			meltingPoint: 600,
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "bowl-{color}-empty" },
+			smeltedStack: { type: "block", code: "bowl-{color}-burned" },
 			requiresContainer: false
 		},
 		"*-sinewfibers": {
