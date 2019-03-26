@@ -96,7 +96,7 @@
 		"*-honey": { 
 			saturation: 60, 
 			health: 0.5,
-			eatenStack: { type: "block", code: "bowl-{color}-raw" }
+			eatenStack: { type: "block", code: "bowl-{color}-burned" }
 		},
 	}
 }
