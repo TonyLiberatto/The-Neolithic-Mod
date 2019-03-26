@@ -43,23 +43,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\Vintagestory\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\Vintagestory\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\Vintagestory\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\Vintagestory\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\Vintagestory\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
@@ -67,15 +67,15 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Vintagestory\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\Vintagestory\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\Vintagestory\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -97,7 +97,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\Vintagestory\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI">
@@ -109,15 +109,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\Vintagestory\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\Vintagestory\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\Vintagestory\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -311,7 +311,10 @@
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\bone\sisal\primitive-sickle-sisal.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\bone\sisal\primitive-spear-sisal.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\knife-metal.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\primitive-sword.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\primitive-sword-red.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\primitive-sword-fire.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\primitive-sword-brown.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\primitive-sword-blue.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\shovel-metal.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\spear-metal.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\wood\leatherstrip\primitive-adze-andesite-wood-2.json" />
@@ -648,13 +651,25 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bow-carved.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bow-composite.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bow-recurve.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlfibers.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlfibershapeless.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlfibershapelessred.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlfibershapelessfire.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlfibershapelessbrown.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlfibersred.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlfibersfire.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlfibersbrown.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlfibersblue.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlfibershapelessblue.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlimb-carved.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlimb-carved2.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlimb-composite.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlimb-composite-red.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlimb-composite-fire.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlimb-composite-brown.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlimb-composite-blue.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlimb-composite2.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlimb-recurve.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlimb-recurve-red.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlimb-recurve-fire.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlimb-recurve-brown.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlimb-recurve-blue.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowlimb-recurve2.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bowstring.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\branches\branch-medium-debarked.json" />

@@ -71,7 +71,7 @@ namespace TheNeolithicMod
 
         public void ReplaceContents(IItemSlot slot, EntityAgent byEntity, string content)
         {
-            Block bowl = byEntity.World.GetBlock(new AssetLocation("bowl-" + content));
+            Block bowl = byEntity.World.GetBlock(new AssetLocation(CodeWithoutParts(1) + "-" + content));
             ItemStack stack = new ItemStack(bowl);
 
             if (slot.Itemstack.StackSize <= 1)

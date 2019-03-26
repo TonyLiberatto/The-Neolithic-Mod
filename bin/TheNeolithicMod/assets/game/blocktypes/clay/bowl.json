@@ -4,8 +4,7 @@
 	behaviors: [{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"} ],
 	variantgroups: [
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },
-		{ code:"type", states: ["raw", "burned"] },
-		{ code: "content", states: ["honey", "glue", "sinew-fibers", "empty"]}
+    { code:"type", states: ["raw", "burned", "honey", "glue", "sinewfibers", "milk"] },
 	],
 	combustiblePropsByType: {
 		"*-raw-empty": {
@@ -13,22 +12,22 @@
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "bowl-{color}-burned-empty" },
+			smeltedStack: { type: "block", code: "bowl-{color}-empty" },
 			requiresContainer: false
 		},
-		"*-burned-sinew-fibers": {
+		"*-sinewfibers": {
 			meltingPoint: 110,
 			meltingDuration: 20,
 			smeltedRatio: 1,
 			smeltingType: "cook",
-			smeltedStack: { type: "block", code: "bowl-{color}-burned-glue" },
+			smeltedStack: { type: "block", code: "bowl-{color}-glue" },
 			requiresContainer: false
 		}
 	},
 	shapeByType: {
-		"*-honey": { base: "block/clay/bowl-ground" },
-		"*-glue": { base: "block/clay/bowl-ground" },
-		"*-fibers": { base: "block/clay/bowl-ground" }
+		"*-raw": { base: "block/clay/bowl-empty-ground" },
+    "*-burned": { base: "block/clay/bowl-empty-ground" },
+		"*": { base: "block/clay/bowl-ground-liquid" },
 	},
 	blockmaterial: "Ceramic",
 	creativeinventory: { "general": ["*"], "decorative": ["*"], "neolithicitems": ["*"]},
@@ -40,10 +39,10 @@
 	},
 	lightAbsorption: 0,
 	texturesByType: {
-		"*-raw-empty": { 
+		"*-raw": { 
 			all: { base: "block/clay/{color}-raw" }
 		},
-		"*-burned-empty": { 
+    "*-burned": { 
 			all: { base: "block/clay/{color}-burned" }
 		},
 		"*-honey": {
@@ -54,11 +53,14 @@
 			all: { base: "block/clay/{color}-burned" },
 			content: { base: "block/liquid/glue"}
 		},
-		"*-sinew-fibers": {
+		"*-sinewfibers": {
 			all: { base: "block/clay/{color}-burned" },
 			content: { base: "block/liquid/fibers"}
+		},
+	  "*-milk": {
+			all: { base: "block/clay/{color}-burned" },
+			content: { base: "block/liquid/milk"}
 		}
-		
 	},
 	sounds: {
 		walk: "walk/stone",
@@ -94,7 +96,7 @@
 		"*-honey": { 
 			saturation: 60, 
 			health: 0.5,
-			eatenStack: { type: "block", code: "bowl-{color}-burned-empty" }
+			eatenStack: { type: "block", code: "bowl-{color}-raw" }
 		},
 	}
 }
