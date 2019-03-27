@@ -13,7 +13,7 @@ namespace TheNeolithicMod
 {
     class CookedContainerFixBE : BlockEntityCookedContainer
     {
-        internal CookedContainerFix ownBlock;
+        public CookedContainerFix ownBlock;
         private MeshData currentMesh;
 
         public override void Initialize(ICoreAPI api)
@@ -22,7 +22,7 @@ namespace TheNeolithicMod
             ownBlock = api.World.BlockAccessor.GetBlock(pos) as CookedContainerFix;
         }
 
-        internal void ServePlayer(IPlayer player)
+        public void ServePlayer(IPlayer player)
         {
             ItemStack itemStack = new ItemStack(new AssetLocation("bowl-meal-colors-" + player.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.LastCodePart(1).ToString()).GetBlock(), 1);
             (itemStack.Collectible as BlockMeal).SetContents(RecipeCode, itemStack, GetContentStacks(true));
@@ -43,7 +43,7 @@ namespace TheNeolithicMod
             --QuantityServings;
             if (QuantityServings <= 0)
             {
-                api.World.BlockAccessor.SetBlock(api.World.GetBlock(ownBlock.CodeWithPath(ownBlock.FirstCodePart(0) + "-burned")).BlockId, pos);
+                api.World.BlockAccessor.SetBlock(api.World.GetBlock(ownBlock.CodeWithPath(ownBlock.CodeWithoutParts(1) + "-burned")).BlockId, pos);
             }
             else
             {
