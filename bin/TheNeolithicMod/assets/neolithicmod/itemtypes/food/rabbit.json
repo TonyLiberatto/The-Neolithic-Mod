@@ -15,7 +15,14 @@
 	variantgroups: [
 		{ code: "type", states: ["raw", "cooked" ] },
 	],
-	texture: { base: "item/food/meat/rabbit-{type}" },
+	texturesbytype: {
+		"*-raw": { 
+			"meat": {base: "item/food/meat/rabbit-raw" }
+		},
+		"*-cooked":  { 
+			"meat": {base: "item/food/meat/rabbit-cooked" }
+		}
+	},
 	shape: { base: "item/food/meat/rabbit" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	nutritionPropsByType: {

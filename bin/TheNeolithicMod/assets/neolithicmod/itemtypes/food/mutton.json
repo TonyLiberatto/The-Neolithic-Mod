@@ -15,7 +15,14 @@
 	variantgroups: [
 		{ code: "type", states: ["raw", "cooked" ] },
 	],
-	texture: { base: "item/food/meat/mutton-{type}" },
+	texturesbytype: {
+		"*-raw": { 
+			"meat": {base: "item/food/meat/mutton-raw" }
+		},
+		"*-cooked":  { 
+			"meat": {base: "item/food/meat/mutton-cooked" }
+		}
+	},
 	shape: { base: "item/food/meat/mutton" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	nutritionPropsByType: {

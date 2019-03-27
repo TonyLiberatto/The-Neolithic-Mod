@@ -15,7 +15,14 @@
 	variantgroups: [
 		{ code: "type", states: ["raw", "cooked" ] },
 	],
-	texture: { base: "item/food/meat/porkchops-{type}" },
+	texturesbytype: {
+		"*-raw": { 
+			"meat": {base: "item/food/meat/porkchops-raw" }
+		},
+		"*-cooked":  { 
+			"meat": {base: "item/food/meat/porkchops-cooked" }
+		}
+	},
 	shape: { base: "item/food/meat/porkchops" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	nutritionPropsByType: {

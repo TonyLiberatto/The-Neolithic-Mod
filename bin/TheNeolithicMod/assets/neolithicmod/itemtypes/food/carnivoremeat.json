@@ -15,7 +15,14 @@
 	variantgroups: [
 		{ code: "type", states: ["raw", "cooked" ] },
 	],
-	texture: { base: "item/food/meat/carnivoremeat-{type}" },
+	texturesbytype: {
+		"*-raw": { 
+			"meat": {base: "item/food/meat/carnivoremeat-raw" }
+		},
+		"*-cooked":  { 
+			"meat": {base: "item/food/meat/carnivoremeat-cooked" }
+		}
+	},
 	shape: { base: "item/food/meat/carnivoremeat" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	nutritionPropsByType: {

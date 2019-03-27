@@ -15,7 +15,14 @@
 	variantgroups: [
 		{ code: "type", states: ["raw", "cooked" ] },
 	],
-	texture: { base: "item/food/meat/chicken-{type}" },
+	texturesbytype: {
+		"*-raw": { 
+			"meat": {base: "item/food/meat/chicken-raw" }
+		},
+		"*-cooked":  { 
+			"meat": {base: "item/food/meat/chicken-cooked" }
+		}
+	},
 	shape: { base: "item/food/meat/chicken" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	nutritionPropsByType: {
