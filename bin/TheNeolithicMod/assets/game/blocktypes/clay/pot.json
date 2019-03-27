@@ -7,9 +7,9 @@
 	},
 	heldTpIdleAnimation: "holdbothhands",
 	attributesByType: {
-		"claypot-raw": { },
+		"claypot-*-raw": { },
 		
-		"claypot-burned": {
+		"claypot-*-burned": {
 			cookingContainerSlots: 4,
 			storageType: 1,
 			maxTemperature: 200,
@@ -21,7 +21,7 @@
 			}
 		},
 		
-		"claypot-cooked": {
+		"claypot-*-cooked": {
 			allowHeating: true,
 			maxTemperature: 200,
 			
@@ -66,6 +66,7 @@
 		}
 	},
 	variantgroups: [
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },
 		{ code:"type", states: ["raw", "burned", "cooked"] },
 	],
 	entityclassByType: {
@@ -73,30 +74,30 @@
 		"*-cooked": "CookedContainerFix",
 	},
 	combustiblePropsByType: {
-		"claypot-raw": {
+		"claypot-*-raw": {
 			meltingPoint: 600,
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "claypot-burned" },
+			smeltedStack: { type: "block", code: "claypot-{color}-burned" },
 			requiresContainer: false
 		}
 	},
 	shape: { base: "block/clay/pot-opened-empty" },
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["claypot-raw", "claypot-burned"], "decorative": ["claypot-raw", "claypot-burned"] },
+	creativeinventory: { "general": ["*-raw", "*-burned"], "decorative": ["*-raw", "*-burned"], "neolithicdeco": ["*-raw", "*-burned"] },
 	replaceable: 400,
 	resistance: 1.5,
 	maxStackSize: 1,
 	lightAbsorption: 0,
 	texturesByType: {
 		"*-raw": { 
-			all: { base: "block/clay/blueclay" }
+			all: { base: "block/clay/{color}-raw" }
 		},
 		"*": {
 			"transparent": { base: "block/transparent" },
-			"ceramic": { base: "block/clay/pot-side" },
-			"lid": { base: "block/clay/pot-lid" },
+			"ceramic": { base: "block/clay/{color}-burned" },
+			"lid": { base: "block/clay/{color}-burned" },
 			"group1": { base: "block/meal/group1-flax-carrot-blueberry" },
 			"group2": { base: "block/meal/group2-soup-flyagaric-cactifruit-redmeat" },
 			"group3": { base: "block/meal/group3-millet-bolete-cranberry-poultry" },
