@@ -18,14 +18,14 @@ namespace TheNeolithicMod
             if (!activeHotbarSlot.Empty && collectible.FirstCodePart() == "bowl" && collectible.LastCodePart() == "burned")
             {
                 CookedContainerFixBE container = world.BlockAccessor.GetBlockEntity(blockSel.Position) as CookedContainerFixBE;
-                if (container == null)
-                    return false;
+                if (container == null) return false;
+
                 container.ServePlayer(byPlayer);
                 return true;
             }
             ItemStack itemstack = OnPickBlock(world, blockSel.Position);
-            if (!byPlayer.InventoryManager.TryGiveItemstack(itemstack, true))
-                return base.OnBlockInteractStart(world, byPlayer, blockSel);
+            if (!byPlayer.InventoryManager.TryGiveItemstack(itemstack, true)) return base.OnBlockInteractStart(world, byPlayer, blockSel);
+
             world.BlockAccessor.SetBlock(0, blockSel.Position);
             world.PlaySoundAt(Sounds.Place, byPlayer, byPlayer, true, 32f, 1f);
             return true;
