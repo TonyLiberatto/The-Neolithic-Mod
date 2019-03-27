@@ -14,7 +14,8 @@ namespace TheNeolithicMod
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
             ItemSlot activeHotbarSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
-            if (!activeHotbarSlot.Empty && activeHotbarSlot.Itemstack.Collectible.WildCardMatch(new AssetLocation("game:bowl-*-burned")))
+            CollectibleObject collectible = activeHotbarSlot.Itemstack.Collectible;
+            if (!activeHotbarSlot.Empty && collectible.FirstCodePart() == "bowl" && collectible.LastCodePart() == "burned")
             {
                 CookedContainerFixBE container = world.BlockAccessor.GetBlockEntity(blockSel.Position) as CookedContainerFixBE;
                 if (container == null)
