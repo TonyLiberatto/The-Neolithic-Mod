@@ -33,8 +33,11 @@ namespace TheNeolithicMod
             else
             {
                 player.InventoryManager.ActiveHotbarSlot.TakeOut(1);
+
                 if (!player.InventoryManager.TryGiveItemstack(itemStack, true))
+                {
                     api.World.SpawnItemEntity(itemStack, pos.ToVec3d().Add(0.5, 0.5, 0.5), null);
+                }
                 player.InventoryManager.ActiveHotbarSlot.MarkDirty();
             }
             --QuantityServings;
@@ -44,19 +47,17 @@ namespace TheNeolithicMod
             }
             else
             {
-                if (api.Side == EnumAppSide.Client)
-                    currentMesh = GenMesh();
+                if (api.Side == EnumAppSide.Client) currentMesh = GenMesh();
                 MarkDirty(true);
             }
         }
 
         internal MeshData GenMesh()
         {
-            if (ownBlock == null)
-                return null;
+            if (ownBlock == null) return null;
             ItemStack[] contentStacks = GetContentStacks(true);
-            if (contentStacks == null || contentStacks.Length == 0)
-                return null;
+            if (contentStacks == null || contentStacks.Length == 0) return null;
+
             return (api as ICoreClientAPI).ModLoader.GetModSystem<MealMeshCache>().CreateMealMesh(ownBlock.Shape, FromRecipe, contentStacks, new Vec3f(0.0f, 5f / 32f, 0.0f));
         }
     }
