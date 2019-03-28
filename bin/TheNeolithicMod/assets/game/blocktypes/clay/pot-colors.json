@@ -51,15 +51,12 @@
 				"vegetable-onion": ["vegetable", "group6"],
 				"fruit-redcurrant": ["fruit", "group6"],
 				
-				"redmeat-raw": ["meat", "group6"],
 				"egg-chicken-raw": ["egg", "group6"],
-				"poultry-raw": ["meat", "group5"],
         
-				"chicken-raw": ["meat", "group5"],
-				"rabbit-raw": ["meat", "group5"],
-				"porkchops-raw": ["meat", "group5"],
-				"mutton-raw": ["meat", "group6"],
-				"carnivoremeat-raw": ["meat", "group6"],
+				"neolithicmod:chicken-raw": ["meat", "group5"],
+				"neolithicmod:rabbit-raw": ["meat", "group5"],
+				"neolithicmod:porkchops-raw": ["meat", "group6"],
+				"neolithicmod:mutton-raw": ["meat", "group6"],
 				
 				"mushroom-fieldmushroom-normal": ["vegetable", "group7"],
 				

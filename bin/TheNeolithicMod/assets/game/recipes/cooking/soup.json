@@ -53,7 +53,7 @@
 				{ type: "item", code: "fish-bass-raw", shapeElement: "bowl/meat/*" },
 				{ type: "item", code: "neolithicmod:chicken-raw",  shapeElement: "bowl/poultry/*" },
 				{ type: "item", code: "neolithicmod:mutton-raw",  shapeElement: "bowl/red meat/*" },
-				{ type: "item", code: "neolithicmod:porkchop-raw",  shapeElement: "bowl/poultry/*" },
+				{ type: "item", code: "neolithicmod:porkchop-raw",  shapeElement: "bowl/red meat/*" },
 				{ type: "item", code: "neolithicmod:rabbit-raw",  shapeElement: "bowl/poultry/*" },
 			],
 			minQuantity: 0,

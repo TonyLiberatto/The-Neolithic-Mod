@@ -146,6 +146,7 @@
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLogWall.cs" />
     <Compile Include="Neolithic\Content\Block\CookedContainerFix.cs" />
+    <Compile Include="Neolithic\Content\Block\CookingContainerFix.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorFeatherPluck.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorMilkable.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorSlaughterable.cs" />
@@ -175,6 +176,9 @@
     <Compile Include="Neolithic\Content\Utility\ArrayStuff.cs" />
     <Compile Include="Neolithic\Content\Utility\HandAnimations.cs" />
     <Compile Include="Neolithic\TheNeolithicMod.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".vs\Neolithic\v15\" />
@@ -182,12 +186,17 @@
     <Folder Include="bin\TheNeolithicMod\assets\game\sounds\creature\wolf\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\bag\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\entity\" />
+    <Folder Include="Neolithic\Content\Entity\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="TasksLib\EntityBehaviors\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\TheNeolithicMod\All about The Neolithic Mod.docx" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowl-meal-colors.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowl.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowlstampmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\chimney.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\pot-colors.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\lightsources\bunchotallowcandles.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\lightsources\glass_lantern.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\metal\bowlstamp.json" />
@@ -1109,7 +1118,9 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\adobe\Thumbs.db" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\rammedearth\Thumbs.db" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\plant\wicker\wicker1.psd" />
+    <None Include="bin\TheNeolithicMod\Game-lang.docx" />
     <None Include="bin\TheNeolithicMod\LICENSE" />
+    <None Include="bin\TheNeolithicMod\Mod-spreadsheets.xlsx" />
     <None Include="bin\TheNeolithicMod\modinfo.json" />
     <None Include="bin\Totems\assets\totems\blocktypes\totem-pig-crucible.json" />
     <None Include="bin\Totems\assets\totems\blocktypes\totem-pig.json" />
@@ -1135,14 +1146,24 @@
     <None Include="bin\Totems\assets\totems\shapes\block\wood\totem\pig\new.json" />
     <None Include="bin\Totems\assets\totems\shapes\block\wood\totem\pig\tusk.json" />
     <None Include="bin\Totems\modinfo.json" />
+    <None Include="docs\_config.yml" />
     <None Include="LICENSE" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Neolithic.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Neolithic.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
+    <None Include="packages\OptimizedPriorityQueue.4.2.0\.signature.p7s" />
+    <None Include="packages\OptimizedPriorityQueue.4.2.0\OptimizedPriorityQueue.4.2.0.nupkg" />
     <None Include="README.md" />
     <None Include="WIPAssets\Novocain\shapes\road-cobble-circle.json" />
     <None Include="WIPAssets\Novocain\shapes\road-cobble-shuffled.json" />
     <None Include="WIPAssets\Novocain\shapes\road-cobble-square.json" />
     <None Include="WIPAssets\Novocain\shapes\road-steppingstone-shuffled.json" />
     <None Include="WIPAssets\Novocain\shapes\road-steppingstone-square.json" />
+    <None Include="WIPAssets\Tony\bowl-patch.json" />
+    <None Include="WIPAssets\Tony\bowl.json" />
+    <None Include="WIPAssets\Tony\clay-textures.zip" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitattributes" />
@@ -2269,6 +2290,8 @@
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\overlays\Medium\rock2.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\overlays\Medium\rock3.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\unknown.png" />
+    <Content Include="bin\TheNeolithicMod\Neolithic.dll" />
+    <Content Include="bin\TheNeolithicMod\Neolithic.pdb" />
     <Content Include="bin\Totems\assets\totems\textures\block\pig-eyes.png" />
     <Content Include="bin\Totems\assets\totems\textures\item\offering-bowl\bread.png" />
     <Content Include="bin\Totems\assets\totems\textures\item\offering-bowl\empty.png" />
@@ -2277,6 +2300,27 @@
     <Content Include="bin\Totems\assets\totems\textures\item\offering-bowl\vegetable.png" />
     <Content Include="CHANGELOG-Totem.txt" />
     <Content Include="CHANGELOG-Neolithic.txt" />
+    <Content Include="obj\Debug\Neolithic.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Neolithic.dll" />
+    <Content Include="obj\Debug\Neolithic.pdb" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\net20\Priority Queue.dll" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\net20\Priority Queue.pdb" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\net20\Priority Queue.xml" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\net35-unity full v3.5\Priority Queue.dll" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\net35-unity full v3.5\Priority Queue.pdb" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\net35-unity full v3.5\Priority Queue.xml" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\net35-unity subset v3.5\Priority Queue.dll" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\net35-unity subset v3.5\Priority Queue.pdb" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\net35-unity subset v3.5\Priority Queue.xml" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\net45\Priority Queue.dll" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\net45\Priority Queue.pdb" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\net45\Priority Queue.xml" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\netstandard1.0\Priority Queue.dll" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\netstandard1.0\Priority Queue.pdb" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\netstandard1.0\Priority Queue.xml" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\portable-net40+sl5+win8+wpa81+wp8\Priority Queue.dll" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\portable-net40+sl5+win8+wpa81+wp8\Priority Queue.pdb" />
+    <Content Include="packages\OptimizedPriorityQueue.4.2.0\lib\portable-net40+sl5+win8+wpa81+wp8\Priority Queue.xml" />
     <Content Include="WIPAssets\Balduranne\shapes\shapes.txt" />
     <Content Include="WIPAssets\Balduranne\textures\textures.txt" />
     <Content Include="WIPAssets\Novocain\textures\circlereference.png" />
@@ -2284,6 +2328,10 @@
     <Content Include="WIPAssets\Novocain\textures\circlereferencemoss.png" />
     <Content Include="WIPAssets\Novocain\textures\moss-roman.png" />
     <Content Include="WIPAssets\Novocain\textures\moss.png" />
+    <Content Include="WIPAssets\Tony\clay-textures\blue-burned.png" />
+    <Content Include="WIPAssets\Tony\clay-textures\brown-burned.png" />
+    <Content Include="WIPAssets\Tony\clay-textures\fire-burned.png" />
+    <Content Include="WIPAssets\Tony\clay-textures\red-burned.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions />
