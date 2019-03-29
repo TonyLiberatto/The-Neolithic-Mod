@@ -17,7 +17,7 @@ namespace TheNeolithicMod
             return content;
         }
 
-        public override void OnHeldInteractStart(IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handHandling)
+        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handHandling)
         {
             if (blockSel == null)
             {
@@ -59,7 +59,7 @@ namespace TheNeolithicMod
             base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, ref handHandling);
         }
 
-        public override bool OnHeldInteractStep(float secondsUsed, IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
+        public override bool OnHeldInteractStep(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
             if (blockSel != null && (byEntity.World.BlockAccessor.GetBlock(blockSel.Position) as BlockBucket) != null)
             {
@@ -69,7 +69,7 @@ namespace TheNeolithicMod
             return base.OnHeldInteractStep(secondsUsed, slot, byEntity, blockSel, entitySel);
         }
 
-        public void ReplaceContents(IItemSlot slot, EntityAgent byEntity, string content)
+        public void ReplaceContents(ItemSlot slot, EntityAgent byEntity, string content)
         {
             Block bowl = byEntity.World.GetBlock(new AssetLocation(CodeWithoutParts(1) + "-" + content));
             ItemStack stack = new ItemStack(bowl);

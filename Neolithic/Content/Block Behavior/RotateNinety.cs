@@ -19,7 +19,7 @@ namespace TheNeolithicMod
         {
         }
 
-        public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref EnumHandling handling)
+        public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref EnumHandling handling, ref string failureCode)
         {
             handling = EnumHandling.PreventDefault;
             if (!world.BlockAccessor.GetBlock(blockSel.Position).IsReplacableBy(block))
@@ -27,7 +27,7 @@ namespace TheNeolithicMod
                 return false;
             }
             BlockFacing[] blockFacingArray = Block.SuggestedHVOrientation(byPlayer, blockSel);
-            string orientation = blockFacingArray[0] == BlockFacing.NORTH || blockFacingArray[0] == BlockFacing.SOUTH ? "n" : "w" ;
+            string orientation = blockFacingArray[0] == BlockFacing.NORTH || blockFacingArray[0] == BlockFacing.SOUTH ? "n" : "w";
 
             AssetLocation assetLocation = block.CodeWithParts(orientation);
             world.BlockAccessor.SetBlock(world.BlockAccessor.GetBlock(assetLocation).BlockId, blockSel.Position);

@@ -179,10 +179,11 @@ namespace CarryCapacity
 			if (world == null) throw new ArgumentNullException(nameof(world));
 			if (selection == null) throw new ArgumentNullException(nameof(selection));
 			if (!world.BlockAccessor.IsValidPos(selection.Position)) return false;
-			
+            string f = "";
+
 			if (entity is EntityPlayer playerEntity) {
 				var player = world.PlayerByUid(playerEntity.PlayerUID);
-				if (!Block.TryPlaceBlock(world, player, ItemStack, selection)) return false;
+				if (!Block.TryPlaceBlock(world, player, ItemStack, selection, ref f)) return false;
 			} else {
 				world.BlockAccessor.SetBlock((ushort)Block.Id, selection.Position);
 				// TODO: Handle type attribute.

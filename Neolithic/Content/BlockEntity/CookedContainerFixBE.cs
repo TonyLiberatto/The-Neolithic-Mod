@@ -22,7 +22,7 @@ namespace TheNeolithicMod
             ownBlock = api.World.BlockAccessor.GetBlock(pos) as CookedContainerFix;
         }
 
-        public void ServePlayer(IPlayer player)
+        public new void ServePlayer(IPlayer player)
         {
             ItemStack itemStack = new ItemStack(new AssetLocation("bowl-meal-colors-" + player.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.LastCodePart(1).ToString()).GetBlock(), 1);
             (itemStack.Collectible as BlockMeal).SetContents(RecipeCode, itemStack, GetContentStacks(true));
@@ -52,7 +52,7 @@ namespace TheNeolithicMod
             }
         }
 
-        internal MeshData GenMesh()
+        public new MeshData GenMesh()
         {
             if (ownBlock == null) return null;
             ItemStack[] contentStacks = GetContentStacks(true);

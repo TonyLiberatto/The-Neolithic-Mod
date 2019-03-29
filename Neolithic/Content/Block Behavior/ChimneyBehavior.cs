@@ -18,10 +18,10 @@ namespace TheNeolithicMod
             lookFor = properties["lookFor"].AsObject<AssetLocation[][]>();
         }
 
-        public override bool TryPlaceBlock(IWorldAccessor aworld, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref EnumHandling handling)
+        public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref EnumHandling handling, ref string failureCode)
         {
             pos = blockSel.Position;
-            world = aworld; //idunno, becomes null and breaks if I don't do this
+            this.world = world;
             listenerId = world.RegisterGameTickListener(ticker, 5000);
             return true;
         }

@@ -10,7 +10,7 @@ namespace TheNeolithicMod
 {
     class CookingContainerFix : BlockCookingContainer
     {
-        public override void DoSmelt(IWorldAccessor world, ISlotProvider cookingSlotsProvider, IItemSlot inputSlot, IItemSlot outputSlot)
+        public override void DoSmelt(IWorldAccessor world, ISlotProvider cookingSlotsProvider, ItemSlot inputSlot, ItemSlot outputSlot)
         {
             ItemStack[] stacks = GetCookingStacks(cookingSlotsProvider);
 

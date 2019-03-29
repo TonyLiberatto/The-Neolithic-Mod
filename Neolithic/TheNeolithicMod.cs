@@ -18,9 +18,9 @@ namespace TheNeolithicMod
 
         public void ReloadTextures()
         {
-            if (ClientSettings._lhbuqUjwz7r0BVEAqsVqK9fC7ho.Int["maxTextureAtlasSize"] < 4096)
+            if (capi.Settings.Int["maxTextureAtlasSize"] < 4096)
             {
-                ClientSettings._lhbuqUjwz7r0BVEAqsVqK9fC7ho.Int["maxTextureAtlasSize"] = 4096;
+                capi.Settings.Int["maxTextureAtlasSize"] = 4096;
             }
         }
 

@@ -11,7 +11,7 @@ namespace TheNeolithicMod
 			ownFirstCodePart = block.FirstCodePart(0);
 		}
 
-        public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref EnumHandling handling)
+        public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref EnumHandling handling, ref string failureCode)
         {
             handling = EnumHandling.PreventDefault;
             if (!world.BlockAccessor.GetBlock(blockSel.Position).IsReplacableBy(block))
@@ -24,7 +24,7 @@ namespace TheNeolithicMod
             return true;
         }
 
-        public override void OnNeighourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos, ref EnumHandling handling)
+        public override void OnNeighbourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos, ref EnumHandling handling)
         {
             handling = EnumHandling.PreventDefault;
             if (pos.Y == neibpos.Y - 1 || pos.Y == neibpos.Y + 1 || IsLantern(world, neibpos))

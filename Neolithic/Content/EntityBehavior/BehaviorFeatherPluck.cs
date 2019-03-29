@@ -29,7 +29,7 @@ namespace TheNeolithicMod
             source.Source = EnumDamageSource.Player;
         }
 
-        public override void OnInteract(EntityAgent byEntity, IItemSlot itemslot, Vec3d hitPosition, EnumInteractMode mode, ref EnumHandling handled)
+        public override void OnInteract(EntityAgent byEntity, ItemSlot itemslot, Vec3d hitPosition, EnumInteractMode mode, ref EnumHandling handled)
         {
             if (notplucking && itemslot.Empty)
             {

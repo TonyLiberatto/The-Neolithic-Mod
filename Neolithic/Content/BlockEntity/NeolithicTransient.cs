@@ -154,7 +154,7 @@ namespace TheNeolithicMod
                 return 1f;
             }
 
-            AssetLocation blockCode = block.WildCardPop(new AssetLocation(fromCode), new AssetLocation(toCode));
+            AssetLocation blockCode = block.WildCardReplace(new AssetLocation(fromCode), new AssetLocation(toCode));
 
             tblock = api.World.GetBlock(blockCode);
             if (tblock == null) return 1f;

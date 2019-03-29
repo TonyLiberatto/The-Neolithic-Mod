@@ -69,7 +69,7 @@ namespace TheNeolithicMod
             infotext.AppendLine("Liters Of Milk Remaining: " + RemainingLiters / milkProps.ItemsPerLitre);
         }
 
-        public override void OnInteract(EntityAgent byEntity, IItemSlot itemslot, Vec3d hitPosition, EnumInteractMode mode, ref EnumHandling handled)
+        public override void OnInteract(EntityAgent byEntity, ItemSlot itemslot, Vec3d hitPosition, EnumInteractMode mode, ref EnumHandling handled)
         {
             if (itemslot.Itemstack == null) return;
             if (itemslot.Itemstack.Block is BlockBucket)

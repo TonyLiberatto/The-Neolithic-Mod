@@ -56,7 +56,7 @@ namespace TheNeolithicMod
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            IItemSlot activeslot = byPlayer.InventoryManager.ActiveHotbarSlot;
+            ItemSlot activeslot = byPlayer.InventoryManager.ActiveHotbarSlot;
             if (activeslot.Itemstack == null || activeslot.Itemstack.Item == null) return false;
             if (activeslot.Itemstack.Item.Tool == EnumTool.Hammer)
             {
@@ -72,7 +72,7 @@ namespace TheNeolithicMod
 
         public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            IItemSlot activeslot = byPlayer.InventoryManager.ActiveHotbarSlot;
+            ItemSlot activeslot = byPlayer.InventoryManager.ActiveHotbarSlot;
             if (activeslot.Itemstack.Item.Tool == EnumTool.Hammer && world.Side == EnumAppSide.Server)
             {
                 world.PlaySoundAt(Sounds.Place, byPlayer);

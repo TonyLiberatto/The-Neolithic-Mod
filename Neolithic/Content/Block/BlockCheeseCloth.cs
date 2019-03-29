@@ -11,7 +11,7 @@ namespace TheNeolithicMod
 {
     class BlockCheeseCloth : Block
     {
-        public override void OnHeldInteractStart(IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handling)
+        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handling)
         {
             if (blockSel == null || slot.Itemstack.Collectible.LastCodePart() == "curds" || slot.Itemstack.Collectible.LastCodePart() == "cheese") return;
 
@@ -22,7 +22,7 @@ namespace TheNeolithicMod
             }
         }
 
-        public override bool OnHeldInteractStep(float secondsPassed, IItemSlot slot, EntityAgent byEntity, BlockSelection blockSelection, EntitySelection entitySel)
+        public override bool OnHeldInteractStep(float secondsPassed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSelection, EntitySelection entitySel)
         {
             if (blockSelection == null || slot.Itemstack.Collectible.LastCodePart() == "curds" || slot.Itemstack.Collectible.LastCodePart() == "cheese") return false;
             Block selBlock = api.World.BlockAccessor.GetBlock(blockSelection.Position);
@@ -33,12 +33,12 @@ namespace TheNeolithicMod
             return false;
         }
 
-        public override bool OnHeldInteractCancel(float secondsUsed, IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, EnumItemUseCancelReason cancelReason)
+        public override bool OnHeldInteractCancel(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, EnumItemUseCancelReason cancelReason)
         {
             return false;
         }
 
-        public override void OnHeldInteractStop(float secondsUsed, IItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
+        public override void OnHeldInteractStop(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
             if (blockSel == null || slot.Itemstack.Collectible.LastCodePart() == "curds" || slot.Itemstack.Collectible.LastCodePart() == "cheese") return;
             BlockPos pos = blockSel.Position;
@@ -77,7 +77,7 @@ namespace TheNeolithicMod
             slot.MarkDirty();
         }
 
-        public void TryGiveItem(ItemStack stack, IItemSlot slot, EntityAgent byEntity, WaterTightContainableProps props, BlockPos pos)
+        public void TryGiveItem(ItemStack stack, ItemSlot slot, EntityAgent byEntity, WaterTightContainableProps props, BlockPos pos)
         {
             slot.TakeOut(1);
             if (!byEntity.TryGiveItemStack(stack))

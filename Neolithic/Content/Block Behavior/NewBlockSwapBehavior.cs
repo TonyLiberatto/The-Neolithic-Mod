@@ -39,7 +39,7 @@ namespace TheNeolithicMod
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {
             handling = EnumHandling.PreventDefault;
-            IItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
+            ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
             BlockPos pos = blockSel.Position;
             if (slot.Itemstack != null)
             {

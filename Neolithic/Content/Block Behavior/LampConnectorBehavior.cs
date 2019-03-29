@@ -15,7 +15,7 @@ namespace TheNeolithicMod
             // NOP
         }
 
-        public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref EnumHandling handling)
+        public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref EnumHandling handling, ref string failureCode)
         {
             handling = EnumHandling.PreventDefault;
             if (!world.BlockAccessor.GetBlock(blockSel.Position).IsReplacableBy(block))
@@ -42,7 +42,7 @@ namespace TheNeolithicMod
         }
 
         private static Regex dirRe = new Regex(@".*-(?<dir>north|south|east|west)(?:-.*)?");
-        public override void OnNeighourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos, ref EnumHandling handling)
+        public override void OnNeighbourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos, ref EnumHandling handling)
         {
             if (!flipable)
             {

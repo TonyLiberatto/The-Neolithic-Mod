@@ -564,12 +564,12 @@ namespace TheNeolithicMod
         #region Helper getters
 
 
-        public IItemSlot InputSlot
+        public ItemSlot InputSlot
         {
             get { return inventory[0]; }
         }
 
-        public IItemSlot OutputSlot
+        public ItemSlot OutputSlot
         {
             get { return inventory[1]; }
         }
@@ -591,7 +591,7 @@ namespace TheNeolithicMod
         {
             get
             {
-                IItemSlot slot = inventory[0];
+                ItemSlot slot = inventory[0];
                 if (slot.Itemstack == null) return null;
                 return slot.Itemstack.Collectible.GrindingProps;
             }
