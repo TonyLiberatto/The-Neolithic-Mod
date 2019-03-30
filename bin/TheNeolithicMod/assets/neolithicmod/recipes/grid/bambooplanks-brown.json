@@ -5,5 +5,5 @@
 	},
 	width: 2,
 	height: 2,
-	output: { type: "block", code: "planks-bamboo-brown", quantity: 1  }
+	output: { type: "block", code: "neolithicmod:planks-bamboo-brown", quantity: 1  }
 }

@@ -11,9 +11,9 @@
 	height: 3,
 	attributes: {
 		bucketProps: {
-			requiresContent: { type: "item", code: "waterportion" },
+			requiresContent: { type: "item", code: "game:waterportion" },
 			requiresQuantity: 5
 		}
 	},
-	output: { type: "block", code: "romanroad-{rock}-square-east" }
+	output: { type: "block", code: "neolithicmod:romanroad-{rock}-square-east" }
 }

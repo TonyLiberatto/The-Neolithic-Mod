@@ -5,5 +5,5 @@
 	},
 	width: 2,
 	height: 3,
-	output: { type: "block", code: "doormaple-north-down-closed-left"  }
+	output: { type: "block", code: "neolithicmod:doormaple-north-down-closed-left"  }
 }

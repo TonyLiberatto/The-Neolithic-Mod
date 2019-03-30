@@ -1,7 +1,7 @@
 {
 	code: "crackedbrick",
 	variantgroups: [
-		{ code: "type", states: ["andesite", "basalt", "chalk", "claystone", "granite", "obsidian", "sandstone", "shale"] },
+		{ code: "type", states: ["andesite", "basalt", "chalk", "chert", "claystone", "granite", "obsidian", "sandstone", "shale"] },
 	],
 	drawtype: "Cube",
 	blockmaterial: "Stone",

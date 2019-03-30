@@ -2,7 +2,7 @@
 	ingredientPattern: "WWW	WLW	WWW",
 	ingredients: {
 		"W": { type: "block", code: "game:planks-*", allowedVariants: ["birch", "oak", "maple", "pine", "acacia", "kapok" ], name: "wood" },
-		"L": { type: "item", code: "animal-leatherstrips", quantity:2 }
+		"L": { type: "item", code: "neolithicmod:animal-leatherstrips", quantity:2 }
 	},
 	width: 3,
 	height: 3,

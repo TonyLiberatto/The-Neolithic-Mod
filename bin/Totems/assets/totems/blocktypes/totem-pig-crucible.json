@@ -3,7 +3,7 @@
   creativeinventory: {
     "general": [ "*-east" ],
     "construction": [ "*-east" ],
-    "neolithicblocks": [ "*-east" ]
+    "totems": [ "*-east" ]
   },
   shapebytype: {
     "*-north": {

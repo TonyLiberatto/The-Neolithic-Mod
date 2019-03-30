@@ -5,5 +5,5 @@
 	},
 	width: 2,
 	height: 3,
-	output: { type: "block", code: "dooraged-north-down-closed-left"  }
+	output: { type: "block", code: "neolithicmod:dooraged-north-down-closed-left"  }
 }

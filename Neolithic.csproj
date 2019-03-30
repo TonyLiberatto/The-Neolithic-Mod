@@ -44,30 +44,38 @@
   <ItemGroup>
     <Reference Include="cairo-sharp">
       <HintPath>..\..\VS-1.9-pre-3\Lib\cairo-sharp.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
       <HintPath>..\..\VS-1.9-pre-3\Lib\CommandLine.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
       <HintPath>..\..\VS-1.9-pre-3\Lib\csogg.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
       <HintPath>..\..\VS-1.9-pre-3\Lib\csvorbis.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
       <HintPath>..\..\VS-1.9-pre-3\Lib\ENet.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\VS-1.9-pre-3\Lib\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
       <HintPath>..\..\VS-1.9-pre-3\Lib\OpenTK.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
       <HintPath>..\..\VS-1.9-pre-3\Lib\protobuf-net.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System">
       <Private>False</Private>
@@ -89,10 +97,12 @@
     </Reference>
     <Reference Include="Tavis.JsonPatch">
       <HintPath>..\..\VS-1.9-pre-3\Lib\Tavis.JsonPatch.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Vintagestory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\VS-1.9-pre-2\Vintagestory.exe</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI">
       <HintPath>..\..\Vintagestory\VintagestoryAPI.dll</HintPath>
@@ -104,12 +114,15 @@
     </Reference>
     <Reference Include="VSCreativeMod">
       <HintPath>..\..\VS-1.9-pre-3\Mods\VSCreativeMod.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
       <HintPath>..\..\VS-1.9-pre-3\Mods\VSEssentials.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
       <HintPath>..\..\VS-1.9-pre-3\Mods\VSSurvivalMod.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>

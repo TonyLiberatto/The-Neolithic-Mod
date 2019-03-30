@@ -6,5 +6,5 @@
 	},
 	width: 1,
 	height: 2,
-	output: { type: "block", code: "softroad-sand-chalk-{rock}-east", quantity: 1 }
+	output: { type: "block", code: "neolithicmod:softroad-sand-chalk-{rock}-east", quantity: 1 }
 }

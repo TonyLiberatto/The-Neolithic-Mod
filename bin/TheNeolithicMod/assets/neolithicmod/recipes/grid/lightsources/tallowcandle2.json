@@ -1,7 +1,7 @@
  {
 	ingredientPattern: "F,T",
 	ingredients: {
-		"F": { type: "item", code: "sisal-twine"  },
+		"F": { type: "item", code: "neolithicmod:sisal-twine"  },
 		"T": { type: "item", code: "game:tallow"  }
 	},
 	width: 1,

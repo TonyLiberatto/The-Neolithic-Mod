@@ -8,7 +8,7 @@
 	height: 1,
 	attributes: {
 		bucketProps: {
-			requiresContent: { type: "item", code: "waterportion" },
+			requiresContent: { type: "item", code: "game:waterportion" },
 			requiresQuantity: 5
 		}
 	},
