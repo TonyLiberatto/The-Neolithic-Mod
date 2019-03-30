@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
 namespace TheNeolithicMod
@@ -117,15 +119,13 @@ namespace TheNeolithicMod
 
         public bool IsSuitableFor(Entity entity)
         {
-            NeolithicContentConfig config = nltConfig.FirstOrDefault();
-            if (config == null)
-            {
+            ContentConfig contentConfig = ((IEnumerable<ContentConfig>)nltConfig).FirstOrDefault<ContentConfig>(c => c.Code == contentCode);
+            if (contentConfig == null)
                 return false;
-            }
-
-            for (int i = 0; i < config.Foodfor.Length; i++)
+            for (int index = 0; index < contentConfig.Foodfor.Length; ++index)
             {
-                if (RegistryObject.WildCardMatch(config.Foodfor[i], entity.Code)) return true;
+                if (WildcardUtil.Match(contentConfig.Foodfor[index], entity.Code))
+                    return true;
             }
             return false;
         }
