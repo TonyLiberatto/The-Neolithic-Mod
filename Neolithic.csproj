@@ -43,40 +43,31 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\VS-1.9-pre-2\Lib\cairo-sharp.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9-pre-3\Lib\cairo-sharp.dll</HintPath>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\VS-1.9-pre-2\Lib\CommandLine.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9-pre-3\Lib\CommandLine.dll</HintPath>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\VS-1.9-pre-2\Lib\csogg.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9-pre-3\Lib\csogg.dll</HintPath>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\VS-1.9-pre-2\Lib\csvorbis.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9-pre-3\Lib\csvorbis.dll</HintPath>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\VS-1.9-pre-2\Lib\ENet.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9-pre-3\Lib\ENet.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <Private>False</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\VS-1.9-pre-2\Lib\Newtonsoft.Json.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\VS-1.9-pre-3\Lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\VS-1.9-pre-2\Lib\OpenTK.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9-pre-3\Lib\OpenTK.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\VS-1.9-pre-2\Lib\protobuf-net.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9-pre-3\Lib\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Private>False</Private>
@@ -97,8 +88,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\VS-1.9-pre-2\Lib\Tavis.JsonPatch.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9-pre-3\Lib\Tavis.JsonPatch.dll</HintPath>
     </Reference>
     <Reference Include="Vintagestory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -113,16 +103,13 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\VS-1.9-pre-2\Mods\VSCreativeMod.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9-pre-3\Mods\VSCreativeMod.dll</HintPath>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\VS-1.9-pre-2\Mods\VSEssentials.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9-pre-3\Mods\VSEssentials.dll</HintPath>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\VS-1.9-pre-2\Mods\VSSurvivalMod.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9-pre-3\Mods\VSSurvivalMod.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
