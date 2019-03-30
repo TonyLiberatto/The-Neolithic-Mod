@@ -101,11 +101,11 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI">
-      <HintPath>E:\Games\VintageStory\VintagestoryAPI.dll</HintPath>
+      <HintPath>..\..\Vintagestory\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryLib">
-      <HintPath>E:\Games\VintageStory\VintagestoryLib.dll</HintPath>
+      <HintPath>..\..\Vintagestory\VintagestoryLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
@@ -2332,6 +2332,9 @@
     <Content Include="WIPAssets\Tony\clay-textures\brown-burned.png" />
     <Content Include="WIPAssets\Tony\clay-textures\fire-burned.png" />
     <Content Include="WIPAssets\Tony\clay-textures\red-burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions />
