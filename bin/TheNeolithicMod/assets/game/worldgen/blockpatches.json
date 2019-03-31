@@ -193,6 +193,13 @@
 			placement: "Underground"
 		},
 		{
+			comment: "Loose gears",
+			blockCodes: ["loosegears-1"],
+			quantity: { avg: 2, var: 1 },
+			chance: 3,
+			placement: "Underground"
+		},
+		{
 			comment: "Old Meteorid impacts",
 			blockCodes: ["meteorite-iron"],
 			quantity: { avg: 1, var: 0 },
