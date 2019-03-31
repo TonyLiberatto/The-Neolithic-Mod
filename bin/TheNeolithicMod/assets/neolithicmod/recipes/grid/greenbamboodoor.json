@@ -1,10 +1,10 @@
 {
 	ingredientPattern: "BBL	BB_	BBL",
 	ingredients: {
-		"B": { type: "block", code: "planks-bamboo-green" },
-		"L": { type: "item", code: "animal-leatherstrips" }
+		"B": { type: "block", code: "neolithicmod:planks-bamboo-green" },
+		"L": { type: "item", code: "neolithicmod:animal-leatherstrips" }
 	},
 	width: 3,
 	height: 3,
-	output: { type: "block", code: "greendoor-north-down-closed-left"  }
+	output: { type: "block", code: "neolithicmod:greendoor-north-down-closed-left"  }
 }

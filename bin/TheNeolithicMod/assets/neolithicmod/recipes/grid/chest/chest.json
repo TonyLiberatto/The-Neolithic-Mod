@@ -6,5 +6,5 @@
 	},
 	width: 3,
 	height: 3,
-	output: { type: "block", code: "chest-neolithic-{wood}-east"  }
+	output: { type: "block", code: "neolithicmod:chest-neolithic-{wood}-east"  }
 }
