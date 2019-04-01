@@ -152,7 +152,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 0.0, 15.0, 4.0 ], 
 			"to": [ 16.0, 15.5, 4.5 ], 
 			"faces": {
@@ -165,7 +165,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 7.5, 15.0, 0.0 ], 
 			"to": [ 8.0, 15.5, 4.0 ], 
 			"faces": {
@@ -178,7 +178,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 0.0, 15.0, 0.0 ], 
 			"to": [ 7.5, 15.5, 0.5 ], 
 			"faces": {
@@ -191,7 +191,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 8.0, 15.0, 0.0 ], 
 			"to": [ 16.0, 15.5, 0.5 ], 
 			"faces": {
@@ -204,7 +204,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 3.5, 15.0, 4.5 ], 
 			"to": [ 4.0, 15.5, 8.5 ], 
 			"faces": {
@@ -217,7 +217,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 11.5, 15.0, 4.5 ], 
 			"to": [ 12.0, 15.5, 8.5 ], 
 			"faces": {
@@ -230,7 +230,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 0.0, 15.0, 8.0 ], 
 			"to": [ 3.5, 15.5, 8.5 ], 
 			"faces": {
@@ -243,7 +243,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 4.0, 15.0, 8.0 ], 
 			"to": [ 11.5, 15.5, 8.5 ], 
 			"faces": {
@@ -256,7 +256,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 12.0, 15.0, 8.0 ], 
 			"to": [ 16.0, 15.5, 8.5 ], 
 			"faces": {
@@ -269,7 +269,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 15.5, 15.0, 0.5 ], 
 			"to": [ 16.0, 15.5, 4.0 ], 
 			"faces": {
@@ -282,7 +282,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 7.5, 15.0, 8.5 ], 
 			"to": [ 8.0, 15.5, 12.5 ], 
 			"faces": {
@@ -295,7 +295,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 15.5, 15.0, 8.5 ], 
 			"to": [ 16.0, 15.5, 12.5 ], 
 			"faces": {
@@ -308,7 +308,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 0.0, 15.0, 12.0 ], 
 			"to": [ 7.5, 15.5, 12.5 ], 
 			"faces": {
@@ -321,7 +321,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 8.0, 15.0, 12.0 ], 
 			"to": [ 15.5, 15.5, 12.5 ], 
 			"faces": {
@@ -334,7 +334,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 3.5, 15.0, 12.5 ], 
 			"to": [ 4.0, 15.5, 16.0 ], 
 			"faces": {
@@ -347,7 +347,7 @@
 			}
 		},
 		{
-			"name": "voxel",
+			"name": "voxel", "tintIndex": 1,
 			"from": [ 11.5, 15.0, 12.5 ], 
 			"to": [ 12.0, 15.5, 16.0 ], 
 			"faces": {
