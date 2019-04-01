@@ -7,7 +7,7 @@
     },
     { 
       code: "rock",
-      states: [ "andesite", "basalt", "chalk", "claystone", "granite", "obsidian", "sandstone", "shale", ],
+      states: [ "andesite", "basalt", "chalk", "chert", "chert", "claystone", "conglomerate","granite", "limestone","obsidian", "peridotite", "phyllite","sandstone", "shale", "slate"],
     },
     {
       code: "pattern",

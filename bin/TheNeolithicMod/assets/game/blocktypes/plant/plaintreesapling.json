@@ -5,7 +5,7 @@
 	variantgroups: [
 		{ code: "wood", states: ["bamboogreen", "bamboobrown"], loadFromProperties: "block/wood" },
 	],
-	creativeinventory: { "general": ["*"], "flora": ["*"] },
+	creativeinventory: { "general": ["*"], "flora": ["*"], "neolithicflora": ["*"] },
 	renderpass: "OpaqueNoCull",
 	drawtype: "json",
 	randomDrawOffset: true,

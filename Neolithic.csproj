@@ -537,7 +537,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\sounds\creature\rabbit\rabbit-eating.ogg" />
     <None Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\roman\source.psd" />
     <None Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\stones\stepping test.psd" />
-    <None Include="bin\TheNeolithicMod\assets\game\worldgen\blockpatchconfig.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\blockpatches.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bag\burdenbasket.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bone\skulls\skullboar.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bone\skulls\skullewe.json" />

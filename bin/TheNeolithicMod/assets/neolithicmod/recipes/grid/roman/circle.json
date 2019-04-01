@@ -5,7 +5,7 @@
 		"G": { type: "block", code: "game:gravel-*" },
 		"Q": { type: "item", code: "game:quicklime" },
 		"W": { type: "block", code: "game:woodbucket" },
-		"R": { type: "item", code: "game:stone-*", quantity: 16 , name: "rock", allowedVariants: ["andesite", "chalk", "chert","claystone", "granite", "sandstone", "shale", "basalt"] }
+		"R": { type: "item", code: "game:stone-*", quantity: 16 , name: "rock", allowedVariants: [ "andesite", "basalt", "chalk", "chert", "chert", "claystone", "conglomerate","granite", "limestone","obsidian", "peridotite", "phyllite","sandstone", "shale", "slate"] }
 	},
 	width: 3,
 	height: 3,

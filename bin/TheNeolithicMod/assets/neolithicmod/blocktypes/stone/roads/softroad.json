@@ -19,9 +19,9 @@
     },
     {
       code: "materialtype",
-      states: [ "andesite", "chalk", "claystone", "granite", "sandstone", "shale", "basalt" ]
+      states: [ "andesite", "basalt", "chalk", "chert", "claystone", "conglomerate","granite", "limestone","obsidian", "peridotite", "phyllite","sandstone", "shale", "slate"]
     },
-    { loadFromProperties: "block/rockwithobsidian" },
+    { loadFromProperties: "block/rockwithdeposit" },
     {
       code: "side",
       loadFromProperties: "abstract/horizontalorientation"
@@ -38,19 +38,19 @@
   textures: {
     all: {
       base: "game:block/stone/{material}/{materialtype}",
-      overlays: [ "game:block/stone/roads/stones/{rockwithobsidian}_stones_1" ],
+      overlays: [ "game:block/stone/roads/stones/{rockwithdeposit}_stones_1" ],
       alternates: [
         {
           base: "game:block/stone/{material}/{materialtype}",
-          overlays: [ "game:block/stone/roads/stones/{rockwithobsidian}_stones_2" ]
+          overlays: [ "game:block/stone/roads/stones/{rockwithdeposit}_stones_2" ]
         },
         {
           base: "game:block/stone/{material}/{materialtype}",
-          overlays: [ "game:block/stone/roads/stones/{rockwithobsidian}_stones_3" ]
+          overlays: [ "game:block/stone/roads/stones/{rockwithdeposit}_stones_3" ]
         },
         {
           base: "game:block/stone/{material}/{materialtype}",
-          overlays: [ "game:block/stone/roads/stones/{rockwithobsidian}_stones_4" ]
+          overlays: [ "game:block/stone/roads/stones/{rockwithdeposit}_stones_4" ]
         }
       ]
     }
