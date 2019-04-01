@@ -43,38 +43,38 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\VS-1.9-pre\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\VS-1.9-pre\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\VS-1.9-pre\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\VS-1.9-pre\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\VS-1.9-pre\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\VS-1.9-pre\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\VS-1.9-pre\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\VS-1.9-pre\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -96,12 +96,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\VS-1.9-pre\Lib\Tavis.JsonPatch.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Vintagestory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\VS-1.9-pre\Vintagestory.exe</HintPath>
+      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI">
@@ -113,15 +108,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\VS-1.9-pre\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\VS-1.9-pre\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\VS-1.9-pre\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -596,8 +591,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\rugs\pantherrug.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\rugs\wolfrug.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stationarybasket.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\3dcobble.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\3dpavers.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\3droad.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\roman.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\softroad.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\bamboo\browndoor.json" />
@@ -1191,86 +1185,6 @@
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\sinew.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\base\moss.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\gravel\obsidian.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\polished\normal-andesite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\polished\normal-basalt.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\polished\normal-chalk.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\polished\normal-claystone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\polished\normal-granite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\polished\normal-obsidian.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\polished\normal-sandstone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\polished\normal-shale.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\rough\normal-andesite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\rough\normal-basalt.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\rough\normal-chalk.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\rough\normal-claystone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\rough\normal-granite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\rough\normal-obsidian.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\rough\normal-sandstone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\cobble\rough\normal-shale.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\brick-andesite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\brick-basalt.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\brick-chalk.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\brick-claystone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\brick-granite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\brick-obsidian.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\brick-sandstone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\brick-shale.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\square-andesite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\square-basalt.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\square-chalk.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\square-claystone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\square-granite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\square-obsidian.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\square-sandstone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\square-shale.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightbrick-andesite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightbrick-basalt.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightbrick-chalk.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightbrick-claystone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightbrick-granite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightbrick-obsidian.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightbrick-sandstone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightbrick-shale.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightsquare-andesite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightsquare-basalt.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightsquare-chalk.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightsquare-claystone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightsquare-granite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightsquare-obsidian.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightsquare-sandstone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\polished\tightsquare-shale.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\brick-andesite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\brick-basalt.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\brick-chalk.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\brick-claystone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\brick-granite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\brick-obsidian.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\brick-sandstone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\brick-shale.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\square-andesite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\square-basalt.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\square-chalk.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\square-claystone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\square-granite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\square-obsidian.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\square-sandstone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\square-shale.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightbrick-andesite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightbrick-basalt.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightbrick-chalk.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightbrick-claystone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightbrick-granite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightbrick-obsidian.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightbrick-sandstone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightbrick-shale.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightsquare-andesite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightsquare-basalt.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightsquare-chalk.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightsquare-claystone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightsquare-granite.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightsquare-obsidian.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightsquare-sandstone.png" />
-    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\3d\paver\rough\tightsquare-shale.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\roman\brick-andesite.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\roman\brick-basalt.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\roman\brick-chalk.png" />
