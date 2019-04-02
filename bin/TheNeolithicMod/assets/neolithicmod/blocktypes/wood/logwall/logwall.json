@@ -17,7 +17,7 @@
 			groupBy: ["logwall-*"]
 		},
 	},
-	creativeinventory: { "general": ["*"], "construction": ["*-north"], "neolithicblocks": ["*"] },
+	creativeinventory: { "general": ["*-up-*-north"], "construction": ["*-up-*"], "neolithicblocks": ["*-up-*"] },
 		variantgroups: [
 		{ code: "type", states: ["wall", "corner", "jut"]},
 		{ loadFromProperties: "block/wood" },

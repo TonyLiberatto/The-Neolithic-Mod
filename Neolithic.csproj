@@ -142,6 +142,7 @@
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\CookedContainerFixBE.cs" />
     <Compile Include="Neolithic\Content\Block\BlockBowlNew.cs" />
+    <Compile Include="Neolithic\Content\Block\BlockNeolithicRoads.cs" />
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLogWall.cs" />
     <Compile Include="Neolithic\Content\Block\CookedContainerFix.cs" />
@@ -592,8 +593,6 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\rugs\wolfrug.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stationarybasket.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\3droad.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\roman.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\softroad.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\bamboo\browndoor.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\bamboo\greendoor.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\branch.json" />

@@ -1,9 +1,10 @@
 ﻿{
   code: "3droad",
+  class: "BlockNeolithicRoads",
   variantgroups: [
     {
       code: "basetype",
-      states: ["gravel", "sand"],
+      states: ["gravel", "sand", "soil"],
     },
     { 
       code: "rock",
@@ -20,8 +21,8 @@
   ],
   drawtype: "json",
   creativeinventory: {
-    "general": [ "3droad-gravel*" ],
-    "neolithicdeco": [ "3droad-gravel*" ]
+    "general": [ "3droad-*-stepping1" ],
+    "neolithicdeco": [ "3droad-*-stepping1" ]
   },
   shapeByType: {
     "*": { base: "block/road/road-{pattern}" },
@@ -41,14 +42,30 @@
     break: "game:block/rock-break-pickaxe",
   },
   textures: {
-    stone: { 
-      base: "game:block/stone/rock/{rock}*", 
+
+  },
+  texturesByType: {
+    "*-soil-*": {
+      stone: {
+        base: "game:block/stone/rock/{rock}*",
+      },
+      moss: {
+        base: "game:block/stone/base/moss",
+      },
+      base: {
+        base: "game:block/soil/fertmedium",
+      },
     },
-    moss: { 
-      base: "game:block/stone/base/moss", 
-    },
-    base: { 
-      base: "game:block/stone/{basetype}/{base}", 
+    "*": {
+      stone: {
+        base: "game:block/stone/rock/{rock}*",
+      },
+      moss: {
+        base: "game:block/stone/base/moss",
+      },
+      base: {
+        base: "game:block/stone/{basetype}/{base}",
+      },
     },
   },
   resistance: 3,
