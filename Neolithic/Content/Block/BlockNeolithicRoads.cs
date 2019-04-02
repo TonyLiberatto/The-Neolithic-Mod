@@ -56,8 +56,11 @@ namespace TheNeolithicMod
                         {
                             if (world.Side.IsServer())
                             {
-                                DamageItem(world, byPlayer.Entity, slot);
-                                DamageItem(world, byPlayer.Entity, hotslot);
+                                Block nextBlock = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + types.Next(ref index)).GetBlock();
+                                if (nextBlock == null) return;
+
+                                world.PlaySoundAt(Sounds.Break, byPlayer);
+                                world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);
                             }
                             return;
                         }
