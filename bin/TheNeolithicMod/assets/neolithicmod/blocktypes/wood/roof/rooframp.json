@@ -7,7 +7,7 @@
 			groupBy: ["rooframp-*"]
 		},
 	},
-	creativeinventory: { "general": ["*-north"], "construction": ["*-north"], "neolithicblocks": ["*-north"] },
+	creativeinventory: { "general": ["*-slope-*-north"], "construction": ["*-slope-*-north"], "neolithicblocks": ["*-slope-*-north"] },
 		variantgroups: [
 		{ code: "type", states: ["corner", "cornerin","cornertop","slope","slopewall","top", "topwall", "topend"  ]},
 		{ loadFromProperties: "block/wood" },
