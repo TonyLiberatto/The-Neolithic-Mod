@@ -182,6 +182,7 @@
     <Folder Include=".vs\Neolithic\v15\" />
     <Folder Include="bin\TheNeolithicMod\assets\game\shapes\block\wood\" />
     <Folder Include="bin\TheNeolithicMod\assets\game\sounds\creature\wolf\" />
+    <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\bag\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\entity\" />
     <Folder Include="Neolithic\Content\Entity\" />
@@ -593,7 +594,6 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\rugs\pantherrug.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\rugs\wolfrug.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stationarybasket.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\3droad.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\bamboo\browndoor.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\bamboo\greendoor.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\branch.json" />

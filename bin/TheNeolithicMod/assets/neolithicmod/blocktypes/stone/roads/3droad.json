@@ -41,9 +41,6 @@
     place: "game:block/gravel",
     break: "game:block/rock-break-pickaxe",
   },
-  textures: {
-
-  },
   texturesByType: {
     "*-soil-*": {
       stone: {
