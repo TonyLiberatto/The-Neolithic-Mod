@@ -1,0 +1,50 @@
+{
+  code: "tamper",
+  heldTpHitAnimation: "breaktool",
+  maxstacksize: 1,
+  	variantgroups: [
+		{ code: "material", states: ["wood", "bismuthbronze", "blackbronze", "brass", "copper", "gold", "iron", "lead", "silver", "tinbronze" ] },
+	],
+  textures: {
+    "handle": { base: "game:item/tool/material32/wood" },
+    "tamper": { base: "game:item/tool/material32/{material}" },
+  },
+  tool: "hammer",
+  durabilitybytype: {
+    "*-wood": 50,
+		"*-gold": 125,
+		"*-silver": 125,
+		"*-copper": 250,
+		"*-blackbronze": 600,
+		"*-bismuthbronze": 500,
+		"*-tinbronze": 400,
+		"*-iron": 900,
+	},
+  shape: { base: "item/tool/roadwork/tamper" },
+  creativeinventory: {
+    "general": [ "*" ],
+    "items": [ "*" ],
+    "neolithictools": [ "*" ]
+  },
+	fpHandTransform: {
+		translation: { x: 0.1, y: 0.2, z: 0 },
+		rotation: { x: -161, y: 16, z: 85 },
+		scale: 2.26
+	},
+	tpHandTransform: {
+		translation: { x: -1.04, y: -0.54, z: -0.66 },
+		rotation: { x: -86, y: 15, z: 1 },
+		scale: 0.77
+	},
+	guiTransform: {
+		translation: { x: 0, y: 2, z: 0 },
+		rotation: { x: 120, y: 126, z: -35 },
+		origin: { x: 0.5899, y: 0.535, z: 0.5 },
+		scale: 1.7
+	},
+	groundTransform: {
+		translation: { x: 0.1, y: 0, z: 0 },
+		rotation: { x: -180, y: -90, z: -180 },
+		scale: 4.05
+	}
+}

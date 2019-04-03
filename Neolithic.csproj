@@ -142,6 +142,7 @@
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\CookedContainerFixBE.cs" />
     <Compile Include="Neolithic\Content\Block\BlockBowlNew.cs" />
+    <Compile Include="Neolithic\Content\Block\BlockLooseStonesModified.cs" />
     <Compile Include="Neolithic\Content\Block\BlockNeolithicRoads.cs" />
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLogWall.cs" />
@@ -634,6 +635,8 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\resource\sisal-twine.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\resource\stone\stonebrick.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\toolhead\chiselhead.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\tool\roadwork\tamper.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\tool\roadwork\settinghammer.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\tool\woodenmallet.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\lang\en.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\blocks.json" />
