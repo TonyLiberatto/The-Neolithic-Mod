@@ -8,7 +8,7 @@
     },
     { 
       code: "rock",
-      states: [ "andesite", "basalt", "chalk", "chert", "claystone", "conglomerate", "granite", "limestone", "peridotite", "phyllite", "sandstone", "shale", "slate"],
+      states: [ "andesite", "basalt", "bauxite", "redmarble", "greenmarble", "kimberlite", "scoria", "whitemarble", "halite", "tuff", "chalk", "chert", "claystone", "conglomerate", "granite", "limestone", "peridotite", "phyllite", "sandstone", "shale", "slate"],
     },
     { 
       code: "base",
