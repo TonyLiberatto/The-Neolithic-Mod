@@ -55,14 +55,12 @@ namespace TheNeolithicMod
                         Block dBlock = blockSel.Position.DownCopy().GetBlock();
 
                         if (!allowedbases.Contains(dBlock.FirstCodePart())) return;
-                        string blockbase = dBlock.FirstCodePart() == "soil" ? "andesite" : dBlock.LastCodePart();
-                        AssetLocation location = new AssetLocation("neolithicmod:3droad-" + dBlock.FirstCodePart() + "-" + LastCodePart() + "-" + blockbase + "-" + "stepping" + world.Rand.Next(1, 4));
+                        AssetLocation location = new AssetLocation("neolithicmod:3droad-" + LastCodePart() + "-" + "stepping" + world.Rand.Next(1, 4));
                         Block nextBlock = location.GetBlock();
                         if (nextBlock == null) return;
 
                         world.PlaySoundAt(Sounds.Break, blockSel.Position.X, blockSel.Position.Y, blockSel.Position.Z);
-                        world.BlockAccessor.SetBlock(0, blockSel.Position);
-                        world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position.DownCopy());
+                        world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);
                     }
                     return;
                 }
