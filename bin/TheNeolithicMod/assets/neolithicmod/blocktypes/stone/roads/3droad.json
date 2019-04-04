@@ -22,7 +22,7 @@
   blockmaterial: "Stone",
   replaceable: 900,
   lightAbsorption: 99,
-  behaviors: [ { name: "UnstableFalling" } ],
+  behaviors: [ { name: "Unstable" } ],
   attributes: {
 		handbook: {
 			groupBy: ["3droad-*"]
@@ -44,8 +44,7 @@
     },
   },
 	dropsByType: {
-		"*-stepping*": [  { type: "item", code: "game:stone-{rock}", quantity: { avg: 1 } } ],
-		"*": [  { type: "item", code: "game:stonebrick-{rock}", quantity: { avg: 4 } } ],
+		"*": [  { type: "item", code: "game:stone-{rock}", quantity: { avg: 1 } } ],
 	},
   resistance: 3,
   lightAbsorption: 0,
