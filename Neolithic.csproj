@@ -146,6 +146,7 @@
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\CookedContainerFixBE.cs" />
     <Compile Include="Neolithic\Content\Block\BlockBowlNew.cs" />
+    <Compile Include="Neolithic\Content\Block\BlockLooseStonesModified.cs" />
     <Compile Include="Neolithic\Content\Block\BlockNeolithicRoads.cs" />
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLogWall.cs" />
@@ -185,6 +186,7 @@
     <Folder Include=".vs\Neolithic\v15\" />
     <Folder Include="bin\TheNeolithicMod\assets\game\shapes\block\wood\" />
     <Folder Include="bin\TheNeolithicMod\assets\game\sounds\creature\wolf\" />
+    <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\bag\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\entity\" />
     <Folder Include="Neolithic\Content\Entity\" />
@@ -597,7 +599,6 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\rugs\wolfrug.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\sisal-rugs\sisalrugs.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stationarybasket.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\3droad.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\bamboo\browndoor.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\bamboo\greendoor.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\branch.json" />
@@ -639,6 +640,8 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\resource\sisal-twine.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\resource\stone\stonebrick.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\toolhead\chiselhead.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\tool\roadwork\tamper.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\tool\roadwork\settinghammer.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\tool\woodenmallet.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\lang\en.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\blocks.json" />

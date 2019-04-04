@@ -2,17 +2,9 @@
   code: "3droad",
   class: "BlockNeolithicRoads",
   variantgroups: [
-    {
-      code: "basetype",
-      states: ["gravel", "sand", "soil"],
-    },
     { 
       code: "rock",
-      states: [ "andesite", "basalt", "chalk", "chert", "claystone", "conglomerate", "granite", "limestone", "peridotite", "phyllite", "sandstone", "shale", "slate"],
-    },
-    { 
-      code: "base",
-      states: [ "andesite", "basalt", "chalk", "chert", "claystone", "conglomerate", "granite", "limestone", "peridotite", "phyllite", "sandstone", "shale", "slate"],
+      states: [ "andesite", "basalt", "bauxite", "suevite", "redmarble", "greenmarble", "kimberlite", "scoria", "whitemarble", "halite", "tuff", "chalk", "chert", "claystone", "conglomerate", "granite", "limestone", "peridotite", "phyllite", "sandstone", "shale", "slate"],
     },
     {
       code: "pattern",
@@ -21,8 +13,8 @@
   ],
   drawtype: "json",
   creativeinventory: {
-    "general": [ "3droad-*-stepping1" ],
-    "neolithicdeco": [ "3droad-*-stepping1" ]
+    "general": [ "*" ],
+    "neolithicdeco": [ "*" ]
   },
   shapeByType: {
     "*": { base: "block/road/road-{pattern}" },
@@ -41,21 +33,7 @@
     place: "game:block/gravel",
     break: "game:block/rock-break-pickaxe",
   },
-  textures: {
-
-  },
   texturesByType: {
-    "*-soil-*": {
-      stone: {
-        base: "game:block/stone/rock/{rock}*",
-      },
-      moss: {
-        base: "game:block/stone/base/moss",
-      },
-      base: {
-        base: "game:block/soil/fertmedium",
-      },
-    },
     "*": {
       stone: {
         base: "game:block/stone/rock/{rock}*",
@@ -63,12 +41,14 @@
       moss: {
         base: "game:block/stone/base/moss",
       },
-      base: {
-        base: "game:block/stone/{basetype}/{base}",
-      },
     },
   },
+	dropsByType: {
+		"*-stepping*": [  { type: "item", code: "game:stone-{rock}", quantity: { avg: 1 } } ],
+		"*": [  { type: "item", code: "game:stonebrick-{rock}", quantity: { avg: 4 } } ],
+	},
   resistance: 3,
+  lightAbsorption: 0,
   walkspeedmultiplier: 1.25,
   sideopaque: {
     all: false
@@ -76,14 +56,5 @@
   sidesolid: {
     all: true
   },
-  collisionSelectionBoxbytype: {
-    "*-normal": {
-      x1: 0,
-      y1: 0,
-      z1: 0,
-      x2: 1,
-      y2: 1,
-      z2: 1
-    },
-  }
+	collisionSelectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1 },
 }

@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API.Common;
+using Vintagestory.GameContent;
 
 namespace TheNeolithicMod
 {
-    class BlockNeolithicRoads : Block
+    class BlockLooseStonesModified : BlockLooseStones
     {
-        private static uint index = 0;
-
-        public string[] types = new string[] 
+        public readonly string[] allowedbases = new string[]
         {
-            "bricks", "circle", "cobble", "fish", "squares", "tightbricks", "tightsquares"
+            "soil",
+            "gravel",
+            "sand"
         };
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
@@ -21,7 +22,7 @@ namespace TheNeolithicMod
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
             if (slot.Itemstack != null)
             {
-                if (slot.Itemstack.Collectible.FirstCodePart() == "settinghammer")
+                if (slot.Itemstack.Collectible.FirstCodePart() == "tamper")
                 {
                     return true;
                 }
@@ -34,7 +35,7 @@ namespace TheNeolithicMod
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
             if (slot.Itemstack != null)
             {
-                if (slot.Itemstack.Collectible.FirstCodePart() == "settinghammer")
+                if (slot.Itemstack.Collectible.FirstCodePart() == "tamper")
                 {
                     return HandAnimations.Hit(world, byPlayer.Entity, secondsUsed);
                 }
@@ -47,14 +48,18 @@ namespace TheNeolithicMod
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
             if (slot.Itemstack != null)
             {
-                if (slot.Itemstack.Collectible.FirstCodePart() == "settinghammer")
+                if (slot.Itemstack.Collectible.FirstCodePart() == "tamper")
                 {
                     if (world.Side.IsServer())
                     {
-                        Block nextBlock = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + types.Next(ref index)).GetBlock();
+                        Block dBlock = blockSel.Position.DownCopy().GetBlock();
+
+                        if (!allowedbases.Contains(dBlock.FirstCodePart())) return;
+                        AssetLocation location = new AssetLocation("neolithicmod:3droad-" + LastCodePart() + "-" + "stepping" + world.Rand.Next(1, 4));
+                        Block nextBlock = location.GetBlock();
                         if (nextBlock == null) return;
 
-                        world.PlaySoundAt(Sounds.Break, byPlayer);
+                        world.PlaySoundAt(Sounds.Break, blockSel.Position.X, blockSel.Position.Y, blockSel.Position.Z);
                         world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);
                     }
                     return;
