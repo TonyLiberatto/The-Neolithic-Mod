@@ -31,11 +31,24 @@ namespace TheNeolithicMod
                 EntityAgent agent = e as EntityAgent;
                 if (e.EntityId != entity.EntityId && agent != null && agent.Alive && agent.HerdId == (entity as EntityAgent).HerdId)
                 {
-                    agent.GetBehavior<EntityBehaviorEmotionStates>().TryTriggerState("aggressiveondamage");
+                    float r = (float)agent.World.Rand.NextDouble();
+
+                    if (r < 0.5 && !TryTriggerAoD(agent))
+                    {
+                        TryTriggerFlee(agent);
+                    }
+                    else
+                    {
+                        TryTriggerFlee(agent);
+                    }
                 }
                 return false;
             });
         }
+
+        public bool TryTriggerAoD(EntityAgent agent) => agent.GetBehavior<EntityBehaviorEmotionStates>().TryTriggerState("aggressiveondamage");
+
+        public bool TryTriggerFlee(EntityAgent agent) => agent.GetBehavior<EntityBehaviorEmotionStates>().TryTriggerState("fleeentity");
 
         public override string PropertyName() => "damagenotify";
     }
