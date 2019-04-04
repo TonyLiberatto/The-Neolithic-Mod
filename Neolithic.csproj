@@ -154,6 +154,7 @@
     <Compile Include="Neolithic\Content\Block\CookingContainerFix.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorFeatherPluck.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorMilkable.cs" />
+    <Compile Include="Neolithic\Content\EntityBehavior\BehaviorNotifyHerd.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorSlaughterable.cs" />
     <Compile Include="Neolithic\Content\Block\BlockCheeseCloth.cs" />
     <Compile Include="Neolithic\Content\Item\ItemSlaughteringAxe.cs" />
