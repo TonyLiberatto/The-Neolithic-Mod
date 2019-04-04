@@ -43,6 +43,10 @@
       },
     },
   },
+	dropsByType: {
+		"*-stepping*": [  { type: "item", code: "game:stone-{rock}", quantity: { avg: 1 } } ],
+		"*": [  { type: "item", code: "game:stonebrick-{rock}", quantity: { avg: 4 } } ],
+	},
   resistance: 3,
   lightAbsorption: 0,
   walkspeedmultiplier: 1.25,
