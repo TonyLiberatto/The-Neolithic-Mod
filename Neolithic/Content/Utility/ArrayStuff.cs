@@ -60,6 +60,11 @@ namespace TheNeolithicMod
         {
             return new AssetLocation(asset);
         }
+
+        public static void PlaySoundAtWithDelay(this IWorldAccessor world, AssetLocation location, BlockPos pos, int delay)
+        {
+            world.RegisterCallback(dt => world.PlaySoundAt(location, pos.X, pos.Y, pos.Z), delay);
+        }
     }
 
     public class GetAPI : ModSystem

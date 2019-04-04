@@ -54,7 +54,8 @@ namespace TheNeolithicMod
                         Block nextBlock = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + types.Next(ref index)).GetBlock();
                         if (nextBlock == null) return;
 
-                        world.PlaySoundAt(Sounds.Break, byPlayer);
+                        world.PlaySoundAtWithDelay(nextBlock.Sounds.Place, blockSel.Position, 100);
+                        world.PlaySoundAtWithDelay(new AssetLocation("sounds/effect/anvilhit"), blockSel.Position, 150);
                         world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);
                     }
                     return;

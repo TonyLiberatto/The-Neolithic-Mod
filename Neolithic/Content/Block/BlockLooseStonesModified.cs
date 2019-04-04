@@ -59,7 +59,8 @@ namespace TheNeolithicMod
                         Block nextBlock = location.GetBlock();
                         if (nextBlock == null) return;
 
-                        world.PlaySoundAt(Sounds.Break, blockSel.Position.X, blockSel.Position.Y, blockSel.Position.Z);
+                        world.PlaySoundAtWithDelay(nextBlock.Sounds.Place, blockSel.Position, 200);
+                        world.PlaySoundAtWithDelay(new AssetLocation("sounds/block/chop"), blockSel.Position, 100);
                         world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);
                     }
                     return;

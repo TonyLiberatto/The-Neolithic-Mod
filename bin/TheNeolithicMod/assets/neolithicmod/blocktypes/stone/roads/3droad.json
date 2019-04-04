@@ -30,7 +30,7 @@
 	},
   sounds: {
     walk: "game:walk/stone",
-    place: "game:block/gravel",
+    place: "game:block/rock-hit-pickaxe",
     break: "game:block/rock-break-pickaxe",
   },
   texturesByType: {
