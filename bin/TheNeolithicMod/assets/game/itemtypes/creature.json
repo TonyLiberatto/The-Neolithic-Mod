@@ -4,792 +4,910 @@
 	maxstacksize: 64,
 	variantgroups: [
 		{ code: "type", states: [
+		
 		"armadillo-male", "armadillo-female",
-		"panther-male-black", "panther-female-black","panther-kitty-black",
-		"hyena-wild-male", "hyena-wild-female-tan", "hyena-wild-female-brown", "hyena-wild-pup", 
-		"fox-red-male", "fox-red-female", "fox-snow-male", "fox-snow-female", 
-		"rabbit-male-black","rabbit-male-brown","rabbit-male-darkgrey","rabbit-male-grey","rabbit-male-lightgrey", "rabbit-male-tan","rabbit-male-white", 
-		"rabbit-female-black","rabbit-female-brown","rabbit-female-darkgrey","rabbit-female-grey", "rabbit-female-lightgrey","rabbit-female-tan","rabbit-female-white", 
-		"rabbit-baby-black","rabbit-baby-brown","rabbit-baby-darkgrey",	"rabbit-baby-grey","rabbit-baby-lightgrey","rabbit-baby-tan","rabbit-baby-white", 
-		"sheep-ram", "sheep-ewe", "sheep-lamb",
-		"wild-sheep-ram", "wild-sheep-ewe", "wild-sheep-lamb",
+		"butterfly-commonbrimstone", "butterfly-comma", "butterfly-largewhite", "butterfly-peacock", "butterfly-smallheath", "butterfly-bluepansy", "butterfly-bloodredglider",
 		"chicken-rooster-ashgrey", "chicken-rooster-black", "chicken-rooster-brown", "chicken-rooster-cream", "chicken-rooster-golden",	"chicken-rooster-savanna", "chicken-rooster-white", "chicken-rooster-woodland",
 		"chicken-hen-ashgrey", "chicken-hen-black", "chicken-hen-brown", "chicken-hen-cream", "chicken-hen-golden",	"chicken-hen-savanna", "chicken-hen-white", "chicken-hen-woodland",
 		"chicken-chick-ashgrey", "chicken-chick-black", "chicken-chick-brown", "chicken-chick-cream", "chicken-chick-golden", "chicken-chick-savanna", "chicken-chick-white", "chicken-chick-woodland",
+		"drifter",
+		"fox-red-male", "fox-red-female", "fox-snow-male", "fox-snow-female",
+        "hare-female-gold", "hare-male-gold", "hare-baby", "hare-male-arctic", "hare-female-arctic", "hare-male-desert", "hare-female-desert",		
+		"humanoid-trader-buildmaterials", "humanoid-trader-commodities", "humanoid-trader-foods","humanoid-trader-furniture", 
+		"humanoid-trader-luxuries", "humanoid-trader-survivalgoods", "humanoid-trader-treasurehunter", "humanoid-trader-clothing",
+		"hyena-wild-male", "hyena-wild-female-tan", "hyena-wild-female-brown", "hyena-wild-pup",
+		"locust",
+		"panther-male-black", "panther-female-black","panther-kitty-black",
 		"pig-boar-ashgrey", "pig-boar-brown", "pig-boar-chocolate", "pig-boar-darkgrey", "pig-boar-smokegrey", "pig-boar-walnut", 
 		"pig-sow-ashgrey", "pig-sow-brown", "pig-sow-chocolate", "pig-sow-darkgrey", "pig-sow-smokegrey", "pig-sow-walnut", 
-		"pig-piglet", 
+		"pig-piglet",
+		"rabbit-male-black","rabbit-male-brown","rabbit-male-darkgrey","rabbit-male-grey","rabbit-male-lightgrey", "rabbit-male-tan","rabbit-male-white", 
+		"rabbit-female-black","rabbit-female-brown","rabbit-female-darkgrey","rabbit-female-grey", "rabbit-female-lightgrey","rabbit-female-tan","rabbit-female-white", 
+		"rabbit-baby-black","rabbit-baby-brown","rabbit-baby-darkgrey",	"rabbit-baby-grey","rabbit-baby-lightgrey","rabbit-baby-tan","rabbit-baby-white",
+		"raccoon-male", "raccoon-female", "raccoon-pup",
+		"sheep-ram", "sheep-ewe", "sheep-lamb",
+		"wild-sheep-ram", "wild-sheep-ewe", "wild-sheep-lamb",
 		"wolf-male-ashgrey","wolf-male-black", "wolf-male-brown","wolf-male-darkgrey","wolf-male-gold","wolf-male-grey","wolf-male-silver","wolf-male-smokegrey","wolf-male-white", 
 		"wolf-female-ashgrey", "wolf-female-black", "wolf-female-brown", "wolf-female-darkgrey", "wolf-female-gold", "wolf-female-grey", "wolf-female-silver", "wolf-female-smokegrey",	"wolf-female-white", 
 		"wolf-pup-ashgrey", "wolf-pup-black", "wolf-pup-brown", "wolf-pup-darkgrey", "wolf-pup-gold", "wolf-pup-grey", "wolf-pup-silver", "wolf-pup-smokegrey", "wolf-pup-white", 
-		"drifter", "locust", 
-		"humanoid-trader-buildmaterials", "humanoid-trader-commodities", "humanoid-trader-foods","humanoid-trader-furniture", 
-		"humanoid-trader-luxuries", "humanoid-trader-survivalgoods", "humanoid-trader-treasurehunter", "humanoid-trader-clothing", 
-		"butterfly-commonbrimstone", "butterfly-comma", "butterfly-largewhite", "butterfly-peacock", "butterfly-smallheath", "butterfly-bluepansy", "butterfly-bloodredglider" ] },
+		  
+		 
+		 ] },
 		],
-	shapeByType: 
-		{
-		"creature-armadillo-*": { base: "entity/land/armadillo/armadillo" },
-		"creature-butterfly-*": { base: "entity/air/butterfly" },
-		"creature-humanoid-*": { base: "entity/humanoid/trader" },
-		"creature-panther-male-black": { base: "entity/land/panther/male"},
-		"creature-panther-female-black": { base: "entity/land/panther/female"},
-		"creature-panther-kitty-black": { base: "entity/land/panther/kitty"},
-		"creature-hyena-wild-male": { base: "entity/land/hyena/male" },
-		"creature-hyena-wild-female-tan": { base: "entity/land/hyena/female" },
-		"creature-hyena-wild-female-brown": { base: "entity/land/hyena/female" },
-		"creature-hyena-wild-pup": { base: "entity/land/hyena/pup" },
-		"creature-fox-red-male": { base: "entity/land/fox/male"},
-		"creature-fox-red-female": { base: "entity/land/fox/female"},
-		"creature-fox-snow-male": { base: "entity/land/fox/male"},
-		"creature-fox-snow-female": { base: "entity/land/fox/female"},
-		"creature-rabbit-male-*": { base: "entity/land/rabbit/male" },
-		"creature-rabbit-female-*": { base: "entity/land/rabbit/female" },
-		"creature-rabbit-baby-*": { base: "entity/land/rabbit/baby" },
-		"creature-chicken-rooster-*": { base: "entity/land/chicken/rooster" },
-		"creature-chicken-hen-*": { base: "entity/land/chicken/hen" },
-		"creature-chicken-chick-*": { base: "entity/land/chicken/chick" },
-		"creature-pig-boar-*": { base: "entity/land/pig/boar" },
-		"creature-pig-sow-*": { base: "entity/land/pig/sow" },
-		"creature-pig-piglet": { base: "entity/land/pig-wild-piglet" },
-		"creature-wild-sheep-ram": { base: "entity/land/wild-sheep/ram" },
-		"creature-wild-sheep-ewe": { base: "entity/land/wild-sheep/ewe" },
-		"creature-wild-sheep-lamb": { base: "entity/land/wild-sheep/lamb" },
-		"creature-sheep-ram": { base: "entity/land/sheep/ram" },
-		"creature-sheep-ewe": { base: "entity/land/sheep/ewe" },
-		"creature-sheep-lamb": { base: "entity/land/sheep/lamb" },
-		"creature-wolf-male-*": { base: "entity/land/wolf/male" },
-		"creature-wolf-female-*": { base: "entity/land/wolf/female" },
-		"creature-wolf-pup-*": { base: "entity/land/wolf/pup" },
-		"creature-drifter": { base: "entity/land/drifter" },
-		"creature-locust": { base: "entity/land/locust" },
+	shapeByType: 	{
+		"*-armadillo-*": { base: "entity/land/armadillo/armadillo" },
+		"*-butterfly-*": { base: "entity/air/butterfly" },
+		"*-chicken-rooster-*": { base: "entity/land/chicken/rooster" },
+		"*-chicken-hen-*": { base: "entity/land/chicken/hen" },
+		"*-chicken-chick-*": { base: "entity/land/chicken/chick" },
+		"*-drifter": { base: "entity/land/drifter" },
+		"*-fox-red-male": { base: "entity/land/fox/male"},
+		"*-fox-red-female": { base: "entity/land/fox/female"},
+		"*-fox-snow-male": { base: "entity/land/fox/male"},
+		"*-fox-snow-female": { base: "entity/land/fox/female"},
+		"*-hare-arctic-female": { "base": "entity/land/hare-female"},
+		"*-hare-baby": { "base": "entity/land/hare-baby"},
+		"*-hare-male-*": { "base": "entity/land/hare-male"},
+		"*-humanoid-*": { base: "entity/humanoid/trader" },
+		"*-hyena-wild-male": { base: "entity/land/hyena/male" },
+		"*-hyena-wild-female-tan": { base: "entity/land/hyena/female" },
+		"*-hyena-wild-female-brown": { base: "entity/land/hyena/female" },
+		"*-hyena-wild-pup": { base: "entity/land/hyena/pup" },
+		"*-locust": { base: "entity/land/locust" },
+		"*-panther-male-black": { base: "entity/land/panther/male"},
+		"*-panther-female-black": { base: "entity/land/panther/female"},
+		"*-panther-kitty-black": { base: "entity/land/panther/kitty"},
+		"*-pig-boar-*": { base: "entity/land/pig/boar" },
+		"*-pig-sow-*": { base: "entity/land/pig/sow" },
+		"*-pig-piglet": { base: "entity/land/pig-wild-piglet" },		
+		"*-rabbit-male-*": { base: "entity/land/rabbit/male" },
+		"*-rabbit-female-*": { base: "entity/land/rabbit/female" },
+		"*-rabbit-baby-*": { base: "entity/land/rabbit/baby" },		
+		"*-raccoon-male*": { base: "entity/land/raccoon-male" },
+		"*-raccoon-female*": { base: "entity/land/raccoon-female" },
+		"*-raccoon-pup*": { base: "entity/land/raccoon-pup" },		
+		"*-wild-sheep-ram": { base: "entity/land/wild-sheep/ram" },
+		"*-wild-sheep-ewe": { base: "entity/land/wild-sheep/ewe" },
+		"*-wild-sheep-lamb": { base: "entity/land/wild-sheep/lamb" },
+		"*-sheep-ram": { base: "entity/land/sheep/ram" },
+		"*-sheep-ewe": { base: "entity/land/sheep/ewe" },
+		"*-sheep-lamb": { base: "entity/land/sheep/lamb" },
+		"*-wolf-male-*": { base: "entity/land/wolf/male" },
+		"*-wolf-female-*": { base: "entity/land/wolf/female" },
+		"*-wolf-pup-*": { base: "entity/land/wolf/pup" },		
 		},
-	texturesByType:
-		{
-		"creature-armadillo-*":  { 
+	texturesByType:	{
+		"*-armadillo-*":  { 
       "armadillo": { base: "entity/armadillo/armadillo" },
 		  "armadillo_tail": { base: "entity/armadillo/armadillo_tail" }
 		},
-		"creature-humanoid-*": { "all": { base: "entity/humanoid/trader" } },
-		"creature-butterfly-bloodredglider": { "all": { base: "entity/butterfly/blood-red-glider" } },
-		"creature-butterfly-commonbrimstone": { "all": { base: "entity/butterfly/commonbrimstone" } },
-		"creature-butterfly-comma": { "all": { base: "entity/butterfly/comma" } },
-		"creature-butterfly-largewhite": { "all": { base: "entity/butterfly/largewhite" } },
-		"creature-butterfly-peacock":  { "all": { base: "entity/butterfly/peacock" } },
-		"creature-butterfly-smallheath":  { "all": { base: "entity/butterfly/smallheath" } },
-		"creature-butterfly-bluepansy":  { "all": { base: "entity/butterfly/bluepansy" } },
-		"creature-panther-male-black": { "all": { base: "entity/panther/black"} },
-		"creature-panther-female-black": { "all": { base: "entity/panther/black"} },
-		"creature-panther-kitty-black": { "all": { base: "entity/panther/kitty/black"} },
-		"creature-hyena-wild-male": { "all": { base: "entity/hyena/wild-male"} },
-		"creature-hyena-wild-female-tan": { "all": { base: "entity/hyena/wild-female-tan"} },
-		"creature-hyena-wild-female-brown": { "all": { base: "entity/hyena/wild-female-brown"} },
-		"creature-hyena-wild-pup": { "all": { base: "entity/hyena/wild-pup"} },
-		"creature-fox-red-male": { "all": { base: "entity/fox/red-male"} },
-		"creature-fox-red-female": { "all": { base: "entity/fox/red-female"} },
-		"creature-fox-snow-male": { "all": { base: "entity/fox/snow-male"} },
-		"creature-fox-snow-female": { "all": { base: "entity/fox/snow-female"} },
-		"creature-rabbit-male-black": { "all": { base: "entity/rabbit/black"} },
-		"creature-rabbit-male-brown":{ "all": { base: "entity/rabbit/brown"} },
-		"creature-rabbit-male-darkgrey":{ "all": { base: "entity/rabbit/darkgrey"} },
-		"creature-rabbit-male-grey":{ "all": { base: "entity/rabbit/grey"} },
-		"creature-rabbit-male-lightgrey":{ "all": { base: "entity/rabbit/lightgrey"} },
-		"creature-rabbit-male-tan":{ "all": { base: "entity/rabbit/tan"} },
-		"creature-rabbit-male-white":{ "all": { base: "entity/rabbit/white"} },
-		"creature-rabbit-female-black":{ "all": { base: "entity/rabbit/black"} },
-		"creature-rabbit-female-brown":{ "all": { base: "entity/rabbit/brown"} },
-		"creature-rabbit-female-darkgrey":{ "all": { base: "entity/rabbit/darkgrey"} },
-		"creature-rabbit-female-grey":{ "all": { base: "entity/rabbit/grey"} },
-		"creature-rabbit-female-lightgrey":{ "all": { base: "entity/rabbit/lightgrey"} },
-		"creature-rabbit-female-tan":{ "all": { base: "entity/rabbit/tan"} },
-		"creature-rabbit-female-white":{ "all": { base: "entity/rabbit/white"} },
-		"creature-rabbit-baby-black":{ "all": { base: "entity/rabbit/baby/black"} },
-		"creature-rabbit-baby-brown":{ "all": { base: "entity/rabbit/baby/brown"} },
-		"creature-rabbit-baby-darkgrey":{ "all": { base: "entity/rabbit/baby/darkgrey"} },
-		"creature-rabbit-baby-grey":{ "all": { base: "entity/rabbit/baby/grey"} },
-		"creature-rabbit-baby-lightgrey":{ "all": { base: "entity/rabbit/baby/lightgrey"} },
-		"creature-rabbit-baby-tan":{ "all": { base: "entity/rabbit/baby/tan"} },
-		"creature-rabbit-baby-white":{ "all": { base: "entity/rabbit/baby/white"} },
-		"creature-wild-sheep-ram":{ "all": { base: "entity/wild-sheep/ram"} },
-		"creature-wild-sheep-ewe":{ "all": { base: "entity/wild-sheep/ewe"} },
-		"creature-wild-sheep-lamb":{ "all": { base: "entity/wild-sheep/lamb"} },
-		"creature-sheep-ram":{ "all": { base: "entity/sheep/ram"} },
-		"creature-sheep-ewe":{ "all": { base: "entity/sheep/ewe"} },
-		"creature-sheep-lamb":{ "all": { base: "entity/sheep/lamb"} },
-		"creature-chicken-rooster-ashgrey":{ "all": { base: "entity/chicken/rooster/ashgrey"} },
-		"creature-chicken-rooster-black":{ "all": { base: "entity/chicken/rooster/black"} },
-		"creature-chicken-rooster-brown":{ "all": { base: "entity/chicken/rooster/brown"} },
-		"creature-chicken-rooster-cream":{ "all": { base: "entity/chicken/rooster/cream"} },
-		"creature-chicken-rooster-golden":{ "all": { base: "entity/chicken/rooster/golden"} },
-    "creature-chicken-rooster-savanna":{ "all": { base: "entity/chicken/rooster/savanna"} },
-		"creature-chicken-rooster-white":{ "all": { base: "entity/chicken/rooster/white"} },
-    "creature-chicken-rooster-woodland":{ "all": { base: "entity/chicken/rooster/woodland"} },
-		"creature-chicken-hen-ashgrey":{ "all": { base: "entity/chicken/hen/ashgrey"} },
-		"creature-chicken-hen-black":{ "all": { base: "entity/chicken/hen/black"} },
-		"creature-chicken-hen-brown":{ "all": { base: "entity/chicken/hen/brown"} },
-		"creature-chicken-hen-cream":{ "all": { base: "entity/chicken/hen/cream"} },
-		"creature-chicken-hen-golden":{ "all": { base: "entity/chicken/hen/golden"} },
-    "creature-chicken-hen-savanna":{ "all": { base: "entity/chicken/hen/savanna"} },
-		"creature-chicken-hen-white":{ "all": { base: "entity/chicken/hen/white"} },
-    "creature-chicken-hen-woodland":{ "all": { base: "entity/chicken/hen/woodland"} },
-		"creature-chicken-chick-ashgrey":{ "all": { base: "entity/chicken/chick/ashgrey"} },
-		"creature-chicken-chick-black":{ "all": { base: "entity/chicken/chick/black"} },
-		"creature-chicken-chick-brown":{ "all": { base: "entity/chicken/chick/brown"} },
-		"creature-chicken-chick-cream":{ "all": { base: "entity/chicken/chick/cream"} },
-		"creature-chicken-chick-golden":{ "all": { base: "entity/chicken/chick/golden"} },
-    "creature-chicken-chick-savanna":{ "all": { base: "entity/chicken/chick/savanna"} },
-		"creature-chicken-chick-white":{ "all": { base: "entity/chicken/chick/white"} },
-    "creature-chicken-chick-woodland":{ "all": { base: "entity/chicken/chick/woodland"} },
-		"creature-pig-boar-ashgrey":{ "all": { base: "entity/pig/ashgrey"} },
-		"creature-pig-boar-brown":{ "all": { base: "entity/pig/brown"} },
-		"creature-pig-boar-chocolate":{ "all": { base: "entity/pig/chocolate"} },
-		"creature-pig-boar-darkgrey":{ "all": { base: "entity/pig/darkgrey"} },
-		"creature-pig-boar-smokegrey":{ "all": { base: "entity/pig/smokegrey"} },
-		"creature-pig-boar-walnut":{ "all": { base: "entity/pig/walnut"} },
-		"creature-pig-sow-ashgrey":{ "all": { base: "entity/pig/sow/ashgrey"} },
-		"creature-pig-sow-brown":{ "all": { base: "entity/pig/sow/brown"} },
-		"creature-pig-sow-chocolate":{ "all": { base: "entity/pig/sow/chocolate"} },
-		"creature-pig-sow-darkgrey":{ "all": { base: "entity/pig/sow/darkgrey"} },
-		"creature-pig-sow-smokegrey":{ "all": { base: "entity/pig/sow/smokegrey"} },
-		"creature-pig-sow-walnut":{ "all": { base: "entity/pig/sow/walnut"} },
-		"creature-pig-piglet":{ "all": { base: "entity/pig/pig-wild-piglet"} },
-		"creature-wolf-male-ashgrey":{ "all": { base: "entity/wolf/ashgrey"} },
-		"creature-wolf-male-black":{ "all": { base: "entity/wolf/black"} },
-		"creature-wolf-male-brown":{ "all": { base: "entity/wolf/brown"} },
-		"creature-wolf-male-darkgrey":{ "all": { base: "entity/wolf/darkgrey"} },
-		"creature-wolf-male-gold":{ "all": { base: "entity/wolf/gold"} },
-		"creature-wolf-male-grey":{ "all": { base: "entity/wolf/grey"} },
-		"creature-wolf-male-silver":{ "all": { base: "entity/wolf/silver"} },
-		"creature-wolf-male-smokegrey":{ "all": { base: "entity/wolf/smokegrey"} },
-		"creature-wolf-male-white":{ "all": { base: "entity/wolf/white"} },
-		"creature-wolf-female-ashgrey":{ "all": { base: "entity/wolf/ashgrey"} },
-		"creature-wolf-female-black":{ "all": { base: "entity/wolf/black"} },
-		"creature-wolf-female-brown":{ "all": { base: "entity/wolf/brown"} },
-		"creature-wolf-female-darkgrey":{ "all": { base: "entity/wolf/darkgrey"} },
-		"creature-wolf-female-gold":{ "all": { base: "entity/wolf/gold"} },
-		"creature-wolf-female-grey":{ "all": { base: "entity/wolf/grey"} },
-		"creature-wolf-female-silver":{ "all": { base: "entity/wolf/silver"} },
-		"creature-wolf-female-smokegrey":{ "all": { base: "entity/wolf/smokegrey"} },
-		"creature-wolf-female-white":{ "all": { base: "entity/wolf/white"} },
-		"creature-wolf-pup-ashgrey":{ "all": { base: "entity/wolf/pup/ashgrey"} },
-		"creature-wolf-pup-black":{ "all": { base: "entity/wolf/pup/black"} },
-		"creature-wolf-pup-brown":{ "all": { base: "entity/wolf/pup/brown"} },
-		"creature-wolf-pup-darkgrey":{ "all": { base: "entity/wolf/pup/darkgrey"} },
-		"creature-wolf-pup-gold":{ "all": { base: "entity/wolf/pup/gold"} },
-		"creature-wolf-pup-grey":{ "all": { base: "entity/wolf/pup/grey"} },
-		"creature-wolf-pup-silver":{ "all": { base: "entity/wolf/pup/silver"} },
-		"creature-wolf-pup-smokegrey":{ "all": { base: "entity/wolf/pup/smokegrey"} },
-		"creature-wolf-pup-white":{ "all": { base: "entity/wolf/pup/white"} },
+		"*-butterfly-bloodredglider": { "all": { base: "entity/butterfly/blood-red-glider" } },
+		"*-butterfly-commonbrimstone": { "all": { base: "entity/butterfly/commonbrimstone" } },
+		"*-butterfly-comma": { "all": { base: "entity/butterfly/comma" } },
+		"*-butterfly-largewhite": { "all": { base: "entity/butterfly/largewhite" } },
+		"*-butterfly-peacock":  { "all": { base: "entity/butterfly/peacock" } },
+		"*-butterfly-smallheath":  { "all": { base: "entity/butterfly/smallheath" } },
+		"*-butterfly-bluepansy":  { "all": { base: "entity/butterfly/bluepansy" } },
+		"*-chicken-rooster-ashgrey":{ "all": { base: "entity/chicken/rooster/ashgrey"} },
+		"*-chicken-rooster-black":{ "all": { base: "entity/chicken/rooster/black"} },
+		"*-chicken-rooster-brown":{ "all": { base: "entity/chicken/rooster/brown"} },
+		"*-chicken-rooster-cream":{ "all": { base: "entity/chicken/rooster/cream"} },
+		"*-chicken-rooster-golden":{ "all": { base: "entity/chicken/rooster/golden"} },
+        "*-chicken-rooster-savanna":{ "all": { base: "entity/chicken/rooster/savanna"} },
+		"*-chicken-rooster-white":{ "all": { base: "entity/chicken/rooster/white"} },
+        "*-chicken-rooster-woodland":{ "all": { base: "entity/chicken/rooster/woodland"} },
+		"*-chicken-hen-ashgrey":{ "all": { base: "entity/chicken/hen/ashgrey"} },
+		"*-chicken-hen-black":{ "all": { base: "entity/chicken/hen/black"} },
+		"*-chicken-hen-brown":{ "all": { base: "entity/chicken/hen/brown"} },
+		"*-chicken-hen-cream":{ "all": { base: "entity/chicken/hen/cream"} },
+		"*-chicken-hen-golden":{ "all": { base: "entity/chicken/hen/golden"} },
+        "*-chicken-hen-savanna":{ "all": { base: "entity/chicken/hen/savanna"} },
+		"*-chicken-hen-white":{ "all": { base: "entity/chicken/hen/white"} },
+        "*-chicken-hen-woodland":{ "all": { base: "entity/chicken/hen/woodland"} },
+		"*-chicken-chick-ashgrey":{ "all": { base: "entity/chicken/chick/ashgrey"} },
+		"*-chicken-chick-black":{ "all": { base: "entity/chicken/chick/black"} },
+		"*-chicken-chick-brown":{ "all": { base: "entity/chicken/chick/brown"} },
+		"*-chicken-chick-cream":{ "all": { base: "entity/chicken/chick/cream"} },
+		"*-chicken-chick-golden":{ "all": { base: "entity/chicken/chick/golden"} },
+        "*-chicken-chick-savanna":{ "all": { base: "entity/chicken/chick/savanna"} },
+	  	"*-chicken-chick-white":{ "all": { base: "entity/chicken/chick/white"} },
+        "*-chicken-chick-woodland":{ "all": { base: "entity/chicken/chick/woodland"} },
+		"*-fox-red-male": { "all": { base: "entity/fox/red-male"} },
+		"*-fox-red-female": { "all": { base: "entity/fox/red-female"} },
+		"*-fox-snow-male": { "all": { base: "entity/fox/snow-male"} },
+		"*-fox-snow-female": { "all": { base: "entity/fox/snow-female"} },
+        "*-hare-baby": { "skin": { "base": "entity/hare/baby-brown" }},
+		"*-hare-male-arctic": { "skin": { "base": "entity/hare/male-arctic" }},
+		"*-hare-female-arctic": { "skin": { "base": "entity/hare/female-arctic" }},
+		"*-hare-male-desert": {	"skin": { "base": "entity/hare/male-desert" }},
+		"*-hare-female-desert": { "skin": { "base": "entity/hare/female-desert" }},
+		"*-hare-male-gold": { "skin": { "base": "entity/hare/male-gold" }},
+		"*-hare-female-gold": {	"skin": { "base": "entity/hare/female-gold" }},
+		"*-humanoid-*": { "all": { base: "entity/humanoid/trader" } },
+		"*-hyena-wild-male": { "all": { base: "entity/hyena/wild-male"} },
+		"*-hyena-wild-female-tan": { "all": { base: "entity/hyena/wild-female-tan"} },
+		"*-hyena-wild-female-brown": { "all": { base: "entity/hyena/wild-female-brown"} },
+		"*-hyena-wild-pup": { "all": { base: "entity/hyena/wild-pup"} },
+		"*-panther-male-black": { "all": { base: "entity/panther/black"} },
+		"*-panther-female-black": { "all": { base: "entity/panther/black"} },
+		"*-panther-kitty-black": { "all": { base: "entity/panther/kitty/black"} },
+		"*-pig-boar-ashgrey":{ "all": { base: "entity/pig/ashgrey"} },
+		"*-pig-boar-brown":{ "all": { base: "entity/pig/brown"} },
+		"*-pig-boar-chocolate":{ "all": { base: "entity/pig/chocolate"} },
+		"*-pig-boar-darkgrey":{ "all": { base: "entity/pig/darkgrey"} },
+		"*-pig-boar-smokegrey":{ "all": { base: "entity/pig/smokegrey"} },
+		"*-pig-boar-walnut":{ "all": { base: "entity/pig/walnut"} },
+		"*-pig-sow-ashgrey":{ "all": { base: "entity/pig/sow/ashgrey"} },
+		"*-pig-sow-brown":{ "all": { base: "entity/pig/sow/brown"} },
+		"*-pig-sow-chocolate":{ "all": { base: "entity/pig/sow/chocolate"} },
+		"*-pig-sow-darkgrey":{ "all": { base: "entity/pig/sow/darkgrey"} },
+		"*-pig-sow-smokegrey":{ "all": { base: "entity/pig/sow/smokegrey"} },
+		"*-pig-sow-walnut":{ "all": { base: "entity/pig/sow/walnut"} },
+		"*-pig-piglet":{ "all": { base: "entity/pig/pig-wild-piglet"} },		
+		"*-rabbit-male-black": { "all": { base: "entity/rabbit/black"} },
+		"*-rabbit-male-brown":{ "all": { base: "entity/rabbit/brown"} },
+		"*-rabbit-male-darkgrey":{ "all": { base: "entity/rabbit/darkgrey"} },
+		"*-rabbit-male-grey":{ "all": { base: "entity/rabbit/grey"} },
+		"*-rabbit-male-lightgrey":{ "all": { base: "entity/rabbit/lightgrey"} },
+		"*-rabbit-male-tan":{ "all": { base: "entity/rabbit/tan"} },
+		"*-rabbit-male-white":{ "all": { base: "entity/rabbit/white"} },
+		"*-rabbit-female-black":{ "all": { base: "entity/rabbit/black"} },
+		"*-rabbit-female-brown":{ "all": { base: "entity/rabbit/brown"} },
+		"*-rabbit-female-darkgrey":{ "all": { base: "entity/rabbit/darkgrey"} },
+		"*-rabbit-female-grey":{ "all": { base: "entity/rabbit/grey"} },
+		"*-rabbit-female-lightgrey":{ "all": { base: "entity/rabbit/lightgrey"} },
+		"*-rabbit-female-tan":{ "all": { base: "entity/rabbit/tan"} },
+		"*-rabbit-female-white":{ "all": { base: "entity/rabbit/white"} },
+		"*-rabbit-baby-black":{ "all": { base: "entity/rabbit/baby/black"} },
+		"*-rabbit-baby-brown":{ "all": { base: "entity/rabbit/baby/brown"} },
+		"*-rabbit-baby-darkgrey":{ "all": { base: "entity/rabbit/baby/darkgrey"} },
+		"*-rabbit-baby-grey":{ "all": { base: "entity/rabbit/baby/grey"} },
+		"*-rabbit-baby-lightgrey":{ "all": { base: "entity/rabbit/baby/lightgrey"} },
+		"*-rabbit-baby-tan":{ "all": { base: "entity/rabbit/baby/tan"} },
+		"*-rabbit-baby-white":{ "all": { base: "entity/rabbit/baby/white"} },		
+		"*-racoon-male":{ "all": { base: "entity/racoon/racoon-male1"} },
+		"*-racoon-female":{ "all": { base: "entity/racoon/racoon-female1"} },
+		"*-racoon-pup":{ "all": { base: "entity/racoon/racoon-pup1"} },		
+		"*-sheep-ram":{ "all": { base: "entity/sheep/ram"} },
+		"*-sheep-ewe":{ "all": { base: "entity/sheep/ewe"} },
+		"*-sheep-lamb":{ "all": { base: "entity/sheep/lamb"} },
+		"*-wild-sheep-ram":{ "all": { base: "entity/wild-sheep/ram"} },
+		"*-wild-sheep-ewe":{ "all": { base: "entity/wild-sheep/ewe"} },
+		"*-wild-sheep-lamb":{ "all": { base: "entity/wild-sheep/lamb"} },		
+		"*-wolf-male-ashgrey":{ "all": { base: "entity/wolf/ashgrey"} },
+		"*-wolf-male-black":{ "all": { base: "entity/wolf/black"} },
+		"*-wolf-male-brown":{ "all": { base: "entity/wolf/brown"} },
+		"*-wolf-male-darkgrey":{ "all": { base: "entity/wolf/darkgrey"} },
+		"*-wolf-male-gold":{ "all": { base: "entity/wolf/gold"} },
+		"*-wolf-male-grey":{ "all": { base: "entity/wolf/grey"} },
+		"*-wolf-male-silver":{ "all": { base: "entity/wolf/silver"} },
+		"*-wolf-male-smokegrey":{ "all": { base: "entity/wolf/smokegrey"} },
+		"*-wolf-male-white":{ "all": { base: "entity/wolf/white"} },
+		"*-wolf-female-ashgrey":{ "all": { base: "entity/wolf/ashgrey"} },
+		"*-wolf-female-black":{ "all": { base: "entity/wolf/black"} },
+		"*-wolf-female-brown":{ "all": { base: "entity/wolf/brown"} },
+		"*-wolf-female-darkgrey":{ "all": { base: "entity/wolf/darkgrey"} },
+		"*-wolf-female-gold":{ "all": { base: "entity/wolf/gold"} },
+		"*-wolf-female-grey":{ "all": { base: "entity/wolf/grey"} },
+		"*-wolf-female-silver":{ "all": { base: "entity/wolf/silver"} },
+		"*-wolf-female-smokegrey":{ "all": { base: "entity/wolf/smokegrey"} },
+		"*-wolf-female-white":{ "all": { base: "entity/wolf/white"} },
+		"*-wolf-pup-ashgrey":{ "all": { base: "entity/wolf/pup/ashgrey"} },
+		"*-wolf-pup-black":{ "all": { base: "entity/wolf/pup/black"} },
+		"*-wolf-pup-brown":{ "all": { base: "entity/wolf/pup/brown"} },
+		"*-wolf-pup-darkgrey":{ "all": { base: "entity/wolf/pup/darkgrey"} },
+		"*-wolf-pup-gold":{ "all": { base: "entity/wolf/pup/gold"} },
+		"*-wolf-pup-grey":{ "all": { base: "entity/wolf/pup/grey"} },
+		"*-wolf-pup-silver":{ "all": { base: "entity/wolf/pup/silver"} },
+		"*-wolf-pup-smokegrey":{ "all": { base: "entity/wolf/pup/smokegrey"} },
+		"*-wolf-pup-white":{ "all": { base: "entity/wolf/pup/white"} },
 		},
 	
 	creativeinventory: 
 		{ "general": ["*"], "items": ["*"], "neolithicfauna": ["*"] },
 	materialDensity: 600,
-	guiTransformByType: 
-		{
-		"creature-armadillo-*": {
+	guiTransformByType: {
+		"*-armadillo-*": {
 			rotate: true,
 			translation: { x: 2, y: 1, z: 0 },
 			rotation: { x: 4, y: -59, z: -180 },
 			origin: { x: 0.5, y: 0.5, z: 0.5 },
 			scale: 1.16
-		},
-		"creature-humanoid-trader-*": {
-			rotation: { x: 0, y: -90, z: -178 },
-			origin: { x: 0.6, y: 0.78, z: 0.5 }
-		},
-		"creature-butterfly-*": {
+		},		
+		"*-butterfly-*": {
 			translation: { x: 0, y: 0, z: 0 },
 			rotation: { x: 0, y: -118, z: 62 },
 			origin: { x: 0.55, y: -0.2, z: 0.42 },
 			scale: 2.5
 		},
-		"creature-panther-male-black": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-		},
-		"creature-panther-female-black": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-		},
-		"creature-panther-kitty-black": {
-			rotate: true,
-			translation: { x: 3, y: 0, z: 0 },
-			rotation: { x: -12, y: -48, z: -180 },
-			origin: { x: 0.5, y: 0.3, z: 0.5 },
-			scale: 2.18
-		},
-		
-		"creature-hyena-wild-male": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-		},
-		"creature-hyena-wild-female-tan": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-			},
-		"creature-hyena-wild-female-brown": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-		},
-		"creature-hyena-wild-pup": {
-			rotate: true,
-			translation: { x: 3, y: 0, z: 0 },
-			rotation: { x: -12, y: -48, z: -180 },
-			origin: { x: 0.5, y: 0.3, z: 0.5 },
-			scale: 2.18
-		},
-		"creature-fox-red-male": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-		},
-		"creature-fox-red-female": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-		},
-		"creature-fox-snow-male": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-		},
-		"creature-fox-snow-female": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-		},
-		
-		"creature-chicken-chick-*": {
+		"*-chicken-chick-*": {
 			rotate: true,
 			translation: { x: 2, y: 0, z: 0 },
 			rotation: { x: -11, y: -15, z: -171 },
 			origin: { x: 0.5, y: 0.15, z: 0.5 },
 			scale: 4.5
 		},
-		"creature-chicken-hen-*": 	{
+		"*-chicken-hen-*": 	{
 			rotate: true,
 			translation: { x: 0, y: 3, z: 0 },
 			rotation: { x: -7, y: -37, z: -180 },
 			origin: { x: 0.5, y: 0.32, z: 0.5 },
 			scale: 2.3599
 		},
-		"creature-chicken-rooster-*": {
+		"*-chicken-rooster-*": {
 			rotate: true,	
 			translation: { x: 6, y: 6, z: 0 },
 			rotation: { x: -7, y: -37, z: -180 },
 			origin: { x: 0.5, y: 0.32, z: 0.5 },
 			scale: 2.14
 		},
-		"creature-wolf-female-*": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-		},
-		"creature-wolf-male-*": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-		},
-		"creature-wolf-pup-*": {
-			rotate: true,
-			translation: { x: 3, y: 0, z: 0 },
-			rotation: { x: -12, y: -48, z: -180 },
-			origin: { x: 0.5, y: 0.3, z: 0.5 },
-			scale: 2.18
-		},
-		"creature-wild-sheep-ram": {
-			rotate: true,
-			translation: { x: 3, y: 0, z: 0 },
-			rotation: { x: -11, y: -52, z: -180 },
-			origin: { x: 0.5, y: 0.8, z: 0.5 },
-			scale: 0.97
-		},
-		"creature-wild-sheep--ewe": {
-			rotate: true,
-			translation: { x: 3, y: 0, z: 0 },
-			rotation: { x: -11, y: -52, z: -180 },
-			origin: { x: 0.5, y: 0.8, z: 0.5 },
-			scale: 0.97
-		},
-		"creature-wild-sheep-lamb": {
-			rotate: true,
-			translation: { x: 1, y: -1, z: 0 },
-			rotation: { x: -11, y: -52, z: -180 },
-			origin: { x: 0.5, y: 0.4, z: 0.5 },
-			scale: 1.86
-		},
-		"creature-sheep-ram": {
-			rotate: true,
-			translation: { x: 3, y: 0, z: 0 },
-			rotation: { x: -11, y: -52, z: -180 },
-			origin: { x: 0.5, y: 0.8, z: 0.5 },
-			scale: 0.97
-		},
-		"creature-sheep-ewe": {
-			rotate: true,
-			translation: { x: 3, y: 0, z: 0 },
-			rotation: { x: -11, y: -52, z: -180 },
-			origin: { x: 0.5, y: 0.8, z: 0.5 },
-			scale: 0.97
-		},
-		"creature-sheep-lamb": {
-			rotate: true,
-			translation: { x: 1, y: -1, z: 0 },
-			rotation: { x: -11, y: -52, z: -180 },
-			origin: { x: 0.5, y: 0.4, z: 0.5 },
-			scale: 1.86
-		},
-		"creature-pig-boar-*": {
-			rotate: true,
-			translation: { x: 0, y: 2, z: 0 },
-			rotation: { x: -14, y: -50, z: -180 },
-			origin: { x: 0.5, y: 0.35, z: 0.5 },
-			scale: 1.36
-		},
-		"creature-pig-sow-*": {
-			rotate: true,
-			translation: { x: 0, y: 2, z: 0 },
-			rotation: { x: -14, y: -50, z: -180 },
-			origin: { x: 0.5, y: 0.35, z: 0.5 },
-			scale: 1.36
-		},
-		"creature-pig-piglet-*": {
-			rotate: true,
-			translation: { x: 2, y: 2, z: 0 },
-			rotation: { x: -5, y: -36, z: -180 },
-			origin: { x: 0.5, y: 0.17, z: 0.5 },
-			scale: 3
-		},
-		"creature-drifter": {
+		"*-drifter": {
 			rotate: true,
 			translation: { x: 0, y: 0, z: 0 },
 			rotation: { x: 0, y: -62, z: -180 },
 			origin: { x: 0.5, y: 0.73, z: 0.5 },
 			scale: 1.17
 		},
-		"creature-locust": {
+		"*-fox-red-male": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-fox-red-female": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-fox-snow-male": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-fox-snow-female": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-hare-male-*": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.25, z: 0.5 },
+			scale: 2.8
+		},
+		"*-hare-female-*": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.25, z: 0.5 },
+			scale: 2.8
+		},
+		"*-hare-baby": {
+			rotate: true,
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: -12, y: -48, z: -180 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 3
+		},
+		"*-humanoid-trader-*": {
+			rotation: { x: 0, y: -90, z: -178 },
+			origin: { x: 0.6, y: 0.78, z: 0.5 }
+		},
+		"*-hyena-wild-male": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-hyena-wild-female-tan": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-hyena-wild-female-brown": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-hyena-wild-pup": {
+			rotate: true,
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: -12, y: -48, z: -180 },
+			origin: { x: 0.5, y: 0.3, z: 0.5 },
+			scale: 2.18
+		},
+		"*-locust": {
 			translation: { x: 6, y: 0, z: 0 },
 			rotation: { x: -20, y: -127, z: -180 },
 			origin: { x: 0.5, y: 0.2, z: 0.5 },
 			scale: 1.88
 		},
-		"creature-rabbit-baby-*": {
+		"*-panther-male-black": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-panther-female-black": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-panther-kitty-black": {
+			rotate: true,
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: -12, y: -48, z: -180 },
+			origin: { x: 0.5, y: 0.3, z: 0.5 },
+			scale: 2.18
+		},		
+		"*-pig-boar-*": {
+			rotate: true,
+			translation: { x: 0, y: 2, z: 0 },
+			rotation: { x: -14, y: -50, z: -180 },
+			origin: { x: 0.5, y: 0.35, z: 0.5 },
+			scale: 1.36
+		},
+		"*-pig-sow-*": {
+			rotate: true,
+			translation: { x: 0, y: 2, z: 0 },
+			rotation: { x: -14, y: -50, z: -180 },
+			origin: { x: 0.5, y: 0.35, z: 0.5 },
+			scale: 1.36
+		},
+		"*-pig-piglet-*": {
+			rotate: true,
+			translation: { x: 2, y: 2, z: 0 },
+			rotation: { x: -5, y: -36, z: -180 },
+			origin: { x: 0.5, y: 0.17, z: 0.5 },
+			scale: 3
+		},
+		"*-rabbit-baby-*": {
 			rotate: true,
 			translation: { x: 2, y: 0, z: 0 },
 			rotation: { x: -11, y: -15, z: -171 },
 			origin: { x: 0.5, y: 0.15, z: 0.5 },
 			scale: 3.5
 		},
-		"creature-rabbit-female-*": 	{
+		"*-rabbit-female-*": 	{
 			rotate: true,
 			translation: { x: 0, y: 3, z: 0 },
 			rotation: { x: -7, y: -37, z: -180 },
 			origin: { x: 0.5, y: 0.2, z: 0.5 },
 			scale: 3.5
 		},
-		"creature-rabbit-male-*": {
+		"*-rabbit-male-*": {
 			rotate: true,	
 			translation: { x: 6, y: 6, z: 0 },
 			rotation: { x: -7, y: -37, z: -180 },
 			origin: { x: 0.5, y: 0.2, z: 0.5 },
 			scale: 3.5
 		},
+		"*-raccoon-male": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.25, z: 0.5 },
+			scale: 3
+		},
+		"*-raccoon-female": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.25, z: 0.5 },
+			scale: 3
+		},
+		"*-raccoon-pup": {
+			rotate: true,
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: -12, y: -48, z: -180 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 3
+		},
+		"*-sheep-ram": {
+			rotate: true,
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.5, y: 0.8, z: 0.5 },
+			scale: 0.97
+		},
+		"*-sheep-ewe": {
+			rotate: true,
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.5, y: 0.8, z: 0.5 },
+			scale: 0.97
+		},
+		"*-sheep-lamb": {
+			rotate: true,
+			translation: { x: 1, y: -1, z: 0 },
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.5, y: 0.4, z: 0.5 },
+			scale: 1.86
+		},
+		"*-wild-sheep--ewe": {
+			rotate: true,
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.5, y: 0.8, z: 0.5 },
+			scale: 0.97
+		},
+		"*-wild-sheep-lamb": {
+			rotate: true,
+			translation: { x: 1, y: -1, z: 0 },
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.5, y: 0.4, z: 0.5 },
+			scale: 1.86
+		},		
+		"*-wolf-female-*": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-wolf-male-*": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-wolf-pup-*": {
+			rotate: true,
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: -12, y: -48, z: -180 },
+			origin: { x: 0.5, y: 0.3, z: 0.5 },
+			scale: 2.18
+		},
+		"*-wild-sheep-ram": {
+			rotate: true,
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: -11, y: -52, z: -180 },
+			origin: { x: 0.5, y: 0.8, z: 0.5 },
+			scale: 0.97
+		}		
 	},
 	
 	tpHandTransformByType: {
-		"creature-armadillo-*": {
+		"*-armadillo-*": {
 			translation: { x: -1, y: -0.6, z: -0.7 },
 			rotation: { x: -180, y: 0, z: -156 },
 			scale: 0.5
+		},		
+		"*-butterfly-*": {
+			translation: { x: -1.51, y: -0.9, z: -0.6 },
+			rotation: { x: -138, y: -13, z: -120 },
+			scale: 0.5
 		},
-		"creature-humanoid-trader-*": {
+		"*-chicken-chick-*": {
+			translation: { x: -0.6, y: -0.1, z: -0.5 },
+			rotation: { x: -156, y: -19, z: -82 },
+			origin: { x: 0.5, y: 0.1, z: 0.5 },
+			scale: 0.9
+		},
+		"*-chicken-hen-*": {
+			translation: { x: -0.4, y: 0, z: -0.5 },
+			rotation: { x: -160, y: -26, z: -90 },
+			origin: { x: 0.5, y: 0.1, z: 0.5 },
+			scale: 0.92
+		},
+		"*-chicken-rooster-*": {
+			translation: { x: -0.3, y: 0, z: -0.5 },
+			rotation: { x: -158, y: -25, z: -87 },
+			origin: { x: 0.5, y: 0.1, z: 0.5 },
+			scale: 0.85
+		},
+		"*-drifter": {
+			translation: { x: -0.4, y: -0.5, z: -0.4 },
+			rotation: { x: 101, y: -24, z: -113 },
+			scale: 0.8
+		},
+		"*-fox-red-male": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-fox-red-female": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-fox-snow-male": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-fox-snow-female": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.16
+		},
+		"*-hare-male": {
+			translation: { x: -0.8, y: -0.4, z: -0.5 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.7
+		},
+		"*-hare-female-*": {
+			translation: { x: -0.8, y: -0.4, z: -0.5 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.7
+		},
+		"*-hare-baby": {
+			translation: { x: -0.6, y: -0.1, z: -0.3 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 1
+		},
+		"*-hare-male-*": {
+			translation: { x: -0.8, y: -0.4, z: -0.5 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.7
+		},
+		"*-humanoid-trader-*": {
 			translation: { x: -0.6, y: -1.1, z: -0.4 },
 			rotation: { x: -85, y: -11, z: 89 },
 			origin: { x: 0.5, y: 1, z: 0.5 },
 			scale: 0.7
 		},
-		"creature-butterfly-*": {
-			translation: { x: -1.51, y: -0.9, z: -0.6 },
-			rotation: { x: -138, y: -13, z: -120 },
-			scale: 0.5
-		},
-		"creature-panther-male-black": {
+		"*-hyena-wild-male": {
 			translation: { x: -1, y: -0.6, z: -0.7 },
 			rotation: { x: -180, y: 0, z: -156 },
 			scale: 0.5
 		},
-		"creature-panther-female-black": {
+		"*-hyena-wild-female-tan": {
 			translation: { x: -1, y: -0.6, z: -0.7 },
 			rotation: { x: -180, y: 0, z: -156 },
 			scale: 0.5
 		},
-		"creature-panther-kitty-black": {
+		"*-hyena-wild-female-brown": {
+			translation: { x: -1, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.5
+		},
+		"*-hyena-wild-pup": {
 			translation: { x: -0.4, y: 0, z: -0.5 },
 			rotation: { x: -160, y: -26, z: -90 },
 			origin: { x: 0.5, y: 0.1, z: 0.5 },
 			scale: 0.92
 		},
-		
-		"creature-hyena-wild-male": {
-			translation: { x: -1, y: -0.6, z: -0.7 },
-			rotation: { x: -180, y: 0, z: -156 },
-			scale: 0.5
-		},
-		"creature-hyena-wild-female-tan": {
-			translation: { x: -1, y: -0.6, z: -0.7 },
-			rotation: { x: -180, y: 0, z: -156 },
-			scale: 0.5
-		},
-		"creature-hyena-wild-female-brown": {
-			translation: { x: -1, y: -0.6, z: -0.7 },
-			rotation: { x: -180, y: 0, z: -156 },
-			scale: 0.5
-		},
-		"creature-hyena-wild-pup": {
-			translation: { x: -0.4, y: 0, z: -0.5 },
-			rotation: { x: -160, y: -26, z: -90 },
-			origin: { x: 0.5, y: 0.1, z: 0.5 },
-			scale: 0.92
-		},
-		
-		"creature-fox-red-male": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-		},
-		"creature-fox-red-female": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-		},
-		"creature-fox-snow-male": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-		},
-		"creature-fox-snow-female": {
-			rotate: true,
-			translation: { x: 2, y: 1, z: 0 },
-			rotation: { x: 4, y: -59, z: -180 },
-			origin: { x: 0.5, y: 0.5, z: 0.5 },
-			scale: 1.16
-		},
-		
-		"creature-chicken-chick-*": {
-			translation: { x: -0.6, y: -0.1, z: -0.5 },
-			rotation: { x: -156, y: -19, z: -82 },
-			origin: { x: 0.5, y: 0.1, z: 0.5 },
-			scale: 0.9
-		},
-		"creature-chicken-hen-*": {
-			translation: { x: -0.4, y: 0, z: -0.5 },
-			rotation: { x: -160, y: -26, z: -90 },
-			origin: { x: 0.5, y: 0.1, z: 0.5 },
-			scale: 0.92
-		},
-		"creature-chicken-rooster-*": {
-			translation: { x: -0.3, y: 0, z: -0.5 },
-			rotation: { x: -158, y: -25, z: -87 },
-			origin: { x: 0.5, y: 0.1, z: 0.5 },
-			scale: 0.85
-		},
-		"creature-wolf-female-*": {
-			translation: { x: -1, y: -0.6, z: -0.7 },
-			rotation: { x: -180, y: 0, z: -156 },
-			scale: 0.5
-		},
-		"creature-wolf-male-*": {
-			translation: { x: -1, y: -0.6, z: -0.7 },
-			rotation: { x: -180, y: 0, z: -156 },
-			scale: 0.5
-		},
-		"creature-wolf-pup-*": {
-			translation: { x: -0.4, y: 0, z: -0.5 },
-			rotation: { x: -160, y: -26, z: -90 },
-			origin: { x: 0.5, y: 0.1, z: 0.5 },
-			scale: 0.92
-		},
-		"creature-wild-sheep-ram": {
-			translation: { x: -0.9, y: -0.9, z: -0.7 },
-			rotation: { x: -180, y: 0, z: -156 },
-			scale: 0.45
-		},
-		"creature-wild-sheep-ewe": {
-			translation: { x: -0.9, y: -0.9, z: -0.7 },
-			rotation: { x: -180, y: 0, z: -156 },
-			scale: 0.45
-		},
-		"creature-wild-sheep-lamb": {
-			translation: { x: -0.4, y: 0, z: -0.6 },
-			rotation: { x: -160, y: -26, z: -90 },
-			origin: { x: 0.5, y: 0.1, z: 0.5 },
-			scale: 0.73
-		},
-		"creature-sheep-ram": {
-			translation: { x: -0.9, y: -0.9, z: -0.7 },
-			rotation: { x: -180, y: 0, z: -156 },
-			scale: 0.45
-		},
-		"creature-sheep-ewe": {
-			translation: { x: -0.9, y: -0.9, z: -0.7 },
-			rotation: { x: -180, y: 0, z: -156 },
-			scale: 0.45
-		},
-		"creature-sheep-lamb": {
-			translation: { x: -0.4, y: 0, z: -0.6 },
-			rotation: { x: -160, y: -26, z: -90 },
-			origin: { x: 0.5, y: 0.1, z: 0.5 },
-			scale: 0.73
-		},
-		"creature-pig-boar-*": {
-			translation: { x: -1, y: -0.6, z: -0.7 },
-			rotation: { x: -180, y: 0, z: -156 },
-			scale: 0.5
-		},
-		"creature-pig-sow-*": {
-			translation: { x: -1, y: -0.6, z: -0.7 },
-			rotation: { x: -180, y: 0, z: -156 },
-			scale: 0.5
-		},
-		"creature-pig-piglet-*": {
-			translation: { x: -0.4, y: -0.1, z: -0.4 },
-			rotation: { x: -136, y: -19, z: -135 },
-			origin: { x: 0.5, y: 0.1, z: 0.5 },
-			scale: 0.92
-		},
-		"creature-drifter": {
-			translation: { x: -0.4, y: -0.5, z: -0.4 },
-			rotation: { x: 101, y: -24, z: -113 },
-			scale: 0.8
-		},
-		"creature-locust": {
+		"*-locust": {
 			translation: { x: -1.1, y: -0.3, z: -0.7 },
 			rotation: { x: -159, y: -21, z: -89 },
 			origin: { x: 0.5, y: 0.2, z: 0.5 },
 			scale: 0.53
 		},
-		"creature-rabbit-baby-*": {
+		"*-panther-male-black": {
+			translation: { x: -1, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.5
+		},
+		"*-panther-female-black": {
+			translation: { x: -1, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.5
+		},
+		"*-panther-kitty-black": {
+			translation: { x: -0.4, y: 0, z: -0.5 },
+			rotation: { x: -160, y: -26, z: -90 },
+			origin: { x: 0.5, y: 0.1, z: 0.5 },
+			scale: 0.92
+		},		
+		"*-pig-boar-*": {
+			translation: { x: -1, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.5
+		},
+		"*-pig-sow-*": {
+			translation: { x: -1, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.5
+		},
+		"*-pig-piglet-*": {
+			translation: { x: -0.4, y: -0.1, z: -0.4 },
+			rotation: { x: -136, y: -19, z: -135 },
+			origin: { x: 0.5, y: 0.1, z: 0.5 },
+			scale: 0.92
+		},
+		"*-rabbit-baby-*": {
 			translation: { x: -0.6, y: -0.1, z: -0.5 },
 			rotation: { x: -156, y: -19, z: -82 },
 			origin: { x: 0.5, y: 0.1, z: 0.5 },
 			scale: 0.9
 		},
-		"creature-rabbit-female-*": {
+		"*-rabbit-female-*": {
 			translation: { x: -0.4, y: 0, z: -0.5 },
 			rotation: { x: -160, y: -26, z: -90 },
 			origin: { x: 0.5, y: 0.1, z: 0.5 },
 			scale: 0.92
 		},
-		"creature-rabbit-male-*": {
+		"*-rabbit-male-*": {
 			translation: { x: -0.3, y: 0, z: -0.5 },
 			rotation: { x: -158, y: -25, z: -87 },
 			origin: { x: 0.5, y: 0.1, z: 0.5 },
 			scale: 0.85
 		},
+		"*-raccoon-male": {
+			translation: { x: -0.8, y: -0.4, z: -0.5 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.7
+		},
+		"*-raccoon-female": {
+			translation: { x: -0.8, y: -0.4, z: -0.5 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.7
+		},
+		"*-raccoon-pup": {
+			translation: { x: -0.8, y: -0.4, z: -0.5 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.75
+		},		
+		"*-sheep-ram": {
+			translation: { x: -0.9, y: -0.9, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.45
+		},
+		"*-sheep-ewe": {
+			translation: { x: -0.9, y: -0.9, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.45
+		},
+		"*-sheep-lamb": {
+			translation: { x: -0.4, y: 0, z: -0.6 },
+			rotation: { x: -160, y: -26, z: -90 },
+			origin: { x: 0.5, y: 0.1, z: 0.5 },
+			scale: 0.73
+		},
+		"*-wild-sheep-ewe": {
+			translation: { x: -0.9, y: -0.9, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.45
+		},
+		"*-wild-sheep-lamb": {
+			translation: { x: -0.4, y: 0, z: -0.6 },
+			rotation: { x: -160, y: -26, z: -90 },
+			origin: { x: 0.5, y: 0.1, z: 0.5 },
+			scale: 0.73
+		},
+		"*-wolf-female-*": {
+			translation: { x: -1, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.5
+		},
+		"*-wolf-male-*": {
+			translation: { x: -1, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.5
+		},
+		"*-wolf-pup-*": {
+			translation: { x: -0.4, y: 0, z: -0.5 },
+			rotation: { x: -160, y: -26, z: -90 },
+			origin: { x: 0.5, y: 0.1, z: 0.5 },
+			scale: 0.92
+		},
+		"*-wild-sheep-ram": {
+			translation: { x: -0.9, y: -0.9, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.45
+		},		
 	},
 	
-	fpHandTransformByType: 
-		{
-		"creature-armadillo-*": {
+	fpHandTransformByType: {
+		"*-armadillo-*": {
 			translation: { x: 0.4, y: 0, z: 0 },
 			rotation: { x: -180, y: -96, z: -180 },
 			scale: 1.16
 		},
-		"creature-humanoid-trader-*": {
-			translation: { x: 0.05, y: -0.3, z: 0 },
-			rotation: { x: 165, y: 76, z: -180 }
-		},
-		"creature-butterfly-*": {
+		"*-butterfly-*": {
 			translation: { x: 0.12, y: -0.05, z: 0 },
 			rotation: { x: 0, y: -75, z: -25 }
 		},
-		"creature-panther-male-black": {
-			translation: { x: 0.4, y: 0, z: 0 },
-			rotation: { x: -180, y: -96, z: -180 },
-			scale: 1.16
-		},
-		"creature-panther-female-black": {
-			translation: { x: 0.4, y: 0, z: 0 },
-			rotation: { x: -180, y: -96, z: -180 },
-			scale: 1.16
-		},
-		"creature-panther-kitty-black": {
-			translation: { x: 0.4, y: 0.1, z: 0 },
-			rotation: { x: -180, y: -78, z: -180 },
-			scale: 1.21
-		},
-		
-		"creature-hyena-wild-male": {
-			translation: { x: 0.4, y: 0, z: 0 },
-			rotation: { x: -180, y: -96, z: -180 },
-			scale: 1.16
-		},
-		"creature-hyena-wild-female-tan": {
-			translation: { x: 0.4, y: 0, z: 0 },
-			rotation: { x: -180, y: -96, z: -180 },
-			scale: 1.16
-		},
-		"creature-hyena-wild-female-brown": {
-			translation: { x: 0.4, y: 0, z: 0 },
-			rotation: { x: -180, y: -96, z: -180 },
-			scale: 1.16
-		},
-		"creature-hyena-wild-pup": {
-			translation: { x: 0.4, y: 0.1, z: 0 },
-			rotation: { x: -180, y: -78, z: -180 },
-			scale: 1.21
-		},
-		"creature-fox-red-male": {
-			translation: { x: 0.4, y: 0, z: 0 },
-			rotation: { x: -180, y: -96, z: -180 },
-			scale: 1.16
-		},
-		"creature-fox-red-female": {
-			translation: { x: 0.4, y: 0, z: 0 },
-			rotation: { x: -180, y: -96, z: -180 },
-			scale: 1.16
-		},
-		"creature-fox-snow-male": {
-			translation: { x: 0.4, y: 0, z: 0 },
-			rotation: { x: -180, y: -96, z: -180 },
-			scale: 1.16
-		},
-		"creature-fox-snow-female": {
-			translation: { x: 0.4, y: 0, z: 0 },
-			rotation: { x: -180, y: -96, z: -180 },
-			
-		
-		"creature-chicken-chick-*": {
+		"*-chicken-chick-*": {
 			translation: { x: 0.5, y: 0.3, z: 0 },
 			rotation: { x: -180, y: -119, z: -180 },
 			scale: 2
 		},
-		"creature-chicken-hen-*": {
+		"*-chicken-hen-*": {
 		  translation: { x: -0.15, y: 0.2, z: 0.3 },
 		  rotation: { x: 180, y: -87, z: -180 },
 		  scale: 2.05
 		},
-		"creature-chicken-rooster-*": {
+		"*-chicken-rooster-*": {
 		  translation: { x: -0.15, y: 0.2, z: 0.3 },
 		  rotation: { x: 180, y: -87, z: -180 },
 		  scale: 2.05
 		},
-		"creature-wolf-female-*": {
-			translation: { x: 0.4, y: 0, z: 0 },
-			rotation: { x: -180, y: -96, z: -180 },
-			scale: 1.16
-		},
-		"creature-wolf-male-*": {
-			translation: { x: 0.4, y: 0, z: 0 },
-			rotation: { x: -180, y: -96, z: -180 },
-			scale: 1.16
-		},
-		"creature-wolf-pup-*": {
-			translation: { x: 0.4, y: 0.1, z: 0 },
-			rotation: { x: -180, y: -78, z: -180 },
-			scale: 1.21
-		},
-		"creature-wild-sheep-ram": {
-			translation: { x: 0.2, y: 0, z: 0 },
-			rotation: { x: -8, y: -63, z: -7 }
-		},
-		"creature-wild-sheep-ewe": {
-		  translation: { x: 1, y: -1, z: 0 },
-		  rotation: { x: -11, y: -52, z: -180 },
-		  origin: { x: 0.5, y: 0.4, z: 0.5 },
-		  scale: 1.86
-		},
-		"creature-wild-sheep-lamb": {
-			translation: { x: 0.4, y: 0, z: 0 },
-			rotation: { x: -8, y: -63, z: -7 }
-		},
-		"creature-sheep-ram": {
-			translation: { x: 0.2, y: 0, z: 0 },
-			rotation: { x: -8, y: -63, z: -7 }
-		},
-		"creature-sheep-ewe": {
-			translation: { x: 0.2, y: 0, z: 0 },
-			rotation: { x: -8, y: -63, z: -7 }
-		},
-		"creature-sheep-lamb": {
-			translation: { x: 0.4, y: 0, z: 0 },
-			rotation: { x: -8, y: -63, z: -7 }
-		},
-		"creature-pig-boar-*": {
-			translation: { x: 0.3, y: -0.1, z: 0 },
-			rotation: { x: -130, y: -95, z: -180 },
-			scale: 1.36
-		},
-		"creature-pig-sow-*": {
-			translation: { x: 0.3, y: -0.1, z: 0 },
-			rotation: { x: -130, y: -95, z: -180 },
-			scale: 1.36
-		},
-		"creature-pig-piglet-*": {
-			translation: { x: 0.5, y: 0.1, z: 0 },
-			rotation: { x: -180, y: -95, z: -180 },
-			scale: 1.36
-		},
-		"creature-drifter": {
+		"*-drifter": {
 			translation: { x: 0.4, y: 0, z: 0 },
 			rotation: { x: -180, y: -131, z: -180 },
 			scale: 1.17
 		},
-		"creature-locust": {
+		"*-fox-red-male": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+			scale: 1.16
+		},
+		"*-fox-red-female": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+			scale: 1.16
+		},
+		"*-fox-snow-male": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 }, 
+			scale: 1.16
+		},
+		"*-fox-snow-female": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+		},
+		"*-hare-male-*": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+			scale: 1.16
+		},
+		"*-hare-female-*": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+			scale: 1.16
+		},
+		"*-hare-baby": {
+			translation: { x: 0.4, y: 0.1, z: 0 },
+			rotation: { x: -180, y: -78, z: -180 },
+			scale: 1.21
+		},
+		"*-humanoid-trader-*": {
+			translation: { x: 0.05, y: -0.3, z: 0 },
+			rotation: { x: 165, y: 76, z: -180 }
+		},
+		"*-hyena-wild-male": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+			scale: 1.16
+		},
+		"*-hyena-wild-female-tan": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+			scale: 1.16
+		},
+		"*-hyena-wild-female-brown": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+			scale: 1.16
+		},
+		"*-hyena-wild-pup": {
+			translation: { x: 0.4, y: 0.1, z: 0 },
+			rotation: { x: -180, y: -78, z: -180 },
+			scale: 1.21
+		},
+		"*-locust": {
 			translation: { x: -1, y: -0.3, z: -0.7 },
 			rotation: { x: -149, y: -13, z: -121 },
 			origin: { x: 0.5, y: 0.1, z: 0.5 },
 			scale: 0.53
 		},
-		"creature-rabbit-baby-*": {
+		"*-panther-male-black": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+			scale: 1.16
+		},
+		"*-panther-female-black": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+			scale: 1.16
+		},
+		"*-panther-kitty-black": {
+			translation: { x: 0.4, y: 0.1, z: 0 },
+			rotation: { x: -180, y: -78, z: -180 },
+			scale: 1.21
+		},
+		"*-pig-boar-*": {
+			translation: { x: 0.3, y: -0.1, z: 0 },
+			rotation: { x: -130, y: -95, z: -180 },
+			scale: 1.36
+		},
+		"*-pig-sow-*": {
+			translation: { x: 0.3, y: -0.1, z: 0 },
+			rotation: { x: -130, y: -95, z: -180 },
+			scale: 1.36
+		},
+		"*-pig-piglet-*": {
+			translation: { x: 0.5, y: 0.1, z: 0 },
+			rotation: { x: -180, y: -95, z: -180 },
+			scale: 1.36
+		},
+        "*-rabbit-baby-*": {
 			translation: { x: 0.5, y: 0.3, z: 0 },
 			rotation: { x: -180, y: -119, z: -180 },
 			scale: 2
 		},
-		"creature-rabbit-female-*": {
+		"*-rabbit-female-*": {
 			translation: { x: 0.4, y: 0.1, z: 0 },
 			rotation: { x: -180, y: -119, z: -180 },
 			scale: 2
 		},
-		"creature-rabbit-male-*": {
+		"*-rabbit-male-*": {
 			translation: { x: 0.4, y: 0.1, z: 0 },
 			rotation: { x: -180, y: -119, z: -180 },
 			scale: 2
 		},
+        "*-raccoon-male": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+			scale: 1.16
+		},
+		"*-raccoon-female": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+			scale: 1.16
+		},
+		"*-raccoon-pup": {
+			translation: { x: 0.4, y: 0.1, z: 0 },
+			rotation: { x: -180, y: -78, z: -180 },
+			scale: 1.21
+		},		
+		"*-sheep-ram": {
+			translation: { x: 0.2, y: 0, z: 0 },
+			rotation: { x: -8, y: -63, z: -7 }
+		},
+		"*-sheep-ewe": {
+			translation: { x: 0.2, y: 0, z: 0 },
+			rotation: { x: -8, y: -63, z: -7 }
+		},
+		"*-sheep-lamb": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -8, y: -63, z: -7 }
+		},
+		"*-wild-sheep-ram": {
+			translation: { x: 0.2, y: 0, z: 0 },
+			rotation: { x: -8, y: -63, z: -7 }
+		},
+		"*-wild-sheep-ewe": {
+		  translation: { x: 1, y: -1, z: 0 },
+		  rotation: { x: -11, y: -52, z: -180 },
+		  origin: { x: 0.5, y: 0.4, z: 0.5 },
+		  scale: 1.86
+		},
+		"*-wild-sheep-lamb": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -8, y: -63, z: -7 }
+		},
+		"*-wolf-female-*": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+			scale: 1.16
+		},
+		"*-wolf-male-*": {
+			translation: { x: 0.4, y: 0, z: 0 },
+			rotation: { x: -180, y: -96, z: -180 },
+			scale: 1.16
+		},
+		"*-wolf-pup-*": {
+			translation: { x: 0.4, y: 0.1, z: 0 },
+			rotation: { x: -180, y: -78, z: -180 },
+			scale: 1.21	
 		}
 	}
 }
