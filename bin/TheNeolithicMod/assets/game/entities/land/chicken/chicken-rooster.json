@@ -55,6 +55,10 @@
       }
     },
     behaviors: [
+      { 
+        code: "damagenotify",
+        notifyRange: 10.00
+      },
       { code: "repulseagents" },
       { code: "featherpluck" },
       {

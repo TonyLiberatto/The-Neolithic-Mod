@@ -31,13 +31,7 @@ namespace TheNeolithicMod
                 EntityAgent agent = e as EntityAgent;
                 if (e.EntityId != entity.EntityId && agent != null && agent.Alive && agent.HerdId == (entity as EntityAgent).HerdId)
                 {
-                    float r = (float)agent.World.Rand.NextDouble();
-
-                    if (r < 0.5 && !TryTriggerAoD(agent))
-                    {
-                        TryTriggerFlee(agent);
-                    }
-                    else
+                    if (!TryTriggerAoD(agent))
                     {
                         TryTriggerFlee(agent);
                     }
@@ -48,7 +42,7 @@ namespace TheNeolithicMod
 
         public bool TryTriggerAoD(EntityAgent agent) => agent.GetBehavior<EntityBehaviorEmotionStates>().TryTriggerState("aggressiveondamage");
 
-        public bool TryTriggerFlee(EntityAgent agent) => agent.GetBehavior<EntityBehaviorEmotionStates>().TryTriggerState("fleeentity");
+        public bool TryTriggerFlee(EntityAgent agent) => agent.GetBehavior<EntityBehaviorEmotionStates>().TryTriggerState("fleeondamage");
 
         public override string PropertyName() => "damagenotify";
     }
