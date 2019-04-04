@@ -4,8 +4,26 @@
 	behaviors: [{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"} ],
 	variantgroups: [
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },
-    { code:"type", states: ["raw", "burned", "honey", "glue", "sinewfibers", "milk"] },
+		{ code:"type", states: ["raw", "burned", "honey", "glue", "sinewfibers", "milk"] },
 	],
+	attributesByType: {
+		"*-burned": {
+			itemContainers: {
+				"honeyportion": "bowl-{color}-honey"
+			},
+			mealContainer: true,
+			mealBlockCode: "bowl-meal-{color}",
+			servingCapacity: 1,
+			bowlContents: null,
+		},
+		"*-honeyportion": {
+			bowlContents: "honeyportion",
+			emptiedBlockCode: "bowl-{color}-burned",
+		},
+		"*": {
+			bowlContents: null
+		}
+	},
 	combustiblePropsByType: {
 		"*-raw": {
 			meltingPoint: 600,
@@ -42,12 +60,12 @@
 		"*-raw": { 
 			all: { base: "block/clay/{color}-raw" }
 		},
-    "*-burned": { 
+		"*-burned": { 
 			all: { base: "block/clay/{color}-burned" }
 		},
 		"*-honey": {
 			all: { base: "block/clay/{color}-burned" },
-			content: { base: "block/liquid/honey" }
+			content: { base: "block/liquid/honey" },
 		},
 		"*-glue": {
 			all: { base: "block/clay/{color}-burned" },
@@ -93,7 +111,7 @@
 		scale: 0.66
 	},
 	nutritionPropsByType: {
-		"*-honey": { 
+		"bowl-*-honey": { 
 			saturation: 60, 
 			health: 0.5,
 			eatenStack: { type: "block", code: "bowl-{color}-burned" }

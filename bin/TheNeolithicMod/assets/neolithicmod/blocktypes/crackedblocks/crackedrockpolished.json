@@ -1,7 +1,7 @@
 {
 	code: "crackedrockpolished",
 	variantgroups: [
-		{ code: "type", states: ["andesite", "basalt", "chalk", "chert","claystone", "granite", "obsidian", "sandstone", "shale"] },
+		{ code: "rock", states:["whitemarble", "greenmarble", "redmarble"], loadFromProperties: "block/rock" }
 	],
 	drawtype: "Cube",
 	blockmaterial: "Stone",
@@ -10,7 +10,7 @@
 	resistance: 1.5,
 	lightAbsorption: 99,
 	textures: {
-		all: { base: "crackedblock/stone/rockpolished/{type}*" },
+		all: { base: "crackedblock/stone/rockpolished/{rock}*" },
 	},
 	sounds: {
 		walk: "game:walk/stone",

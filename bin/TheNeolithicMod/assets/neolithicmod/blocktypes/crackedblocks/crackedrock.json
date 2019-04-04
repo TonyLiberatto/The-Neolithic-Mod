@@ -1,7 +1,7 @@
 {
 	code: "crackedrock",
 	variantgroups: [
-		{ code: "type", states: ["andesite", "basalt", "chalk", "chert","claystone", "granite", "obsidian", "sandstone", "shale"] },
+		{ loadFromProperties: "block/rockwithdeposit" }
 	],
 	drawtype: "Cube",
 	blockmaterial: "Stone",
