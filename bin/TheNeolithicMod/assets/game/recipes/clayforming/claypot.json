@@ -1,5 +1,5 @@
 {
-	ingredient: { type: "item", code: "clay-*", name: "type", allowedVariants: ["blue", "fire"] },
+	ingredient: { type: "item", code: "clay-*", name: "color", allowedVariants: ["blue", "fire", "red", "brown"] },
 	pattern: [[
 		"#######",
 		"#######",
@@ -55,5 +55,5 @@
 		"_______",
 	]],
 	name: "claypot",
-	output: { type: "block", code: "claypot-raw"  }
+	output: { type: "block", code: "claypot-{color}-raw"  }
 }

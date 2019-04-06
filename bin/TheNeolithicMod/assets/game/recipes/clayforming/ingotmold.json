@@ -1,5 +1,5 @@
 {
-	ingredient: { type: "item", code: "clay-*", name: "type", allowedVariants: ["blue", "fire"] },
+	ingredient: { type: "item", code: "clay-*", name: "color", allowedVariants: ["blue", "fire", "red", "brown"] },
 	pattern: [[
 		"#########",
 		"#########",
@@ -23,5 +23,5 @@
 	]
 	],
 	name: "Ingot Mold",
-	output: { type: "block", code: "ingotmold-raw"  }
+	output: { type: "block", code: "ingotmold-{color}-raw"  }
 }

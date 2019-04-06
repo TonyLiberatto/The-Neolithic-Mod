@@ -43,38 +43,38 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -96,7 +96,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Vintagestory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -112,15 +112,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -196,10 +196,11 @@
   <ItemGroup>
     <None Include="bin\TheNeolithicMod\All about The Neolithic Mod.docx" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowl-meal-colors.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowl-meal.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowl.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowlstampmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\chimney.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\pot-colors.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillamp.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\lightsources\bunchotallowcandles.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\lightsources\glass_lantern.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\metal\bowlstamp.json" />
@@ -541,6 +542,8 @@
     <None Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\roman\source.psd" />
     <None Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\stones\stepping test.psd" />
     <None Include="bin\TheNeolithicMod\assets\game\worldgen\blockpatches.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\soil\clay.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\treengenproperties.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bag\burdenbasket.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bone\skulls\skullboar.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bone\skulls\skullewe.json" />
@@ -575,8 +578,6 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\crackedblocks\crackedbrick.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\crackedblocks\crackedrock.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\crackedblocks\crackedrockpolished.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\crackedblocks\obsidianbrick.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\crackedblocks\obsidianpolished.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\headtrophy\eweheadtrophy.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\headtrophy\hogheadtrophy.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\headtrophy\hyenaheadtrophy.json" />
@@ -1190,7 +1191,10 @@
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\plant\sisal\sisalbark.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\plant\sisal\sisalflowers.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\plant\sisal\sisalleaf.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\ribbon.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\sinew.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\soil\brownclay.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\soil\redclay.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\base\moss.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\gravel\obsidian.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\roman\brick-andesite.png" />

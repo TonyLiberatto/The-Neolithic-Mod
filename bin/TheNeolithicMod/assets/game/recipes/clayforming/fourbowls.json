@@ -1,5 +1,5 @@
 {
-	ingredient: { type: "item", code: "clay-*", name: "type", allowedVariants: ["blue", "fire", "red", "brown"] },
+	ingredient: { type: "item", code: "clay-*", name: "color", allowedVariants: ["blue", "fire", "red", "brown"] },
 	pattern: [[
 		"#####__#####",
 		"#####__#####",
@@ -29,5 +29,5 @@
 		"#####__#####",
 	]],
 	name: "Bowl",
-	output: { type: "block", code: "bowl-{type}-raw", stacksize: 4  }
+	output: { type: "block", code: "bowl-{color}-raw", stacksize: 4  }
 }

@@ -2,15 +2,15 @@
 	code: "rawbrick",
 	maxstacksize: 64,
 	variantgroups: [
-		{ code: "type", states: ["blue", "fire", "red", "brown" ] },
+		{ code: "color", states: ["blue", "fire", "red", "brown" ] },
 	],
-	texture: { base: "item/resource/brick/raw/{type}" },
+	texture: { base: "item/resource/brick/raw/{color}" },
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	combustibleProps: {
 		meltingPoint: 1100,
 		meltingDuration: 15,
 		smeltingType: "bake",
-		smeltedStack: { type: "item", code: "burnedbrick-{type}" },
+		smeltedStack: { type: "item", code: "burnedbrick-{color}" },
 		requiresContainer: false
 	},
 	fpHandTransform: {

@@ -1,5 +1,5 @@
 {
-	ingredient: { type: "item", code: "clay-*", name: "type", allowedVariants: ["blue", "fire"] },
+	ingredient: { type: "item", code: "clay-*", name: "color", allowedVariants: ["blue", "fire", "red", "brown"] },
 	pattern: [[
 		"##############",
 		"##############",
@@ -33,5 +33,5 @@
 		"##############",
 	]],
 	name: "Shovel Mold",
-	output: { type: "block", code: "toolmold-raw-shovel"  }
+	output: { type: "block", code: "toolmold-{color}-raw-shovel"  }
 }

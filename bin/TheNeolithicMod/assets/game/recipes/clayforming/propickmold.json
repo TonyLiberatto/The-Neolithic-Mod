@@ -1,5 +1,5 @@
 {
-	ingredient: { type: "item", code: "clay-*", name: "type", allowedVariants: ["blue", "fire"] },
+	ingredient: { type: "item", code: "clay-*", name: "color", allowedVariants: ["blue", "fire", "red", "brown"] },
 	pattern: [[
 		"##############",
 		"##############",
@@ -33,5 +33,5 @@
 		"##############",
 	]],
 	name: "Pickaxe Mold",
-	output: { type: "block", code: "toolmold-raw-prospectingpick"  }
+	output: { type: "block", code: "toolmold-{color}-raw-prospectingpick"  }
 }

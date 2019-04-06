@@ -1,5 +1,5 @@
 {
-	code: "claypot-colors",
+	code: "claypot",
 	behaviors: [{name: "UnstableFalling"}],
 	classByType: {
 		"claypot-colors-*-burned": "BlockCookingContainerFix",
@@ -7,9 +7,9 @@
 	},
 	heldTpIdleAnimation: "holdbothhands",
 	attributesByType: {
-		"claypot-colors-*-raw": { },
+		"claypot-*-raw": { },
 		
-		"claypot-colors-*-burned": {
+		"claypot-*-burned": {
 			cookingContainerSlots: 4,
 			storageType: 1,
 			maxTemperature: 200,
@@ -21,7 +21,7 @@
 			}
 		},
 		
-		"claypot-colors-*-cooked": {
+		"claypot-*-cooked": {
 			allowHeating: true,
 			maxTemperature: 200,
 			
@@ -76,12 +76,12 @@
 		"*-cooked": "CookedContainerFix",
 	},
 	combustiblePropsByType: {
-		"claypot-colors-*-raw": {
+		"claypot-*-raw": {
 			meltingPoint: 600,
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "claypot-colors-{color}-burned" },
+			smeltedStack: { type: "block", code: "claypot-{color}-burned" },
 			requiresContainer: false
 		}
 	},
