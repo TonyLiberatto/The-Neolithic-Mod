@@ -69,7 +69,7 @@
 			meltingDuration: 30,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "flowerpot-{color}-empty" },
+			smeltedStack: { type: "block", code: "flowerpot-{color}-raw-empty" },
 			requiresContainer: false
 		}
 	},
