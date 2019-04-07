@@ -6,10 +6,11 @@
     },
     behaviors: [{name: "UnstableFalling"}],
     variantgroups: [
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },
         { code:"materialtype", states: ["raw", "burned"] },
     ],
     attributesByType: {
-        "bowlstampmold-burned": {
+        "*-burned": {
             "requiredUnits": 400,
             "fillHeight": 3,
 			"fillQuadsByLevel": [
@@ -21,27 +22,27 @@
 			}
         },
 	entityClassByType: {
-		"bowlstampmold-burned": "ToolMold",
+		"*-burned": "ToolMold",
 	},
     combustiblePropsByType: {
-        "bowlstampmold-raw": {
+        "*-raw": {
             meltingPoint: 600,
             meltingDuration: 45,
             smeltedRatio: 1,
             smeltingType: "bake",
-            smeltedStack: { type: "block", code: "bowlstampmold-burned" },
+            smeltedStack: { type: "block", code: "bowlstampmold-{color}-burned" },
             requiresContainer: false
         }
     },
     blockmaterial: "Ceramic",
-    creativeinventory: { "general": ["*"], "construction": ["*"] },
+    creativeinventory: { "general": ["*"], "construction": ["*"], "neolithictools": ["*"] },
     replaceable: 700,
     resistance: 1.5,
     maxStackSize: 8,
     lightAbsorption: 0,
     texturesByType: {
-        "bowlstampmold-raw": {  all: { base: "block/clay/blueclay" } },
-        "bowlstampmold-burned": {  floor: { base: "block/clay/ceramic-dark" }, other: { base: "block/clay/ceramic" } }
+        "*-raw": {  all: { base: "block/clay/{color}-raw" } },
+        "*-burned": {  floor: { base: "block/clay/{color}-burned" }, other: { base: "block/clay/{color}-burned" } }
     },
     drawtype: "json",
     shape: { base: "block/clay/mold/bowlstampmold", rotateY: 90 },

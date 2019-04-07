@@ -102,6 +102,7 @@
     <Reference Include="Vintagestory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\VS-1.9-pre\Vintagestory.exe</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI">
       <HintPath>..\..\VintagestoryAPI.dll</HintPath>

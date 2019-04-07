@@ -1,24 +1,11 @@
 {
-	code: "flowerpot",
+	code: "clayplanter-blue",
 	classByType: {
 		"*-raw": "Block",
 		"*": "BlockFlowerPot"
 	},
-	behaviors: [{name: "UnstableFalling"}],
 	attributes: {
 		sitHeight: 0.75,
-		beeFeedByType: {
-			"*-catmint": true,
-			"*-forgetmenot": true,
-			"*-edelweiss": true,
-			"*-heather": true,
-			"*-orangemallow": true,
-			"*-wilddaisy": true,
-			"*-westerngorse": true,
-			"*-cowparsley": true,
-			"*-californiapoppy": true,
-			"*-horsetail": true
-		},
 		butterflyFeedByType: {
 			"*-catmint": true,
 			"*-forgetmenot": true,
@@ -29,11 +16,34 @@
 			"*-westerngorse": true,
 			"*-cowparsley": true,
 			"*-californiapoppy": true,
-			"*-horsetail": true
+			"*-horsetail": true,
+			"*-lupine-blue": true,
+			"*-lupine-orange": true,
+			"*-lupine-purple": true,
+			"*-lupine-red": true,
+			"*-lupine-white": true,
+		},
+		beeFeedByType: {
+			"*-catmint": true,
+			"*-forgetmenot": true,
+			"*-edelweiss": true,
+			"*-heather": true,
+			"*-orangemallow": true,
+			"*-wilddaisy": true,
+			"*-westerngorse": true,
+			"*-cowparsley": true,
+			"*-californiapoppy": true,
+			"*-horsetail": true,
+			"*-lupine-blue": true,
+			"*-lupine-orange": true,
+			"*-lupine-purple": true,
+			"*-lupine-red": true,
+			"*-lupine-white": true,
 		}
 	},
+	creativeinventory: { "general": ["clayplanter-empty", "clayplanter-raw"], "decorative": ["clayplanter-empty", "clayplanter-raw"] },
+	behaviors: [{name: "UnstableFalling"}],
 	variantgroups: [
-		{ code:"color", states: ["blue", "brown", "fire", "red"] },
 		{ code: "type", states: ["raw"] },
 		{ code: "empty", states: ["empty"], combine: "add" },
 		{ code: "flower", states:["lupine-blue", "lupine-orange", "lupine-purple", "lupine-red", "lupine-white"], loadFromProperties: "block/flower", combine: "add" },
@@ -41,53 +51,48 @@
 		{ code: "sapling", loadFromProperties: "block/wood", combine: "add" },
 	],
 	shapeByType: {
-		"*-raw": { base: "block/clay/flowerpot/empty" },
-		"*-empty": { base: "block/clay/flowerpot/empty" },
-		"flowerpot-*": { base: "block/clay/flowerpot/full" }
+		"*-raw": { base: "block/clay/planter/planter-raw" },
+		"*-empty": { base: "block/clay/planter/planter-empty" },
+		"clayplanter-*": { base: "block/clay/planter/planter-full" }
 	},
-	creativeinventory: { "general": ["flowerpot-raw", "flowerpot-empty"], "decorative": ["flowerpot-raw", "flowerpot-empty"], "neolithicdeco": ["flowerpot-raw", "flowerpot-empty"] },
 	blockmaterial: "Ceramic",
 	replaceable: 900,
 	resistance: 1.5,
 	lightAbsorption: 1,
 	texturesByType: {
-		"*-raw": { all: {  base: "block/clay/{color}-raw", }  },
-		"*-empty": { all: {  base: "block/clay/{color}-burned" }  },
-		"flowerpot-*": {
+		"*-raw": { all: {  base: "block/clay/blue-raw" }  },
+		"*-empty": { 
+			"0": {  base: "block/clay/blue-raw" },
+			"soil": {  base: "block/clay/planter/soil" } 	
+		},
+		"clayplanter-*": { 
+			"0": {  base: "block/clay/blue-raw" },
+			"1": {  base: "block/clay/planter/soil" }, 	
 			"flower": { base: "block/plant/potted/{flower|sapling|mushroom}" }
 		},
 	},
 	sidesolid: {
 		all: false
-	},
+	},	
 	sideopaque: {
 		all: false
 	},
 	combustiblePropsByType: {
-		"flowerpot-*-raw": {
+		"*-raw": {
 			meltingPoint: 600,
 			meltingDuration: 30,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "flowerpot-{color}-empty" },
+			smeltedStack: { type: "block", code: "clayplanter-blue-empty" },
 			requiresContainer: false
 		}
 	},
 	collisionbox: {
-		x1: 0.3125, y1: 0, z1: 0.3125,
-		x2: 0.6875, y2: 0.4375, z2: 0.6875
+		x1: 0.125, y1: 0, z1: 0.125,
+		x2: 0.875, y2: 0.5625, z2: 0.875
 	},
 	selectionbox: {
-		x1: 0.3125, y1: 0, z1: 0.3125,
-		x2: 0.6875, y2: 0.4375, z2: 0.6875
-	},
-	tpHandTransform: {
-		translation: { x: -1.5, y: -0.9, z: -1 },
-		rotation: { x: -78, y: 32, z: -95 },
-		scale: 0.45
-	},
-	guiTransform: {
-		origin: { x: 0.5, y: 0.3, z: 0.5 },
-		scale: 1.5
+		x1: 0.125, y1: 0, z1: 0.125,
+		x2: 0.875, y2: 0.5625, z2: 0.875
 	}
 }

@@ -5,5 +5,5 @@
 	},
 	width: 3,
 	height: 2,
-	output: { type: "block", code: "trough-genericwood-large-head-north"  }
+	output: { type: "block", code: "game:trough-genericwood-large-head-north"  }
 }

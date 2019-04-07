@@ -1,5 +1,4 @@
 [
-	{ file: "game:recipes/grid/bambooplanks", op: "add", path: "/enabled",  value: false },
 	{ file: "game:recipes/grid/stackedbamboo", op: "add", path: "/enabled",  value: false },
 	{ file: "game:recipes/grid/tool/spear", op: "add", path: "/enabled",  value: false },
 	{ file: "game:recipes/grid/chest", op: "add", path: "/enabled",  value: false },

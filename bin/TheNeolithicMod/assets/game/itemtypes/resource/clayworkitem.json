@@ -3,8 +3,8 @@
 	sdclass: "ItemWorkItem",
 	maxstacksize: 1,
 	variantgroups: [
-		{ code: "type", states: ["blue", "fire", "red", "brown" ] },
+		{ code: "color", states: ["blue", "fire", "red", "brown" ] },
 	],
-	texture: { base: "item/resource/clay/raw-{type}clay" },
+	texture: { base: "item/resource/clay/raw-{color}clay" },
 	creativeinventory: { "general": [""], "items": [""] },
 }
