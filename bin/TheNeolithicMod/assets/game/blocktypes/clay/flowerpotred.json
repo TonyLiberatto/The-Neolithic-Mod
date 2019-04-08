@@ -51,10 +51,13 @@
 	lightAbsorption: 1,
 	texturesByType: {
 		"*-raw": { all: {  base: "block/clay/red-raw", }  },
-		"*-empty": { all: {  base: "block/clay/red-burned" }  },
+		"*-empty": { 
+			"0": {  base: "block/clay/flowerpot/red-topbottom" },
+			"1": {  base: "block/clay/red-sides" },
+			},
 		"flowerpotred-*": {
-			"0": {  base: "block/clay/flowerpot/topbottom" },
-			"1": {  base: "block/clay/red-burned" },
+			"0": {  base: "block/clay/flowerpot/red-topbottom" },
+			"1": {  base: "block/clay/red-sides" },
 			"flower": { base: "block/plant/potted/{flower|sapling|mushroom}" }
 		},
 	},
