@@ -127,5 +127,5 @@
 		"############",
 	]],
 	name: "Clayplanter",
-	output: { type: "block", code: "clayplanter-{color}-raw"  }
+	output: { type: "block", code: "clayplanter{color}-raw"  }
 }

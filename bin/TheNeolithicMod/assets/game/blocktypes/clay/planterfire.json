@@ -41,7 +41,7 @@
 			"*-lupine-white": true,
 		}
 	},
-	creativeinventory: { "general": ["*-empty", "*-raw"], "decorative": ["*-empty", "*-raw"] },
+	creativeinventory: { "general": ["*-empty", "*-raw"], "decorative": ["*-empty", "*-raw"],  "neolithicdeco": ["*-empty", "*-raw"]},
 	behaviors: [{name: "UnstableFalling"}],
 	variantgroups: [
 		{ code: "type", states: ["raw"] },
@@ -53,7 +53,7 @@
 	shapeByType: {
 		"*-raw": { base: "block/clay/planter/planter-raw" },
 		"*-empty": { base: "block/clay/planter/planter-empty" },
-		"clayplanter-*": { base: "block/clay/planter/planter-full" }
+		"clayplanterfire-*": { base: "block/clay/planter/planter-full" }
 	},
 	blockmaterial: "Ceramic",
 	replaceable: 900,
@@ -65,7 +65,7 @@
 			"0": {  base: "block/clay/fire-burned" },
 			"soil": {  base: "block/clay/planter/soil" } 	
 		},
-		"clayplanter-*": { 
+		"clayplanterfire-*": { 
 			"0": {  base: "block/clay/fire-burned" },
 			"1": {  base: "block/clay/planter/soil" }, 	
 			"flower": { base: "block/plant/potted/{flower|sapling|mushroom}" }

@@ -113,5 +113,5 @@
 		"######__######",
 	]],
 	name: "Flowerpot",
-	output: { type: "block", code: "flowerpot-{color}-raw", stacksize: 4 }
+	output: { type: "block", code: "flowerpot{color}-raw", stacksize: 4 }
 }
