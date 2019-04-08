@@ -12,9 +12,16 @@
 	},
 	creativeinventory: { "general": ["jar-*"], "neolithicdeco": ["jar-*"] },
 	shape: { base: "block/clay/jar/{size}" },
-	textures: {
-		all: { base: "block/clay/{color}-{type}" },
-	},
+  texturesByType: {
+    "*-burned" : {
+      sides: { base : "block/clay/jars/{size}/{color}" },
+      vertical: { base : "block/clay/{color}-burned" },
+    },
+    "*-raw" : {
+      sides: { base : "block/clay/{color}-raw" },
+      vertical: { base : "block/clay/{color}-raw" },
+    },
+  },
 	drawtype: "json",
 	sidesolid: { all: true },
 	sideopaque: { all: false },
