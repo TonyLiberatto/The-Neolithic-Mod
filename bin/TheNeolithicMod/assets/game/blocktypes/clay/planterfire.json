@@ -1,5 +1,5 @@
 {
-	code: "clayplanter-red",
+	code: "clayplanterfire",
 	classByType: {
 		"*-raw": "Block",
 		"*": "BlockFlowerPot"
@@ -17,7 +17,7 @@
 			"*-cowparsley": true,
 			"*-californiapoppy": true,
 			"*-horsetail": true,
-			"*-lupine-red": true,
+			"*-lupine-blue": true,
 			"*-lupine-orange": true,
 			"*-lupine-purple": true,
 			"*-lupine-red": true,
@@ -34,39 +34,39 @@
 			"*-cowparsley": true,
 			"*-californiapoppy": true,
 			"*-horsetail": true,
-			"*-lupine-red": true,
+			"*-lupine-blue": true,
 			"*-lupine-orange": true,
 			"*-lupine-purple": true,
 			"*-lupine-red": true,
 			"*-lupine-white": true,
 		}
 	},
-	creativeinventory: { "general": ["clayplanter-empty", "clayplanter-raw"], "decorative": ["clayplanter-empty", "clayplanter-raw"] },
+	creativeinventory: { "general": ["*-empty", "*-raw"], "decorative": ["*-empty", "*-raw"], "neolithicdeco": ["*-empty", "*-raw"] },
 	behaviors: [{name: "UnstableFalling"}],
 	variantgroups: [
 		{ code: "type", states: ["raw"] },
 		{ code: "empty", states: ["empty"], combine: "add" },
-		{ code: "flower", states:["lupine-red", "lupine-orange", "lupine-purple", "lupine-red", "lupine-white"], loadFromProperties: "block/flower", combine: "add" },
+		{ code: "flower", states:["lupine-blue", "lupine-orange", "lupine-purple", "lupine-red", "lupine-white"], loadFromProperties: "block/flower", combine: "add" },
 		{ code: "mushroom", loadFromProperties: "block/mushroom", combine: "add" },
 		{ code: "sapling", loadFromProperties: "block/wood", combine: "add" },
 	],
 	shapeByType: {
 		"*-raw": { base: "block/clay/planter/planter-raw" },
 		"*-empty": { base: "block/clay/planter/planter-empty" },
-		"clayplanter-*": { base: "block/clay/planter/planter-full" }
+		"clayplanterfire-*": { base: "block/clay/planter/planter-full" }
 	},
 	blockmaterial: "Ceramic",
 	replaceable: 900,
 	resistance: 1.5,
 	lightAbsorption: 1,
 	texturesByType: {
-		"*-raw": { all: {  base: "block/clay/red-raw" }  },
+		"*-raw": { all: {  base: "block/clay/fire-raw" }  },
 		"*-empty": { 
-			"0": {  base: "block/clay/red-raw" },
+			"0": {  base: "block/clay/fire-raw" },
 			"soil": {  base: "block/clay/planter/soil" } 	
 		},
-		"clayplanter-*": { 
-			"0": {  base: "block/clay/red-raw" },
+		"clayplanterfire-*": { 
+			"0": {  base: "block/clay/fire-raw" },
 			"1": {  base: "block/clay/planter/soil" }, 	
 			"flower": { base: "block/plant/potted/{flower|sapling|mushroom}" }
 		},
@@ -83,7 +83,7 @@
 			meltingDuration: 30,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "clayplanter-red-empty" },
+			smeltedStack: { type: "block", code: "clayplanterfire-empty" },
 			requiresContainer: false
 		}
 	},

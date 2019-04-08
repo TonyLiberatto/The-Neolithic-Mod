@@ -1,5 +1,5 @@
 {
-	code: "clayplanter-blue",
+	code: "clayplanterbrown",
 	classByType: {
 		"*-raw": "Block",
 		"*": "BlockFlowerPot"
@@ -41,7 +41,7 @@
 			"*-lupine-white": true,
 		}
 	},
-	creativeinventory: { "general": ["clayplanter-empty", "clayplanter-raw"], "decorative": ["clayplanter-empty", "clayplanter-raw"] },
+	creativeinventory: { "general": ["*-empty", "*-raw"], "decorative": ["*-empty", "*-raw"], "neolithicdeco": ["*-empty", "*-raw"] },
 	behaviors: [{name: "UnstableFalling"}],
 	variantgroups: [
 		{ code: "type", states: ["raw"] },
@@ -53,20 +53,20 @@
 	shapeByType: {
 		"*-raw": { base: "block/clay/planter/planter-raw" },
 		"*-empty": { base: "block/clay/planter/planter-empty" },
-		"clayplanter-*": { base: "block/clay/planter/planter-full" }
+		"clayplanterbrown-*": { base: "block/clay/planter/planter-full" }
 	},
 	blockmaterial: "Ceramic",
 	replaceable: 900,
 	resistance: 1.5,
 	lightAbsorption: 1,
 	texturesByType: {
-		"*-raw": { all: {  base: "block/clay/blue-raw" }  },
+		"*-raw": { all: {  base: "block/clay/brown-raw" }  },
 		"*-empty": { 
-			"0": {  base: "block/clay/blue-raw" },
+			"0": {  base: "block/clay/brown-raw" },
 			"soil": {  base: "block/clay/planter/soil" } 	
 		},
-		"clayplanter-*": { 
-			"0": {  base: "block/clay/blue-raw" },
+		"clayplanterbrown-*": { 
+			"0": {  base: "block/clay/brown-raw" },
 			"1": {  base: "block/clay/planter/soil" }, 	
 			"flower": { base: "block/plant/potted/{flower|sapling|mushroom}" }
 		},
@@ -83,7 +83,7 @@
 			meltingDuration: 30,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "clayplanter-blue-empty" },
+			smeltedStack: { type: "block", code: "clayplanterbrown-empty" },
 			requiresContainer: false
 		}
 	},
