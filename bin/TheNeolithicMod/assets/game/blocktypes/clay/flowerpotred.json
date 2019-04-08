@@ -53,11 +53,11 @@
 		"*-raw": { all: {  base: "block/clay/red-raw", }  },
 		"*-empty": { 
 			"0": {  base: "block/clay/flowerpot/red-topbottom" },
-			"1": {  base: "block/clay/red-sides" },
+			"1": {  base: "block/clay/flowerpot/red-sides" },
 			},
 		"flowerpotred-*": {
 			"0": {  base: "block/clay/flowerpot/red-topbottom" },
-			"1": {  base: "block/clay/red-sides" },
+			"1": {  base: "block/clay/flowerpot/red-sides" },
 			"flower": { base: "block/plant/potted/{flower|sapling|mushroom}" }
 		},
 	},

@@ -98,7 +98,7 @@
 		},
 		"*": {
 			"transparent": { base: "block/transparent" },
-			"ceramic": { base: "block/clay/{color}-burned" },
+			"ceramic": { base: "block/clay/pot/{color}" },
 			"lid": { base: "block/clay/{color}-burned" },
 			"group1": { base: "block/meal/group1-flax-carrot-blueberry" },
 			"group2": { base: "block/meal/group2-soup-flyagaric-cactifruit-redmeat" },

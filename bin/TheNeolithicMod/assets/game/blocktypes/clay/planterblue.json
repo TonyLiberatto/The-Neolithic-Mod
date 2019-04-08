@@ -62,11 +62,11 @@
 	texturesByType: {
 		"*-raw": { all: {  base: "block/clay/blue-raw" }  },
 		"*-empty": { 
-			"0": {  base: "block/clay/blue-raw" },
+			"0": {  base: "block/clay/blue-burned" },
 			"soil": {  base: "block/clay/planter/soil" } 	
 		},
 		"clayplanterblue-*": { 
-			"0": {  base: "block/clay/blue-raw" },
+			"0": {  base: "block/clay/blue-burned" },
 			"1": {  base: "block/clay/planter/soil" }, 	
 			"flower": { base: "block/plant/potted/{flower|sapling|mushroom}" }
 		},

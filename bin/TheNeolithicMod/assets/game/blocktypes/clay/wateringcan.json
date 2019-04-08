@@ -31,7 +31,7 @@
 	texturesByType: {
 		"*-raw": {  all: { base: "block/clay/{color}-raw" } },
 		"*-burned": {  
-			all: { base: "block/clay/{color}-burned" },
+			all: { base: "block/clay/wateringcan/{color}" },
 			},
 	},
 	shape: { base: "block/clay/watering-can" },
