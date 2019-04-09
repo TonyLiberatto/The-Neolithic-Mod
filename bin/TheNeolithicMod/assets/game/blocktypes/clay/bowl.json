@@ -7,57 +7,23 @@
 		{ code:"type", states: ["raw", "burned", "honey", "glue", "sinewfibers", "milk"] },
 	],
 	attributesByType: {
-		"*-blue-burned": {
+		"*-burned": {
 			itemContainers: {
-				"honeyportion": "bowl-blue-honey"
+				"honeyportion": "bowl-{color}-honey",
+        "milkportion": "bowl-{color}-milk"
 			},
 			mealContainer: true,
-			mealBlockCode: "bowl-meal-blue",
+			mealBlockCode: "bowl-meal-{color}",
 			servingCapacity: 1,
 			bowlContents: null,
 		},
-		"*-fire-burned": {
-			itemContainers: {
-				"honeyportion": "bowl-fire-honey"
-			},
-			mealContainer: true,
-			mealBlockCode: "bowl-meal-fire",
-			servingCapacity: 1,
-			bowlContents: null,
-		},
-		"*-red-burned": {
-			itemContainers: {
-				"honeyportion": "bowl-red-honey"
-			},
-			mealContainer: true,
-			mealBlockCode: "bowl-meal-red",
-			servingCapacity: 1,
-			bowlContents: null,
-		},
-		"*-brown-burned": {
-			itemContainers: {
-				"honeyportion": "bowl-brown-honey"
-			},
-			mealContainer: true,
-			mealBlockCode: "bowl-meal-brown",
-			servingCapacity: 1,
-			bowlContents: null,
-		},
-		"*-blue-honeyportion": {
+		"*-honeyportion": {
 			bowlContents: "honeyportion",
-			emptiedBlockCode: "bowl-blue-burned",
+			emptiedBlockCode: "bowl-{color}-burned",
 		},
-		"*-fire-honeyportion": {
-			bowlContents: "honeyportion",
-			emptiedBlockCode: "bowl-fire-burned",
-		},
-		"*-red-honeyportion": {
-			bowlContents: "honeyportion",
-			emptiedBlockCode: "bowl-red-burned",
-		},
-		"*-brown-honeyportion": {
-			bowlContents: "honeyportion",
-			emptiedBlockCode: "bowl-brown-burned",
+		"*-milkportion": {
+			bowlContents: "milkportion",
+			emptiedBlockCode: "bowl-{color}-burned",
 		},
 		"*": {
 			bowlContents: null
