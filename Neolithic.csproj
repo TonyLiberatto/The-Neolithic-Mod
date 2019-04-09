@@ -43,38 +43,38 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -96,7 +96,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Vintagestory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -113,15 +113,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -188,7 +188,6 @@
     <Folder Include=".vs\Neolithic\v15\" />
     <Folder Include="bin\TheNeolithicMod\assets\game\shapes\block\wood\" />
     <Folder Include="bin\TheNeolithicMod\assets\game\sounds\creature\wolf\" />
-    <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\bag\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\entity\" />
     <Folder Include="Neolithic\Content\Entity\" />
@@ -225,6 +224,8 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\plant\sisal\sisal.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\soil\clay.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stationarybasket.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\generic\trough-large.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\generic\trough-small.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\leavesbranchy.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\mortarandpestle\mortar.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\mortarandpestle\mortarandpestle.json" />
@@ -241,21 +242,25 @@
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\fox\fox-snow-male.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\fox\fox-red-female.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\fox\fox-red-male.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\entities\land\hyena\hyena-female.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\entities\land\hyena\hyena-male.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\entities\land\hyena\hyena-pup.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\hyena\hyena-wild-female-brown.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\hyena\hyena-wild-female-tan.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\hyena\hyena-wild-male.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\hyena\hyena-wild-pup.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\panther\panther-female.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\panther\panther-kitty.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\panther\panther-male.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\entities\land\pig\pig-wild-female.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\entities\land\pig\pig-wild-male.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\entities\land\pig\pig-wild-piglet.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\pig\pig-boar.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\pig\pig-piglet.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\pig\pig-sow.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\rabbit\rabbit-baby.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\rabbit\rabbit-female.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\rabbit\rabbit-male.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\entities\land\sheep\sheep-bighorn-female.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\entities\land\sheep\sheep-bighorn-lamb.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\entities\land\sheep\sheep-bighorn-male.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\sheep\sheep-ewe.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\sheep\sheep-lamb.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\sheep\sheep-ram.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\wild-sheep\wild-sheep-ewe.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\wild-sheep\wild-sheep-lamb.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\land\wild-sheep\wild-sheep-ram.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\wolf\wolf-female.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\wolf\wolf-male.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\wolf\wolf-pup.json" />
@@ -309,11 +314,35 @@
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\shafts\bamboo-arrow-shaft.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\shafts\bamboo-javelin-shaft.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\shovel.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\slaughtering-axe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\spear.json" />
     <None Include="bin\TheNeolithicMod\assets\game\lang\en.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\anvilmold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\axemold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\bowl.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\bowlstampmold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\clayplanter.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\claypot.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\crucible.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\flowerpot.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\fourbowls.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\fourclapots.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\fourcrucible.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\fourflowerpot.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\hammermold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\hoemold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\ingotmold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\pickaxemold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\propickmold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\shovelmold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\swordmold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\twoingotmold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\wateringcan.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\cooking\meatystew.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\cooking\soup.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\beenade.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\oillamp.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\poultice.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\axe-metal.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\bone-primitive-arrowhead.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\bone\leatherstrip\primitive-adze-leatherstrip.json" />
@@ -481,6 +510,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\flowerpot\empty.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\flowerpot\full.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\mold\bowlstampmold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\mold\slaughteringaxemold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\glass_lantern.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\tallow\tallowbunch.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\tallow\tallowcandle1.json" />
@@ -526,6 +556,9 @@
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\sheep\ewe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\sheep\lamb.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\sheep\ram.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\wild-sheep\ewe.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\wild-sheep\lamb.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\wild-sheep\ram.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\wolf\female.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\wolf\male.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\wolf\pup.json" />
@@ -555,6 +588,8 @@
     <None Include="bin\TheNeolithicMod\assets\game\shapes\item\tool\primitive-spear.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\item\tool\primitive-sword.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\item\tool\sicklehead.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\item\tool\slaughtering-axe.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\item\tool\slaughteringaxehead.json" />
     <None Include="bin\TheNeolithicMod\assets\game\sounds\creature\rabbit\baby-hurt.ogg" />
     <None Include="bin\TheNeolithicMod\assets\game\sounds\creature\rabbit\flee.ogg" />
     <None Include="bin\TheNeolithicMod\assets\game\sounds\creature\rabbit\hurt.ogg" />
@@ -586,6 +621,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-rabbit.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-rotten.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-sheep.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-wild-sheep.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-wolf.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\headless-hyena.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\headless-panther.json" />
@@ -598,6 +634,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\skinnedheadless.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\clay\adobe.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\clay\cob.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\clay\jar.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\clay\rammedearth.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\crackedblocks\crackedbrick.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\crackedblocks\crackedrock.json" />
@@ -625,6 +662,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\rugs\wolfrug.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\sisal-rugs\sisalrugs.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stationarybasket.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\3droad.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\bamboo\browndoor.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\bamboo\greendoor.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\branch.json" />
@@ -671,6 +709,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\tool\woodenmallet.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\lang\en.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\blocks.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\bucket.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\carryable.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\entities.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\items.json" />
@@ -746,6 +785,11 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\doors\doormaple.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\doors\dooroak.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\doors\doorpine.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\firewood-medium-branch.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\firewood-thick-branch.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\firewood-thin-branch.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\firewood-very-thin-branch.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\firewood.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\foxpelt-hide.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\furniture\chair-bamboo.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\furniture\chair.json" />
@@ -963,6 +1007,12 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\bone\skulls\wolfground.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\bone\skulls\wolfwall.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\bowlstamp.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\clay\jar\large.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\clay\jar\largest.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\clay\jar\medium.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\clay\jar\small.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\clay\jar\smallest.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\armadillo\armadillo_dead.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\chicken\hen.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\chicken\rooster.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\fox.json" />
@@ -974,6 +1024,8 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\rabbit.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\sheep\ewe.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\sheep\ram.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\wild-sheep\ewe.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\wild-sheep\ram.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\wolf\female.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\wolf\male.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\door\bamboobrown\down_closed_left.json" />
@@ -1138,6 +1190,8 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\food\meat\porkchops.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\food\meat\rabbit.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\resource\stonebrick.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\tool\roadwork\settinghammer.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\tool\roadwork\tamper.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\tool\woodenmallet.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\adobe\3DLayer.obj" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\adobe\adobe1.psd" />
@@ -1228,8 +1282,11 @@
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\glasslantern.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\leather.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\leatherstraps.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\liquid\curds.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\liquid\fibers.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\liquid\glue.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\liquid\milk.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\liquid\whey.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\plant\bamboo\leaves.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\plant\bamboo\stem-brown.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\plant\bamboo\stem-green.png" />
@@ -1352,19 +1409,25 @@
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\chick\brown.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\chick\cream.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\chick\golden.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\chick\savanna.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\chick\white.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\chick\woodland.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\Hen\ashgrey.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\Hen\black.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\Hen\brown.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\Hen\cream.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\Hen\golden.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\Hen\savanna.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\Hen\white.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\Hen\woodland.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\rooster\ashgrey.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\rooster\black.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\rooster\brown.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\rooster\cream.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\rooster\golden.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\rooster\savanna.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\rooster\white.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\chicken\rooster\woodland.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\fox\red-female.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\fox\red-male.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\fox\snow-female.png" />
@@ -1405,6 +1468,9 @@
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\sheep\ewe.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\sheep\lamb.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\sheep\ram.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\wild-sheep\ewe.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\wild-sheep\lamb.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\wild-sheep\ram.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\wolf\ashgrey.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\wolf\black.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\entity\wolf\brown.png" />
@@ -1463,6 +1529,25 @@
     <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\fletching\fire.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\fletching\poisoned.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\fletching\vine.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\handle\bone.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\handle\wood.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\andesite.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\basalt.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\bismuthbronze.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\blackbronze.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\brass.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\copper.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\flint.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\gold.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\granite.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\iron.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\lead.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\linen.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\obsidian.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\silver.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\tinbronze.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\wood.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material32\woodenclub.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material\andesite.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material\basalt.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\item\tool\material\bismuthbronze.png" />
@@ -1535,6 +1620,10 @@
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\adobe\adobe5.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\adobe\newadobe.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\adobe\topadobe.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\blue-burned.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\blue-raw.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\brown-burned.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\brown-raw.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\cob\cob1.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\cob\cob10.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\cob\cob11.png" />
@@ -1550,6 +1639,28 @@
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\cob\cob7.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\cob\cob8.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\cob\cob9.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\fire-burned.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\fire-raw.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\largest\blue.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\largest\brown.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\largest\fire.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\largest\red.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\large\blue.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\large\brown.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\large\fire.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\large\red.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\medium\blue.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\medium\brown.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\medium\fire.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\medium\red.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\smallest\blue.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\smallest\brown.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\smallest\fire.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\smallest\red.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\small\blue.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\small\brown.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\small\fire.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\jars\small\red.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\rammedearth\rammedearth-light1.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\rammedearth\rammedearth-light2.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\rammedearth\rammedearth-light3.png" />
@@ -1568,6 +1679,8 @@
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\rammedearth\rammedearth-mixed4.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\rammedearth\rammedearth-mixed5.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\rammedearth\rammedearth-mixedtop.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\red-burned.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\clay\red-raw.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\dead\boar.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\dead\ewe.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\dead\he-wolf.png" />

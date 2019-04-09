@@ -35,7 +35,7 @@
 	variantgroups: [
 		{ code: "type", states: ["raw"] },
 		{ code: "empty", states: ["empty"], combine: "add" },
-		{ code: "flower", states:["lupine-fire", "lupine-orange", "lupine-purple", "lupine-red", "lupine-white"], loadFromProperties: "block/flower", combine: "add" },
+		{ code: "flower", states:["lupine-blue", "lupine-orange", "lupine-purple", "lupine-red", "lupine-white"], loadFromProperties: "block/flower", combine: "add" },
 		{ code: "mushroom", loadFromProperties: "block/mushroom", combine: "add" },
 		{ code: "sapling", loadFromProperties: "block/wood", combine: "add" },
 	],
