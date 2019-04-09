@@ -7,18 +7,57 @@
 		{ code:"type", states: ["raw", "burned", "honey", "glue", "sinewfibers", "milk"] },
 	],
 	attributesByType: {
-		"*-burned": {
+		"*-blue-burned": {
 			itemContainers: {
-				"honeyportion": "bowl-{color}-honey"
+				"honeyportion": "bowl-blue-honey"
 			},
 			mealContainer: true,
-			mealBlockCode: "bowl-meal-{color}",
+			mealBlockCode: "bowl-meal-blue",
 			servingCapacity: 1,
 			bowlContents: null,
 		},
-		"*-honeyportion": {
+		"*-fire-burned": {
+			itemContainers: {
+				"honeyportion": "bowl-fire-honey"
+			},
+			mealContainer: true,
+			mealBlockCode: "bowl-meal-fire",
+			servingCapacity: 1,
+			bowlContents: null,
+		},
+		"*-red-burned": {
+			itemContainers: {
+				"honeyportion": "bowl-red-honey"
+			},
+			mealContainer: true,
+			mealBlockCode: "bowl-meal-red",
+			servingCapacity: 1,
+			bowlContents: null,
+		},
+		"*-brown-burned": {
+			itemContainers: {
+				"honeyportion": "bowl-brown-honey"
+			},
+			mealContainer: true,
+			mealBlockCode: "bowl-meal-brown",
+			servingCapacity: 1,
+			bowlContents: null,
+		},
+		"*-blue-honeyportion": {
 			bowlContents: "honeyportion",
-			emptiedBlockCode: "bowl-{color}-burned",
+			emptiedBlockCode: "bowl-blue-burned",
+		},
+		"*-fire-honeyportion": {
+			bowlContents: "honeyportion",
+			emptiedBlockCode: "bowl-fire-burned",
+		},
+		"*-red-honeyportion": {
+			bowlContents: "honeyportion",
+			emptiedBlockCode: "bowl-red-burned",
+		},
+		"*-brown-honeyportion": {
+			bowlContents: "honeyportion",
+			emptiedBlockCode: "bowl-brown-burned",
 		},
 		"*": {
 			bowlContents: null
@@ -111,10 +150,25 @@
 		scale: 0.66
 	},
 	nutritionPropsByType: {
-		"bowl-*-honey": { 
+		"bowl-blue-honey": { 
 			saturation: 60, 
 			health: 0.5,
-			eatenStack: { type: "block", code: "bowl-{color}-burned" }
+			eatenStack: { type: "block", code: "bowl-blue-burned" }
+		},
+		"bowl-fire-honey": { 
+			saturation: 60, 
+			health: 0.5,
+			eatenStack: { type: "block", code: "bowl-fire-burned" }
+		},
+		"bowl-red-honey": { 
+			saturation: 60, 
+			health: 0.5,
+			eatenStack: { type: "block", code: "bowl-red-burned" }
+		},
+		"bowl-brown-honey": { 
+			saturation: 60, 
+			health: 0.5,
+			eatenStack: { type: "block", code: "bowl-brown-burned" }
 		},
 	}
 }

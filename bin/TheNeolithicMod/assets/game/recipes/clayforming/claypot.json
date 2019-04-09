@@ -55,5 +55,5 @@
 		"_______",
 	]],
 	name: "claypot",
-	output: { type: "block", code: "claypot-{color}-raw"  }
+	output: { type: "block", code: "claypot-colors-{color}-raw"  }
 }

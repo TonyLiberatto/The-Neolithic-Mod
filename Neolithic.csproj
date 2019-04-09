@@ -43,38 +43,38 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -96,7 +96,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Vintagestory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -113,15 +113,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9-pre\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -146,7 +146,6 @@
     <Compile Include="Neolithic\Content\Block Behavior\NewBlockSwapBehavior.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\CookedContainerFixBE.cs" />
-    <Compile Include="Neolithic\Content\Block\BlockBowlNew.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLooseStonesModified.cs" />
     <Compile Include="Neolithic\Content\Block\BlockNeolithicRoads.cs" />
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
@@ -183,6 +182,7 @@
     <Compile Include="Neolithic\Content\Utility\ArrayStuff.cs" />
     <Compile Include="Neolithic\Content\Utility\HandAnimations.cs" />
     <Compile Include="Neolithic\TheNeolithicMod.cs" />
+    <Compile Include="Neolithic\Content\Block\BlockBowlNew.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".vs\Neolithic\v15\" />
@@ -205,7 +205,10 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotfire.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotred.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\ingotmold.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillamp.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampbrown.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampred.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampfire.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampblue.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\planterblue.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\planterbrown.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\planterfire.json" />
@@ -340,7 +343,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\wateringcan.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\cooking\meatystew.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\cooking\soup.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\beenade.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\beenadecolors.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\oillamp.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\poultice.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\axe-metal.json" />

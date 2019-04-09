@@ -1,9 +1,8 @@
 {
-	code: "oillamp",
+	code: "oillampblue",
 	class: "BlockTorch",
 	storageFlags: 257,
 	variantgroups: [
-		{ code:"color", states: ["blue", "fire", "red", "brown"] },
 		{ code:"position", states: ["up"], combine: "add" },
 		{ code:"wall", loadFromProperties: "abstract/horizontalorientation" }
 	],
@@ -28,24 +27,24 @@
 	lightHsv: [4, 2, 11],
 	texturesByType: {
 		"*-up": {
-			all: { base: "block/clay/{color}-burned" },
-			content: { base: "block/fire"  }
+			"mat": { base: "block/clay/blue-burned" },
+			"content": { base: "block/fire"  }
 		},
 		"*-north": {
-			all: { base: "block/clay/{color}-burned" },
-			content: { base: "block/fire"  }
+			"mat": { base: "block/clay/blue-burned" },
+			"content": { base: "block/fire"  }
 		},
 		"*-east": {
-			all: { base: "block/clay/{color}-burned" },
-			content: { base: "block/fire"  }
+			"mat": { base: "block/clay/blue-burned" },
+			"content": { base: "block/fire"  }
 		},
 		"*-south": {
-			all: { base: "block/clay/{color}-burned" },
-			content: { base: "block/fire"  }
+			"mat": { base: "block/clay/blue-burned" },
+			"content": { base: "block/fire"  }
 		},
 		"*-west": {
-			all: { base: "block/clay/{color}-burned" },
-			content: { base: "block/fire"  }
+			"mat": { base: "block/clay/blue-burned" },
+			"content": { base: "block/fire"  }
 		},
 	},
 	particleProperties: [

@@ -103,5 +103,5 @@
 		"_______________",
 	]],
 	name: "claypot",
-	output: { type: "block", code: "claypot-{color}-raw", stacksize: 4 }
+	output: { type: "block", code: "claypot-colors-{color}-raw", stacksize: 4 }
 }

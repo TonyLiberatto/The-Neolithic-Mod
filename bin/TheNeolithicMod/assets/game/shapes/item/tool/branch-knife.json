@@ -7,7 +7,7 @@
 	"textureHeight": 8,
 	"textures": {
 		"wood": "game:block/wood/debarked/maple",
-		"stone": "game:block/stone/rock/granite",
+		"stone": "game:block/stone/rock/granite1",
 		"rope": "neolithicmod:block/rope"
 	},
 	"elements": [

@@ -6,8 +6,8 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-		"armadillo_tail": "critter/armadillo/armadillo_tail",
-		"armadillo": "critter/armadillo/armadillo"
+		"armadillo_tail": "entity/armadillo/armadillo_tail",
+		"armadillo": "entity/armadillo/armadillo"
 	},
 	"elements": [
 		{
