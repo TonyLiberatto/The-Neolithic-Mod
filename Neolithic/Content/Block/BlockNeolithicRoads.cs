@@ -11,7 +11,7 @@ namespace TheNeolithicMod
 {
     class BlockNeolithicRoads : Block
     {
-        public string[] types = new string[] 
+        public readonly string[] types = new string[] 
         {
             "bricks", "circle", "cobble", "fish", "squares", "tightbricks", "tightsquares"
         };
