@@ -27,6 +27,12 @@ namespace TheNeolithicMod
             return array[index];
         }
 
+        public static T Prev<T>(this T[] array, ref uint index)
+        {
+            index = index > 0 ? index - 1 : (uint)(array.Length-1);
+            return array[index];
+        }
+
         public static bool MatchingWood(this AssetLocation asset, ref string woodtype)
         {
             foreach (string a in woodtypes)
