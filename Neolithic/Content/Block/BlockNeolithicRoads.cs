@@ -13,7 +13,7 @@ namespace TheNeolithicMod
     {
         public readonly string[] types = new string[] 
         {
-            "bricks", "circle", "cobble", "fish", "squares", "tightbricks", "tightsquares"
+             "cobble", "squares", "tightsquares", "bricks", "tightbricks", "circle", "fish",
         };
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
