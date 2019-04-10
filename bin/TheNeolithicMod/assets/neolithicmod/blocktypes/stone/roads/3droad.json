@@ -1,6 +1,7 @@
 ﻿{
   code: "3droad",
   class: "BlockNeolithicRoads",
+  entityClass: "NeolithicRoads",
   variantgroups: [
     { 
       code: "rock",

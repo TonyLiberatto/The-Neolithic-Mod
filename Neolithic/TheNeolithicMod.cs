@@ -59,6 +59,7 @@ namespace TheNeolithicMod
             api.RegisterBlockEntityClass("BlockEntityChimney", typeof(BlockEntityChimney));
             api.RegisterBlockEntityClass("BucketB", typeof(BEBucketOverride));
             api.RegisterBlockEntityClass("CookedContainerFix", typeof(CookedContainerFixBE));
+            api.RegisterBlockEntityClass("NeolithicRoads", typeof(BENeolithicRoads));
 
             AiTaskRegistry.Register("fleepoi", typeof(AiTaskFleePOI));
             AiTaskRegistry.Register("sleep", typeof(AiTaskSleep));
