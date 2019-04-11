@@ -1,7 +1,6 @@
 [
 	{ file: "game:recipes/grid/trough-large", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/trough-small", op: "add", path: "/enabled",  value: "false" },
-	{ file: "game:recipes/grid/beenade", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/oillamp", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/stackedbamboo", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/tool/spear", op: "add", path: "/enabled",  value: "false" },

@@ -339,7 +339,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\wateringcan.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\cooking\meatystew.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\cooking\soup.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\beenadecolors.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\beenade.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\oillamp.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\poultice.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\axe-metal.json" />
