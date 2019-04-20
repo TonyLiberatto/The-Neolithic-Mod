@@ -1,7 +1,7 @@
 {
 	code: "bamboo-arrow-shaft",
 	texture: { base: "item/tool/shafts/bamboo-arrow-shaft" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicweapons": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	maxstacksize: 64,
 	materialDensity: 500,
 	attackRange: 2.5,

@@ -196,19 +196,11 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowlstampmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\clayform.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\crucible.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotblue.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotbrown.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotfire.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotred.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\ingotmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampbrown.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampred.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampfire.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampblue.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\planterblue.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\planterbrown.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\planterfire.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\planterred.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\claypot-colors.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\toolmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\wateringcan.json" />
@@ -269,6 +261,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\bamboostakes.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\creature.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\food\cookedgiantreedsroot.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\lore\lore.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\clay.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\clayworkitem.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\curdsportion.json" />
@@ -315,19 +308,17 @@
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\shovel.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\slaughtering-axe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\spear.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\journal\neolithic.json" />
     <None Include="bin\TheNeolithicMod\assets\game\lang\en.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\anvilmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\axemold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\bowl.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\bowlstampmold.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\clayplanter.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\claypot.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\crucible.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\flowerpot.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\fourbowls.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\fourclapots.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\fourcrucible.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\fourflowerpot.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\hammermold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\hoemold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\ingotmold.json" />
@@ -1237,9 +1228,19 @@
     <None Include="WIPAssets\Novocain\shapes\road-cobble-square.json" />
     <None Include="WIPAssets\Novocain\shapes\road-steppingstone-shuffled.json" />
     <None Include="WIPAssets\Novocain\shapes\road-steppingstone-square.json" />
-    <None Include="WIPAssets\Tony\bowl-patch.json" />
-    <None Include="WIPAssets\Tony\bowl.json" />
-    <None Include="WIPAssets\Tony\clay-textures.zip" />
+    <None Include="WIPAssets\Tony\blocktypes\clay\flowerpotblue.json" />
+    <None Include="WIPAssets\Tony\blocktypes\clay\flowerpotbrown.json" />
+    <None Include="WIPAssets\Tony\blocktypes\clay\flowerpotfire.json" />
+    <None Include="WIPAssets\Tony\blocktypes\clay\flowerpotred.json" />
+    <None Include="WIPAssets\Tony\blocktypes\clay\planterblue.json" />
+    <None Include="WIPAssets\Tony\blocktypes\clay\planterbrown.json" />
+    <None Include="WIPAssets\Tony\blocktypes\clay\planterfire.json" />
+    <None Include="WIPAssets\Tony\blocktypes\clay\planterred.json" />
+    <None Include="WIPAssets\Tony\recipes\clayforming\clayplanter.json" />
+    <None Include="WIPAssets\Tony\recipes\clayforming\flowerpot.json" />
+    <None Include="WIPAssets\Tony\recipes\clayforming\fourflowerpot.json" />
+    <None Include="WIPAssets\Tony\shapes\flowerpot\empty.json" />
+    <None Include="WIPAssets\Tony\shapes\flowerpot\full.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitattributes" />
@@ -2417,10 +2418,6 @@
     <Content Include="WIPAssets\Novocain\textures\circlereferencemoss.png" />
     <Content Include="WIPAssets\Novocain\textures\moss-roman.png" />
     <Content Include="WIPAssets\Novocain\textures\moss.png" />
-    <Content Include="WIPAssets\Tony\clay-textures\blue-burned.png" />
-    <Content Include="WIPAssets\Tony\clay-textures\brown-burned.png" />
-    <Content Include="WIPAssets\Tony\clay-textures\fire-burned.png" />
-    <Content Include="WIPAssets\Tony\clay-textures\red-burned.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions />

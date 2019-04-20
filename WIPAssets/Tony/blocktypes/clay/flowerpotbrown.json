@@ -1,5 +1,5 @@
 {
-	code: "flowerpotfire",
+	code: "flowerpot-brown",
 	classByType: {
 		"*-raw": "Block",
 		"*": "BlockFlowerPot"
@@ -42,7 +42,7 @@
 	shapeByType: {
 		"*-raw": { base: "block/clay/flowerpot/empty" },
 		"*-empty": { base: "block/clay/flowerpot/empty" },
-		"flowerpotfire-*": { base: "block/clay/flowerpot/full" }
+		"flowerpot-brown-*": { base: "block/clay/flowerpot/full" }
 	},
 	creativeinventory: { "general": ["*-raw", "*-empty"], "decorative": ["*-raw", "*-empty"], "neolithicdeco": ["*-raw", "*-empty"] },
 	blockmaterial: "Ceramic",
@@ -50,14 +50,14 @@
 	resistance: 1.5,
 	lightAbsorption: 1,
 	texturesByType: {
-		"*-raw": { all: {  base: "block/clay/fire-raw", }  },
+		"*-raw": { all: {  base: "block/clay/brown-raw", }  },
 		"*-empty": { 
-			"0": {  base: "block/clay/flowerpot/fire-topbottom" },
-			"1": {  base: "block/clay/flowerpot/fire-sides" },
+			"0": {  base: "block/clay/flowerpot/brown-topbottom" },
+			"1": {  base: "block/clay/flowerpot/brown-sides" },
 			},
-		"flowerpotfire-*": {
-			"0": {  base: "block/clay/flowerpot/fire-topbottom" },
-			"1": {  base: "block/clay/flowerpot/fire-sides" },
+		"flowerpot-brown-*": {
+			"0": {  base: "block/clay/flowerpot/brown-topbottom" },
+			"1": {  base: "block/clay/flowerpot/brown-sides" },
 			"flower": { base: "block/plant/potted/{flower|sapling|mushroom}" }
 		},
 	},
@@ -73,7 +73,7 @@
 			meltingDuration: 30,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "flowerpotfire-empty" },
+			smeltedStack: { type: "block", code: "flowerpot-brown-empty" },
 			requiresContainer: false
 		}
 	},

@@ -35,7 +35,7 @@
         }
     },
     blockmaterial: "Ceramic",
-    creativeinventory: { "general": ["*"], "construction": ["*"], "neolithictools": ["*"] },
+    creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicitems": ["*"] },
     replaceable: 700,
     resistance: 1.5,
     maxStackSize: 8,

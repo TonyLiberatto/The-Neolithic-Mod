@@ -11,7 +11,7 @@
   creativeinventory: {
     "general": [ "*" ],
     "items": [ "*" ],
-    "neolithictools": [ "*" ]
+    "neolithicitems": [ "*" ]
   },
   fpHandTransform: {
     translation: {

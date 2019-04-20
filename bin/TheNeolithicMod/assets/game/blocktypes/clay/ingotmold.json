@@ -12,7 +12,7 @@
 	},
 	entityClass: "IngotMold",
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithictools": ["*"] },
+	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicitems": ["*"] },
 	replaceable: 700,
 	resistance: 2,
 	maxStackSize: 8,

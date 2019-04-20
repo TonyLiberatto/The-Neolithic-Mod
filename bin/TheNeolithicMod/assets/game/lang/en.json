@@ -1,14 +1,12 @@
 {
 
-  "tabname-neolithicfauna": "Neo Fauna",
-  "tabname-neolithicflora": "Neo Flora",
-  "tabname-neolithictools": "Neo Tools",
-  "tabname-neolithicblocks": "Neo Blocks",
-  "tabname-neolithicdeco": "Neo Decor",
-  "tabname-neolithicitems": "Neo Items",
-  "tabname-neolithicweapons": "Neo Weapons",
-  
-  
+  "tabname-neolithicblocks": "Neolithic Blocks",
+  "tabname-neolithicdeco": "Neolithic Decor",
+  "tabname-neolithicfauna": "Neolithic Fauna",
+  "tabname-neolithicflora": "Neolithic Flora",
+  "tabname-neolithicitems": "Neolithic Items",
+  "tabname-neolithictools": "Neolithic Tools",
+  "tabname-neolithicweapons": "Neolithic Weapons",
   
   "item-arrow-fire*": "Fire Arrow crafted from any any arrow, fat and a torch",
   "itemdesc-arrow-fire*": "Adds +2 damage. Future recipe should include adding linen or other fiber. Could include pitch if liquids like that are added.",

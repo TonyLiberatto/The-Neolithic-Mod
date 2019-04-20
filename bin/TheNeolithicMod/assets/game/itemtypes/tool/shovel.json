@@ -78,7 +78,7 @@
 		"shovel-iron": 900,
 		"shovel-steel": 1300,
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	fpHandTransform: {
 		translation: { x: 0.046875, y: 0, z: 0 },
 		rotation: { x: 15, y: 15, z: 90 },

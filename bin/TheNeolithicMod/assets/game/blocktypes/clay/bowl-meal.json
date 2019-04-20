@@ -2,7 +2,7 @@
 	code: "bowl-meal",
 	behaviors: [{name: "UnstableFalling"} ],
 	class: "BlockMeal",
-  variantgroups: [
+	variantgroups: [
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },
 	],
 	attributes: {
@@ -12,7 +12,7 @@
 	heldTpIdleAnimation: "holdbothhands",
 	shape: { base: "block/clay/bowl-empty-ground" },
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": [""], "decorative": ["s"] },
+	creativeinventory: { "general": [""], "decorative": ["*"] },
 	replaceable: 300,
 	resistance: 0.75,
 	maxStackSize: 4,

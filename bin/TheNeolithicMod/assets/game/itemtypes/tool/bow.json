@@ -21,7 +21,7 @@
 		]
 	},
 	tool: "bow",
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicweapons": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	attributesByType: {
 		"bow-simple": {
 			damage: 3

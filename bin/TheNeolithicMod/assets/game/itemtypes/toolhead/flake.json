@@ -8,7 +8,7 @@
 	"stone": {base: "item/tool/material/{stone}" }
 	},
 	shape: { base: "item/tool/flake"},
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicweapons": ["*"]  },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"]  },
 	fpHandTransform: {
 		translation: { x: 0, y: 0, z: 0 },
 		rotation: { x: 34, y: 16, z: 87 },

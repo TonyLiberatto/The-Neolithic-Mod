@@ -52,7 +52,7 @@
 	},
 	shape: { base: "block/clay/crucible" },
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["*-raw", "*-burned"], "decorative": ["*-raw", "*-burned"], "neolithictools": ["*-raw", "*-burned"], "neolithicdeco": ["*-raw", "*-burned"],},
+	creativeinventory: { "general": ["*-raw", "*-burned"], "decorative": ["*-raw", "*-burned"], "neolithicblocks": ["*-raw", "*-burned"], "neolithicdeco": ["*-raw", "*-burned"],},
 	replaceable: 300,
 	resistance: 2,
 	maxStackSize: 1,

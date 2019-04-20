@@ -1,6 +1,5 @@
 {
 	code: "bowl",
-	class: "BlockBowl",
 	behaviors: [{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"} ],
 	variantgroups: [
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },
@@ -8,20 +7,20 @@
 	],
 	attributesByType: {
 		"*-burned": {
-			itemContainers: {
+			contentItem2BlockCodes: {
 				"honeyportion": "bowl-{color}-honey",
-        "milkportion": "bowl-{color}-milk"
+				"milkportion": "bowl-{color}-milk"
 			},
 			mealContainer: true,
 			mealBlockCode: "bowl-meal-{color}",
 			servingCapacity: 1,
 			bowlContents: null,
 		},
-		"*-honeyportion": {
-			bowlContents: "honeyportion",
+		"*-honey": {
+			contentItemCode: "honeyportion",
 			emptiedBlockCode: "bowl-{color}-burned",
 		},
-		"*-milkportion": {
+		"*-milk": {
 			bowlContents: "milkportion",
 			emptiedBlockCode: "bowl-{color}-burned",
 		},
@@ -47,13 +46,15 @@
 			requiresContainer: false
 		}
 	},
+	"__comment": "BlockBowl handles emptying/filling of honey over the bucket.",
+	class: "BlockBowl",
 	shapeByType: {
 		"*-raw": { base: "block/clay/bowl-empty-ground" },
-    "*-burned": { base: "block/clay/bowl-empty-ground" },
+		"*-burned": { base: "block/clay/bowl-empty-ground" },
 		"*": { base: "block/clay/bowl-ground-liquid" },
 	},
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["*"], "decorative": ["*"], "neolithicitems": ["*"]},
+	creativeinventory: { "general": ["*"], "decorative": ["*"] },
 	replaceable: 300,
 	resistance: 0.75,
 	maxStackSizeByType: {
@@ -80,7 +81,7 @@
 			all: { base: "block/clay/{color}-burned" },
 			content: { base: "block/liquid/fibers"}
 		},
-	  "*-milk": {
+		"*-milk": {
 			all: { base: "block/clay/{color}-burned" },
 			content: { base: "block/liquid/milk"}
 		}
@@ -102,7 +103,7 @@
 		scale: 3
 	},
 	groundTransform: {
-		scale: 2.5
+		scale: 3.5
 	},
 	fpHandTransform: {
 		translation: { x: 0, y: 0.4, z: 0 },

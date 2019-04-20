@@ -12,7 +12,7 @@
 		all: { base: "block/plant/bamboo/stem-{type}" },
 	},
 	shape: { base: "game:item/bamboostakes" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicflora": ["*"], "neolithicitems": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicflora": ["*"] },
 	guiTransform: {
 		rotate: true,
 		translation: { x: 3, y: 0, z: 0 },

@@ -9,7 +9,7 @@
 		"bone": { base: "block/transparent" },
 		"sinew": { base: "block/transparent" },
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"], "neolithictools": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"], "neolithicitems": ["*"] },
 	fpHandTransform: {
 		translation: { x: 0.4, y: -0.4, z: 0 },
 		rotation: { x: 25, y: 0, z: 86 },

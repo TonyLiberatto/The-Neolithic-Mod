@@ -42,7 +42,7 @@
 		"knife-primitive-obsidian": 1.5,
 		"knife-primitive-flint": 1,
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicweapons": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	fpHandTransform: {
 		translation: { x: -0.1, y: 0.2, z: 0.4 },
 		rotation: { x: -20, y: -93, z: -75 },

@@ -50,7 +50,7 @@
 		"primitive-hoe-obsidian-*": 1.5,
 		"primitive-hoe-flint-*": 1.5,
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithictools": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	fpHandTransform: {
 		translation: { x: 0.046875, y: 0, z: 0 },
 		rotation: { x: 15, y: 15, z: 90 },

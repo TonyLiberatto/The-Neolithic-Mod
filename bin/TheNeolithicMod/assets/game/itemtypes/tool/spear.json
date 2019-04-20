@@ -44,7 +44,7 @@
 		"spear-bismuthbronze": 180,
 		"spear-blackbronze": 220
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicweapons": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	fpHandTransform: {
 		translation: { x: -0.1, y: 0.3, z: 0 },
 		rotation: { x: -85, y: 0, z: 75 },
