@@ -197,7 +197,6 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowlstampmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\clayform.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\crucible.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotblue.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\ingotmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampbrown.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampred.json" />
