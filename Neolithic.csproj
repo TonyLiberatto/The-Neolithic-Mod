@@ -182,6 +182,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".vs\Neolithic\v15\" />
+    <Folder Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\flowerpot\" />
     <Folder Include="bin\TheNeolithicMod\assets\game\shapes\block\wood\" />
     <Folder Include="bin\TheNeolithicMod\assets\game\sounds\creature\wolf\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\bag\" />
@@ -196,6 +197,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowlstampmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\clayform.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\crucible.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotblue.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\ingotmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampbrown.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampred.json" />
@@ -497,8 +499,6 @@
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\bowlstamp.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\cheesecloth.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\cheeseincloth.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\flowerpot\empty.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\flowerpot\full.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\mold\bowlstampmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\mold\slaughteringaxemold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\glass_lantern.json" />

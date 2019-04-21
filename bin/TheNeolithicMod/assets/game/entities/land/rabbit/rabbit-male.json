@@ -172,7 +172,7 @@
 		],
 		spawnconditions: {
 			worldgen: {
-				TriesPerChunk: { avg: 0.3, var: 0 },
+				TriesPerChunk: { avg: 0.03, var: 0 },
 				tryOnlySurface: true,
 				minLightLevel: 12,
 				groupSize: { dist: "verynarrowgaussian", avg: 4, var: 5 },
