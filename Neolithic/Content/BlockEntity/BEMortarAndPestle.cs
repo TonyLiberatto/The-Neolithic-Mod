@@ -62,7 +62,7 @@ namespace TheNeolithicMod
 
         public string Material
         {
-            get { return ownBlock.LastCodePart(); }
+            get { return ownBlock.Variant["wood"]; }
         }
 
         // Server side only
@@ -638,9 +638,9 @@ namespace TheNeolithicMod
         public bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tesselator)
         {
             if(ownBlock == null) return false;
-            string direc = ownBlock.LastCodePart();
+            string direc = ownBlock.Variant["side"];
             float yDeg = BlockFacing.FromCode(direc).HorizontalAngleIndex * 90;
-
+            
             mesher.AddMeshData(
                     quernBaseMesh.Clone()
                     .Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0.0f, (yDeg-90) * GameMath.DEG2RAD, 0.0f)

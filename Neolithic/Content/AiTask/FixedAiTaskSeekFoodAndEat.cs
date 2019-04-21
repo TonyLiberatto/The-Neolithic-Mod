@@ -97,7 +97,7 @@ namespace TheNeolithicMod
             if (bh != null && !bh.ShouldEat) return false;
 
             if (shouldSeek) entity.World.RegisterCallback(SeekFoodSources, 5000);
-
+            
             return nearestPoi != null;
         }
 

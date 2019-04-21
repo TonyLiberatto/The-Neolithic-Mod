@@ -13,7 +13,7 @@ namespace TheNeolithicMod
         public override void OnLoaded(ICoreAPI api)
         {
             base.OnLoaded(api);
-            allowedPrefixes = Attributes["codePrefixes"].AsStringArray();
+            allowedPrefixes = Attributes["codePrefixes"].AsArray<string>();
         }
 
         public override bool CanMultiBreak(Block block)

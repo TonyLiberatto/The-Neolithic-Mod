@@ -17,7 +17,7 @@ namespace TheNeolithicMod
         {
             ItemSlot activeHotbarSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
             CollectibleObject collectible = activeHotbarSlot.Itemstack.Collectible;
-            if (!activeHotbarSlot.Empty && collectible.FirstCodePart() == "bowl" && collectible.LastCodePart() == "burned")
+            if (!activeHotbarSlot.Empty && collectible.FirstCodePart() == "bowl" && collectible.Variant["type"] == "burned")
             {
                 CookedContainerFixBE container = world.BlockAccessor.GetBlockEntity(blockSel.Position) as CookedContainerFixBE;
                 if (container == null) return false;

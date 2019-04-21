@@ -20,7 +20,6 @@ namespace TheNeolithicMod
         public Vec3d Position => pos.ToVec3d().Add(0.5, 0.5, 0.5);
         public string Type => "food";
         NeolithicContentConfig[] nltConfig;
-        BlockFacing facing;
         Block ownBlock;
         public string contentCode = "";
         double transitionAtTotalDays = -1;
@@ -55,7 +54,6 @@ namespace TheNeolithicMod
             flies = ownBlock.Attributes["flies"].AsBool(true);
 
 
-            facing = BlockFacing.FromCode(ownBlock.LastCodePart());
             if (nltConfig == null)
             {
                 nltConfig = ownBlock.Attributes["contentConfig"].AsObject<NeolithicContentConfig[]>();

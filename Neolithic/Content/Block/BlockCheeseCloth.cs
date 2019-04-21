@@ -13,7 +13,7 @@ namespace TheNeolithicMod
     {
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handling)
         {
-            if (blockSel == null || slot.Itemstack.Collectible.LastCodePart() == "curds" || slot.Itemstack.Collectible.LastCodePart() == "cheese") return;
+            if (blockSel == null || slot.Itemstack.Collectible.Variant["contents"] == "curds" || slot.Itemstack.Collectible.Variant["contents"] == "cheese") return;
 
             Block selBlock = api.World.BlockAccessor.GetBlock(blockSel.Position);
             if (selBlock is BlockBucket)
@@ -24,7 +24,7 @@ namespace TheNeolithicMod
 
         public override bool OnHeldInteractStep(float secondsPassed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSelection, EntitySelection entitySel)
         {
-            if (blockSelection == null || slot.Itemstack.Collectible.LastCodePart() == "curds" || slot.Itemstack.Collectible.LastCodePart() == "cheese") return false;
+            if (blockSelection == null || slot.Itemstack.Collectible.Variant["contents"] == "curds" || slot.Itemstack.Collectible.Variant["contents"] == "cheese") return false;
             Block selBlock = api.World.BlockAccessor.GetBlock(blockSelection.Position);
             if (selBlock is BlockBucket)
             {
@@ -40,7 +40,7 @@ namespace TheNeolithicMod
 
         public override void OnHeldInteractStop(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
-            if (blockSel == null || slot.Itemstack.Collectible.LastCodePart() == "curds" || slot.Itemstack.Collectible.LastCodePart() == "cheese") return;
+            if (blockSel == null || slot.Itemstack.Collectible.Variant["contents"] == "curds" || slot.Itemstack.Collectible.Variant["contents"] == "cheese") return;
             BlockPos pos = blockSel.Position;
             Block selBlock = api.World.BlockAccessor.GetBlock(pos);
 
@@ -53,7 +53,7 @@ namespace TheNeolithicMod
                     if (bucket.GetContent(byEntity.World, pos) != null)
                     {
                         ItemStack contents = bucket.GetContent(byEntity.World, pos);
-                        if (contents.Item.Code.Path == "curdsportion" && slot.Itemstack.Collectible.LastCodePart() == "none")
+                        if (contents.Item.Code.Path == "curdsportion" && slot.Itemstack.Collectible.Variant["contents"] == "none")
                         {
                             ItemStack curdsandwhey = new ItemStack(CodeWithPart("curdsandwhey", 2).GetBlock(), 1);
 
@@ -63,7 +63,7 @@ namespace TheNeolithicMod
                             return;
                         }
                     }
-                    if ((bucket.GetContent(byEntity.World, pos) == null || bucket.GetContent(byEntity.World, pos).Item.Code.Path == "wheyportion") && slot.Itemstack.Collectible.LastCodePart() == "curdsandwhey")
+                    if ((bucket.GetContent(byEntity.World, pos) == null || bucket.GetContent(byEntity.World, pos).Item.Code.Path == "wheyportion") && slot.Itemstack.Collectible.Variant["contents"] == "curdsandwhey")
                     {
                         ItemStack curds = new ItemStack(CodeWithPart("curds", 2).GetBlock(), 1);
                         ItemStack wheyportion = new ItemStack(new AssetLocation("wheyportion").GetItem(), 1);

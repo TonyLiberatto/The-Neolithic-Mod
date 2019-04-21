@@ -197,6 +197,14 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowlstampmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\clayform.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\crucible.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotblue.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotbrown.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotfire.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotred.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\planterblue.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\planterbrown.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\planterfire.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\planterred.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\ingotmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampbrown.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampred.json" />

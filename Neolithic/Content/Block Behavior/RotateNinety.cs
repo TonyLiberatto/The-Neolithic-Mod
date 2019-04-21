@@ -44,7 +44,7 @@ namespace TheNeolithicMod
 
             string[] strArray = new string[2] { "w", "n" };
             int num = angle / 90;
-            if (block.LastCodePart(0) == "n")
+            if (block.Variant["type"] == "n")
                 ++num;
             return block.CodeWithParts( strArray[num % 2]);
         }

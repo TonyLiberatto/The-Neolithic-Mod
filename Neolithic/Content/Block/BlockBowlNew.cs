@@ -10,6 +10,7 @@ namespace TheNeolithicMod
 {
     class BlockBowlNew : Block
     {
+        /*
         public string Contents()
         {
             string content = LastCodePart();
@@ -89,5 +90,6 @@ namespace TheNeolithicMod
             }
             slot.MarkDirty();
         }
+        */
     }
 }

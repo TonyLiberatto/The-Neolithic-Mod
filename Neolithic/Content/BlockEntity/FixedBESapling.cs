@@ -54,7 +54,7 @@ namespace TheNeolithicMod
             if (api.World.Calendar.TotalHours < totalHoursTillGrowth) return;
 
 
-            string treeCode = api.World.BlockAccessor.GetBlock(pos).LastCodePart();
+            string treeCode = api.World.BlockAccessor.GetBlock(pos).Variant["wood"];
 
             string treeGenCode = null;
             if (!FixedTreeGenMapping.TryGetValue(treeCode, out treeGenCode))

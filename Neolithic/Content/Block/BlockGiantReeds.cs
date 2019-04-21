@@ -19,7 +19,7 @@ namespace TheNeolithicMod
             if (world.Side == EnumAppSide.Server && (byPlayer == null || byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative))
             {
                 ItemStack drop = null;
-                if (LastCodePart() == "normal")
+                if (Variant["state"] == "normal")
                 {
                     drop = new ItemStack(world.GetItem(new AssetLocation("reeds")), 10);
                 }
@@ -32,13 +32,13 @@ namespace TheNeolithicMod
                     world.SpawnItemEntity(drop, new Vec3d(pos.X + 0.5, pos.Y + 0.5, pos.Z + 0.5), null);
                 }
             }
-            if (byPlayer != null && LastCodePart() == "normal" && byPlayer.InventoryManager.ActiveTool == EnumTool.Knife)
+            if (byPlayer != null && Variant["state"] == "normal" && byPlayer.InventoryManager.ActiveTool == EnumTool.Knife)
             {
                 world.BlockAccessor.SetBlock(world.GetBlock(CodeWithParts("harvested")).BlockId, pos);
                 return;
             }
 
-            if (LastCodePart(1) != "free")
+            if (Variant["habitat"] != "free")
             {
                 world.BlockAccessor.SetBlock(world.GetBlock(new AssetLocation("water-7")).BlockId, pos);
             }
