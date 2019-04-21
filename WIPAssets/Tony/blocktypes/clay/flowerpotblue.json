@@ -1,5 +1,5 @@
 {
-	code: "flowerpot-blue",
+	code: "flowerpotblue",
 	classByType: {
 		"*-raw": "Block",
 		"*": "BlockFlowerPot"
@@ -42,7 +42,7 @@
 	shapeByType: {
 		"*-raw": { base: "block/clay/flowerpot/empty" },
 		"*-empty": { base: "block/clay/flowerpot/empty" },
-		"flowerpot-blue-*": { base: "block/clay/flowerpot/full" }
+		"flowerpotblue-*": { base: "block/clay/flowerpot/full" }
 	},
 	creativeinventory: { "general": ["*-raw", "*-empty"], "decorative": ["*-raw", "*-empty"], "neolithicdeco": ["*-raw", "*-empty"] },
 	blockmaterial: "Ceramic",
@@ -55,7 +55,7 @@
 			"0": {  base: "block/clay/flowerpot/blue-topbottom" },
 			"1": {  base: "block/clay/flowerpot/blue-sides" },
 			},
-		"flowerpot-blue-*": {
+		"flowerpotblue-*": {
 			"0": {  base: "block/clay/flowerpot/blue-topbottom" },
 			"1": {  base: "block/clay/flowerpot/blue-sides" },
 			"flower": { base: "block/plant/potted/{flower|sapling|mushroom}" }
@@ -68,12 +68,12 @@
 		all: false
 	},
 	combustiblePropsByType: {
-		"*-raw": {
+		"flowerpotblue-raw": {
 			meltingPoint: 600,
 			meltingDuration: 30,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "flowerpot-blue-empty" },
+			smeltedStack: { type: "block", code: "flowerpotblue-empty" },
 			requiresContainer: false
 		}
 	},
