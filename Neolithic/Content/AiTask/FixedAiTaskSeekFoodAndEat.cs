@@ -78,8 +78,18 @@ namespace TheNeolithicMod
                     AnimationSpeed = taskConfig["eatanimationspeed"].AsFloat(1f)
                 }.Init();
             }
+            
 
         }
+
+        public override void OnEntityLoaded()
+        {
+            base.OnEntityLoaded();
+            SeekFoodSources(0.0f);
+            entity.World.RegisterGameTickListener(SeekFoodSources, 5000);
+        }
+
+        IPointOfInterest nearestPoi;
 
         public override bool ShouldExecute()
         {
@@ -91,8 +101,12 @@ namespace TheNeolithicMod
 
             EntityBehaviorMultiply bh = entity.GetBehavior<EntityBehaviorMultiply>();
             if (bh != null && !bh.ShouldEat) return false;
+            return nearestPoi != null;
+        }
 
-            IPointOfInterest nearestPoi = porregistry.GetNearestPoi(entity.ServerPos.XYZ, 32, (poi) =>
+        public void SeekFoodSources(float dt)
+        {
+            nearestPoi = porregistry.GetNearestPoi(entity.ServerPos.XYZ, 32, (poi) =>
             {
                 if (poi.Type != "food") return false;
 
@@ -106,12 +120,7 @@ namespace TheNeolithicMod
 
                 return false;
             });
-
-
-            return nearestPoi != null;
         }
-
-
 
         public float MinDistanceToTarget()
         {
