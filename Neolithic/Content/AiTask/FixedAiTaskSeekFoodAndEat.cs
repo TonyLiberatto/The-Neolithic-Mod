@@ -82,14 +82,8 @@ namespace TheNeolithicMod
 
         }
 
-        public override void OnEntityLoaded()
-        {
-            base.OnEntityLoaded();
-            SeekFoodSources(0.0f);
-            entity.World.RegisterGameTickListener(SeekFoodSources, 5000);
-        }
-
         IPointOfInterest nearestPoi;
+        bool shouldSeek = true;
 
         public override bool ShouldExecute()
         {
@@ -101,11 +95,15 @@ namespace TheNeolithicMod
 
             EntityBehaviorMultiply bh = entity.GetBehavior<EntityBehaviorMultiply>();
             if (bh != null && !bh.ShouldEat) return false;
+
+            if (shouldSeek) entity.World.RegisterCallback(SeekFoodSources, 5000);
+
             return nearestPoi != null;
         }
 
         public void SeekFoodSources(float dt)
         {
+            shouldSeek = true;
             nearestPoi = porregistry.GetNearestPoi(entity.ServerPos.XYZ, 32, (poi) =>
             {
                 if (poi.Type != "food") return false;
