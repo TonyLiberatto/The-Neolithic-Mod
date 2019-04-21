@@ -8,6 +8,11 @@
   "tabname-neolithictools": "Neolithic Tools",
   "tabname-neolithicweapons": "Neolithic Weapons",
   
+  "block-rawclay-red-none": "Red clay in soil (Barren)",
+  "block-rawclay-brown-none": "Brown clay in soil (Barren)",
+  "block-rawclay-red-verysparse": "Red clay in soil (Sparse grass)",
+  "block-rawclay-brown-verysparse": "Brown clay in soil (Sparse grass)",
+  
   "item-arrow-fire*": "Fire Arrow crafted from any any arrow, fat and a torch",
   "itemdesc-arrow-fire*": "Adds +2 damage. Future recipe should include adding linen or other fiber. Could include pitch if liquids like that are added.",
   
