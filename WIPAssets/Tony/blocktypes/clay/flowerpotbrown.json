@@ -58,7 +58,7 @@
 		"flowerpot-brown-*": {
 			"0": {  base: "block/clay/flowerpot/brown-topbottom" },
 			"1": {  base: "block/clay/flowerpot/brown-sides" },
-			"flower": { base: "block/plant/potted/{flower|sapling|mushroom}" }
+			"flower": { base: "block/plant/potted/{contents}" }
 		},
 	},
 	sidesolid: {

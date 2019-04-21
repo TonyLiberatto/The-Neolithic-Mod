@@ -68,7 +68,7 @@
 		"clayplanterfire-*": { 
 			"0": {  base: "block/clay/fire-burned" },
 			"1": {  base: "block/clay/planter/soil" }, 	
-			"flower": { base: "block/plant/potted/{flower|sapling|mushroom}" }
+			"flower": { base: "block/plant/potted/{contents}" }
 		},
 	},
 	sidesolid: {

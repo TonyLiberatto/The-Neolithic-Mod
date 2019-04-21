@@ -70,7 +70,7 @@
 		"clayplanterbrown-*": { 
 			"0": {  base: "block/clay/brown-burned" },
 			"1": {  base: "block/clay/planter/soil" }, 	
-			"flower": { base: "block/plant/potted/{flower|sapling|mushroom}" }
+			"flower": { base: "block/plant/potted/{contents}" }
 		},
 	},
 	sidesolid: {

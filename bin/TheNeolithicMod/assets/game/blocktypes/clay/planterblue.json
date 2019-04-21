@@ -70,7 +70,7 @@
 		"clayplanterblue-*": { 
 			"0": {  base: "block/clay/blue-burned" },
 			"1": {  base: "block/clay/planter/soil" }, 	
-			"flower": { base: "block/plant/potted/{flower|sapling|mushroom}" }
+			"flower": { base: "block/plant/potted/{contents}" }
 		},
 	},
 	sidesolid: {

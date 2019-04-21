@@ -58,7 +58,7 @@
 		"flowerpot-fire-*": {
 			"0": {  base: "block/clay/flowerpot/fire-topbottom" },
 			"1": {  base: "block/clay/flowerpot/fire-sides" },
-			"flower": { base: "block/plant/potted/{flower|sapling|mushroom}" }
+			"flower": { base: "block/plant/potted/{contents}" }
 		},
 	},
 	sidesolid: {
