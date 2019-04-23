@@ -1,7 +1,7 @@
 {
 	code: "crackedrock",
 	variantgroups: [
-		{ loadFromProperties: "block/rockwithdeposit" }
+		{ code: "rock", states:["whitemarble", "greenmarble", "redmarble"], loadFromProperties: "block/rock" }
 	],
 	drawtype: "Cube",
 	blockmaterial: "Stone",
@@ -10,7 +10,7 @@
 	resistance: 1.5,
 	lightAbsorption: 99,
 	textures: {
-		all: { base: "crackedblock/stone/rock/{type}*" },
+		all: { base: "crackedblock/stone/rock/{rock}*" },
 	},
 	sounds: {
 		walk: "game:walk/stone",
