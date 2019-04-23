@@ -38,10 +38,9 @@ namespace TheNeolithicMod
             {
                 preventDuplicateAction = false;
                 entity.TeleportToDouble(entity.LocalPos.AsBlockPos.X + 0.5, entity.LocalPos.AsBlockPos.Y, entity.LocalPos.AsBlockPos.Z + 0.5);
-                entity.World.RegisterCallback(dt => preventDuplicateAction = true, 1000);
+                entity.World.RegisterCallback(dt => preventDuplicateAction = true, 10000);
             }
 
-            
             base.StartExecute();
         }
 
