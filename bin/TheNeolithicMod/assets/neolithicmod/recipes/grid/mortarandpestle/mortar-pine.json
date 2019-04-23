@@ -1,7 +1,7 @@
 {
     ingredientPattern: "M",
     ingredients: {
-        "M": {type: "Block", code: "game:chiseledblock", attributes: { materials: [2120], cuboids: [4190208, 16249856, 16725120, 16776324, 12579980] } }
+        "M": {type: "Block", code: "game:chiseledblock", attributes: { materials: ["game:log-placed-pine-ud"], cuboids: [4190208, 16249856, 16725120, 16776324, 12579980] } }
     },
     width: 1,
     height: 1,
