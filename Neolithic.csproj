@@ -184,6 +184,7 @@
     <Folder Include=".vs\Neolithic\v15\" />
     <Folder Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\flowerpot\" />
     <Folder Include="bin\TheNeolithicMod\assets\game\shapes\block\wood\" />
+    <Folder Include="bin\TheNeolithicMod\assets\game\sounds\block\" />
     <Folder Include="bin\TheNeolithicMod\assets\game\sounds\creature\wolf\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\bag\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\entity\" />
@@ -1252,7 +1253,6 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
-    <Content Include="bin\TheNeolithicMod\assets\game\sounds\block\mortarandpestle.ogg" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\bone.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\clay\blue-burned.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\clay\blue-raw.png" />

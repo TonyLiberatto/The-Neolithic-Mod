@@ -46,8 +46,6 @@ namespace TheNeolithicMod
             FlourDustParticles.OpacityEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, -16f);
         }
 
-        ILoadedSound ambientSound;
-
         internal InventoryQuern inventory;
 
         // For how long the current ore has been grinding
@@ -111,15 +109,6 @@ namespace TheNeolithicMod
                 }
 
                 api.World.BlockAccessor.MarkBlockDirty(pos, OnRetesselated);
-
-                if (nowGrinding)
-                {
-                    ambientSound?.Start();
-                }
-                else
-                {
-                    ambientSound?.Stop();
-                }
 
                 if (api.Side == EnumAppSide.Server)
                 {
@@ -214,18 +203,6 @@ namespace TheNeolithicMod
 
             RegisterGameTickListener(Every100ms, 100);
             RegisterGameTickListener(Every500ms, 500);
-
-            if (ambientSound == null && api.Side == EnumAppSide.Client)
-            {
-                ambientSound = ((IClientWorldAccessor)api.World).LoadSound(new SoundParams()
-                {
-                    Location = new AssetLocation("sounds/block/mortarandpestle.ogg"),
-                    ShouldLoop = true,
-                    Position = pos.ToVec3f().Add(0.5f, 0.25f, 0.5f),
-                    DisposeOnFinish = false,
-                    Volume = SoundLevel
-                });
-            }
 
             if (api is ICoreClientAPI)
             {
@@ -445,9 +422,7 @@ namespace TheNeolithicMod
 
                 updateGrindingState(wasGrinding);
             }
-
-
-
+            
             if (api?.Side == EnumAppSide.Client && clientDialog != null)
             {
                 SetDialogValues(clientDialog.Attributes);
@@ -460,10 +435,7 @@ namespace TheNeolithicMod
             dialogTree.SetFloat("inputGrindTime", inputGrindTime);
             dialogTree.SetFloat("maxGrindTime", maxGrindingTime());
         }
-
-
-
-
+        
         public override void ToTreeAttributes(ITreeAttribute tree)
         {
             base.ToTreeAttributes(tree);
@@ -482,12 +454,6 @@ namespace TheNeolithicMod
         {
             base.OnBlockRemoved();
 
-            if (ambientSound != null)
-            {
-                ambientSound.Stop();
-                ambientSound.Dispose();
-            }
-
             if (renderer != null)
             {
                 renderer.Unregister();
@@ -498,11 +464,6 @@ namespace TheNeolithicMod
         public override void OnBlockBroken()
         {
             base.OnBlockBroken();
-        }
-
-        ~BEMortarAndPestle()
-        {
-            if (ambientSound != null) ambientSound.Dispose();
         }
 
         public override void OnReceivedClientPacket(IPlayer player, int packetid, byte[] data)
@@ -530,25 +491,21 @@ namespace TheNeolithicMod
         {
             if (packetid == (int)EnumBlockStovePacket.OpenGUI)
             {
-                using (MemoryStream ms = new MemoryStream(data))
+                using (MemoryStream memoryStream = new MemoryStream(data))
                 {
-                    BinaryReader reader = new BinaryReader(ms);
-
-                    string dialogClassName = reader.ReadString();
-                    string dialogTitle = reader.ReadString();
-
-                    TreeAttribute tree = new TreeAttribute();
-                    tree.FromBytes(reader);
-                    Inventory.FromTreeAttributes(tree);
+                    BinaryReader stream = new BinaryReader((Stream)memoryStream);
+                    stream.ReadString();
+                    string DialogTitle = stream.ReadString();
+                    TreeAttribute treeAttribute = new TreeAttribute();
+                    treeAttribute.FromBytes(stream);
+                    Inventory.FromTreeAttributes(treeAttribute);
                     Inventory.ResolveBlocksOrItems();
-
-                    IClientWorldAccessor clientWorld = (IClientWorldAccessor)api.World;
-
-                    SyncedTreeAttribute dtree = new SyncedTreeAttribute();
-                    SetDialogValues(dtree);
-
-                    clientDialog = new GuiDialogBlockEntityQuern(dialogTitle, Inventory, pos, dtree, api as ICoreClientAPI);
+                    IClientWorldAccessor world = (IClientWorldAccessor)api.World;
+                    SyncedTreeAttribute tree = new SyncedTreeAttribute();
+                    SetDialogValues(tree);
+                    clientDialog = new GuiDialogBlockEntityQuern(DialogTitle, Inventory, pos, tree, api as ICoreClientAPI);
                     clientDialog.TryOpen();
+                    clientDialog.OnClosed += (Vintagestory.API.Common.Action)(() => clientDialog = null);
                 }
             }
 
