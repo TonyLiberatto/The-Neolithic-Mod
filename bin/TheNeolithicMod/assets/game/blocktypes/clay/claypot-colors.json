@@ -2,8 +2,8 @@
 	code: "claypot-colors",
 	behaviors: [{name: "UnstableFalling"}],
 	classByType: {
-		"claypot-colors-*-burned": "BlockCookingContainerFix",
-		"claypot-colors-*-cooked": "BlockCookedContainerFix"
+		"claypot-colors-*-burned": "BlockCookingContainer",
+		"claypot-colors-*-cooked": "BlockCookedContainer"
 	},
 	heldTpIdleAnimation: "holdbothhands",
 	attributesByType: {
