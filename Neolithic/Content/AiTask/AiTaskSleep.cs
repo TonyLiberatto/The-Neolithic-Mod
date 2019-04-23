@@ -31,8 +31,17 @@ namespace TheNeolithicMod
             return false;
         }
 
+        bool preventDuplicateAction = true;
         public override void StartExecute()
         {
+            if (preventDuplicateAction == true)
+            {
+                preventDuplicateAction = false;
+                entity.TeleportToDouble(entity.LocalPos.AsBlockPos.X + 0.5, entity.LocalPos.AsBlockPos.Y, entity.LocalPos.AsBlockPos.Z + 0.5);
+                entity.World.RegisterCallback(dt => preventDuplicateAction = true, 1000);
+            }
+
+            
             base.StartExecute();
         }
 
