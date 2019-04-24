@@ -28,7 +28,7 @@ namespace TheNeolithicMod
             Block selBlock = api.World.BlockAccessor.GetBlock(blockSelection.Position);
             if (selBlock is BlockBucket)
             {
-                return HandAnimations.Collect(api.World, byEntity, secondsPassed);
+                return HandAnimations.Collect(byEntity, secondsPassed);
             }
             return false;
         }

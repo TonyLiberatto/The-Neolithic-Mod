@@ -37,7 +37,7 @@ namespace TheNeolithicMod
             {
                 if (slot.Itemstack.Collectible.FirstCodePart() == "tamper")
                 {
-                    return HandAnimations.Hit(world, byPlayer.Entity, secondsUsed);
+                    return HandAnimations.Hit(byPlayer.Entity, secondsUsed);
                 }
             }
             return false;

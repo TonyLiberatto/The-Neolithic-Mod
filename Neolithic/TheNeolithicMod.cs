@@ -51,6 +51,7 @@ namespace TheNeolithicMod
             api.RegisterItemClass("ItemChisel", typeof(ItemChiselFix));
             api.RegisterItemClass("ItemSwapBlocks", typeof(ItemSwapBlocks));
             api.RegisterItemClass("ItemSlaughteringAxe", typeof(ItemSlaughteringAxe));
+            //api.RegisterItemClass("ItemKnife", typeof(ItemKnifeAdditions));
 
             api.RegisterBlockEntityClass("GenericPOI", typeof(POIEntity));
             api.RegisterBlockEntityClass("NeolithicTransient", typeof(NeolithicTransient));

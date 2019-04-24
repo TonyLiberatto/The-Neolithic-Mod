@@ -9,9 +9,9 @@ namespace TheNeolithicMod
 {
     public static class HandAnimations
     {
-        public static bool Hit(IWorldAccessor world, EntityAgent byEntity, float secondsUsed)
+        public static bool Hit(EntityAgent byEntity, float secondsUsed)
         {
-            if (world.Side == EnumAppSide.Client)
+            if (byEntity.World.Side.IsClient())
             {
                 ModelTransform tf = Transform();
 
@@ -23,9 +23,9 @@ namespace TheNeolithicMod
             return true;
         }
 
-        public static bool Slaughter(IWorldAccessor world, EntityAgent byEntity, float secondsUsed)
+        public static bool Slaughter(EntityAgent byEntity, float secondsUsed)
         {
-            if (world.Side == EnumAppSide.Client)
+            if (byEntity.World.Side.IsClient())
             {
                 ModelTransform tf = Transform();
                 tf.Rotation.Y -= (float)Math.Sin(secondsUsed * 6) * 90;
@@ -38,9 +38,9 @@ namespace TheNeolithicMod
             return true;
         }
 
-        public static bool Collect(IWorldAccessor world, EntityAgent byEntity, float secondsUsed)
+        public static bool Collect(EntityAgent byEntity, float secondsUsed)
         {
-            if (world.Side == EnumAppSide.Client)
+            if (byEntity.World.Side.IsClient())
             {
                 ModelTransform tf = Transform();
                 float scale = ((float)Math.Sin(secondsUsed*2) * 0.5f);
@@ -49,6 +49,26 @@ namespace TheNeolithicMod
                 byEntity.Controls.UsingHeldItemTransformBefore = tf;
 
                 return scale > 0.0;
+            }
+            return true;
+        }
+
+        public static bool Skin(EntityAgent byEntity, float secondsUsed)
+        {
+            if (byEntity.World.Side.IsClient())
+            {
+                ModelTransform tf = Transform();
+                tf.Translation.Set(0, 0, Math.Min(0.6f, secondsUsed * 2));
+                tf.Rotation.Y = Math.Min(20, secondsUsed * 90 * 2f);
+
+                if (secondsUsed > 0.4f)
+                {
+                    tf.Translation.X += (float)Math.Cos(secondsUsed * 15) / 10;
+                    tf.Translation.Z += (float)Math.Sin(secondsUsed * 5) / 30;
+                }
+                byEntity.Controls.UsingHeldItemTransformBefore = tf;
+
+                return secondsUsed < 4;
             }
             return true;
         }

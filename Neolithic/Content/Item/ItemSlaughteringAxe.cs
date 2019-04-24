@@ -32,7 +32,7 @@ namespace TheNeolithicMod
                 Entity entity = entitySel.Entity;
                 if (entity.HasBehavior("slaughterable"))
                 {
-                    return HandAnimations.Slaughter(byEntity.World, byEntity, secondsPassed);
+                    return HandAnimations.Slaughter(byEntity, secondsPassed);
                 }
             }
             return false;

@@ -36,7 +36,7 @@ namespace TheNeolithicMod
             {
                 if (IsSettingHammer(slot))
                 {
-                    return HandAnimations.Hit(world, byPlayer.Entity, secondsUsed);
+                    return HandAnimations.Hit(byPlayer.Entity, secondsUsed);
                 }
             }
             return false;
