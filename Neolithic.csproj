@@ -279,7 +279,6 @@
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\curdsportion.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\giantreedsroot.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\milkportion.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\rawbrick.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\reeds.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\seeds-sisal.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\sisal-leaves.json" />
@@ -970,8 +969,6 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\sisal-rope.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\sisal-thread.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\sisal-twine.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\stonebrick.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\stonebricks.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\tool\chisel.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\wicker.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\wolfpelt-rug-ashgrey.json" />
