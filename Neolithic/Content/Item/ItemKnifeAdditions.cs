@@ -14,7 +14,7 @@ namespace TheNeolithicMod
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handling)
         {
             BlockPos pos = blockSel.Position;
-            Block block = pos.GetBlock();
+            Block block = pos.GetBlock(byEntity.World);
             if (block != null && byEntity.Controls.Sneak && (block.FirstCodePart().Contains("skinned") || block.FirstCodePart().Contains("dead")))
             {
                 AssetLocation location = new AssetLocation("game:sounds/player/scrape");
@@ -30,7 +30,7 @@ namespace TheNeolithicMod
 
         public override bool OnHeldInteractStep(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
-            Block block = blockSel.Position.GetBlock();
+            Block block = blockSel.Position.GetBlock(byEntity.World);
             if (block != null && byEntity.Controls.Sneak && (block.FirstCodePart().Contains("skinned") || block.FirstCodePart().Contains("dead")))
             {
                 return HandAnimations.Skin(byEntity, secondsUsed);
@@ -45,7 +45,7 @@ namespace TheNeolithicMod
 
         public override void OnHeldInteractStop(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
-            Block block = blockSel.Position.GetBlock();
+            Block block = blockSel.Position.GetBlock(byEntity.World);
             if (preventmultiple && byEntity.World.Side.IsServer() && block != null && (block.FirstCodePart().Contains("skinned") || block.FirstCodePart().Contains("dead")))
             {
                 preventmultiple = false;

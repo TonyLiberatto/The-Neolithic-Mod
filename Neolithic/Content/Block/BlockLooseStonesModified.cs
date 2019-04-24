@@ -52,7 +52,7 @@ namespace TheNeolithicMod
                 {
                     if (world.Side.IsServer())
                     {
-                        Block dBlock = blockSel.Position.DownCopy().GetBlock();
+                        Block dBlock = blockSel.Position.DownCopy().GetBlock(world);
 
                         if (!allowedbases.Contains(dBlock.FirstCodePart())) return;
                         AssetLocation location = new AssetLocation("neolithicmod:3droad-" + Variant["rock"] + "-" + "stepping" + world.Rand.Next(1, 4));
