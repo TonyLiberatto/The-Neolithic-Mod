@@ -702,6 +702,8 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\resource\sisal-thread.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\resource\sisal-twine.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\resource\stone\stonebrick.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\toolhead\settinghammerhead.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\toolhead\tamperhead.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\toolhead\chiselhead.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\tool\roadwork\tamper.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\tool\roadwork\settinghammer.json" />
@@ -969,6 +971,9 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\sisal-rope.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\sisal-thread.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\sisal-twine.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\toolhead\tamperhead.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\tool\settinghammer.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\tool\tamper.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\tool\chisel.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\wicker.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\wolfpelt-rug-ashgrey.json" />
@@ -986,6 +991,8 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\woodbucket-leatherstrips.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\woodbucket-sisal-rope-bamboo.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\woodbucket-sisal-rope.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\smithing\settinghammerhead.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\smithing\tamperhead.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\smithing\chisel.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\bag\burdenbasket.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\basic\cube.json" />
