@@ -1,8 +1,8 @@
 {
 	code: "toolmold",
 	classByType: {
-		"toolmold-raw-*": "Block",
-		"toolmold-burned-*": "BlockToolMold",
+		"toolmold-*-raw-*": "Block",
+		"toolmold-*-burned-*": "BlockToolMold",
 	},
 	behaviors: [{name: "UnstableFalling"}],
 	variantgroups: [

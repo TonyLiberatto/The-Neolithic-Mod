@@ -1,7 +1,7 @@
 {
 	code: "crackedrock",
 	variantgroups: [
-		{ code: "rock", states:["whitemarble", "greenmarble", "redmarble"], loadFromProperties: "block/rock" }
+		{ code: "rock", states:["whitemarble", "greenmarble", "redmarble", "obsidian"], loadFromProperties: "block/rock" }
 	],
 	drawtype: "Cube",
 	blockmaterial: "Stone",

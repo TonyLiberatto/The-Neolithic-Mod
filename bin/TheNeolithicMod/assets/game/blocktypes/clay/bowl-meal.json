@@ -38,9 +38,23 @@
   sounds: {
     walk: "walk/stone",
   },
-  textures: {
-    "transparent": { base: "block/transparent" },
-    "ceramic": { base: "block/clay/{color}-burned" },
+  texturesByType: {
+	"*-blue": {
+		"transparent": { base: "block/transparent" },
+		"ceramic": { base: "block/clay/blue-burned" },
+		},
+		"*-fire": {
+		"transparent": { base: "block/transparent" },
+		"ceramic": { base: "block/clay/fire-burned" },
+		},
+		"*-red": {
+		"transparent": { base: "block/transparent" },
+		"ceramic": { base: "block/clay/red-burned" },
+		},
+		"*-brown": {
+		"transparent": { base: "block/transparent" },
+		"ceramic": { base: "block/clay/brown-burned" },
+		},
   },
   sideopaque: {
     all: false

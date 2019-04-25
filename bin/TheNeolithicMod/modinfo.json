@@ -6,8 +6,8 @@
 	"description" : "Adds more Animals, Plants, blocks and tools",
 	"authors": [ "Tony Liberatto","Novocain","Balduranne","BunnyViking" ],
 	"contributors": ["Tyron", "Milo", "Stroam","Elwood","copygirl"],
-	"version": "1.5.11",
+	"version": "1.5.12",
 	"dependencies": {
-	"game": "1.9.0-pre.13",
+	"game": "1.9.0-rc.1",
 	}
 }

@@ -33,20 +33,68 @@
 		"*-burned": null
 	},
 	combustiblePropsByType: {
-		"*-raw": {
+		"*-blue-raw": {
 			meltingPoint: 600,
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "crucible-{color}-burned" },
+			smeltedStack: { type: "block", code: "crucible-blue-burned" },
 			requiresContainer: false
 		},
-		"*-smelted": {
+		"*-brown-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "crucible-brown-burned" },
+			requiresContainer: false
+		},
+		"*-fire-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "crucible-fire-burned" },
+			requiresContainer: false
+		},
+		"*-red-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "crucible-red-burned" },
+			requiresContainer: false
+		},
+		"*-blue-smelted": {
 			meltingPoint: 2400,
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "crucible-{color}-burned" },
+			smeltedStack: { type: "block", code: "crucible-blue-burned" },
+			requiresContainer: false
+		},
+		"*-fire-smelted": {
+			meltingPoint: 2400,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "crucible-fire-burned" },
+			requiresContainer: false
+		},
+		"*-red-smelted": {
+			meltingPoint: 2400,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "crucible-red-burned" },
+			requiresContainer: false
+		},
+		"*-brown-smelted": {
+			meltingPoint: 2400,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "crucible-brown-burned" },
 			requiresContainer: false
 		}
 	},
