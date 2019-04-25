@@ -3,7 +3,7 @@
   heldTpHitAnimation: "breaktool",
   maxstacksize: 1,
   	variantgroups: [
-		{ code: "material", states: ["wood", "bismuthbronze", "blackbronze", "brass", "copper", "gold", "iron", "lead", "silver", "tinbronze" ] },
+		{ code: "material", states: ["wood", "bismuthbronze", "blackbronze", "copper", "iron", "tinbronze" ] },
 	],
   textures: {
     "handle": { base: "game:item/tool/material32/wood" },
@@ -12,8 +12,6 @@
   tool: "hammer",
   durabilitybytype: {
     "*-wood": 50,
-		"*-gold": 125,
-		"*-silver": 125,
 		"*-copper": 250,
 		"*-blackbronze": 600,
 		"*-bismuthbronze": 500,
