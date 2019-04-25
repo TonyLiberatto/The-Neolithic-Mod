@@ -13,6 +13,9 @@
 		convertFrom: "*-lit-*", 
 		convertTo: "*-unlit-*", 
 		inGameHours: "4.0",
+		handbook: {
+			groupBy: ["totem-pig-*"]
+		},
 	},
 	drawtype: "json",
 	behaviors: [

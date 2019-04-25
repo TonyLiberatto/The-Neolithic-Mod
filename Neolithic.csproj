@@ -234,6 +234,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\mortarandpestle\mortarandpestle.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\mortarandpestle\pestle.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\cheesecloth.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\config.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\air\butterfly.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\arrow-primitive.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\armadillo\armadillo-female.json" />

@@ -38,7 +38,10 @@
       name: "BlockCreateBehavior",
       properties: {
         "createBlocks": [
-          [ "game:clay-*", "game:crucible-raw", 10 ],
+          [ "game:clay-blue", "game:crucible-blue-raw", 10 ],
+		  [ "game:clay-fire", "game:crucible-fire-raw", 10 ],
+		  [ "game:clay-red", "game:crucible-red-raw", 10 ],
+		  [ "game:clay-brown", "game:crucible-brown-raw", 10 ],
         ],
       },
     },
