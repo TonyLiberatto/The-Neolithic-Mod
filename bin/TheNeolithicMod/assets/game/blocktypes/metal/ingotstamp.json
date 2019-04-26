@@ -1,5 +1,5 @@
 {
-  code: "bowlstamp",
+  code: "ingotstamp",
   variantgroups: [
     {
       code: "metal",
@@ -13,10 +13,10 @@
       name: "BlockCreateBehavior",
       properties: {
         "createBlocks": [
-          [ "game:clay-blue", "game:bowl-blue-raw", 4 ],
-		  [ "game:clay-fire", "game:bowl-fire-raw", 4 ],
-		  [ "game:clay-red", "game:bowl-red-raw", 4 ],
-		  [ "game:clay-brown", "game:bowl-brown-raw", 4 ],
+          [ "game:clay-blue", "game:ingotmold-blue-raw", 4 ],
+		  [ "game:clay-fire", "game:ingotmold-fire-raw", 4 ],
+		  [ "game:clay-red", "game:ingotmold-red-raw", 4 ],
+		  [ "game:clay-brown", "game:ingotmold-brown-raw", 4 ],
         ],
       },
     },
@@ -29,7 +29,7 @@
   },
   maxStackSize: 8,
   drawtype: "json",
-  shape: { base: "block/bowlstamp" },
+  shape: { base: "block/ingotstamp" },
   textures: {
     all: { base: "game:block/metal/ingot/{metal}" }
   },

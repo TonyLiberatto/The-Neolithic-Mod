@@ -219,6 +219,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\lightsources\bunchotallowcandles.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\lightsources\glass_lantern.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\metal\bowlstamp.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\metal\ingotstamp.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\plant\bamboo.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\plant\bambooleaves.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\plant\giantreed-free.json" />
@@ -513,6 +514,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\cheeseincloth.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\mold\bowlstampmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\mold\slaughteringaxemold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\ingotstamp.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\glass_lantern.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\tallow\tallowbunch.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\tallow\tallowcandle1.json" />

@@ -45,14 +45,38 @@
 		"toolmold-*-burned-*": "ToolMold",
 	},
 	combustiblePropsByType: {
-		"toolmold-*-raw-*": {
+		"toolmold-blue-raw-*": {
 			meltingPoint: 600,
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "toolmold-{color}-burned-{tooltype}" },
+			smeltedStack: { type: "block", code: "toolmold-blue-burned-{tooltype}" },
 			requiresContainer: false
-		}
+		},
+		"toolmold-fire-raw-*": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "toolmold-fire-burned-{tooltype}" },
+			requiresContainer: false
+		},
+		"toolmold-red-raw-*": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "toolmold-red-burned-{tooltype}" },
+			requiresContainer: false
+		},
+		"toolmold-brown-raw-*": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "toolmold-brown-burned-{tooltype}" },
+			requiresContainer: false
+		},
 	},
 	blockmaterial: "Ceramic",
 	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicblocks": ["*"] },
@@ -62,7 +86,7 @@
 	lightAbsorption: 0,
 	texturesByType: {
 		"toolmold-*-raw-*": {  all: { base: "block/clay/{color}-raw" } },
-		"toolmold-*-burned-*": {  floor: { base: "block/clay/{color}-burned" }, other: { base: "block/clay/{color}-burned" } }
+		"toolmold-*-burned-*": {  floor: { base: "block/clay/{color}-burned" }, other: { base: "block/clay/{color}-burned" }, ceramic: { base: "block/clay/{color}-burned" }  }
 	},
 	shape: { base: "block/clay/mold/{tooltype}", rotateY: 90 },
 	sounds: {
