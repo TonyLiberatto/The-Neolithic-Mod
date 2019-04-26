@@ -5,7 +5,7 @@
   variantgroups: [
     { 
       code: "rock",
-      states: [ "andesite", "basalt", "bauxite", "suevite", "redmarble", "greenmarble", "kimberlite", "scoria", "whitemarble", "halite", "tuff", "chalk", "chert", "claystone", "conglomerate", "granite", "limestone", "peridotite", "phyllite", "sandstone", "shale", "slate"],
+      states: [ "andesite", "basalt", "bauxite", "suevite", "redmarble", "greenmarble", "obsidian", "kimberlite", "scoria", "whitemarble", "halite", "tuff", "chalk", "chert", "claystone", "conglomerate", "granite", "limestone", "peridotite", "phyllite", "sandstone", "shale", "slate"],
     },
     {
       code: "pattern",
@@ -54,8 +54,7 @@
     all: false
   },
   sidesolid: {
-    top: false,
-    all: true
+    all: false
   },
 	collisionSelectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1 },
 }
