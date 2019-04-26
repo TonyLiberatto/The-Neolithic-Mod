@@ -40,7 +40,7 @@ namespace TheNeolithicMod
 
             if (Variant["habitat"] != "free")
             {
-                world.BlockAccessor.SetBlock(world.GetBlock(new AssetLocation("water-7")).BlockId, pos);
+                world.BlockAccessor.SetBlock(world.GetBlock(new AssetLocation("water-still-7")).BlockId, pos);
             }
             else
             {
