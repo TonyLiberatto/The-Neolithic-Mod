@@ -17,7 +17,7 @@
 	},
 	creativeinventory: { "general": ["*"], "neolithicfauna": ["*"] },
 	variantgroups: [
-		{ code: "type", states: ["ewe","ram","boar","sow","wolf-male","wolf-female","hyena", "panther-male", "panther-female"] }
+		{ code: "type", states: ["ewe","ram","boar","sow","wolf-male","wolf-female","hyena" ] }
 	],
 	texturesByType: { base: "block/skinnedheadless/{type}"},
 	shapeByType: {
@@ -65,60 +65,7 @@
 		origin: { x: 0.5, y: 0, z: 0.5 },
 		scale: 4
 	},
-	dropsByType: {
-		"skinnedheadless-panther-male": [		
-			{
-				type: "item", 
-				code: "carnivoremeat-raw", 
-				quantity: { avg: 3.5, var: 1 } ,
-				tool:"knife"
-			},
-			{
-				type: "item", 
-				code: "game:fat", 
-				quantity: { avg: 1.25, var: 0.25 } ,
-				tool:"knife"
-			},
-			{
-				type: "item", 
-				code: "animal-tendon", 
-				quantity: { avg: 4, var: 1 } ,
-				tool:"knife"
-			},
-			{
-				type: "item", 
-				code: "animal-large-bone", 
-				quantity: { avg: 4, var: 0 } ,
-				tool:"knife"
-			},
-		],
-		"skinnedheadless-panther-female": [
-			{
-				type: "item", 
-				code: "carnivoremeat-raw", 
-				quantity: { avg: 3, var: 1 } ,
-				tool:"knife"
-			},
-			{
-				type: "item", 
-				code: "game:fat", 
-				quantity: { avg: 1, var: 0.25 } ,
-				tool:"knife"
-			},
-			{
-				type: "item", 
-				code: "animal-tendon", 
-				quantity: { avg: 4, var: 1 } ,
-				tool:"knife"
-			},
-			{
-				type: "item", 
-				code: "animal-large-bone", 
-				quantity: { avg: 4, var: 0 } ,
-				tool:"knife"
-			},
-		],
-		
+	dropsByType: {		
 		"skinnedheadless-ewe": [		
 			{
 				type: "item", 
