@@ -251,6 +251,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\hyena\hyena-wild-female-tan.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\hyena\hyena-wild-male.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\hyena\hyena-wild-pup.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\metalore\sphalerite.json" />
     <None Include="WIPAssets\Tony\game\entities\land\panther\panther-female.json" />
     <None Include="WIPAssets\Tony\game\entities\land\panther\panther-kitty.json" />
     <None Include="WIPAssets\Tony\game\entities\land\panther\panther-male.json" />
