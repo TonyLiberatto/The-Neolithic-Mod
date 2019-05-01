@@ -11,7 +11,7 @@ namespace TheNeolithicMod
 {
     class ItemKnifeAdditions : ItemKnife
     {
-        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handling)
+        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
         {
             BlockPos pos = blockSel.Position;
             Block block = pos.GetBlock(byEntity.World);
@@ -24,7 +24,7 @@ namespace TheNeolithicMod
             }
             else
             {
-                base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, ref handling);
+                base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handling);
             }
         }
 

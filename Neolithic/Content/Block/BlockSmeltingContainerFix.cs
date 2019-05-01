@@ -68,7 +68,7 @@ namespace TheNeolithicMod
             stack.Attributes.SetInt("units", units);
         }
 
-        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handHandling)
+        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
         {
             if (blockSel == null) return;
 
@@ -76,7 +76,7 @@ namespace TheNeolithicMod
 
             if (be != null)
             {
-                handHandling = EnumHandHandling.PreventDefault;
+                handling = EnumHandHandling.PreventDefault;
             }
 
             if (be != null && be.CanReceiveAny)
@@ -87,7 +87,7 @@ namespace TheNeolithicMod
                 {
                     slot.Itemstack = new ItemStack(byEntity.World.GetBlock(new AssetLocation(CodeWithoutParts(1) + "-burned")));
                     slot.MarkDirty();
-                    handHandling = EnumHandHandling.PreventDefault;
+                    handling = EnumHandHandling.PreventDefault;
                     return;
                 }
 
@@ -112,7 +112,7 @@ namespace TheNeolithicMod
                     }
                 }, blockSel.Position, 666);
 
-                handHandling = EnumHandHandling.PreventDefault;
+                handling = EnumHandHandling.PreventDefault;
             }
         }
 

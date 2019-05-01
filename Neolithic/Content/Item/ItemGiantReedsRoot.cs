@@ -5,11 +5,11 @@ namespace TheNeolithicMod
 {
     public class ItemGiantReedsRoot : Item
     {
-        public override void OnHeldInteractStart(ItemSlot itemslot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handHandling)
+        public override void OnHeldInteractStart(ItemSlot itemslot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling)
         {
             if (blockSel == null || byEntity.World == null || byEntity.Controls.Sneak )
             {
-                base.OnHeldInteractStart(itemslot, byEntity, blockSel, entitySel, ref handHandling);
+                base.OnHeldInteractStart(itemslot, byEntity, blockSel, entitySel, firstEvent, ref handHandling);
                 return;
             }
 
@@ -19,7 +19,7 @@ namespace TheNeolithicMod
 
             if (block == null)
             {
-                base.OnHeldInteractStart(itemslot, byEntity, blockSel, entitySel, ref handHandling);
+                base.OnHeldInteractStart(itemslot, byEntity, blockSel, entitySel, firstEvent, ref handHandling);
                 return;
             }
 

@@ -23,9 +23,9 @@ namespace TheNeolithicMod
                 swapMapping[val[0]] = val[1];
             }
         }
-        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handling)
+        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
         {
-            base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, ref handling);
+            base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handling);
             if (blockSel != null)
             {
                 int swapRate = slot.Itemstack.Collectible.Attributes["swapRate"].AsInt(0);
