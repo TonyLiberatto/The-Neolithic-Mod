@@ -71,6 +71,20 @@ namespace TheNeolithicMod
         {
             world.RegisterCallback(dt => world.PlaySoundAt(location, pos.X, pos.Y, pos.Z), delay);
         }
+
+        public static T[] Stretch<T>(this T[] array, int amount)
+        {
+            if (amount < 1) return array;
+            T[] parray = array;
+
+            Array.Resize(ref array, array.Length + amount);
+            for (int i = 0; i < array.Length; i++)
+            {
+                double scalar = (double)i / array.Length;
+                array[i] = parray[(int)(scalar * parray.Length)];
+            }
+            return array;
+        }
     }
 
     public class GetAPI : ModSystem

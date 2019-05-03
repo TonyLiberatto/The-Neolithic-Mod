@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheNeolithicMod;
 using TheNeolithicMod.Utility;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -147,6 +148,7 @@ namespace PalmTreeMod
                         }
                         rand.InitPositionSeed(pos.X, pos.Y);
                         Block[] stretchedTrunk = trunk.Stretch((int)(rand.NextDouble() * (maxTreeSize)));
+
                         BlockPos top = new BlockPos(pos.X, pos.Y + stretchedTrunk.Length, pos.Z);
                         for (int j = 0; j < stretchedTrunk.Length; j++)
                         {
@@ -316,23 +318,6 @@ namespace PalmTreeMod
                     }
                 }
             }
-        }
-    }
-
-    public static class ArrayStuff
-    {
-        public static T[] Stretch<T>(this T[] array, int amount)
-        {
-            if (amount < 1) return array;
-            T[] parray = array;
-
-            Array.Resize(ref array, array.Length + amount);
-            for (int i = 0; i < array.Length; i++)
-            {
-                double scalar = (double)i / array.Length;
-                array[i] = parray[(int)(scalar * parray.Length)];
-            }
-            return array;
         }
     }
 }
