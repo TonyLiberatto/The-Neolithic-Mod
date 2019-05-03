@@ -1,0 +1,62 @@
+﻿{
+  code: "palmfrond",
+  class: "BlockPalmTree",
+  behaviorsByType: {
+    "*-grown-*": [
+      {
+        name: "PushEventOnBlockBroken",
+        properties: { eventName: "testForDecay" }
+      }
+    ],
+    "*": [ { name: "HorizontalOrientable" } ],
+  },
+  variantgroups: [
+    {
+      code: "amount",
+      states: [ "0", "1", "2", "3" ]
+    },
+    {
+      code: "type",
+      states: [ "grown", "placed" ]
+    },
+    { loadFromProperties: "abstract/horizontalorientation" }
+  ],
+  creativeinventory: {
+    "general": [ "*-placed-north" ],
+    "flora": [ "*-placed-north" ]
+  },
+  randomDrawOffset: false,
+  shapeByType: {
+    "*-north": {
+      base: "neolithicmod:block/flora/palm/fronds/frond{amount}",
+      rotateY: 180
+    },
+    "*-east": {
+      base: "neolithicmod:block/flora/palm/fronds/frond{amount}",
+      rotateY: 90
+    },
+    "*-south": {
+      base: "neolithicmod:block/flora/palm/fronds/frond{amount}",
+      rotateY: 0
+    },
+    "*-west": {
+      base: "neolithicmod:block/flora/palm/fronds/frond{amount}",
+      rotateY: 270
+    },
+  },
+  textures: {
+    palm_fronds: { base: "neolithicmod:block/flora/palm/frond" },
+  },
+  blockmaterial: "Plant",
+  sideopaque: {
+    all: false
+  },
+  sidesolid: {
+    all: false
+  },
+  replaceable: 600,
+  lightAbsorption: 0,
+  resistance: 1,
+  rainPermeable: true,
+  materialDensity: 200
+}

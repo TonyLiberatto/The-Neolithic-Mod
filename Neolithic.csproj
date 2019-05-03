@@ -179,6 +179,7 @@
     <Compile Include="Neolithic\Content\Utility\ArrayStuff.cs" />
     <Compile Include="Neolithic\Content\Utility\HandAnimations.cs" />
     <Compile Include="Neolithic\Debugging\RedirectLogs.cs" />
+    <Compile Include="Neolithic\PalmTreeMod.cs" />
     <Compile Include="Neolithic\TheNeolithicMod.cs" />
     <Compile Include="Neolithic\Content\Block\BlockBowlNew.cs" />
   </ItemGroup>

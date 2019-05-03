@@ -1,0 +1,19 @@
+[
+  {
+    file: "game:worldgen/blockpatches",
+    op: "add",
+    path: "/patches/-",
+    value: {
+      comment: "Palm Trees",
+      blockCodes: [ "neolithicmod:palmlog-bottom-grown" ],
+      minTemp: 3,
+      maxTemp: 23,
+      minRain: 0.0,
+      maxRain: 1,
+      quantity: {
+        avg: 1,
+      },
+      chance: 10,
+    }
+  }
+]
