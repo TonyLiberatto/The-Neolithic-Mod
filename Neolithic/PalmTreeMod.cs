@@ -78,9 +78,9 @@ namespace PalmTreeMod
 
             for (int i = 0; i < directions.Length; i++)
             {
-                frondblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("bunnyviking:palmfrond-1-grown-" + directions[i])));
-                nannerblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("bunnyviking:palmfruits-bananna-" + directions[i])));
-                cocoblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("bunnyviking:palmfruits-coconut-" + directions[i])));
+                frondblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("neolithicmod:palmfrond-1-grown-" + directions[i])));
+                nannerblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("neolithicmod:palmfruits-bananna-" + directions[i])));
+                cocoblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("neolithicmod:palmfruits-coconut-" + directions[i])));
             }
             frond = frondblocks.ToArray();
             fruits = new Block[][] { nannerblocks.ToArray(), cocoblocks.ToArray(), null };

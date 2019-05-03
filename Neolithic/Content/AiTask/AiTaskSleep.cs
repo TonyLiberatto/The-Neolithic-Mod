@@ -17,7 +17,6 @@ namespace TheNeolithicMod
         }
 
         public bool isNocturnal = true;
-        public double WakeRNG = 0.0d;
         BlockPos[] offsets;
 
         public override void LoadConfig(JsonObject taskConfig, JsonObject aiConfig)
@@ -26,14 +25,12 @@ namespace TheNeolithicMod
             {
                 isNocturnal = taskConfig["isnocturnal"].AsBool(true);
             }
-
-            WakeRNG = entity.World.Rand.NextDouble() / 5.00d;
             base.LoadConfig(taskConfig, aiConfig);
         }
 
         public override bool ShouldExecute()
         {
-            if (isNocturnal && entity.World.Calendar.DayLightStrength > 0.50f + WakeRNG || !isNocturnal && entity.World.Calendar.DayLightStrength < 0.50f + WakeRNG) return true;
+            if (isNocturnal && entity.World.Calendar.DayLightStrength > 0.50f || !isNocturnal && entity.World.Calendar.DayLightStrength < 0.50f) return true;
             return false;
         }
 
@@ -77,7 +74,7 @@ namespace TheNeolithicMod
 
         public override bool ContinueExecute(float dt)
         {
-            if (isNocturnal && entity.World.Calendar.DayLightStrength > 0.50f + WakeRNG || !isNocturnal && entity.World.Calendar.DayLightStrength < 0.50f + WakeRNG) return true;
+            if (isNocturnal && entity.World.Calendar.DayLightStrength > 0.50f || !isNocturnal && entity.World.Calendar.DayLightStrength < 0.50f) return true;
             return false;
         }
 
