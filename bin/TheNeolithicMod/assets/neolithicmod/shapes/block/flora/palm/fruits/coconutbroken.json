@@ -6,7 +6,7 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-		"coconut": "flora/palm/coconut"
+		"coconut": "block/flora/palm/fruits"
 	},
 	"elements": [
 		{

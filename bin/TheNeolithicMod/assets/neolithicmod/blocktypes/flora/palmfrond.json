@@ -28,24 +28,24 @@
   randomDrawOffset: false,
   shapeByType: {
     "*-north": {
-      base: "neolithicmod:block/flora/palm/fronds/frond{amount}",
+      base: "block/flora/palm/fronds/frond{amount}",
       rotateY: 180
     },
     "*-east": {
-      base: "neolithicmod:block/flora/palm/fronds/frond{amount}",
+      base: "block/flora/palm/fronds/frond{amount}",
       rotateY: 90
     },
     "*-south": {
-      base: "neolithicmod:block/flora/palm/fronds/frond{amount}",
+      base: "block/flora/palm/fronds/frond{amount}",
       rotateY: 0
     },
     "*-west": {
-      base: "neolithicmod:block/flora/palm/fronds/frond{amount}",
+      base: "block/flora/palm/fronds/frond{amount}",
       rotateY: 270
     },
   },
   textures: {
-    palm_fronds: { base: "neolithicmod:block/flora/palm/frond" },
+    palm_fronds: { base: "block/flora/palm/frond" },
   },
   blockmaterial: "Plant",
   sideopaque: {

@@ -6,8 +6,8 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-		"palm_top": "flora/palm/palm_top",
-		"palm_tip": "flora/palm/palm_tip"
+		"palm_top": "block/flora/palm/top",
+		"palm_tip": "block/flora/palm/tip"
 	},
 	"elements": [
 		{

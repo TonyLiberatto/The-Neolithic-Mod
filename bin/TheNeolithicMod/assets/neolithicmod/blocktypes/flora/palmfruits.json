@@ -17,24 +17,24 @@
   randomDrawOffset: false,
   shapeByType: {
     "*-north": {
-      base: "neolithicmod:block/flora/palm/bunches/{type}",
+      base: "block/flora/palm/bunches/{type}",
       rotateY: 180
     },
     "*-east": {
-      base: "neolithicmod:block/flora/palm/bunches/{type}",
+      base: "block/flora/palm/bunches/{type}",
       rotateY: 90
     },
     "*-south": {
-      base: "neolithicmod:block/flora/palm/bunches/{type}",
+      base: "block/flora/palm/bunches/{type}",
       rotateY: 0
     },
     "*-west": {
-      base: "neolithicmod:block/flora/palm/bunches/{type}",
+      base: "block/flora/palm/bunches/{type}",
       rotateY: 270
     },
   },
   textures: {
-    fruits: { base: "neolithicmod:block/flora/palm/fruits" },
+    fruits: { base: "block/flora/palm/fruits" },
   },
   blockmaterial: "Wood",
   sideopaque: {
@@ -61,14 +61,14 @@
     "*-bananna-*": [
       {
         type: "block",
-        code: "neolithicmod:tropicalfruits-bananna-north",
+        code: "tropicalfruits-bananna-north",
         quantity: { avg: 11 }
       }
     ],
     "*-coconut-*": [
       {
         type: "block",
-        code: "neolithicmod:tropicalfruits-coconutshell-north",
+        code: "tropicalfruits-coconutshell-north",
         quantity: { avg: 4 }
       }
     ],

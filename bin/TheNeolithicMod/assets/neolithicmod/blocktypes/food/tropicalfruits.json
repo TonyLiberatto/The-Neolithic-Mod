@@ -20,24 +20,24 @@
   randomDrawOffset: false,
   shapeByType: {
     "*-north": {
-      base: "neolithicmod:block/flora/palm/fruits/{type}",
+      base: "block/flora/palm/fruits/{type}",
       rotateY: 180
     },
     "*-east": {
-      base: "neolithicmod:block/flora/palm/fruits/{type}",
+      base: "block/flora/palm/fruits/{type}",
       rotateY: 90
     },
     "*-south": {
-      base: "neolithicmod:block/flora/palm/fruits/{type}",
+      base: "block/flora/palm/fruits/{type}",
       rotateY: 0
     },
     "*-west": {
-      base: "neolithicmod:block/flora/palm/fruits/{type}",
+      base: "block/flora/palm/fruits/{type}",
       rotateY: 270
     },
   },
   textures: {
-    fruits: { base: "neolithicmod:block/flora/palm/fruits" },
+    fruits: { base: "block/flora/palm/fruits" },
   },
   blockmaterial: "Wood",
   sideopaque: {
