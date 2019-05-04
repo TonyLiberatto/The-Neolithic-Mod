@@ -5,9 +5,9 @@
 	"modid": "theneolithicmod",
 	"description" : "Adds more Animals, Plants, blocks and tools",
 	"authors": [ "Tony Liberatto","Novocain","Balduranne","BunnyViking" ],
-	"contributors": ["Tyron", "Milo", "Stroam","Elwood","copygirl"],
-	"version": "1.6.0",
+	"contributors": ["Tyron", "Milo", "Stroam","Elwood","copygirl", "MarcAFK"],
+	"version": "1.6.1",
 	"dependencies": {
-	"game": "1.9.0-rc.4",
+	"game": "1.9.0",
 	}
 }
