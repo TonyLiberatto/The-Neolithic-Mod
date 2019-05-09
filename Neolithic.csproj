@@ -43,39 +43,31 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\VS-1.9.0\Lib\cairo-sharp.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9.X\Lib\cairo-sharp.dll</HintPath>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\VS-1.9.0\Lib\CommandLine.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9.X\Lib\CommandLine.dll</HintPath>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\VS-1.9.0\Lib\csogg.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9.X\Lib\csogg.dll</HintPath>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\VS-1.9.0\Lib\csvorbis.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9.X\Lib\csvorbis.dll</HintPath>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\VS-1.9.0\Lib\ENet.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9.X\Lib\ENet.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\VS-1.9.0\Lib\Newtonsoft.Json.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9.X\Lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\VS-1.9.0\Lib\OpenTK.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9.X\Lib\OpenTK.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\VS-1.9.0\Lib\protobuf-net.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9.X\Lib\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Private>False</Private>
@@ -96,28 +88,24 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\VS-1.9.0\Lib\Tavis.JsonPatch.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9.X\Lib\Tavis.JsonPatch.dll</HintPath>
     </Reference>
-    <Reference Include="VintagestoryAPI">
-      <HintPath>..\..\VintagestoryAPI.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="VintagestoryAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\VS-1.9.X\VintagestoryAPI.dll</HintPath>
     </Reference>
-    <Reference Include="VintagestoryLib">
-      <HintPath>..\..\VintagestoryLib.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="VintagestoryLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\VS-1.9.X\VintagestoryLib.dll</HintPath>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\VS-1.9.0\Mods\VSCreativeMod.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9.X\Mods\VSCreativeMod.dll</HintPath>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\VS-1.9.0\Mods\VSEssentials.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9.X\Mods\VSEssentials.dll</HintPath>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\VS-1.9.0\Mods\VSSurvivalMod.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\VS-1.9.X\Mods\VSSurvivalMod.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
