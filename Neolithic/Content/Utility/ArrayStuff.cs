@@ -52,14 +52,14 @@ namespace TheNeolithicMod
             return world.BlockAccessor.GetBlock(pos);
         }
 
-        public static Block GetBlock(this AssetLocation asset)
+        public static Block GetBlock(this AssetLocation asset, ICoreAPI api)
         {
-            return GetAPI.coreapi.World.BlockAccessor.GetBlock(asset);
+            return api.World.BlockAccessor.GetBlock(asset);
         }
 
-        public static Item GetItem(this AssetLocation asset)
+        public static Item GetItem(this AssetLocation asset, ICoreAPI api)
         {
-            return GetAPI.coreapi.World.GetItem(asset);
+            return api.World.GetItem(asset);
         }
 
         public static AssetLocation ToAsset(this string asset)
@@ -84,30 +84,6 @@ namespace TheNeolithicMod
                 array[i] = parray[(int)(scalar * parray.Length)];
             }
             return array;
-        }
-    }
-
-    public class GetAPI : ModSystem
-    {
-        public static ICoreServerAPI sapi;
-        public static ICoreClientAPI capi;
-        public static ICoreAPI coreapi;
-
-        public override double ExecuteOrder() => 0;
-
-        public override void StartServerSide(ICoreServerAPI api)
-        {
-            sapi = api;
-        }
-
-        public override void StartClientSide(ICoreClientAPI api)
-        {
-            capi = api;
-        }
-
-        public override void Start(ICoreAPI api)
-        {
-            coreapi = api;
         }
     }
 }

@@ -54,8 +54,8 @@ namespace TheNeolithicMod
                         uint index = (world.BlockAccessor.GetBlockEntity(blockSel.Position) as BENeolithicRoads).index;
                         Block nextBlock;
 
-                        if (byPlayer.Entity.Controls.Sneak) nextBlock = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + types.Prev(ref index)).GetBlock();
-                        else nextBlock = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + types.Next(ref index)).GetBlock();
+                        if (byPlayer.Entity.Controls.Sneak) nextBlock = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + types.Prev(ref index)).GetBlock(api);
+                        else nextBlock = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + types.Next(ref index)).GetBlock(api);
 
                         if (nextBlock == null) return;
                         (world.BlockAccessor.GetBlockEntity(blockSel.Position) as BENeolithicRoads).index = index;

@@ -24,7 +24,7 @@ namespace TheNeolithicMod
 
         public new void ServePlayer(IPlayer player)
         {
-            ItemStack itemStack = new ItemStack(new AssetLocation(("bowl-meal-" + player.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.Variant["color"]).ToString()).GetBlock(), 1);
+            ItemStack itemStack = new ItemStack(new AssetLocation(("bowl-meal-" + player.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.Variant["color"]).ToString()).GetBlock(api), 1);
             (itemStack.Collectible as BlockMeal).SetContents(RecipeCode, itemStack, GetContentStacks(true));
             if (player.InventoryManager.ActiveHotbarSlot.StackSize == 1)
             {

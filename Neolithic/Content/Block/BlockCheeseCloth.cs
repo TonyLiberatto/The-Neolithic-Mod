@@ -55,7 +55,7 @@ namespace TheNeolithicMod
                         ItemStack contents = bucket.GetContent(byEntity.World, pos);
                         if (contents.Item.Code.Path == "curdsportion" && slot.Itemstack.Collectible.Variant["contents"] == "none")
                         {
-                            ItemStack curdsandwhey = new ItemStack(CodeWithPart("curdsandwhey", 2).GetBlock(), 1);
+                            ItemStack curdsandwhey = new ItemStack(CodeWithPart("curdsandwhey", 2).GetBlock(api), 1);
 
                             bucket.TryTakeContent(api.World, pos, 2);
 
@@ -65,8 +65,8 @@ namespace TheNeolithicMod
                     }
                     if ((bucket.GetContent(byEntity.World, pos) == null || bucket.GetContent(byEntity.World, pos).Item.Code.Path == "wheyportion") && slot.Itemstack.Collectible.Variant["contents"] == "curdsandwhey")
                     {
-                        ItemStack curds = new ItemStack(CodeWithPart("curds", 2).GetBlock(), 1);
-                        ItemStack wheyportion = new ItemStack(new AssetLocation("wheyportion").GetItem(), 1);
+                        ItemStack curds = new ItemStack(CodeWithPart("curds", 2).GetBlock(api), 1);
+                        ItemStack wheyportion = new ItemStack(new AssetLocation("wheyportion").GetItem(api), 1);
                         bucket.TryAddContent(api.World, pos, wheyportion, 1);
 
                         TryGiveItem(curds, slot, byEntity, contentProps, pos);
