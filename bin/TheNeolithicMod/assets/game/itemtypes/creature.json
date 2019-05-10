@@ -43,7 +43,7 @@
 		"*-fox-red-female": { base: "entity/land/fox/female"},
 		"*-fox-snow-male": { base: "entity/land/fox/male"},
 		"*-fox-snow-female": { base: "entity/land/fox/female"},
-		"*-hare-arctic-female": { "base": "entity/land/hare-female"},
+		"*-hare-female-*": { "base": "entity/land/hare-female"},
 		"*-hare-baby": { "base": "entity/land/hare-baby"},
 		"*-hare-male-*": { "base": "entity/land/hare-male"},
 		"*-humanoid-*": { base: "entity/humanoid/trader" },

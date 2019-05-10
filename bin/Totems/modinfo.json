@@ -5,9 +5,9 @@
 	"description" : "A Challenge Mod ",
 	"authors": [ "Tony Liberatto","Balduranne", "Novocain"],
 	"contributors": [],
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"dependencies": {
-	"game": "1.9.0",
+	"game": "1.9.2",
 	"theneolithicmod": "1.6.1"
 	}
 }

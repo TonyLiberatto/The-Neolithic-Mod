@@ -54,7 +54,7 @@
 		"*": { base: "block/clay/bowl-ground-liquid" },
 	},
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["*"], "decorative": ["*"] },
+	creativeinventory: { "general": ["*"], "decorative": ["*"], "neolithicblocks": ["*"] },
 	replaceable: 300,
 	resistance: 0.75,
 	maxStackSizeByType: {
