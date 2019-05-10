@@ -47,25 +47,13 @@ namespace TheNeolithicMod
             return false;
         }
 
-        public static Block GetBlock(this BlockPos pos, IWorldAccessor world)
-        {
-            return world.BlockAccessor.GetBlock(pos);
-        }
+        public static Block GetBlock(this BlockPos pos, IWorldAccessor world) { return world.BlockAccessor.GetBlock(pos); }
 
-        public static Block GetBlock(this AssetLocation asset, ICoreAPI api)
-        {
-            return api.World.BlockAccessor.GetBlock(asset);
-        }
+        public static Block GetBlock(this AssetLocation asset, ICoreAPI api) { return api.World.BlockAccessor.GetBlock(asset); }
 
-        public static Item GetItem(this AssetLocation asset, ICoreAPI api)
-        {
-            return api.World.GetItem(asset);
-        }
+        public static Item GetItem(this AssetLocation asset, ICoreAPI api) { return api.World.GetItem(asset); }
 
-        public static AssetLocation ToAsset(this string asset)
-        {
-            return new AssetLocation(asset);
-        }
+        public static AssetLocation ToAsset(this string asset) { return new AssetLocation(asset); }
 
         public static void PlaySoundAtWithDelay(this IWorldAccessor world, AssetLocation location, BlockPos pos, int delay)
         {
