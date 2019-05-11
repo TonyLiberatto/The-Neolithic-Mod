@@ -1,41 +1,23 @@
 {
   code: "totem-pig-crucible",
-  creativeinventory: {
-    "general": [ "*-east" ],
-    "construction": [ "*-east" ],
-    "totems": [ "*-east" ]
-  },
-  shapebytype: {
-    "*-north": {
-      base: "block/wood/totem/pig/crucible",
-      rotateY: 0
-    },
-    "*-east": {
-      base: "block/wood/totem/pig/crucible",
-      rotateY: 270
-    },
-    "*-south": {
-      base: "block/wood/totem/pig/crucible",
-      rotateY: 180
-    },
-    "*-west": {
-      base: "block/wood/totem/pig/crucible",
-      rotateY: 90
-    }
+  attributes: {
+		handbook: {
+			groupBy: ["totem-pig-*"]
+		}
+	},
+  creativeinventory: { "general": [ "*-east" ], "construction": [ "*-east" ], "totems": [ "*-east" ] },
+  shapebytype: { "*-north": {  base: "block/wood/totem/pig/crucible", rotateY: 0  },
+    "*-east": {  base: "block/wood/totem/pig/crucible", rotateY: 270  },
+    "*-south": { base: "block/wood/totem/pig/crucible", rotateY: 180  },
+    "*-west": {  base: "block/wood/totem/pig/crucible", rotateY: 90   }
   },
   blockmaterial: "Wood",
-  variantgroups: [
-    { loadFromProperties: "block/wood" },
-    {
-      code: "side",
-      loadFromProperties: "abstract/horizontalorientation"
-    }
+  variantgroups: [ { loadFromProperties: "block/wood" },  { code: "side", loadFromProperties: "abstract/horizontalorientation" }
   ],
   drawtype: "json",
   behaviors: [
     { name: "HorizontalOrientable" },
-    {
-      name: "BlockCreateBehavior",
+    { name: "BlockCreateBehavior",
       properties: {
         "createBlocks": [
           [ "game:clay-blue", "game:crucible-blue-raw", 10 ],
