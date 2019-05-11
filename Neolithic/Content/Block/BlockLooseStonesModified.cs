@@ -56,7 +56,7 @@ namespace TheNeolithicMod
 
                         if (!allowedbases.Contains(dBlock.FirstCodePart())) return;
                         AssetLocation location = new AssetLocation("neolithicmod:3droad-" + Variant["rock"] + "-" + "stepping" + world.Rand.Next(1, 4));
-                        Block nextBlock = location.GetBlock();
+                        Block nextBlock = location.GetBlock(api);
                         if (nextBlock == null) return;
 
                         world.PlaySoundAtWithDelay(nextBlock.Sounds.Place, blockSel.Position, 200);

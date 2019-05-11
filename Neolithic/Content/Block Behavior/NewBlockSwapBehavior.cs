@@ -51,7 +51,7 @@ namespace TheNeolithicMod
                         string toCode = (string)values[1];
                         if (toCode.IndexOf(":") == -1) toCode = block.Code.Domain + ":" + toCode;
                         AssetLocation toAsset = new AssetLocation(toCode);
-                        Block toBlock = toAsset.GetBlock();
+                        Block toBlock = toAsset.GetBlock(world.Api);
 
                         int count = Convert.ToInt32(values.Last());
 

@@ -47,25 +47,13 @@ namespace TheNeolithicMod
             return false;
         }
 
-        public static Block GetBlock(this BlockPos pos, IWorldAccessor world)
-        {
-            return world.BlockAccessor.GetBlock(pos);
-        }
+        public static Block GetBlock(this BlockPos pos, IWorldAccessor world) { return world.BlockAccessor.GetBlock(pos); }
 
-        public static Block GetBlock(this AssetLocation asset)
-        {
-            return GetAPI.coreapi.World.BlockAccessor.GetBlock(asset);
-        }
+        public static Block GetBlock(this AssetLocation asset, ICoreAPI api) { return api.World.BlockAccessor.GetBlock(asset); }
 
-        public static Item GetItem(this AssetLocation asset)
-        {
-            return GetAPI.coreapi.World.GetItem(asset);
-        }
+        public static Item GetItem(this AssetLocation asset, ICoreAPI api) { return api.World.GetItem(asset); }
 
-        public static AssetLocation ToAsset(this string asset)
-        {
-            return new AssetLocation(asset);
-        }
+        public static AssetLocation ToAsset(this string asset) { return new AssetLocation(asset); }
 
         public static void PlaySoundAtWithDelay(this IWorldAccessor world, AssetLocation location, BlockPos pos, int delay)
         {
@@ -84,30 +72,6 @@ namespace TheNeolithicMod
                 array[i] = parray[(int)(scalar * parray.Length)];
             }
             return array;
-        }
-    }
-
-    public class GetAPI : ModSystem
-    {
-        public static ICoreServerAPI sapi;
-        public static ICoreClientAPI capi;
-        public static ICoreAPI coreapi;
-
-        public override double ExecuteOrder() => 0;
-
-        public override void StartServerSide(ICoreServerAPI api)
-        {
-            sapi = api;
-        }
-
-        public override void StartClientSide(ICoreClientAPI api)
-        {
-            capi = api;
-        }
-
-        public override void Start(ICoreAPI api)
-        {
-            coreapi = api;
         }
     }
 }
