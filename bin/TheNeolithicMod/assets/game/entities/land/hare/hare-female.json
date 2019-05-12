@@ -1,16 +1,19 @@
 {
 	code: "hare-female",
 	class: "EntityAgent",
-	variantgroups:  [ { code: "type", states: ["arctic", "ashgrey", "darkbrown", "desert", "gold", "lightbrown", "lightgrey", "silver", "smokegrey" ] } ] ,
+	variantgroups:  [ { code: "color", states: ["arctic", "ashgrey", "darkbrown", "desert", "gold", "lightbrown", "lightgrey", "silver", "smokegrey" ] } ] ,
 	hitboxSize: { x: 0.75, y: 0.75 },
 	eyeHeight: 0.7,
 	drops: [
-
+		{
+				type: "block",
+				code: "neolithicmod:dead-hare-{color}",
+			},
 	],
 	client: {
 		renderer: "Shape",
 		shape: { base: "entity/land/hare-female" },
-		texture: { base: "entity/hare/male-{type}" },
+		texture: { base: "entity/hare/male-{color}" },
 		behaviors: [{ code: "repulseagents" }, { code: "controlledphysics", stepHeight: 1.0001 }, { code: "interpolateposition" }],
 		animations: [
 			{
@@ -27,16 +30,6 @@
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 },
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
-			{ code: "deaddecay", hoursToDecay: 96, decayedBlock: "carcass-tiny" },
-			{ code: "floatupwhenstuck", onlyWhenDead: true },
-			{ code: "harvestable", drops: [
-				{
-					type: "item", 
-					code: "redmeat-raw", 
-					quantity: { avg: 2, var: 0.5 } 
-				}
-				],
-			},
 			{ code: "health", currenthealth: 6, maxhealth: 6, },
 			{ code: "breathe" },
 			{ 
@@ -51,7 +44,7 @@
 				aitasks: [
 					{
 						code: "fleeentity",
-						entityCodes: ["player", "wolf-male", "wolf-female", "fox-*", "hyena-male", "hyena-female"],
+						entityCodes: ["player", "wolf-*", "fox-*", "hyena-*" ],
 						priority: 2,
 						movespeed: 0.02,
 						seekingRange: 12,

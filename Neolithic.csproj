@@ -43,38 +43,38 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -96,7 +96,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -110,15 +110,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -617,6 +617,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-fox.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-hyena.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-pig.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-hare.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-rotten.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-sheep.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\carcass\dead-wild-sheep.json" />
@@ -648,6 +649,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\pelts\bighornpelt.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\pelts\boarpelt.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\pelts\foxpelt.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\pelts\harepelt.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\pelts\hyenapelt.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\pelts\wolfpelt.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\plant\gate.json" />
@@ -690,7 +692,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\food\chicken.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\food\mutton.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\food\porkchops.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\food\rabbit.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\food\hare.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\resource\animal.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\resource\bowlimb.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\resource\byproducts.json" />
@@ -1017,6 +1019,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\hyena.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\pig\boar.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\pig\sow.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\hare.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\sheep\ewe.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\sheep\ram.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\dead\wild-sheep\ewe.json" />
@@ -1209,7 +1212,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\food\meat\chicken.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\food\meat\mutton.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\food\meat\porkchops.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\food\meat\rabbit.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\food\meat\hare.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\resource\stonebrick.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\tool\roadwork\settinghammer.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\item\tool\roadwork\settinghammerhead.json" />

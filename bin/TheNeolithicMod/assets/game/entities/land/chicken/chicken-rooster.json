@@ -238,7 +238,24 @@
         minTemp: -2,
         minRain: 0.32,
         minShrubs: 0.5,
-        companions: [ "chicken-hen-*", "chicken-chick-*" ]
+        companionsByType: {
+					"chicken-rooster-ashgrey":
+						["chicken-hen-ashgrey", "chicken-chick-ashgrey"],
+					"chicken-rooster-black":
+						["chicken-hen-black", "chicken-chick-black"],
+					"chicken-rooster-brown":
+						["chicken-hen-brown", "chicken-chick-brown"],
+					"chicken-rooster-cream":
+						["chicken-hen-cream", "chicken-chick-cream"],
+					"chicken-rooster-golden":
+						["chicken-hen-golden", "chicken-chick-golden"],
+					"chicken-rooster-savanna":
+						["chicken-hen-savanna", "chicken-chick-savanna"],
+					"chicken-rooster-white":
+						["chicken-hen-white", "chicken-chick-white"],
+					"chicken-rooster-woodland":
+						["chicken-hen-woodland", "chicken-chick-woodland"],
+				}
       },
       runtime: {
         group: "passive",
@@ -255,7 +272,24 @@
         minTemp: -2,
         minRain: 0.32,
         minShrubs: 0.5,
-        companions: [ "chicken-hen-*", "chicken-chick-*" ]
+        companionsByType: {
+					"chicken-rooster-ashgrey":
+						["chicken-hen-ashgrey", "chicken-chick-ashgrey"],
+					"chicken-rooster-black":
+						["chicken-hen-black", "chicken-chick-black"],
+					"chicken-rooster-brown":
+						["chicken-hen-brown", "chicken-chick-brown"],
+					"chicken-rooster-cream":
+						["chicken-hen-cream", "chicken-chick-cream"],
+					"chicken-rooster-golden":
+						["chicken-hen-golden", "chicken-chick-golden"],
+					"chicken-rooster-savanna":
+						["chicken-hen-savanna", "chicken-chick-savanna"],
+					"chicken-rooster-white":
+						["chicken-hen-white", "chicken-chick-white"],
+					"chicken-rooster-woodland":
+						["chicken-hen-woodland", "chicken-chick-woodland"],
+				}
       }
     }
   },

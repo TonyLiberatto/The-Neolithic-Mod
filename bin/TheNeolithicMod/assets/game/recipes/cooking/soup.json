@@ -54,7 +54,7 @@
 				{ type: "item", code: "neolithicmod:chicken-raw",  shapeElement: "bowl/poultry/*" },
 				{ type: "item", code: "neolithicmod:mutton-raw",  shapeElement: "bowl/red meat/*" },
 				{ type: "item", code: "neolithicmod:porkchops-raw",  shapeElement: "bowl/red meat/*" },
-				{ type: "item", code: "neolithicmod:rabbit-raw",  shapeElement: "bowl/poultry/*" },
+				{ type: "item", code: "neolithicmod:hare-raw",  shapeElement: "bowl/poultry/*" },
 			],
 			minQuantity: 0,
 			maxQuantity: 1,

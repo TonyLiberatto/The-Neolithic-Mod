@@ -6,10 +6,10 @@
 			blockCodes: [ "neolithicmod:palmlog-bottom-grown" ],
 			minTemp: 10,
 			maxTemp: 40,
-			minRain: 0.35,
-			maxRain: 0.75,
+			minRain: 0,
+			maxRain: 1,
 			maxForest: 1,
-			quantity: { avg: 8, var: 5 },
+			quantity: { avg: 6, var: 3 },
 			chance: 0.5,
 		},
 		{

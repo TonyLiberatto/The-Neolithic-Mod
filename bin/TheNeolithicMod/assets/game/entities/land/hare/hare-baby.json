@@ -31,7 +31,7 @@
 			{ code: "breathe" },
 			{ 
 				hoursToGrow: 336,
-				adultEntityCodes: ["hare-male", "hare-female"],
+				adultEntityCodes: ["hare-male-*", "hare-female-*"],
 				code: "grow" 
 			},
 			{ 
@@ -39,7 +39,7 @@
 				aitasks: [
 					{
 						code: "fleeentity",
-						entityCodes: ["player", "wolf-male", "wolf-female", "fox-*", "hyena-male", "hyena-female"],
+						entityCodes: ["player", "wolf-*",  "fox-*", "hyena-*" ],
 						priority: 1.5,
 						movespeed: 0.02,
 						animationSpeed: 1.8,
@@ -56,7 +56,7 @@
 					{
 						code: "stayclosetoentity",
 						priority: 1.4,
-						entityCode: "hare-female",
+						entityCode: "hare-female-*",
 						movespeed: 0.02,
 						animationSpeed: 3,
 						maxDistance: 5,

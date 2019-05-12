@@ -5,7 +5,7 @@
 		"C": { type: "item", code: "neolithicmod:chicken-cooked", quantity: 64 },
 		"M": { type: "item", code: "neolithicmod:mutton-cooked", quantity: 64 },
 		"P": { type: "item", code: "neolithicmod:porkchops-cooked", quantity: 64 },
-		"R": { type: "item", code: "neolithicmod:rabbit-cooked", quantity: 64 },
+		"R": { type: "item", code: "neolithicmod:hare-cooked", quantity: 64 },
 	},
 	width: 3,
 	height: 3,

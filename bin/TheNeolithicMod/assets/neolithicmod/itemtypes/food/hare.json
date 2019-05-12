@@ -1,5 +1,5 @@
 {
-	code: "rabbit",
+	code: "hare",
 	maxstacksize: 64,
 	attributes: {
 		inFirePitProps: {
@@ -17,16 +17,16 @@
 	],
 	texturesbytype: {
 		"*-raw": { 
-			"meat": {base: "item/food/meat/rabbit-raw" }
+			"meat": {base: "item/food/meat/hare-raw" }
 		},
 		"*-cooked":  { 
-			"meat": {base: "item/food/meat/rabbit-cooked" }
+			"meat": {base: "item/food/meat/hare-cooked" }
 		}
 	},
-	shape: { base: "item/food/meat/rabbit" },
+	shape: { base: "item/food/meat/hare" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	nutritionPropsByType: {
-		"rabbit-cooked": 
+		"hare-cooked": 
 		{ 
 		saturation: 180, 
 		health: 0, 
@@ -60,12 +60,12 @@
 		scale: 5
 	},
 	combustiblePropsByType: {
-		"rabbit-raw": {
+		"hare-raw": {
 			meltingPoint: 150,
 			meltingDuration: 30,
 			smeltedRatio: 1,
 			smeltingType: "cook",
-			smeltedStack: { type: "item", code: "rabbit-cooked" },
+			smeltedStack: { type: "item", code: "hare-cooked" },
 			requiresContainer: false
 		}
 	}

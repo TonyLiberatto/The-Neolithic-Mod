@@ -1,16 +1,19 @@
 {
 	code: "hare-male",
 	class: "EntityAgent",
-	variantgroups:  [ { code: "type", states: ["arctic", "ashgrey", "darkbrown", "desert", "gold", "lightbrown", "lightgrey", "silver", "smokegrey" ] } ] ,
+	variantgroups:  [ { code: "color", states: ["arctic", "ashgrey", "darkbrown", "desert", "gold", "lightbrown", "lightgrey", "silver", "smokegrey" ] } ] ,
 	hitboxSize: { x: 0.75, y: 0.75 },
 	eyeHeight: 0.7,
 	drops: [
-		
+		{
+				type: "block",
+				code: "neolithicmod:dead-hare-{color}",
+			},
 	],
 	client: {
 		renderer: "Shape",
 		shape: { base: "entity/land/hare-male" },
-		texture: { base: "entity/hare/male-{type}" },
+		texture: { base: "entity/hare/male-{color}" },
 		behaviors: [{ code: "repulseagents" }, { code: "controlledphysics", stepHeight: 1.0001 }, { code: "interpolateposition" }],
 		animations: [
 			{
@@ -28,17 +31,6 @@
 			{ code: "controlledphysics", stepHeight: 1.0001 },
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ code: "health", currenthealth: 6, maxhealth: 6, },
-			{ code: "deaddecay", hoursToDecay: 96, decayedBlock: "carcass-tiny" },
-			{ code: "floatupwhenstuck", onlyWhenDead: true },
-			{ code: "harvestable", drops: [
-				{
-					type: "item", 
-					code: "redmeat-raw", 
-					quantity: { avg: 2, var: 0.5 } 
-				}
-				],
-			},
-
 			{ code: "breathe" },
 			{ 
 				code: "emotionstates",
@@ -52,7 +44,7 @@
 				aitasks: [
 					{
 						code: "fleeentity",
-						entityCodes: ["player", "wolf-male", "wolf-female", "fox-*", "hyena-male", "hyena-female"],
+						entityCodes: ["player", "wolf-*", "fox-*", "hyena-*", ],
 						priority: 2,
 						movespeed: 0.02,
 						seekingRange: 12,
@@ -113,8 +105,80 @@
 			}
 		],
 		spawnconditions: {
-			
-		}
+      worldgen: {
+        TriesPerChunk: {
+          avg: 0.015,
+          var: 0
+        },
+        tryOnlySurface: true,
+        minLightLevel: 12,
+        groupSize: {
+          dist: "verynarrowgaussian",
+          avg: 4,
+          var: 5
+        },
+        insideBlockCodes: [ "air", "tallgrass-*" ],
+        minTemp: -2,
+        minRain: 0.32,
+        minShrubs: 0.5,
+        companionsByType: {
+					"hare-male-artic":
+						["hare-female-artic", "hare-baby"],
+					"hare-male-ashgrey":
+						["hare-female-ashgrey", "hare-baby"],
+					"hare-male-darkbrown":
+						["hare-female-darkbrown", "hare-baby"],
+					"hare-male-desert":
+						["hare-female-desert", "hare-baby"],
+					"hare-male-gold":
+						["hare-female-gold", "hare-baby"],
+					"hare-male-lightbrown":
+						["hare-female-lightbrown", "hare-baby"],
+					"hare-male-lightgrey":
+						["hare-female-lightgrey", "hare-baby"],
+					"hare-male-silver":
+						["hare-female-silver", "hare-baby"],
+					"hare-male-smokegrey":
+						["hare-female-smokegrey", "hare-baby"],
+				}
+      },
+      runtime: {
+        group: "passive",
+        tryOnlySurface: true,
+        chance: 0.003,
+        maxQuantity: 4,
+        minLightLevel: 12,
+        groupSize: {
+          dist: "verynarrowgaussian",
+          avg: 4,
+          var: 5
+        },
+        insideBlockCodes: [ "air", "tallgrass-*" ],
+        minTemp: -2,
+        minRain: 0.32,
+        minShrubs: 0.5,
+        companionsByType: {
+					"hare-male-artic":
+						["hare-female-artic", "hare-baby"],
+					"hare-male-ashgrey":
+						["hare-female-ashgrey", "hare-baby"],
+					"hare-male-darkbrown":
+						["hare-female-darkbrown", "hare-baby"],
+					"hare-male-desert":
+						["hare-female-desert", "hare-baby"],
+					"hare-male-gold":
+						["hare-female-gold", "hare-baby"],
+					"hare-male-lightbrown":
+						["hare-female-lightbrown", "hare-baby"],
+					"hare-male-lightgrey":
+						["hare-female-lightgrey", "hare-baby"],
+					"hare-male-silver":
+						["hare-female-silver", "hare-baby"],
+					"hare-male-smokegrey":
+						["hare-female-smokegrey", "hare-baby"],
+				}
+      }
+    }
 	},
 	sounds: {
 		hurt: "creature/raccoon/raccoon-hurt",

@@ -10,39 +10,18 @@
     },
     { loadFromProperties: "abstract/horizontalorientation" }
   ],
-  creativeinventory: {
-    "general": [ "*-north" ],
-    "flora": [ "*-north" ]
-  },
+  creativeinventory: { "general": [ "*-north" ], "flora": [ "*-north" ], "neolithicflora": [ "*-north" ]  },
   randomDrawOffset: false,
   shapeByType: {
-    "*-north": {
-      base: "block/flora/palm/bunches/{type}",
-      rotateY: 180
-    },
-    "*-east": {
-      base: "block/flora/palm/bunches/{type}",
-      rotateY: 90
-    },
-    "*-south": {
-      base: "block/flora/palm/bunches/{type}",
-      rotateY: 0
-    },
-    "*-west": {
-      base: "block/flora/palm/bunches/{type}",
-      rotateY: 270
-    },
+    "*-north": {  base: "block/flora/palm/bunches/{type}", rotateY: 180  },
+    "*-east": {   base: "block/flora/palm/bunches/{type}", rotateY: 90   },
+    "*-south": {  base: "block/flora/palm/bunches/{type}", rotateY: 0    },
+    "*-west": {   base: "block/flora/palm/bunches/{type}", rotateY: 270  },
   },
-  textures: {
-    fruits: { base: "block/flora/palm/fruits" },
-  },
+  textures: { fruits: { base: "block/flora/palm/fruits" },  },
   blockmaterial: "Wood",
-  sideopaque: {
-    all: false
-  },
-  sidesolid: {
-    all: false
-  },
+  sideopaque: {  all: false  },
+  sidesolid: {   all: false  },
   replaceable: 500,
   resistance: 4.5,
   sounds: {
