@@ -40,9 +40,17 @@ namespace TheNeolithicMod
             });
         }
 
-        public bool TryTriggerAoD(EntityAgent agent) => agent.GetBehavior<EntityBehaviorEmotionStates>().TryTriggerState("aggressiveondamage");
+        public bool TryTriggerAoD(EntityAgent agent)
+		{
+			if (agent.GetBehavior<EntityBehaviorEmotionStates>() == null) return false;
+			return agent.GetBehavior<EntityBehaviorEmotionStates>().TryTriggerState("aggressiveondamage");
+		}
 
-        public bool TryTriggerFlee(EntityAgent agent) => agent.GetBehavior<EntityBehaviorEmotionStates>().TryTriggerState("fleeondamage");
+		public bool TryTriggerFlee(EntityAgent agent)
+		{
+			if (agent.GetBehavior<EntityBehaviorEmotionStates>() == null) return false;
+			return agent.GetBehavior<EntityBehaviorEmotionStates>().TryTriggerState("fleeondamage");
+		}
 
         public override string PropertyName() => "damagenotify";
     }
