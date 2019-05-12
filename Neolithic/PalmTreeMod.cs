@@ -12,7 +12,7 @@ using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
-namespace PalmTreeMod
+namespace TheNeolithicMod
 {
     public class RegisterClasses : ModSystem
     {
