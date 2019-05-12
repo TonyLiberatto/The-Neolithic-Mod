@@ -2,6 +2,17 @@
 	chanceMultiplier: { dist: "uniform", avg: 2.5, var: 2 },
 	patches: [
 		{
+			comment: "Palm Trees",
+			blockCodes: [ "neolithicmod:palmlog-bottom-grown" ],
+			minTemp: 10,
+			maxTemp: 40,
+			minRain: 0.35,
+			maxRain: 0.75,
+			maxForest: 1,
+			quantity: { avg: 8, var: 5 },
+			chance: 0.5,
+		},
+		{
 			comment: "Large patches of giant reed",
 			blockCodes: ["giantreed-arundo-water-normal"],
 			minTemp: 3,
@@ -189,7 +200,16 @@
 			comment: "Locust nests",
 			blockCodes: ["locustnest-cage"],
 			quantity: { avg: 1, var: 0 },
-			chance: 1,
+			chance: 2,
+			placement: "Underground"
+		},
+		{
+			comment: "Stalactites and Stalagmites",
+			blockCodes: ["stalagsection-andesite-06", "stalagsection-andesite-08", "stalagsection-andesite-10", "stalagsection-andesite-12", "stalagsection-andesite-14"],
+			quantity: { avg: 4, var: 3 },
+			chance: 3,
+			offsetX: { avg: 0, var: 8 },
+			offsetZ: { avg: 0, var: 8 },
 			placement: "Underground"
 		},
 		{
@@ -542,6 +562,19 @@
 			offsetZ: { dist: "gaussian", avg: 0, var: 10 },
 		},
 		{
+			comment: "Small patches or termite mounds in hot and dry climate",
+			blockCodes: ["termitemound"],
+			minTemp: 22,
+			maxTemp: 37,
+			minRain: 0.25,
+			maxRain: 0.39,
+			maxFertility: 0.55,
+			chance: 0.1,
+			quantity: { dist: "invexp", avg: 2, var: 4 },
+			offsetX: { dist: "uniform", avg: 0, var: 10 },
+			offsetZ: { dist: "uniform", avg: 0, var: 10 },
+		},
+		{
 			comment: "Small patches or orange mallows in hot and dry climate",
 			blockCodes: ["flower-orangemallow"],
 			minTemp: 20,
@@ -691,11 +724,11 @@
 		{
 			comment: "Single hives found attached under trees. The beehive block itself makes sure it gets attached under a log / branchy leaves block",
 			blockCodes: ["wildbeehive-medium", "wildbeehive-large"],
-			minTemp: 17,
-			maxTemp: 40,
+			minTemp: 8,
+			maxTemp: 35,
 			minRain: 0.35,
 			maxRain: 0.75,
-			minForest: 0.2,
+			minForest: 0.25,
 			chance: 3,
 			postPass: true,
 			quantity: { avg: 1, var: 0 },

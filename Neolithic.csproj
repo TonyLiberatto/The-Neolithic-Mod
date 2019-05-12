@@ -713,7 +713,6 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\entities.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\items.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\modifystonepath.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\palmtrees.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\recipes.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\seraph.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\worldgen.json" />
