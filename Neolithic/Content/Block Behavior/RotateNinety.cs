@@ -9,6 +9,7 @@
 
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
+using TheNeolithicMod.Utility;
 
 namespace TheNeolithicMod
 {
@@ -36,7 +37,7 @@ namespace TheNeolithicMod
 
         public override ItemStack OnPickBlock(IWorldAccessor world, BlockPos pos, ref EnumHandling handling)
         {
-            return new ItemStack(world.BlockAccessor.GetBlock(block.CodeWithPath(block.CodeWithoutParts(2) + "-n")), 1);
+            return new ItemStack((block.Code.Domain + ":" + block.CodeWithoutParts(1) + "-n").ToAsset().GetBlock(world.Api), 1);
         }
 
         public override AssetLocation GetRotatedBlockCode(int angle, ref EnumHandling handling)
