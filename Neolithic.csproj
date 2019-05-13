@@ -346,7 +346,10 @@
     <None Include="bin\TheNeolithicMod\assets\game\recipes\cooking\meatystew.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\cooking\soup.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\beenade.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\oillamp.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\oillampfire.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\oillampbrown.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\oillampblue.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\oillampred.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\poultice.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\axe-metal.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\bone-primitive-arrowhead.json" />
