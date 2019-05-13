@@ -12,9 +12,9 @@
 			aged: false
 		},
 		quantitySlots: {
-			reed: 8,
-			vine: 8,
-			aged: 8
+			reed: 16,
+			vine: 16,
+			aged: 16
 		},
 		dialogTitleLangCode: {
 			reed: "basketcontents",
