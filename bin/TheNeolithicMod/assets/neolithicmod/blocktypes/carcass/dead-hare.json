@@ -29,11 +29,12 @@
 	],
 	creativeinventory: { "general": ["*"], "neolithicfauna": ["*"] },
 	variantgroups: [
+		{ code: "gender", states: ["male", "female" ] },
 		{ code: "color", states: ["arctic", "ashgrey", "darkbrown", "desert", "gold", "lightbrown", "lightgrey", "silver", "smokegrey" ] }
 	],
 	textures: 
 	{
-		all: { base: "game:entity/hare/{color}" },
+		all: { base: "game:entity/hare/{gender}-{color}" },
 	},
 	shapeByType: 
 	{

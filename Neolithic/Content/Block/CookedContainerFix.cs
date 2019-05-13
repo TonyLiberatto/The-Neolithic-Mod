@@ -16,6 +16,8 @@ namespace TheNeolithicMod
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
             ItemSlot activeHotbarSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
+			if (activeHotbarSlot.Empty) return true;
+
             CollectibleObject collectible = activeHotbarSlot.Itemstack.Collectible;
             if (!activeHotbarSlot.Empty && collectible.FirstCodePart() == "bowl" && collectible.Variant["type"] == "burned")
             {

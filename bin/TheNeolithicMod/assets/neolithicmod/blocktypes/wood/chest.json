@@ -2,6 +2,9 @@
 	code: "chest",
 	entityclass: "GenericContainer",
 	attributes: {
+		handbook: {
+			groupBy: ["chest-*"]
+		},
 		inventoryClassName: "chest",
 		quantitySlots: 32,
 		dialogTitleLangCode: "chestcontents",
@@ -17,11 +20,6 @@
 		{name: "Container"}, 
 		{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}	
 	],
-	attributes: {
-		handbook: {
-			groupBy: ["chest-*"]
-		},
-	},
 	variantgroups: [
 		{ code: "type", states: [ "neolithic"] },
 		{ code: "wood", states: [ "bamboo-green", "bamboo-brown"], loadFromProperties: "block/wood" },

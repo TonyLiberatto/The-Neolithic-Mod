@@ -7,7 +7,7 @@
 	drops: [
 		{
 				type: "block",
-				code: "neolithicmod:dead-hare-{color}",
+				code: "neolithicmod:dead-hare-male-{color}",
 			},
 	],
 	client: {
