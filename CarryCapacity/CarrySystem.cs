@@ -1,6 +1,7 @@
-﻿using CarryCapacity.Client;
-using CarryCapacity.Handler;
-using CarryCapacity.Network;
+using CarryCapacity.Client;
+using CarryCapacity.Common;
+using CarryCapacity.Common.Network;
+using CarryCapacity.Server;
 using CarryCapacity.Utility;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -20,9 +21,9 @@ namespace CarryCapacity
 		public static string MOD_ID = "carrycapacity";
 		
 		public override bool AllowRuntimeReload => true;
-
-        // Client
-        public ICoreClientAPI ClientAPI { get; private set; }
+		
+		// Client
+		public ICoreClientAPI ClientAPI { get; private set; }
 		public IClientNetworkChannel ClientChannel { get; private set; }
 		public EntityCarryRenderer EntityCarryRenderer { get; private set; }
 		public HudOverlayRenderer HudOverlayRenderer { get; private set; }

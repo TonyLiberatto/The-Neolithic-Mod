@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using CarryCapacity.Common;
+using CarryCapacity.Common.Network;
 using CarryCapacity.Utility;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
@@ -77,7 +79,7 @@ namespace CarryCapacity
 			if (entity == null) throw new ArgumentNullException(nameof(entity));
 			
 			entity.WatchedAttributes.Set(stack, ATTRIBUTE_ID, slot.ToString(), "Stack");
-            entity.WatchedAttributes.MarkPathDirty(ATTRIBUTE_ID);
+			((SyncedTreeAttribute)entity.WatchedAttributes).MarkPathDirty(ATTRIBUTE_ID);
 			
 			if ((entity.World.Side == EnumAppSide.Server) && (blockEntityData != null))
 				entity.Attributes.Set(blockEntityData, ATTRIBUTE_ID, slot.ToString(), "Data");
@@ -121,7 +123,7 @@ namespace CarryCapacity
 			}
 			
 			entity.WatchedAttributes.Remove(ATTRIBUTE_ID, slot.ToString());
-            entity.WatchedAttributes.MarkPathDirty(ATTRIBUTE_ID);
+			((SyncedTreeAttribute)entity.WatchedAttributes).MarkPathDirty(ATTRIBUTE_ID);
 			entity.Attributes.Remove(ATTRIBUTE_ID, slot.ToString());
 		}
 		
@@ -179,11 +181,11 @@ namespace CarryCapacity
 			if (world == null) throw new ArgumentNullException(nameof(world));
 			if (selection == null) throw new ArgumentNullException(nameof(selection));
 			if (!world.BlockAccessor.IsValidPos(selection.Position)) return false;
-            string f = "";
-
+			
 			if (entity is EntityPlayer playerEntity) {
 				var player = world.PlayerByUid(playerEntity.PlayerUID);
-				if (!Block.TryPlaceBlock(world, player, ItemStack, selection, ref f)) return false;
+				var failureCode = "__ignore__";
+				if (!Block.TryPlaceBlock(world, player, ItemStack, selection, ref failureCode)) return false;
 			} else {
 				world.BlockAccessor.SetBlock((ushort)Block.Id, selection.Position);
 				// TODO: Handle type attribute.

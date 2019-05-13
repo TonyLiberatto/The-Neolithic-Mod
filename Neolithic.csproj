@@ -123,21 +123,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="carrycapacity\BlockBehaviorCarryable.cs" />
-    <Compile Include="carrycapacity\CarriedBlock.cs" />
-    <Compile Include="carrycapacity\CarrySlot.cs" />
-    <Compile Include="carrycapacity\CarrySystem.cs" />
-    <Compile Include="carrycapacity\Client\EntityCarryRenderer.cs" />
-    <Compile Include="carrycapacity\Client\HudOverlayRenderer.cs" />
-    <Compile Include="carrycapacity\Handler\BackwardCompatHandler.cs" />
-    <Compile Include="carrycapacity\Handler\CarryHandler.cs" />
-    <Compile Include="carrycapacity\Handler\DeathHandler.cs" />
-    <Compile Include="carrycapacity\Handler\EntityBehaviorDropCarriedOnDamage.cs" />
-    <Compile Include="carrycapacity\Network\PickUpMessage.cs" />
-    <Compile Include="carrycapacity\Network\PlaceDownMessage.cs" />
-    <Compile Include="carrycapacity\Network\SwapSlotsMessage.cs" />
-    <Compile Include="carrycapacity\Utility\Extensions.cs" />
-    <Compile Include="carrycapacity\Utility\LockedItemSlot.cs" />
+    <Compile Include="CarryCapacity\CarriedBlock.cs" />
+    <Compile Include="CarryCapacity\CarrySlot.cs" />
+    <Compile Include="CarryCapacity\CarrySystem.cs" />
+    <Compile Include="CarryCapacity\Client\AnimationFixer.cs" />
+    <Compile Include="CarryCapacity\Client\EntityCarryRenderer.cs" />
+    <Compile Include="CarryCapacity\Client\HudOverlayRenderer.cs" />
+    <Compile Include="CarryCapacity\Common\BackwardCompatHandler.cs" />
+    <Compile Include="CarryCapacity\Common\BlockBehaviorCarryable.cs" />
+    <Compile Include="CarryCapacity\Common\CarryHandler.cs" />
+    <Compile Include="CarryCapacity\Common\DeathHandler.cs" />
+    <Compile Include="CarryCapacity\Common\Network\PickUpMessage.cs" />
+    <Compile Include="CarryCapacity\Common\Network\PlaceDownMessage.cs" />
+    <Compile Include="CarryCapacity\Common\Network\SwapSlotsMessage.cs" />
+    <Compile Include="CarryCapacity\Server\EntityBehaviorDropCarriedOnDamage.cs" />
+    <Compile Include="CarryCapacity\Utility\Extensions.cs" />
+    <Compile Include="CarryCapacity\Utility\LockedItemSlot.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BEBucketOverride.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\ChimneyBehavior.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\NewBlockSwapBehavior.cs" />

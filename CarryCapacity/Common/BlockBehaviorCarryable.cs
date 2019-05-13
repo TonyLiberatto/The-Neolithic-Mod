@@ -5,7 +5,7 @@ using Vintagestory.API;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 
-namespace CarryCapacity
+namespace CarryCapacity.Common
 {
 	/// <summary> Block behavior which, when added to a block, will allow
 	///           said block to be picked up by players and carried around. </summary>
@@ -59,8 +59,8 @@ namespace CarryCapacity
 		
 		private static bool TryGetFloat(JsonObject json, string key, out float result)
 		{
-				result = json[key].AsFloat(float.NaN);
-				return !float.IsNaN(result);
+			result = json[key].AsFloat(float.NaN);
+			return !float.IsNaN(result);
 		}
 		private static bool TryGetVec3f(JsonObject json, string key, out Vec3f result)
 		{
