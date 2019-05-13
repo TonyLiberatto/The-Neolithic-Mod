@@ -231,7 +231,6 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\plant\plaintreesapling.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\plant\sisal\sisal.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\soil\clay.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stationarybasket.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\generic\trough-large.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\generic\trough-small.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\leavesbranchy.json" />
@@ -602,6 +601,18 @@
     <None Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\roman\source.psd" />
     <None Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\stones\stepping test.psd" />
     <None Include="bin\TheNeolithicMod\assets\game\worldgen\blockpatches.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\metalore\bismuthinite.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\metalore\cassiterite.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\metalore\chromite.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\metalore\galena.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\metalore\ilmenite.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\metalore\iron.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\metalore\malachite.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\metalore\nativecopper.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\metalore\pentlandite.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\metalore\rhodochrosite.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\metalore\sphalerite.json" />
     <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\soil\clay.json" />
     <None Include="bin\TheNeolithicMod\assets\game\worldgen\treengenproperties.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bag\burdenbasket.json" />
@@ -660,7 +671,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\rugs\hyenarug.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\rugs\wolfrug.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\sisal-rugs\sisalrugs.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stationarybasket.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stationarybasket.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\3droad.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\bamboo\browndoor.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\bamboo\greendoor.json" />
@@ -845,7 +856,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\reeds-beenade.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\reeds-rope2.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\reeds-skep.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\reeds-stationarybasket.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\stationarybasket.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\roman\brick.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\roman\circle.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\roman\fish.json" />
