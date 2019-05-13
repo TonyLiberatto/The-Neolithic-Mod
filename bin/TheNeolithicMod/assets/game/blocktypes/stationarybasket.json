@@ -32,12 +32,20 @@
 			aged: true
 		},
 		shape: {
-			reed: "block/reed/basket-normal",
-			vine: "block/vines/basket-normal",
-			aged: "block/reed/basket-aged1"
+			reed: "game:block/reed/basket-normal",
+			vine: "game:block/vines/basket-normal",
+			aged: "game:block/reed/basket-aged1"
 		},
 	},
-	behaviors: [{name: "Container"}, {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
+	behaviors: [
+	{
+			name: "Carryable",
+			properties: {
+			translation: [ 0.0625, 0, 0 ],
+			rotation: [ 0, 180, 0 ],
+			}
+		},
+	{name: "Container"}, {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
 	variantgroups: [
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
 	],
@@ -55,20 +63,20 @@
 		]
 	},
 	heldTpIdleAnimation: "holdunderarm",
-	shape: { base: "block/reed/basket-normal", rotateY: 0 },
+	shape: { base: "game:block/reed/basket-normal", rotateY: 0 },
 	"_comment": "Must declare textures so they get added to the block texture atlas",
 	textures: {
-		"reed-sidesWE": { base: "block/reed/basket/normal-westeast" },
-		"reed-sidesSN": { base: "block/reed/basket/normal-northsouth" },
-		"reed-lid": { base: "block/reed/basket/normal-lid" },
+		"reed-sidesWE": { base: "game:block/reed/basket/normal-westeast" },
+		"reed-sidesSN": { base: "game:block/reed/basket/normal-northsouth" },
+		"reed-lid": { base: "game:block/reed/basket/normal-lid" },
 
-		"aged-sidesWE": { base: "block/reed/basket/normal-westeast" },
-		"aged-sidesSN": { base: "block/reed/basket/normal-northsouth" },
-		"aged-lid": { base: "block/reed/basket/aged-lid" },
+		"aged-sidesWE": { base: "game:block/reed/basket/normal-westeast" },
+		"aged-sidesSN": { base: "game:block/reed/basket/normal-northsouth" },
+		"aged-lid": { base: "game:block/reed/basket/aged-lid" },
 
-		"vine-sidesWE": { base: "block/vines/basket/normal-westeast" },
-		"vine-sidesSN": { base: "block/vines/basket/normal-northsouth" },
-		"vine-lid": { base: "block/vines/basket/normal-lid" },
+		"vine-sidesWE": { base: "game:block/vines/basket/normal-westeast" },
+		"vine-sidesSN": { base: "game:block/vines/basket/normal-northsouth" },
+		"vine-lid": { base: "game:block/vines/basket/normal-lid" },
 	},
 	blockmaterial: "Wood",
 	replaceable: 900,
@@ -81,7 +89,7 @@
 		all: false
 	},
 	collisionbox: {
-		x1: 0.125, y1: 0, z1: 0.125, x2: 0.875, y2: 0.5, z2: 0.8125,
+		x1: 0.125, y1: 0, z1: 0.125, x2: 0.8125, y2: 0.5, z2: 0.875,
 		rotateYByType: {
 			"*-north": 0,
 			"*-east": 270,
@@ -90,7 +98,7 @@
 		}
 	},
 	selectionbox: {
-		x1: 0.125, y1: 0, z1: 0.125, x2: 0.875, y2: 0.5, z2: 0.8125,
+		x1: 0.125, y1: 0, z1: 0.125, x2: 0.8125, y2: 0.5, z2: 0.875,
 		rotateYByType: {
 			"*-north": 0,
 			"*-east": 270,
