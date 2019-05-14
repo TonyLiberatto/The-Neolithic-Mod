@@ -35,7 +35,7 @@
 			"*-iron": 9,
 			"*-steel": 10,
 		},
-		spearEntityCode: "spear",
+		spearEntityCode: "spear-metal",
 		handbook: {
 			groupBy: ["spear-*"]
 		}

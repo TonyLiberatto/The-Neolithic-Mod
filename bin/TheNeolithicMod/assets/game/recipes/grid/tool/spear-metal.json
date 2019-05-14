@@ -1,7 +1,7 @@
 {
 	ingredientPattern: "S	B	B",
 	ingredients: {
-		"S": { type: "item", code: "game:spearhead-*", allowedVariants: [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver" ],  name: "material"  },
+		"S": { type: "item", code: "game:spearhead-*", allowedVariants: [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "steel" ],  name: "material"  },
 		"B": { type: "block", code: "neolithicmod:branch-very-thin-*-debarked-ud" }
 	},
 	width: 1,

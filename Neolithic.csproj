@@ -294,6 +294,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\toolhead\flake.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\toolhead\primitive-hoehead.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\toolhead\sicklehead.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\toolhead\spearhead.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\chisel.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\hammer.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\hoe.json" />
@@ -520,6 +521,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\sickle-head-flint.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\sickle-head.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\stone-adze.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\smithing\spear.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\basic\giantreeds-free.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\bowlstamp.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\cheesecloth.json" />
