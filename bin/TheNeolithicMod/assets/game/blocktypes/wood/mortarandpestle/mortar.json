@@ -9,7 +9,7 @@
 	drawtype: "json",
 	textures: {
 		"bark": { base: "block/wood/bark/{wood}" },
-		"debarked": { base: "block/wood/debarked/{wood}" },
+		all: { base: "block/wood/debarked/{wood}" },
 		"trunk": { base: "block/wood/treetrunk/{wood}" }
 	},
 	resistance: 3.5,

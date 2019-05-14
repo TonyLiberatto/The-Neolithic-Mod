@@ -5,7 +5,7 @@
 	client: {
 		renderer: "Shape",
 		textures: {
-				"spearhead": { base: "block/stone/flint", alternates: [ { base: "block/metal/plate/copper" }, { base: "block/metal/plate/tinbronze" }, { base: "block/metal/plate/bismuthbronze" }, { base: "block/metal/plate/blackbronze" }, { base: "block/metal/plate/gold" }, { base: "block/metal/plate/silver" } ] },
+				"spearhead": { base: "block/stone/flint", alternates: [ { base: "block/metal/plate/copper" }, { base: "block/metal/plate/tinbronze" }, { base: "block/metal/plate/bismuthbronze" }, { base: "block/metal/plate/blackbronze" }, { base: "block/metal/plate/gold" }, { base: "block/metal/plate/silver" }, { base: "block/metal/plate/iron" }, { base: "block/metal/plate/steel" } ] },
 		},
 		shape: { base: "entity/spear" },
 		behaviors: [
@@ -38,6 +38,8 @@
 			"blackbronze": 4,
 			"gold": 5,
 			"silver": 6,
+			"iron": 7,
+			"steel": 8,
 		}
 	}
 }

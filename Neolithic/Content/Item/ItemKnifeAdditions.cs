@@ -11,14 +11,23 @@ namespace TheNeolithicMod
 {
     class ItemKnifeAdditions : ItemKnife
     {
+		bool a = true;
+
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
         {
             BlockPos pos = blockSel.Position;
             Block block = pos.GetBlock(byEntity.World);
             if (block != null && byEntity.Controls.Sneak && (block.FirstCodePart().Contains("skinned") || block.FirstCodePart().Contains("dead")))
             {
-                AssetLocation location = new AssetLocation("game:sounds/player/scrape");
-                byEntity.World.PlaySoundAt(location, pos.X, pos.Y, pos.Z, byEntity as IPlayer);
+				if (a && byEntity.World.Side.IsServer())
+				{
+					a = false;
+					byEntity.World.RegisterGameTickListener(dt => a = true, 4000);
+
+					AssetLocation location = new AssetLocation("game:sounds/player/scrape");
+					byEntity.World.PlaySoundAt(location, pos.X, pos.Y, pos.Z, byEntity as IPlayer);
+				}
+
                 handling = EnumHandHandling.Handled;
                 return;
             }
@@ -50,9 +59,16 @@ namespace TheNeolithicMod
             {
                 preventmultiple = false;
                 byEntity.World.RegisterCallback(dt => preventmultiple = true, 5000);
-                //byEntity.World.BlockAccessor.BreakBlock(blockSel.Position, byEntity as IPlayer);
+				//byEntity.World.BlockAccessor.DamageBlock(blockSel.Position, blockSel.Face, 99999);
+				BlockDropItemStack[] stacks = block.Drops;
+				for (int i = 0; i < stacks.Length; i++)
+				{
+					byEntity.World.SpawnItemEntity(stacks[i].GetNextItemStack(), blockSel.Position.ToVec3d().Add(0.5, 0.5, 0.5));
+				}
+				byEntity.World.BlockAccessor.BreakBlock(blockSel.Position, null);
+				
                 //this.OnBlockBreaking(byEntity as IPlayer, blockSel, slot, 0, secondsUsed, 4);
-                block.OnBlockBroken(byEntity.World, blockSel.Position, byEntity as IPlayer);
+                //block.OnBlockBroken(byEntity.World, blockSel.Position, byEntity as IPlayer);
             }
         }
     }
