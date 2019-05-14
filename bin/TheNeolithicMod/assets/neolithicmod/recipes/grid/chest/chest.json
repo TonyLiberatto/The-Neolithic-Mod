@@ -1,10 +1,10 @@
 {
 	ingredientPattern: "WWW	WLW	WWW",
 	ingredients: {
-		"W": { type: "block", code: "game:planks-*", allowedVariants: ["birch", "oak", "maple", "pine", "acacia", "kapok" ], name: "wood" },
+		"W": { type: "block", code: "game:planks-*", allowedVariants: ["acacia", "birch", "kapok", "maple","oak", "pine",  ], name: "wood" },
 		"L": { type: "item", code: "neolithicmod:animal-leatherstrips", quantity:2 }
 	},
 	width: 3,
 	height: 3,
-	output: { type: "block", code: "neolithicmod:chest-neolithic-{wood}-east"  }
+	output: { type: "block", code: "neolithicmod:chest-east", attributes: { type: "normal-generic-{wood}" }  }
 }

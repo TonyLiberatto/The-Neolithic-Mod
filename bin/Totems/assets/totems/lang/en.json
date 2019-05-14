@@ -80,10 +80,10 @@
 	
 	"block-totem-pig-crucible-pine-north": "Finished Pine Pig Totem with Crucible",
 	
-	"blockdesc-totem-pig-new-*": "crafting grid with a fruit offering bowl for next step - Totems Cannot be moved",
-	"blockdesc-totem-pig-bowl-*": "crafting grid with a vegetable offering bowl for next step- Totems Cannot be moved",
-	"blockdesc-totem-pig-tusk-*": "crafting grid with a meat offering bowl for next step- Totems Cannot be moved",
-	"blockdesc-totem-pig-eyes-*": "crafting grid with a bread offering bowl for next step- Totems Cannot be moved",
+	"blockdesc-totem-pig-new-*": "Right click with a fruit offering bowl for next step - Totems Cannot be moved",
+	"blockdesc-totem-pig-bowl-*": "Right click with a vegetable offering bowl for next step- Totems Cannot be moved",
+	"blockdesc-totem-pig-tusk-*": "Right click with a meat offering bowl for next step- Totems Cannot be moved",
+	"blockdesc-totem-pig-eyes-*": "Right click with a bread offering bowl for next step- Totems Cannot be moved",
 	"blockdesc-totem-pig-crucible-*": "Right click with clay in your hand to make crucibles- Totems Cannot be moved",
 	
 	"item-offering-bowl-bread": "Bread Offering Bowl ",

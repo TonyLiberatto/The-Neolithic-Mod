@@ -42,7 +42,7 @@
     lightAbsorption: 0,
     texturesByType: {
         "*-raw": {  all: { base: "block/clay/{color}-raw" } },
-        "*-burned": {  floor: { base: "block/clay/{color}-burned" }, other: { base: "block/clay/{color}-burned" } }
+        "*-burned": {  all: { base: "block/clay/{color}-burned" } },
     },
     drawtype: "json",
     shape: { base: "block/clay/mold/bowlstampmold", rotateY: 90 },

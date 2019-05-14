@@ -4,7 +4,7 @@
 	behaviors: [{name: "HorizontalOrientable"}],
 	attributes: {
 		handbook: {
-			groupBy: ["rooframp-*"]
+			groupBy: ["neolithicmod: rooframp-*"]
 		},
 	},
 	creativeinventory: { "general": ["*-slope-*-north"], "construction": ["*-slope-*-north"], "neolithicblocks": ["*-slope-*-north"] },
