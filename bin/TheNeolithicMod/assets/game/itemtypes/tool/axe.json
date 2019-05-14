@@ -73,12 +73,12 @@
 	durabilitybytype: {
 		"axe-gold": 125,
 		"axe-silver": 125,
-		"axe-copper": 250,
-		"axe-blackbronze": 600,
-		"axe-bismuthbronze": 500,
-		"axe-tinbronze": 400,
-		"axe-iron": 900,
-		"axe-steel": 1200,
+		"axe-copper": 600,
+		"axe-blackbronze": 1460,
+		"axe-bismuthbronze": 1200,
+		"axe-tinbronze": 1300,
+		"axe-iron": 2200,
+		"axe-steel": 3300,
 	},
 	attackpowerbytype: {
 		"axe-copper": 2,

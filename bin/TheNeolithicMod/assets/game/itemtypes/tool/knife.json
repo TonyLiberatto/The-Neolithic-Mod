@@ -17,14 +17,14 @@
 		"wood": { base: "game:item/tool/material/wood" }
 	},
 	durabilitybytype: {
-		"knife-gold": 150,
-		"knife-silver": 175,
-		"knife-copper": 300,
-		"knife-tinbronze": 450,
-		"knife-bismuthbronze": 500,
-		"knife-blackbronze": 550,
-		"knife-iron": 900,
-		"knife-steel": 1500,
+		"knife-gold": 125,
+		"knife-silver": 125,
+		"knife-copper": 600,
+		"knife-blackbronze": 1460,
+		"knife-bismuthbronze": 1200,
+		"knife-tinbronze": 1300,
+		"knife-iron": 2200,
+		"knife-steel": 3300,
 	},
 	attackpowerbytype: {
 		"knife-copper": 1.5,
