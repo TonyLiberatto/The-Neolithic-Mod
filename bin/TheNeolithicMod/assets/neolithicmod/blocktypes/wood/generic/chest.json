@@ -88,10 +88,10 @@
 		"normal-generic-acacia-sides": { base: "block/wood/chest/acacia/sides" },
 		"normal-generic-acacia-floor": { base: "block/wood/chest/acacia/floor" },
 
-		"normal-generic-aged-corners": { base: "block/wood/chest/aged/corners" },
-		"normal-generic-aged-lid": { base: "block/wood/chest/aged/lid" },
-		"normal-generic-aged-sides": { base: "block/wood/chest/aged/sides" },
-		"normal-generic-aged-floor": { base: "block/wood/chest/aged/floor" },
+		"normal-generic-aged-corners": { base: "game:block/wood/chest/aged/corners" },
+		"normal-generic-aged-lid": { base: "game:block/wood/chest/aged/lid" },
+		"normal-generic-aged-sides": { base: "game:block/wood/chest/aged/sides" },
+		"normal-generic-aged-floor": { base: "game:block/wood/chest/aged/floor" },
 		
 		"normal-generic-birch-corners": { base: "block/wood/chest/birch/corners" },
 		"normal-generic-birch-lid": { base: "block/wood/chest/birch/lid" },

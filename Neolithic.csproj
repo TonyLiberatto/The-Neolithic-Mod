@@ -702,8 +702,6 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\furniture\table.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\generic\chest-labeled.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\generic\chest.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\generic\trough-large.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\generic\trough-small.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\lamppost\attachmenta.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\lamppost\attachmentb.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\lamppost\base.json" />
