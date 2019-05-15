@@ -43,38 +43,38 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\VS-1.9.X\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\VS-1.9.X\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\VS-1.9.X\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\VS-1.9.X\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\VS-1.9.X\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\VS-1.9.X\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\VS-1.9.X\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\VS-1.9.X\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -96,7 +96,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\VS-1.9.X\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -110,15 +110,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\VS-1.9.X\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\VS-1.9.X\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\VS-1.9.X\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -144,6 +144,7 @@
     <Compile Include="Neolithic\Content\Block Behavior\NewBlockSwapBehavior.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\CookedContainerFixBE.cs" />
+    <Compile Include="Neolithic\Content\Block\BlockFirePitOverride.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLooseStonesModified.cs" />
     <Compile Include="Neolithic\Content\Block\BlockNeolithicRoads.cs" />
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
@@ -151,6 +152,7 @@
     <Compile Include="Neolithic\Content\Block\BlockSmeltingContainerFix.cs" />
     <Compile Include="Neolithic\Content\Block\CookedContainerFix.cs" />
     <Compile Include="Neolithic\Content\Block\CookingContainerFix.cs" />
+    <Compile Include="Neolithic\Content\Block\FixedStairs.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorFeatherPluck.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorMilkable.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorNotifyHerd.cs" />
@@ -232,12 +234,21 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\plant\plaintreesapling.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\plant\sisal\sisal.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\soil\clay.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\cobble\cobblestonestairs.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\cobble\cobblestonestairscorner.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\generic\stonepathstairs.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\generic\stonepathstairscorner.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\quartz\corners.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\quartz\stairs.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\stonebrick\staircornerbrick.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\stonebrick\stonebrickstairs.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\generic\trough-large.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\generic\trough-small.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\leavesbranchy.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\mortarandpestle\mortar.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\mortarandpestle\mortarandpestle.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\mortarandpestle\pestle.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\plankstairs.json" />
     <None Include="bin\TheNeolithicMod\assets\game\config\general.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\air\butterfly.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\arrow-primitive.json" />
@@ -552,6 +563,10 @@
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\plant\sisal\sisal7.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\plant\sisal\sisal8.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\plant\sisal\sisalleaf.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\staircorners\staircorner.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\staircorners\staircornerinside.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\staircorners\stairs-lowered-corner.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\staircorners\stairs-lowered-cornerinside.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\air\butterfly.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\armadillo\armadillo.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\entity\land\chicken\chick.json" />

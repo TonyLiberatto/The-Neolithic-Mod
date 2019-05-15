@@ -46,6 +46,8 @@ namespace TheNeolithicMod
             api.RegisterBlockClass("BlockLooseStones", typeof(BlockLooseStonesModified));
             api.RegisterBlockClass("BlockSmeltingContainer", typeof(BlockSmeltingContainerFix));
             api.RegisterBlockClass("BlockSmeltedContainer", typeof(BlockSmeltedContainerFix));
+			api.RegisterBlockClass("BlockFirepit", typeof(BlockFirePitOverride));
+			api.RegisterBlockClass("FixedStairs", typeof(FixedStairs));
 
 			api.RegisterItemClass("ItemSickle", typeof(ItemSickle));
             api.RegisterItemClass("ItemGiantReedsRoot", typeof(ItemGiantReedsRoot));

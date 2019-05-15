@@ -9,7 +9,7 @@
     },
     {
       code: "pattern",
-      states: [ "bricks", "circle", "cobble", "fish", "squares", "stepping1", "stepping2", "stepping3", "stepping4", "tightbricks", "tightsquares" ],
+      states: [ "bricks", "circle", "cobble", "fish", "squares", "stepping1", "stepping2", "stepping3", "stepping4", "tightbricks", "tightsquares", "largesquare", "flat" ],
     },
   ],
   drawtype: "json",

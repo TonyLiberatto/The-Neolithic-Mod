@@ -11,14 +11,12 @@ namespace TheNeolithicMod
 {
     class BlockNeolithicRoads : Block
     {
-        public readonly string[] types = new string[] 
-        {
-             "cobble", "squares", "tightsquares", "bricks", "tightbricks", "circle", "fish",
-        };
+		public string[] types = new string[] { "bricks", "circle", "cobble", "fish", "squares", "tightbricks", "tightsquares", "largesquare", "flat" };
 
-        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
+		public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
+
+			ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
             if (slot.Itemstack != null)
             {
                 if (IsSettingHammer(slot))
