@@ -11,7 +11,7 @@ namespace TheNeolithicMod
 {
     class BlockNeolithicRoads : Block
     {
-		public string[] types = new string[] { "bricks", "circle", "cobble", "fish", "squares", "tightbricks", "tightsquares", "largesquare", "flat" };
+		public string[] types = new string[] { "circle", "fish", "cobble", "bricks", "tightbricks", "squares", "tightsquares", "largesquare", "flat" };
 
 		public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {

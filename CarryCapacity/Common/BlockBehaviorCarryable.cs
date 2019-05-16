@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Vintagestory.API;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 
@@ -12,6 +13,15 @@ namespace CarryCapacity.Common
 	public class BlockBehaviorCarryable : BlockBehavior
 	{
 		public static string NAME { get; } = "Carryable";
+		
+		public static WorldInteraction[] INTERACTIONS { get; }
+			= { new WorldInteraction {
+				ActionLangCode  = CarrySystem.MOD_ID + ":blockhelp-pickup",
+				HotKeyCode      = "sneak",
+				MouseButton     = EnumMouseButton.Right,
+				RequireFreeHand = true,
+			} };
+		
 		
 		public static BlockBehaviorCarryable DEFAULT { get; }
 			= new BlockBehaviorCarryable(null);
@@ -26,9 +36,9 @@ namespace CarryCapacity.Common
 		
 		public static readonly IReadOnlyDictionary<CarrySlot, float> DEFAULT_WALKSPEED
 			= new Dictionary<CarrySlot, float> { // Default slowdown while carrying ..
-				{ CarrySlot.Hands    , 0.60F },    // .. in hands:    40%
-				{ CarrySlot.Back     , 0.85F },    // .. on back:     15%
-				{ CarrySlot.Shoulder , 0.70F },    // .. on shoulder: 30%
+				{ CarrySlot.Hands    , 0.75F },    // .. in hands:    25%
+				{ CarrySlot.Back     , 0.80F },    // .. on back:     20%
+				{ CarrySlot.Shoulder , 0.85F },    // .. on shoulder: 15%
 			};
 		
 		public static readonly IReadOnlyDictionary<CarrySlot, string> DEFAULT_ANIMATION
@@ -55,6 +65,10 @@ namespace CarryCapacity.Common
 			DefaultTransform = GetTransform(properties, DEFAULT_BLOCK_TRANSFORM);
 			Slots.Initialize(properties["slots"], DefaultTransform);
 		}
+		
+		public override WorldInteraction[] GetPlacedBlockInteractionHelp(
+			IWorldAccessor world, BlockSelection selection, IPlayer forPlayer, ref EnumHandling handled)
+				=> INTERACTIONS;
 		
 		
 		private static bool TryGetFloat(JsonObject json, string key, out float result)

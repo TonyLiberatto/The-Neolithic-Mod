@@ -78,7 +78,7 @@ namespace TheNeolithicMod
 			}
 
 
-			if (stack != null && TryConstruct(world, blockSel.Position, stack.Collectible))
+			if (stack != null && TryConstruct(world, blockSel.Position, stack.Collectible, byPlayer))
 			{
 				if (byPlayer != null && byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
 				{
