@@ -6,8 +6,9 @@
 	"description" : " This mod Requires New World Creation. Adds more Animals, Plants, blocks and tools",
 	"authors": [ "Tony Liberatto","Novocain","Balduranne","BunnyViking" ],
 	"contributors": ["Tyron", "Milo", "Stroam","Elwood","copygirl", "MarcAFK"],
-	"version": "1.6.10",
+	"version": "1.7.1",
 	"dependencies": {
-	"game": "1.9.3",
+	"CarryCapacity": "0.4.0-rc.2",
+	"game": "1.9.4-rc.1",
 	}
 }
