@@ -42,7 +42,12 @@
 		}
 	},
 	creativeinventory: { "general": ["*-empty", "*-raw"], "decorative": ["*-empty", "*-raw"], "neolithicdeco": ["*-empty", "*-raw"] },
-	behaviors: [{name: "UnstableFalling"}],
+	behaviors: [
+		{
+			name: "Carryable",
+			properties: { scale: 0.6 }
+		},
+		{name: "UnstableFalling"}],
 	variantgroups: [
 		{ code: "type", states: ["raw"] },
     { 
