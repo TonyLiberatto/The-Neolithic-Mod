@@ -71,9 +71,6 @@ namespace TheNeolithicMod
 
 					return true;
 				}
-
-
-
 				return base.OnBlockInteractStart(world, byPlayer, blockSel);
 			}
 
