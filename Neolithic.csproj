@@ -181,7 +181,6 @@
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\bag\" />
     <Folder Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\entity\" />
     <Folder Include="Neolithic\Content\Entity\" />
-    <Folder Include="TasksLib\EntityBehaviors\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\TheNeolithicMod\All about The Neolithic Mod.docx" />
