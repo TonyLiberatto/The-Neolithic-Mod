@@ -1,6 +1,3 @@
 [
-	{ file: "game:blocktypes/wood/generic/trough-small", op: "add", path: "/enabled",  value: false },
 	{ file: "game:blocktypes/wood/stackedbamboo", op: "add", path: "/enabled",  value: false },
-	{ file: "game:blocktypes/wood/generic/trough-large", op: "add", path: "/enabled",  value: false },
-	{ file: "game:blocktypes/wood/generic/chest-labeled", op: "add", path: "/enabled",  value: false },
 ]

@@ -1,4 +1,0 @@
-[
-	{ file: "game:worldgen/treengenproperties", op: "add", path: "/enabled",  value: false },
-		
-]

@@ -1,12 +1,10 @@
 [
-	{ file: "game:recipes/grid/trough-large", op: "add", path: "/enabled",  value: "false" },
-	{ file: "game:recipes/grid/trough-small", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/oillamp", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/stackedbamboo", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/tool/spear", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/chest", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/chest-labeled", op: "add", path: "/enabled",  value: "false" },
-  { file: "game:recipes/grid/door", op: "add", path: "/enabled",  value: "false" },
+    { file: "game:recipes/grid/door", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/chair", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/table", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/tool/axe", op: "add", path: "/enabled",  value: "false" },

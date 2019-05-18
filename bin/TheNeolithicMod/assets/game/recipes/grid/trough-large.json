@@ -1,9 +1,20 @@
+[
 {
 	ingredientPattern: "P_P,PPP",
 	ingredients: {
-		"P": { type: "block", code: "neolithicmod:planks-*" }
+		"P": { type: "block", code: "neolithicmod:planks-bamboo-*" }
 	},
 	width: 3,
 	height: 2,
-	output: { type: "block", code: "game:trough-genericwood-large-head-north"  }
+	output: { type: "block", code: "trough-genericwood-large-head-north"  }
+},
+{
+	ingredientPattern: "P_P,PPP",
+	ingredients: {
+		"P": { type: "block", code: "planks-*" }
+	},
+	width: 3,
+	height: 2,
+	output: { type: "block", code: "trough-genericwood-large-head-north"  }
 }
+]
