@@ -28,7 +28,7 @@
   ],
   drawtype: "json",
   shapeByType: {
-    "*outside-down-northeast": { base: "game:block/staircorners/stair-lowered-corner", rotateY: 0, rotateZ: 180,
+    "*outside-down-northeast": { base: "game:block/staircorners/stairs-lowered-corner", rotateY: 0, rotateZ: 180,
     },
     "*outside-down-northwest": { base: "game:block/staircorners/stairs-lowered-corner", rotateY: 90, rotateZ: 180,
     },

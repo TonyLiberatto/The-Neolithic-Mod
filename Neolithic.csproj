@@ -237,6 +237,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\mortarandpestle\mortarandpestle.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\mortarandpestle\pestle.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\plankstairs.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\plankstairscorner.json" />
     <None Include="bin\TheNeolithicMod\assets\game\config\general.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\air\butterfly.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\arrow-primitive.json" />
@@ -522,6 +523,8 @@
     <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\stone-adze.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\smithing\spear.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\basic\giantreeds-free.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\basic\stairs-lowered.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\basic\stairs.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\bowlstamp.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\cheesecloth.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\cheeseincloth.json" />
@@ -618,7 +621,6 @@
     <None Include="bin\TheNeolithicMod\assets\game\sounds\creature\rabbit\rabbit-eating.ogg" />
     <None Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\roman\source.psd" />
     <None Include="bin\TheNeolithicMod\assets\game\textures\block\stone\roads\stones\stepping test.psd" />
-    <None Include="bin\TheNeolithicMod\assets\game\worldgen\blockpatches.json" />
     <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits.json" />
     <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\metalore\bismuthinite.json" />
     <None Include="bin\TheNeolithicMod\assets\game\worldgen\deposits\metalore\cassiterite.json" />
@@ -737,10 +739,11 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\tool\roadwork\tamper.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\itemtypes\tool\woodenmallet.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\lang\en.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\worldgen.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\blocks.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\bucket.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\carryable.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\entities.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\patches\entities.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\items.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\modifystonepath.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\recipes.json" />
