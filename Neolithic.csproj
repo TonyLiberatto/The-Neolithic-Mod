@@ -43,38 +43,38 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\VS-1.9.X\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\VS-1.9.X\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\VS-1.9.X\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\VS-1.9.X\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\VS-1.9.X\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\VS-1.9.X\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\VS-1.9.X\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\VS-1.9.X\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -96,7 +96,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\VS-1.9.X\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -110,15 +110,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\VS-1.9.X\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\VS-1.9.X\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\VS-1.9.X\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -183,11 +183,6 @@
     <Folder Include="Neolithic\Content\Entity\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\CarryCapacity-0.4.0-rc.2\assets\carrycapacity\lang\en.json" />
-    <None Include="bin\CarryCapacity-0.4.0-rc.2\assets\carrycapacity\patches\animations.json" />
-    <None Include="bin\CarryCapacity-0.4.0-rc.2\assets\carrycapacity\patches\carryable.json" />
-    <None Include="bin\CarryCapacity-0.4.0-rc.2\assets\carrycapacity\patches\dropondamage.json" />
-    <None Include="bin\CarryCapacity-0.4.0-rc.2\modinfo.json" />
     <None Include="bin\TheNeolithicMod\All about The Neolithic Mod.docx" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\cheesecloth.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowl-meal.json" />
@@ -742,12 +737,10 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\worldgen.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\blocks.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\bucket.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\carryable.json" />
     <None Include="bin\TheNeolithicMod\assets\game\patches\entities.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\items.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\modifystonepath.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\recipes.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\patches\seraph.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\adobe.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bamboo-arrow-shaft.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\recipes\grid\bamboo-javelin-shaft.json" />
@@ -1343,8 +1336,6 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
-    <Content Include="bin\CarryCapacity-0.4.0-rc.2\CarryCapacity.dll" />
-    <Content Include="bin\CarryCapacity-0.4.0-rc.2\CarryCapacity.pdb" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\bone.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\clay\blue-burned.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\clay\blue-raw.png" />
