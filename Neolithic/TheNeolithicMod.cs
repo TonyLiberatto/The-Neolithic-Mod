@@ -4,6 +4,12 @@ using Vintagestory.GameContent;
 using Vintagestory;
 using Vintagestory.Client;
 
+[assembly: ModInfo("The Neolithic Mod",
+    Description  = "This mod Requires New World Creation. Adds more Animals, Plants, blocks and tools",
+    Website      = "https://github.com/TonyLiberatto/The-Neolithic-Mod",
+    Authors      = new []{ "Tony Liberatto","Novocain","Balduranne","BunnyViking" },
+    Contributors = new []{ "Tyron", "Milo", "Stroam", "Elwood", "copygirl", "MarcAFK" })]
+
 namespace TheNeolithicMod
 {
     public class Neolithic : ModSystem
