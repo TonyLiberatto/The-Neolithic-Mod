@@ -21,9 +21,10 @@
 			name: "Carryable",
 			properties:
 			{
-				translation: [ -0.6, 0.7, -0.38 ],
-				rotation: [ 90, 0, 0 ],
-				scale: 0.85
+				translation: [ 0, -0.1, 0 ],
+				rotation: [ 0, 270, 0 ],
+				scale: 0.85,
+				slots: { "Shoulder": {  } }
 			}
 		}
 	],

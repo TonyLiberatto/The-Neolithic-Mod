@@ -21,9 +21,13 @@
 			name: "Carryable",
 			properties:
 			{
-				translation: [ -0.6, 0.7, -0.38 ],
-				rotation: [ 90, 0, 0 ],
-				scale: 0.85
+				translation: [ -0.06, 0.60, 0.20 ],
+				rotation: [ -10, -90, 65 ],
+				scale: 1,
+				slots: { "Hands": {
+					animation: "carrycapacity:holdlight",
+					walkSpeedModifier: 0.9,
+				} }
 			}
 		}
 	],
