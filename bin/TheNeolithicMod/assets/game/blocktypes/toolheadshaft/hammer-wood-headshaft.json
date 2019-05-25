@@ -1,0 +1,38 @@
+{
+	code: "hammer-wood-headshaft",
+	behaviors: [ {name: "HorizontalOrientable" }],
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },
+		{ code: "side", loadFromProperties: "abstract/horizontalorientation" },
+		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
+	],
+	shapeByType: { 
+		"*-north": { base: "block/placedtool/hammer-wood-placed", rotateY: 0 },
+		"*-east": { base: "block/placedtool/hammer-wood-placed", rotateY: 270 },
+		"*-south": { base: "block/placedtool/hammer-wood-placed", rotateY: 180 },
+		"*-west": { base: "block/placedtool/hammer-wood-placed", rotateY: 90 },
+		},
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"wood": { base: "game:block/wood/debarked/{wood}" },
+		"rope": { base: "block/transparent" },
+	},	
+	creativeinventory: { "general": ["*-north"]  },
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 0,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+}

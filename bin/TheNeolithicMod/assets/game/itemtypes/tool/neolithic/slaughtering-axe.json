@@ -18,7 +18,7 @@
 		"material": { base: "item/tool/material32/{material}" },
 		"handle": { base: "item/tool/handle/{handle}" },
 		"cordage": { base: "block/leatherstraps"},
-    "ribbon": { base: "block/ribbon"},
+		"ribbon": { base: "block/ribbon"},
 	},
   durabilitybytype: {
     "*-granite-*": 150,

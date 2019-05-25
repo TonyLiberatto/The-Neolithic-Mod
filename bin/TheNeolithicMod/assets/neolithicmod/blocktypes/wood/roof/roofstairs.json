@@ -7,10 +7,10 @@
 			groupBy: ["neolithicmod: roofstairs-*"]
 		},
 	},
-	creativeinventory: { "general": ["*-slope-*-north"], "construction": ["*-slope-*-north"], "neolithicblocks": ["*-slope-*-north"] },
+	creativeinventory: { "general": ["roofstairs-slope-*-*-north"], "construction": ["roofstairs-slope-*-*-north"], "neolithicblocks": ["roofstairs-slope-*-*-north"] },
 		variantgroups: [
 		{ code: "type", states: [ "corner","cornerin", "cornertop","slope", "slopewall", "top", "topwall", "topend" ]},
-		{ loadFromProperties: "block/wood" },
+		{ code: "wood", loadFromProperties: "block/wood" },
 		{ code: "style", states: ["bark", "debarked"]},
 		{ code:"orientation", loadFromProperties: "abstract/horizontalorientation" },
 	],
@@ -21,6 +21,7 @@
 		"*-east":  {base: "block/wood/roof/stairs/{type}", rotateY: 270 },
 	},
 	blockmaterial: "wood",
+	drops: [ { code: "roofstairs-slope-{wood}-{style}-north" }],
 	drawtype: "json",
 	lightabsorption: 0,
 	sideopaque: {
@@ -29,7 +30,6 @@
 	sidesolid: {
 		all: false
 	},
-	replaceable: 100,
 	resistance: 2,
 		collisionSelectionBoxesByType: {
 		"*-slope-*": [

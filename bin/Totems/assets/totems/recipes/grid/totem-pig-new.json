@@ -1,8 +1,8 @@
 {
 	ingredientPattern: "H_	PA	L_",
 	ingredients: {
-		"H": { type: "block", code: "neolithicmod:hogheadtrophy-*-ground-north" },
-		"P": { type: "block", code: "neolithicmod:boarpelt-ground-east" },
+		"H": { type: "block", code: "neolithicmod:hogheadtrophy-*-ground-*" },
+		"P": { type: "block", code: "neolithicmod:boarpelt-ground-*" },
 		"L": { type: "block", code: "game:log-placed-*-ud", allowedVariants: ["acacia", "birch", "kapok", "maple", "oak", "pine"], name: "wood" },
 		"A": {type: "item", code: "game:adze-*", isTool: true }
 	},

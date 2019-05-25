@@ -1,0 +1,491 @@
+{
+	code: "adze-wood-headshaft",
+	behaviors: [ 
+		{name: "HorizontalOrientable" },
+		{name: "BlockSwapBehavior",
+			properties: {
+				"swapBlocks": [
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-acacia-leatherstrips-north", "game:adze-wood-headshaft-granite-acacia-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-acacia-leatherstrips-north", "game:adze-wood-headshaft-andesite-acacia-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-acacia-leatherstrips-north", "game:adze-wood-headshaft-basalt-acacia-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-acacia-leatherstrips-north", "game:adze-wood-headshaft-obsidian-acacia-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-acacia-leatherstrips-north", "game:adze-wood-headshaft-flint-acacia-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-birch-leatherstrips-north", "game:adze-wood-headshaft-granite-birch-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-birch-leatherstrips-north", "game:adze-wood-headshaft-andesite-birch-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-birch-leatherstrips-north", "game:adze-wood-headshaft-basalt-birch-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-birch-leatherstrips-north", "game:adze-wood-headshaft-obsidian-birch-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-birch-leatherstrips-north", "game:adze-wood-headshaft-flint-birch-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-kapok-leatherstrips-north", "game:adze-wood-headshaft-granite-kapok-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-kapok-leatherstrips-north", "game:adze-wood-headshaft-andesite-kapok-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-kapok-leatherstrips-north", "game:adze-wood-headshaft-basalt-kapok-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-kapok-leatherstrips-north", "game:adze-wood-headshaft-obsidian-kapok-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-kapok-leatherstrips-north", "game:adze-wood-headshaft-flint-kapok-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-maple-leatherstrips-north", "game:adze-wood-headshaft-granite-maple-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-maple-leatherstrips-north", "game:adze-wood-headshaft-andesite-maple-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-maple-leatherstrips-north", "game:adze-wood-headshaft-basalt-maple-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-maple-leatherstrips-north", "game:adze-wood-headshaft-obsidian-maple-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-maple-leatherstrips-north", "game:adze-wood-headshaft-flint-maple-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-oak-leatherstrips-north", "game:adze-wood-headshaft-granite-oak-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-oak-leatherstrips-north", "game:adze-wood-headshaft-andesite-oak-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-oak-leatherstrips-north", "game:adze-wood-headshaft-basalt-oak-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-oak-leatherstrips-north", "game:adze-wood-headshaft-obsidian-oak-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-oak-leatherstrips-north", "game:adze-wood-headshaft-flint-oak-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-pine-leatherstrips-north", "game:adze-wood-headshaft-granite-pine-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-pine-leatherstrips-north", "game:adze-wood-headshaft-andesite-pine-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-pine-leatherstrips-north", "game:adze-wood-headshaft-basalt-pine-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-pine-leatherstrips-north", "game:adze-wood-headshaft-obsidian-pine-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-pine-leatherstrips-north", "game:adze-wood-headshaft-flint-pine-north", 1 ],
+				 
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-acacia-leatherstrips-south", "game:adze-wood-headshaft-granite-acacia-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-acacia-leatherstrips-south", "game:adze-wood-headshaft-andesite-acacia-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-acacia-leatherstrips-south", "game:adze-wood-headshaft-basalt-acacia-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-acacia-leatherstrips-south", "game:adze-wood-headshaft-obsidian-acacia-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-acacia-leatherstrips-south", "game:adze-wood-headshaft-flint-acacia-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-birch-leatherstrips-south", "game:adze-wood-headshaft-granite-birch-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-birch-leatherstrips-south", "game:adze-wood-headshaft-andesite-birch-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-birch-leatherstrips-south", "game:adze-wood-headshaft-basalt-birch-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-birch-leatherstrips-south", "game:adze-wood-headshaft-obsidian-birch-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-birch-leatherstrips-south", "game:adze-wood-headshaft-flint-birch-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-kapok-leatherstrips-south", "game:adze-wood-headshaft-granite-kapok-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-kapok-leatherstrips-south", "game:adze-wood-headshaft-andesite-kapok-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-kapok-leatherstrips-south", "game:adze-wood-headshaft-basalt-kapok-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-kapok-leatherstrips-south", "game:adze-wood-headshaft-obsidian-kapok-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-kapok-leatherstrips-south", "game:adze-wood-headshaft-flint-kapok-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-maple-leatherstrips-south", "game:adze-wood-headshaft-granite-maple-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-maple-leatherstrips-south", "game:adze-wood-headshaft-andesite-maple-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-maple-leatherstrips-south", "game:adze-wood-headshaft-basalt-maple-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-maple-leatherstrips-south", "game:adze-wood-headshaft-obsidian-maple-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-maple-leatherstrips-south", "game:adze-wood-headshaft-flint-maple-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-oak-leatherstrips-south", "game:adze-wood-headshaft-granite-oak-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-oak-leatherstrips-south", "game:adze-wood-headshaft-andesite-oak-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-oak-leatherstrips-south", "game:adze-wood-headshaft-basalt-oak-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-oak-leatherstrips-south", "game:adze-wood-headshaft-obsidian-oak-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-oak-leatherstrips-south", "game:adze-wood-headshaft-flint-oak-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-pine-leatherstrips-south", "game:adze-wood-headshaft-granite-pine-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-pine-leatherstrips-south", "game:adze-wood-headshaft-andesite-pine-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-pine-leatherstrips-south", "game:adze-wood-headshaft-basalt-pine-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-pine-leatherstrips-south", "game:adze-wood-headshaft-obsidian-pine-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-pine-leatherstrips-south", "game:adze-wood-headshaft-flint-pine-south", 1 ],
+				 
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-acacia-leatherstrips-east", "game:adze-wood-headshaft-granite-acacia-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-acacia-leatherstrips-east", "game:adze-wood-headshaft-andesite-acacia-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-acacia-leatherstrips-east", "game:adze-wood-headshaft-basalt-acacia-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-acacia-leatherstrips-east", "game:adze-wood-headshaft-obsidian-acacia-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-acacia-leatherstrips-east", "game:adze-wood-headshaft-flint-acacia-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-birch-leatherstrips-east", "game:adze-wood-headshaft-granite-birch-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-birch-leatherstrips-east", "game:adze-wood-headshaft-andesite-birch-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-birch-leatherstrips-east", "game:adze-wood-headshaft-basalt-birch-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-birch-leatherstrips-east", "game:adze-wood-headshaft-obsidian-birch-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-birch-leatherstrips-east", "game:adze-wood-headshaft-flint-birch-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-kapok-leatherstrips-east", "game:adze-wood-headshaft-granite-kapok-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-kapok-leatherstrips-east", "game:adze-wood-headshaft-andesite-kapok-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-kapok-leatherstrips-east", "game:adze-wood-headshaft-basalt-kapok-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-kapok-leatherstrips-east", "game:adze-wood-headshaft-obsidian-kapok-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-kapok-leatherstrips-east", "game:adze-wood-headshaft-flint-kapok-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-maple-leatherstrips-east", "game:adze-wood-headshaft-granite-maple-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-maple-leatherstrips-east", "game:adze-wood-headshaft-andesite-maple-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-maple-leatherstrips-east", "game:adze-wood-headshaft-basalt-maple-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-maple-leatherstrips-east", "game:adze-wood-headshaft-obsidian-maple-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-maple-leatherstrips-east", "game:adze-wood-headshaft-flint-maple-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-oak-leatherstrips-east", "game:adze-wood-headshaft-granite-oak-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-oak-leatherstrips-east", "game:adze-wood-headshaft-andesite-oak-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-oak-leatherstrips-east", "game:adze-wood-headshaft-basalt-oak-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-oak-leatherstrips-east", "game:adze-wood-headshaft-obsidian-oak-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-oak-leatherstrips-east", "game:adze-wood-headshaft-flint-oak-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-pine-leatherstrips-east", "game:adze-wood-headshaft-granite-pine-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-pine-leatherstrips-east", "game:adze-wood-headshaft-andesite-pine-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-pine-leatherstrips-east", "game:adze-wood-headshaft-basalt-pine-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-pine-leatherstrips-east", "game:adze-wood-headshaft-obsidian-pine-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-pine-leatherstrips-east", "game:adze-wood-headshaft-flint-pine-east", 1 ],
+				 
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-acacia-leatherstrips-west", "game:adze-wood-headshaft-granite-acacia-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-acacia-leatherstrips-west", "game:adze-wood-headshaft-andesite-acacia-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-acacia-leatherstrips-west", "game:adze-wood-headshaft-basalt-acacia-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-acacia-leatherstrips-west", "game:adze-wood-headshaft-obsidian-acacia-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-acacia-leatherstrips-west", "game:adze-wood-headshaft-flint-acacia-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-birch-leatherstrips-west", "game:adze-wood-headshaft-granite-birch-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-birch-leatherstrips-west", "game:adze-wood-headshaft-andesite-birch-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-birch-leatherstrips-west", "game:adze-wood-headshaft-basalt-birch-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-birch-leatherstrips-west", "game:adze-wood-headshaft-obsidian-birch-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-birch-leatherstrips-west", "game:adze-wood-headshaft-flint-birch-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-kapok-leatherstrips-west", "game:adze-wood-headshaft-granite-kapok-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-kapok-leatherstrips-west", "game:adze-wood-headshaft-andesite-kapok-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-kapok-leatherstrips-west", "game:adze-wood-headshaft-basalt-kapok-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-kapok-leatherstrips-west", "game:adze-wood-headshaft-obsidian-kapok-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-kapok-leatherstrips-west", "game:adze-wood-headshaft-flint-kapok-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-maple-leatherstrips-west", "game:adze-wood-headshaft-granite-maple-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-maple-leatherstrips-west", "game:adze-wood-headshaft-andesite-maple-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-maple-leatherstrips-west", "game:adze-wood-headshaft-basalt-maple-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-maple-leatherstrips-west", "game:adze-wood-headshaft-obsidian-maple-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-maple-leatherstrips-west", "game:adze-wood-headshaft-flint-maple-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-oak-leatherstrips-west", "game:adze-wood-headshaft-granite-oak-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-oak-leatherstrips-west", "game:adze-wood-headshaft-andesite-oak-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-oak-leatherstrips-west", "game:adze-wood-headshaft-basalt-oak-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-oak-leatherstrips-west", "game:adze-wood-headshaft-obsidian-oak-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-oak-leatherstrips-west", "game:adze-wood-headshaft-flint-oak-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-granite-pine-leatherstrips-west", "game:adze-wood-headshaft-granite-pine-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-andesite-pine-leatherstrips-west", "game:adze-wood-headshaft-andesite-pine-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-basalt-pine-leatherstrips-west", "game:adze-wood-headshaft-basalt-pine-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-obsidian-pine-leatherstrips-west", "game:adze-wood-headshaft-obsidian-pine-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:adze-wood-placed-flint-pine-leatherstrips-west", "game:adze-wood-headshaft-flint-pine-west", 1 ],
+				 
+				 
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-acacia-sinew-north", "game:adze-wood-headshaft-granite-acacia-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-acacia-sinew-north", "game:adze-wood-headshaft-andesite-acacia-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-acacia-sinew-north", "game:adze-wood-headshaft-basalt-acacia-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-acacia-sinew-north", "game:adze-wood-headshaft-obsidian-acacia-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-acacia-sinew-north", "game:adze-wood-headshaft-flint-acacia-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-birch-sinew-north", "game:adze-wood-headshaft-granite-birch-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-birch-sinew-north", "game:adze-wood-headshaft-andesite-birch-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-birch-sinew-north", "game:adze-wood-headshaft-basalt-birch-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-birch-sinew-north", "game:adze-wood-headshaft-obsidian-birch-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-birch-sinew-north", "game:adze-wood-headshaft-flint-birch-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-kapok-sinew-north", "game:adze-wood-headshaft-granite-kapok-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-kapok-sinew-north", "game:adze-wood-headshaft-andesite-kapok-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-kapok-sinew-north", "game:adze-wood-headshaft-basalt-kapok-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-kapok-sinew-north", "game:adze-wood-headshaft-obsidian-kapok-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-kapok-sinew-north", "game:adze-wood-headshaft-flint-kapok-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-maple-sinew-north", "game:adze-wood-headshaft-granite-maple-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-maple-sinew-north", "game:adze-wood-headshaft-andesite-maple-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-maple-sinew-north", "game:adze-wood-headshaft-basalt-maple-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-maple-sinew-north", "game:adze-wood-headshaft-obsidian-maple-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-maple-sinew-north", "game:adze-wood-headshaft-flint-maple-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-oak-sinew-north", "game:adze-wood-headshaft-granite-oak-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-oak-sinew-north", "game:adze-wood-headshaft-andesite-oak-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-oak-sinew-north", "game:adze-wood-headshaft-basalt-oak-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-oak-sinew-north", "game:adze-wood-headshaft-obsidian-oak-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-oak-sinew-north", "game:adze-wood-headshaft-flint-oak-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-pine-sinew-north", "game:adze-wood-headshaft-granite-pine-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-pine-sinew-north", "game:adze-wood-headshaft-andesite-pine-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-pine-sinew-north", "game:adze-wood-headshaft-basalt-pine-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-pine-sinew-north", "game:adze-wood-headshaft-obsidian-pine-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-pine-sinew-north", "game:adze-wood-headshaft-flint-pine-north", 1 ],
+				 
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-acacia-sinew-south", "game:adze-wood-headshaft-granite-acacia-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-acacia-sinew-south", "game:adze-wood-headshaft-andesite-acacia-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-acacia-sinew-south", "game:adze-wood-headshaft-basalt-acacia-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-acacia-sinew-south", "game:adze-wood-headshaft-obsidian-acacia-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-acacia-sinew-south", "game:adze-wood-headshaft-flint-acacia-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-birch-sinew-south", "game:adze-wood-headshaft-granite-birch-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-birch-sinew-south", "game:adze-wood-headshaft-andesite-birch-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-birch-sinew-south", "game:adze-wood-headshaft-basalt-birch-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-birch-sinew-south", "game:adze-wood-headshaft-obsidian-birch-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-birch-sinew-south", "game:adze-wood-headshaft-flint-birch-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-kapok-sinew-south", "game:adze-wood-headshaft-granite-kapok-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-kapok-sinew-south", "game:adze-wood-headshaft-andesite-kapok-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-kapok-sinew-south", "game:adze-wood-headshaft-basalt-kapok-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-kapok-sinew-south", "game:adze-wood-headshaft-obsidian-kapok-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-kapok-sinew-south", "game:adze-wood-headshaft-flint-kapok-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-maple-sinew-south", "game:adze-wood-headshaft-granite-maple-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-maple-sinew-south", "game:adze-wood-headshaft-andesite-maple-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-maple-sinew-south", "game:adze-wood-headshaft-basalt-maple-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-maple-sinew-south", "game:adze-wood-headshaft-obsidian-maple-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-maple-sinew-south", "game:adze-wood-headshaft-flint-maple-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-oak-sinew-south", "game:adze-wood-headshaft-granite-oak-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-oak-sinew-south", "game:adze-wood-headshaft-andesite-oak-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-oak-sinew-south", "game:adze-wood-headshaft-basalt-oak-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-oak-sinew-south", "game:adze-wood-headshaft-obsidian-oak-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-oak-sinew-south", "game:adze-wood-headshaft-flint-oak-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-pine-sinew-south", "game:adze-wood-headshaft-granite-pine-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-pine-sinew-south", "game:adze-wood-headshaft-andesite-pine-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-pine-sinew-south", "game:adze-wood-headshaft-basalt-pine-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-pine-sinew-south", "game:adze-wood-headshaft-obsidian-pine-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-pine-sinew-south", "game:adze-wood-headshaft-flint-pine-south", 1 ],
+				 
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-acacia-sinew-east", "game:adze-wood-headshaft-granite-acacia-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-acacia-sinew-east", "game:adze-wood-headshaft-andesite-acacia-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-acacia-sinew-east", "game:adze-wood-headshaft-basalt-acacia-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-acacia-sinew-east", "game:adze-wood-headshaft-obsidian-acacia-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-acacia-sinew-east", "game:adze-wood-headshaft-flint-acacia-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-birch-sinew-east", "game:adze-wood-headshaft-granite-birch-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-birch-sinew-east", "game:adze-wood-headshaft-andesite-birch-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-birch-sinew-east", "game:adze-wood-headshaft-basalt-birch-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-birch-sinew-east", "game:adze-wood-headshaft-obsidian-birch-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-birch-sinew-east", "game:adze-wood-headshaft-flint-birch-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-kapok-sinew-east", "game:adze-wood-headshaft-granite-kapok-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-kapok-sinew-east", "game:adze-wood-headshaft-andesite-kapok-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-kapok-sinew-east", "game:adze-wood-headshaft-basalt-kapok-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-kapok-sinew-east", "game:adze-wood-headshaft-obsidian-kapok-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-kapok-sinew-east", "game:adze-wood-headshaft-flint-kapok-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-maple-sinew-east", "game:adze-wood-headshaft-granite-maple-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-maple-sinew-east", "game:adze-wood-headshaft-andesite-maple-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-maple-sinew-east", "game:adze-wood-headshaft-basalt-maple-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-maple-sinew-east", "game:adze-wood-headshaft-obsidian-maple-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-maple-sinew-east", "game:adze-wood-headshaft-flint-maple-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-oak-sinew-east", "game:adze-wood-headshaft-granite-oak-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-oak-sinew-east", "game:adze-wood-headshaft-andesite-oak-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-oak-sinew-east", "game:adze-wood-headshaft-basalt-oak-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-oak-sinew-east", "game:adze-wood-headshaft-obsidian-oak-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-oak-sinew-east", "game:adze-wood-headshaft-flint-oak-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-pine-sinew-east", "game:adze-wood-headshaft-granite-pine-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-pine-sinew-east", "game:adze-wood-headshaft-andesite-pine-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-pine-sinew-east", "game:adze-wood-headshaft-basalt-pine-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-pine-sinew-east", "game:adze-wood-headshaft-obsidian-pine-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-pine-sinew-east", "game:adze-wood-headshaft-flint-pine-east", 1 ],
+				 
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-acacia-sinew-west", "game:adze-wood-headshaft-granite-acacia-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-acacia-sinew-west", "game:adze-wood-headshaft-andesite-acacia-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-acacia-sinew-west", "game:adze-wood-headshaft-basalt-acacia-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-acacia-sinew-west", "game:adze-wood-headshaft-obsidian-acacia-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-acacia-sinew-west", "game:adze-wood-headshaft-flint-acacia-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-birch-sinew-west", "game:adze-wood-headshaft-granite-birch-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-birch-sinew-west", "game:adze-wood-headshaft-andesite-birch-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-birch-sinew-west", "game:adze-wood-headshaft-basalt-birch-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-birch-sinew-west", "game:adze-wood-headshaft-obsidian-birch-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-birch-sinew-west", "game:adze-wood-headshaft-flint-birch-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-kapok-sinew-west", "game:adze-wood-headshaft-granite-kapok-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-kapok-sinew-west", "game:adze-wood-headshaft-andesite-kapok-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-kapok-sinew-west", "game:adze-wood-headshaft-basalt-kapok-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-kapok-sinew-west", "game:adze-wood-headshaft-obsidian-kapok-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-kapok-sinew-west", "game:adze-wood-headshaft-flint-kapok-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-maple-sinew-west", "game:adze-wood-headshaft-granite-maple-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-maple-sinew-west", "game:adze-wood-headshaft-andesite-maple-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-maple-sinew-west", "game:adze-wood-headshaft-basalt-maple-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-maple-sinew-west", "game:adze-wood-headshaft-obsidian-maple-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-maple-sinew-west", "game:adze-wood-headshaft-flint-maple-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-oak-sinew-west", "game:adze-wood-headshaft-granite-oak-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-oak-sinew-west", "game:adze-wood-headshaft-andesite-oak-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-oak-sinew-west", "game:adze-wood-headshaft-basalt-oak-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-oak-sinew-west", "game:adze-wood-headshaft-obsidian-oak-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-oak-sinew-west", "game:adze-wood-headshaft-flint-oak-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-granite-pine-sinew-west", "game:adze-wood-headshaft-granite-pine-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-andesite-pine-sinew-west", "game:adze-wood-headshaft-andesite-pine-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-basalt-pine-sinew-west", "game:adze-wood-headshaft-basalt-pine-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-obsidian-pine-sinew-west", "game:adze-wood-headshaft-obsidian-pine-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:adze-wood-placed-flint-pine-sinew-west", "game:adze-wood-headshaft-flint-pine-west", 1 ],
+				 
+				 
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-acacia-rope-north", "game:adze-wood-headshaft-granite-acacia-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-acacia-rope-north", "game:adze-wood-headshaft-andesite-acacia-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-acacia-rope-north", "game:adze-wood-headshaft-basalt-acacia-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-acacia-rope-north", "game:adze-wood-headshaft-obsidian-acacia-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-acacia-rope-north", "game:adze-wood-headshaft-flint-acacia-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-birch-rope-north", "game:adze-wood-headshaft-granite-birch-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-birch-rope-north", "game:adze-wood-headshaft-andesite-birch-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-birch-rope-north", "game:adze-wood-headshaft-basalt-birch-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-birch-rope-north", "game:adze-wood-headshaft-obsidian-birch-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-birch-rope-north", "game:adze-wood-headshaft-flint-birch-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-kapok-rope-north", "game:adze-wood-headshaft-granite-kapok-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-kapok-rope-north", "game:adze-wood-headshaft-andesite-kapok-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-kapok-rope-north", "game:adze-wood-headshaft-basalt-kapok-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-kapok-rope-north", "game:adze-wood-headshaft-obsidian-kapok-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-kapok-rope-north", "game:adze-wood-headshaft-flint-kapok-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-maple-rope-north", "game:adze-wood-headshaft-granite-maple-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-maple-rope-north", "game:adze-wood-headshaft-andesite-maple-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-maple-rope-north", "game:adze-wood-headshaft-basalt-maple-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-maple-rope-north", "game:adze-wood-headshaft-obsidian-maple-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-maple-rope-north", "game:adze-wood-headshaft-flint-maple-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-oak-rope-north", "game:adze-wood-headshaft-granite-oak-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-oak-rope-north", "game:adze-wood-headshaft-andesite-oak-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-oak-rope-north", "game:adze-wood-headshaft-basalt-oak-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-oak-rope-north", "game:adze-wood-headshaft-obsidian-oak-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-oak-rope-north", "game:adze-wood-headshaft-flint-oak-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-pine-rope-north", "game:adze-wood-headshaft-granite-pine-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-pine-rope-north", "game:adze-wood-headshaft-andesite-pine-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-pine-rope-north", "game:adze-wood-headshaft-basalt-pine-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-pine-rope-north", "game:adze-wood-headshaft-obsidian-pine-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-pine-rope-north", "game:adze-wood-headshaft-flint-pine-north", 1 ],
+				 
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-acacia-rope-south", "game:adze-wood-headshaft-granite-acacia-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-acacia-rope-south", "game:adze-wood-headshaft-andesite-acacia-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-acacia-rope-south", "game:adze-wood-headshaft-basalt-acacia-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-acacia-rope-south", "game:adze-wood-headshaft-obsidian-acacia-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-acacia-rope-south", "game:adze-wood-headshaft-flint-acacia-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-birch-rope-south", "game:adze-wood-headshaft-granite-birch-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-birch-rope-south", "game:adze-wood-headshaft-andesite-birch-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-birch-rope-south", "game:adze-wood-headshaft-basalt-birch-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-birch-rope-south", "game:adze-wood-headshaft-obsidian-birch-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-birch-rope-south", "game:adze-wood-headshaft-flint-birch-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-kapok-rope-south", "game:adze-wood-headshaft-granite-kapok-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-kapok-rope-south", "game:adze-wood-headshaft-andesite-kapok-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-kapok-rope-south", "game:adze-wood-headshaft-basalt-kapok-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-kapok-rope-south", "game:adze-wood-headshaft-obsidian-kapok-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-kapok-rope-south", "game:adze-wood-headshaft-flint-kapok-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-maple-rope-south", "game:adze-wood-headshaft-granite-maple-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-maple-rope-south", "game:adze-wood-headshaft-andesite-maple-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-maple-rope-south", "game:adze-wood-headshaft-basalt-maple-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-maple-rope-south", "game:adze-wood-headshaft-obsidian-maple-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-maple-rope-south", "game:adze-wood-headshaft-flint-maple-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-oak-rope-south", "game:adze-wood-headshaft-granite-oak-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-oak-rope-south", "game:adze-wood-headshaft-andesite-oak-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-oak-rope-south", "game:adze-wood-headshaft-basalt-oak-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-oak-rope-south", "game:adze-wood-headshaft-obsidian-oak-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-oak-rope-south", "game:adze-wood-headshaft-flint-oak-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-pine-rope-south", "game:adze-wood-headshaft-granite-pine-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-pine-rope-south", "game:adze-wood-headshaft-andesite-pine-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-pine-rope-south", "game:adze-wood-headshaft-basalt-pine-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-pine-rope-south", "game:adze-wood-headshaft-obsidian-pine-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-pine-rope-south", "game:adze-wood-headshaft-flint-pine-south", 1 ],
+				 
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-acacia-rope-east", "game:adze-wood-headshaft-granite-acacia-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-acacia-rope-east", "game:adze-wood-headshaft-andesite-acacia-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-acacia-rope-east", "game:adze-wood-headshaft-basalt-acacia-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-acacia-rope-east", "game:adze-wood-headshaft-obsidian-acacia-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-acacia-rope-east", "game:adze-wood-headshaft-flint-acacia-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-birch-rope-east", "game:adze-wood-headshaft-granite-birch-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-birch-rope-east", "game:adze-wood-headshaft-andesite-birch-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-birch-rope-east", "game:adze-wood-headshaft-basalt-birch-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-birch-rope-east", "game:adze-wood-headshaft-obsidian-birch-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-birch-rope-east", "game:adze-wood-headshaft-flint-birch-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-kapok-rope-east", "game:adze-wood-headshaft-granite-kapok-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-kapok-rope-east", "game:adze-wood-headshaft-andesite-kapok-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-kapok-rope-east", "game:adze-wood-headshaft-basalt-kapok-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-kapok-rope-east", "game:adze-wood-headshaft-obsidian-kapok-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-kapok-rope-east", "game:adze-wood-headshaft-flint-kapok-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-maple-rope-east", "game:adze-wood-headshaft-granite-maple-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-maple-rope-east", "game:adze-wood-headshaft-andesite-maple-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-maple-rope-east", "game:adze-wood-headshaft-basalt-maple-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-maple-rope-east", "game:adze-wood-headshaft-obsidian-maple-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-maple-rope-east", "game:adze-wood-headshaft-flint-maple-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-oak-rope-east", "game:adze-wood-headshaft-granite-oak-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-oak-rope-east", "game:adze-wood-headshaft-andesite-oak-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-oak-rope-east", "game:adze-wood-headshaft-basalt-oak-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-oak-rope-east", "game:adze-wood-headshaft-obsidian-oak-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-oak-rope-east", "game:adze-wood-headshaft-flint-oak-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-pine-rope-east", "game:adze-wood-headshaft-granite-pine-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-pine-rope-east", "game:adze-wood-headshaft-andesite-pine-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-pine-rope-east", "game:adze-wood-headshaft-basalt-pine-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-pine-rope-east", "game:adze-wood-headshaft-obsidian-pine-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-pine-rope-east", "game:adze-wood-headshaft-flint-pine-east", 1 ],
+				 
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-acacia-rope-west", "game:adze-wood-headshaft-granite-acacia-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-acacia-rope-west", "game:adze-wood-headshaft-andesite-acacia-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-acacia-rope-west", "game:adze-wood-headshaft-basalt-acacia-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-acacia-rope-west", "game:adze-wood-headshaft-obsidian-acacia-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-acacia-rope-west", "game:adze-wood-headshaft-flint-acacia-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-birch-rope-west", "game:adze-wood-headshaft-granite-birch-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-birch-rope-west", "game:adze-wood-headshaft-andesite-birch-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-birch-rope-west", "game:adze-wood-headshaft-basalt-birch-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-birch-rope-west", "game:adze-wood-headshaft-obsidian-birch-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-birch-rope-west", "game:adze-wood-headshaft-flint-birch-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-kapok-rope-west", "game:adze-wood-headshaft-granite-kapok-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-kapok-rope-west", "game:adze-wood-headshaft-andesite-kapok-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-kapok-rope-west", "game:adze-wood-headshaft-basalt-kapok-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-kapok-rope-west", "game:adze-wood-headshaft-obsidian-kapok-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-kapok-rope-west", "game:adze-wood-headshaft-flint-kapok-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-maple-rope-west", "game:adze-wood-headshaft-granite-maple-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-maple-rope-west", "game:adze-wood-headshaft-andesite-maple-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-maple-rope-west", "game:adze-wood-headshaft-basalt-maple-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-maple-rope-west", "game:adze-wood-headshaft-obsidian-maple-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-maple-rope-west", "game:adze-wood-headshaft-flint-maple-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-oak-rope-west", "game:adze-wood-headshaft-granite-oak-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-oak-rope-west", "game:adze-wood-headshaft-andesite-oak-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-oak-rope-west", "game:adze-wood-headshaft-basalt-oak-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-oak-rope-west", "game:adze-wood-headshaft-obsidian-oak-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-oak-rope-west", "game:adze-wood-headshaft-flint-oak-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-granite-pine-rope-west", "game:adze-wood-headshaft-granite-pine-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-andesite-pine-rope-west", "game:adze-wood-headshaft-andesite-pine-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-basalt-pine-rope-west", "game:adze-wood-headshaft-basalt-pine-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-obsidian-pine-rope-west", "game:adze-wood-headshaft-obsidian-pine-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:adze-wood-placed-flint-pine-rope-west", "game:adze-wood-headshaft-flint-pine-west", 1 ],
+				],
+			},
+		},
+	],
+	
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
+		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
+		{ code: "side", loadFromProperties: "abstract/horizontalorientation" },
+	],
+	shapeByType: { 
+		"*-north": { base: "block/placedtool/adze-wood-placed", rotateY: 0 },
+		"*-east": { base: "block/placedtool/adze-wood-placed", rotateY: 270 },
+		"*-south": { base: "block/placedtool/adze-wood-placed", rotateY: 180 },
+		"*-west": { base: "block/placedtool/adze-wood-placed", rotateY: 90 },
+		},
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"wood": { base: "game:block/wood/debarked/{wood}" },
+		"cordage": { base: "block/transparent" },
+	},	
+	creativeinventory: { "general": ["*-north"]  },
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 0,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+}

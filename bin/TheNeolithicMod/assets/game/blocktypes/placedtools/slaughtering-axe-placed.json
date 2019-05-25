@@ -1,0 +1,37 @@
+{
+	code: "slaughtering-axe-placed",
+	behaviors: [ {name: "HorizontalOrientable" }],
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },
+		{ code: "side", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	shapeByType: { 
+		"*-north": { base: "block/placedtool/slaughtering-axe-placed", rotateY: 0 },
+		"*-east": { base: "block/placedtool/slaughtering-axe-placed", rotateY: 270 },
+		"*-south": { base: "block/placedtool/slaughtering-axe-placed", rotateY: 180 },
+		"*-west": { base: "block/placedtool/slaughtering-axe-placed", rotateY: 90 },
+		},
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"bone": { base: "block/bone" },
+		"sinew": { base: "block/sinew" },
+	},	
+	creativeinventory: { "general": ["*-north"]  },
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 0,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+}

@@ -1,0 +1,64 @@
+{
+	code: "spearhead",
+	behaviors: [ {name: "HorizontalOrientable" }],
+	variantgroups: [
+		{ code: "material", states: ["granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "steel" ] },
+		{ code: "side", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	shapeinventory: { base: "item/tool/spear" },
+	shapeByType: { 
+		"*-north": { base: "block/placedtool/spear-bamboo-placed", rotateY: 0 },
+		"*-east": { base: "block/placedtool/spear-bamboo-placed", rotateY: 270 },
+		"*-south": { base: "block/placedtool/spear-bamboo-placed", rotateY: 180 },
+		"*-west": { base: "block/placedtool/spear-bamboo-placed", rotateY: 90 },
+		},
+	textures: {
+		"metal": { base: "item/tool/material/{material}" },
+		"stone": { base: "item/tool/material/{material}" },
+		"wood": { base: "block/transparent" },
+		"bamboo": { base: "block/transparent" },
+		"sinew": { base: "block/transparent" },
+		},
+	
+	creativeinventory: { "general": ["*-north"], "items": ["*-north"], "tools": ["*-north"] },
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 0,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+	fpHandTransform: {
+		translation: { x: 0.3, y: 0.1, z: 0 },
+		rotation: { x: -23, y: 30, z: 79 },
+		scale: 2.5
+	},
+	guiTransform: {
+		rotate: false,
+		translation: { x: 4, y: -1, z: 0 },
+		rotation: { x: -44, y: -124, z: -180 },
+		origin: { x: 0.5, y: 0.5, z: 0.5 },
+		scale: 3
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.49, z: 0.5 },
+		scale: 3.31
+	},
+	tpHandTransform: {
+		translation: { x: -0.9, y: -0.7, z: -0.6 },
+		rotation: { x: -37, y: -22, z: -22 },
+		scale: 0.82
+	}
+}

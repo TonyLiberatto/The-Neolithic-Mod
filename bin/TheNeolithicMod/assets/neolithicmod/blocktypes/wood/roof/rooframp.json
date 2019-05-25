@@ -1,16 +1,16 @@
 {
 	code: "rooframp",
-  class: "BlockLogWall",
+	class: "BlockLogWall",
 	behaviors: [{name: "HorizontalOrientable"}],
 	attributes: {
 		handbook: {
 			groupBy: ["neolithicmod: rooframp-*"]
 		},
 	},
-	creativeinventory: { "general": ["*-slope-*-north"], "construction": ["*-slope-*-north"], "neolithicblocks": ["*-slope-*-north"] },
+	creativeinventory: { "general": ["rooframp-slope-*-*-north"], "construction": ["rooframp-slope-*-*-north"], "neolithicblocks": ["rooframp-slope-*-*-north"] },
 		variantgroups: [
 		{ code: "type", states: ["corner", "cornerin","cornertop","slope","slopewall","top", "topwall", "topend"  ]},
-		{ loadFromProperties: "block/wood" },
+		{ code: "wood", loadFromProperties: "block/wood" },
 		{ code: "style", states: ["bark", "debarked"]},
 		{ code:"orientation", loadFromProperties: "abstract/horizontalorientation" },
 	],
@@ -23,6 +23,10 @@
 
 	},
 	blockmaterial: "wood",
+	materialDensity: 700,
+	maxStackSize: 64,
+	requiredMiningTier: 1,
+	drops: [{ type: "block", code: "rooframp-slope-{wood}-{style}-north", quantity: { avg: 1 }  }],
 	drawtype: "json",
 	lightabsorption: 0,
 	sideopaque: {
@@ -31,7 +35,6 @@
 	sidesolid: {
 		all: false
 	},
-	replaceable: 100,
 	resistance: 2,
 	collisionSelectionBoxesByType: {
 		"*-topend-*": [
