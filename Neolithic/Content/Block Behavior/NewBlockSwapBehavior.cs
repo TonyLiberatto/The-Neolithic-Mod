@@ -12,7 +12,7 @@ namespace TheNeolithicMod
     class NewBlockSwapBehavior : BlockBehavior
     {
         const int floc = 2;
-        Dictionary<AssetLocation, object[]> swapPairs = new Dictionary<AssetLocation, object[]>();
+        Dictionary<string, object[]> swapPairs = new Dictionary<string, object[]>();
 
         public NewBlockSwapBehavior(Block block) : base(block){}
 
@@ -22,18 +22,30 @@ namespace TheNeolithicMod
             if (objects == null) return;
             foreach (var array in objects)
             {
-                AssetLocation referenceAsset = new AssetLocation(array[floc].ToString());
-
-                if (!swapPairs.ContainsKey(referenceAsset))
+                List<object> list = new List<object>();
+                List<object> keylist = new List<object>();
+                for (int i = 0; i < array.Length; i++)
                 {
-                    List<object> list = new List<object>();
-                    for (int i = 0; i < array.Length; i++)
-                    {
-                        if (i != floc) list.Add(array[i]);
-                    }
-                    swapPairs.Add(referenceAsset, list.ToArray());
+                    keylist.Add(array[i]);
+                    if (i != floc) list.Add(array[i]);
                 }
+                swapPairs.Add(GetKey(keylist), list.ToArray());
             }
+            
+        }
+        public string GetKey(List<object> objects)
+        {
+            string combined = "";
+            combined += (string)objects[0];
+            combined += (string)objects[2];
+            return GameMath.Md5Hash(combined);
+        }
+        public string GetKey(List<string> objects)
+        {
+            string combined = "";
+            combined += objects[0];
+            combined += objects[2];
+            return GameMath.Md5Hash(combined);
         }
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
@@ -41,12 +53,15 @@ namespace TheNeolithicMod
             handling = EnumHandling.PreventDefault;
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
             BlockPos pos = blockSel.Position;
+            List<string> things = new List<string>() { slot.Itemstack.Collectible.Code.ToString(), blockSel.Position.GetBlock(world).Code.ToString()};
+            string key = GetKey(things);
+
             if (slot.Itemstack != null)
             {
-                if (swapPairs.TryGetValue(block.Code, out object[] values))
+                if (swapPairs.TryGetValue(key, out object[] values))
                 {
                     AssetLocation asset = slot.Itemstack.Collectible.Code;
-                    if (asset.ToString() == (string)values[0])
+                    if (asset == values[0])
                     {
                         string toCode = (string)values[1];
                         if (toCode.IndexOf(":") == -1) toCode = block.Code.Domain + ":" + toCode;
