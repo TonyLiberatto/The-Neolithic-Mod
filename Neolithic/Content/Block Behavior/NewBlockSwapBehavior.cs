@@ -44,7 +44,7 @@ namespace TheNeolithicMod
         {
             string combined = "";
             combined += objects[0];
-            combined += objects[2];
+            combined += objects[1];
             return GameMath.Md5Hash(combined);
         }
 
