@@ -61,7 +61,7 @@ namespace TheNeolithicMod
                 if (swapPairs.TryGetValue(key, out object[] values))
                 {
                     AssetLocation asset = slot.Itemstack.Collectible.Code;
-                    if (asset == values[0])
+                    if (asset.ToString() == values[0].ToString())
                     {
                         string toCode = (string)values[1];
                         if (toCode.IndexOf(":") == -1) toCode = block.Code.Domain + ":" + toCode;
