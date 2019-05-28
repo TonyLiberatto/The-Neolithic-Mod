@@ -1,38 +1,44 @@
 {
-	code: "adze",
+	code: "primitive-adze",
 	class: "ItemAdze",
 	variantgroups: [
-		{code: "type", states: ["primitive"]},
-		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
+		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
 	],
 	tool: "chisel",
 	attributes: {
 		handbook: {
-			groupBy: ["adze-*"]
+			groupBy: ["primitive-adze-*"]
 		}
 	},
 	heldTpHitAnimation: "breaktool",
 	shape: { base: "item/tool/primitive-adze" },
 	textures: {
 		"stone": { base: "item/tool/material/{stone}" },
-		"bone": { base: "block/bone" },
-		"sinew": { base: "block/sinew" },
+		"shaft": { base: "block/bone" },
+		"cordage": { base: "block/sinew" },
 	},
 	durabilitybytype: 
 	{
-		"adze-primitive-granite": 1000,
-		"adze-primitive-andesite": 1000,
-		"adze-primitive-basalt": 1000,
-		"adze-primitive-obsidian": 1200,
-		"adze-primitive-flint": 1100,
+		"*-adze-granite-bone-*": 1000,
+		"*-adze-andesite-bone-*": 1000,
+		"*-adze-basalt-bone-*": 1000,
+		"*-adze-obsidian-bone-*": 1200,
+		"*-adze-flint-bone-*": 1100,
+		"*-adze-granite-*": 800,
+		"*-adze-andesite-*": 800,
+		"*-adze-basalt-*": 800,
+		"*-adze-obsidian-*": 1000,
+		"*-adze-flint-*": 900,
 	},
 	attackpowerbytype: 
 	{
-		"adze-primitive-granite": 0.75,
-		"adze-primitive-andesite": 0.75,
-		"adze-primitive-basalt": 0.75,
-		"adze-primitive-obsidian": 1.5,
-		"adze-primitive-flint": 1,
+		"*-adze-granite-*": 0.75,
+		"*-adze-andesite*": 0.75,
+		"*-adze-basalt-*": 0.75,
+		"*-adze-obsidian-*": 1.5,
+		"*-adze-flint-*": 1,
 	},
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	fpHandTransform: {

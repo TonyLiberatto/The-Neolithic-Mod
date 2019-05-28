@@ -296,12 +296,6 @@
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\tallow.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\tallowcandle.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\wheyportion.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\toolhead\adzehead.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\toolhead\bonearrowhead.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\toolhead\flake.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\toolhead\primitive-hoehead.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\toolhead\sicklehead.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\toolhead\spearhead.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\chisel.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\hammer.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\hoe.json" />
