@@ -1,0 +1,582 @@
+{
+	code: "hammer-headshaft",
+	behaviors: [ 
+		{name: "HorizontalOrientable" },
+		{name: "BlockSwapBehavior",
+			properties: {
+				"swapBlocks": [
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-acacia-leatherstrips-north", "game:hammer-headshaft-granite-acacia-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-acacia-leatherstrips-north", "game:hammer-headshaft-andesite-acacia-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-acacia-leatherstrips-north", "game:hammer-headshaft-basalt-acacia-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-acacia-leatherstrips-north", "game:hammer-headshaft-obsidian-acacia-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-acacia-leatherstrips-north", "game:hammer-headshaft-flint-acacia-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-birch-leatherstrips-north", "game:hammer-headshaft-granite-birch-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-birch-leatherstrips-north", "game:hammer-headshaft-andesite-birch-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-birch-leatherstrips-north", "game:hammer-headshaft-basalt-birch-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-birch-leatherstrips-north", "game:hammer-headshaft-obsidian-birch-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-birch-leatherstrips-north", "game:hammer-headshaft-flint-birch-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-kapok-leatherstrips-north", "game:hammer-headshaft-granite-kapok-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-kapok-leatherstrips-north", "game:hammer-headshaft-andesite-kapok-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-kapok-leatherstrips-north", "game:hammer-headshaft-basalt-kapok-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-kapok-leatherstrips-north", "game:hammer-headshaft-obsidian-kapok-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-kapok-leatherstrips-north", "game:hammer-headshaft-flint-kapok-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-maple-leatherstrips-north", "game:hammer-headshaft-granite-maple-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-maple-leatherstrips-north", "game:hammer-headshaft-andesite-maple-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-maple-leatherstrips-north", "game:hammer-headshaft-basalt-maple-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-maple-leatherstrips-north", "game:hammer-headshaft-obsidian-maple-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-maple-leatherstrips-north", "game:hammer-headshaft-flint-maple-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-oak-leatherstrips-north", "game:hammer-headshaft-granite-oak-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-oak-leatherstrips-north", "game:hammer-headshaft-andesite-oak-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-oak-leatherstrips-north", "game:hammer-headshaft-basalt-oak-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-oak-leatherstrips-north", "game:hammer-headshaft-obsidian-oak-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-oak-leatherstrips-north", "game:hammer-headshaft-flint-oak-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-pine-leatherstrips-north", "game:hammer-headshaft-granite-pine-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-pine-leatherstrips-north", "game:hammer-headshaft-andesite-pine-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-pine-leatherstrips-north", "game:hammer-headshaft-basalt-pine-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-pine-leatherstrips-north", "game:hammer-headshaft-obsidian-pine-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-pine-leatherstrips-north", "game:hammer-headshaft-flint-pine-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-bone-leatherstrips-north", "game:hammer-headshaft-granite-bone-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-bone-leatherstrips-north", "game:hammer-headshaft-andesite-bone-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-bone-leatherstrips-north", "game:hammer-headshaft-basalt-bone-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-bone-leatherstrips-north", "game:hammer-headshaft-obsidian-bone-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-bone-leatherstrips-north", "game:hammer-headshaft-flint-bone-north", 1 ],
+				 
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-acacia-leatherstrips-south", "game:hammer-headshaft-granite-acacia-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-acacia-leatherstrips-south", "game:hammer-headshaft-andesite-acacia-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-acacia-leatherstrips-south", "game:hammer-headshaft-basalt-acacia-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-acacia-leatherstrips-south", "game:hammer-headshaft-obsidian-acacia-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-acacia-leatherstrips-south", "game:hammer-headshaft-flint-acacia-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-birch-leatherstrips-south", "game:hammer-headshaft-granite-birch-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-birch-leatherstrips-south", "game:hammer-headshaft-andesite-birch-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-birch-leatherstrips-south", "game:hammer-headshaft-basalt-birch-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-birch-leatherstrips-south", "game:hammer-headshaft-obsidian-birch-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-birch-leatherstrips-south", "game:hammer-headshaft-flint-birch-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-kapok-leatherstrips-south", "game:hammer-headshaft-granite-kapok-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-kapok-leatherstrips-south", "game:hammer-headshaft-andesite-kapok-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-kapok-leatherstrips-south", "game:hammer-headshaft-basalt-kapok-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-kapok-leatherstrips-south", "game:hammer-headshaft-obsidian-kapok-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-kapok-leatherstrips-south", "game:hammer-headshaft-flint-kapok-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-maple-leatherstrips-south", "game:hammer-headshaft-granite-maple-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-maple-leatherstrips-south", "game:hammer-headshaft-andesite-maple-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-maple-leatherstrips-south", "game:hammer-headshaft-basalt-maple-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-maple-leatherstrips-south", "game:hammer-headshaft-obsidian-maple-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-maple-leatherstrips-south", "game:hammer-headshaft-flint-maple-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-oak-leatherstrips-south", "game:hammer-headshaft-granite-oak-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-oak-leatherstrips-south", "game:hammer-headshaft-andesite-oak-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-oak-leatherstrips-south", "game:hammer-headshaft-basalt-oak-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-oak-leatherstrips-south", "game:hammer-headshaft-obsidian-oak-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-oak-leatherstrips-south", "game:hammer-headshaft-flint-oak-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-pine-leatherstrips-south", "game:hammer-headshaft-granite-pine-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-pine-leatherstrips-south", "game:hammer-headshaft-andesite-pine-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-pine-leatherstrips-south", "game:hammer-headshaft-basalt-pine-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-pine-leatherstrips-south", "game:hammer-headshaft-obsidian-pine-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-pine-leatherstrips-south", "game:hammer-headshaft-flint-pine-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-bone-leatherstrips-south", "game:hammer-headshaft-granite-bone-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-bone-leatherstrips-south", "game:hammer-headshaft-andesite-bone-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-bone-leatherstrips-south", "game:hammer-headshaft-basalt-bone-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-bone-leatherstrips-south", "game:hammer-headshaft-obsidian-bone-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-bone-leatherstrips-south", "game:hammer-headshaft-flint-bone-south", 1 ],
+				 
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-acacia-leatherstrips-east", "game:hammer-headshaft-granite-acacia-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-acacia-leatherstrips-east", "game:hammer-headshaft-andesite-acacia-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-acacia-leatherstrips-east", "game:hammer-headshaft-basalt-acacia-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-acacia-leatherstrips-east", "game:hammer-headshaft-obsidian-acacia-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-acacia-leatherstrips-east", "game:hammer-headshaft-flint-acacia-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-birch-leatherstrips-east", "game:hammer-headshaft-granite-birch-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-birch-leatherstrips-east", "game:hammer-headshaft-andesite-birch-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-birch-leatherstrips-east", "game:hammer-headshaft-basalt-birch-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-birch-leatherstrips-east", "game:hammer-headshaft-obsidian-birch-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-birch-leatherstrips-east", "game:hammer-headshaft-flint-birch-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-kapok-leatherstrips-east", "game:hammer-headshaft-granite-kapok-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-kapok-leatherstrips-east", "game:hammer-headshaft-andesite-kapok-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-kapok-leatherstrips-east", "game:hammer-headshaft-basalt-kapok-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-kapok-leatherstrips-east", "game:hammer-headshaft-obsidian-kapok-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-kapok-leatherstrips-east", "game:hammer-headshaft-flint-kapok-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-maple-leatherstrips-east", "game:hammer-headshaft-granite-maple-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-maple-leatherstrips-east", "game:hammer-headshaft-andesite-maple-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-maple-leatherstrips-east", "game:hammer-headshaft-basalt-maple-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-maple-leatherstrips-east", "game:hammer-headshaft-obsidian-maple-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-maple-leatherstrips-east", "game:hammer-headshaft-flint-maple-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-oak-leatherstrips-east", "game:hammer-headshaft-granite-oak-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-oak-leatherstrips-east", "game:hammer-headshaft-andesite-oak-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-oak-leatherstrips-east", "game:hammer-headshaft-basalt-oak-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-oak-leatherstrips-east", "game:hammer-headshaft-obsidian-oak-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-oak-leatherstrips-east", "game:hammer-headshaft-flint-oak-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-pine-leatherstrips-east", "game:hammer-headshaft-granite-pine-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-pine-leatherstrips-east", "game:hammer-headshaft-andesite-pine-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-pine-leatherstrips-east", "game:hammer-headshaft-basalt-pine-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-pine-leatherstrips-east", "game:hammer-headshaft-obsidian-pine-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-pine-leatherstrips-east", "game:hammer-headshaft-flint-pine-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-bone-leatherstrips-east", "game:hammer-headshaft-granite-bone-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-bone-leatherstrips-east", "game:hammer-headshaft-andesite-bone-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-bone-leatherstrips-east", "game:hammer-headshaft-basalt-bone-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-bone-leatherstrips-east", "game:hammer-headshaft-obsidian-bone-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-bone-leatherstrips-east", "game:hammer-headshaft-flint-bone-east", 1 ],
+				 
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-acacia-leatherstrips-west", "game:hammer-headshaft-granite-acacia-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-acacia-leatherstrips-west", "game:hammer-headshaft-andesite-acacia-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-acacia-leatherstrips-west", "game:hammer-headshaft-basalt-acacia-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-acacia-leatherstrips-west", "game:hammer-headshaft-obsidian-acacia-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-acacia-leatherstrips-west", "game:hammer-headshaft-flint-acacia-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-birch-leatherstrips-west", "game:hammer-headshaft-granite-birch-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-birch-leatherstrips-west", "game:hammer-headshaft-andesite-birch-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-birch-leatherstrips-west", "game:hammer-headshaft-basalt-birch-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-birch-leatherstrips-west", "game:hammer-headshaft-obsidian-birch-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-birch-leatherstrips-west", "game:hammer-headshaft-flint-birch-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-kapok-leatherstrips-west", "game:hammer-headshaft-granite-kapok-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-kapok-leatherstrips-west", "game:hammer-headshaft-andesite-kapok-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-kapok-leatherstrips-west", "game:hammer-headshaft-basalt-kapok-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-kapok-leatherstrips-west", "game:hammer-headshaft-obsidian-kapok-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-kapok-leatherstrips-west", "game:hammer-headshaft-flint-kapok-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-maple-leatherstrips-west", "game:hammer-headshaft-granite-maple-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-maple-leatherstrips-west", "game:hammer-headshaft-andesite-maple-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-maple-leatherstrips-west", "game:hammer-headshaft-basalt-maple-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-maple-leatherstrips-west", "game:hammer-headshaft-obsidian-maple-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-maple-leatherstrips-west", "game:hammer-headshaft-flint-maple-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-oak-leatherstrips-west", "game:hammer-headshaft-granite-oak-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-oak-leatherstrips-west", "game:hammer-headshaft-andesite-oak-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-oak-leatherstrips-west", "game:hammer-headshaft-basalt-oak-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-oak-leatherstrips-west", "game:hammer-headshaft-obsidian-oak-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-oak-leatherstrips-west", "game:hammer-headshaft-flint-oak-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-pine-leatherstrips-west", "game:hammer-headshaft-granite-pine-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-pine-leatherstrips-west", "game:hammer-headshaft-andesite-pine-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-pine-leatherstrips-west", "game:hammer-headshaft-basalt-pine-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-pine-leatherstrips-west", "game:hammer-headshaft-obsidian-pine-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-pine-leatherstrips-west", "game:hammer-headshaft-flint-pine-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-granite-bone-leatherstrips-west", "game:hammer-headshaft-granite-bone-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-andesite-bone-leatherstrips-west", "game:hammer-headshaft-andesite-bone-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-basalt-bone-leatherstrips-west", "game:hammer-headshaft-basalt-bone-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-obsidian-bone-leatherstrips-west", "game:hammer-headshaft-obsidian-bone-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:hammer-flint-bone-leatherstrips-west", "game:hammer-headshaft-flint-bone-west", 1 ],
+				 
+				 
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-acacia-sinew-north", "game:hammer-headshaft-granite-acacia-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-acacia-sinew-north", "game:hammer-headshaft-andesite-acacia-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-acacia-sinew-north", "game:hammer-headshaft-basalt-acacia-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-acacia-sinew-north", "game:hammer-headshaft-obsidian-acacia-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-acacia-sinew-north", "game:hammer-headshaft-flint-acacia-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-birch-sinew-north", "game:hammer-headshaft-granite-birch-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-birch-sinew-north", "game:hammer-headshaft-andesite-birch-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-birch-sinew-north", "game:hammer-headshaft-basalt-birch-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-birch-sinew-north", "game:hammer-headshaft-obsidian-birch-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-birch-sinew-north", "game:hammer-headshaft-flint-birch-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-kapok-sinew-north", "game:hammer-headshaft-granite-kapok-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-kapok-sinew-north", "game:hammer-headshaft-andesite-kapok-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-kapok-sinew-north", "game:hammer-headshaft-basalt-kapok-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-kapok-sinew-north", "game:hammer-headshaft-obsidian-kapok-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-kapok-sinew-north", "game:hammer-headshaft-flint-kapok-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-maple-sinew-north", "game:hammer-headshaft-granite-maple-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-maple-sinew-north", "game:hammer-headshaft-andesite-maple-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-maple-sinew-north", "game:hammer-headshaft-basalt-maple-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-maple-sinew-north", "game:hammer-headshaft-obsidian-maple-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-maple-sinew-north", "game:hammer-headshaft-flint-maple-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-oak-sinew-north", "game:hammer-headshaft-granite-oak-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-oak-sinew-north", "game:hammer-headshaft-andesite-oak-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-oak-sinew-north", "game:hammer-headshaft-basalt-oak-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-oak-sinew-north", "game:hammer-headshaft-obsidian-oak-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-oak-sinew-north", "game:hammer-headshaft-flint-oak-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-pine-sinew-north", "game:hammer-headshaft-granite-pine-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-pine-sinew-north", "game:hammer-headshaft-andesite-pine-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-pine-sinew-north", "game:hammer-headshaft-basalt-pine-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-pine-sinew-north", "game:hammer-headshaft-obsidian-pine-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-pine-sinew-north", "game:hammer-headshaft-flint-pine-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-bone-sinew-north", "game:hammer-headshaft-granite-bone-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-bone-sinew-north", "game:hammer-headshaft-andesite-bone-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-bone-sinew-north", "game:hammer-headshaft-basalt-bone-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-bone-sinew-north", "game:hammer-headshaft-obsidian-bone-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-bone-sinew-north", "game:hammer-headshaft-flint-bone-north", 1 ],
+				 
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-acacia-sinew-south", "game:hammer-headshaft-granite-acacia-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-acacia-sinew-south", "game:hammer-headshaft-andesite-acacia-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-acacia-sinew-south", "game:hammer-headshaft-basalt-acacia-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-acacia-sinew-south", "game:hammer-headshaft-obsidian-acacia-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-acacia-sinew-south", "game:hammer-headshaft-flint-acacia-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-birch-sinew-south", "game:hammer-headshaft-granite-birch-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-birch-sinew-south", "game:hammer-headshaft-andesite-birch-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-birch-sinew-south", "game:hammer-headshaft-basalt-birch-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-birch-sinew-south", "game:hammer-headshaft-obsidian-birch-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-birch-sinew-south", "game:hammer-headshaft-flint-birch-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-kapok-sinew-south", "game:hammer-headshaft-granite-kapok-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-kapok-sinew-south", "game:hammer-headshaft-andesite-kapok-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-kapok-sinew-south", "game:hammer-headshaft-basalt-kapok-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-kapok-sinew-south", "game:hammer-headshaft-obsidian-kapok-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-kapok-sinew-south", "game:hammer-headshaft-flint-kapok-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-maple-sinew-south", "game:hammer-headshaft-granite-maple-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-maple-sinew-south", "game:hammer-headshaft-andesite-maple-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-maple-sinew-south", "game:hammer-headshaft-basalt-maple-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-maple-sinew-south", "game:hammer-headshaft-obsidian-maple-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-maple-sinew-south", "game:hammer-headshaft-flint-maple-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-oak-sinew-south", "game:hammer-headshaft-granite-oak-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-oak-sinew-south", "game:hammer-headshaft-andesite-oak-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-oak-sinew-south", "game:hammer-headshaft-basalt-oak-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-oak-sinew-south", "game:hammer-headshaft-obsidian-oak-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-oak-sinew-south", "game:hammer-headshaft-flint-oak-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-pine-sinew-south", "game:hammer-headshaft-granite-pine-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-pine-sinew-south", "game:hammer-headshaft-andesite-pine-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-pine-sinew-south", "game:hammer-headshaft-basalt-pine-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-pine-sinew-south", "game:hammer-headshaft-obsidian-pine-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-pine-sinew-south", "game:hammer-headshaft-flint-pine-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-bone-sinew-south", "game:hammer-headshaft-granite-bone-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-bone-sinew-south", "game:hammer-headshaft-andesite-bone-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-bone-sinew-south", "game:hammer-headshaft-basalt-bone-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-bone-sinew-south", "game:hammer-headshaft-obsidian-bone-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-bone-sinew-south", "game:hammer-headshaft-flint-bone-south", 1 ],
+				 
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-acacia-sinew-east", "game:hammer-headshaft-granite-acacia-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-acacia-sinew-east", "game:hammer-headshaft-andesite-acacia-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-acacia-sinew-east", "game:hammer-headshaft-basalt-acacia-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-acacia-sinew-east", "game:hammer-headshaft-obsidian-acacia-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-acacia-sinew-east", "game:hammer-headshaft-flint-acacia-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-birch-sinew-east", "game:hammer-headshaft-granite-birch-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-birch-sinew-east", "game:hammer-headshaft-andesite-birch-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-birch-sinew-east", "game:hammer-headshaft-basalt-birch-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-birch-sinew-east", "game:hammer-headshaft-obsidian-birch-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-birch-sinew-east", "game:hammer-headshaft-flint-birch-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-kapok-sinew-east", "game:hammer-headshaft-granite-kapok-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-kapok-sinew-east", "game:hammer-headshaft-andesite-kapok-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-kapok-sinew-east", "game:hammer-headshaft-basalt-kapok-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-kapok-sinew-east", "game:hammer-headshaft-obsidian-kapok-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-kapok-sinew-east", "game:hammer-headshaft-flint-kapok-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-maple-sinew-east", "game:hammer-headshaft-granite-maple-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-maple-sinew-east", "game:hammer-headshaft-andesite-maple-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-maple-sinew-east", "game:hammer-headshaft-basalt-maple-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-maple-sinew-east", "game:hammer-headshaft-obsidian-maple-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-maple-sinew-east", "game:hammer-headshaft-flint-maple-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-oak-sinew-east", "game:hammer-headshaft-granite-oak-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-oak-sinew-east", "game:hammer-headshaft-andesite-oak-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-oak-sinew-east", "game:hammer-headshaft-basalt-oak-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-oak-sinew-east", "game:hammer-headshaft-obsidian-oak-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-oak-sinew-east", "game:hammer-headshaft-flint-oak-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-pine-sinew-east", "game:hammer-headshaft-granite-pine-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-pine-sinew-east", "game:hammer-headshaft-andesite-pine-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-pine-sinew-east", "game:hammer-headshaft-basalt-pine-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-pine-sinew-east", "game:hammer-headshaft-obsidian-pine-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-pine-sinew-east", "game:hammer-headshaft-flint-pine-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-bone-sinew-east", "game:hammer-headshaft-granite-bone-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-bone-sinew-east", "game:hammer-headshaft-andesite-bone-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-bone-sinew-east", "game:hammer-headshaft-basalt-bone-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-bone-sinew-east", "game:hammer-headshaft-obsidian-bone-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-bone-sinew-east", "game:hammer-headshaft-flint-bone-east", 1 ],
+				 
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-acacia-sinew-west", "game:hammer-headshaft-granite-acacia-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-acacia-sinew-west", "game:hammer-headshaft-andesite-acacia-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-acacia-sinew-west", "game:hammer-headshaft-basalt-acacia-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-acacia-sinew-west", "game:hammer-headshaft-obsidian-acacia-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-acacia-sinew-west", "game:hammer-headshaft-flint-acacia-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-birch-sinew-west", "game:hammer-headshaft-granite-birch-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-birch-sinew-west", "game:hammer-headshaft-andesite-birch-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-birch-sinew-west", "game:hammer-headshaft-basalt-birch-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-birch-sinew-west", "game:hammer-headshaft-obsidian-birch-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-birch-sinew-west", "game:hammer-headshaft-flint-birch-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-kapok-sinew-west", "game:hammer-headshaft-granite-kapok-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-kapok-sinew-west", "game:hammer-headshaft-andesite-kapok-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-kapok-sinew-west", "game:hammer-headshaft-basalt-kapok-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-kapok-sinew-west", "game:hammer-headshaft-obsidian-kapok-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-kapok-sinew-west", "game:hammer-headshaft-flint-kapok-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-maple-sinew-west", "game:hammer-headshaft-granite-maple-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-maple-sinew-west", "game:hammer-headshaft-andesite-maple-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-maple-sinew-west", "game:hammer-headshaft-basalt-maple-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-maple-sinew-west", "game:hammer-headshaft-obsidian-maple-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-maple-sinew-west", "game:hammer-headshaft-flint-maple-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-oak-sinew-west", "game:hammer-headshaft-granite-oak-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-oak-sinew-west", "game:hammer-headshaft-andesite-oak-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-oak-sinew-west", "game:hammer-headshaft-basalt-oak-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-oak-sinew-west", "game:hammer-headshaft-obsidian-oak-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-oak-sinew-west", "game:hammer-headshaft-flint-oak-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-pine-sinew-west", "game:hammer-headshaft-granite-pine-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-pine-sinew-west", "game:hammer-headshaft-andesite-pine-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-pine-sinew-west", "game:hammer-headshaft-basalt-pine-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-pine-sinew-west", "game:hammer-headshaft-obsidian-pine-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-pine-sinew-west", "game:hammer-headshaft-flint-pine-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-granite-bone-sinew-west", "game:hammer-headshaft-granite-bone-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-andesite-bone-sinew-west", "game:hammer-headshaft-andesite-bone-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-basalt-bone-sinew-west", "game:hammer-headshaft-basalt-bone-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-obsidian-bone-sinew-west", "game:hammer-headshaft-obsidian-bone-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:hammer-flint-bone-sinew-west", "game:hammer-headshaft-flint-bone-west", 1 ],
+				 
+				 
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-acacia-rope-north", "game:hammer-headshaft-granite-acacia-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-acacia-rope-north", "game:hammer-headshaft-andesite-acacia-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-acacia-rope-north", "game:hammer-headshaft-basalt-acacia-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-acacia-rope-north", "game:hammer-headshaft-obsidian-acacia-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-acacia-rope-north", "game:hammer-headshaft-flint-acacia-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-birch-rope-north", "game:hammer-headshaft-granite-birch-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-birch-rope-north", "game:hammer-headshaft-andesite-birch-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-birch-rope-north", "game:hammer-headshaft-basalt-birch-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-birch-rope-north", "game:hammer-headshaft-obsidian-birch-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-birch-rope-north", "game:hammer-headshaft-flint-birch-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-kapok-rope-north", "game:hammer-headshaft-granite-kapok-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-kapok-rope-north", "game:hammer-headshaft-andesite-kapok-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-kapok-rope-north", "game:hammer-headshaft-basalt-kapok-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-kapok-rope-north", "game:hammer-headshaft-obsidian-kapok-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-kapok-rope-north", "game:hammer-headshaft-flint-kapok-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-maple-rope-north", "game:hammer-headshaft-granite-maple-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-maple-rope-north", "game:hammer-headshaft-andesite-maple-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-maple-rope-north", "game:hammer-headshaft-basalt-maple-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-maple-rope-north", "game:hammer-headshaft-obsidian-maple-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-maple-rope-north", "game:hammer-headshaft-flint-maple-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-oak-rope-north", "game:hammer-headshaft-granite-oak-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-oak-rope-north", "game:hammer-headshaft-andesite-oak-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-oak-rope-north", "game:hammer-headshaft-basalt-oak-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-oak-rope-north", "game:hammer-headshaft-obsidian-oak-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-oak-rope-north", "game:hammer-headshaft-flint-oak-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-pine-rope-north", "game:hammer-headshaft-granite-pine-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-pine-rope-north", "game:hammer-headshaft-andesite-pine-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-pine-rope-north", "game:hammer-headshaft-basalt-pine-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-pine-rope-north", "game:hammer-headshaft-obsidian-pine-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-pine-rope-north", "game:hammer-headshaft-flint-pine-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-bone-rope-north", "game:hammer-headshaft-granite-bone-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-bone-rope-north", "game:hammer-headshaft-andesite-bone-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-bone-rope-north", "game:hammer-headshaft-basalt-bone-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-bone-rope-north", "game:hammer-headshaft-obsidian-bone-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-bone-rope-north", "game:hammer-headshaft-flint-bone-north", 1 ],
+				 
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-acacia-rope-south", "game:hammer-headshaft-granite-acacia-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-acacia-rope-south", "game:hammer-headshaft-andesite-acacia-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-acacia-rope-south", "game:hammer-headshaft-basalt-acacia-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-acacia-rope-south", "game:hammer-headshaft-obsidian-acacia-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-acacia-rope-south", "game:hammer-headshaft-flint-acacia-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-birch-rope-south", "game:hammer-headshaft-granite-birch-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-birch-rope-south", "game:hammer-headshaft-andesite-birch-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-birch-rope-south", "game:hammer-headshaft-basalt-birch-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-birch-rope-south", "game:hammer-headshaft-obsidian-birch-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-birch-rope-south", "game:hammer-headshaft-flint-birch-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-kapok-rope-south", "game:hammer-headshaft-granite-kapok-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-kapok-rope-south", "game:hammer-headshaft-andesite-kapok-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-kapok-rope-south", "game:hammer-headshaft-basalt-kapok-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-kapok-rope-south", "game:hammer-headshaft-obsidian-kapok-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-kapok-rope-south", "game:hammer-headshaft-flint-kapok-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-maple-rope-south", "game:hammer-headshaft-granite-maple-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-maple-rope-south", "game:hammer-headshaft-andesite-maple-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-maple-rope-south", "game:hammer-headshaft-basalt-maple-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-maple-rope-south", "game:hammer-headshaft-obsidian-maple-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-maple-rope-south", "game:hammer-headshaft-flint-maple-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-oak-rope-south", "game:hammer-headshaft-granite-oak-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-oak-rope-south", "game:hammer-headshaft-andesite-oak-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-oak-rope-south", "game:hammer-headshaft-basalt-oak-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-oak-rope-south", "game:hammer-headshaft-obsidian-oak-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-oak-rope-south", "game:hammer-headshaft-flint-oak-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-pine-rope-south", "game:hammer-headshaft-granite-pine-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-pine-rope-south", "game:hammer-headshaft-andesite-pine-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-pine-rope-south", "game:hammer-headshaft-basalt-pine-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-pine-rope-south", "game:hammer-headshaft-obsidian-pine-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-pine-rope-south", "game:hammer-headshaft-flint-pine-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-bone-rope-south", "game:hammer-headshaft-granite-bone-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-bone-rope-south", "game:hammer-headshaft-andesite-bone-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-bone-rope-south", "game:hammer-headshaft-basalt-bone-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-bone-rope-south", "game:hammer-headshaft-obsidian-bone-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-bone-rope-south", "game:hammer-headshaft-flint-bone-south", 1 ],
+				 
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-acacia-rope-east", "game:hammer-headshaft-granite-acacia-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-acacia-rope-east", "game:hammer-headshaft-andesite-acacia-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-acacia-rope-east", "game:hammer-headshaft-basalt-acacia-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-acacia-rope-east", "game:hammer-headshaft-obsidian-acacia-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-acacia-rope-east", "game:hammer-headshaft-flint-acacia-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-birch-rope-east", "game:hammer-headshaft-granite-birch-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-birch-rope-east", "game:hammer-headshaft-andesite-birch-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-birch-rope-east", "game:hammer-headshaft-basalt-birch-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-birch-rope-east", "game:hammer-headshaft-obsidian-birch-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-birch-rope-east", "game:hammer-headshaft-flint-birch-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-kapok-rope-east", "game:hammer-headshaft-granite-kapok-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-kapok-rope-east", "game:hammer-headshaft-andesite-kapok-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-kapok-rope-east", "game:hammer-headshaft-basalt-kapok-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-kapok-rope-east", "game:hammer-headshaft-obsidian-kapok-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-kapok-rope-east", "game:hammer-headshaft-flint-kapok-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-maple-rope-east", "game:hammer-headshaft-granite-maple-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-maple-rope-east", "game:hammer-headshaft-andesite-maple-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-maple-rope-east", "game:hammer-headshaft-basalt-maple-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-maple-rope-east", "game:hammer-headshaft-obsidian-maple-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-maple-rope-east", "game:hammer-headshaft-flint-maple-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-oak-rope-east", "game:hammer-headshaft-granite-oak-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-oak-rope-east", "game:hammer-headshaft-andesite-oak-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-oak-rope-east", "game:hammer-headshaft-basalt-oak-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-oak-rope-east", "game:hammer-headshaft-obsidian-oak-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-oak-rope-east", "game:hammer-headshaft-flint-oak-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-pine-rope-east", "game:hammer-headshaft-granite-pine-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-pine-rope-east", "game:hammer-headshaft-andesite-pine-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-pine-rope-east", "game:hammer-headshaft-basalt-pine-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-pine-rope-east", "game:hammer-headshaft-obsidian-pine-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-pine-rope-east", "game:hammer-headshaft-flint-pine-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-bone-rope-east", "game:hammer-headshaft-granite-bone-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-bone-rope-east", "game:hammer-headshaft-andesite-bone-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-bone-rope-east", "game:hammer-headshaft-basalt-bone-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-bone-rope-east", "game:hammer-headshaft-obsidian-bone-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-bone-rope-east", "game:hammer-headshaft-flint-bone-east", 1 ],
+				 
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-acacia-rope-west", "game:hammer-headshaft-granite-acacia-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-acacia-rope-west", "game:hammer-headshaft-andesite-acacia-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-acacia-rope-west", "game:hammer-headshaft-basalt-acacia-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-acacia-rope-west", "game:hammer-headshaft-obsidian-acacia-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-acacia-rope-west", "game:hammer-headshaft-flint-acacia-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-birch-rope-west", "game:hammer-headshaft-granite-birch-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-birch-rope-west", "game:hammer-headshaft-andesite-birch-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-birch-rope-west", "game:hammer-headshaft-basalt-birch-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-birch-rope-west", "game:hammer-headshaft-obsidian-birch-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-birch-rope-west", "game:hammer-headshaft-flint-birch-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-kapok-rope-west", "game:hammer-headshaft-granite-kapok-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-kapok-rope-west", "game:hammer-headshaft-andesite-kapok-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-kapok-rope-west", "game:hammer-headshaft-basalt-kapok-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-kapok-rope-west", "game:hammer-headshaft-obsidian-kapok-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-kapok-rope-west", "game:hammer-headshaft-flint-kapok-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-maple-rope-west", "game:hammer-headshaft-granite-maple-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-maple-rope-west", "game:hammer-headshaft-andesite-maple-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-maple-rope-west", "game:hammer-headshaft-basalt-maple-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-maple-rope-west", "game:hammer-headshaft-obsidian-maple-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-maple-rope-west", "game:hammer-headshaft-flint-maple-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-oak-rope-west", "game:hammer-headshaft-granite-oak-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-oak-rope-west", "game:hammer-headshaft-andesite-oak-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-oak-rope-west", "game:hammer-headshaft-basalt-oak-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-oak-rope-west", "game:hammer-headshaft-obsidian-oak-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-oak-rope-west", "game:hammer-headshaft-flint-oak-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-pine-rope-west", "game:hammer-headshaft-granite-pine-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-pine-rope-west", "game:hammer-headshaft-andesite-pine-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-pine-rope-west", "game:hammer-headshaft-basalt-pine-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-pine-rope-west", "game:hammer-headshaft-obsidian-pine-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-pine-rope-west", "game:hammer-headshaft-flint-pine-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:hammer-granite-bone-rope-west", "game:hammer-headshaft-granite-bone-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-andesite-bone-rope-west", "game:hammer-headshaft-andesite-bone-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-basalt-bone-rope-west", "game:hammer-headshaft-basalt-bone-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-obsidian-bone-rope-west", "game:hammer-headshaft-obsidian-bone-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:hammer-flint-bone-rope-west", "game:hammer-headshaft-flint-bone-west", 1 ],
+				 
+				 
+				 
+				],
+			},
+		},
+	],
+	
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
+		{ code: "side", loadFromProperties: "abstract/horizontalorientation" },
+	],
+	shapeinventoryByType: {		
+		"*-bone-north": {base: "item/tool/primitive-hammer"},
+		"*-north": {base: "item/tool/branch-hammer" },
+	},
+	shapeByType: { 
+		"*-bone-north": { base: "block/placedtool/hammer-bone", rotateY: 0 },
+		"*-bone-east": { base: "block/placedtool/hammer-bone", rotateY: 270 },
+		"*-bone-south": { base: "block/placedtool/hammer-bone", rotateY: 180 },
+		"*-bone-west": { base: "block/placedtool/hammer-bone", rotateY: 90 },
+		"*-north": { base: "block/placedtool/hammer-wood", rotateY: 0 },
+		"*-east": { base: "block/placedtool/hammer-wood", rotateY: 270 },
+		"*-south": { base: "block/placedtool/hammer-wood", rotateY: 180 },
+		"*-west": { base: "block/placedtool/hammer-wood", rotateY: 90 },		
+		},
+	texturesByType: {
+		"*-bone-*": {
+			"stone": { base: "item/tool/material/{stone}" },
+			"shaft": { base: "block/bone" },
+			"cordage": { base: "block/transparent" },
+		},
+		"*": {
+			"stone": { base: "game:item/tool/material/{stone}" },
+			"shaft": { base: "game:block/wood/debarked/{shaft}" },
+			"cordage": { base: "block/transparent" },
+		},		
+	},	
+	creativeinventory: { "general": [""]  },
+	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 0,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+}

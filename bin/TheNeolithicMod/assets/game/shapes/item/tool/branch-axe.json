@@ -6,23 +6,21 @@
 	"textureWidth": 16,
 	"textureHeight": 8,
 	"textures": {
-		"wood": "neolithicmod:block/wood/debarked/maple",
-		"stone": "item/tool/material/flint",
-		"rope": "neolithicmod:block/rope"
+
 	},
 	"elements": [
 		{
-			"name": "wood",
+			"name": "shaft",
 			"from": [ 2.5, 7.5, 7.5 ], 
 			"to": [ 14.5, 8.5, 8.5 ], 
 			"rotationOrigin": [ 1.0, 0.0, 8.0 ],
 			"faces": {
-				"north": { "texture": "#wood", "uv": [ 0.0, 5.0, 12.0, 6.0 ] },
-				"east": { "texture": "#wood", "uv": [ 3.0, 0.0, 4.0, 1.0 ] },
-				"south": { "texture": "#wood", "uv": [ 0.0, 3.5, 12.0, 4.5 ] },
-				"west": { "texture": "#wood", "uv": [ 4.0, 0.0, 5.0, 1.0 ], "enabled": false },
-				"up": { "texture": "#wood", "uv": [ 0.0, 4.5, 12.0, 5.5 ] },
-				"down": { "texture": "#wood", "uv": [ 0.0, 5.0, 12.0, 6.0 ] }
+				"north": { "texture": "#shaft", "uv": [ 0.0, 5.0, 12.0, 6.0 ] },
+				"east": { "texture": "#shaft", "uv": [ 3.0, 0.0, 4.0, 1.0 ] },
+				"south": { "texture": "#shaft", "uv": [ 0.0, 3.5, 12.0, 4.5 ] },
+				"west": { "texture": "#shaft", "uv": [ 4.0, 0.0, 5.0, 1.0 ], "enabled": false },
+				"up": { "texture": "#shaft", "uv": [ 0.0, 4.5, 12.0, 5.5 ] },
+				"down": { "texture": "#shaft", "uv": [ 0.0, 5.0, 12.0, 6.0 ] }
 			},
 			"children": [
 				{
@@ -89,12 +87,12 @@
 							"to": [ 1.6, 1.0, 1.4 ], 
 							"rotationOrigin": [ -0.1, -0.2, 0.2 ],
 							"faces": {
-								"north": { "texture": "#rope", "uv": [ 3.0, 1.0, 9.5, 5.0 ], "autoUv": false },
-								"east": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-								"south": { "texture": "#rope", "uv": [ 2.0, 1.0, 8.5, 5.0 ], "autoUv": false },
-								"west": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-								"up": { "texture": "#rope", "uv": [ 6.0, 2.0, 12.5, 6.0 ], "autoUv": false },
-								"down": { "texture": "#rope", "uv": [ 2.0, 1.0, 8.5, 5.0 ], "autoUv": false }
+								"north": { "texture": "#cordage", "uv": [ 3.0, 1.0, 9.5, 5.0 ], "autoUv": false },
+								"east": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"south": { "texture": "#cordage", "uv": [ 2.0, 1.0, 8.5, 5.0 ], "autoUv": false },
+								"west": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"up": { "texture": "#cordage", "uv": [ 6.0, 2.0, 12.5, 6.0 ], "autoUv": false },
+								"down": { "texture": "#cordage", "uv": [ 2.0, 1.0, 8.5, 5.0 ], "autoUv": false }
 							}
 						}
 					]

@@ -6,23 +6,21 @@
 	"textureWidth": 16,
 	"textureHeight": 8,
 	"textures": {
-		"stone": "item/tool/material/granite",
-		"bone": "block/bone",
-		"sinew": "block/sinew"
+		
 	},
 	"elements": [
 		{
-			"name": "bone1",
+			"name": "shaft1",
 			"from": [ 4.0, 7.5, 7.5 ], 
 			"to": [ 12.2, 8.5, 8.5 ], 
 			"rotationOrigin": [ 4.0, 7.5, 7.5 ],
 			"faces": {
-				"north": { "texture": "#bone", "uv": [ 0.0, 0.0, 8.0, 1.0 ] },
-				"east": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-				"south": { "texture": "#bone", "uv": [ 0.0, 0.0, 8.0, 1.0 ] },
-				"west": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-				"up": { "texture": "#bone", "uv": [ 0.0, 0.0, 8.0, 1.0 ] },
-				"down": { "texture": "#bone", "uv": [ 0.0, 0.0, 8.0, 1.0 ] }
+				"north": { "texture": "#shaft", "uv": [ 0.0, 0.0, 8.0, 1.0 ] },
+				"east": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"south": { "texture": "#shaft", "uv": [ 0.0, 0.0, 8.0, 1.0 ] },
+				"west": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"up": { "texture": "#shaft", "uv": [ 0.0, 0.0, 8.0, 1.0 ] },
+				"down": { "texture": "#shaft", "uv": [ 0.0, 0.0, 8.0, 1.0 ] }
 			},
 			"children": [
 				{
@@ -40,31 +38,31 @@
 					},
 					"children": [
 						{
-							"name": "sinew1",
+							"name": "cordage1",
 							"from": [ -0.6, 0.2, 1.3 ], 
 							"to": [ 1.9, 1.7, 2.5 ], 
 							"rotationOrigin": [ -0.8, -0.1, 2.0 ],
 							"faces": {
-								"north": { "texture": "#sinew", "uv": [ 0.0, 0.0, 4.5, 3.5 ], "autoUv": false },
-								"east": { "texture": "#sinew", "uv": [ 0.0, 2.0, 5.0, 5.5 ], "autoUv": false },
-								"south": { "texture": "#sinew", "uv": [ 0.0, 0.0, 8.5, 4.5 ], "autoUv": false },
-								"west": { "texture": "#sinew", "uv": [ 0.0, 0.0, 3.0, 3.5 ], "autoUv": false },
-								"up": { "texture": "#sinew", "uv": [ 1.0, 2.0, 5.0, 6.5 ], "rotation": 90, "autoUv": false },
-								"down": { "texture": "#sinew", "uv": [ 0.0, 3.0, 5.0, 6.5 ], "rotation": 90, "autoUv": false }
+								"north": { "texture": "#cordage", "uv": [ 0.0, 0.0, 4.5, 3.5 ], "autoUv": false },
+								"east": { "texture": "#cordage", "uv": [ 0.0, 2.0, 5.0, 5.5 ], "autoUv": false },
+								"south": { "texture": "#cordage", "uv": [ 0.0, 0.0, 8.5, 4.5 ], "autoUv": false },
+								"west": { "texture": "#cordage", "uv": [ 0.0, 0.0, 3.0, 3.5 ], "autoUv": false },
+								"up": { "texture": "#cordage", "uv": [ 1.0, 2.0, 5.0, 6.5 ], "rotation": 90, "autoUv": false },
+								"down": { "texture": "#cordage", "uv": [ 0.0, 3.0, 5.0, 6.5 ], "rotation": 90, "autoUv": false }
 							},
 							"children": [
 								{
-									"name": "sinew2",
+									"name": "cordage2",
 									"from": [ -0.3, -0.1, -0.1 ], 
 									"to": [ 0.4, 1.6, 1.3 ], 
 									"rotationOrigin": [ -0.3, -0.1, -0.1 ],
 									"faces": {
-										"north": { "texture": "#sinew", "uv": [ 0.0, 0.0, 4.5, 2.5 ], "autoUv": false },
-										"east": { "texture": "#sinew", "uv": [ 0.0, 0.0, 1.0, 1.5 ] },
-										"south": { "texture": "#sinew", "uv": [ 0.0, 0.0, 4.5, 3.5 ], "autoUv": false },
-										"west": { "texture": "#sinew", "uv": [ 0.0, 0.0, 1.0, 1.5 ] },
-										"up": { "texture": "#sinew", "uv": [ 0.0, 0.0, 4.5, 4.0 ], "autoUv": false },
-										"down": { "texture": "#sinew", "uv": [ 0.0, 0.0, 4.5, 4.0 ], "autoUv": false }
+										"north": { "texture": "#cordage", "uv": [ 0.0, 0.0, 4.5, 2.5 ], "autoUv": false },
+										"east": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.5 ] },
+										"south": { "texture": "#cordage", "uv": [ 0.0, 0.0, 4.5, 3.5 ], "autoUv": false },
+										"west": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.5 ] },
+										"up": { "texture": "#cordage", "uv": [ 0.0, 0.0, 4.5, 4.0 ], "autoUv": false },
+										"down": { "texture": "#cordage", "uv": [ 0.0, 0.0, 4.5, 4.0 ], "autoUv": false }
 									}
 								}
 							]
@@ -116,34 +114,34 @@
 					]
 				},
 				{
-					"name": "bone2",
+					"name": "shaft2",
 					"from": [ -0.4, -0.6, 0.7 ], 
 					"to": [ 0.8, 0.7, 2.1 ], 
 					"rotationOrigin": [ -0.4, 0.0, 0.9 ],
 					"rotationX": -90.0,
 					"rotationZ": -22.5,
 					"faces": {
-						"north": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"east": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"south": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"west": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"up": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"down": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
+						"north": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"east": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"south": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"west": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"up": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"down": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
 					},
 					"children": [
 						{
-							"name": "bone3",
+							"name": "shaft3",
 							"from": [ -0.6, 1.2, -0.2 ], 
 							"to": [ 0.6, 2.4, 1.5 ], 
 							"rotationOrigin": [ -0.6, 1.2, -0.2 ],
 							"rotationZ": -22.5,
 							"faces": {
-								"north": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-								"east": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.5, 1.0 ] },
-								"south": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-								"west": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.5, 1.0 ] },
-								"up": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.5 ] },
-								"down": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.5 ] }
+								"north": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"east": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.5, 1.0 ] },
+								"south": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"west": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.5, 1.0 ] },
+								"up": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.5 ] },
+								"down": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.5 ] }
 							}
 						}
 					]

@@ -1,6 +1,5 @@
 {
 	code: "adze",
-	behaviors: [ {name: "HorizontalOrientable" }],
 	variantgroups: [
 		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
 		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
@@ -33,10 +32,10 @@
 			"cordage": { base: "block/cordage/{cordage}" },
 		},		
 	},	
-	creativeinventory: { "general": ["*-north"]  },
+	creativeinventory: { "general": [""]  },
 	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
 	drops: [
-	{ type: "item", code: "game:primitive-adze-{stone}-{shaft}-{cordage}", quantity: { avg: 1 }}
+	{ type: "item", code: "adze-{stone}-{shaft}-{cordage}", quantity: { avg: 1 }}
 	],
 	blockmaterial: "Wood",
 	replaceable: 900,

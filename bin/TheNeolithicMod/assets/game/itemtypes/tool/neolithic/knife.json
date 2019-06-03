@@ -1,0 +1,83 @@
+{
+	code: "knife",
+	damagedby: ["blockbreaking", "attacking"],
+	tool: "knife",
+	attributes: {
+		handbook: {
+			groupBy: ["knife-primitive-*"]
+		}
+	},
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
+		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
+	],
+	heldTpHitAnimation: "breaktool",
+	shapeByType: {
+		"*-bone-*": {base: "item/tool/primitive-knife"},
+		"*": {base: "item/tool/branch-knife" },
+	},
+	texturesByType: {
+		"*-bone-*": {
+			"stone": { base: "item/tool/material/{stone}" },
+			"shaft": { base: "block/bone" },
+			"cordage": { base: "block/cordage/{cordage}" },
+		},
+		"*": {
+			"stone": { base: "game:item/tool/material/{stone}" },
+			"shaft": { base: "game:block/wood/debarked/{shaft}" },
+			"cordage": { base: "block/cordage/{cordage}" },
+		},		
+	},
+
+	durabilitybytype: 
+	{
+		"*-granite-bone-*": 200,
+		"*-andesite-bone-*": 200,
+		"*-basalt-bone-*": 200,
+		"*-obsidian-bone-*": 300,
+		"*-flint-bone-*": 250,
+		"*-granite-*": 150,
+		"*-andesite-*": 150,
+		"*-basalt-*": 150,
+		"*-obsidian-*": 250,
+		"*-flint-*": 200,
+	},
+	miningspeedbytype: {
+		"knife-primitive-granite": { "plant": 1, },
+		"knife-primitive-andesite": { "plant": 1, },
+		"knife-primitive-basalt": { "plant": 1.1, },
+		"knife-primitive-obsidian": { "plant": 1.2, },
+		"knife-primitive-flint": { "plant": 1.2, },
+	},
+	attackpowerbytype: 
+	{
+		"knife-primitive-granite": 0.75,
+		"knife-primitive-andesite": 0.75,
+		"knife-primitive-basalt": 0.75,
+		"knife-primitive-obsidian": 1.5,
+		"knife-primitive-flint": 1,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	fpHandTransform: {
+		translation: { x: -0.1, y: 0.2, z: 0.4 },
+		rotation: { x: -20, y: -93, z: -75 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: -1, z: 0 },
+		rotation: { x: -157, y: 180, z: -46 },
+		origin: { x: 0.59, y: 0.535, z: 0.5 },
+		scale: 2.7
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.78, y: -0.44, z: -0.5 },
+		rotation: { x: 0, y: 180, z: -10 },
+		scale: 1
+	}
+}

@@ -7,14 +7,14 @@
 		}
 	},
 	variantgroups: [
-		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
+		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
 	],
 	tool: "axe",
 	damagedby: ["blockbreaking", "attacking"],
 	shape: { base: "game:item/tool/axe" },
 	heldTpHitAnimation: "axechop",
 	textures: {
-		"metal": { base: "game:item/tool/material/{material}" },
+		"metal": { base: "game:item/tool/material/{metal}" },
 		"wood": { base: "game:item/tool/material/wood" }
 	},
 	attackRange: 2,

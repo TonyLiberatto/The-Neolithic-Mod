@@ -8,7 +8,7 @@ using Vintagestory.Client;
     Description  = "This mod Requires New World Creation. Adds more Animals, Plants, blocks and tools",
     Website      = "https://github.com/TonyLiberatto/The-Neolithic-Mod",
     Authors      = new []{ "Tony Liberatto","Novocain","Balduranne","BunnyViking" },
-    Contributors = new []{ "Tyron", "Milo", "Stroam", "Elwood", "copygirl", "MarcAFK" })]
+    Contributors = new []{ "Tyron", "Milo", "Stroam", "Elwood", "copygirl", "MarcAFK", "Balduranne" })]
 
 namespace TheNeolithicMod
 {
@@ -41,19 +41,14 @@ namespace TheNeolithicMod
             api.RegisterBlockBehaviorClass("RotateNinety", typeof(RotateNinety));
             api.RegisterBlockBehaviorClass("ChimneyBehavior", typeof(ChimneyBehavior));
 
-			//api.RegisterBlockClass("BlockPlaceOnDrop", typeof(BlockPlaceOnDropNew));
-			api.RegisterBlockClass("BlockGiantReeds", typeof(BlockGiantReeds));
+            //api.RegisterBlockClass("BlockPlaceOnDrop", typeof(BlockPlaceOnDropNew));
+            api.RegisterBlockClass("BlockGiantReeds", typeof(BlockGiantReeds));
             api.RegisterBlockClass("BlockMortarAndPestle", typeof(BlockMortarAndPestle));
             //api.RegisterBlockClass("BlockBowl", typeof(BlockBowlNew));
             api.RegisterBlockClass("BlockLogWall", typeof(BlockLogWall));
             api.RegisterBlockClass("BlockCheeseCloth", typeof(BlockCheeseCloth));
-            api.RegisterBlockClass("BlockCookedContainer", typeof(CookedContainerFix));
-            api.RegisterBlockClass("BlockCookingContainer", typeof(CookingContainerFix));
             api.RegisterBlockClass("BlockNeolithicRoads", typeof(BlockNeolithicRoads));
             api.RegisterBlockClass("BlockLooseStones", typeof(BlockLooseStonesModified));
-            api.RegisterBlockClass("BlockSmeltingContainer", typeof(BlockSmeltingContainerFix));
-            api.RegisterBlockClass("BlockSmeltedContainer", typeof(BlockSmeltedContainerFix));
-			api.RegisterBlockClass("BlockFirepit", typeof(BlockFirePitOverride));
 			api.RegisterBlockClass("FixedStairs", typeof(FixedStairs));
 
 			api.RegisterItemClass("ItemSickle", typeof(ItemSickle));
@@ -70,8 +65,7 @@ namespace TheNeolithicMod
             api.RegisterBlockEntityClass("FixedBESapling", typeof(FixedBESapling));
             api.RegisterBlockEntityClass("BEMortarAndPestle", typeof(BEMortarAndPestle));
             api.RegisterBlockEntityClass("BlockEntityChimney", typeof(BlockEntityChimney));
-            api.RegisterBlockEntityClass("BucketB", typeof(BEBucketOverride));
-            api.RegisterBlockEntityClass("CookedContainerFix", typeof(CookedContainerFixBE));
+            api.RegisterBlockEntityClass("BucketB", typeof(BEBucketOverride));           
             api.RegisterBlockEntityClass("NeolithicRoads", typeof(BENeolithicRoads));
 
 			AiTaskRegistry.Register("fleepoi", typeof(AiTaskFleePOI));

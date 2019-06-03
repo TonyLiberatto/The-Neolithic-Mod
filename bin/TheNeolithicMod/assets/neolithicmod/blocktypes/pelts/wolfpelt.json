@@ -1,12 +1,13 @@
 {
 	code: "wolfpelt",
-	class: "BlockSign",
-	enabled: true,
-	behaviors: [{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
+	behaviors: [{name: "UnstableFalling"}, {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }} ],
 	variantgroups: [
 		{ code:"color", states: ["ashgrey", "black", "brown", "darkgrey", "gold","grey", "silver", "smokegrey", "white" ] },
 		{ code:"attachment", states: ["ground", "wall"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },
+	],
+	drops: [
+	{ type: "block", code: "wolfpelt-{color}-ground-east", quantity: { avg: 1 }}
 	],
 	drawtype: "json",
 	shapeByType: {
@@ -19,6 +20,7 @@
 		"*-wall-south": { base: "block/wallmats/pelt", rotateY: 180 },
 		"*-wall-west": { base: "block/wallmats/pelt", rotateY: 90 }
 	},
+	textures: {	all: { 	base: "block/pelt/wolf/{color}"	}},
 	sidesolid: { all: false },
 	sideopaque: { all: false },
 	blockmaterial: "Cloth",
@@ -26,11 +28,7 @@
 	replaceable: 4000,
 	resistance: 0.5,
 	lightAbsorption: 0,
-	textures: {
-		all: { 
-			base: "block/pelt/wolf/{color}"
-		}
-			},
+	
 	selectionbox: {
 		x1: 0, y1: 0, z1: 0, 
 		x2: 2, y2: 0.0625, z2: 2,

@@ -6,9 +6,7 @@
 	"textureWidth": 16,
 	"textureHeight": 8,
 	"textures": {
-		"stone": "item/tool/material/granite",
-		"bone": "block/bone",
-		"sinew": "neolithicmod:block/sinew"
+		
 	},
 	"elements": [
 		{
@@ -17,12 +15,12 @@
 			"to": [ 14.5, 8.5, 8.5 ], 
 			"rotationOrigin": [ 0.0, 0.0, 8.0 ],
 			"faces": {
-				"north": { "texture": "#bone", "uv": [ 0.0, 2.0, 5.0, 3.0 ] },
-				"east": { "texture": "#bone", "uv": [ 3.0, 0.0, 4.0, 1.0 ], "enabled": false },
-				"south": { "texture": "#bone", "uv": [ 0.0, 4.5, 5.0, 5.5 ] },
-				"west": { "texture": "#bone", "uv": [ 3.0, 0.0, 4.0, 1.0 ] },
-				"up": { "texture": "#bone", "uv": [ 0.0, 2.0, 5.0, 3.0 ] },
-				"down": { "texture": "#bone", "uv": [ 0.0, 3.0, 5.0, 4.0 ] }
+				"north": { "texture": "#shaft", "uv": [ 0.0, 2.0, 5.0, 3.0 ] },
+				"east": { "texture": "#shaft", "uv": [ 3.0, 0.0, 4.0, 1.0 ], "enabled": false },
+				"south": { "texture": "#shaft", "uv": [ 0.0, 4.5, 5.0, 5.5 ] },
+				"west": { "texture": "#shaft", "uv": [ 3.0, 0.0, 4.0, 1.0 ] },
+				"up": { "texture": "#shaft", "uv": [ 0.0, 2.0, 5.0, 3.0 ] },
+				"down": { "texture": "#shaft", "uv": [ 0.0, 3.0, 5.0, 4.0 ] }
 			},
 			"children": [
 				{
@@ -68,31 +66,31 @@
 					}
 				},
 				{
-					"name": "bone",
+					"name": "shaft",
 					"from": [ 4.3, 0.4, -0.1 ], 
 					"to": [ 5.3, 1.4, 1.1 ], 
 					"rotationOrigin": [ 4.3, 0.4, 0.0 ],
 					"faces": {
-						"north": { "texture": "#bone", "uv": [ 4.0, 2.0, 5.0, 3.0 ] },
-						"east": { "texture": "#bone", "uv": [ 9.0, 2.0, 10.0, 3.0 ] },
-						"south": { "texture": "#bone", "uv": [ 5.0, 3.0, 6.0, 4.0 ] },
-						"west": { "texture": "#bone", "uv": [ 5.0, 1.0, 6.0, 2.0 ] },
-						"up": { "texture": "#bone", "uv": [ 7.0, 3.0, 8.0, 4.0 ] },
-						"down": { "texture": "#bone", "uv": [ 10.0, 3.0, 11.0, 4.0 ] }
+						"north": { "texture": "#shaft", "uv": [ 4.0, 2.0, 5.0, 3.0 ] },
+						"east": { "texture": "#shaft", "uv": [ 9.0, 2.0, 10.0, 3.0 ] },
+						"south": { "texture": "#shaft", "uv": [ 5.0, 3.0, 6.0, 4.0 ] },
+						"west": { "texture": "#shaft", "uv": [ 5.0, 1.0, 6.0, 2.0 ] },
+						"up": { "texture": "#shaft", "uv": [ 7.0, 3.0, 8.0, 4.0 ] },
+						"down": { "texture": "#shaft", "uv": [ 10.0, 3.0, 11.0, 4.0 ] }
 					}
 				},
 				{
-					"name": "bone2",
+					"name": "shaft2",
 					"from": [ 4.6, -0.5, -0.2 ], 
 					"to": [ 5.8, 0.6, 1.2 ], 
 					"rotationOrigin": [ 4.6, -0.5, -0.2 ],
 					"faces": {
-						"north": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"east": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"south": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"west": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"up": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.25 ] },
-						"down": { "texture": "#bone", "uv": [ 0.0, 0.0, 1.0, 1.25 ] }
+						"north": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"east": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"south": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"west": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"up": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.25 ] },
+						"down": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.25 ] }
 					}
 				},
 				{
@@ -110,17 +108,17 @@
 					}
 				},
 				{
-					"name": "sinew",
+					"name": "cordage",
 					"from": [ 0.5, -0.1, -0.1 ], 
 					"to": [ 2.2, 1.1, 1.1 ], 
 					"rotationOrigin": [ -0.5, -0.1, -0.1 ],
 					"faces": {
-						"north": { "texture": "#sinew", "uv": [ 4.0, 3.0, 8.5, 5.0 ], "autoUv": false },
-						"east": { "texture": "#sinew", "uv": [ 5.0, 3.0, 6.0, 4.0 ] },
-						"south": { "texture": "#sinew", "uv": [ 4.0, 1.0, 8.5, 4.5 ], "autoUv": false },
-						"west": { "texture": "#sinew", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"up": { "texture": "#sinew", "uv": [ 4.0, 2.0, 8.5, 4.0 ], "autoUv": false },
-						"down": { "texture": "#sinew", "uv": [ 4.0, 2.0, 8.5, 5.0 ], "autoUv": false }
+						"north": { "texture": "#cordage", "uv": [ 4.0, 3.0, 8.5, 5.0 ], "autoUv": false },
+						"east": { "texture": "#cordage", "uv": [ 5.0, 3.0, 6.0, 4.0 ] },
+						"south": { "texture": "#cordage", "uv": [ 4.0, 1.0, 8.5, 4.5 ], "autoUv": false },
+						"west": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"up": { "texture": "#cordage", "uv": [ 4.0, 2.0, 8.5, 4.0 ], "autoUv": false },
+						"down": { "texture": "#cordage", "uv": [ 4.0, 2.0, 8.5, 5.0 ], "autoUv": false }
 					}
 				}
 			]

@@ -127,15 +127,10 @@
     <Compile Include="Neolithic\Content\Block Behavior\ChimneyBehavior.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\NewBlockSwapBehavior.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
-    <Compile Include="Neolithic\Content\BlockEntity\CookedContainerFixBE.cs" />
-    <Compile Include="Neolithic\Content\Block\BlockFirePitOverride.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLooseStonesModified.cs" />
     <Compile Include="Neolithic\Content\Block\BlockNeolithicRoads.cs" />
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLogWall.cs" />
-    <Compile Include="Neolithic\Content\Block\BlockSmeltingContainerFix.cs" />
-    <Compile Include="Neolithic\Content\Block\CookedContainerFix.cs" />
-    <Compile Include="Neolithic\Content\Block\CookingContainerFix.cs" />
     <Compile Include="Neolithic\Content\Block\FixedStairs.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorFeatherPluck.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorMilkable.cs" />
@@ -170,7 +165,6 @@
     <Compile Include="Neolithic\Debugging\RedirectLogs.cs" />
     <Compile Include="Neolithic\PalmTreeMod.cs" />
     <Compile Include="Neolithic\TheNeolithicMod.cs" />
-    <Compile Include="Neolithic\Content\Block\BlockBowlNew.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".vs\Neolithic\v15\" />
