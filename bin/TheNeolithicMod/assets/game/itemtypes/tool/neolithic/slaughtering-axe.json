@@ -8,22 +8,29 @@
 	},
 	variantgroups: [
 		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
-		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
 		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
 	],
 	tool: "axe",
 	damagedby: ["blockbreaking", "attacking"],
 	shapeByType: {
-		"*-bone-*": { base: "item/tool/slaughtering-axe-bone" },
-		"*": { base: "item/tool/slaughtering-axe" },
+		"*-bone-*": { base: "item/tool/bone-slaughteringaxe" },
+		"*": { base: "item/tool/branch-slaughteringaxe" },
 	},
-	shape: { base: "item/tool/slaughtering-axe" },
 	heldTpHitAnimation: "axechop",
-	textures: {
-		"material": { base: "game:item/tool/material/{stone}" },
-		"handle": { base: "game:block/wood/debarked/{shaft}" },
-		"cordage": { base: "block/cordage/{cordage}" },
-		"ribbon": { base: "block/ribbon"},
+	texturesByType: {
+		"*-bone-*": {
+			"stone": { base: "item/tool/material/{stone}" },
+			"shaft": { base: "block/bone" },
+			"cordage": { base: "block/cordage/{cordage}" },
+			"ribbon": { base: "block/ribbon"},
+		},
+		"*": {
+			"stone": { base: "game:item/tool/material/{stone}" },
+			"shaft": { base: "game:block/wood/debarked/{shaft}" },
+			"cordage": { base: "block/cordage/{cordage}" },
+			"ribbon": { base: "block/ribbon"},
+		},		
 	},
   durabilitybytype: {
 		"*-granite-*": 150,

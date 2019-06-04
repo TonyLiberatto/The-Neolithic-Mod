@@ -7,16 +7,16 @@
 		}
 	},
 	variantgroups: [
-		{ code: "material", states: [ "bismuthbronze", "blackbronze", "brass", "copper", "gold", "iron", "lead", "silver", "tinbronze" ] },
-    { code: "handle", states: ["bone", "wood"] },
+		{ code: "metal", states: [ "bismuthbronze", "blackbronze", "brass", "copper", "gold", "iron", "lead", "silver", "tinbronze" ] },
+    { code: "shaft", states: [ "wood"] },
 	],
 	tool: "axe",
 	damagedby: ["blockbreaking", "attacking"],
-	shape: { base: "item/tool/slaughtering-axe" },
+	shape: { base: "item/tool/slaughteringaxe" },
 	heldTpHitAnimation: "axechop",
 	textures: {
-		"material": { base: "item/tool/material32/{material}" },
-		"handle": { base: "item/tool/handle/{handle}" },
+		"metal": { base: "item/tool/material/{metal}" },
+		"shaft": { base: "game:block/wood/debarked/{shaft}" },
 		"cordage": { base: "block/leatherstraps"},
 		"ribbon": { base: "block/ribbon"},
 	},

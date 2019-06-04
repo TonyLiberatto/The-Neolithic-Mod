@@ -27,8 +27,8 @@
 			"cordage": { base: "block/cordage/{cordage}" },
 		},
 		"*": {
-			"stone": { base: "game:item/tool/material/{stone}" },
-			"shaft": { base: "game:block/wood/debarked/{shaft}" },
+			"stone": { base: "item/tool/material/{stone}" },
+			"shaft": { base: "block/wood/debarked/{shaft}" },
 			"cordage": { base: "block/cordage/{cordage}" },
 		},		
 	},	
