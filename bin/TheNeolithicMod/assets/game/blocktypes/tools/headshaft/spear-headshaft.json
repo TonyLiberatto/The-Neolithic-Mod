@@ -1,0 +1,568 @@
+{
+	code: "spear-headshaft",
+	behaviors: [ 
+		{name: "HorizontalOrientable" },
+		{name: "BlockSwapBehavior",
+			properties: {
+				"swapBlocks": [
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-acacia-leatherstrips-north", "game:spear-headshaft-granite-acacia-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-acacia-leatherstrips-north", "game:spear-headshaft-andesite-acacia-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-acacia-leatherstrips-north", "game:spear-headshaft-basalt-acacia-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-acacia-leatherstrips-north", "game:spear-headshaft-obsidian-acacia-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-acacia-leatherstrips-north", "game:spear-headshaft-flint-acacia-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-birch-leatherstrips-north", "game:spear-headshaft-granite-birch-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-birch-leatherstrips-north", "game:spear-headshaft-andesite-birch-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-birch-leatherstrips-north", "game:spear-headshaft-basalt-birch-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-birch-leatherstrips-north", "game:spear-headshaft-obsidian-birch-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-birch-leatherstrips-north", "game:spear-headshaft-flint-birch-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-kapok-leatherstrips-north", "game:spear-headshaft-granite-kapok-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-kapok-leatherstrips-north", "game:spear-headshaft-andesite-kapok-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-kapok-leatherstrips-north", "game:spear-headshaft-basalt-kapok-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-kapok-leatherstrips-north", "game:spear-headshaft-obsidian-kapok-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-kapok-leatherstrips-north", "game:spear-headshaft-flint-kapok-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-maple-leatherstrips-north", "game:spear-headshaft-granite-maple-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-maple-leatherstrips-north", "game:spear-headshaft-andesite-maple-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-maple-leatherstrips-north", "game:spear-headshaft-basalt-maple-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-maple-leatherstrips-north", "game:spear-headshaft-obsidian-maple-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-maple-leatherstrips-north", "game:spear-headshaft-flint-maple-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-oak-leatherstrips-north", "game:spear-headshaft-granite-oak-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-oak-leatherstrips-north", "game:spear-headshaft-andesite-oak-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-oak-leatherstrips-north", "game:spear-headshaft-basalt-oak-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-oak-leatherstrips-north", "game:spear-headshaft-obsidian-oak-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-oak-leatherstrips-north", "game:spear-headshaft-flint-oak-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-pine-leatherstrips-north", "game:spear-headshaft-granite-pine-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-pine-leatherstrips-north", "game:spear-headshaft-andesite-pine-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-pine-leatherstrips-north", "game:spear-headshaft-basalt-pine-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-pine-leatherstrips-north", "game:spear-headshaft-obsidian-pine-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-pine-leatherstrips-north", "game:spear-headshaft-flint-pine-north", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-bone-leatherstrips-north", "game:spear-headshaft-granite-bone-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-bone-leatherstrips-north", "game:spear-headshaft-andesite-bone-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-bone-leatherstrips-north", "game:spear-headshaft-basalt-bone-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-bone-leatherstrips-north", "game:spear-headshaft-obsidian-bone-north", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-bone-leatherstrips-north", "game:spear-headshaft-flint-bone-north", 1 ],
+				 
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-acacia-leatherstrips-south", "game:spear-headshaft-granite-acacia-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-acacia-leatherstrips-south", "game:spear-headshaft-andesite-acacia-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-acacia-leatherstrips-south", "game:spear-headshaft-basalt-acacia-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-acacia-leatherstrips-south", "game:spear-headshaft-obsidian-acacia-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-acacia-leatherstrips-south", "game:spear-headshaft-flint-acacia-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-birch-leatherstrips-south", "game:spear-headshaft-granite-birch-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-birch-leatherstrips-south", "game:spear-headshaft-andesite-birch-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-birch-leatherstrips-south", "game:spear-headshaft-basalt-birch-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-birch-leatherstrips-south", "game:spear-headshaft-obsidian-birch-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-birch-leatherstrips-south", "game:spear-headshaft-flint-birch-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-kapok-leatherstrips-south", "game:spear-headshaft-granite-kapok-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-kapok-leatherstrips-south", "game:spear-headshaft-andesite-kapok-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-kapok-leatherstrips-south", "game:spear-headshaft-basalt-kapok-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-kapok-leatherstrips-south", "game:spear-headshaft-obsidian-kapok-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-kapok-leatherstrips-south", "game:spear-headshaft-flint-kapok-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-maple-leatherstrips-south", "game:spear-headshaft-granite-maple-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-maple-leatherstrips-south", "game:spear-headshaft-andesite-maple-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-maple-leatherstrips-south", "game:spear-headshaft-basalt-maple-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-maple-leatherstrips-south", "game:spear-headshaft-obsidian-maple-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-maple-leatherstrips-south", "game:spear-headshaft-flint-maple-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-oak-leatherstrips-south", "game:spear-headshaft-granite-oak-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-oak-leatherstrips-south", "game:spear-headshaft-andesite-oak-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-oak-leatherstrips-south", "game:spear-headshaft-basalt-oak-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-oak-leatherstrips-south", "game:spear-headshaft-obsidian-oak-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-oak-leatherstrips-south", "game:spear-headshaft-flint-oak-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-pine-leatherstrips-south", "game:spear-headshaft-granite-pine-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-pine-leatherstrips-south", "game:spear-headshaft-andesite-pine-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-pine-leatherstrips-south", "game:spear-headshaft-basalt-pine-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-pine-leatherstrips-south", "game:spear-headshaft-obsidian-pine-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-pine-leatherstrips-south", "game:spear-headshaft-flint-pine-south", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-bone-leatherstrips-south", "game:spear-headshaft-granite-bone-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-bone-leatherstrips-south", "game:spear-headshaft-andesite-bone-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-bone-leatherstrips-south", "game:spear-headshaft-basalt-bone-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-bone-leatherstrips-south", "game:spear-headshaft-obsidian-bone-south", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-bone-leatherstrips-south", "game:spear-headshaft-flint-bone-south", 1 ],
+				 
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-acacia-leatherstrips-east", "game:spear-headshaft-granite-acacia-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-acacia-leatherstrips-east", "game:spear-headshaft-andesite-acacia-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-acacia-leatherstrips-east", "game:spear-headshaft-basalt-acacia-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-acacia-leatherstrips-east", "game:spear-headshaft-obsidian-acacia-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-acacia-leatherstrips-east", "game:spear-headshaft-flint-acacia-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-birch-leatherstrips-east", "game:spear-headshaft-granite-birch-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-birch-leatherstrips-east", "game:spear-headshaft-andesite-birch-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-birch-leatherstrips-east", "game:spear-headshaft-basalt-birch-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-birch-leatherstrips-east", "game:spear-headshaft-obsidian-birch-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-birch-leatherstrips-east", "game:spear-headshaft-flint-birch-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-kapok-leatherstrips-east", "game:spear-headshaft-granite-kapok-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-kapok-leatherstrips-east", "game:spear-headshaft-andesite-kapok-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-kapok-leatherstrips-east", "game:spear-headshaft-basalt-kapok-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-kapok-leatherstrips-east", "game:spear-headshaft-obsidian-kapok-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-kapok-leatherstrips-east", "game:spear-headshaft-flint-kapok-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-maple-leatherstrips-east", "game:spear-headshaft-granite-maple-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-maple-leatherstrips-east", "game:spear-headshaft-andesite-maple-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-maple-leatherstrips-east", "game:spear-headshaft-basalt-maple-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-maple-leatherstrips-east", "game:spear-headshaft-obsidian-maple-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-maple-leatherstrips-east", "game:spear-headshaft-flint-maple-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-oak-leatherstrips-east", "game:spear-headshaft-granite-oak-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-oak-leatherstrips-east", "game:spear-headshaft-andesite-oak-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-oak-leatherstrips-east", "game:spear-headshaft-basalt-oak-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-oak-leatherstrips-east", "game:spear-headshaft-obsidian-oak-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-oak-leatherstrips-east", "game:spear-headshaft-flint-oak-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-pine-leatherstrips-east", "game:spear-headshaft-granite-pine-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-pine-leatherstrips-east", "game:spear-headshaft-andesite-pine-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-pine-leatherstrips-east", "game:spear-headshaft-basalt-pine-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-pine-leatherstrips-east", "game:spear-headshaft-obsidian-pine-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-pine-leatherstrips-east", "game:spear-headshaft-flint-pine-east", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-bone-leatherstrips-east", "game:spear-headshaft-granite-bone-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-bone-leatherstrips-east", "game:spear-headshaft-andesite-bone-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-bone-leatherstrips-east", "game:spear-headshaft-basalt-bone-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-bone-leatherstrips-east", "game:spear-headshaft-obsidian-bone-east", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-bone-leatherstrips-east", "game:spear-headshaft-flint-bone-east", 1 ],
+				 
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-acacia-leatherstrips-west", "game:spear-headshaft-granite-acacia-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-acacia-leatherstrips-west", "game:spear-headshaft-andesite-acacia-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-acacia-leatherstrips-west", "game:spear-headshaft-basalt-acacia-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-acacia-leatherstrips-west", "game:spear-headshaft-obsidian-acacia-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-acacia-leatherstrips-west", "game:spear-headshaft-flint-acacia-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-birch-leatherstrips-west", "game:spear-headshaft-granite-birch-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-birch-leatherstrips-west", "game:spear-headshaft-andesite-birch-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-birch-leatherstrips-west", "game:spear-headshaft-basalt-birch-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-birch-leatherstrips-west", "game:spear-headshaft-obsidian-birch-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-birch-leatherstrips-west", "game:spear-headshaft-flint-birch-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-kapok-leatherstrips-west", "game:spear-headshaft-granite-kapok-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-kapok-leatherstrips-west", "game:spear-headshaft-andesite-kapok-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-kapok-leatherstrips-west", "game:spear-headshaft-basalt-kapok-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-kapok-leatherstrips-west", "game:spear-headshaft-obsidian-kapok-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-kapok-leatherstrips-west", "game:spear-headshaft-flint-kapok-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-maple-leatherstrips-west", "game:spear-headshaft-granite-maple-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-maple-leatherstrips-west", "game:spear-headshaft-andesite-maple-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-maple-leatherstrips-west", "game:spear-headshaft-basalt-maple-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-maple-leatherstrips-west", "game:spear-headshaft-obsidian-maple-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-maple-leatherstrips-west", "game:spear-headshaft-flint-maple-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-oak-leatherstrips-west", "game:spear-headshaft-granite-oak-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-oak-leatherstrips-west", "game:spear-headshaft-andesite-oak-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-oak-leatherstrips-west", "game:spear-headshaft-basalt-oak-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-oak-leatherstrips-west", "game:spear-headshaft-obsidian-oak-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-oak-leatherstrips-west", "game:spear-headshaft-flint-oak-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-pine-leatherstrips-west", "game:spear-headshaft-granite-pine-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-pine-leatherstrips-west", "game:spear-headshaft-andesite-pine-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-pine-leatherstrips-west", "game:spear-headshaft-basalt-pine-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-pine-leatherstrips-west", "game:spear-headshaft-obsidian-pine-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-pine-leatherstrips-west", "game:spear-headshaft-flint-pine-west", 1 ],
+				 
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-granite-bone-leatherstrips-west", "game:spear-headshaft-granite-bone-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-andesite-bone-leatherstrips-west", "game:spear-headshaft-andesite-bone-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-basalt-bone-leatherstrips-west", "game:spear-headshaft-basalt-bone-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-obsidian-bone-leatherstrips-west", "game:spear-headshaft-obsidian-bone-west", 1 ],
+				 [ "neolithicmod:animal-leatherstrips",  "game:spear-flint-bone-leatherstrips-west", "game:spear-headshaft-flint-bone-west", 1 ],
+				 
+				 
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-acacia-sinew-north", "game:spear-headshaft-granite-acacia-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-acacia-sinew-north", "game:spear-headshaft-andesite-acacia-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-acacia-sinew-north", "game:spear-headshaft-basalt-acacia-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-acacia-sinew-north", "game:spear-headshaft-obsidian-acacia-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-acacia-sinew-north", "game:spear-headshaft-flint-acacia-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-birch-sinew-north", "game:spear-headshaft-granite-birch-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-birch-sinew-north", "game:spear-headshaft-andesite-birch-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-birch-sinew-north", "game:spear-headshaft-basalt-birch-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-birch-sinew-north", "game:spear-headshaft-obsidian-birch-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-birch-sinew-north", "game:spear-headshaft-flint-birch-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-kapok-sinew-north", "game:spear-headshaft-granite-kapok-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-kapok-sinew-north", "game:spear-headshaft-andesite-kapok-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-kapok-sinew-north", "game:spear-headshaft-basalt-kapok-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-kapok-sinew-north", "game:spear-headshaft-obsidian-kapok-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-kapok-sinew-north", "game:spear-headshaft-flint-kapok-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-maple-sinew-north", "game:spear-headshaft-granite-maple-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-maple-sinew-north", "game:spear-headshaft-andesite-maple-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-maple-sinew-north", "game:spear-headshaft-basalt-maple-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-maple-sinew-north", "game:spear-headshaft-obsidian-maple-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-maple-sinew-north", "game:spear-headshaft-flint-maple-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-oak-sinew-north", "game:spear-headshaft-granite-oak-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-oak-sinew-north", "game:spear-headshaft-andesite-oak-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-oak-sinew-north", "game:spear-headshaft-basalt-oak-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-oak-sinew-north", "game:spear-headshaft-obsidian-oak-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-oak-sinew-north", "game:spear-headshaft-flint-oak-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-pine-sinew-north", "game:spear-headshaft-granite-pine-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-pine-sinew-north", "game:spear-headshaft-andesite-pine-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-pine-sinew-north", "game:spear-headshaft-basalt-pine-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-pine-sinew-north", "game:spear-headshaft-obsidian-pine-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-pine-sinew-north", "game:spear-headshaft-flint-pine-north", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-bone-sinew-north", "game:spear-headshaft-granite-bone-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-bone-sinew-north", "game:spear-headshaft-andesite-bone-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-bone-sinew-north", "game:spear-headshaft-basalt-bone-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-bone-sinew-north", "game:spear-headshaft-obsidian-bone-north", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-bone-sinew-north", "game:spear-headshaft-flint-bone-north", 1 ],
+				 
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-acacia-sinew-south", "game:spear-headshaft-granite-acacia-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-acacia-sinew-south", "game:spear-headshaft-andesite-acacia-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-acacia-sinew-south", "game:spear-headshaft-basalt-acacia-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-acacia-sinew-south", "game:spear-headshaft-obsidian-acacia-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-acacia-sinew-south", "game:spear-headshaft-flint-acacia-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-birch-sinew-south", "game:spear-headshaft-granite-birch-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-birch-sinew-south", "game:spear-headshaft-andesite-birch-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-birch-sinew-south", "game:spear-headshaft-basalt-birch-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-birch-sinew-south", "game:spear-headshaft-obsidian-birch-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-birch-sinew-south", "game:spear-headshaft-flint-birch-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-kapok-sinew-south", "game:spear-headshaft-granite-kapok-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-kapok-sinew-south", "game:spear-headshaft-andesite-kapok-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-kapok-sinew-south", "game:spear-headshaft-basalt-kapok-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-kapok-sinew-south", "game:spear-headshaft-obsidian-kapok-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-kapok-sinew-south", "game:spear-headshaft-flint-kapok-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-maple-sinew-south", "game:spear-headshaft-granite-maple-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-maple-sinew-south", "game:spear-headshaft-andesite-maple-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-maple-sinew-south", "game:spear-headshaft-basalt-maple-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-maple-sinew-south", "game:spear-headshaft-obsidian-maple-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-maple-sinew-south", "game:spear-headshaft-flint-maple-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-oak-sinew-south", "game:spear-headshaft-granite-oak-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-oak-sinew-south", "game:spear-headshaft-andesite-oak-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-oak-sinew-south", "game:spear-headshaft-basalt-oak-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-oak-sinew-south", "game:spear-headshaft-obsidian-oak-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-oak-sinew-south", "game:spear-headshaft-flint-oak-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-pine-sinew-south", "game:spear-headshaft-granite-pine-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-pine-sinew-south", "game:spear-headshaft-andesite-pine-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-pine-sinew-south", "game:spear-headshaft-basalt-pine-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-pine-sinew-south", "game:spear-headshaft-obsidian-pine-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-pine-sinew-south", "game:spear-headshaft-flint-pine-south", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-bone-sinew-south", "game:spear-headshaft-granite-bone-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-bone-sinew-south", "game:spear-headshaft-andesite-bone-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-bone-sinew-south", "game:spear-headshaft-basalt-bone-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-bone-sinew-south", "game:spear-headshaft-obsidian-bone-south", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-bone-sinew-south", "game:spear-headshaft-flint-bone-south", 1 ],
+				 
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-acacia-sinew-east", "game:spear-headshaft-granite-acacia-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-acacia-sinew-east", "game:spear-headshaft-andesite-acacia-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-acacia-sinew-east", "game:spear-headshaft-basalt-acacia-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-acacia-sinew-east", "game:spear-headshaft-obsidian-acacia-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-acacia-sinew-east", "game:spear-headshaft-flint-acacia-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-birch-sinew-east", "game:spear-headshaft-granite-birch-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-birch-sinew-east", "game:spear-headshaft-andesite-birch-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-birch-sinew-east", "game:spear-headshaft-basalt-birch-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-birch-sinew-east", "game:spear-headshaft-obsidian-birch-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-birch-sinew-east", "game:spear-headshaft-flint-birch-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-kapok-sinew-east", "game:spear-headshaft-granite-kapok-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-kapok-sinew-east", "game:spear-headshaft-andesite-kapok-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-kapok-sinew-east", "game:spear-headshaft-basalt-kapok-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-kapok-sinew-east", "game:spear-headshaft-obsidian-kapok-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-kapok-sinew-east", "game:spear-headshaft-flint-kapok-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-maple-sinew-east", "game:spear-headshaft-granite-maple-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-maple-sinew-east", "game:spear-headshaft-andesite-maple-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-maple-sinew-east", "game:spear-headshaft-basalt-maple-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-maple-sinew-east", "game:spear-headshaft-obsidian-maple-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-maple-sinew-east", "game:spear-headshaft-flint-maple-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-oak-sinew-east", "game:spear-headshaft-granite-oak-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-oak-sinew-east", "game:spear-headshaft-andesite-oak-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-oak-sinew-east", "game:spear-headshaft-basalt-oak-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-oak-sinew-east", "game:spear-headshaft-obsidian-oak-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-oak-sinew-east", "game:spear-headshaft-flint-oak-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-pine-sinew-east", "game:spear-headshaft-granite-pine-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-pine-sinew-east", "game:spear-headshaft-andesite-pine-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-pine-sinew-east", "game:spear-headshaft-basalt-pine-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-pine-sinew-east", "game:spear-headshaft-obsidian-pine-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-pine-sinew-east", "game:spear-headshaft-flint-pine-east", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-bone-sinew-east", "game:spear-headshaft-granite-bone-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-bone-sinew-east", "game:spear-headshaft-andesite-bone-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-bone-sinew-east", "game:spear-headshaft-basalt-bone-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-bone-sinew-east", "game:spear-headshaft-obsidian-bone-east", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-bone-sinew-east", "game:spear-headshaft-flint-bone-east", 1 ],
+				 
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-acacia-sinew-west", "game:spear-headshaft-granite-acacia-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-acacia-sinew-west", "game:spear-headshaft-andesite-acacia-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-acacia-sinew-west", "game:spear-headshaft-basalt-acacia-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-acacia-sinew-west", "game:spear-headshaft-obsidian-acacia-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-acacia-sinew-west", "game:spear-headshaft-flint-acacia-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-birch-sinew-west", "game:spear-headshaft-granite-birch-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-birch-sinew-west", "game:spear-headshaft-andesite-birch-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-birch-sinew-west", "game:spear-headshaft-basalt-birch-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-birch-sinew-west", "game:spear-headshaft-obsidian-birch-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-birch-sinew-west", "game:spear-headshaft-flint-birch-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-kapok-sinew-west", "game:spear-headshaft-granite-kapok-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-kapok-sinew-west", "game:spear-headshaft-andesite-kapok-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-kapok-sinew-west", "game:spear-headshaft-basalt-kapok-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-kapok-sinew-west", "game:spear-headshaft-obsidian-kapok-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-kapok-sinew-west", "game:spear-headshaft-flint-kapok-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-maple-sinew-west", "game:spear-headshaft-granite-maple-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-maple-sinew-west", "game:spear-headshaft-andesite-maple-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-maple-sinew-west", "game:spear-headshaft-basalt-maple-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-maple-sinew-west", "game:spear-headshaft-obsidian-maple-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-maple-sinew-west", "game:spear-headshaft-flint-maple-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-oak-sinew-west", "game:spear-headshaft-granite-oak-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-oak-sinew-west", "game:spear-headshaft-andesite-oak-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-oak-sinew-west", "game:spear-headshaft-basalt-oak-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-oak-sinew-west", "game:spear-headshaft-obsidian-oak-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-oak-sinew-west", "game:spear-headshaft-flint-oak-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-pine-sinew-west", "game:spear-headshaft-granite-pine-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-pine-sinew-west", "game:spear-headshaft-andesite-pine-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-pine-sinew-west", "game:spear-headshaft-basalt-pine-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-pine-sinew-west", "game:spear-headshaft-obsidian-pine-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-pine-sinew-west", "game:spear-headshaft-flint-pine-west", 1 ],
+				 
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-granite-bone-sinew-west", "game:spear-headshaft-granite-bone-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-andesite-bone-sinew-west", "game:spear-headshaft-andesite-bone-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-basalt-bone-sinew-west", "game:spear-headshaft-basalt-bone-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-obsidian-bone-sinew-west", "game:spear-headshaft-obsidian-bone-west", 1 ],
+				 [ "neolithicmod:byproducts-sinew",  "game:spear-flint-bone-sinew-west", "game:spear-headshaft-flint-bone-west", 1 ],
+				 
+				 
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-acacia-rope-north", "game:spear-headshaft-granite-acacia-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-acacia-rope-north", "game:spear-headshaft-andesite-acacia-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-acacia-rope-north", "game:spear-headshaft-basalt-acacia-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-acacia-rope-north", "game:spear-headshaft-obsidian-acacia-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-acacia-rope-north", "game:spear-headshaft-flint-acacia-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-birch-rope-north", "game:spear-headshaft-granite-birch-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-birch-rope-north", "game:spear-headshaft-andesite-birch-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-birch-rope-north", "game:spear-headshaft-basalt-birch-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-birch-rope-north", "game:spear-headshaft-obsidian-birch-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-birch-rope-north", "game:spear-headshaft-flint-birch-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-kapok-rope-north", "game:spear-headshaft-granite-kapok-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-kapok-rope-north", "game:spear-headshaft-andesite-kapok-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-kapok-rope-north", "game:spear-headshaft-basalt-kapok-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-kapok-rope-north", "game:spear-headshaft-obsidian-kapok-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-kapok-rope-north", "game:spear-headshaft-flint-kapok-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-maple-rope-north", "game:spear-headshaft-granite-maple-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-maple-rope-north", "game:spear-headshaft-andesite-maple-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-maple-rope-north", "game:spear-headshaft-basalt-maple-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-maple-rope-north", "game:spear-headshaft-obsidian-maple-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-maple-rope-north", "game:spear-headshaft-flint-maple-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-oak-rope-north", "game:spear-headshaft-granite-oak-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-oak-rope-north", "game:spear-headshaft-andesite-oak-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-oak-rope-north", "game:spear-headshaft-basalt-oak-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-oak-rope-north", "game:spear-headshaft-obsidian-oak-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-oak-rope-north", "game:spear-headshaft-flint-oak-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-pine-rope-north", "game:spear-headshaft-granite-pine-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-pine-rope-north", "game:spear-headshaft-andesite-pine-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-pine-rope-north", "game:spear-headshaft-basalt-pine-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-pine-rope-north", "game:spear-headshaft-obsidian-pine-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-pine-rope-north", "game:spear-headshaft-flint-pine-north", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-bone-rope-north", "game:spear-headshaft-granite-bone-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-bone-rope-north", "game:spear-headshaft-andesite-bone-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-bone-rope-north", "game:spear-headshaft-basalt-bone-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-bone-rope-north", "game:spear-headshaft-obsidian-bone-north", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-bone-rope-north", "game:spear-headshaft-flint-bone-north", 1 ],
+				 
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-acacia-rope-south", "game:spear-headshaft-granite-acacia-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-acacia-rope-south", "game:spear-headshaft-andesite-acacia-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-acacia-rope-south", "game:spear-headshaft-basalt-acacia-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-acacia-rope-south", "game:spear-headshaft-obsidian-acacia-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-acacia-rope-south", "game:spear-headshaft-flint-acacia-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-birch-rope-south", "game:spear-headshaft-granite-birch-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-birch-rope-south", "game:spear-headshaft-andesite-birch-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-birch-rope-south", "game:spear-headshaft-basalt-birch-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-birch-rope-south", "game:spear-headshaft-obsidian-birch-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-birch-rope-south", "game:spear-headshaft-flint-birch-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-kapok-rope-south", "game:spear-headshaft-granite-kapok-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-kapok-rope-south", "game:spear-headshaft-andesite-kapok-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-kapok-rope-south", "game:spear-headshaft-basalt-kapok-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-kapok-rope-south", "game:spear-headshaft-obsidian-kapok-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-kapok-rope-south", "game:spear-headshaft-flint-kapok-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-maple-rope-south", "game:spear-headshaft-granite-maple-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-maple-rope-south", "game:spear-headshaft-andesite-maple-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-maple-rope-south", "game:spear-headshaft-basalt-maple-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-maple-rope-south", "game:spear-headshaft-obsidian-maple-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-maple-rope-south", "game:spear-headshaft-flint-maple-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-oak-rope-south", "game:spear-headshaft-granite-oak-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-oak-rope-south", "game:spear-headshaft-andesite-oak-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-oak-rope-south", "game:spear-headshaft-basalt-oak-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-oak-rope-south", "game:spear-headshaft-obsidian-oak-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-oak-rope-south", "game:spear-headshaft-flint-oak-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-pine-rope-south", "game:spear-headshaft-granite-pine-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-pine-rope-south", "game:spear-headshaft-andesite-pine-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-pine-rope-south", "game:spear-headshaft-basalt-pine-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-pine-rope-south", "game:spear-headshaft-obsidian-pine-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-pine-rope-south", "game:spear-headshaft-flint-pine-south", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-bone-rope-south", "game:spear-headshaft-granite-bone-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-bone-rope-south", "game:spear-headshaft-andesite-bone-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-bone-rope-south", "game:spear-headshaft-basalt-bone-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-bone-rope-south", "game:spear-headshaft-obsidian-bone-south", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-bone-rope-south", "game:spear-headshaft-flint-bone-south", 1 ],
+				 
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-acacia-rope-east", "game:spear-headshaft-granite-acacia-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-acacia-rope-east", "game:spear-headshaft-andesite-acacia-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-acacia-rope-east", "game:spear-headshaft-basalt-acacia-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-acacia-rope-east", "game:spear-headshaft-obsidian-acacia-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-acacia-rope-east", "game:spear-headshaft-flint-acacia-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-birch-rope-east", "game:spear-headshaft-granite-birch-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-birch-rope-east", "game:spear-headshaft-andesite-birch-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-birch-rope-east", "game:spear-headshaft-basalt-birch-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-birch-rope-east", "game:spear-headshaft-obsidian-birch-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-birch-rope-east", "game:spear-headshaft-flint-birch-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-kapok-rope-east", "game:spear-headshaft-granite-kapok-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-kapok-rope-east", "game:spear-headshaft-andesite-kapok-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-kapok-rope-east", "game:spear-headshaft-basalt-kapok-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-kapok-rope-east", "game:spear-headshaft-obsidian-kapok-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-kapok-rope-east", "game:spear-headshaft-flint-kapok-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-maple-rope-east", "game:spear-headshaft-granite-maple-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-maple-rope-east", "game:spear-headshaft-andesite-maple-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-maple-rope-east", "game:spear-headshaft-basalt-maple-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-maple-rope-east", "game:spear-headshaft-obsidian-maple-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-maple-rope-east", "game:spear-headshaft-flint-maple-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-oak-rope-east", "game:spear-headshaft-granite-oak-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-oak-rope-east", "game:spear-headshaft-andesite-oak-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-oak-rope-east", "game:spear-headshaft-basalt-oak-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-oak-rope-east", "game:spear-headshaft-obsidian-oak-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-oak-rope-east", "game:spear-headshaft-flint-oak-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-pine-rope-east", "game:spear-headshaft-granite-pine-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-pine-rope-east", "game:spear-headshaft-andesite-pine-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-pine-rope-east", "game:spear-headshaft-basalt-pine-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-pine-rope-east", "game:spear-headshaft-obsidian-pine-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-pine-rope-east", "game:spear-headshaft-flint-pine-east", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-bone-rope-east", "game:spear-headshaft-granite-bone-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-bone-rope-east", "game:spear-headshaft-andesite-bone-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-bone-rope-east", "game:spear-headshaft-basalt-bone-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-bone-rope-east", "game:spear-headshaft-obsidian-bone-east", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-bone-rope-east", "game:spear-headshaft-flint-bone-east", 1 ],
+				 
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-acacia-rope-west", "game:spear-headshaft-granite-acacia-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-acacia-rope-west", "game:spear-headshaft-andesite-acacia-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-acacia-rope-west", "game:spear-headshaft-basalt-acacia-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-acacia-rope-west", "game:spear-headshaft-obsidian-acacia-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-acacia-rope-west", "game:spear-headshaft-flint-acacia-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-birch-rope-west", "game:spear-headshaft-granite-birch-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-birch-rope-west", "game:spear-headshaft-andesite-birch-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-birch-rope-west", "game:spear-headshaft-basalt-birch-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-birch-rope-west", "game:spear-headshaft-obsidian-birch-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-birch-rope-west", "game:spear-headshaft-flint-birch-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-kapok-rope-west", "game:spear-headshaft-granite-kapok-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-kapok-rope-west", "game:spear-headshaft-andesite-kapok-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-kapok-rope-west", "game:spear-headshaft-basalt-kapok-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-kapok-rope-west", "game:spear-headshaft-obsidian-kapok-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-kapok-rope-west", "game:spear-headshaft-flint-kapok-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-maple-rope-west", "game:spear-headshaft-granite-maple-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-maple-rope-west", "game:spear-headshaft-andesite-maple-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-maple-rope-west", "game:spear-headshaft-basalt-maple-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-maple-rope-west", "game:spear-headshaft-obsidian-maple-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-maple-rope-west", "game:spear-headshaft-flint-maple-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-oak-rope-west", "game:spear-headshaft-granite-oak-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-oak-rope-west", "game:spear-headshaft-andesite-oak-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-oak-rope-west", "game:spear-headshaft-basalt-oak-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-oak-rope-west", "game:spear-headshaft-obsidian-oak-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-oak-rope-west", "game:spear-headshaft-flint-oak-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-pine-rope-west", "game:spear-headshaft-granite-pine-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-pine-rope-west", "game:spear-headshaft-andesite-pine-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-pine-rope-west", "game:spear-headshaft-basalt-pine-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-pine-rope-west", "game:spear-headshaft-obsidian-pine-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-pine-rope-west", "game:spear-headshaft-flint-pine-west", 1 ],
+				 
+				 [ "neolithicmod:sisal-rope",  "game:spear-granite-bone-rope-west", "game:spear-headshaft-granite-bone-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-andesite-bone-rope-west", "game:spear-headshaft-andesite-bone-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-basalt-bone-rope-west", "game:spear-headshaft-basalt-bone-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-obsidian-bone-rope-west", "game:spear-headshaft-obsidian-bone-west", 1 ],
+				 [ "neolithicmod:sisal-rope",  "game:spear-flint-bone-rope-west", "game:spear-headshaft-flint-bone-west", 1 ],
+				 
+				 
+				 
+				],
+			},
+		},
+	],
+	
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
+		{ code: "side", loadFromProperties: "abstract/horizontalorientation" },
+	],
+	shapeByType: { 
+		"*-north": { base: "block/placedtool/spear-placed", rotateY: 0 },
+		"*-east": { base: "block/placedtool/spear-placed", rotateY: 270 },
+		"*-south": { base: "block/placedtool/spear-placed", rotateY: 180 },
+		"*-west": { base: "block/placedtool/spear-placed", rotateY: 90 },		
+		},
+	textures: {
+			"stone": { base: "game:item/tool/material/{stone}" },
+			"shaft": { base: "game:block/wood/debarked/{shaft}" },
+			"cordage": { base: "block/transparent" },
+				
+	},	
+	creativeinventory: { "general": [""]  },
+	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 0,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+}

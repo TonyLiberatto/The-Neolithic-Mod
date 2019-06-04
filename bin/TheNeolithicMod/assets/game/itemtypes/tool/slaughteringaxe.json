@@ -8,7 +8,7 @@
 	},
 	variantgroups: [
 		{ code: "metal", states: [ "bismuthbronze", "blackbronze", "brass", "copper", "gold", "iron", "lead", "silver", "tinbronze" ] },
-    { code: "shaft", states: [ "wood"] },
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
 	],
 	tool: "axe",
 	damagedby: ["blockbreaking", "attacking"],
@@ -16,7 +16,7 @@
 	heldTpHitAnimation: "axechop",
 	textures: {
 		"metal": { base: "item/tool/material/{metal}" },
-		"shaft": { base: "game:block/wood/debarked/{shaft}" },
+		"shaft": { base: "block/wood/debarked/{shaft}" },
 		"cordage": { base: "block/leatherstraps"},
 		"ribbon": { base: "block/ribbon"},
 	},

@@ -1,0 +1,241 @@
+{
+	code: "hammer-head",
+	behaviors: [ 
+		{name: "HorizontalOrientable" },
+		{
+      name: "BlockSwapBehavior",
+      properties: {
+        "swapBlocks": [
+          [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-granite-acacia-north", "game:hammer-head-granite-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-andesite-acacia-north", "game:hammer-head-andesite-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-basalt-acacia-north", "game:hammer-head-basalt-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-obsidian-acacia-north", "game:hammer-head-obsidian-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-flint-acacia-north", "game:hammer-head-flint-north",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-granite-birch-north", "game:hammer-head-granite-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-andesite-birch-north", "game:hammer-head-andesite-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-basalt-birch-north", "game:hammer-head-basalt-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-obsidian-birch-north", "game:hammer-head-obsidian-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-flint-birch-north", "game:hammer-head-flint-north",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-granite-kapok-north", "game:hammer-head-granite-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-andesite-kapok-north", "game:hammer-head-andesite-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-basalt-kapok-north", "game:hammer-head-basalt-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-obsidian-kapok-north", "game:hammer-head-obsidian-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-flint-kapok-north", "game:hammer-head-flint-north",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-granite-maple-north", "game:hammer-head-granite-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-andesite-maple-north", "game:hammer-head-andesite-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-basalt-maple-north", "game:hammer-head-basalt-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-obsidian-maple-north", "game:hammer-head-obsidian-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-flint-maple-north", "game:hammer-head-flint-north",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-granite-oak-north", "game:hammer-head-granite-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-andesite-oak-north", "game:hammer-head-andesite-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-basalt-oak-north", "game:hammer-head-basalt-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-obsidian-oak-north", "game:hammer-head-obsidian-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-flint-oak-north", "game:hammer-head-flint-north",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-granite-pine-north", "game:hammer-head-granite-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-andesite-pine-north", "game:hammer-head-andesite-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-basalt-pine-north", "game:hammer-head-basalt-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-obsidian-pine-north", "game:hammer-head-obsidian-north",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-flint-pine-north", "game:hammer-head-flint-north",  1 ],
+		  
+		  
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-granite-acacia-south", "game:hammer-head-granite-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-andesite-acacia-south", "game:hammer-head-andesite-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-basalt-acacia-south", "game:hammer-head-basalt-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-obsidian-acacia-south", "game:hammer-head-obsidian-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-flint-acacia-south", "game:hammer-head-flint-south",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-granite-birch-south", "game:hammer-head-granite-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-andesite-birch-south", "game:hammer-head-andesite-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-basalt-birch-south", "game:hammer-head-basalt-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-obsidian-birch-south", "game:hammer-head-obsidian-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-flint-birch-south", "game:hammer-head-flint-south",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-granite-kapok-south", "game:hammer-head-granite-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-andesite-kapok-south", "game:hammer-head-andesite-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-basalt-kapok-south", "game:hammer-head-basalt-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-obsidian-kapok-south", "game:hammer-head-obsidian-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-flint-kapok-south", "game:hammer-head-flint-south",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-granite-maple-south", "game:hammer-head-granite-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-andesite-maple-south", "game:hammer-head-andesite-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-basalt-maple-south", "game:hammer-head-basalt-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-obsidian-maple-south", "game:hammer-head-obsidian-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-flint-maple-south", "game:hammer-head-flint-south",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-granite-oak-south", "game:hammer-head-granite-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-andesite-oak-south", "game:hammer-head-andesite-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-basalt-oak-south", "game:hammer-head-basalt-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-obsidian-oak-south", "game:hammer-head-obsidian-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-flint-oak-south", "game:hammer-head-flint-south",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-granite-pine-south", "game:hammer-head-granite-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-andesite-pine-south", "game:hammer-head-andesite-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-basalt-pine-south", "game:hammer-head-basalt-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-obsidian-pine-south", "game:hammer-head-obsidian-south",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-flint-pine-south", "game:hammer-head-flint-south",  1 ],
+		  
+		  
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-granite-acacia-east", "game:hammer-head-granite-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-andesite-acacia-east", "game:hammer-head-andesite-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-basalt-acacia-east", "game:hammer-head-basalt-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-obsidian-acacia-east", "game:hammer-head-obsidian-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-flint-acacia-east", "game:hammer-head-flint-east",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-granite-birch-east", "game:hammer-head-granite-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-andesite-birch-east", "game:hammer-head-andesite-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-basalt-birch-east", "game:hammer-head-basalt-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-obsidian-birch-east", "game:hammer-head-obsidian-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-flint-birch-east", "game:hammer-head-flint-east",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-granite-kapok-east", "game:hammer-head-granite-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-andesite-kapok-east", "game:hammer-head-andesite-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-basalt-kapok-east", "game:hammer-head-basalt-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-obsidian-kapok-east", "game:hammer-head-obsidian-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-flint-kapok-east", "game:hammer-head-flint-east",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-granite-maple-east", "game:hammer-head-granite-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-andesite-maple-east", "game:hammer-head-andesite-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-basalt-maple-east", "game:hammer-head-basalt-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-obsidian-maple-east", "game:hammer-head-obsidian-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-flint-maple-east", "game:hammer-head-flint-east",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-granite-oak-east", "game:hammer-head-granite-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-andesite-oak-east", "game:hammer-head-andesite-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-basalt-oak-east", "game:hammer-head-basalt-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-obsidian-oak-east", "game:hammer-head-obsidian-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-flint-oak-east", "game:hammer-head-flint-east",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-granite-pine-east", "game:hammer-head-granite-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-andesite-pine-east", "game:hammer-head-andesite-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-basalt-pine-east", "game:hammer-head-basalt-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-obsidian-pine-east", "game:hammer-head-obsidian-east",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-flint-pine-east", "game:hammer-head-flint-east",  1 ],
+		  
+		  
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-granite-acacia-west", "game:hammer-head-granite-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-andesite-acacia-west", "game:hammer-head-andesite-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-basalt-acacia-west", "game:hammer-head-basalt-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-obsidian-acacia-west", "game:hammer-head-obsidian-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:hammer-headshaft-flint-acacia-west", "game:hammer-head-flint-west",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-granite-birch-west", "game:hammer-head-granite-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-andesite-birch-west", "game:hammer-head-andesite-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-basalt-birch-west", "game:hammer-head-basalt-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-obsidian-birch-west", "game:hammer-head-obsidian-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:hammer-headshaft-flint-birch-west", "game:hammer-head-flint-west",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-granite-kapok-west", "game:hammer-head-granite-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-andesite-kapok-west", "game:hammer-head-andesite-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-basalt-kapok-west", "game:hammer-head-basalt-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-obsidian-kapok-west", "game:hammer-head-obsidian-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:hammer-headshaft-flint-kapok-west", "game:hammer-head-flint-west",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-granite-maple-west", "game:hammer-head-granite-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-andesite-maple-west", "game:hammer-head-andesite-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-basalt-maple-west", "game:hammer-head-basalt-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-obsidian-maple-west", "game:hammer-head-obsidian-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:hammer-headshaft-flint-maple-west", "game:hammer-head-flint-west",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-granite-oak-west", "game:hammer-head-granite-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-andesite-oak-west", "game:hammer-head-andesite-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-basalt-oak-west", "game:hammer-head-basalt-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-obsidian-oak-west", "game:hammer-head-obsidian-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:hammer-headshaft-flint-oak-west", "game:hammer-head-flint-west",  1 ],
+		  
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-granite-pine-west", "game:hammer-head-granite-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-andesite-pine-west", "game:hammer-head-andesite-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-basalt-pine-west", "game:hammer-head-basalt-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-obsidian-pine-west", "game:hammer-head-obsidian-west",  1 ],
+		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:hammer-headshaft-flint-pine-west", "game:hammer-head-flint-west",  1 ],
+		  
+		  
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-granite-bone-north", "game:hammer-head-granite-north",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-andesite-bone-north", "game:hammer-head-andesite-north",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-basalt-bone-north", "game:hammer-head-basalt-north",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-obsidian-bone-north", "game:hammer-head-obsidian-north",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-flint-bone-north", "game:hammer-head-flint-north",  1 ],
+		  
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-granite-bone-south", "game:hammer-head-granite-south",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-andesite-bone-south", "game:hammer-head-andesite-south",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-basalt-bone-south", "game:hammer-head-basalt-south",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-obsidian-bone-south", "game:hammer-head-obsidian-south",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-flint-bone-south", "game:hammer-head-flint-south",  1 ],
+		  
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-granite-bone-east", "game:hammer-head-granite-east",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-andesite-bone-east", "game:hammer-head-andesite-east",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-basalt-bone-east", "game:hammer-head-basalt-east",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-obsidian-bone-east", "game:hammer-head-obsidian-east",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-flint-bone-east", "game:hammer-head-flint-east",  1 ],
+		  
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-granite-bone-west", "game:hammer-head-granite-west",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-andesite-bone-west", "game:hammer-head-andesite-west",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-basalt-bone-west", "game:hammer-head-basalt-west",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-obsidian-bone-west", "game:hammer-head-obsidian-west",  1 ],
+		  [ "neolithicmod:animal-large-bone", "game:hammer-headshaft-flint-bone-west", "game:hammer-head-flint-west",  1 ],
+        ],
+      },
+    },
+		],
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint",  ] },
+		{ code: "side", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	shapeinventory: { base: "item/tool/primitive-hammer" },
+	shapeByType: { 
+		"*-north": { base: "block/placedtool/hammer-bone", rotateY: 0 },
+		"*-east": { base: "block/placedtool/hammer-bone", rotateY: 270 },
+		"*-south": { base: "block/placedtool/hammer-bone", rotateY: 180 },
+		"*-west": { base: "block/placedtool/hammer-bone", rotateY: 90 },
+		},
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"shaft": { base: "block/transparent" },
+		"cordage": { base: "block/transparent" },
+	},
+	creativeinventory: { "general": ["*-north"], "items": ["*-north"], "tools": ["*"], "neolithicitems": ["*-north"] },
+	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 0,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+	fpHandTransform: {
+		translation: { x: 0.4, y: -0.4, z: 0 },
+		rotation: { x: 25, y: 0, z: 86 },
+		scale: 2.5
+	},
+	guiTransform: {
+		rotate: false,
+		translation: { x: 3, y: 0, z: 120 },
+		rotation: { x: -52, y: -131, z: -180 },
+		origin: { x: 0.55, y: 1.1, z: 0.1 },
+		scale: 3.4
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.3, y: -0.8, z: -0.5 },
+		rotation: { x: 90, y: -49, z: 0 },
+		scale: 1
+	}
+}
