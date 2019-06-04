@@ -269,7 +269,7 @@ namespace TheNeolithicMod
                 FlourDustParticles.color |= (200 << 24);
 
                 //FlourParticles.minPos.Set(pos.X+0.5, pos.Y + 0.5, pos.Z+0.5);
-                FlourDustParticles.minPos.Set(pos.X+0.5, pos.Y + 0.5, pos.Z+0.5);
+                FlourDustParticles.minPos.Set(pos.X + 0.5, pos.Y + 0.5, pos.Z + 0.5);
 
 
                 FlourDustParticles.minVelocity.Set(-0.1f, 0, -0.1f);
@@ -422,7 +422,7 @@ namespace TheNeolithicMod
 
                 updateGrindingState(wasGrinding);
             }
-            
+
             if (api?.Side == EnumAppSide.Client && clientDialog != null)
             {
                 SetDialogValues(clientDialog.Attributes);
@@ -432,10 +432,13 @@ namespace TheNeolithicMod
 
         void SetDialogValues(ITreeAttribute dialogTree)
         {
-            dialogTree.SetFloat("inputGrindTime", inputGrindTime);
-            dialogTree.SetFloat("maxGrindTime", maxGrindingTime());
+            if (dialogTree != null)
+            {
+                dialogTree.SetFloat("inputGrindTime", inputGrindTime);
+                dialogTree.SetFloat("maxGrindTime", maxGrindingTime());
+            }
         }
-        
+
         public override void ToTreeAttributes(ITreeAttribute tree)
         {
             base.ToTreeAttributes(tree);
@@ -594,13 +597,13 @@ namespace TheNeolithicMod
 
         public bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tesselator)
         {
-            if(ownBlock == null) return false;
+            if (ownBlock == null) return false;
             string direc = ownBlock.Variant["side"];
             float yDeg = BlockFacing.FromCode(direc).HorizontalAngleIndex * 90;
-            
+
             mesher.AddMeshData(
                     quernBaseMesh.Clone()
-                    .Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0.0f, (yDeg-90) * GameMath.DEG2RAD, 0.0f)
+                    .Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0.0f, (yDeg - 90) * GameMath.DEG2RAD, 0.0f)
                 );
             if (!IsGrinding)
             {
@@ -611,7 +614,7 @@ namespace TheNeolithicMod
                     //.Translate(0 / 16f, 11 / 16f, 0 / 16f)
                     .Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0.0f, 0.0f, 0.0f)
                     .Translate(0.1f, 0.0f, 0.0f)
-                    .Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0.0f, (yDeg-90) * GameMath.DEG2RAD, -45.0f * GameMath.DEG2RAD)
+                    .Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0.0f, (yDeg - 90) * GameMath.DEG2RAD, -45.0f * GameMath.DEG2RAD)
                     .Translate(0.0f, 0.5f, 0.0f)
                 );
 
