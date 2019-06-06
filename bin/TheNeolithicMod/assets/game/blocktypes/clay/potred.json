@@ -1,18 +1,18 @@
 {
-	code: "redpot",
+	code: "potred",
 	behaviorsByType: {
 		"*-raw": [{name: "UnstableFalling"}, {name: "RightClickPickup" }],
 		"*": [{name: "UnstableFalling"}],
 	},
 	classByType: {
-		"redpot-burned": "BlockCookingContainer",
-		"redpot-cooked": "BlockCookedContainer"
+		"potred-burned": "BlockCookingContainer",
+		"potred-cooked": "BlockCookedContainer"
 	},
 	heldTpIdleAnimation: "holdbothhands",
 	attributesByType: {
-		"redpot-raw": { },
+		"potred-raw": { },
 		
-		"redpot-burned": {
+		"potred-burned": {
 			cookingContainerSlots: 4,
 			maxContainerSlotStackSize: 6,
 			storageType: 1,
@@ -25,8 +25,8 @@
 			}
 		},
 		
-		"redpot-cooked": {
-			emptiedBlockCode: "redpot-burned",
+		"potred-cooked": {
+			emptiedBlockCode: "potred-burned",
 			allowHeating: true,
 			maxTemperature: 200,
 			
@@ -78,18 +78,18 @@
 		"*-cooked": "CookedContainer",
 	},
 	combustiblePropsByType: {
-		"redpot-raw": {
+		"potred-raw": {
 			meltingPoint: 600,
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "redpot-burned" },
+			smeltedStack: { type: "block", code: "potred-burned" },
 			requiresContainer: false
 		}
 	},
 	shape: { base: "block/clay/pot-opened-empty" },
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["redpot-raw", "redpot-burned"], "decorative": ["redpot-raw", "redpot-burned"] },
+	creativeinventory: { "general": ["potred-raw", "potred-burned"], "decorative": ["potred-raw", "potred-burned"] },
 	replaceable: 400,
 	resistance: 1.5,
 	maxStackSize: 1,

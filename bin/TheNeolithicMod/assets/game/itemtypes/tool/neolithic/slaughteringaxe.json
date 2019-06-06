@@ -8,7 +8,7 @@
 	},
 	variantgroups: [
 		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
-		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
 		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
 	],
 	tool: "axe",

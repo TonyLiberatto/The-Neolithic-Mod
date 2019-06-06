@@ -1,18 +1,18 @@
 {
-	code: "bluepot",
+	code: "potblue",
 	behaviorsByType: {
 		"*-raw": [{name: "UnstableFalling"}, {name: "RightClickPickup" }],
 		"*": [{name: "UnstableFalling"}],
 	},
 	classByType: {
-		"bluepot-burned": "BlockCookingContainer",
-		"bluepot-cooked": "BlockCookedContainer"
+		"potblue-burned": "BlockCookingContainer",
+		"potblue-cooked": "BlockCookedContainer"
 	},
 	heldTpIdleAnimation: "holdbothhands",
 	attributesByType: {
-		"bluepot-raw": { },
+		"potblue-raw": { },
 		
-		"bluepot-burned": {
+		"potblue-burned": {
 			cookingContainerSlots: 4,
 			maxContainerSlotStackSize: 6,
 			storageType: 1,
@@ -25,8 +25,8 @@
 			}
 		},
 		
-		"bluepot-cooked": {
-			emptiedBlockCode: "bluepot-burned",
+		"potblue-cooked": {
+			emptiedBlockCode: "potblue-burned",
 			allowHeating: true,
 			maxTemperature: 200,
 			
@@ -78,18 +78,18 @@
 		"*-cooked": "CookedContainer",
 	},
 	combustiblePropsByType: {
-		"bluepot-raw": {
+		"potblue-raw": {
 			meltingPoint: 600,
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "bluepot-burned" },
+			smeltedStack: { type: "block", code: "potblue-burned" },
 			requiresContainer: false
 		}
 	},
 	shape: { base: "block/clay/pot-opened-empty" },
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["bluepot-raw", "bluepot-burned"], "decorative": ["bluepot-raw", "bluepot-burned"] },
+	creativeinventory: { "general": ["potblue-raw", "potblue-burned"], "decorative": ["potblue-raw", "potblue-burned"] },
 	replaceable: 400,
 	resistance: 1.5,
 	maxStackSize: 1,

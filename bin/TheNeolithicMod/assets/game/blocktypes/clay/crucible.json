@@ -3,7 +3,7 @@
 	behaviors: [{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"} ],
 	classByType: {
 		"*-burned": "BlockSmeltingContainer",
-		"*-smelted": "BlockSmeltedContainer"
+		"*-smelted": "NeoBlockSmeltedContainer"
 	},
 	heldTpIdleAnimation: "holdbothhands",
 	attributesByType: {

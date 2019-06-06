@@ -123,6 +123,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Neolithic\Content\BlockEntityRenderer\NeoPotInFirepitRenderer.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BEBucketOverride.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\ChimneyBehavior.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\NewBlockSwapBehavior.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="Neolithic\Content\Block\BlockNeolithicRoads.cs" />
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLogWall.cs" />
+    <Compile Include="Neolithic\Content\Block\NeoBlockSmeltedContainer.cs" />
     <Compile Include="Neolithic\Content\Block\FixedStairs.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorFeatherPluck.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorMilkable.cs" />
@@ -153,7 +155,7 @@
     <Compile Include="Neolithic\Content\BlockEntity\BEMortarAndPestle.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BEScary.cs" />
     <Compile Include="Neolithic\Content\Item\ItemSwapBlocks.cs" />
-    <Compile Include="Neolithic\Content\Renderer\PestleRenderer.cs" />
+    <Compile Include="Neolithic\Content\BlockEntityRenderer\PestleRenderer.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\POIEntity.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\NeolithicTransient.cs" />
     <Compile Include="Neolithic\Content\Block\BlockGiantReeds.cs" />
