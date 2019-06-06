@@ -43,38 +43,38 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -96,7 +96,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -110,15 +110,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -231,28 +231,29 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\headshaft\axe-headshaft.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\headshaft\hammer-headshaft.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\headshaft\hoe-headshaft.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\headshaft\javelin-headshaft.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\headshaft\knife-headshaft.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\headshaft\shovel-headshaft.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\headshaft\sickle-headshaft.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\headshaft\slaughteringaxe-headshaft.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\headshaft\spear-headshaft.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\heads\adze-head.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\heads\axe-head - Copy.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\heads\axe-head.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\heads\flake.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\heads\hammer-head - Copy.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\heads\hammer-head.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\heads\hoe-head.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\heads\javelin-head.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\heads\knife-head.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\heads\shovel-head.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\heads\sickle-head.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\heads\slaughteringaxe-head.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\heads\spear-head.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\hoe.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\javelin.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\knife.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\shovel.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\sickle.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\slaughtering-axe.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\slaughteringaxe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\spear.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\generic\trough-large.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\generic\trough-small.json" />
@@ -294,7 +295,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\wolf\wolf-male.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\land\wolf\wolf-pup.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\primitive-javelin.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\entities\primitive-spear.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\entities\spear-primitive.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\spear.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\bamboostakes.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\creature.json" />
@@ -329,11 +330,11 @@
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\hoe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\javelin.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\knife.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\primitive-spear.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\primitive-sword.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\shovel.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\sickle.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\slaughteringaxe.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\spear-primitive.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\pickaxe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\prospectingpick.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\saw.json" />
@@ -542,32 +543,31 @@
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\cheeseincloth.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\mold\bowlstampmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\mold\slaughteringaxemold.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\pot-closed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\pot-opened-empty.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\ingotstamp.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\glass_lantern.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\tallow\tallowbunch.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\tallow\tallowcandle1.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\tallow\tallowcandle2.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\tallow\tallowcandle3.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\adze-bone-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\adze-wood-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\axe-bone-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\axe-wood-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\hammer-bone-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\hammer-wood-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\hoe-bone-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\hoe-wood-placed.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\adze-bone.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\adze-wood.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\axe-bone.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\axe-wood.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\bone-slaughteringaxe.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\branch-slaughteringaxe.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\hammer-bone.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\hammer-wood.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\hoe-bone.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\hoe-wood.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\javelin-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\knife-bone-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\knife-wood-placed.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\knife-bone.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\knife-wood.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\primitive-sword-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\shovel-bone-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\shovel-wood-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\sickle-bone-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\sickle-wood-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\slaughtering-axe-placed.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\spear-bamboo-placed.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\shovel-bone.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\shovel-wood.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\sickle-bone.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\sickle-wood.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\spear-placed.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\plant\giantreeds-water.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\plant\sapling\plaintree\acacia.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\plant\sapling\plaintree\bamboobrown.json" />

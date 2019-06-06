@@ -9,16 +9,18 @@
 		}
 	},
 	variantgroups: [
-		{code: "type", states: ["javelin"]} 
+		{code: "type", states: ["javelin"]},
+		{ code: "shaft", states: ["bamboo-green", "bamboo-brown"] },
+		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },		
 		],
 	drawtype: "json",
 	shape: { base: "item/tool/primitive-javelin" },
 	heldTpHitAnimation: "breaktool",
 	MaxStackSize: 32,
 	textures: {
-		"bamboo-side": { base: "block/wood/planks/bamboo-brown-side" },
 		"bone": { base: "block/bone" },
-		"sinew": { base: "block/sinew" },
+		"shaft": { base: "block/wood/planks/{shaft}-side" },		
+		"cordage": { base: "block/cordage/{cordage}" },
 	},
 	attackRange: 2.5,
 	attackpower: 1,

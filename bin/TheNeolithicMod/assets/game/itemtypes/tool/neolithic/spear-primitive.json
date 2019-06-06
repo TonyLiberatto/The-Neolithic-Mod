@@ -32,7 +32,7 @@
 			"*-flint-*": 5,
 			"*-obsidian-*": 5.25,
 		},
-		spearEntityCode: "spear-primitive",
+		spearEntityCode: "spear-primitive-{stone}-{shaft}-{cordage}",
 		handbook: {
 			groupBy: ["spear-*"]
 		}

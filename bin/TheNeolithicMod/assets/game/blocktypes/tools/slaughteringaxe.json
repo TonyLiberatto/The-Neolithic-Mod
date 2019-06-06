@@ -34,7 +34,7 @@
 	creativeinventory: { "general": [""]  },
 	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
 	drops: [
-	{ type: "item", code: "slaughteringaxe-{stone}-{shaft}-{cordage}", quantity: { avg: 1 }}
+	{ type: "item", code: "game:slaughteringaxe-{stone}-{shaft}-{cordage}", quantity: { avg: 1 }}
 	],
 	blockmaterial: "Wood",
 	replaceable: 900,
