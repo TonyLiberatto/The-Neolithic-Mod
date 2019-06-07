@@ -18,7 +18,7 @@
 		"*-south": { base: "block/placedtool/primitive-sword-placed", rotateY: 180 },
 		"*-west": { base: "block/placedtool/primitive-sword-placed", rotateY: 90 },
 		},
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"]  },
+	creativeinventory: { "general": ["*-north"], "items": ["*-north"], "neolithicitems": ["*-north"]  },
 	fpHandTransform: {
 		translation: { x: 0, y: 0, z: 0 },
 		rotation: { x: 34, y: 16, z: 87 },

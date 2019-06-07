@@ -13,5 +13,5 @@
 		"__________"
 	],
 	name: "Obsidian flakes",
-	output: { type: "item", code: "flake-obsidian", stacksize: 10  }
+	output: { type: "block", code: "flake-obsidian-north", stacksize: 10  }
 }

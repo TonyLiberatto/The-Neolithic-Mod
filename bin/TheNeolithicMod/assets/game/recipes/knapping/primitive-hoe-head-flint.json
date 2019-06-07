@@ -6,5 +6,5 @@
 		"_________#"
 	],
 	name: "Hoe Head",
-	output: { type: "item", code: "primitive-hoehead-flint"  }
+	output: { type: "block", code: "hoe-head-flint-north"  }
 }

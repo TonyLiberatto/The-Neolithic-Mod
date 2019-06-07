@@ -13,5 +13,5 @@
 		"__##__##__"
 	],
 	name: "Stone Adze",
-	output: { type: "item", code: "adzehead-{rock}", stacksize: 2  }
+	output: { type: "block", code: "adze-head-{rock}-north", stacksize: 2  }
 }

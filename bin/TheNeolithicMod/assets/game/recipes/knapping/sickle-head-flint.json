@@ -13,5 +13,5 @@
 		"____##____"
 	],
 	name: "Sickle Head",
-	output: { type: "item", code: "sicklehead-flint"  }
+	output: { type: "block", code: "sickle-head-flint-north"  }
 }
