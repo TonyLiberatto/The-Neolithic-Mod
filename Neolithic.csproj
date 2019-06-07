@@ -123,7 +123,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Neolithic\Content\BlockEntityRenderer\NeoPotInFirepitRenderer.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BEBucketOverride.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\ChimneyBehavior.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\NewBlockSwapBehavior.cs" />
@@ -132,7 +131,7 @@
     <Compile Include="Neolithic\Content\Block\BlockNeolithicRoads.cs" />
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLogWall.cs" />
-    <Compile Include="Neolithic\Content\Block\CookingContainerFix.cs" />
+    <Compile Include="Neolithic\CookingFix.cs" />
     <Compile Include="Neolithic\Content\Block\NeoBlockSmeltedContainer.cs" />
     <Compile Include="Neolithic\Content\Block\FixedStairs.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorFeatherPluck.cs" />

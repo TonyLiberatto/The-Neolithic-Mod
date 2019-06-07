@@ -23,7 +23,7 @@
       eatenBlock: "bowl-red-burned"
     },
   },
-  entityClass: "Meal",
+  entityClass: "MealFix",
   heldTpIdleAnimation: "holdbothhands",
   shape: { base: "block/clay/bowl-empty-ground" },
   blockmaterial: "Ceramic",
