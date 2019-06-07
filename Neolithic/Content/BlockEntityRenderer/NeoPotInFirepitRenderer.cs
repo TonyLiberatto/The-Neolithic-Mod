@@ -38,9 +38,9 @@ namespace TheNeolithicMod
 
             if (isInOutputSlot)
             {
-                MealMeshCache meshcache = capi.ModLoader.GetModSystem<MealMeshCache>();
+                MealMeshCacheFix meshcache = capi.ModLoader.GetModSystem<MealMeshCacheFix>();
 
-                MeshData potMesh = meshcache.CreateMealMesh(potBlock.Shape, potBlock.GetCookingRecipe(capi.World, stack), potBlock.GetContents(capi.World, stack), new Vec3f(0, 2.5f/16f, 0)); 
+                MeshData potMesh = meshcache.CreateMealMesh(potBlock.Shape, potBlock.GetCookingRecipe(capi.World, stack), potBlock.GetContents(capi.World, stack), potBlock, new Vec3f(0, 2.5f/16f, 0)); 
                 potRef = capi.Render.UploadMesh(potMesh);
             }
             else

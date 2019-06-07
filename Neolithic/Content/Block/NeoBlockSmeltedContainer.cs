@@ -143,7 +143,7 @@ namespace TheNeolithicMod
                 {
                     string emptiedCode = Attributes["emptiedBlockCode"].AsString();
 
-                    slot.Itemstack = new ItemStack(byEntity.World.GetBlock(AssetLocation.Create(emptiedCode, Code.Domain)));
+                    slot.Itemstack = new ItemStack(byEntity.World.GetBlock(NAssetLocation.Create(emptiedCode, Code.Domain)));
                     slot.MarkDirty();
                     handHandling = EnumHandHandling.PreventDefault;
                     return;
@@ -278,7 +278,7 @@ namespace TheNeolithicMod
                 if (newAmount <= 0 && byEntity.World is IServerWorldAccessor)
                 {
                     string emptiedCode = Attributes["emptiedBlockCode"].AsString();
-                    slot.Itemstack = new ItemStack(byEntity.World.GetBlock(AssetLocation.Create(emptiedCode, Code.Domain)));
+                    slot.Itemstack = new ItemStack(byEntity.World.GetBlock(NAssetLocation.Create(emptiedCode, Code.Domain)));
                     slot.MarkDirty();
                     // Since we change the item stack we have to call this ourselves
                     OnHeldInteractStop(secondsUsed, slot, byEntity, blockSel, entitySel);

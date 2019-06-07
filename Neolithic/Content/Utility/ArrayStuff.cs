@@ -74,4 +74,20 @@ namespace TheNeolithicMod
             return array;
         }
     }
+
+    public class NAssetLocation : AssetLocation
+    {
+        public NAssetLocation(string domainAndPath) : base(domainAndPath)
+        {
+        }
+
+        public NAssetLocation(string domain, string path) : base(domain, path)
+        {
+        }
+
+        public static AssetLocation Create(string code, string domain)
+        {
+            return new AssetLocation(domain + ":" + code);
+        }
+    }
 }
