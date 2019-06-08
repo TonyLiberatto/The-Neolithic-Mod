@@ -535,7 +535,7 @@
 		{ code: "side", loadFromProperties: "abstract/horizontalorientation" },
 	],
 	shapeinventoryByType: {		
-		"*-bone-north": {base: "item/tool/primitive-hammer"},
+		"*-bone-north": {base: "item/tool/bone-hammer"},
 		"*-north": {base: "item/tool/branch-hammer" },
 	},
 	shapeByType: { 

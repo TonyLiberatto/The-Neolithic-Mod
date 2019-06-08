@@ -6,9 +6,6 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-		"stone": "item/tool/material/granite",
-		"shaft": "game:block/shaft/debarked/maple",
-		"cordage": "neolithicmod:block/cordage"
 	},
 	"elements": [
 		{

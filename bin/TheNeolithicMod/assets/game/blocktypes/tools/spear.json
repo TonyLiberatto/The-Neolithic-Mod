@@ -6,7 +6,6 @@
 		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
 		{ code: "side", loadFromProperties: "abstract/horizontalorientation" },
 	],
-	shapeinventory:  {base: "item/tool/branch-spear" },	
 	shapeByType: { 
 		"*-north": { base: "block/placedtool/spear-placed", rotateY: 0 },
 		"*-east": { base: "block/placedtool/spear-placed", rotateY: 270 },

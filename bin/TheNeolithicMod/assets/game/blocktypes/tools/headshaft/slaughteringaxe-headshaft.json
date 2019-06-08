@@ -534,10 +534,6 @@
 		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
 		{ code: "side", loadFromProperties: "abstract/horizontalorientation" },
 	],
-	shapeinventoryByType: {		
-		"*-bone-north": {base: "item/tool/primitive-slaughteringaxe"},
-		"*-north": {base: "item/tool/branch-slaughteringaxe" },
-	},
 	shapeByType: { 
 		"*-bone-north": { base: "block/placedtool/bone-slaughteringaxe", rotateY: 0 },
 		"*-bone-east": { base: "block/placedtool/bone-slaughteringaxe", rotateY: 270 },

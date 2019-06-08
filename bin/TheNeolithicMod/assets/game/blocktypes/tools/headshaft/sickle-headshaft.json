@@ -535,7 +535,7 @@
 		{ code: "side", loadFromProperties: "abstract/horizontalorientation" },
 	],
 	shapeinventoryByType: {		
-		"*-bone-north": {base: "item/tool/primitive-sickle"},
+		"*-bone-north": {base: "item/tool/bone-sickle"},
 		"*-north": {base: "item/tool/branch-sickle" },
 	},
 	shapeByType: { 

@@ -6,7 +6,7 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-		"stone": "item/tool/material/flint"
+		
 	},
 	"elements": [
 		{

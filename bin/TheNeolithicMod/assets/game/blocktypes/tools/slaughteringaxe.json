@@ -6,7 +6,6 @@
 		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
 		{ code: "side", loadFromProperties: "abstract/horizontalorientation" },
 	],
-	shapeinventory: { base: "item/tool/slaughtering-axe" },
 	shapeByType: { 
 		"*-bone-*-north": { base: "block/placedtool/bone-slaughteringaxe", rotateY: 0 },
 		"*-bone-*-east": { base: "block/placedtool/bone-slaughteringaxe", rotateY: 270 },

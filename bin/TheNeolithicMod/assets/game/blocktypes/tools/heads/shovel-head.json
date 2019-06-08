@@ -185,7 +185,7 @@
 		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint",  ] },
 		{ code: "side", loadFromProperties: "abstract/horizontalorientation" }
 	],
-	shapeinventory: { base: "item/tool/primitive-shovel" },
+	shapeinventory: { base: "item/tool/bone-shovel" },
 	shapeByType: { 
 		"*-north": { base: "block/placedtool/shovel-bone", rotateY: 0 },
 		"*-east": { base: "block/placedtool/shovel-bone", rotateY: 270 },

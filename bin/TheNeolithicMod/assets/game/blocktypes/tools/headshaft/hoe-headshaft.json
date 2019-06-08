@@ -535,7 +535,7 @@
 		{ code: "side", loadFromProperties: "abstract/horizontalorientation" },
 	],
 	shapeinventoryByType: {		
-		"*-bone-north": {base: "item/tool/primitive-hoe"},
+		"*-bone-north": {base: "item/tool/bone-hoe"},
 		"*-north": {base: "item/tool/branch-hoe" },
 	},
 	shapeByType: { 

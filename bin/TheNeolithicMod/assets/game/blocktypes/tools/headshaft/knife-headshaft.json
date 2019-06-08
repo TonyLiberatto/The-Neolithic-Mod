@@ -535,7 +535,7 @@
 		{ code: "side", loadFromProperties: "abstract/horizontalorientation" },
 	],
 	shapeinventoryByType: {		
-		"*-bone-north": {base: "item/tool/primitive-knife"},
+		"*-bone-north": {base: "item/tool/bone-knife"},
 		"*-north": {base: "item/tool/branch-knife" },
 	},
 	shapeByType: { 

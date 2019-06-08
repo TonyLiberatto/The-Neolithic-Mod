@@ -185,7 +185,7 @@
 		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint",  ] },
 		{ code: "side", loadFromProperties: "abstract/horizontalorientation" }
 	],
-	shapeinventory: { base: "item/tool/primitive-adze" },
+	shapeinventory: { base: "item/tool/bone-adze" },
 	shapeByType: { 
 		"*-north": { base: "block/placedtool/adze-bone", rotateY: 0 },
 		"*-east": { base: "block/placedtool/adze-bone", rotateY: 270 },
