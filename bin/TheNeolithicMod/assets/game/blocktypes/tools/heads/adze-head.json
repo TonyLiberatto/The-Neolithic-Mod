@@ -1,232 +1,70 @@
 {
 	code: "adze-head",
-	behaviors: [ 
-		{name: "HorizontalOrientable" },
+	behaviors: [
+		{ name: "HorizontalOrientable" },
 		{
-      name: "BlockSwapBehavior",
-      properties: {
-        "swapBlocks": [
-          [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-granite-acacia-north", "game:adze-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-andesite-acacia-north", "game:adze-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-basalt-acacia-north", "game:adze-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-obsidian-acacia-north", "game:adze-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-flint-acacia-north", "game:adze-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-peridotite-acacia-north", "game:adze-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-granite-birch-north", "game:adze-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-andesite-birch-north", "game:adze-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-basalt-birch-north", "game:adze-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-obsidian-birch-north", "game:adze-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-flint-birch-north", "game:adze-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-peridotite-birch-north", "game:adze-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-granite-kapok-north", "game:adze-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-andesite-kapok-north", "game:adze-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-basalt-kapok-north", "game:adze-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-obsidian-kapok-north", "game:adze-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-flint-kapok-north", "game:adze-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-peridotite-kapok-north", "game:adze-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-granite-maple-north", "game:adze-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-andesite-maple-north", "game:adze-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-basalt-maple-north", "game:adze-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-obsidian-maple-north", "game:adze-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-flint-maple-north", "game:adze-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-peridotite-maple-north", "game:adze-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-granite-oak-north", "game:adze-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-andesite-oak-north", "game:adze-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-basalt-oak-north", "game:adze-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-obsidian-oak-north", "game:adze-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-flint-oak-north", "game:adze-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-peridotite-oak-north", "game:adze-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-granite-pine-north", "game:adze-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-andesite-pine-north", "game:adze-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-basalt-pine-north", "game:adze-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-obsidian-pine-north", "game:adze-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-flint-pine-north", "game:adze-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-peridotite-pine-north", "game:adze-head-peridotite-north",  1 ],
-		  
-		  
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-granite-acacia-south", "game:adze-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-andesite-acacia-south", "game:adze-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-basalt-acacia-south", "game:adze-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-obsidian-acacia-south", "game:adze-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-flint-acacia-south", "game:adze-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-peridotite-acacia-south", "game:adze-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-granite-birch-south", "game:adze-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-andesite-birch-south", "game:adze-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-basalt-birch-south", "game:adze-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-obsidian-birch-south", "game:adze-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-flint-birch-south", "game:adze-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-peridotite-birch-south", "game:adze-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-granite-kapok-south", "game:adze-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-andesite-kapok-south", "game:adze-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-basalt-kapok-south", "game:adze-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-obsidian-kapok-south", "game:adze-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-flint-kapok-south", "game:adze-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-peridotite-kapok-south", "game:adze-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-granite-maple-south", "game:adze-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-andesite-maple-south", "game:adze-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-basalt-maple-south", "game:adze-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-obsidian-maple-south", "game:adze-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-flint-maple-south", "game:adze-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-peridotite-maple-south", "game:adze-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-granite-oak-south", "game:adze-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-andesite-oak-south", "game:adze-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-basalt-oak-south", "game:adze-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-obsidian-oak-south", "game:adze-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-flint-oak-south", "game:adze-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-peridotite-oak-south", "game:adze-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-granite-pine-south", "game:adze-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-andesite-pine-south", "game:adze-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-basalt-pine-south", "game:adze-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-obsidian-pine-south", "game:adze-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-flint-pine-south", "game:adze-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-peridotite-pine-south", "game:adze-head-peridotite-south",  1 ],
-		  
-		  
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-granite-acacia-east", "game:adze-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-andesite-acacia-east", "game:adze-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-basalt-acacia-east", "game:adze-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-obsidian-acacia-east", "game:adze-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-flint-acacia-east", "game:adze-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-peridotite-acacia-east", "game:adze-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-granite-birch-east", "game:adze-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-andesite-birch-east", "game:adze-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-basalt-birch-east", "game:adze-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-obsidian-birch-east", "game:adze-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-flint-birch-east", "game:adze-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-peridotite-birch-east", "game:adze-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-granite-kapok-east", "game:adze-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-andesite-kapok-east", "game:adze-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-basalt-kapok-east", "game:adze-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-obsidian-kapok-east", "game:adze-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-flint-kapok-east", "game:adze-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-peridotite-kapok-east", "game:adze-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-granite-maple-east", "game:adze-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-andesite-maple-east", "game:adze-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-basalt-maple-east", "game:adze-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-obsidian-maple-east", "game:adze-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-flint-maple-east", "game:adze-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-peridotite-maple-east", "game:adze-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-granite-oak-east", "game:adze-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-andesite-oak-east", "game:adze-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-basalt-oak-east", "game:adze-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-obsidian-oak-east", "game:adze-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-flint-oak-east", "game:adze-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-peridotite-oak-east", "game:adze-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-granite-pine-east", "game:adze-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-andesite-pine-east", "game:adze-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-basalt-pine-east", "game:adze-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-obsidian-pine-east", "game:adze-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-flint-pine-east", "game:adze-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-peridotite-pine-east", "game:adze-head-peridotite-east",  1 ],
-		  
-		  
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-granite-acacia-west", "game:adze-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-andesite-acacia-west", "game:adze-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-basalt-acacia-west", "game:adze-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-obsidian-acacia-west", "game:adze-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-flint-acacia-west", "game:adze-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-peridotite-acacia-west", "game:adze-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-granite-birch-west", "game:adze-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-andesite-birch-west", "game:adze-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-basalt-birch-west", "game:adze-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-obsidian-birch-west", "game:adze-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-flint-birch-west", "game:adze-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-peridotite-birch-west", "game:adze-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-granite-kapok-west", "game:adze-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-andesite-kapok-west", "game:adze-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-basalt-kapok-west", "game:adze-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-obsidian-kapok-west", "game:adze-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-flint-kapok-west", "game:adze-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-peridotite-kapok-west", "game:adze-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-granite-maple-west", "game:adze-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-andesite-maple-west", "game:adze-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-basalt-maple-west", "game:adze-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-obsidian-maple-west", "game:adze-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-flint-maple-west", "game:adze-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-peridotite-maple-west", "game:adze-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-granite-oak-west", "game:adze-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-andesite-oak-west", "game:adze-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-basalt-oak-west", "game:adze-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-obsidian-oak-west", "game:adze-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-flint-oak-west", "game:adze-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-peridotite-oak-west", "game:adze-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-granite-pine-west", "game:adze-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-andesite-pine-west", "game:adze-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-basalt-pine-west", "game:adze-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-obsidian-pine-west", "game:adze-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-flint-pine-west", "game:adze-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-peridotite-pine-west", "game:adze-head-peridotite-west",  1 ],
-		  
-		  
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-granite-bone-north", "game:adze-head-granite-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-andesite-bone-north", "game:adze-head-andesite-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-basalt-bone-north", "game:adze-head-basalt-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-obsidian-bone-north", "game:adze-head-obsidian-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-flint-bone-north", "game:adze-head-flint-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-peridotite-bone-north", "game:adze-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-granite-bone-south", "game:adze-head-granite-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-andesite-bone-south", "game:adze-head-andesite-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-basalt-bone-south", "game:adze-head-basalt-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-obsidian-bone-south", "game:adze-head-obsidian-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-flint-bone-south", "game:adze-head-flint-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-peridotite-bone-south", "game:adze-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-granite-bone-east", "game:adze-head-granite-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-andesite-bone-east", "game:adze-head-andesite-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-basalt-bone-east", "game:adze-head-basalt-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-obsidian-bone-east", "game:adze-head-obsidian-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-flint-bone-east", "game:adze-head-flint-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-peridotite-bone-east", "game:adze-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-granite-bone-west", "game:adze-head-granite-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-andesite-bone-west", "game:adze-head-andesite-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-basalt-bone-west", "game:adze-head-basalt-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-obsidian-bone-west", "game:adze-head-obsidian-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-flint-bone-west", "game:adze-head-flint-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:adze-headshaft-peridotite-bone-west", "game:adze-head-peridotite-west",  1 ],
-        ],
-      },
-    },
-		],
+			name: "BlockSwapBehavior",
+			properties: {
+				"swapBlocks": [
+					[ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:adze-headshaft-{stone}-acacia-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:adze-headshaft-{stone}-birch-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:adze-headshaft-{stone}-kapok-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:adze-headshaft-{stone}-maple-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:adze-headshaft-{stone}-oak-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:adze-headshaft-{stone}-pine-{side}", 1 ],
+					[ "neolithicmod:animal-large-bone", "game:adze-headshaft-{stone}-bone-{side}", 1 ],
+				],
+			},
+		},
+	],
 	variantgroups: [
-		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ] },
-		{ code: "side", loadFromProperties: "abstract/horizontalorientation" }
+		{
+			code: "stone",
+			states: [ "granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ]
+		},
+		{
+			code: "side",
+			loadFromProperties: "abstract/horizontalorientation"
+		}
 	],
 	shapeinventory: { base: "item/tool/bone-adze" },
-	shapeByType: { 
-		"*-north": { base: "block/placedtool/adze-bone", rotateY: 0 },
-		"*-east": { base: "block/placedtool/adze-bone", rotateY: 270 },
-		"*-south": { base: "block/placedtool/adze-bone", rotateY: 180 },
-		"*-west": { base: "block/placedtool/adze-bone", rotateY: 90 },
+	shapeByType: {
+		"*-north": {
+			base: "block/placedtool/adze-bone",
+			rotateY: 0
 		},
+		"*-east": {
+			base: "block/placedtool/adze-bone",
+			rotateY: 270
+		},
+		"*-south": {
+			base: "block/placedtool/adze-bone",
+			rotateY: 180
+		},
+		"*-west": {
+			base: "block/placedtool/adze-bone",
+			rotateY: 90
+		},
+	},
 	textures: {
 		"stone": { base: "item/tool/material/{stone}" },
 		"shaft": { base: "block/transparent" },
 		"cordage": { base: "block/transparent" },
 	},
-	creativeinventory: { "general": ["*-north"], "items": ["*-north"], "tools": ["*"], "neolithicitems": ["*-north"] },
-	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+	creativeinventory: {
+		"general": [ "*-north" ],
+		"items": [ "*-north" ],
+		"tools": [ "*" ],
+		"neolithicitems": [ "*-north" ]
+	},
+	collisionselectionbox: {
+		x1: 0,
+		y1: 0,
+		z1: 0,
+		x2: 1,
+		y2: 0.1,
+		z2: 1
+	},
 	blockmaterial: "Wood",
 	replaceable: 900,
 	resistance: 1.5,
@@ -245,25 +83,61 @@
 	},
 	materialDensity: 600,
 	fpHandTransform: {
-		translation: { x: 0.4, y: -0.4, z: 0 },
-		rotation: { x: 25, y: 0, z: 86 },
+		translation: {
+			x: 0.4,
+			y: -0.4,
+			z: 0
+		},
+		rotation: {
+			x: 25,
+			y: 0,
+			z: 86
+		},
 		scale: 2.5
 	},
 	guiTransform: {
 		rotate: false,
-		translation: { x: 3, y: 0, z: 120 },
-		rotation: { x: -52, y: -131, z: -180 },
-		origin: { x: 0.55, y: 1.1, z: 0.1 },
+		translation: {
+			x: 3,
+			y: 0,
+			z: 120
+		},
+		rotation: {
+			x: -52,
+			y: -131,
+			z: -180
+		},
+		origin: {
+			x: 0.55,
+			y: 1.1,
+			z: 0.1
+		},
 		scale: 3.4
 	},
 	groundTransform: {
-		translation: { x: 0.046875, y: 0, z: 0 },
-		rotation: { x: 0, y: 0, z: 0 },
+		translation: {
+			x: 0.046875,
+			y: 0,
+			z: 0
+		},
+		rotation: {
+			x: 0,
+			y: 0,
+			z: 0
+		},
 		scale: 2.5
 	},
 	tpHandTransform: {
-		translation: { x: -0.3, y: -0.8, z: -0.5 },
-		rotation: { x: 90, y: -49, z: 0 },
+		translation: {
+			x: -0.3,
+			y: -0.8,
+			z: -0.5
+		},
+		rotation: {
+			x: 90,
+			y: -49,
+			z: 0
+		},
 		scale: 1
 	}
 }

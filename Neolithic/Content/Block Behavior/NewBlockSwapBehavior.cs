@@ -9,35 +9,49 @@ using Vintagestory.API.MathTools;
 
 namespace TheNeolithicMod
 {
+    class SwapSystem : ModSystem
+    {
+        public Dictionary<string, object[]> SwapPairs { get; set; } = new Dictionary<string, object[]>();
+    }
+
     class NewBlockSwapBehavior : BlockBehavior
     {
         const int floc = 2;
-        Dictionary<string, object[]> swapPairs = new Dictionary<string, object[]>();
+        ICoreAPI api;
 
-        public NewBlockSwapBehavior(Block block) : base(block){}
+        public NewBlockSwapBehavior(Block block) : base(block) { }
 
-        public override void Initialize(JsonObject properties)
+        public override void OnLoaded(ICoreAPI api)
         {
+            base.OnLoaded(api);
+            this.api = api;
+            PostOLInit(block.GetBehavior<NewBlockSwapBehavior>().properties);
+        }
+
+        public void PostOLInit(JsonObject properties)
+        {
+            SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
             object[][] objects = properties["swapBlocks"].AsObject<object[][]>();
             if (objects == null) return;
             foreach (var array in objects)
             {
                 List<object> list = new List<object>();
-                List<object> keylist = new List<object>();
                 for (int i = 0; i < array.Length; i++)
                 {
-                    keylist.Add(array[i]);
-                    if (i != floc) list.Add(array[i]);
+                    list.Add(array[i]);
                 }
-                swapPairs.Add(GetKey(keylist), list.ToArray());
+                if (!swapSystem.SwapPairs.ContainsKey(GetKey(list)) && !list.Any((a) => a.ToString().Contains("{")))
+                {
+                    swapSystem.SwapPairs.Add(GetKey(list), list.ToArray());
+                }
             }
-            
+
         }
         public string GetKey(List<object> objects)
         {
             string combined = "";
             combined += (string)objects[0];
-            combined += (string)objects[2];
+            combined += block.Code.ToString();
             return GameMath.Md5Hash(combined);
         }
         public string GetKey(List<string> objects)
@@ -50,16 +64,21 @@ namespace TheNeolithicMod
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {
+            SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
             handling = EnumHandling.PreventDefault;
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
             BlockPos pos = blockSel.Position;
-            List<string> things = new List<string>() { slot.Itemstack.Collectible.Code.ToString(), blockSel.Position.GetBlock(world).Code.ToString()};
+            List<string> things = new List<string>() { slot.Itemstack.Collectible.Code.ToString(), blockSel.Position.GetBlock(world).Code.ToString() };
             string key = GetKey(things);
 
             if (slot.Itemstack != null)
             {
-                if (swapPairs.TryGetValue(key, out object[] values))
+                if (swapSystem.SwapPairs.TryGetValue(key, out object[] values))
                 {
+                    if (values.Length > 3 && values[2].ToString() != block.Code.ToString())
+                    {
+                        return true;
+                    }
                     AssetLocation asset = slot.Itemstack.Collectible.Code;
                     if (asset.ToString() == values[0].ToString())
                     {
@@ -68,7 +87,8 @@ namespace TheNeolithicMod
                         AssetLocation toAsset = new AssetLocation(toCode);
                         Block toBlock = toAsset.GetBlock(world.Api);
 
-                        int count = Convert.ToInt32(values.Last());
+                        int count = 0;
+                        try { count = Convert.ToInt32(values.Last()); } catch (Exception) { }
 
                         if (count > 0 && slot.Itemstack.StackSize >= count)
                         {
@@ -79,7 +99,7 @@ namespace TheNeolithicMod
                         {
                             world.BlockAccessor.SetBlock(toBlock.BlockId, pos);
                         }
-                        
+
                         if (world.Side.IsServer())
                         {
                             world.SpawnCubeParticles(pos, pos.ToVec3d().Add(0.5, 0.5, 0.5), 2, 16);
