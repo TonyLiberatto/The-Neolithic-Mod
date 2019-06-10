@@ -10,7 +10,7 @@
         { code:"materialtype", states: ["raw", "burned"] },
     ],
     attributesByType: {
-        "*-burned": {
+        "*-blue-burned": {
             "requiredUnits": 400,
             "fillHeight": 3,
 			"fillQuadsByLevel": [
@@ -19,7 +19,37 @@
 				{ x1: 5, z1: 4, x2: 12, z2: 11 },
 			],
             "drop": { class:"Block", code: "bowlstamp-{metal}" }
-			}
+			},
+		"*-brown-burned": {
+            "requiredUnits": 400,
+            "fillHeight": 3,
+			"fillQuadsByLevel": [
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+			],
+            "drop": { class:"Block", code: "bowlstamp-{metal}" }
+			},
+		"*-fire-burned": {
+            "requiredUnits": 400,
+            "fillHeight": 3,
+			"fillQuadsByLevel": [
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+			],
+            "drop": { class:"Block", code: "bowlstamp-{metal}" }
+			},
+		"*-red-burned": {
+            "requiredUnits": 400,
+            "fillHeight": 3,
+			"fillQuadsByLevel": [
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+			],
+            "drop": { class:"Block", code: "bowlstamp-{metal}" }
+			},
         },
 	entityClassByType: {
 		"*-burned": "ToolMold",

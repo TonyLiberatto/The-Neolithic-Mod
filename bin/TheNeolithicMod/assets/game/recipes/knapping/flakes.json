@@ -1,5 +1,5 @@
 {
-	ingredient: { type: "item", code: "stone-obsidian" },
+	ingredient: { type: "item", code: "stone-*", name: "rock", allowedVariants: [ "obsidian", "flint"] },
 	pattern: [
 		"#_#___#_#_",
 		"#_#___#_#_",
@@ -13,5 +13,5 @@
 		"__________"
 	],
 	name: "Obsidian flakes",
-	output: { type: "block", code: "sword-flakes-obsidian-north" }
+	output: { type: "block", code: "sword-flakes-{rock}-north" }
 }

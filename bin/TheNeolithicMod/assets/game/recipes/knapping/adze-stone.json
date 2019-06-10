@@ -1,5 +1,5 @@
 {
-	ingredient: { type: "item", code: "stone-*", name: "rock", allowedVariants: ["granite", "andesite", "basalt", "obsidian", "flint"] },
+	ingredient: { type: "item", code: "stone-*", name: "rock", allowedVariants: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite"] },
 	pattern: [
 		"___#__#___",
 		"___#__#___",
