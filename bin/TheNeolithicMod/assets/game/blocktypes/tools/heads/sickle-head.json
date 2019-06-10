@@ -1,232 +1,70 @@
 {
 	code: "sickle-head",
-	behaviors: [ 
-		{name: "HorizontalOrientable" },
+	behaviors: [
+		{ name: "HorizontalOrientable" },
 		{
-      name: "BlockSwapBehavior",
-      properties: {
-        "swapBlocks": [
-          [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-granite-acacia-north", "game:sickle-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-andesite-acacia-north", "game:sickle-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-basalt-acacia-north", "game:sickle-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-obsidian-acacia-north", "game:sickle-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-flint-acacia-north", "game:sickle-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-peridotite-acacia-north", "game:sickle-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-granite-birch-north", "game:sickle-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-andesite-birch-north", "game:sickle-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-basalt-birch-north", "game:sickle-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-obsidian-birch-north", "game:sickle-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-flint-birch-north", "game:sickle-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-peridotite-birch-north", "game:sickle-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-granite-kapok-north", "game:sickle-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-andesite-kapok-north", "game:sickle-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-basalt-kapok-north", "game:sickle-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-obsidian-kapok-north", "game:sickle-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-flint-kapok-north", "game:sickle-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-peridotite-kapok-north", "game:sickle-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-granite-maple-north", "game:sickle-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-andesite-maple-north", "game:sickle-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-basalt-maple-north", "game:sickle-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-obsidian-maple-north", "game:sickle-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-flint-maple-north", "game:sickle-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-peridotite-maple-north", "game:sickle-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-granite-oak-north", "game:sickle-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-andesite-oak-north", "game:sickle-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-basalt-oak-north", "game:sickle-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-obsidian-oak-north", "game:sickle-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-flint-oak-north", "game:sickle-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-peridotite-oak-north", "game:sickle-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-granite-pine-north", "game:sickle-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-andesite-pine-north", "game:sickle-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-basalt-pine-north", "game:sickle-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-obsidian-pine-north", "game:sickle-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-flint-pine-north", "game:sickle-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-peridotite-pine-north", "game:sickle-head-peridotite-north",  1 ],
-		  
-		  
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-granite-acacia-south", "game:sickle-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-andesite-acacia-south", "game:sickle-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-basalt-acacia-south", "game:sickle-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-obsidian-acacia-south", "game:sickle-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-flint-acacia-south", "game:sickle-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-peridotite-acacia-south", "game:sickle-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-granite-birch-south", "game:sickle-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-andesite-birch-south", "game:sickle-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-basalt-birch-south", "game:sickle-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-obsidian-birch-south", "game:sickle-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-flint-birch-south", "game:sickle-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-peridotite-birch-south", "game:sickle-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-granite-kapok-south", "game:sickle-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-andesite-kapok-south", "game:sickle-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-basalt-kapok-south", "game:sickle-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-obsidian-kapok-south", "game:sickle-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-flint-kapok-south", "game:sickle-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-peridotite-kapok-south", "game:sickle-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-granite-maple-south", "game:sickle-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-andesite-maple-south", "game:sickle-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-basalt-maple-south", "game:sickle-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-obsidian-maple-south", "game:sickle-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-flint-maple-south", "game:sickle-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-peridotite-maple-south", "game:sickle-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-granite-oak-south", "game:sickle-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-andesite-oak-south", "game:sickle-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-basalt-oak-south", "game:sickle-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-obsidian-oak-south", "game:sickle-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-flint-oak-south", "game:sickle-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-peridotite-oak-south", "game:sickle-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-granite-pine-south", "game:sickle-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-andesite-pine-south", "game:sickle-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-basalt-pine-south", "game:sickle-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-obsidian-pine-south", "game:sickle-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-flint-pine-south", "game:sickle-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-peridotite-pine-south", "game:sickle-head-peridotite-south",  1 ],
-		  
-		  
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-granite-acacia-east", "game:sickle-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-andesite-acacia-east", "game:sickle-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-basalt-acacia-east", "game:sickle-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-obsidian-acacia-east", "game:sickle-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-flint-acacia-east", "game:sickle-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-peridotite-acacia-east", "game:sickle-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-granite-birch-east", "game:sickle-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-andesite-birch-east", "game:sickle-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-basalt-birch-east", "game:sickle-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-obsidian-birch-east", "game:sickle-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-flint-birch-east", "game:sickle-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-peridotite-birch-east", "game:sickle-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-granite-kapok-east", "game:sickle-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-andesite-kapok-east", "game:sickle-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-basalt-kapok-east", "game:sickle-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-obsidian-kapok-east", "game:sickle-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-flint-kapok-east", "game:sickle-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-peridotite-kapok-east", "game:sickle-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-granite-maple-east", "game:sickle-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-andesite-maple-east", "game:sickle-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-basalt-maple-east", "game:sickle-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-obsidian-maple-east", "game:sickle-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-flint-maple-east", "game:sickle-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-peridotite-maple-east", "game:sickle-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-granite-oak-east", "game:sickle-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-andesite-oak-east", "game:sickle-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-basalt-oak-east", "game:sickle-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-obsidian-oak-east", "game:sickle-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-flint-oak-east", "game:sickle-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-peridotite-oak-east", "game:sickle-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-granite-pine-east", "game:sickle-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-andesite-pine-east", "game:sickle-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-basalt-pine-east", "game:sickle-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-obsidian-pine-east", "game:sickle-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-flint-pine-east", "game:sickle-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-peridotite-pine-east", "game:sickle-head-peridotite-east",  1 ],
-		  
-		  
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-granite-acacia-west", "game:sickle-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-andesite-acacia-west", "game:sickle-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-basalt-acacia-west", "game:sickle-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-obsidian-acacia-west", "game:sickle-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-flint-acacia-west", "game:sickle-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-peridotite-acacia-west", "game:sickle-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-granite-birch-west", "game:sickle-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-andesite-birch-west", "game:sickle-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-basalt-birch-west", "game:sickle-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-obsidian-birch-west", "game:sickle-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-flint-birch-west", "game:sickle-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-peridotite-birch-west", "game:sickle-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-granite-kapok-west", "game:sickle-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-andesite-kapok-west", "game:sickle-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-basalt-kapok-west", "game:sickle-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-obsidian-kapok-west", "game:sickle-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-flint-kapok-west", "game:sickle-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-peridotite-kapok-west", "game:sickle-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-granite-maple-west", "game:sickle-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-andesite-maple-west", "game:sickle-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-basalt-maple-west", "game:sickle-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-obsidian-maple-west", "game:sickle-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-flint-maple-west", "game:sickle-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-peridotite-maple-west", "game:sickle-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-granite-oak-west", "game:sickle-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-andesite-oak-west", "game:sickle-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-basalt-oak-west", "game:sickle-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-obsidian-oak-west", "game:sickle-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-flint-oak-west", "game:sickle-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-peridotite-oak-west", "game:sickle-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-granite-pine-west", "game:sickle-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-andesite-pine-west", "game:sickle-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-basalt-pine-west", "game:sickle-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-obsidian-pine-west", "game:sickle-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-flint-pine-west", "game:sickle-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-peridotite-pine-west", "game:sickle-head-peridotite-west",  1 ],
-		  
-		  
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-granite-bone-north", "game:sickle-head-granite-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-andesite-bone-north", "game:sickle-head-andesite-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-basalt-bone-north", "game:sickle-head-basalt-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-obsidian-bone-north", "game:sickle-head-obsidian-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-flint-bone-north", "game:sickle-head-flint-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-peridotite-bone-north", "game:sickle-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-granite-bone-south", "game:sickle-head-granite-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-andesite-bone-south", "game:sickle-head-andesite-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-basalt-bone-south", "game:sickle-head-basalt-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-obsidian-bone-south", "game:sickle-head-obsidian-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-flint-bone-south", "game:sickle-head-flint-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-peridotite-bone-south", "game:sickle-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-granite-bone-east", "game:sickle-head-granite-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-andesite-bone-east", "game:sickle-head-andesite-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-basalt-bone-east", "game:sickle-head-basalt-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-obsidian-bone-east", "game:sickle-head-obsidian-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-flint-bone-east", "game:sickle-head-flint-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-peridotite-bone-east", "game:sickle-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-granite-bone-west", "game:sickle-head-granite-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-andesite-bone-west", "game:sickle-head-andesite-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-basalt-bone-west", "game:sickle-head-basalt-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-obsidian-bone-west", "game:sickle-head-obsidian-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-flint-bone-west", "game:sickle-head-flint-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:sickle-headshaft-peridotite-bone-west", "game:sickle-head-peridotite-west",  1 ],
-        ],
-      },
-    },
-		],
+			name: "BlockSwapBehavior",
+			properties: {
+				"swapBlocks": [
+					[ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:sickle-headshaft-{stone}-acacia-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:sickle-headshaft-{stone}-birch-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:sickle-headshaft-{stone}-kapok-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:sickle-headshaft-{stone}-maple-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:sickle-headshaft-{stone}-oak-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:sickle-headshaft-{stone}-pine-{side}", 1 ],
+					[ "neolithicmod:animal-large-bone", "game:sickle-headshaft-{stone}-bone-{side}", 1 ],
+				],
+			},
+		},
+	],
 	variantgroups: [
-		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ] },
-		{ code: "side", loadFromProperties: "abstract/horizontalorientation" }
+		{
+			code: "stone",
+			states: [ "granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ]
+		},
+		{
+			code: "side",
+			loadFromProperties: "abstract/horizontalorientation"
+		}
 	],
 	shapeinventory: { base: "item/tool/bone-sickle" },
-	shapeByType: { 
-		"*-north": { base: "block/placedtool/sickle-bone", rotateY: 0 },
-		"*-east": { base: "block/placedtool/sickle-bone", rotateY: 270 },
-		"*-south": { base: "block/placedtool/sickle-bone", rotateY: 180 },
-		"*-west": { base: "block/placedtool/sickle-bone", rotateY: 90 },
+	shapeByType: {
+		"*-north": {
+			base: "block/placedtool/sickle-bone",
+			rotateY: 0
 		},
+		"*-east": {
+			base: "block/placedtool/sickle-bone",
+			rotateY: 270
+		},
+		"*-south": {
+			base: "block/placedtool/sickle-bone",
+			rotateY: 180
+		},
+		"*-west": {
+			base: "block/placedtool/sickle-bone",
+			rotateY: 90
+		},
+	},
 	textures: {
 		"stone": { base: "item/tool/material/{stone}" },
 		"shaft": { base: "block/transparent" },
 		"cordage": { base: "block/transparent" },
 	},
-	creativeinventory: { "general": ["*-north"], "items": ["*-north"], "tools": ["*"], "neolithicitems": ["*-north"] },
-	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+	creativeinventory: {
+		"general": [ "*-north" ],
+		"items": [ "*-north" ],
+		"tools": [ "*" ],
+		"neolithicitems": [ "*-north" ]
+	},
+	collisionselectionbox: {
+		x1: 0,
+		y1: 0,
+		z1: 0,
+		x2: 1,
+		y2: 0.1,
+		z2: 1
+	},
 	blockmaterial: "Wood",
 	replaceable: 900,
 	resistance: 1.5,
@@ -245,25 +83,61 @@
 	},
 	materialDensity: 600,
 	fpHandTransform: {
-		translation: { x: 0.4, y: -0.4, z: 0 },
-		rotation: { x: 25, y: 0, z: 86 },
+		translation: {
+			x: 0.4,
+			y: -0.4,
+			z: 0
+		},
+		rotation: {
+			x: 25,
+			y: 0,
+			z: 86
+		},
 		scale: 2.5
 	},
 	guiTransform: {
 		rotate: false,
-		translation: { x: 3, y: 0, z: 120 },
-		rotation: { x: -52, y: -131, z: -180 },
-		origin: { x: 0.55, y: 1.1, z: 0.1 },
+		translation: {
+			x: 3,
+			y: 0,
+			z: 120
+		},
+		rotation: {
+			x: -52,
+			y: -131,
+			z: -180
+		},
+		origin: {
+			x: 0.55,
+			y: 1.1,
+			z: 0.1
+		},
 		scale: 3.4
 	},
 	groundTransform: {
-		translation: { x: 0.046875, y: 0, z: 0 },
-		rotation: { x: 0, y: 0, z: 0 },
+		translation: {
+			x: 0.046875,
+			y: 0,
+			z: 0
+		},
+		rotation: {
+			x: 0,
+			y: 0,
+			z: 0
+		},
 		scale: 2.5
 	},
 	tpHandTransform: {
-		translation: { x: -0.3, y: -0.8, z: -0.5 },
-		rotation: { x: 90, y: -49, z: 0 },
+		translation: {
+			x: -0.3,
+			y: -0.8,
+			z: -0.5
+		},
+		rotation: {
+			x: 90,
+			y: -49,
+			z: 0
+		},
 		scale: 1
 	}
 }

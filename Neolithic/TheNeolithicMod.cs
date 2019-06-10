@@ -3,6 +3,7 @@ using Vintagestory.API.Common;
 using Vintagestory.GameContent;
 using Vintagestory;
 using Vintagestory.Client;
+using System;
 
 [assembly: ModInfo("The Neolithic Mod",
     Description  = "This mod Requires New World Creation. Adds more Animals, Plants, blocks and tools",
@@ -35,7 +36,9 @@ namespace TheNeolithicMod
             base.Start(api);
 
             api.RegisterBlockBehaviorClass("BlockCreateBehavior", typeof(BlockCreateBehavior));
+
             api.RegisterBlockBehaviorClass("BlockSwapBehavior", typeof(NewBlockSwapBehavior));
+            
             api.RegisterBlockBehaviorClass("LampConnectorBehavior", typeof(LampConnectorBehavior));
             api.RegisterBlockBehaviorClass("LampPostBehavior", typeof(LampPostBehavior));
             api.RegisterBlockBehaviorClass("RotateNinety", typeof(RotateNinety));

@@ -1,233 +1,71 @@
 {
 	code: "slaughteringaxe-head",
-	behaviors: [ 
-		{name: "HorizontalOrientable" },
+	behaviors: [
+		{ name: "HorizontalOrientable" },
 		{
-      name: "BlockSwapBehavior",
-      properties: {
-        "swapBlocks": [
-          [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-granite-acacia-north", "game:slaughteringaxe-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-andesite-acacia-north", "game:slaughteringaxe-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-basalt-acacia-north", "game:slaughteringaxe-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-acacia-north", "game:slaughteringaxe-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-flint-acacia-north", "game:slaughteringaxe-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-acacia-north", "game:slaughteringaxe-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-granite-birch-north", "game:slaughteringaxe-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-andesite-birch-north", "game:slaughteringaxe-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-basalt-birch-north", "game:slaughteringaxe-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-birch-north", "game:slaughteringaxe-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-flint-birch-north", "game:slaughteringaxe-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-birch-north", "game:slaughteringaxe-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-granite-kapok-north", "game:slaughteringaxe-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-andesite-kapok-north", "game:slaughteringaxe-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-basalt-kapok-north", "game:slaughteringaxe-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-kapok-north", "game:slaughteringaxe-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-flint-kapok-north", "game:slaughteringaxe-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-kapok-north", "game:slaughteringaxe-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-granite-maple-north", "game:slaughteringaxe-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-andesite-maple-north", "game:slaughteringaxe-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-basalt-maple-north", "game:slaughteringaxe-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-maple-north", "game:slaughteringaxe-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-flint-maple-north", "game:slaughteringaxe-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-maple-north", "game:slaughteringaxe-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-granite-oak-north", "game:slaughteringaxe-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-andesite-oak-north", "game:slaughteringaxe-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-basalt-oak-north", "game:slaughteringaxe-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-oak-north", "game:slaughteringaxe-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-flint-oak-north", "game:slaughteringaxe-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-oak-north", "game:slaughteringaxe-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-granite-pine-north", "game:slaughteringaxe-head-granite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-andesite-pine-north", "game:slaughteringaxe-head-andesite-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-basalt-pine-north", "game:slaughteringaxe-head-basalt-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-pine-north", "game:slaughteringaxe-head-obsidian-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-flint-pine-north", "game:slaughteringaxe-head-flint-north",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-pine-north", "game:slaughteringaxe-head-peridotite-north",  1 ],
-		  
-		  
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-granite-acacia-south", "game:slaughteringaxe-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-andesite-acacia-south", "game:slaughteringaxe-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-basalt-acacia-south", "game:slaughteringaxe-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-acacia-south", "game:slaughteringaxe-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-flint-acacia-south", "game:slaughteringaxe-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-acacia-south", "game:slaughteringaxe-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-granite-birch-south", "game:slaughteringaxe-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-andesite-birch-south", "game:slaughteringaxe-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-basalt-birch-south", "game:slaughteringaxe-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-birch-south", "game:slaughteringaxe-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-flint-birch-south", "game:slaughteringaxe-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-birch-south", "game:slaughteringaxe-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-granite-kapok-south", "game:slaughteringaxe-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-andesite-kapok-south", "game:slaughteringaxe-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-basalt-kapok-south", "game:slaughteringaxe-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-kapok-south", "game:slaughteringaxe-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-flint-kapok-south", "game:slaughteringaxe-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-kapok-south", "game:slaughteringaxe-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-granite-maple-south", "game:slaughteringaxe-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-andesite-maple-south", "game:slaughteringaxe-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-basalt-maple-south", "game:slaughteringaxe-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-maple-south", "game:slaughteringaxe-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-flint-maple-south", "game:slaughteringaxe-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-maple-south", "game:slaughteringaxe-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-granite-oak-south", "game:slaughteringaxe-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-andesite-oak-south", "game:slaughteringaxe-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-basalt-oak-south", "game:slaughteringaxe-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-oak-south", "game:slaughteringaxe-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-flint-oak-south", "game:slaughteringaxe-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-oak-south", "game:slaughteringaxe-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-granite-pine-south", "game:slaughteringaxe-head-granite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-andesite-pine-south", "game:slaughteringaxe-head-andesite-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-basalt-pine-south", "game:slaughteringaxe-head-basalt-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-pine-south", "game:slaughteringaxe-head-obsidian-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-flint-pine-south", "game:slaughteringaxe-head-flint-south",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-pine-south", "game:slaughteringaxe-head-peridotite-south",  1 ],
-		  
-		  
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-granite-acacia-east", "game:slaughteringaxe-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-andesite-acacia-east", "game:slaughteringaxe-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-basalt-acacia-east", "game:slaughteringaxe-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-acacia-east", "game:slaughteringaxe-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-flint-acacia-east", "game:slaughteringaxe-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-acacia-east", "game:slaughteringaxe-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-granite-birch-east", "game:slaughteringaxe-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-andesite-birch-east", "game:slaughteringaxe-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-basalt-birch-east", "game:slaughteringaxe-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-birch-east", "game:slaughteringaxe-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-flint-birch-east", "game:slaughteringaxe-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-birch-east", "game:slaughteringaxe-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-granite-kapok-east", "game:slaughteringaxe-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-andesite-kapok-east", "game:slaughteringaxe-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-basalt-kapok-east", "game:slaughteringaxe-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-kapok-east", "game:slaughteringaxe-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-flint-kapok-east", "game:slaughteringaxe-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-kapok-east", "game:slaughteringaxe-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-granite-maple-east", "game:slaughteringaxe-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-andesite-maple-east", "game:slaughteringaxe-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-basalt-maple-east", "game:slaughteringaxe-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-maple-east", "game:slaughteringaxe-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-flint-maple-east", "game:slaughteringaxe-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-maple-east", "game:slaughteringaxe-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-granite-oak-east", "game:slaughteringaxe-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-andesite-oak-east", "game:slaughteringaxe-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-basalt-oak-east", "game:slaughteringaxe-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-oak-east", "game:slaughteringaxe-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-flint-oak-east", "game:slaughteringaxe-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-oak-east", "game:slaughteringaxe-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-granite-pine-east", "game:slaughteringaxe-head-granite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-andesite-pine-east", "game:slaughteringaxe-head-andesite-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-basalt-pine-east", "game:slaughteringaxe-head-basalt-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-pine-east", "game:slaughteringaxe-head-obsidian-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-flint-pine-east", "game:slaughteringaxe-head-flint-east",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-pine-east", "game:slaughteringaxe-head-peridotite-east",  1 ],
-		  
-		  
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-granite-acacia-west", "game:slaughteringaxe-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-andesite-acacia-west", "game:slaughteringaxe-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-basalt-acacia-west", "game:slaughteringaxe-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-acacia-west", "game:slaughteringaxe-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-flint-acacia-west", "game:slaughteringaxe-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-acacia-west", "game:slaughteringaxe-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-granite-birch-west", "game:slaughteringaxe-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-andesite-birch-west", "game:slaughteringaxe-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-basalt-birch-west", "game:slaughteringaxe-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-birch-west", "game:slaughteringaxe-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-flint-birch-west", "game:slaughteringaxe-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-birch-west", "game:slaughteringaxe-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-granite-kapok-west", "game:slaughteringaxe-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-andesite-kapok-west", "game:slaughteringaxe-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-basalt-kapok-west", "game:slaughteringaxe-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-kapok-west", "game:slaughteringaxe-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-flint-kapok-west", "game:slaughteringaxe-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-kapok-west", "game:slaughteringaxe-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-granite-maple-west", "game:slaughteringaxe-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-andesite-maple-west", "game:slaughteringaxe-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-basalt-maple-west", "game:slaughteringaxe-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-maple-west", "game:slaughteringaxe-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-flint-maple-west", "game:slaughteringaxe-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-maple-west", "game:slaughteringaxe-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-granite-oak-west", "game:slaughteringaxe-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-andesite-oak-west", "game:slaughteringaxe-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-basalt-oak-west", "game:slaughteringaxe-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-oak-west", "game:slaughteringaxe-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-flint-oak-west", "game:slaughteringaxe-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-oak-west", "game:slaughteringaxe-head-peridotite-west",  1 ],
-		  
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-granite-pine-west", "game:slaughteringaxe-head-granite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-andesite-pine-west", "game:slaughteringaxe-head-andesite-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-basalt-pine-west", "game:slaughteringaxe-head-basalt-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-obsidian-pine-west", "game:slaughteringaxe-head-obsidian-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-flint-pine-west", "game:slaughteringaxe-head-flint-west",  1 ],
-		  [ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-peridotite-pine-west", "game:slaughteringaxe-head-peridotite-west",  1 ],
-		  
-		  
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-granite-bone-north", "game:slaughteringaxe-head-granite-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-andesite-bone-north", "game:slaughteringaxe-head-andesite-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-basalt-bone-north", "game:slaughteringaxe-head-basalt-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-obsidian-bone-north", "game:slaughteringaxe-head-obsidian-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-flint-bone-north", "game:slaughteringaxe-head-flint-north",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-peridotite-bone-north", "game:slaughteringaxe-head-peridotite-north",  1 ],
-		  
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-granite-bone-south", "game:slaughteringaxe-head-granite-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-andesite-bone-south", "game:slaughteringaxe-head-andesite-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-basalt-bone-south", "game:slaughteringaxe-head-basalt-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-obsidian-bone-south", "game:slaughteringaxe-head-obsidian-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-flint-bone-south", "game:slaughteringaxe-head-flint-south",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-peridotite-bone-south", "game:slaughteringaxe-head-peridotite-south",  1 ],
-		  
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-granite-bone-east", "game:slaughteringaxe-head-granite-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-andesite-bone-east", "game:slaughteringaxe-head-andesite-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-basalt-bone-east", "game:slaughteringaxe-head-basalt-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-obsidian-bone-east", "game:slaughteringaxe-head-obsidian-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-flint-bone-east", "game:slaughteringaxe-head-flint-east",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-peridotite-bone-east", "game:slaughteringaxe-head-peridotite-east",  1 ],
-		  
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-granite-bone-west", "game:slaughteringaxe-head-granite-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-andesite-bone-west", "game:slaughteringaxe-head-andesite-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-basalt-bone-west", "game:slaughteringaxe-head-basalt-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-obsidian-bone-west", "game:slaughteringaxe-head-obsidian-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-flint-bone-west", "game:slaughteringaxe-head-flint-west",  1 ],
-		  [ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-peridotite-bone-west", "game:slaughteringaxe-head-peridotite-west",  1 ],
-        ],
-      },
-    },
-		],
+			name: "BlockSwapBehavior",
+			properties: {
+				"swapBlocks": [
+					[ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slaughteringaxe-headshaft-{stone}-acacia-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slaughteringaxe-headshaft-{stone}-birch-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slaughteringaxe-headshaft-{stone}-kapok-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slaughteringaxe-headshaft-{stone}-maple-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slaughteringaxe-headshaft-{stone}-oak-{side}", 1 ],
+					[ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slaughteringaxe-headshaft-{stone}-pine-{side}", 1 ],
+					[ "neolithicmod:animal-large-bone", "game:slaughteringaxe-headshaft-{stone}-bone-{side}", 1 ],
+				],
+			},
+		},
+	],
 	variantgroups: [
-		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ] },
-		{ code: "side", loadFromProperties: "abstract/horizontalorientation" }
+		{
+			code: "stone",
+			states: [ "granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ]
+		},
+		{
+			code: "side",
+			loadFromProperties: "abstract/horizontalorientation"
+		}
 	],
 	shapeinventory: { base: "item/tool/slaughteringaxe-head" },
-	shapeByType: { 
-		"*-north": { base: "item/tool/slaughteringaxe-head", rotateY: 0 },
-		"*-east": { base: "item/tool/slaughteringaxe-head", rotateY: 270 },
-		"*-south": { base: "item/tool/slaughteringaxe-head", rotateY: 180 },
-		"*-west": { base: "item/tool/slaughteringaxe-head", rotateY: 90 },
+	shapeByType: {
+		"*-north": {
+			base: "item/tool/slaughteringaxe-head",
+			rotateY: 0
 		},
+		"*-east": {
+			base: "item/tool/slaughteringaxe-head",
+			rotateY: 270
+		},
+		"*-south": {
+			base: "item/tool/slaughteringaxe-head",
+			rotateY: 180
+		},
+		"*-west": {
+			base: "item/tool/slaughteringaxe-head",
+			rotateY: 90
+		},
+	},
 	textures: {
 		"stone": { base: "item/tool/material/{stone}" },
 		"shaft": { base: "block/transparent" },
 		"cordage": { base: "block/transparent" },
 		"ribbon": { base: "block/transparent" },
 	},
-	creativeinventory: { "general": ["*-north"], "items": ["*-north"], "tools": ["*"], "neolithicitems": ["*-north"] },
-	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+	creativeinventory: {
+		"general": [ "*-north" ],
+		"items": [ "*-north" ],
+		"tools": [ "*" ],
+		"neolithicitems": [ "*-north" ]
+	},
+	collisionselectionbox: {
+		x1: 0,
+		y1: 0,
+		z1: 0,
+		x2: 1,
+		y2: 0.1,
+		z2: 1
+	},
 	blockmaterial: "Wood",
 	replaceable: 900,
 	resistance: 1.5,
@@ -246,24 +84,60 @@
 	},
 	materialDensity: 600,
 	fpHandTransform: {
-		translation: { x: 0.4, y: -0.4, z: 0 },
-		rotation: { x: 25, y: 0, z: 86 },
+		translation: {
+			x: 0.4,
+			y: -0.4,
+			z: 0
+		},
+		rotation: {
+			x: 25,
+			y: 0,
+			z: 86
+		},
 		scale: 2.5
 	},
 	guiTransform: {
-		translation: { x: 3, y: 0, z: 120 },
-		rotation: { x: -52, y: -131, z: -180 },
-		origin: { x: 0.55, y: 0.5, z: 0.1 },
+		translation: {
+			x: 3,
+			y: 0,
+			z: 120
+		},
+		rotation: {
+			x: -52,
+			y: -131,
+			z: -180
+		},
+		origin: {
+			x: 0.55,
+			y: 0.5,
+			z: 0.1
+		},
 		scale: 2.39
 	},
 	groundTransform: {
-		translation: { x: 0.046875, y: 0, z: 0 },
-		rotation: { x: 0, y: 0, z: 0 },
+		translation: {
+			x: 0.046875,
+			y: 0,
+			z: 0
+		},
+		rotation: {
+			x: 0,
+			y: 0,
+			z: 0
+		},
 		scale: 2.5
 	},
 	tpHandTransform: {
-		translation: { x: -0.3, y: -0.8, z: -0.5 },
-		rotation: { x: 90, y: -49, z: 0 },
+		translation: {
+			x: -0.3,
+			y: -0.8,
+			z: -0.5
+		},
+		rotation: {
+			x: 90,
+			y: -49,
+			z: 0
+		},
 		scale: 1
 	}
 }

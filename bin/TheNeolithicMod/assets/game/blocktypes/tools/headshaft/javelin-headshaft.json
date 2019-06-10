@@ -1,63 +1,62 @@
 {
 	code: "javelin-headshaft",
-	behaviors: [ 
-		{name: "HorizontalOrientable" },
-		{name: "BlockSwapBehavior",
+	behaviors: [
+		{ name: "HorizontalOrientable" },
+		{
+			name: "BlockSwapBehavior",
 			properties: {
 				"swapBlocks": [
-				 [ "neolithicmod:animal-leatherstrips",  "game:javelin-bamboo-brown-leatherstrips-north", "game:javelin-headshaft-bamboo-brown-north", 1 ],
-				 [ "neolithicmod:animal-leatherstrips",  "game:javelin-bamboo-brown-leatherstrips-south", "game:javelin-headshaft-bamboo-brown-south", 1 ],
-				 [ "neolithicmod:animal-leatherstrips",  "game:javelin-bamboo-brown-leatherstrips-east", "game:javelin-headshaft-bamboo-brown-east", 1 ],
-				 [ "neolithicmod:animal-leatherstrips",  "game:javelin-bamboo-brown-leatherstrips-west", "game:javelin-headshaft-bamboo-brown-west", 1 ],
-				 
-				 [ "neolithicmod:animal-leatherstrips",  "game:javelin-bamboo-green-leatherstrips-north", "game:javelin-headshaft-bamboo-green-north", 1 ],
-				 [ "neolithicmod:animal-leatherstrips",  "game:javelin-bamboo-green-leatherstrips-south", "game:javelin-headshaft-bamboo-green-south", 1 ],
-				 [ "neolithicmod:animal-leatherstrips",  "game:javelin-bamboo-green-leatherstrips-east", "game:javelin-headshaft-bamboo-green-east", 1 ],
-				 [ "neolithicmod:animal-leatherstrips",  "game:javelin-bamboo-green-leatherstrips-west", "game:javelin-headshaft-bamboo-green-west", 1 ],
-				 
-				 
-				 [ "neolithicmod:byproducts-sinew",  "game:javelin-bamboo-brown-leatherstrips-north", "game:javelin-headshaft-bamboo-brown-north", 1 ],
-				 [ "neolithicmod:byproducts-sinew",  "game:javelin-bamboo-brown-leatherstrips-south", "game:javelin-headshaft-bamboo-brown-south", 1 ],
-				 [ "neolithicmod:byproducts-sinew",  "game:javelin-bamboo-brown-leatherstrips-east", "game:javelin-headshaft-bamboo-brown-east", 1 ],
-				 [ "neolithicmod:byproducts-sinew",  "game:javelin-bamboo-brown-leatherstrips-west", "game:javelin-headshaft-bamboo-brown-west", 1 ],
-				 
-				 [ "neolithicmod:byproducts-sinew",  "game:javelin-bamboo-green-leatherstrips-north", "game:javelin-headshaft-bamboo-green-north", 1 ],
-				 [ "neolithicmod:byproducts-sinew",  "game:javelin-bamboo-green-leatherstrips-south", "game:javelin-headshaft-bamboo-green-south", 1 ],
-				 [ "neolithicmod:byproducts-sinew",  "game:javelin-bamboo-green-leatherstrips-east", "game:javelin-headshaft-bamboo-green-east", 1 ],
-				 [ "neolithicmod:byproducts-sinew",  "game:javelin-bamboo-green-leatherstrips-west", "game:javelin-headshaft-bamboo-green-west", 1 ],
-				 
-				 [ "neolithicmod:sisal-rope",  "game:javelin-bamboo-brown-leatherstrips-north", "game:javelin-headshaft-bamboo-brown-north", 1 ],
-				 [ "neolithicmod:sisal-rope",  "game:javelin-bamboo-brown-leatherstrips-south", "game:javelin-headshaft-bamboo-brown-south", 1 ],
-				 [ "neolithicmod:sisal-rope",  "game:javelin-bamboo-brown-leatherstrips-east", "game:javelin-headshaft-bamboo-brown-east", 1 ],
-				 [ "neolithicmod:sisal-rope",  "game:javelin-bamboo-brown-leatherstrips-west", "game:javelin-headshaft-bamboo-brown-west", 1 ],
-				 
-				 [ "neolithicmod:sisal-rope",  "game:javelin-bamboo-green-leatherstrips-north", "game:javelin-headshaft-bamboo-green-north", 1 ],
-				 [ "neolithicmod:sisal-rope",  "game:javelin-bamboo-green-leatherstrips-south", "game:javelin-headshaft-bamboo-green-south", 1 ],
-				 [ "neolithicmod:sisal-rope",  "game:javelin-bamboo-green-leatherstrips-east", "game:javelin-headshaft-bamboo-green-east", 1 ],
-				 [ "neolithicmod:sisal-rope",  "game:javelin-bamboo-green-leatherstrips-west", "game:javelin-headshaft-bamboo-green-west", 1 ],
+					[ "neolithicmod:animal-leatherstrips", "game:javelin-{shaft}-leatherstrips-{side}", "game:javelin-headshaft-{shaft}-{side}", 1 ],
+					[ "neolithicmod:byproducts-sinew", "game:javelin-{shaft}-leatherstrips-{side}", "game:javelin-headshaft-{shaft}-{side}", 1 ],
+					[ "neolithicmod:sisal-rope", "game:javelin-{shaft}-leatherstrips-{side}", "game:javelin-headshaft-{shaft}-{side}", 1 ],
 				],
 			},
 		},
 	],
-	
+
 	variantgroups: [
-		{ code: "shaft", states: ["bamboo-green", "bamboo-brown"] }, 
-		{ code: "side", loadFromProperties: "abstract/horizontalorientation" },
-	],
-	shapeByType: { 
-		"*-north": { base: "block/placedtool/javelin-placed", rotateY: 0 },
-		"*-east": { base: "block/placedtool/javelin-placed", rotateY: 270 },
-		"*-south": { base: "block/placedtool/javelin-placed", rotateY: 180 },
-		"*-west": { base: "block/placedtool/javelin-placed", rotateY: 90 },		
+		{
+			code: "shaft",
+			states: [ "bamboo-green", "bamboo-brown" ]
 		},
+		{
+			code: "side",
+			loadFromProperties: "abstract/horizontalorientation"
+		},
+	],
+	shapeByType: {
+		"*-north": {
+			base: "block/placedtool/javelin-placed",
+			rotateY: 0
+		},
+		"*-east": {
+			base: "block/placedtool/javelin-placed",
+			rotateY: 270
+		},
+		"*-south": {
+			base: "block/placedtool/javelin-placed",
+			rotateY: 180
+		},
+		"*-west": {
+			base: "block/placedtool/javelin-placed",
+			rotateY: 90
+		},
+	},
 	textures: {
-			"bone": { base: "block/bone" }, 
-			"shaft": { base: "block/wood/planks/{shaft}-side" },
-			"cordage": { base: "block/transparent" },
-				
-	},	
-	creativeinventory: { "general": ["*"]  },
-	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+		"bone": { base: "block/bone" },
+		"shaft": { base: "block/wood/planks/{shaft}-side" },
+		"cordage": { base: "block/transparent" },
+
+	},
+	creativeinventory: { "general": [ "*" ] },
+	collisionselectionbox: {
+		x1: 0,
+		y1: 0,
+		z1: 0,
+		x2: 1,
+		y2: 0.1,
+		z2: 1
+	},
 	blockmaterial: "Wood",
 	replaceable: 900,
 	resistance: 1.5,
