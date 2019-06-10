@@ -1,10 +1,7 @@
 {
   code: "bowlstamp",
   variantgroups: [
-    {
-      code: "metal",
-      states: [ "tinbronze", "bismuthbronze", "blackbronze", "copper" ]
-    }
+    {  code: "metal",  states: [ "tinbronze", "bismuthbronze", "blackbronze", "copper" ]  }
   ],
   blockmaterial: "Metal",
   behaviors: [

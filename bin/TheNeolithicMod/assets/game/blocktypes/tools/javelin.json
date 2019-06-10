@@ -20,7 +20,7 @@
 	drops: [
 	{ type: "item", code: "game:spear-javelin-{shaft}-{cordage}", quantity: { avg: 1 }}
 	],
-	creativeinventory: { "general": ["*"], "items": [""], "neolithicitems": [""] },
+	creativeinventory: { "general": [""] },
 	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
 	blockmaterial: "Wood",
 	replaceable: 900,
