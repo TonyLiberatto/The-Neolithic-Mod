@@ -2,7 +2,7 @@
 	code: "adze",
 	class: "ItemAdze",
 	variantgroups: [
-		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite"] },		
 		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
 		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
 	],

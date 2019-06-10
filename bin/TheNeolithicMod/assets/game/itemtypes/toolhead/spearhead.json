@@ -1,7 +1,7 @@
 {
 	code: "spearhead",
 	variantgroups: [
-		{ code: "material", states: ["granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
+		{ code: "material", states: [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
 	],
 	shape: { base: "item/tool/spear" },
 	textures: {

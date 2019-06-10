@@ -4,11 +4,11 @@
 	tool: "knife",
 	attributes: {
 		handbook: {
-			groupBy: ["knife-primitive-*"]
+			groupBy: ["knife-*"]
 		}
 	},
 	variantgroups: [
-		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite"] },		
 		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
 		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
 	],
@@ -34,29 +34,33 @@
 	{
 		"*-granite-bone-*": 200,
 		"*-andesite-bone-*": 200,
+		"*-peridotite-bone-*": 200,
 		"*-basalt-bone-*": 200,
 		"*-obsidian-bone-*": 300,
 		"*-flint-bone-*": 250,
 		"*-granite-*": 150,
 		"*-andesite-*": 150,
+		"*-peridotite-*": 150,
 		"*-basalt-*": 150,
 		"*-obsidian-*": 250,
 		"*-flint-*": 200,
 	},
 	miningspeedbytype: {
-		"knife-primitive-granite": { "plant": 1, },
-		"knife-primitive-andesite": { "plant": 1, },
-		"knife-primitive-basalt": { "plant": 1.1, },
-		"knife-primitive-obsidian": { "plant": 1.2, },
-		"knife-primitive-flint": { "plant": 1.2, },
+		"*-granite-*": { "plant": 1, },
+		"*-andesite-*": { "plant": 1, },
+		"*-peridotite-*": { "plant": 1, },
+		"*-basalt-*": { "plant": 1.1, },
+		"*-obsidian-*": { "plant": 1.2, },
+		"*-flint-*": { "plant": 1.2, },
 	},
 	attackpowerbytype: 
 	{
-		"knife-primitive-granite": 0.75,
-		"knife-primitive-andesite": 0.75,
-		"knife-primitive-basalt": 0.75,
-		"knife-primitive-obsidian": 1.5,
-		"knife-primitive-flint": 1,
+		"*-granite-*": 0.75,
+		"*-andesite-*": 0.75,
+		"*-peridotite-*": 0.75,
+		"*-basalt-*": 0.75,
+		"*-obsidian-*": 1.5,
+		"*-flint-*": 1,
 	},
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	fpHandTransform: {

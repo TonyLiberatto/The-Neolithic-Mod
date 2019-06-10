@@ -7,7 +7,7 @@
 		}
 	},
 	variantgroups: [
-		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite"] },		
 		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
 		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
 	],
@@ -33,11 +33,13 @@
 	{
 		"*-bone-granite-*": 250,
 		"*-bone-andesite-*": 250,
+		"*-bone-peridotite-*": 250,
 		"*-bone-basalt-*": 250,
 		"*-bone-obsidian-*": 350,
 		"*-bone-flint-*": 300,
 		"*-granite-*": 150,
 		"*-andesite-*": 150,
+		"*-peridotite-*": 150,
 		"*-basalt-*": 150,
 		"*-obsidian-*": 250,
 		"*-flint-*": 200,
@@ -46,6 +48,7 @@
 	{
 		"granite": 0.75,
 		"andesite": 0.75,
+		"peridotite": 0.75,
 		"basalt": 0.75,
 		"obsidian": 1.5,
 		"flint": 1,

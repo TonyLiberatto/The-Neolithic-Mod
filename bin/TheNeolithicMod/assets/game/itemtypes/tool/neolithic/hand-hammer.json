@@ -8,7 +8,7 @@
 	},
 	variantgroups: [
 		{code: "type", states: ["hand"]},
-		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint" ] },
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ] },
 	],
 	tool: "hammer",
 	heldTpHitAnimation: "breaktool",
@@ -19,6 +19,7 @@
 	durabilitybytype: {
 		"hammer-hand-granite": 70,
 		"hammer-hand-andesite": 70,
+		"hammer-hand-peridotite": 70,
 		"hammer-hand-basalt": 70,
 		"hammer-hand-obsidian": 120,
 		"hammer-hand-flint": 100,

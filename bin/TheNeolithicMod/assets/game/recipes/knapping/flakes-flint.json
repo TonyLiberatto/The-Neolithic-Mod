@@ -13,5 +13,5 @@
 		"__________"
 	],
 	name: "Flint flakes",
-	output: { type: "block", code: "flake-flint-north", stacksize: 10  }
+	output: { type: "block", code: "sword-flakes-flint-north"  }
 }

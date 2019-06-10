@@ -4,7 +4,7 @@
 	damagedby: ["attacking"],
 	tool: "spear",
 	variantgroups: [
-		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite"] },		
 		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
 		{ code: "cordage", states: ["rope", "sinew", "leatherstrips" ] },
 	],
@@ -19,6 +19,7 @@
 	attackpowerbytype: {
 		"spear-primitive-granite-*": 2,
 		"spear-primitive-andesite-*": 2,
+		"spear-primitive-peridotite-*": 2,
 		"spear-primitive-basalt-*": 2,
 		"spear-primitive-flint-*": 2.25,
 		"spear-primitive-obsidian-*": 2.5,
@@ -28,6 +29,7 @@
 		damageByType: {
 			"*-granite-*": 4,
 			"*-andesite-*": 4,
+			"*-peridotite-*": 4,
 			"*-basalt-*": 4,
 			"*-flint-*": 5,
 			"*-obsidian-*": 5.25,
@@ -40,6 +42,7 @@
 	durabilitybytype: {
 		"*-granite-*": 50,
 		"*-andesite-*": 50,
+		"*-peridotite-*": 50,
 		"*-basalt-*": 50,
 		"*-obsidian-*": 90,
 		"*-flint-*": 70,

@@ -1,0 +1,102 @@
+{
+	code: "sword-flakes",
+	behaviors: [ 
+		{name: "HorizontalOrientable" },	
+		{name: "BlockSwapBehavior",
+			properties: {
+				"swapBlocks": [
+					[ "neolithicmod:branch-thin-acacia-debarked-ud", "game:sword-flakeswood-obsidian-acacia-north", "game:sword-flakes-obsidian-north",  1 ],
+					[ "neolithicmod:branch-thin-acacia-debarked-ud", "game:sword-flakeswood-flint-acacia-north", "game:sword-flakes-flint-north",  1 ],					
+					[ "neolithicmod:branch-thin-birch-debarked-ud", "game:sword-flakeswood-obsidian-birch-north", "game:sword-flakes-obsidian-north",  1 ],
+					[ "neolithicmod:branch-thin-birch-debarked-ud", "game:sword-flakeswood-flint-birch-north", "game:sword-flakes-flint-north",  1 ],					
+					[ "neolithicmod:branch-thin-kapok-debarked-ud", "game:sword-flakeswood-obsidian-kapok-north", "game:sword-flakes-obsidian-north",  1 ],
+					[ "neolithicmod:branch-thin-kapok-debarked-ud", "game:sword-flakeswood-flint-kapok-north", "game:sword-flakes-flint-north",  1 ],					
+					[ "neolithicmod:branch-thin-maple-debarked-ud", "game:sword-flakeswood-obsidian-maple-north", "game:sword-flakes-obsidian-north",  1 ],
+					[ "neolithicmod:branch-thin-maple-debarked-ud", "game:sword-flakeswood-flint-maple-north", "game:sword-flakes-flint-north",  1 ],					
+					[ "neolithicmod:branch-thin-oak-debarked-ud", "game:sword-flakeswood-obsidian-oak-north", "game:sword-flakes-obsidian-north",  1 ],
+					[ "neolithicmod:branch-thin-oak-debarked-ud", "game:sword-flakeswood-flint-oak-north", "game:sword-flakes-flint-north",  1 ],					
+					[ "neolithicmod:branch-thin-pine-debarked-ud", "game:sword-flakeswood-obsidian-pine-north", "game:sword-flakes-obsidian-north",  1 ],
+					[ "neolithicmod:branch-thin-pine-debarked-ud", "game:sword-flakeswood-flint-pine-north", "game:sword-flakes-flint-north",  1 ],
+					
+					
+					[ "neolithicmod:branch-thin-acacia-debarked-ud", "game:sword-flakeswood-obsidian-acacia-south", "game:sword-flakes-obsidian-south",  1 ],
+					[ "neolithicmod:branch-thin-acacia-debarked-ud", "game:sword-flakeswood-flint-acacia-south", "game:sword-flakes-flint-south",  1 ],					
+					[ "neolithicmod:branch-thin-birch-debarked-ud", "game:sword-flakeswood-obsidian-birch-south", "game:sword-flakes-obsidian-south",  1 ],
+					[ "neolithicmod:branch-thin-birch-debarked-ud", "game:sword-flakeswood-flint-birch-south", "game:sword-flakes-flint-south",  1 ],					
+					[ "neolithicmod:branch-thin-kapok-debarked-ud", "game:sword-flakeswood-obsidian-kapok-south", "game:sword-flakes-obsidian-south",  1 ],
+					[ "neolithicmod:branch-thin-kapok-debarked-ud", "game:sword-flakeswood-flint-kapok-south", "game:sword-flakes-flint-south",  1 ],					
+					[ "neolithicmod:branch-thin-maple-debarked-ud", "game:sword-flakeswood-obsidian-maple-south", "game:sword-flakes-obsidian-south",  1 ],
+					[ "neolithicmod:branch-thin-maple-debarked-ud", "game:sword-flakeswood-flint-maple-south", "game:sword-flakes-flint-south",  1 ],					
+					[ "neolithicmod:branch-thin-oak-debarked-ud", "game:sword-flakeswood-obsidian-oak-south", "game:sword-flakes-obsidian-south",  1 ],
+					[ "neolithicmod:branch-thin-oak-debarked-ud", "game:sword-flakeswood-flint-oak-south", "game:sword-flakes-flint-south",  1 ],					
+					[ "neolithicmod:branch-thin-pine-debarked-ud", "game:sword-flakeswood-obsidian-pine-south", "game:sword-flakes-obsidian-south",  1 ],
+					[ "neolithicmod:branch-thin-pine-debarked-ud", "game:sword-flakeswood-flint-pine-south", "game:sword-flakes-flint-south",  1 ],
+					
+					
+					[ "neolithicmod:branch-thin-acacia-debarked-ud", "game:sword-flakeswood-obsidian-acacia-east", "game:sword-flakes-obsidian-east",  1 ],
+					[ "neolithicmod:branch-thin-acacia-debarked-ud", "game:sword-flakeswood-flint-acacia-east", "game:sword-flakes-flint-east",  1 ],					
+					[ "neolithicmod:branch-thin-birch-debarked-ud", "game:sword-flakeswood-obsidian-birch-east", "game:sword-flakes-obsidian-east",  1 ],
+					[ "neolithicmod:branch-thin-birch-debarked-ud", "game:sword-flakeswood-flint-birch-east", "game:sword-flakes-flint-east",  1 ],					
+					[ "neolithicmod:branch-thin-kapok-debarked-ud", "game:sword-flakeswood-obsidian-kapok-east", "game:sword-flakes-obsidian-east",  1 ],
+					[ "neolithicmod:branch-thin-kapok-debarked-ud", "game:sword-flakeswood-flint-kapok-east", "game:sword-flakes-flint-east",  1 ],					
+					[ "neolithicmod:branch-thin-maple-debarked-ud", "game:sword-flakeswood-obsidian-maple-east", "game:sword-flakes-obsidian-east",  1 ],
+					[ "neolithicmod:branch-thin-maple-debarked-ud", "game:sword-flakeswood-flint-maple-east", "game:sword-flakes-flint-east",  1 ],					
+					[ "neolithicmod:branch-thin-oak-debarked-ud", "game:sword-flakeswood-obsidian-oak-east", "game:sword-flakes-obsidian-east",  1 ],
+					[ "neolithicmod:branch-thin-oak-debarked-ud", "game:sword-flakeswood-flint-oak-east", "game:sword-flakes-flint-east",  1 ],					
+					[ "neolithicmod:branch-thin-pine-debarked-ud", "game:sword-flakeswood-obsidian-pine-east", "game:sword-flakes-obsidian-east",  1 ],
+					[ "neolithicmod:branch-thin-pine-debarked-ud", "game:sword-flakeswood-flint-pine-east", "game:sword-flakes-flint-east",  1 ],
+					
+					
+					[ "neolithicmod:branch-thin-acacia-debarked-ud", "game:sword-flakeswood-obsidian-acacia-west", "game:sword-flakes-obsidian-west",  1 ],
+					[ "neolithicmod:branch-thin-acacia-debarked-ud", "game:sword-flakeswood-flint-acacia-west", "game:sword-flakes-flint-west",  1 ],					
+					[ "neolithicmod:branch-thin-birch-debarked-ud", "game:sword-flakeswood-obsidian-birch-west", "game:sword-flakes-obsidian-west",  1 ],
+					[ "neolithicmod:branch-thin-birch-debarked-ud", "game:sword-flakeswood-flint-birch-west", "game:sword-flakes-flint-west",  1 ],					
+					[ "neolithicmod:branch-thin-kapok-debarked-ud", "game:sword-flakeswood-obsidian-kapok-west", "game:sword-flakes-obsidian-west",  1 ],
+					[ "neolithicmod:branch-thin-kapok-debarked-ud", "game:sword-flakeswood-flint-kapok-west", "game:sword-flakes-flint-west",  1 ],					
+					[ "neolithicmod:branch-thin-maple-debarked-ud", "game:sword-flakeswood-obsidian-maple-west", "game:sword-flakes-obsidian-west",  1 ],
+					[ "neolithicmod:branch-thin-maple-debarked-ud", "game:sword-flakeswood-flint-maple-west", "game:sword-flakes-flint-west",  1 ],					
+					[ "neolithicmod:branch-thin-oak-debarked-ud", "game:sword-flakeswood-obsidian-oak-west", "game:sword-flakes-obsidian-west",  1 ],
+					[ "neolithicmod:branch-thin-oak-debarked-ud", "game:sword-flakeswood-flint-oak-west", "game:sword-flakes-flint-west",  1 ],					
+					[ "neolithicmod:branch-thin-pine-debarked-ud", "game:sword-flakeswood-obsidian-pine-west", "game:sword-flakes-obsidian-west",  1 ],
+					[ "neolithicmod:branch-thin-pine-debarked-ud", "game:sword-flakeswood-flint-pine-west", "game:sword-flakes-flint-west",  1 ],
+				],
+			}
+		}
+	],
+	variantgroups: [
+		{ code: "stone", states: ["flint", "obsidian" ] },
+		{ code: "side", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	maxstacksize: 64,
+	textures: {
+		"stone": { base: "item/tool/material/{stone}"},		
+		"shaft": { base: "block/transparent" },
+		"cordage": { base: "block/transparent" },
+	},
+	shapeinventory: { base: "item/tool/flake"},
+	shapeByType: { 
+		"*-north": { base: "block/placedtool/primitive-sword-placed", rotateY: 0 },
+		"*-east": { base: "block/placedtool/primitive-sword-placed", rotateY: 270 },
+		"*-south": { base: "block/placedtool/primitive-sword-placed", rotateY: 180 },
+		"*-west": { base: "block/placedtool/primitive-sword-placed", rotateY: 90 },
+		},
+	creativeinventory: { "general": ["*-north"], "items": ["*-north"], "neolithicitems": ["*-north"]  },
+	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 0.5,
+	lightAbsorption: 0,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+}

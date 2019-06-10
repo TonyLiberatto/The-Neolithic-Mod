@@ -2,7 +2,7 @@
 	code: "axe",
 	class: "ItemAxe",
 	variantgroups: [
-		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite"] },		
 		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
 		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
 	],
@@ -43,6 +43,11 @@
 			"plant": 2.2,
 			"leaves": 1.7
 		},
+		"axe-peridotite-*": {
+			"wood": 3.3,
+			"plant": 2.2,
+			"leaves": 1.7
+		},
 		"axe-basalt-*": {
 			"wood": 3.3,
 			"plant": 2.2,
@@ -62,6 +67,7 @@
 	durabilitybytype: {
 		"axe-granite-bone-*": 200,
 		"axe-andesite-bone-*": 200,
+		"axe-peridotite-bone-*": 200,
 		"axe-basalt-bone-*": 200,
 		"axe-obsidian-bone-*": 250,
 		"axe-flint-bone-*": 220,
@@ -74,6 +80,7 @@
 	attackpowerbytype: {
 		"axe-granite-*": 0.75,
 		"axe-andesite-*": 0.75,
+		"axe-peridotite-*": 0.75,
 		"axe-basalt-*": 0.75,
 		"axe-obsidian-*": 1.5,
 		"axe-flint-*": 1.25,

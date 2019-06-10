@@ -4,7 +4,7 @@
 	class: "ItemSickle",
 	tool: "knife",
 	variantgroups: [
-		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite"] },		
 		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
 		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
 	],
@@ -32,11 +32,13 @@
 	durabilitybytype: {
 		"sickle-granite-bone-*": 200,
 		"sickle-andesite-bone-*": 200,
+		"sickle-peridotite-bone-*": 200,
 		"sickle-basalt-bone-*": 200,
 		"sickle-obsidian-bone-*": 300,
 		"sickle-flint-bone-*": 250,
 		"sickle-granite-*": 150,
 		"sickle-andesite-*": 150,
+		"sickle-peridotite-*": 150,
 		"sickle-basalt-*": 150,
 		"sickle-obsidian-*": 250,
 		"sickle-flint-*": 200,

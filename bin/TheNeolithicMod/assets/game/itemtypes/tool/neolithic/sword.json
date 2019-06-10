@@ -4,38 +4,39 @@
 	tool: "sword",
 	attributes: {
 		handbook: {
-			groupBy: ["sword-primitive-*"]
+			groupBy: ["sword-*"]
 		}
 	},
 	variantgroups: [
-		{code: "type", states: ["primitive"]},
 		{ code: "stone", states: ["obsidian", "flint",] },
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
+		{ code: "cordage", states: ["rope", "sinew", "leatherstrips" ] },
 	],
 	shape: { base: "item/tool/primitive-sword" },
 	heldTpHitAnimation: "swordhit",
 	textures: {
-		"leatherstraps": { base: "block/leatherstraps" },
-		"kapok": { base: "block/wood/debarked/kapok" },
-		"stone": { base: "item/tool/material/{stone}"},
+		"stone": { base: "item/tool/material/{stone}" },
+		"shaft": { base: "block/wood/debarked/{shaft}" },
+		"cordage": { base: "block/cordage/{cordage}" },
 	},
 	attackRange: 2.5,
 	miningspeedbytype: {
-		"sword-primitive-flint": {
+		"sword-flint-*": {
 			"wood": 1.5,
 			"leaves": 1
 		},
-		"sword-primitive-obsidian": {
+		"sword-obsidian-*": {
 			"wood": 2,
 			"leaves": 1.2
 		},
 	},
 	attackpowerbytype: {
-		"sword-primitive-flint": 1.5,
-		"sword-primitive-obsidian": 2,
+		"sword-flint-*": 1.5,
+		"sword-obsidian-*": 2,
 	},
 	durabilitybytype: {
-		"sword-primitive-flint": 100,
-		"sword-primitive-obsidian": 150,
+		"sword-flint-*": 100,
+		"sword-obsidian-*": 150,
 	},
 	creativeinventory: { "general": ["*"], "items": ["*"],"neolithicitems": ["*"] },
 	fpHandTransform: {

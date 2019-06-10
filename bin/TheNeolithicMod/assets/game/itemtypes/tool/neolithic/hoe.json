@@ -7,7 +7,7 @@
 		}
 	},
 	variantgroups: [
-		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint"] },		
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite"] },		
 		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
 		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
 	],
@@ -38,6 +38,9 @@
 		"hoe-andesite-*": {
 			"soil": 2.6
 		},
+		"hoe-peridotite-*": {
+			"soil": 2.6
+		},
 		"hoe-basalt-*": {
 			"soil": 3.2
 		},
@@ -51,11 +54,13 @@
 	durabilitybytype: {
 		"*-bone-granite-*": 150,
 		"*-bone-andesite-*": 150,
+		"*-bone-peridotite-*": 150,
 		"*-bone-basalt-*": 150,
 		"*-bone-obsidian-*": 200,
 		"*-bone-flint-*": 180,
 		"*-granite-*": 80,
 		"*-andesite-*": 80,
+		"*-peridotite-*": 80,
 		"*-basalt-*": 80,
 		"*-obsidian-*": 150,
 		"*-flint-*": 120,
@@ -63,6 +68,7 @@
 	attackpowerbytype: {
 		"*-granite-*": 1,
 		"*-andesite-*": 1.25,
+		"*-peridotite-*": 1.25,
 		"*-basalt-*": 1.5,
 		"*-obsidian-*": 1.5,
 		"*-flint-*": 1.5,
