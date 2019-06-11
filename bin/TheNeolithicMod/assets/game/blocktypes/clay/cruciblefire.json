@@ -20,7 +20,8 @@
 			inFirePitProps: {
 				transform: { },
 				useFirepitModel: "Wide"
-			}
+			},
+			emptiedBlockCode: "cruciblefire-burned"
 		}
 	},
 	variantgroups: [
