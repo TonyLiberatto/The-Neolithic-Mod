@@ -1,8 +1,8 @@
 {
     code: "bowlstampmold",
     classByType: {
-        "bowlstampmold-raw": "Block",
-        "bowlstampmold-burned": "BlockToolMold",
+        "bowlstampmold-*-raw": "Block",
+        "bowlstampmold-*-burned": "BlockToolMold",
     },
     behaviors: [{name: "UnstableFalling"}],
     variantgroups: [

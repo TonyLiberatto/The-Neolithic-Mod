@@ -17,7 +17,8 @@
 			"*-westerngorse": true,
 			"*-cowparsley": true,
 			"*-californiapoppy": true,
-			"*-horsetail": true
+			"*-horsetail": true,
+			"*-lupine-*": true
 		},
 		butterflyFeedByType: {
 			"*-catmint": true,
@@ -29,7 +30,36 @@
 			"*-westerngorse": true,
 			"*-cowparsley": true,
 			"*-californiapoppy": true,
-			"*-horsetail": true
+			"*-horsetail": true,
+			"*-lupine-*": true
+		},
+		contentBlockCodeByType: {
+			"*-lupine-blue": "flower-lupine-blue",
+			"*-lupine-orange": "flower-lupine-orange",
+			"*-lupine-purple": "flower-lupine-purple",
+			"*-lupine-red": "flower-lupine-red",
+			"*-lupine-white": "flower-lupine-white",
+			
+			"*-catmint": "flower-catmint",
+			"*-forgetmenot": "flower-forgetmenot",
+			"*-edelweiss": "flower-edelweiss",
+			"*-heather": "flower-heather",
+			"*-orangemallow": "flower-orangemallow",
+			"*-wilddaisy": "flower-wilddaisy",
+			"*-westerngorse": "flower-westerngorse",
+			"*-cowparsley": "flower-cowparsley",
+			"*-californiapoppy": "flower-californiapoppy",
+			"*-horsetail": "flower-horsetail",
+			
+			"*-birch": "sapling-birch",
+			"*-oak": "sapling-oak",
+			"*-maple": "sapling-maple",
+			"*-pine": "sapling-pine",
+			"*-acacia": "sapling-acacia",
+			"*-kapok": "sapling-kapok",
+			"*-flyagaric": "mushroom-flyagaric-normal",
+			"*-bolete": "mushroom-bolete-normal",
+			"*-fieldmushroom": "mushroom-fieldmushroom-normal"
 		}
 	},
 	variantgroups: [
