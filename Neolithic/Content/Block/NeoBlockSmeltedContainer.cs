@@ -13,13 +13,62 @@ using Vintagestory.API.Server;
 
 namespace TheNeolithicMod
 {
-    public class NeoBlockSmeltedContainer : Block
+    public class NeoBlockSmeltingContainer : BlockSmeltingContainer
+    {
+        public override void DoSmelt(IWorldAccessor world, ISlotProvider cookingSlotsProvider, ItemSlot inputSlot, ItemSlot outputSlot)
+        {
+            ItemStack[] stacks = GetIngredients(world, cookingSlotsProvider);
+
+            AlloyRecipe alloy = GetMatchingAlloy(world, stacks);
+
+            Block block = world.GetBlock(CodeWithPath(FirstCodePart() + "-smelted"));
+            ItemStack outputStack = new ItemStack(block);
+
+            if (alloy != null)
+            {
+                ItemStack smeltedStack = alloy.Output.ResolvedItemstack.Clone();
+                int units = (int)Math.Round(alloy.GetTotalOutputQuantity(stacks) * 100, 4);
+
+                ((BlockSmeltedContainer)block).SetContents(outputStack, smeltedStack, units);
+                outputStack.Collectible.SetTemperature(world, outputStack, GetIngredientsTemperature(world, stacks));
+                outputSlot.Itemstack = outputStack;
+                inputSlot.Itemstack = null;
+
+                for (int i = 0; i < cookingSlotsProvider.Slots.Length; i++)
+                {
+                    cookingSlotsProvider.Slots[i].Itemstack = null;
+                }
+
+
+                return;
+            }
+
+
+            MatchedSmeltableStack match = GetSingleSmeltableStack(stacks);
+
+            if (match != null)
+            {
+                ((BlockSmeltedContainer)block).SetContents(outputStack, match.output, (int)(match.stackSize * 100));
+                outputStack.Collectible.SetTemperature(world, outputStack, GetIngredientsTemperature(world, stacks));
+                outputSlot.Itemstack = outputStack;
+                inputSlot.Itemstack = null;
+
+                for (int i = 0; i < cookingSlotsProvider.Slots.Length; i++)
+                {
+                    cookingSlotsProvider.Slots[i].Itemstack = null;
+                }
+            }
+
+        }
+    }
+
+    public class BlockSmeltedContainer : Block
     {
         public static SimpleParticleProperties smokeHeld;
         public static SimpleParticleProperties smokePouring;
         public static SimpleParticleProperties bigMetalSparks;
 
-        static NeoBlockSmeltedContainer()
+        static BlockSmeltedContainer()
         {
             smokeHeld = new SimpleParticleProperties(
                 1, 1,
