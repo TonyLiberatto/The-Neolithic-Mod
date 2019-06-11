@@ -20,13 +20,13 @@
 	heldTpHitAnimation: "axechop",
 	texturesByType: {
 		"*-bone-*": {
-			"stone": { base: "item/tool/material/{stone}" },
+			"stone": { base: "item/tool/material32/{stone}*" },
 			"shaft": { base: "block/bone" },
 			"cordage": { base: "block/cordage/{cordage}" },
 			"ribbon": { base: "block/ribbon"},
 		},
 		"*": {
-			"stone": { base: "game:item/tool/material/{stone}" },
+			"stone": { base: "item/tool/material32/{stone}*" },
 			"shaft": { base: "game:block/wood/debarked/{shaft}" },
 			"cordage": { base: "block/cordage/{cordage}" },
 			"ribbon": { base: "block/ribbon"},
