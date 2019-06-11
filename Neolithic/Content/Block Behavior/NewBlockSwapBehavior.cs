@@ -16,7 +16,6 @@ namespace TheNeolithicMod
 
     class NewBlockSwapBehavior : BlockBehavior
     {
-        const int floc = 2;
         ICoreAPI api;
 
         public NewBlockSwapBehavior(Block block) : base(block) { }

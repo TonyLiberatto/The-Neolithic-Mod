@@ -18,13 +18,13 @@
 		},
 	texturesByType: {
 		"*-bone-*": {
-			"stone": { base: "block/stone/rock/{stone}*" },
+			"stone": { base: "item/tool/material32/{stone}" },
 			"shaft": { base: "block/bone" },
 			"cordage": { base: "block/cordage/{cordage}" },
 			"ribbon": { base: "block/ribbon"},
 		},
 		"*": {
-			"stone": { base: "block/stone/rock/{stone}*" },
+			"stone": { base: "item/tool/material32/{stone}" },
 			"shaft": { base: "block/wood/debarked/{shaft}" },
 			"cordage": { base: "block/cordage/{cordage}" },
 			"ribbon": { base: "block/ribbon"},

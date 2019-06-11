@@ -46,11 +46,13 @@
 			rotateY: 90
 		},
 	},
-	textures: {
-		"stone": { base: "block/stone/rock/{stone}*" },
-		"shaft": { base: "block/transparent" },
-		"cordage": { base: "block/transparent" },
-		"ribbon": { base: "block/transparent" },
+	texturesByType: {
+		"*": {
+			"stone": { base: "block/stone/rock/{stone}*" },
+			"shaft": { base: "block/transparent" },
+			"cordage": { base: "block/transparent" },
+			"ribbon": { base: "block/transparent" },
+		}
 	},
 	creativeinventory: {
 		"general": [ "*-north" ],
