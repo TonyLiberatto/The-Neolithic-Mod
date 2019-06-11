@@ -11,9 +11,5 @@
 	{ file: "game:recipes/grid/tool/knife", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/tool/shovel", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/firewood", op: "add", path: "/0/enabled",  value: "false" },
-	{ file: "game:recipes/grid/firewood", op: "add", path: "/1/enabled",  value: "false" },
-	{ file: "game:recipes/knapping/flint-knife", op: "add", path: "/enabled",  value: "false" },
-	{ file: "game:recipes/knapping/flint-spear", op: "add", path: "/enabled",  value: "false" },
-	{ file: "game:recipes/knapping/flint-hatchet", op: "add", path: "/enabled",  value: "false" },
-	
+	{ file: "game:recipes/grid/firewood", op: "add", path: "/1/enabled",  value: "false" },	
 ] 

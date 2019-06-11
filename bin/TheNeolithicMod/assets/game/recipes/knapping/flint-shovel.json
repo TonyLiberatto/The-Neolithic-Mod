@@ -1,5 +1,4 @@
 {
-	enabled: false,
 	ingredient: { type: "item", code: "flint" },
 	pattern: [
 		"___####___"
@@ -14,5 +13,5 @@
 		"_########_"
 	],
 	name: "Flint shovel",
-	output: { type: "item", code: "shovelhead-flint"  }
+	output: { type: "block", code: "shovel-head-flint-north"  }
 }
