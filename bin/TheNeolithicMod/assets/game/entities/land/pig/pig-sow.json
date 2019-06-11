@@ -48,7 +48,7 @@
 				spawnQuantityMin: 2,
 				spawnQuantityMax: 6,
 				growthCapEntityCodes: ["pig-piglet", "pig-sow-*", "pig-boar-*"],
-				requiresNearbyEntityCode: "pig-boar",
+				requiresNearbyEntityCode: "pig-boar-*",
 				requiresNearbyEntityRange: 10,
 				pregnancyDays: 8,
 				multiplyCooldownDaysMin: 12,

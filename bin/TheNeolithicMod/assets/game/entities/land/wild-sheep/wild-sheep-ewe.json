@@ -19,6 +19,7 @@
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
 			{ code: "interpolateposition" }, 
 			{ code: "floatupwhenstuck", onlyWhenDead: true },
+			{ code: "multiply" },
 		],
 		animations: [
 			{
@@ -54,7 +55,19 @@
 				maxhealth: 20
 			}, 
 			{ code: "floatupwhenstuck", onlyWhenDead: true },
-			{ code: "breathe" }, 
+			{ code: "breathe" },
+			{ 
+				code: "multiply",
+				spawnEntityCode: "sheep-lamb",
+				requiresNearbyEntityCode: "wild-sheep-ram",
+				requiresNearbyEntityRange: 10,
+				spawnQuantityMin: 1,
+				spawnQuantityMax: 1,
+				pregnancyDays: 7,
+				multiplyCooldownDaysMin: 8,
+				multiplyCooldownDaysMax: 20,
+				portionsEatenForMultiply: 10
+			},
 			{ 
 				code: "emotionstates",
 				states: [

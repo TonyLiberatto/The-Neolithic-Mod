@@ -16,8 +16,8 @@
 		texture: { base: "entity/sheep/ewe" },
 		behaviors: [
 			{ code: "repulseagents" }, 
-      { code: "milkable" }, 
-      { code: "slaughterable" },
+			{ code: "milkable" }, 
+			{ code: "slaughterable" },
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
 			{ code: "interpolateposition" }, 
 			{ code: "floatupwhenstuck", onlyWhenDead: true },
@@ -49,8 +49,8 @@
 		},
 		behaviors: [
 			{ code: "repulseagents" }, 
-      { code: "milkable" }, 
-      { code: "slaughterable" },
+			{ code: "milkable" }, 
+			{ code: "slaughterable" },
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ 
