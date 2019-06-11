@@ -40,25 +40,19 @@ namespace TheNeolithicMod
                 {
                     list.Add(array[i]);
                 }
-                if (!swapSystem.SwapPairs.ContainsKey(GetKey(list)) && !list.Any((a) => a.ToString().Contains("{")))
+                if (!swapSystem.SwapPairs.ContainsKey(GetKey((string)array[0])) && !list.Any((a) => a.ToString().Contains("{")))
                 {
-                    swapSystem.SwapPairs.Add(GetKey(list), list.ToArray());
+                    swapSystem.SwapPairs.Add(GetKey((string)array[0]), list.ToArray());
                 }
             }
 
         }
-        public string GetKey(List<object> objects)
+
+        public string GetKey(string holdingstack)
         {
             string combined = "";
-            combined += (string)objects[0];
+            combined += holdingstack;
             combined += block.Code.ToString();
-            return GameMath.Md5Hash(combined);
-        }
-        public string GetKey(List<string> objects)
-        {
-            string combined = "";
-            combined += objects[0];
-            combined += objects[1];
             return GameMath.Md5Hash(combined);
         }
 
@@ -68,11 +62,11 @@ namespace TheNeolithicMod
             handling = EnumHandling.PreventDefault;
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
             BlockPos pos = blockSel.Position;
-            List<string> things = new List<string>() { slot.Itemstack.Collectible.Code.ToString(), blockSel.Position.GetBlock(world).Code.ToString() };
-            string key = GetKey(things);
 
             if (slot.Itemstack != null)
             {
+                string key = GetKey(slot.Itemstack.Collectible.Code.ToString());
+
                 if (swapSystem.SwapPairs.TryGetValue(key, out object[] values))
                 {
                     if (values.Length > 3 && values[2].ToString() != block.Code.ToString())
@@ -102,8 +96,12 @@ namespace TheNeolithicMod
 
                         if (world.Side.IsServer())
                         {
-                            world.SpawnCubeParticles(pos, pos.ToVec3d().Add(0.5, 0.5, 0.5), 2, 16);
-                            world.SpawnCubeParticles(pos.ToVec3d().Add(0.5, 0.5, 0.5), slot.Itemstack, 2, 16);
+                            try
+                            {
+                                world.SpawnCubeParticles(pos, pos.ToVec3d().Add(0.5, 0.5, 0.5), 2, 16);
+                                world.SpawnCubeParticles(pos.ToVec3d().Add(0.5, 0.5, 0.5), slot.Itemstack, 2, 16);
+                            }
+                            catch (Exception){}
                         }
                         else
                         {

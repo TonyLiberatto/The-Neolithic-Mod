@@ -64,13 +64,13 @@
 	},
 	texturesByType: {
 		"*-bone-*": {
-			"stone": { base: "item/tool/material/{stone}" },
+			"stone": { base: "block/stone/rock/{stone}*" },
 			"shaft": { base: "block/bone" },
 			"cordage": { base: "block/transparent" },
 			"ribbon": { base: "block/transparent" },
 		},
 		"*": {
-			"stone": { base: "game:item/tool/material/{stone}" },
+			"stone": { base: "block/stone/rock/{stone}*" },
 			"shaft": { base: "game:block/wood/debarked/{shaft}" },
 			"cordage": { base: "block/transparent" },
 			"ribbon": { base: "block/transparent" },
