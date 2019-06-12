@@ -2,7 +2,6 @@
 	code: "javelin-head",
 	behaviors: [
 		{ name: "HorizontalOrientable" },
-		{ name: "HorizontalOrientable" },
 		{
 			name: "BlockSwapBehavior",
 			properties: {

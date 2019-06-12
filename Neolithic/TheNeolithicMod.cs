@@ -21,7 +21,7 @@ namespace TheNeolithicMod
         ICoreClientAPI capi;
         ICoreServerAPI sapi;
         string nl = Environment.NewLine;
-        List<AssetLocation> Missing { get; set; } = new List<AssetLocation>();
+        public List<AssetLocation> Missing { get; set; } = new List<AssetLocation>();
 
         public override void StartClientSide(ICoreClientAPI api)
         {
