@@ -64,7 +64,7 @@ namespace TheNeolithicMod
             }
             missing += "]";
 
-            using (TextWriter tW = new StreamWriter("missingcollectables.json"))
+            using (TextWriter tW = new StreamWriter("missingcollectibles.json"))
             {
                 tW.Write(missing);
                 tW.Close();
