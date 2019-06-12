@@ -2,7 +2,6 @@
 	code: "spear-head",
 	behaviors: [
 		{ name: "HorizontalOrientable" },
-		{ name: "HorizontalOrientable" },
 		{
 			name: "BlockSwapBehavior",
 			properties: {
