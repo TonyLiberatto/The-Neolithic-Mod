@@ -4,6 +4,8 @@ using Vintagestory.GameContent;
 using Vintagestory;
 using Vintagestory.Client;
 using System;
+using System.IO;
+using Vintagestory.API.Server;
 
 [assembly: ModInfo("The Neolithic Mod",
     Description  = "This mod Requires New World Creation. Adds more Animals, Plants, blocks and tools",
@@ -16,11 +18,38 @@ namespace TheNeolithicMod
     public class Neolithic : ModSystem
     {
         ICoreClientAPI capi;
+        ICoreServerAPI sapi;
 
         public override void StartClientSide(ICoreClientAPI api)
         {
             capi = api;
             api.Event.BlockTexturesLoaded += ReloadTextures;
+        }
+
+        public void ExportMissing(IServerPlayer player, int groupID)
+        {
+            string missing = "";
+            for (int i = 0; i < sapi.World.Collectibles.Length; i++)
+            {
+                if (sapi.World.Collectibles[i].IsMissing)
+                {
+                    missing += sapi.World.Collectibles[i].ToString() + Environment.NewLine;
+                }
+            }
+            using (TextWriter tW = new StreamWriter("missingcollectables.json"))
+            {
+                tW.Write(missing);
+                tW.Close();
+            }
+            player.SendMessage(groupID, "Okay, exported list of missing things.", EnumChatType.CommandError);
+        }
+
+        public override void StartServerSide(ICoreServerAPI api)
+        {
+            this.sapi = api;
+            sapi.RegisterCommand("exportmissing", "Exports Names Of Missing Collectables", "", (p, g, a) => {
+                ExportMissing(p, g);
+            });
         }
 
         public void ReloadTextures()
