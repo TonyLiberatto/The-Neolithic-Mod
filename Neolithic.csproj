@@ -43,38 +43,38 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -96,7 +96,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -110,15 +110,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -179,7 +179,7 @@
     <Folder Include="Neolithic\Content\Entity\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\CarryCapacity-0.4.1.zip" />
+    <None Include="bin\CarryCapacity-0.4.2-rc.1.zip" />
     <None Include="bin\TheNeolithicMod\All about The Neolithic Mod.docx" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\cheesecloth.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowl-meal.json" />
@@ -535,16 +535,27 @@
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\tool\wood\sisal\primitive-sickle-obsidian-wood-2.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\trough-large.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\grid\trough-small.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\adze-stone.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\flakes.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\hand-axe.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\hand-hammer.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\hand-knife.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\hoe-head.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\sickle-head.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\flint-adze.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\flint-flakes.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\flint-hand-axe.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\flint-hand-hammer.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\flint-hand-knife.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\flint-hatchet.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\flint-hoe.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\flint-knife.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\flint-shovel.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\flint-sickle.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\flint-spear.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\stone-adze.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\stone-flakes.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\stone-hand-axe.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\stone-hand-hammer.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\stone-hand-knife.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\stone-hatchet.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\stone-hoe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\stone-knife.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\stone-shovel.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\stone-sickle.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\knapping\stone-spear.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\smithing\spear.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\basic\giantreeds-free.json" />
@@ -1522,6 +1533,9 @@
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\clay\wateringcan\brown.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\clay\wateringcan\fire.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\clay\wateringcan\red.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\cordage\leatherstrips.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\cordage\rope.png" />
+    <Content Include="bin\TheNeolithicMod\assets\game\textures\block\cordage\sinew.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\Glasscase.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\glasslantern.png" />
     <Content Include="bin\TheNeolithicMod\assets\game\textures\block\leather.png" />
