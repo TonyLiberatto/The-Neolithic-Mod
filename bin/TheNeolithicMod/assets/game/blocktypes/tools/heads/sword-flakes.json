@@ -25,7 +25,6 @@
 		"shaft": { base: "block/transparent" },
 		"cordage": { base: "block/transparent" },
 	},
-	shapeinventory: { base: "item/tool/flake"},
 	shapeByType: { 
 		"*-north": { base: "block/placedtool/primitive-sword-placed", rotateY: 0 },
 		"*-east": { base: "block/placedtool/primitive-sword-placed", rotateY: 270 },
@@ -38,6 +37,11 @@
 	replaceable: 900,
 	resistance: 0.5,
 	lightAbsorption: 0,
+	guiTransform: {
+		rotation: { x: -82, y: -30, z: 0 },
+		origin: { x: 0.4, y: 0, z: 0.4 },
+		scale: 2.09
+	},
 	sidesolid: {
 		all: false
 	},

@@ -30,25 +30,25 @@
 	shapeinventory: { base: "item/tool/slaughteringaxe-head" },
 	shapeByType: {
 		"*-north": {
-			base: "item/tool/slaughteringaxe-head",
+			base: "block/placedtool/branch-slaughteringaxe",
 			rotateY: 0
 		},
 		"*-east": {
-			base: "item/tool/slaughteringaxe-head",
+			base: "block/placedtool/branch-slaughteringaxe",
 			rotateY: 270
 		},
 		"*-south": {
-			base: "item/tool/slaughteringaxe-head",
+			base: "block/placedtool/branch-slaughteringaxe",
 			rotateY: 180
 		},
 		"*-west": {
-			base: "item/tool/slaughteringaxe-head",
+			base: "block/placedtool/branch-slaughteringaxe",
 			rotateY: 90
 		},
 	},
 	texturesByType: {
 		"*": {
-			"stone": { base: "block/stone/rock/{stone}*" },
+			"stone": { base: "item/tool/material/{stone}" },
 			"shaft": { base: "block/transparent" },
 			"cordage": { base: "block/transparent" },
 			"ribbon": { base: "block/transparent" },
