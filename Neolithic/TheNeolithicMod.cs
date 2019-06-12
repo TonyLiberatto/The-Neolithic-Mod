@@ -28,12 +28,20 @@ namespace TheNeolithicMod
 
         public void ExportMissing(IServerPlayer player, int groupID)
         {
-            string missing = "";
-            for (int i = 0; i < sapi.World.Collectibles.Length; i++)
+            string missing = "Blocks:" + Environment.NewLine;
+            for (int i = 0; i < sapi.World.Blocks.Length; i++)
             {
-                if (sapi.World.Collectibles[i].IsMissing)
+                if (sapi.World.Blocks[i].IsMissing)
                 {
-                    missing += sapi.World.Collectibles[i].ToString() + Environment.NewLine;
+                    missing += sapi.World.Blocks[i].Code.ToString() + Environment.NewLine;
+                }
+            }
+            missing += Environment.NewLine + "Items:" + Environment.NewLine;
+            for (int i = 0; i < sapi.World.Items.Length; i++)
+            {
+                if (sapi.World.Items[i].IsMissing)
+                {
+                    missing += sapi.World.Items[i].Code.ToString() + Environment.NewLine;
                 }
             }
             using (TextWriter tW = new StreamWriter("missingcollectables.json"))
