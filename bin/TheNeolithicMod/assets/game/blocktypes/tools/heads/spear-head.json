@@ -12,7 +12,6 @@
 					[ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:spear-headshaft-{material}-maple-{side}", 1 ],
 					[ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:spear-headshaft-{material}-oak-{side}", 1 ],
 					[ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:spear-headshaft-{material}-pine-{side}", 1 ],
-					[ "neolithicmod:animal-large-bone", "game:spear-headshaft-{material}-bone-{side}", 1 ],
 				],
 			},
 		},
