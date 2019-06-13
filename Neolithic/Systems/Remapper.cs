@@ -122,7 +122,11 @@ namespace TheNeolithicMod
         public void TryRemapMissing(IServerPlayer player)
         {
             RePopulate();
-            if (Missing.Count < 1) return;
+            if (Missing.Count < 1)
+            {
+                sapi.SendMessage(player, GlobalConstants.GeneralChatGroup, "Looks good, no need for remapping.", EnumChatType.Notification);
+                return;
+            }
             sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Starting Remapping, Server May Lag For Bit.", EnumChatType.Notification);
 
             MostLikely.Clear();
