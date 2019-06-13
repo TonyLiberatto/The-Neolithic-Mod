@@ -183,7 +183,7 @@ namespace TheNeolithicMod
                 else
                 {
                     sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Remapping... 100%", EnumChatType.Notification);
-                    sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "100% Please Restart Server Or Leave And Reopen World", EnumChatType.Notification);
+                    sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Please Restart Server Or Leave And Reopen World", EnumChatType.Notification);
                     canExecuteRemap = true;
                     sapi.World.UnregisterGameTickListener(id);
                 }
