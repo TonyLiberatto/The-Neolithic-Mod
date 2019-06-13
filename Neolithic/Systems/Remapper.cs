@@ -29,6 +29,7 @@ namespace TheNeolithicMod
         ICoreClientAPI capi;
         IClientNetworkChannel cChannel;
         IServerNetworkChannel sChannel;
+        bool canExecuteRemap = true;
 
         string nl = Environment.NewLine;
 
@@ -63,7 +64,12 @@ namespace TheNeolithicMod
 
             sapi.RegisterCommand("tryremap", "Try To Remap Missing Collectables Using Levenshtein Distance", "", (p, g, a) =>
             {
-                TryRemapMissing(p);
+                if (canExecuteRemap)
+                {
+                    canExecuteRemap = false;
+                    TryRemapMissing(p);
+                }
+                
             }, Privilege.controlserver);
         }
 
@@ -117,7 +123,7 @@ namespace TheNeolithicMod
         {
             RePopulate();
             if (Missing.Count < 1) return;
-            sapi.SendMessage(player, GlobalConstants.GeneralChatGroup, "Starting Remapping, Server May Lag For Bit.", EnumChatType.Notification);
+            sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Starting Remapping, Server May Lag For Bit.", EnumChatType.Notification);
 
             MostLikely.Clear();
 
@@ -135,9 +141,11 @@ namespace TheNeolithicMod
                 }
                 if (!MostLikely.ContainsValue(NotMissing[distance.IndexOfMin()])) MostLikely.Add(Missing[i], NotMissing[distance.IndexOfMin()]);
 
-                sapi.SendMessage(player, GlobalConstants.GeneralChatGroup, Math.Round(i / (float)Missing.Count * 100, 2) + "%", EnumChatType.Notification);
+                sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Finding Closest Matches... " + Math.Round(i / (float)Missing.Count * 100, 2) + "%", EnumChatType.Notification);
             }
-            
+            sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Finding Closest Matches... 100%", EnumChatType.Notification);
+            sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Begin Remapping", EnumChatType.Notification);
+
             int f = 0;
             id = sapi.World.RegisterGameTickListener(dt =>
             {
@@ -168,12 +176,15 @@ namespace TheNeolithicMod
                                 to = value.ToString()
                             });
                         }
+                        sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Remapping... " + Math.Round(f / (float)MostLikely.Count * 100, 2) + "%", EnumChatType.Notification);
                     }
                     catch (Exception) { }
                 }
                 else
                 {
-                    sapi.SendMessage(player, GlobalConstants.GeneralChatGroup, "100%, Please Restart Server Or Save And Quit", EnumChatType.Notification);
+                    sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Remapping... 100%", EnumChatType.Notification);
+                    sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "100% Please Restart Server Or Leave And Reopen World", EnumChatType.Notification);
+                    canExecuteRemap = true;
                     sapi.World.UnregisterGameTickListener(id);
                 }
             }, 100);
