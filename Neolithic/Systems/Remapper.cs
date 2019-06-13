@@ -112,6 +112,7 @@ namespace TheNeolithicMod
             player.SendMessage(groupID, "Okay, exported list of missing things.", EnumChatType.CommandError);
         }
 
+        long id;
         public void TryRemapMissing(IServerPlayer player)
         {
             RePopulate();
@@ -130,41 +131,53 @@ namespace TheNeolithicMod
                         distance.Add(999999999);
                         continue;
                     }
-                    distance.Add(LevenshteinDistance.Compute(Missing[i].ToString().Replace("game:", ""), NotMissing[j].ToString().Replace("game:", "")));
+                    distance.Add(Missing[i].ToString().Replace(Missing[i].Domain + ":", "").ComputeDistance(NotMissing[j].ToString().Replace(NotMissing[j].Domain + ":", "")));
                 }
-                MostLikely.Add(Missing[i], NotMissing[distance.IndexOfMin()]);
-                sapi.SendMessage(player, GlobalConstants.GeneralChatGroup, Math.Round((i / (float)Missing.Count) * 100, 2) + "%", EnumChatType.Notification);
+                if (!MostLikely.ContainsValue(NotMissing[distance.IndexOfMin()])) MostLikely.Add(Missing[i], NotMissing[distance.IndexOfMin()]);
+
+                sapi.SendMessage(player, GlobalConstants.GeneralChatGroup, Math.Round(i / (float)Missing.Count * 100, 2) + "%", EnumChatType.Notification);
             }
-            for (int i = 0; i < MostLikely.Count; i++)
+            
+            int f = 0;
+            id = sapi.World.RegisterGameTickListener(dt =>
             {
-                try
+                if (f < MostLikely.Count)
                 {
-                    AssetLocation key = MostLikely.ElementAt(i).Key;
-                    AssetLocation value = MostLikely.ElementAt(i).Value;
-                    if (key.GetBlock(sapi) != null && value.GetBlock(sapi) != null)
+                    f++;
+                    try
                     {
-                        sChannel.BroadcastPacket(new Message()
+                        AssetLocation key = MostLikely.ElementAt(f).Key;
+                        AssetLocation value = MostLikely.ElementAt(f).Value;
+                        if (key.GetBlock(sapi) != null && value.GetBlock(sapi) != null)
                         {
-                            IR = "bir",
-                            UID = player.PlayerUID,
-                            from = key.ToString(),
-                            to = value.ToString()
-                        });
-                    }
-                    else if (key.GetItem(sapi) != null && value.GetItem(sapi) != null)
-                    {
-                        sChannel.BroadcastPacket(new Message()
+                            sChannel.BroadcastPacket(new Message()
+                            {
+                                IR = "bir",
+                                UID = player.PlayerUID,
+                                from = key.ToString(),
+                                to = value.ToString()
+                            });
+                        }
+                        else if (key.GetItem(sapi) != null && value.GetItem(sapi) != null)
                         {
-                            IR = "iir",
-                            UID = player.PlayerUID,
-                            from = key.ToString(),
-                            to = value.ToString()
-                        });
+                            sChannel.BroadcastPacket(new Message()
+                            {
+                                IR = "iir",
+                                UID = player.PlayerUID,
+                                from = key.ToString(),
+                                to = value.ToString()
+                            });
+                        }
                     }
+                    catch (Exception) { }
                 }
-                catch (Exception){}
-            }
-            sapi.SendMessage(player, GlobalConstants.GeneralChatGroup, "100%, Please Restart Server", EnumChatType.Notification);
+                else
+                {
+                    sapi.SendMessage(player, GlobalConstants.GeneralChatGroup, "100%, Please Restart Server Or Save And Quit", EnumChatType.Notification);
+                    sapi.World.UnregisterGameTickListener(id);
+                }
+            }, 100);
+
         }
     }
 
@@ -246,6 +259,11 @@ namespace TheNeolithicMod
             }
             // Step 7
             return d[n, m];
+        }
+
+        public static int ComputeDistance(this string a, string b)
+        {
+            return Compute(a, b);
         }
     }
 }
