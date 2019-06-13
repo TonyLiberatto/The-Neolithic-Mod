@@ -367,11 +367,14 @@
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\axemold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\bowl.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\bowlstampmold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\clayplanter.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\claypot.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\crucible.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\flowerpot.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\fourbowls.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\fourclapots.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\fourcrucible.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\fourflowerpot.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\hammermold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\hoemold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\recipes\clayforming\ingotmold.json" />
