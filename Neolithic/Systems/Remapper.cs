@@ -46,7 +46,7 @@ namespace TheNeolithicMod
                 {
                     if (a.UID == capi.World.Player.PlayerUID)
                     {
-                        capi.SendChatMessage("/" + a.IR + " remap " + a.from + " " + a.to + " force");
+                        capi.SendChatMessage("/" + a.IR + " remap " + a.to + " " + a.from + " force");
                     }
                 });
         }
