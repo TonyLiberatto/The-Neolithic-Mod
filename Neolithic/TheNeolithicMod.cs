@@ -20,64 +20,16 @@ namespace TheNeolithicMod
     {
         ICoreClientAPI capi;
         ICoreServerAPI sapi;
-        string nl = Environment.NewLine;
-        public List<AssetLocation> Missing { get; set; } = new List<AssetLocation>();
+
+        public override void StartServerSide(ICoreServerAPI api)
+        {
+            sapi = api;
+        }
 
         public override void StartClientSide(ICoreClientAPI api)
         {
             capi = api;
             api.Event.BlockTexturesLoaded += ReloadTextures;
-        }
-
-        public void RePopulateMissing()
-        {
-            Missing.Clear();
-            for (int i = 0; i < sapi.World.Blocks.Length; i++)
-            {
-                if (sapi.World.Blocks[i].IsMissing)
-                {
-                    Missing.Add(sapi.World.Blocks[i].Code);
-                }
-            }
-            for (int i = 0; i < sapi.World.Items.Length; i++)
-            {
-                if (sapi.World.Items[i].IsMissing)
-                {
-                    Missing.Add(sapi.World.Items[i].Code);
-                }
-            }
-        }
-
-        public void ExportMissing(IServerPlayer player, int groupID)
-        {
-            RePopulateMissing();
-            string missing = "[" + nl;
-            foreach (AssetLocation miss in Missing)
-            {
-                missing += "    \"" + miss.ToString() + "\"";
-                if (miss != Missing[Missing.Count-1])
-                {
-                    missing += ",";
-                }
-                missing += nl;
-
-            }
-            missing += "]";
-
-            using (TextWriter tW = new StreamWriter("missingcollectibles.json"))
-            {
-                tW.Write(missing);
-                tW.Close();
-            }
-            player.SendMessage(groupID, "Okay, exported list of missing things.", EnumChatType.CommandError);
-        }
-
-        public override void StartServerSide(ICoreServerAPI api)
-        {
-            this.sapi = api;
-            sapi.RegisterCommand("exportmissing", "Exports Names Of Missing Collectables", "", (p, g, a) => {
-                ExportMissing(p, g);
-            });
         }
 
         public void ReloadTextures()
