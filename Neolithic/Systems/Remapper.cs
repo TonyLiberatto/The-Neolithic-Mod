@@ -196,7 +196,6 @@ namespace TheNeolithicMod
             sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Finding Closest " + type + " Matches... 100%", EnumChatType.Notification);
         }
 
-        long id;
         public void TryRemapMissing(IServerPlayer player)
         {
             RePopulate();
