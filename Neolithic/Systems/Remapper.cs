@@ -48,10 +48,8 @@ namespace TheNeolithicMod
                 .SetMessageHandler<Message>(a => 
                 {
                     MostLikely = JsonConvert.DeserializeObject<Dictionary<AssetLocation, AssetLocation>>(a.Assets);
-                    int i = 0;
                     foreach (var item in MostLikely)
                     {
-                        i++;
                         if (item.Key.GetBlock(capi) != null && item.Value.GetBlock(capi) != null)
                         {
                             capi.SendChatMessage("/bir remap " + item.Value + " " + item.Key + " force");
