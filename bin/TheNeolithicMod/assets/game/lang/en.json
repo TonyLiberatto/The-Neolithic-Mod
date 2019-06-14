@@ -2186,7 +2186,12 @@
 	"block-sword-flakes-flint-north": "Sword Flakes Flint",
 	"block-sword-flakes-obsidian-north": "Sword Flakes Obsidian",
 	"blockdesc-spear-head-*": "Right click with Debarked Very Thin Branch For next step",
-	"blockdesc-*-head-*": "Right click with Debarked Very Thin Branch or Large Bone For next step",
+	"blockdesc-*-head-granite-*": "Right click with Debarked Very Thin Branch or Large Bone For next step",
+	"blockdesc-*-head-andesite-*": "Right click with Debarked Very Thin Branch or Large Bone For next step",
+	"blockdesc-*-head-basalt-*": "Right click with Debarked Very Thin Branch or Large Bone For next step",
+	"blockdesc-*-head-obsidian-*": "Right click with Debarked Very Thin Branch or Large Bone For next step",
+	"blockdesc-*-head-flint-*": "Right click with Debarked Very Thin Branch or Large Bone For next step",
+	"blockdesc-*-head-peridotite-*": "Right click with Debarked Very Thin Branch or Large Bone For next step",
 	
 	"blockdesc-*-headshaft-*": "Right click with Leatherstrips or Sisal Rope or Sinew For Finished Tool",
 	"blockdesc-*sword-head-*": "Right click with Debarked  Thin Branch For next step",
