@@ -1,4 +1,5 @@
-﻿using ProtoBuf;
+﻿using Newtonsoft.Json;
+using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Vintagestory.API;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
@@ -33,8 +35,12 @@ namespace TheNeolithicMod
 
         string nl = Environment.NewLine;
 
-        public List<AssetLocation> Missing { get; set; } = new List<AssetLocation>();
-        public List<AssetLocation> NotMissing { get; set; } = new List<AssetLocation>();
+        public List<AssetLocation> MissingBlocks { get; set; } = new List<AssetLocation>();
+        public List<AssetLocation> MissingItems { get; set; } = new List<AssetLocation>();
+
+        public List<AssetLocation> NotMissingBlocks { get; set; } = new List<AssetLocation>();
+        public List<AssetLocation> NotMissingItems { get; set; } = new List<AssetLocation>();
+
         Dictionary<AssetLocation, AssetLocation> MostLikely { get; set; } = new Dictionary<AssetLocation, AssetLocation>();
 
         public override void StartClientSide(ICoreClientAPI api)
@@ -62,6 +68,16 @@ namespace TheNeolithicMod
                 ExportMissing(p, g);
             }, Privilege.controlserver);
 
+            sapi.RegisterCommand("exportmatches", "Exports Names Of Missing Collectables", "", (p, g, a) =>
+            {
+                ExportMatches(p);
+            }, Privilege.controlserver);
+
+            sapi.RegisterCommand("loadmatches", "Exports Names Of Missing Collectables", "", (p, g, a) =>
+            {
+                LoadMatches();
+            }, Privilege.controlserver);
+
             sapi.RegisterCommand("tryremap", "Try To Remap Missing Collectables Using Levenshtein Distance", "", (p, g, a) =>
             {
                 if (canExecuteRemap)
@@ -73,29 +89,45 @@ namespace TheNeolithicMod
             }, Privilege.controlserver);
         }
 
+        public void LoadMatches()
+        {
+            try
+            {
+                using (TextReader tW = new StreamReader("matches.json"))
+                {
+                    MostLikely = JsonConvert.DeserializeObject<Dictionary<AssetLocation, AssetLocation>>(tW.ReadToEnd());
+                }
+            }
+            catch (Exception) {}
+        }
+
         public void RePopulate()
         {
-            Missing.Clear();
+            MissingBlocks.Clear();
+            MissingItems.Clear();
+            NotMissingBlocks.Clear();
+            NotMissingItems.Clear();
+
             for (int i = 0; i < sapi.World.Blocks.Length; i++)
             {
                 if (sapi.World.Blocks[i].IsMissing)
                 {
-                    Missing.Add(sapi.World.Blocks[i].Code);
+                    MissingBlocks.Add(sapi.World.Blocks[i].Code);
                 }
                 else
                 {
-                    NotMissing.Add(sapi.World.Blocks[i].Code);
+                    NotMissingBlocks.Add(sapi.World.Blocks[i].Code);
                 }
             }
             for (int i = 0; i < sapi.World.Items.Length; i++)
             {
                 if (sapi.World.Items[i].IsMissing)
                 {
-                    Missing.Add(sapi.World.Items[i].Code);
+                    MissingItems.Add(sapi.World.Items[i].Code);
                 }
                 else
                 {
-                    NotMissing.Add(sapi.World.Items[i].Code);
+                    NotMissingItems.Add(sapi.World.Items[i].Code);
                 }
             }
         }
@@ -103,51 +135,81 @@ namespace TheNeolithicMod
         public void ExportMissing(IServerPlayer player, int groupID)
         {
             RePopulate();
-            string missing = "[" + nl;
-            for (int i = 0; i < Missing.Count - 1; i++)
-            {
-                missing += "    \"" + Missing[i].ToString() + "\"," + nl;
-            }
-            missing += "    \"" + Missing[Missing.Count - 1].ToString() + "\"" + nl + "]";
-
+            List<AssetLocation> combined = MissingBlocks.Concat(MissingItems).ToList();
+            string a = JsonConvert.SerializeObject(combined, Formatting.Indented);
             using (TextWriter tW = new StreamWriter("missingcollectibles.json"))
             {
-                tW.Write(missing);
+                tW.Write(a);
                 tW.Close();
             }
             player.SendMessage(groupID, "Okay, exported list of missing things.", EnumChatType.CommandError);
+        }
+
+        public void ExportMatches(IServerPlayer player)
+        {
+            FindMatches(player);
+
+            using (TextWriter tW = new StreamWriter("matches.json"))
+            {
+                tW.Write(JsonConvert.SerializeObject(MostLikely, Formatting.Indented));
+                tW.Close();
+            }
+            player.SendMessage(GlobalConstants.GeneralChatGroup, "Okay, exported list of matching things.", EnumChatType.CommandError);
+        }
+
+        public void FindMatches(IServerPlayer player)
+        {
+            MostLikely.Clear();
+            RePopulate();
+            Matches(player, MissingBlocks, NotMissingBlocks, "Block");
+            Matches(player, MissingItems, NotMissingItems, "Item");
+        }
+
+        public void Matches(IPlayer player, List<AssetLocation> missing, List<AssetLocation> notmissing, string type = "Block")
+        {
+            for (int i = 0; i < missing.Count; i++)
+            {
+                List<int> distance = new List<int>();
+                for (int j = 0; j < notmissing.Count; j++)
+                {
+                    if (missing[i] == null || notmissing[j] == null)
+                    {
+                        distance.Add(999999999);
+                        continue;
+                    }
+                    distance.Add(missing[i].ToString().Replace(missing[i].Domain + ":", "").ComputeDistance(notmissing[j].ToString().Replace(notmissing[j].Domain + ":", "")));
+                }
+                int index = distance.IndexOfMin();
+
+                if (!MostLikely.ContainsValue(notmissing[index]))
+                {
+                    MostLikely.Add(missing[i], notmissing[index]);
+                    notmissing.RemoveAt(index);
+                }
+
+                sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Finding Closest "+ type +" Matches... " + Math.Round(i / (float)missing.Count * 100, 2) + "%", EnumChatType.Notification);
+            }
+            sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Finding Closest " + type + " Matches... 100%", EnumChatType.Notification);
         }
 
         long id;
         public void TryRemapMissing(IServerPlayer player)
         {
             RePopulate();
-            if (Missing.Count < 1)
+            if (MissingItems.Count < 1 && MissingBlocks.Count < 1)
             {
                 sapi.SendMessage(player, GlobalConstants.GeneralChatGroup, "Looks good, no need for remapping.", EnumChatType.Notification);
                 return;
             }
-            sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Starting Remapping, Server May Lag For Bit.", EnumChatType.Notification);
+            LoadMatches();
 
-            MostLikely.Clear();
-
-            for (int i = 0; i < Missing.Count; i++)
+            if (MostLikely.Count < 1)
             {
-                List<int> distance = new List<int>();
-                for (int j = 0; j < NotMissing.Count; j++)
-                {
-                    if (Missing[i] == null || NotMissing[j] == null)
-                    {
-                        distance.Add(999999999);
-                        continue;
-                    }
-                    distance.Add(Missing[i].ToString().Replace(Missing[i].Domain + ":", "").ComputeDistance(NotMissing[j].ToString().Replace(NotMissing[j].Domain + ":", "")));
-                }
-                if (!MostLikely.ContainsValue(NotMissing[distance.IndexOfMin()])) MostLikely.Add(Missing[i], NotMissing[distance.IndexOfMin()]);
-
-                sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Finding Closest Matches... " + Math.Round(i / (float)Missing.Count * 100, 2) + "%", EnumChatType.Notification);
+                sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Starting Remapping, Server May Lag For Bit.", EnumChatType.Notification);
+                ExportMatches(player);
             }
-            sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Finding Closest Matches... 100%", EnumChatType.Notification);
+            
+
             sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Begin Remapping", EnumChatType.Notification);
 
             int f = 0;
