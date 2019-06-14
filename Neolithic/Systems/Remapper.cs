@@ -19,10 +19,7 @@ namespace TheNeolithicMod
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class Message
     {
-        public string IR;
-        public string UID;
-        public string from;
-        public string to;
+        public string Assets;
     }
 
     class Remapper : ModSystem
@@ -50,10 +47,21 @@ namespace TheNeolithicMod
                 .RegisterMessageType(typeof(Message))
                 .SetMessageHandler<Message>(a => 
                 {
-                    if (a.UID == capi.World.Player.PlayerUID)
+                    MostLikely = JsonConvert.DeserializeObject<Dictionary<AssetLocation, AssetLocation>>(a.Assets);
+                    int i = 0;
+                    foreach (var item in MostLikely)
                     {
-                        capi.SendChatMessage("/" + a.IR + " remap " + a.to + " " + a.from + " force");
+                        i++;
+                        if (item.Key.GetBlock(capi) != null && item.Value.GetBlock(capi) != null)
+                        {
+                            capi.SendChatMessage("/bir remap " + item.Value + " " + item.Key + " force");
+                        }
+                        else if (item.Key.GetItem(capi) != null && item.Value.GetItem(capi) != null)
+                        {
+                            capi.SendChatMessage("/iir remap " + item.Value + " " + item.Key + " force");
+                        }
                     }
+                    canExecuteRemap = true;
                 });
         }
 
@@ -71,11 +79,6 @@ namespace TheNeolithicMod
             sapi.RegisterCommand("exportmatches", "Exports Matches", "", (p, g, a) =>
             {
                 ExportMatches(p);
-            }, Privilege.controlserver);
-
-            sapi.RegisterCommand("loadmatches", "Loads Matches", "", (p, g, a) =>
-            {
-                LoadMatches();
             }, Privilege.controlserver);
 
             sapi.RegisterCommand("tryremap", "Try To Remap Missing Collectables Using Levenshtein Distance", "", (p, g, a) =>
@@ -98,7 +101,10 @@ namespace TheNeolithicMod
                     MostLikely = JsonConvert.DeserializeObject<Dictionary<AssetLocation, AssetLocation>>(tW.ReadToEnd());
                 }
             }
-            catch (Exception) {}
+            catch (Exception)
+            {
+                sapi.World.Logger.Error("Empty Matches JSON");
+            }
         }
 
         public void RePopulate()
@@ -212,49 +218,7 @@ namespace TheNeolithicMod
 
             sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Begin Remapping", EnumChatType.Notification);
 
-            int f = 0;
-            id = sapi.World.RegisterGameTickListener(dt =>
-            {
-                if (f < MostLikely.Count)
-                {
-                    f++;
-                    try
-                    {
-                        AssetLocation key = MostLikely.ElementAt(f).Key;
-                        AssetLocation value = MostLikely.ElementAt(f).Value;
-                        if (key.GetBlock(sapi) != null && value.GetBlock(sapi) != null)
-                        {
-                            sChannel.SendPacket(new Message()
-                            {
-                                IR = "bir",
-                                UID = player.PlayerUID,
-                                from = key.ToString(),
-                                to = value.ToString()
-                            }, player);
-                        }
-                        else if (key.GetItem(sapi) != null && value.GetItem(sapi) != null)
-                        {
-                            sChannel.SendPacket(new Message()
-                            {
-                                IR = "iir",
-                                UID = player.PlayerUID,
-                                from = key.ToString(),
-                                to = value.ToString()
-                            }, player);
-                        }
-                        sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Remapping... " + Math.Round(f / (float)MostLikely.Count * 100, 2) + "%", EnumChatType.Notification);
-                    }
-                    catch (Exception) { }
-                }
-                else
-                {
-                    sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Remapping... 100%", EnumChatType.Notification);
-                    sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Please Restart Server Or Leave And Reopen World", EnumChatType.Notification);
-                    canExecuteRemap = true;
-                    sapi.World.UnregisterGameTickListener(id);
-                }
-            }, 100);
-
+            sChannel.SendPacket(new Message() { Assets = JsonConvert.SerializeObject(MostLikely) }, player);
         }
     }
 
