@@ -224,23 +224,23 @@ namespace TheNeolithicMod
                         AssetLocation value = MostLikely.ElementAt(f).Value;
                         if (key.GetBlock(sapi) != null && value.GetBlock(sapi) != null)
                         {
-                            sChannel.BroadcastPacket(new Message()
+                            sChannel.SendPacket(new Message()
                             {
                                 IR = "bir",
                                 UID = player.PlayerUID,
                                 from = key.ToString(),
                                 to = value.ToString()
-                            });
+                            }, player);
                         }
                         else if (key.GetItem(sapi) != null && value.GetItem(sapi) != null)
                         {
-                            sChannel.BroadcastPacket(new Message()
+                            sChannel.SendPacket(new Message()
                             {
                                 IR = "iir",
                                 UID = player.PlayerUID,
                                 from = key.ToString(),
                                 to = value.ToString()
-                            });
+                            }, player);
                         }
                         sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Remapping... " + Math.Round(f / (float)MostLikely.Count * 100, 2) + "%", EnumChatType.Notification);
                     }
