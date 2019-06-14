@@ -68,12 +68,12 @@ namespace TheNeolithicMod
                 ExportMissing(p, g);
             }, Privilege.controlserver);
 
-            sapi.RegisterCommand("exportmatches", "Exports Names Of Missing Collectables", "", (p, g, a) =>
+            sapi.RegisterCommand("exportmatches", "Exports Matches", "", (p, g, a) =>
             {
                 ExportMatches(p);
             }, Privilege.controlserver);
 
-            sapi.RegisterCommand("loadmatches", "Exports Names Of Missing Collectables", "", (p, g, a) =>
+            sapi.RegisterCommand("loadmatches", "Loads Matches", "", (p, g, a) =>
             {
                 LoadMatches();
             }, Privilege.controlserver);
