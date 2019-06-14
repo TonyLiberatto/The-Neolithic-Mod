@@ -205,7 +205,7 @@ namespace TheNeolithicMod
 
             if (MostLikely.Count < 1)
             {
-                sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Starting Remapping, Server May Lag For Bit.", EnumChatType.Notification);
+                sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Empty or Missing JSON, Will Search For Matches Instead Of Loading, Server May Lag For Bit.", EnumChatType.Notification);
                 ExportMatches(player);
             }
             
