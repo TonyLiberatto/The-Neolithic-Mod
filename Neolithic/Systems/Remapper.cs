@@ -165,11 +165,11 @@ namespace TheNeolithicMod
         {
             MostLikely.Clear();
             RePopulate();
-            Matches(player, MissingBlocks, NotMissingBlocks, "Block");
-            Matches(player, MissingItems, NotMissingItems, "Item");
+            Search(player, MissingBlocks, NotMissingBlocks, "Block");
+            Search(player, MissingItems, NotMissingItems, "Item");
         }
 
-        public void Matches(IPlayer player, List<AssetLocation> missing, List<AssetLocation> notmissing, string type = "Block")
+        public void Search(IPlayer player, List<AssetLocation> missing, List<AssetLocation> notmissing, string type = "Block")
         {
             for (int i = 0; i < missing.Count; i++)
             {
