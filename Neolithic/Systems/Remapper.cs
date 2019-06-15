@@ -84,7 +84,9 @@ namespace TheNeolithicMod
                 if (canExecuteRemap)
                 {
                     canExecuteRemap = false;
-                    TryRemapMissing(p);
+                    string popped = a.PopWord();
+                    bool force = popped == "force" ? true : false;
+                    TryRemapMissing(p, force);
                 }
                 
             }, Privilege.controlserver);
@@ -196,10 +198,10 @@ namespace TheNeolithicMod
             sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Finding Closest " + type + " Matches... 100%", EnumChatType.Notification);
         }
 
-        public void TryRemapMissing(IServerPlayer player)
+        public void TryRemapMissing(IServerPlayer player, bool force = false)
         {
             RePopulate();
-            if (MissingItems.Count < 1 && MissingBlocks.Count < 1)
+            if ((MissingItems.Count < 1 && MissingBlocks.Count < 1) && !force)
             {
                 sapi.SendMessage(player, GlobalConstants.GeneralChatGroup, "Looks good, no need for remapping.", EnumChatType.Notification);
                 return;
