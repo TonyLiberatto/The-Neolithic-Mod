@@ -59,36 +59,41 @@ namespace TheNeolithicMod
                             capi.SendChatMessage("/iir remap " + item.Value + " " + item.Key + " force");
                         }
                     }
-                    canExecuteRemap = true;
                 });
         }
 
         public override void StartServerSide(ICoreServerAPI api)
         {
             sapi = api;
-            sChannel =sapi.Network.RegisterChannel("remapperchannel")
-                .RegisterMessageType(typeof(Message));
+            sChannel = sapi.Network.RegisterChannel("remapperchannel").RegisterMessageType(typeof(Message));
 
-            sapi.RegisterCommand("exportmissing", "Exports Names Of Missing Collectables", "", (p, g, a) =>
+            sapi.RegisterCommand("remapper", "Remapper", "", (p, g, a) =>
             {
-                ExportMissing(p, g);
-            }, Privilege.controlserver);
-
-            sapi.RegisterCommand("exportmatches", "Exports Matches", "", (p, g, a) =>
-            {
-                ExportMatches(p);
-            }, Privilege.controlserver);
-
-            sapi.RegisterCommand("tryremap", "Try To Remap Missing Collectables Using Levenshtein Distance", "", (p, g, a) =>
-            {
-                if (canExecuteRemap)
+                string arg = a.PopWord();
+                switch (arg)
                 {
-                    canExecuteRemap = false;
-                    string popped = a.PopWord();
-                    bool force = popped == "force" ? true : false;
-                    TryRemapMissing(p, force);
+                    case "exportmissing":
+                        ExportMissing(p, g);
+                        break;
+                    case "exportmatches":
+                        string dl1 = a.PopWord();
+                        bool DL1 = dl1 == "dl" ? true : false;
+                        ExportMatches(p, DL1);
+                        break;
+                    case "tryremap":
+                        if (canExecuteRemap)
+                        {
+                            canExecuteRemap = false;
+                            string frc = a.PopWord();
+                            string dl = a.PopWord();
+                            bool force = frc == "force" ? true : false;
+                            bool DL = dl == "dl" ? true : false;
+                            TryRemapMissing(p, force, DL);
+                        }
+                        break;
+                    default:
+                        break;
                 }
-                
             }, Privilege.controlserver);
         }
 
@@ -151,9 +156,9 @@ namespace TheNeolithicMod
             player.SendMessage(groupID, "Okay, exported list of missing things.", EnumChatType.CommandError);
         }
 
-        public void ExportMatches(IServerPlayer player)
+        public void ExportMatches(IServerPlayer player, bool DL = false)
         {
-            FindMatches(player);
+            FindMatches(player, DL);
 
             using (TextWriter tW = new StreamWriter("matches.json"))
             {
@@ -163,15 +168,15 @@ namespace TheNeolithicMod
             player.SendMessage(GlobalConstants.GeneralChatGroup, "Okay, exported list of matching things.", EnumChatType.CommandError);
         }
 
-        public void FindMatches(IServerPlayer player)
+        public void FindMatches(IServerPlayer player, bool DL = false)
         {
             MostLikely.Clear();
             RePopulate();
-            Search(player, MissingBlocks, NotMissingBlocks, "Block");
-            Search(player, MissingItems, NotMissingItems, "Item");
+            Search(player, MissingBlocks, NotMissingBlocks, "Block", DL);
+            Search(player, MissingItems, NotMissingItems, "Item", DL);
         }
 
-        public void Search(IPlayer player, List<AssetLocation> missing, List<AssetLocation> notmissing, string type = "Block")
+        public void Search(IPlayer player, List<AssetLocation> missing, List<AssetLocation> notmissing, string type = "Block", bool DL = false)
         {
             for (int i = 0; i < missing.Count; i++)
             {
@@ -183,7 +188,14 @@ namespace TheNeolithicMod
                         distance.Add(999999999);
                         continue;
                     }
-                    distance.Add(missing[i].ToString().Replace(missing[i].Domain + ":", "").ComputeDistance(notmissing[j].ToString().Replace(notmissing[j].Domain + ":", "")));
+                    if (DL)
+                    {
+                        distance.Add(missing[i].ToString().Replace(missing[i].Domain + ":", "").ComputeDLDistance(notmissing[j].ToString().Replace(notmissing[j].Domain + ":", "")));
+                    }
+                    else
+                    {
+                        distance.Add(missing[i].ToString().Replace(missing[i].Domain + ":", "").ComputeDistance(notmissing[j].ToString().Replace(notmissing[j].Domain + ":", "")));
+                    }
                 }
                 int index = distance.IndexOfMin();
 
@@ -198,7 +210,7 @@ namespace TheNeolithicMod
             sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Finding Closest " + type + " Matches... 100%", EnumChatType.Notification);
         }
 
-        public void TryRemapMissing(IServerPlayer player, bool force = false)
+        public void TryRemapMissing(IServerPlayer player, bool force = false, bool DL = false)
         {
             RePopulate();
             if ((MissingItems.Count < 1 && MissingBlocks.Count < 1) && !force)
@@ -211,13 +223,14 @@ namespace TheNeolithicMod
             if (MostLikely.Count < 1)
             {
                 sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Empty or Missing JSON, Will Search For Matches Instead Of Loading, Server May Lag For Bit.", EnumChatType.Notification);
-                ExportMatches(player);
+                ExportMatches(player, DL);
             }
             
 
             sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Begin Remapping", EnumChatType.Notification);
 
             sChannel.SendPacket(new Message() { Assets = JsonConvert.SerializeObject(MostLikely) }, player);
+            canExecuteRemap = true;
         }
     }
 }
