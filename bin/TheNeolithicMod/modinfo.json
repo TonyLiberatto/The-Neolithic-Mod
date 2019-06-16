@@ -9,7 +9,7 @@
 	"contributors": ["Tyron", "Milo", "Stroam","Elwood","copygirl", "MarcAFK"],
 	"version": "1.9.7",
 	"dependencies": {
-	"carrycapacity": "0.4.2",
+	"carrycapacity": "0.4.3",
 	"game": "1.9.10",
 	}
 }
