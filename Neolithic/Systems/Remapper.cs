@@ -47,6 +47,7 @@ namespace TheNeolithicMod
                 .RegisterMessageType(typeof(Message))
                 .SetMessageHandler<Message>(a => 
                 {
+                    capi = api;
                     MostLikely = JsonConvert.DeserializeObject<Dictionary<AssetLocation, AssetLocation>>(a.Assets);
                     foreach (var item in MostLikely)
                     {
@@ -88,6 +89,9 @@ namespace TheNeolithicMod
                             bool DL = dl == "dl" ? true : false;
                             TryRemapMissing(p, DL);
                         }
+                        break;
+                    case "frombuild":
+                        sChannel.SendPacket(new Message() { Assets = NLMissing.@object }, p);
                         break;
                     default:
                         break;
