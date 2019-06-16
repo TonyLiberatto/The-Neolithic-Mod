@@ -92,6 +92,7 @@ namespace TheNeolithicMod
                         break;
                     case "frombuild":
                         sChannel.SendPacket(new Message() { Assets = NLMissing.@object }, p);
+                        p.SendMessage(GlobalConstants.GeneralChatGroup, "Remapping from built in list...", EnumChatType.CommandError);
                         break;
                     case "loadfrombuild":
                         MostLikely = JsonConvert.DeserializeObject<Dictionary<AssetLocation, AssetLocation>>(NLMissing.@object);
