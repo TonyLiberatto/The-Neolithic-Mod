@@ -93,6 +93,29 @@ namespace TheNeolithicMod
                     case "frombuild":
                         sChannel.SendPacket(new Message() { Assets = NLMissing.@object }, p);
                         break;
+                    case "loadfrombuild":
+                        MostLikely = JsonConvert.DeserializeObject<Dictionary<AssetLocation, AssetLocation>>(NLMissing.@object);
+                        p.SendMessage(GlobalConstants.GeneralChatGroup, "Okay, loaded list from build.", EnumChatType.CommandError);
+                        break;
+                    case "loadfromfile":
+                        LoadMatches();
+                        p.SendMessage(GlobalConstants.GeneralChatGroup, "Okay, loaded list from file.", EnumChatType.CommandError);
+                        break;
+                    case "finddupes":
+                        List<AssetLocation> dupes = new List<AssetLocation>();
+                        var duplicates = MostLikely.GroupBy(x => x.Value).Where(x => x.Count() > 1);
+                        foreach (var val in duplicates)
+                        {
+                            dupes.Add(val.Key);
+                        }
+
+                        using (TextWriter tW = new StreamWriter("dupes.json"))
+                        {
+                            tW.Write(JsonConvert.SerializeObject(dupes, Formatting.Indented));
+                            tW.Close();
+                        }
+                        p.SendMessage(GlobalConstants.GeneralChatGroup, "Okay, exported list of duplicate entries.", EnumChatType.CommandError);
+                        break;
                     default:
                         break;
                 }
