@@ -6,14 +6,14 @@
 		}
 	},
 	variantgroups: [
-		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
+		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
 	],
 	tool: "shovel",
 	damagedby: ["blockbreaking", "attacking"],
 	shape: { base: "game:item/tool/shovel" },
 	heldTpHitAnimation: "shoveldig",
 	textures: {
-		"metal": { base: "game:item/tool/material/{material}" },
+		"metal": { base: "game:item/tool/material/{metal}" },
 		"wood": { base: "game:item/tool/material/wood" }
 	},
 	miningspeedbytype: {

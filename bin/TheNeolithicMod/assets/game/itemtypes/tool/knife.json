@@ -8,12 +8,12 @@
 		}
 	},
 	variantgroups: [
-		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
+		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
 	],
 	shape: { base: "game:item/tool/knife" },
 	heldTpHitAnimation: "breaktool",
 	textures: {
-		"metal": { base: "game:item/tool/material/{material}" },
+		"metal": { base: "game:item/tool/material/{metal}" },
 		"wood": { base: "game:item/tool/material/wood" }
 	},
 	durabilitybytype: {

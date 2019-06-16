@@ -4,12 +4,12 @@
 	damagedby: ["attacking"],
 	tool: "spear",
 	variantgroups: [
-		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron"] },
+		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron"] },
 	],
 	shape: { base: "item/tool/spear" },
 	heldTpHitAnimation: "spearhit",
 	textures: {
-		"metal": { base: "item/tool/material/{material}" },
+		"metal": { base: "item/tool/material/{metal}" },
 		"wood": { base: "item/tool/material/wood" }
 	},
 	attackRange: 3.5,
