@@ -106,7 +106,7 @@ namespace TheNeolithicMod
             }
             catch (Exception)
             {
-                sapi.World.Logger.Error("Empty Matches JSON");
+                sapi.World.Logger.Error("Empty Or Broken Matches JSON");
             }
         }
 
