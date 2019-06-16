@@ -132,6 +132,7 @@
     <Compile Include="Neolithic\Content\Block\BlockPlaceOnDrop.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLogWall.cs" />
     <Compile Include="Neolithic\Content\Utility\LevenshteinDistance.cs" />
+    <Compile Include="Neolithic\Content\Utility\Missing.cs" />
     <Compile Include="Neolithic\Systems\CookingFix.cs" />
     <Compile Include="Neolithic\Content\Block\NeoBlockSmeltedContainer.cs" />
     <Compile Include="Neolithic\Content\Block\FixedStairs.cs" />
