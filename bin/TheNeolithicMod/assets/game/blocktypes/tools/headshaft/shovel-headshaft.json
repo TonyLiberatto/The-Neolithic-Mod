@@ -8,7 +8,7 @@
 				"swapBlocks": [
 					[ "neolithicmod:animal-leatherstrips", "game:shovel-{stone}-{shaft}-leatherstrips-{side}", 1 ],
 					[ "neolithicmod:byproducts-sinew", "game:shovel-{stone}-{shaft}-sinew-{side}", 1 ],
-					[ "neolithicmod:sisal-rope", "game:shovel-{stone}-{shaft}-rope-{side}", 1 ],
+					[ "neolithicmod:sisal-twine", "game:shovel-{stone}-{shaft}-rope-{side}", 1 ],
 				],
 			},
 		},

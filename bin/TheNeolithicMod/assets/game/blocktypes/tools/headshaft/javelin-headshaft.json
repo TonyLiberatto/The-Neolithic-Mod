@@ -8,7 +8,7 @@
 				"swapBlocks": [
 					[ "neolithicmod:animal-leatherstrips", "game:javelin-{shaft}-leatherstrips-{side}", "game:javelin-headshaft-{shaft}-{side}", 1 ],
 					[ "neolithicmod:byproducts-sinew", "game:javelin-{shaft}-leatherstrips-{side}", "game:javelin-headshaft-{shaft}-{side}", 1 ],
-					[ "neolithicmod:sisal-rope", "game:javelin-{shaft}-leatherstrips-{side}", "game:javelin-headshaft-{shaft}-{side}", 1 ],
+					[ "neolithicmod:sisal-twine", "game:javelin-{shaft}-leatherstrips-{side}", "game:javelin-headshaft-{shaft}-{side}", 1 ],
 				],
 			},
 		},
