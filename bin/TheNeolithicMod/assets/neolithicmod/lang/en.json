@@ -581,8 +581,12 @@
 
   "blockdesc-dead-chicken-*": "Use a Knife to get feathers, chicken meat and some fat.",
   "blockdesc-dead-rabbit-*": "Use a knife to get rabbit meat, A chance of a pelt or hide.",
+  "blockdesc-dead-armadillo-*": "Use a knife to get red meat.",
   "blockdesc-dead-fox-*": "Use a knife to get fox meat, A chance of a pelt or hide.",
-  "blockdesc-dead-*": "Use a saw for a chance to get a Head Trophy, Use a knife for a chance to get a pelt otherwise, hides.",
+  "blockdesc-dead-sheep-*": "Use a saw for a chance to get a Head Trophy, Use a knife for a chance to get a pelt otherwise, hides.",
+  "blockdesc-dead-wild-*": "Use a saw for a chance to get a Head Trophy, Use a knife for a chance to get a pelt otherwise, hides.",
+  "blockdesc-dead-wolf-*": "Use a saw for a chance to get a Head Trophy, Use a knife for a chance to get a pelt otherwise, hides.",
+  "blockdesc-dead-hyena-*": "Use a saw for a chance to get a Head Trophy, Use a knife for a chance to get a pelt otherwise, hides.",
 
   "block-dead-rotten-small": "Small Carrion",
   "block-dead-rotten-large": "Large Carrion",
