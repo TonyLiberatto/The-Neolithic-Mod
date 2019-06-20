@@ -15,7 +15,7 @@
 		],
 	drawtype: "json",
 	shape: { base: "item/tool/primitive-javelin" },
-	heldTpHitAnimation: "breaktool",
+	heldTpHitAnimation: "spearhit",
 	MaxStackSize: 32,
 	textures: {
 		"bone": { base: "block/bone" },
