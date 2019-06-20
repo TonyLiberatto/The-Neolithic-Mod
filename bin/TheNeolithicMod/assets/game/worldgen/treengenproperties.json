@@ -9,7 +9,7 @@
 		{
 			Generator: "bamboo-grown-green",
 			Weight: 100,
-			MinTemp: 34,
+			MinTemp: 28,
 			MaxTemp: 40,
 			MinRain: 170,
 			MaxRain: 235,
@@ -17,8 +17,8 @@
 		{
 			Generator: "bamboo-grown-brown",
 			Weight: 100,
-			MinTemp: 25,
-			MaxTemp: 34,
+			MinTemp: 20,
+			MaxTemp: 32,
 			MinRain: 170,
 			MaxRain: 235,
 		},
@@ -28,7 +28,7 @@
 			MinTemp: 3,
 			MaxTemp: 16,
 			MinRain: 95,
-			MaxRain: 220,
+			MaxRain: 255,
 			MinFert: 10,
 			MaxFert: 100,
 			MinForest: 10,
@@ -330,13 +330,13 @@
 			MinTemp: -20,
 			MaxTemp: 12,
 			MinRain: 30,
-			MaxRain: 150,
+			MaxRain: 255,
 			MinFert: 0,
-			MaxFert: 100,
+			MaxFert: 180,
 			MinForest: 0,
 			MaxForest: 255,
 			MinHeight: 0.0,
-			MaxHeight: 1
+			MaxHeight: 1.0
 		},
 
 	]
