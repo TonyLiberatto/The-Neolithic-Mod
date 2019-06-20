@@ -348,11 +348,11 @@
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\hoe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\javelin.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\knife.json" />
-    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\primitive-sword.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\shovel.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\sickle.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\slaughteringaxe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\spear-primitive.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\neolithic\sword.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\pickaxe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\prospectingpick.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\tool\saw.json" />
