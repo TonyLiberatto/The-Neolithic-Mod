@@ -45,7 +45,7 @@ namespace TheNeolithicMod
             capi = api;
             cChannel = capi.Network.RegisterChannel("remapperchannel")
                 .RegisterMessageType(typeof(Message))
-                .SetMessageHandler<Message>(a => 
+                .SetMessageHandler<Message>(a =>
                 {
                     capi = api;
                     MostLikely = JsonConvert.DeserializeObject<Dictionary<AssetLocation, AssetLocation>>(a.Assets);
@@ -71,6 +71,7 @@ namespace TheNeolithicMod
             sapi.RegisterCommand("remapper", "Remapper", "", (p, g, a) =>
             {
                 string arg = a.PopWord();
+                NLMissing nLMissing = api.ModLoader.GetModSystem<NLMissing>();
                 switch (arg)
                 {
                     case "exportmissing":
@@ -91,15 +92,15 @@ namespace TheNeolithicMod
                         }
                         break;
                     case "frombuild":
-                        sChannel.SendPacket(new Message() { Assets = NLMissing.@object }, p);
+                        sChannel.SendPacket(new Message() { Assets = nLMissing.@object }, p);
                         p.SendMessage(GlobalConstants.GeneralChatGroup, "Remapping from built in list...", EnumChatType.CommandError);
                         break;
                     case "loadfrombuild":
-                        MostLikely = JsonConvert.DeserializeObject<Dictionary<AssetLocation, AssetLocation>>(NLMissing.@object);
+                        MostLikely = JsonConvert.DeserializeObject<Dictionary<AssetLocation, AssetLocation>>(nLMissing.@object);
                         p.SendMessage(GlobalConstants.GeneralChatGroup, "Okay, loaded list from build.", EnumChatType.CommandError);
                         break;
                     case "loadfromfile":
-                        LoadMatches();
+                        ImportMatches();
                         p.SendMessage(GlobalConstants.GeneralChatGroup, "Okay, loaded list from file.", EnumChatType.CommandError);
                         break;
                     case "finddupes":
@@ -123,7 +124,7 @@ namespace TheNeolithicMod
             }, Privilege.controlserver);
         }
 
-        public void LoadMatches()
+        public void ImportMatches()
         {
             try
             {
@@ -231,7 +232,7 @@ namespace TheNeolithicMod
                     notmissing.RemoveAt(index);
                 }
 
-                sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Finding Closest "+ type +" Matches... " + Math.Round(i / (float)missing.Count * 100, 2) + "%", EnumChatType.Notification);
+                sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Finding Closest " + type + " Matches... " + Math.Round(i / (float)missing.Count * 100, 2) + "%", EnumChatType.Notification);
             }
             sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Finding Closest " + type + " Matches... 100%", EnumChatType.Notification);
         }
@@ -239,14 +240,14 @@ namespace TheNeolithicMod
         public void TryRemapMissing(IServerPlayer player, bool DL = false)
         {
             RePopulate();
-            LoadMatches();
+            ImportMatches();
 
             if (MostLikely.Count < 1)
             {
                 sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Empty or Missing JSON, Will Search For Matches Instead Of Loading, Server May Lag For Bit.", EnumChatType.Notification);
                 ExportMatches(player, DL);
             }
-            
+
 
             sapi.SendMessage(player, GlobalConstants.InfoLogChatGroup, "Begin Remapping", EnumChatType.Notification);
 
