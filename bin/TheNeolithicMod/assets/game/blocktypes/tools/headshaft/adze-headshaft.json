@@ -8,7 +8,7 @@
 				"swapBlocks": [
 					[ "neolithicmod:animal-leatherstrips", "game:adze-{stone}-{shaft}-leatherstrips-{side}", 1 ],
 					[ "neolithicmod:byproducts-sinew", "game:adze-{stone}-{shaft}-sinew-{side}", 1 ],
-					[ "neolithicmod:sisal-rope", "game:adze-{stone}-{shaft}-rope-{side}", 1 ],
+					[ "neolithicmod:sisal-twine", "game:adze-{stone}-{shaft}-rope-{side}", 1 ],
 				],
 			},
 		},
