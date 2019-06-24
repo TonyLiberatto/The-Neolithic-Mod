@@ -12,7 +12,7 @@
 	],
 	tool: "shovel",
 	damagedby: ["blockbreaking", "attacking"],
-	heldTpHitAnimation: "breaktool",
+	heldTpHitAnimation: "shoveldig",
 	shapeByType: {
 		"*-bone-*": {base: "item/tool/bone-shovel"},
 		"*": {base: "item/tool/branch-shovel" },

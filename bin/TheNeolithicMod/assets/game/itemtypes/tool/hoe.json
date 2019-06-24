@@ -11,7 +11,8 @@
 	],
 	damagedby: ["blockbreaking", "attacking"],
 	shape: { base: "item/tool/hoe" },
-	heldTpHitAnimation: "breaktool",
+  heldTpHitAnimation: "breaktool",
+  heldTpUseAnimation: "hoe",
 	textures: {
 		"metal": { base: "block/metal/ingot/{metal}" },
 		"wood": { base: "item/tool/material/wood" } 
