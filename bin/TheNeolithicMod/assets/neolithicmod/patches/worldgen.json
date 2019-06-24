@@ -21,7 +21,7 @@
 			comment: "Large patches of giant reed",
 			blockCodes: ["giantreed-arundo-water-normal"],
 			minTemp: 3,
-			maxTemp: 23,
+			maxTemp: 40,
 			minRain: 0.4,
 			maxRain: 1,
 			quantity: { avg: 25, var: 15 },
@@ -39,7 +39,7 @@
 			comment: "Small patches of giant reed",
 			blockCodes: ["giantreed-arundo-water-normal"],
 			minTemp: 3,
-			maxTemp: 23,
+			maxTemp: 40,
 			minRain: 0.4,
 			maxRain: 1,
 			quantity: { avg: 5, var: 5 },
@@ -49,7 +49,8 @@
 		
 			
 	},
-	{ file: "game:worldgen/blockpatches", op: "add", path: "/patches/-", value:
+
+  { file: "game:worldgen/blockpatches", op: "add", path: "/patches/-", value:
 	
         {
 			comment: "Large patches of sisal",
@@ -64,5 +65,40 @@
 		}
 		
 			
-	}
+	},
+  
+  { file: "game:worldgen/blockpatches", op: "replace", path: "/patches/0", value: 
+			
+        {
+      comment: "Large patches of coopers reed",
+			blockCodes: ["tallplant-coopersreed-water-normal"],
+			minTemp: 3,
+			maxTemp: 40,
+			minRain: 0.4,
+			maxRain: 1,
+			quantity: { avg: 25, var: 15 },
+			offsetX: { avg: 0, var: 12 },
+			offsetZ: { avg: 0, var: 12 },
+			chance: 1,
+			placement: "NearWater"
+		}
+
+
+  },
+
+  {
+    file: "game:worldgen/blockpatches", op: "replace", path: "/patches/1", value: 
+			
+        {
+      comment: "Small patches of coopers reed",
+			blockCodes: ["tallplant-coopersreed-water-normal"],
+			minTemp: 3,
+			maxTemp: 40,
+			minRain: 0.4,
+			maxRain: 1,
+			quantity: { avg: 5, var: 5 },
+			chance: 1,
+			placement: "NearWater"
+		}
+  }
 ]
