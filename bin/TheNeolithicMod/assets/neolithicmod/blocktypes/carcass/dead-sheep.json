@@ -5,7 +5,7 @@
 	resistance: 13,
 	entityClass: "NeolithicTransient",
 	attributes: {
-		convertFrom: "dead-sheep-*",
+		convertFrom: "dead-sheep-domestic-*",
 		convertTo: "dead-rotten-large", 
 		eatenTo: "dead-rotten-large", 
 		inGameHours: "24",
@@ -91,43 +91,7 @@
 	dropsByType: 
 	{
 		"*-ewe":
-		[
-			{
-				type: "block", 
-				code: "eweheadtrophy-ground-north", 
-				quantity: { avg: 0.3, var: 0 } ,
-				tool:"saw"
-			},
-			{
-				type: "block", 
-				code: "headless-sheep-ewe", 
-				quantity: { avg: 1, var: 0 } ,
-				tool:"saw"
-			},
-			{
-				type: "block", 
-				code: "eweheadtrophy-ground-north", 
-				quantity: { avg: 0.2, var: 0 } ,
-				tool:"sword"
-			},
-			{
-				type: "block", 
-				code: "headless-sheep-ewe", 
-				quantity: { avg: 1, var: 0 } ,
-				tool:"sword"
-			},
-			{
-				type: "block", 
-				code: "eweheadtrophy-ground-north", 
-				quantity: { avg: 0.1, var: 0 } ,
-				tool:"axe"
-			},
-			{
-				type: "block", 
-				code: "headless-sheep-ewe", 
-				quantity: { avg: 1, var: 0 } ,
-				tool:"axe"
-			},
+		[			
 			{
 				type: "block", 
 				code: "skinned-ewe", 
@@ -152,42 +116,6 @@
 		],
 		"*-ram": 
 		[
-			{
-				type: "block", 
-				code: "ramheadtrophy-ground-north", 
-				quantity: { avg: 0.3, var: 0} ,
-				tool:"saw"
-			},
-			{
-				type: "block", 
-				code: "headless-sheep-ram", 
-				quantity: { avg: 1, var:0} ,
-				tool:"saw"
-			},
-			{
-				type: "block", 
-				code: "ramheadtrophy-ground-north", 
-				quantity: { avg: 0.2, var: 0} ,
-				tool:"sword"
-			},
-			{
-				type: "block", 
-				code: "headless-sheep-ram", 
-				quantity: { avg: 1, var:0} ,
-				tool:"sword"
-			},
-			{
-				type: "block", 
-				code: "ramheadtrophy-ground-north", 
-				quantity: { avg: 0.1, var: 0} ,
-				tool:"axe"
-			},
-			{
-				type: "block", 
-				code: "headless-sheep-ram", 
-				quantity: { avg: 1, var:0} ,
-				tool:"axe"
-			},
 			{
 				type: "block", 
 				code: "skinned-ram", 

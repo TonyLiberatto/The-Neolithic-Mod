@@ -8,6 +8,11 @@
   "tabname-neolithictools": "Neolithic Tools",
   "tabname-neolithicweapons": "Neolithic Weapons",
   
+  "item-shingle-raw-red": "Raw red clay shingle",
+  "item-shingle-burned-red": "Burned red clay shingle",
+  "item-shingle-raw-brown": "Raw brown clay shingle",
+  "item-shingle-burned-brown": "Burned brown clay shingle",
+  
   "block-rawclay-red-none": "Red clay in soil (Barren)",
   "block-rawclay-brown-none": "Brown clay in soil (Barren)",
   "block-rawclay-red-verysparse": "Red clay in soil (Sparse grass)",
@@ -1985,7 +1990,7 @@
 	"item-spearhead-steel": "Spearhead (Steel)",
 	
 	
-		"block-adze-head-granite-north": "Adze Head Granite",
+	"block-adze-head-granite-north": "Adze Head Granite",
 	"block-adze-head-andesite-north": "Adze Head Andesite",
 	"block-adze-head-basalt-north": "Adze Head Basalt",
 	"block-adze-head-obsidian-north": "Adze Head Obsidian",
