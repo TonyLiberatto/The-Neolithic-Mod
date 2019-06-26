@@ -51,7 +51,15 @@ namespace TheNeolithicMod
                     }
                     if (active.Itemstack.StackSize <= 0) active.Itemstack = null;
                     world.SpawnItemEntity(new ItemStack(world.GetBlock(makes)), pos.ToVec3d().Add(0.5, 0.5, 0.5), new Vec3d(0.0, 0.1, 0.0));
-                    if (world.Side.IsServer()) world.SpawnCubeParticles(pos.ToVec3d().Add(0.5, 0.5, 0.5), active.Itemstack, 2, 16);
+                    try
+                    {
+                        if (world.Side.IsClient()) world.SpawnCubeParticles(pos.ToVec3d().Add(0.5, 0.5, 0.5), active.Itemstack, 2, 16);
+                    }
+                    catch (Exception)
+                    {
+                        world.Logger.Error("Could not create particles, missing itemstack?");
+                    }
+                    
                     active.MarkDirty();
                     return true;
                 }
