@@ -1,6 +1,18 @@
 {
 	code: "bowl",
-	behaviors: [{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"} ],
+	behaviors: [
+		{name: "UnstableFalling"}, 
+		{ name: "RightClickPickup"}, 
+		{ name: "SneakPlacing"},
+		{
+			name: "BlockSwapBehavior",
+			properties: {
+				"swapBlocks": [
+					[ "game:fat", "game:oillamp{color}-up", 1 ],					
+				],
+			},
+		}
+	],
 	variantgroups: [
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },
 		{ code:"type", states: ["raw", "burned", "honey", "glue", "sinewfibers", "milk"] },
