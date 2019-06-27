@@ -8,7 +8,7 @@
 	"contributors": [],
 	"version": "1.2.2",
 	"dependencies": {
-	"game": "1.9.10",
+	"game": "1.9.11",
 	"theneolithicmod": "2.0.1"
 	}
 }
