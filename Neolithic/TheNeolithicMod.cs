@@ -59,13 +59,6 @@ namespace TheNeolithicMod
             //api.RegisterBlockClass("BlockBowl", typeof(BlockBowlNew));
             api.RegisterBlockClass("BlockLogWall", typeof(BlockLogWall));
 
-            api.RegisterBlockClass("BlockSmeltedContainer", typeof(BlockSmeltedContainer));
-            api.RegisterBlockClass("BlockSmeltingContainer", typeof(NeoBlockSmeltingContainer));
-
-            api.RegisterBlockClass("BlockCookingContainer", typeof(CookingContainerFix));
-            api.RegisterBlockClass("BlockCookedContainer", typeof(CookedContainerFix));
-            api.RegisterBlockClass("BlockMeal", typeof(BlockMealFix));
-
             api.RegisterBlockClass("BlockCheeseCloth", typeof(BlockCheeseCloth));
             api.RegisterBlockClass("BlockNeolithicRoads", typeof(BlockNeolithicRoads));
             api.RegisterBlockClass("BlockLooseStones", typeof(BlockLooseStonesModified));
@@ -87,8 +80,6 @@ namespace TheNeolithicMod
             api.RegisterBlockEntityClass("BlockEntityChimney", typeof(BlockEntityChimney));
             api.RegisterBlockEntityClass("BucketB", typeof(BEBucketOverride));           
             api.RegisterBlockEntityClass("NeolithicRoads", typeof(BENeolithicRoads));
-            api.RegisterBlockEntityClass("CookedContainerFix", typeof(CookedContainerFixBE));
-            api.RegisterBlockEntityClass("MealFix", typeof(BlockEntityMealFix));
 
             AiTaskRegistry.Register("fleepoi", typeof(AiTaskFleePOI));
             AiTaskRegistry.Register("sleep", typeof(AiTaskSleep));
