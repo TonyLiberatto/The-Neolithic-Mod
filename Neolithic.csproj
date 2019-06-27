@@ -279,6 +279,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\plankstairs.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\plankstairscorner.json" />
     <None Include="bin\TheNeolithicMod\assets\game\config\general.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\config\toolmaking.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\air\butterfly.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\arrow-primitive.json" />
     <None Include="bin\TheNeolithicMod\assets\game\entities\humanoid\trader-foods.json" />
