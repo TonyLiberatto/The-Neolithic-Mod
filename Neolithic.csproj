@@ -134,7 +134,6 @@
     <Compile Include="Neolithic\Content\Utility\LevenshteinDistance.cs" />
     <Compile Include="Neolithic\Content\Utility\Missing.cs" />
     <Compile Include="Neolithic\Systems\CookingFix.cs" />
-    <Compile Include="Neolithic\Content\Block\NeoBlockSmeltedContainer.cs" />
     <Compile Include="Neolithic\Content\Block\FixedStairs.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorFeatherPluck.cs" />
     <Compile Include="Neolithic\Content\EntityBehavior\BehaviorMilkable.cs" />
