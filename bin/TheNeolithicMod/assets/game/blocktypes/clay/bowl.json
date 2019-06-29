@@ -8,7 +8,7 @@
 			name: "BlockSwapBehavior",
 			properties: {
 				"swapBlocks": [
-					[ "game:fat", "game:oillamp{color}-up", 1 ],					
+					[ "game:fat", "game:bowl-fat-{color}", 1 ],					
 				],
 			},
 		}

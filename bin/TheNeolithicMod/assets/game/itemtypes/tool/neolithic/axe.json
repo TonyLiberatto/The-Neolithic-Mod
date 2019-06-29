@@ -9,7 +9,10 @@
 	tool: "axe",
 	attributes: {
 		handbook: {
-			groupBy: ["axe-*"]
+			groupBy: ["axe-*"],
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Neolithic Tool Making</a>" }
+			]
 		}
 	},
 	heldTpHitAnimation: "axechop",	

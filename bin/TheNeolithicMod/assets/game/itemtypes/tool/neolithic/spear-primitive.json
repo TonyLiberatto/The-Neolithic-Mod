@@ -36,7 +36,10 @@
 		},
 		spearEntityCode: "spear-primitive-{stone}-{shaft}-{cordage}",
 		handbook: {
-			groupBy: ["spear-*"]
+			groupBy: ["spear-*"],
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Neolithic Tool Making</a>" }
+			]
 		}
 	},
 	durabilitybytype: {

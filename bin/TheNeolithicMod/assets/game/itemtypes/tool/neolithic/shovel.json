@@ -2,7 +2,10 @@
 	code: "shovel",
 	attributes: {
 		handbook: {
-			groupBy: ["shovel-*"]
+			groupBy: ["shovel-*"],
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Neolithic Tool Making</a>" }
+			]
 		}
 	},
 	variantgroups: [
