@@ -62,7 +62,10 @@
 		"logwall-corner-*": { all: true},
 		"logwall-jut-*": { all: true},
 		},
-	collisionselectionboxesbytype: {
+  drops: [
+    { code: "logwall-{type}-{wood}-{style}-up-north" }
+  ],
+  collisionselectionboxesbytype: {
 		"*-wall-*": [
 			{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 1, z2: 0.5625,
         "rotateX": 0,
