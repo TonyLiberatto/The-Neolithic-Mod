@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 
@@ -75,6 +76,8 @@ namespace TheNeolithicMod
                     AssetLocation asset = slot.Itemstack.Collectible.Code;
                     if (asset.ToString() == values[0].ToString())
                     {
+                        ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+
                         string toCode = (string)values[1];
                         if (toCode.IndexOf(":") == -1) toCode = block.Code.Domain + ":" + toCode;
                         AssetLocation toAsset = new AssetLocation(toCode);
