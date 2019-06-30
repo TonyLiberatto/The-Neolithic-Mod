@@ -43,38 +43,38 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -96,7 +96,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -110,15 +110,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -199,6 +199,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotbrown.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotfire.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\flowerpotred.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\glasslanternframemold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\ingotmold.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampblue.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\oillampbrown.json" />
@@ -219,6 +220,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\lightsources\bunchotallowcandles.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\lightsources\glass_lantern.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\metal\bowlstamp.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\metal\glasslanternframe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\metal\ingotstamp.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\metal\lantern.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\paperlantern.json" />
@@ -579,13 +581,18 @@
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\cheesecloth.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\cheeseincloth.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\mold\bowlstampmold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\mold\glasslanternframe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\mold\slaughteringaxemold.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\pot-closed.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\pot-opened-empty.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\pot-part-lid.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\ingotstamp.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\glass_lantern.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\tallow\tallowbunch.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\tallow\tallowcandle1.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\tallow\tallowcandle2.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\lightsources\tallow\tallowcandle3.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\shapes\block\metal\glasslanternframe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\adze-bone.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\adze-wood.json" />
     <None Include="bin\TheNeolithicMod\assets\game\shapes\block\placedtool\axe-bone.json" />
