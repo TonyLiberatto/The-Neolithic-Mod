@@ -14,10 +14,10 @@
 	],
 	attributes: {
 		handbook: {
-			groupBy: ["logwall-*"]
+			groupBy: ["logwall-*-up-north"]
 		},
 	},
-	creativeinventory: { "general": ["*-up-*-north"], "construction": ["*-up-*"], "neolithicblocks": ["*-up-*"] },
+	creativeinventory: { "general": ["*-up-north"], "construction": ["*-up-north"], "neolithicblocks": ["*-up-north"] },
 		variantgroups: [
 		{ code: "type", states: ["wall", "corner", "jut"]},
 		{ loadFromProperties: "block/wood" },
