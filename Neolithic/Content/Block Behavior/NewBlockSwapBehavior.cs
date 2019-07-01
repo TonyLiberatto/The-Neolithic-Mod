@@ -18,6 +18,7 @@ namespace TheNeolithicMod
     class NewBlockSwapBehavior : BlockBehavior
     {
         ICoreAPI api;
+        bool requireSneak = false;
 
         public NewBlockSwapBehavior(Block block) : base(block) { }
 
@@ -31,6 +32,8 @@ namespace TheNeolithicMod
         public void PostOLInit(JsonObject properties)
         {
             SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
+            requireSneak = properties["requireSneak"].AsBool(requireSneak);
+
             object[][] objects = properties["swapBlocks"].AsObject<object[][]>();
             if (objects == null) return;
             foreach (var array in objects)
@@ -62,6 +65,8 @@ namespace TheNeolithicMod
             handling = EnumHandling.PreventDefault;
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
             BlockPos pos = blockSel.Position;
+
+            if (requireSneak && !byPlayer.Entity.Controls.Sneak) return true;
 
             if (slot.Itemstack != null)
             {
