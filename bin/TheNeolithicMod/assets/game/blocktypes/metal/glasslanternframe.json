@@ -1,6 +1,7 @@
 {
-	code: "glasslanternframe", 
-	storageFlags: 5,
+	code: "glasslanternframe",
+	class: "BlockSimpleCoating",
+	storageFlags: 5,	
 	attributes: {
 		handbook: {
 			groupBy: ["glasslanternframe-*"]
@@ -24,6 +25,7 @@
 	sidesolid: {
 		all: false
 	},
+	drawtype: "json",
 	blockmaterial: "Metal",
 	creativeinventory: { "general": ["*-down"], "decorative": ["*-down"], "neolithicdeco": ["*-down"] },
 	replaceable: 300,

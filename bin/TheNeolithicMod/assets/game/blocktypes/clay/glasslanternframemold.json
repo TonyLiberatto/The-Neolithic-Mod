@@ -13,22 +13,22 @@
 		"*-blue-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
-			"drop": { class:"block", code: "glasslanternframe-{metal}-down" }
+			"drop": { class:"Block", code: "glasslanternframe-{metal}-down" }
 		},
 		"*-brown-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
-			"drop": { class:"block", code: "glasslanternframe-{metal}-down" }
+			"drop": { class:"Block", code: "glasslanternframe-{metal}-down" }
 		},
 		"*-fire-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
-			"drop": { class:"block", code: "glasslanternframe-{metal}-down" }
+			"drop": { class:"Block", code: "glasslanternframe-{metal}-down" }
 		},
 		"*-red-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
-			"drop": { class:"block", code: "glasslanternframe-{metal}-down" }
+			"drop": { class:"Block", code: "glasslanternframe-{metal}-down" }
 		},
 	},
 	entityClassByType: {

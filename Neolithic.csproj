@@ -876,6 +876,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\stone\roads\3droad.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\bamboo\browndoor.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\bamboo\greendoor.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\branch-cross.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\branch.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\doors\dooracacia.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\wood\doors\dooraged.json" />
@@ -1370,6 +1371,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\wood\branch-2.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\wood\branch-4.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\wood\branch-8.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\wood\branch-cross.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\wood\chest.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\wood\door\down_closed_left.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\wood\door\down_closed_right.json" />
