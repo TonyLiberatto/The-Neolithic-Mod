@@ -1,8 +1,8 @@
 {
 	code: "branch",
-	behaviors: [
-	{ name: "Pillar"},
-	{ name: "BlockSwapBehavior",
+	behaviors: [	
+		{ name: "Pillar"},
+		{ name: "BlockSwapBehavior",
             properties: {
                 "requireSneak": true,
 				"swapBlocks": [
@@ -20,7 +20,8 @@
 					[ "neolithicmod:branch-very-thin-pine-debarked-ud", "neolithicmod:branch-cross-very-thin-pine-debarked", 1 ],   					
                 ],
             },
-        }
+        },
+	
 	],
 	attributes: {
 		handbook: {
