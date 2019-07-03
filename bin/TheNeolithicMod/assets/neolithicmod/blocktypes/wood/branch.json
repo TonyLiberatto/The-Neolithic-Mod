@@ -2,25 +2,6 @@
 	code: "branch",
 	behaviors: [	
 		{ name: "Pillar"},
-		{ name: "BlockSwapBehavior",
-            properties: {
-                "requireSneak": true,
-				"swapBlocks": [
-                    [ "neolithicmod:branch-very-thin-acacia-bark-ud", "neolithicmod:branch-cross-very-thin-acacia-bark", 1 ],
-					[ "neolithicmod:branch-very-thin-birch-bark-ud", "neolithicmod:branch-cross-very-thin-birch-bark", 1 ], 
-					[ "neolithicmod:branch-very-thin-kapok-bark-ud", "neolithicmod:branch-cross-very-thin-kapok-bark", 1 ],
-					[ "neolithicmod:branch-very-thin-maple-bark-ud", "neolithicmod:branch-cross-very-thin-maple-bark", 1 ], 
-					[ "neolithicmod:branch-very-thin-oak-bark-ud", "neolithicmod:branch-cross-very-thin-oak-bark", 1 ],
-					[ "neolithicmod:branch-very-thin-pine-bark-ud", "neolithicmod:branch-cross-very-thin-pine-bark", 1 ],   
-					[ "neolithicmod:branch-very-thin-acacia-debarked-ud", "neolithicmod:branch-cross-very-thin-acacia-debarked", 1 ],
-					[ "neolithicmod:branch-very-thin-birch-debarked-ud", "neolithicmod:branch-cross-very-thin-birch-debarked", 1 ], 
-					[ "neolithicmod:branch-very-thin-kapok-debarked-ud", "neolithicmod:branch-cross-very-thin-kapok-debarked", 1 ],
-					[ "neolithicmod:branch-very-thin-maple-debarked-ud", "neolithicmod:branch-cross-very-thin-maple-debarked", 1 ], 
-					[ "neolithicmod:branch-very-thin-oak-debarked-ud", "neolithicmod:branch-cross-very-thin-oak-debarked", 1 ],
-					[ "neolithicmod:branch-very-thin-pine-debarked-ud", "neolithicmod:branch-cross-very-thin-pine-debarked", 1 ],   					
-                ],
-            },
-        },
 	
 	],
 	attributes: {
