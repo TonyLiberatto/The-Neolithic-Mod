@@ -126,6 +126,7 @@
     <Compile Include="Neolithic\Content\BlockEntity\BEBucketOverride.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\ChimneyBehavior.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\NewBlockSwapBehavior.cs" />
+    <Compile Include="Neolithic\Content\BlockEntity\BEMachine.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLooseStonesModified.cs" />
     <Compile Include="Neolithic\Content\Block\BlockNeolithicRoads.cs" />
