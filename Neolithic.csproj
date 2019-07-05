@@ -240,6 +240,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\quartz\stairs.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\stonebrick\staircornerbrick.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\stonebrick\stonebrickstairs.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\testing\machine.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\adze.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\axe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\hammer.json" />
