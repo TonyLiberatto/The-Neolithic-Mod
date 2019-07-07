@@ -72,14 +72,13 @@ namespace TheNeolithicMod
                 }
 
                 sapi.WorldManager.SaveGame.StoreData(Key, Serialized());
-                UpdateForAllPlayers();
                 id = sapi.World.RegisterGameTickListener(dt => 
                 {
                     if (Device.StoredPower < Device.MaxPower)
                     {
                         Device.StoredPower += 0.025;
                     }
-                    UpdateForAllPlayers();
+                    UpdateForAllPlayers(sapi);
                 }, 100);
             }
         }
@@ -93,7 +92,7 @@ namespace TheNeolithicMod
             }
         }
 
-        public void UpdateForAllPlayers()
+        public void UpdateForAllPlayers(ICoreServerAPI sapi)
         {
             foreach (var val in api.World.AllPlayers)
             {
@@ -101,6 +100,7 @@ namespace TheNeolithicMod
                 attribs.SetString(Key, JsonConvert.SerializeObject(Device));
                 val.Entity.WatchedAttributes.MarkPathDirty("Machines");
             }
+            sapi.WorldManager.SaveGame.StoreData(Key, Serialized());
         }
 
         public void UpdateInv(ICoreServerAPI sapi, Block block)
