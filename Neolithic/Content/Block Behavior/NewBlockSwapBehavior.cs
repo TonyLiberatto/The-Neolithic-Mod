@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,8 +20,11 @@ namespace TheNeolithicMod
     class NewBlockSwapBehavior : BlockBehavior
     {
         ICoreAPI api;
+        Vec3d particleOrigin = new Vec3d(0.5, 0.5, 0.5);
         bool requireSneak = false;
         bool disabled = false;
+        int pRadius = 2;
+        int pQuantity = 16;
 
         public NewBlockSwapBehavior(Block block) : base(block) { }
 
@@ -34,6 +39,9 @@ namespace TheNeolithicMod
         {
             SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
             requireSneak = properties["requireSneak"].AsBool(requireSneak);
+            particleOrigin = properties["particleOrigin"].Exists ? properties["particleOrigin"].AsObject<Vec3d>() : particleOrigin;
+            pRadius = properties["particleRadius"].AsInt(pRadius);
+            pQuantity = properties["particleQuantity"].AsInt(pQuantity);
 
             if (properties["allowedVariants"].Exists)
             {
@@ -135,8 +143,8 @@ namespace TheNeolithicMod
             {
                 try
                 {
-                    world.SpawnCubeParticles(pos, pos.ToVec3d().Add(0.5, 0.5, 0.5), 2, 16);
-                    world.SpawnCubeParticles(pos.ToVec3d().Add(0.5, 0.5, 0.5), slot.Itemstack, 2, 16);
+                    world.SpawnCubeParticles(pos, pos.ToVec3d().Add(particleOrigin), pRadius, pQuantity);
+                    world.SpawnCubeParticles(pos.ToVec3d().Add(particleOrigin), slot.Itemstack, pRadius, pQuantity);
                 }
                 catch (Exception) { }
             }
