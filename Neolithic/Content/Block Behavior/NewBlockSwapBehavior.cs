@@ -14,7 +14,15 @@ namespace TheNeolithicMod
 {
     class SwapSystem : ModSystem
     {
-        public Dictionary<string, object[]> SwapPairs { get; set; } = new Dictionary<string, object[]>();
+        public Dictionary<string, SwapBlocks> SwapPairs { get; set; } = new Dictionary<string, SwapBlocks>();
+    }
+
+    class SwapBlocks
+    {
+        public string Takes = "";
+        public string Makes = "";
+        public string Tool = null;
+        public int Count = 0;
     }
 
     class NewBlockSwapBehavior : BlockBehavior
@@ -53,22 +61,32 @@ namespace TheNeolithicMod
                 }
                 else return;
             }
-
-            object[][] objects = properties["swapBlocks"].AsObject<object[][]>();
-            if (objects == null) return;
-            foreach (var array in objects)
+            if (properties["swapBlocks"].Exists)
             {
-                List<object> list = new List<object>();
-                for (int i = 0; i < array.Length; i++)
+                try
                 {
-                    list.Add(array[i]);
+                    SwapBlocks[] swapBlocks = properties["swapBlocks"].AsObject<SwapBlocks[]>();
+                    foreach (var val in swapBlocks)
+                    {
+                        if (!swapSystem.SwapPairs.ContainsKey(GetKey(val.Makes)) && !val.Makes.Contains("{"))
+                        {
+                            if (!(val.Takes != null && !val.Takes.Contains("{")))
+                            {
+                                swapSystem.SwapPairs.Add(GetKey(val.Tool), val);
+                            }
+                        }
+                    }
                 }
-                if (!swapSystem.SwapPairs.ContainsKey(GetKey((string)array[0])) && !list.Any((a) => a.ToString().Contains("{")))
+                catch (Exception)
                 {
-                    swapSystem.SwapPairs.Add(GetKey((string)array[0]), list.ToArray());
+                    disabled = true;
                 }
             }
-
+            else
+            {
+                disabled = true;
+                return;
+            }
         }
 
         public string GetKey(string holdingstack)
@@ -93,24 +111,24 @@ namespace TheNeolithicMod
             {
                 string key = GetKey(slot.Itemstack.Collectible.Code.ToString());
 
-                if (swapSystem.SwapPairs.TryGetValue(key, out object[] values))
+                if (swapSystem.SwapPairs.TryGetValue(key, out SwapBlocks swap))
                 {
-                    if (values.Length > 3 && values[2].ToString() != block.Code.ToString())
+                    if (swap.Takes != null && swap.Takes != block.Code.ToString())
                     {
                         return true;
                     }
                     AssetLocation asset = slot.Itemstack.Collectible.Code;
-                    if (asset.ToString() == values[0].ToString())
+                    if (asset.ToString() == swap.Tool)
                     {
                         ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
 
-                        string toCode = (string)values[1];
+                        string toCode = swap.Makes;
                         if (toCode.IndexOf(":") == -1) toCode = block.Code.Domain + ":" + toCode;
                         AssetLocation toAsset = new AssetLocation(toCode);
                         Block toBlock = toAsset.GetBlock(world.Api);
 
                         int count = 0;
-                        try { count = Convert.ToInt32(values.Last()); } catch (Exception) { }
+                        try { count = Convert.ToInt32(swap.Count); } catch (Exception) { }
 
                         if (count > 0 && slot.Itemstack.StackSize >= count)
                         {
