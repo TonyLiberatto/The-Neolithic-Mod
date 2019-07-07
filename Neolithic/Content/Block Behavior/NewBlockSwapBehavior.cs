@@ -34,6 +34,22 @@ namespace TheNeolithicMod
             SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
             requireSneak = properties["requireSneak"].AsBool(requireSneak);
 
+            if (properties["allowedVariants"].Exists)
+            {
+                string[] allowed = properties["allowedVariants"].AsArray<string>();
+                bool ok = false;
+                foreach (var val in allowed)
+                {
+                    AssetLocation asset = new AssetLocation(val);
+                    if (asset == block.Code)
+                    {
+                        ok = true;
+                        break;
+                    }
+                }
+                if (!ok) return;
+            }
+
             object[][] objects = properties["swapBlocks"].AsObject<object[][]>();
             if (objects == null) return;
             foreach (var array in objects)
