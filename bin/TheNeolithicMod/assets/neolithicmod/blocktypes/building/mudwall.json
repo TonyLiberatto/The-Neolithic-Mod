@@ -18,6 +18,6 @@
 		"*-west": { all: { base: "block/mudblock/MudBrickOUT*" }, "east": { base: "block/mudblock/MudBrickIN" } },
 	},
 	sounds: {
-		place: "block/stone",
-		walk: "walk/stone"
+		place: "game:block/stone",
+		walk: "game:walk/stone"
 		}

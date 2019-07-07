@@ -1,10 +1,31 @@
 {
 	code: "cordage",
-	variantgroups: [
-		{ code: "type", states: ["leatherstrips", "sinew", "rope"] },
+	behaviors: [{
+			name: "BlockSwapBehavior",
+			properties: {
+				"swapBlocks": [
+					[ "neolithicmod:branch-very-thin-acacia-bark-ud", "neolithicmod:branch-cross-very-thin-acacia-bark", 2 ],
+					[ "neolithicmod:branch-very-thin-birch-bark-ud", "neolithicmod:branch-cross-very-thin-birch-bark", 2 ],
+					[ "neolithicmod:branch-very-thin-kapok-bark-ud", "neolithicmod:branch-cross-very-thin-kapok-bark", 2 ],
+					[ "neolithicmod:branch-very-thin-maple-bark-ud", "neolithicmod:branch-cross-very-thin-maple-bark", 2 ],
+					[ "neolithicmod:branch-very-thin-oak-bark-ud", "neolithicmod:branch-cross-very-thin-oak-bark", 2 ],
+					[ "neolithicmod:branch-very-thin-pine-bark-ud", "neolithicmod:branch-cross-very-thin-pine-bark", 2 ],
+					[ "neolithicmod:branch-very-thin-acacia-debarked-ud", "neolithicmod:branch-cross-very-thin-acacia-debarked", 2 ],
+					[ "neolithicmod:branch-very-thin-birch-debarked-ud", "neolithicmod:branch-cross-very-thin-birch-debarked", 2 ],
+					[ "neolithicmod:branch-very-thin-kapok-debarked-ud", "neolithicmod:branch-cross-very-thin-kapok-debarked", 2 ],
+					[ "neolithicmod:branch-very-thin-maple-debarked-ud", "neolithicmod:branch-cross-very-thin-maple-debarked", 2 ],
+					[ "neolithicmod:branch-very-thin-oak-debarked-ud", "neolithicmod:branch-cross-very-thin-oak-debarked", 2 ],
+					[ "neolithicmod:branch-very-thin-pine-debarked-ud", "neolithicmod:branch-cross-very-thin-pine-debarked", 2 ],
+							
+				],
+			},
+		},
 	],
-	shape: { base: "block/wood/cordage" },
-	textures: { all: { base: "game:block/cordage/{type}" } },
+	variantgroups: [
+        { code: "type", states: ["leatherstrips", "sinew", "rope"] },
+    ],    
+    shape: { base: "block/wood/cordage" },
+    texture: {  base: "game:block/cordage/{type}" },
 	creativeinventory: { "general": ["*"], "decorative": ["*"], "neolithicblocks": ["*"] },
 	replaceable: 5001,
 	resistance: 0.5,
@@ -20,16 +41,16 @@
 		burnDuration: 6,
 	},
 	sounds: {
-		"place": "block/planks",
-		"hit": "block/planks",
-		"break": "block/planks",
-		"walk": "walk/wood"
+		"place": "game:block/planks",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		"walk": "game:walk/wood"
 	},
 	collisionbox: {
-		x1: 0.2, y1: 0, z1: 0.2, x2: 0.4, y2: 0.2, z2: 0.4
+		x1: 0.4, y1: 0, z1: 0.4, x2: 0.6, y2: 0.2, z2: 0.6
 	},
 	selectionbox: {
-		x1: 0.2, y1: 0, z1: 0.2, x2: 0.4, y2: 0.2, z2: 0.4
+		x1: 0.4, y1: 0, z1: 0.4, x2: 0.6, y2: 0.2, z2: 0.6
 	},
 	materialDensity: 600,
 	guiTransform: {

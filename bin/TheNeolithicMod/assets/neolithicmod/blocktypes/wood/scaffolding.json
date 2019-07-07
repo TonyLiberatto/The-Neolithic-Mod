@@ -20,8 +20,8 @@
 		all: false
 	},
 	sounds: {
-		"place": "block/planks",
-		"walk": "walk/wood"
+		"place": "game:block/planks",
+		"walk": "game:walk/wood"
 	},
 	combustibleProps: {
 		burnTemperature: 800,

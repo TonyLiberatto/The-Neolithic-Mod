@@ -1,13 +1,20 @@
 {
-	"editor": {
-		"allAngles": false,
-		"singleTexture": false
-	},
-	"textureWidth": 16,
-	"textureHeight": 16,
-	"textures": {
-	},
-	"elements": [
+    "textures": {
+    },
+    "elements": [
+        {
+            "name": "Base",
+            "from": [ 0.0, 0.0, 0.0 ], 
+            "to": [ 16.0, 8.0, 16.0 ], 
+            "faces": {
+                "north": { "texture": "#rock", "uv": [ 0.0, 8.0, 16.0, 16.0 ] },
+                "east": { "texture": "#rock", "uv": [ 0.0, 8.0, 16.0, 16.0 ] },
+                "south": { "texture": "#rock", "uv": [ 0.0, 8.0, 16.0, 16.0 ] },
+                "west": { "texture": "#rock", "uv": [ 0.0, 8.0, 16.0, 16.0 ] },
+                "up": { "texture": "#rock", "uv": [ 16.0, 16.0, 0.0, 0.0 ] },
+                "down": { "texture": "#rock", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
+            }
+        },
 		{
 			"name": "Branch1",
 			"from": [ 16.0, 8.3, 7.0 ], 
@@ -55,4 +62,5 @@
 				"down": { "texture": "#cordage", "uv": [ 6.0, 0.5, 9.0, 3.5 ] }
 			}
 		}
-	]}
+    ]
+}

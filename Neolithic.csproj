@@ -237,6 +237,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\generic\stonepathstairscorner.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\quartz\corners.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\quartz\stairs.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\rockslab.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\stonebrick\staircornerbrick.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\stonebrick\stonebrickstairs.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\adze.json" />
