@@ -10,9 +10,14 @@
 		},
 		{
 			name: "BlockSwapBehavior",
-			properties: {
+			properties: {				
 				"swapBlocks": [
-					[ "neolithicmod:branch-very-thin-{wood}-debarked-ud", "game:slab-branch-{rock}-{wood}-debarked", 2 ],							
+					[ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slab-branch-{rock}-acacia-debarked", 2 ],
+					[ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slab-branch-{rock}-birch-debarked", 2 ],
+					[ "neolithicmod:branch-very-thin-kapok-debarked-ud", "game:slab-branch-{rock}-kapok-debarked", 2 ],
+					[ "neolithicmod:branch-very-thin-maple-debarked-ud", "game:slab-branch-{rock}-maple-debarked", 2 ],
+					[ "neolithicmod:branch-very-thin-oak-debarked-ud", "game:slab-branch-{rock}-oak-debarked", 2 ],
+					[ "neolithicmod:branch-very-thin-pine-debarked-ud", "game:slab-branch-{rock}-pine-debarked", 2 ],					
 				],
 			},
 		},
@@ -62,8 +67,8 @@
 			verticals: { base: "block/stone/rock/{rock}*" }
 		},
 		"*": {
-			verticals: { base: "block/stone/rock/{rock}*", rotation: 90 },
-			horizontals: { base: "block/stone/rock/{rock}*", rotation: 90 }
+			verticals: { base: "block/stone/rock/{rock}*"  },
+			horizontals: { base: "block/stone/rock/{rock}*" }
 		}
 	},
 	collisionbox: { x1: 0, y1: 0, z1: 0,   x2: 1, y2: 0.5, z2: 1,
