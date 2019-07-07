@@ -10,7 +10,8 @@
 		},
 		{
 			name: "BlockSwapBehavior",
-			properties: {				
+			properties: {		
+				"allowedVariants": [ "game:rockslab-andesite-down", "game:rockslab-granite-down", "game:rockslab-basalt-down", "game:rockslab-peridotite-down",],
 				"swapBlocks": [
 					[ "neolithicmod:branch-very-thin-acacia-debarked-ud", "game:slab-branch-{rock}-acacia-debarked", 2 ],
 					[ "neolithicmod:branch-very-thin-birch-debarked-ud", "game:slab-branch-{rock}-birch-debarked", 2 ],

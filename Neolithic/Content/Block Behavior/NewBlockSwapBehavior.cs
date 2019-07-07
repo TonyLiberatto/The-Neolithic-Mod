@@ -19,6 +19,7 @@ namespace TheNeolithicMod
     {
         ICoreAPI api;
         bool requireSneak = false;
+        bool disabled = false;
 
         public NewBlockSwapBehavior(Block block) : base(block) { }
 
@@ -37,17 +38,12 @@ namespace TheNeolithicMod
             if (properties["allowedVariants"].Exists)
             {
                 string[] allowed = properties["allowedVariants"].AsArray<string>();
-                bool ok = false;
-                foreach (var val in allowed)
+                disabled = true;
+                if (allowed.Contains(block.Code.ToString()))
                 {
-                    AssetLocation asset = new AssetLocation(val);
-                    if (asset == block.Code)
-                    {
-                        ok = true;
-                        break;
-                    }
+                    disabled = false;
                 }
-                if (!ok) return;
+                else return;
             }
 
             object[][] objects = properties["swapBlocks"].AsObject<object[][]>();
@@ -77,6 +73,7 @@ namespace TheNeolithicMod
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {
+            if (disabled) return base.OnBlockInteractStart(world, byPlayer, blockSel, ref handling);
             SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
             handling = EnumHandling.PreventDefault;
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
@@ -111,29 +108,42 @@ namespace TheNeolithicMod
                         {
                             if (byPlayer.WorldData.CurrentGameMode == EnumGameMode.Survival) slot.TakeOut(count); slot.MarkDirty();
                             world.BlockAccessor.SetBlock(toBlock.BlockId, pos);
+                            PlaySoundDispenseParticles(world, pos, slot);
                         }
                         else if (count == 0)
                         {
                             world.BlockAccessor.SetBlock(toBlock.BlockId, pos);
+                            PlaySoundDispenseParticles(world, pos, slot);
                         }
-
-                        if (world.Side.IsServer())
+                        else if (count < 0)
                         {
-                            try
-                            {
-                                world.SpawnCubeParticles(pos, pos.ToVec3d().Add(0.5, 0.5, 0.5), 2, 16);
-                                world.SpawnCubeParticles(pos.ToVec3d().Add(0.5, 0.5, 0.5), slot.Itemstack, 2, 16);
-                            }
-                            catch (Exception){}
-                        }
-                        else
-                        {
-                            world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
+                            ItemStack withCount = slot.Itemstack.Clone();
+                            withCount.StackSize = Math.Abs(count);
+                            byPlayer.InventoryManager.TryGiveItemstack(withCount); slot.MarkDirty();
+                            world.BlockAccessor.SetBlock(toBlock.BlockId, pos);
+                            PlaySoundDispenseParticles(world, pos, slot);
                         }
                     }
                 }
             }
             return true;
+        }
+
+        public void PlaySoundDispenseParticles(IWorldAccessor world, BlockPos pos, ItemSlot slot)
+        {
+            if (world.Side.IsServer())
+            {
+                try
+                {
+                    world.SpawnCubeParticles(pos, pos.ToVec3d().Add(0.5, 0.5, 0.5), 2, 16);
+                    world.SpawnCubeParticles(pos.ToVec3d().Add(0.5, 0.5, 0.5), slot.Itemstack, 2, 16);
+                }
+                catch (Exception) { }
+            }
+            else
+            {
+                world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
+            }
         }
     }
 }
