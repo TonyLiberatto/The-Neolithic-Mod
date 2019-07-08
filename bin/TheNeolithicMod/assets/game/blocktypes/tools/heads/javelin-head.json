@@ -7,6 +7,7 @@
 			properties: {
 				"swapBlocks": [
 					{ "Tool": "neolithicmod:planks-bamboo-brown", "Makes": "game:javelin-headshaft-bamboo-brown-{side}", "Takes": null, "Count": 1 },
+					{ "Tool": "neolithicmod:planks-bamboo-green", "Makes": "game:javelin-headshaft-bamboo-green-{side}", "Takes": null, "Count": 1 },
 				],
 			},
 		},
