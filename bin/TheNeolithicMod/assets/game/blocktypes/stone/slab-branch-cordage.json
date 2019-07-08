@@ -5,7 +5,7 @@
 			name: "BlockSwapBehavior",
 			properties: {
 				"swapBlocks": [
-					[ "game:rock-{rock}", "game:quern-{rock}", 3 ],											
+					{ "Tool": "game:rock-{rock}", "Makes": "game:quern-{rock}", "Takes": null, "Count": 3 },															
 				],
 			},
 		},

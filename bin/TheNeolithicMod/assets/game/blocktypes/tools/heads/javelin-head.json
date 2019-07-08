@@ -6,7 +6,7 @@
 			name: "BlockSwapBehavior",
 			properties: {
 				"swapBlocks": [
-					[ "neolithicmod:planks-bamboo-brown", "game:javelin-headshaft-bamboo-brown-{side}", 1 ],
+					{ "Tool": "neolithicmod:planks-bamboo-brown", "Makes": "game:javelin-headshaft-bamboo-brown-{side}", "Takes": null, "Count": 1 },
 				],
 			},
 		},
