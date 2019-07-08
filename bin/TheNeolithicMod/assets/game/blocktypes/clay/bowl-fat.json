@@ -9,7 +9,7 @@
 			properties: {
 				"requireSneak": true,
 				"swapBlocks": [
-					[ "game:torch-up", "game:oillamp{color}-up", 0 ],					
+					{ "Tool": "game:torch-up", "Makes": "game:oillamp{color}-up", "Takes": null, "Count": 0 },					
 				],
 			},
 		}

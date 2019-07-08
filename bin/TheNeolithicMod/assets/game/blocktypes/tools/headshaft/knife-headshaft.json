@@ -6,9 +6,9 @@
 			name: "BlockSwapBehavior",
 			properties: {
 				"swapBlocks": [
-					[ "neolithicmod:animal-leatherstrips", "game:knife-{stone}-{shaft}-leatherstrips-{side}", 1 ],
-					[ "neolithicmod:byproducts-sinew", "game:knife-{stone}-{shaft}-sinew-{side}", 1 ],
-					[ "neolithicmod:sisal-twine", "game:knife-{stone}-{shaft}-rope-{side}", 1 ],
+					{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "game:knife-{stone}-{shaft}-leatherstrips-{side}", "Takes": null, "Count": 1 },
+					{ "Tool": "neolithicmod:byproducts-sinew", "Makes": "game:knife-{stone}-{shaft}-sinew-{side}", "Takes": null, "Count": 1 },
+					{ "Tool": "neolithicmod:sisal-twine", "Makes": "game:knife-{stone}-{shaft}-rope-{side}", "Takes": null, "Count": 1 },
 				],
 			},
 		},

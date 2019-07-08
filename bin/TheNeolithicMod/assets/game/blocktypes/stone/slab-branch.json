@@ -5,9 +5,9 @@
 			name: "BlockSwapBehavior",
 			properties: {
 				"swapBlocks": [
-					[ "neolithicmod:animal-leatherstrips", "game:slab-branch-cordage-{rock}-{wood}-debarked-leatherstrips", 2 ],					
-					[ "neolithicmod:byproducts-sinew", "game:slab-branch-cordage-{rock}-{wood}-debarked-sinew", 2 ],					
-					[ "neolithicmod:sisal-twine", "game:slab-branch-cordage-{rock}-{wood}-debarked-rope", 2 ],							
+					{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "game:slab-branch-cordage-{rock}-{wood}-debarked-leatherstrips", "Takes": null, "Count": 2 },
+					{ "Tool": "neolithicmod:byproducts-sinew", "Makes": "game:slab-branch-cordage-{rock}-{wood}-debarked-sinew", "Takes": null, "Count": 2 },
+					{ "Tool": "neolithicmod:sisal-twine", "Makes": "game:slab-branch-cordage-{rock}-{wood}-debarked-rope", "Takes": null, "Count": 2 },						
 				],
 			},
 		},

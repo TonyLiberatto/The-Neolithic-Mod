@@ -5,12 +5,12 @@
 		{name: "BlockSwapBehavior",
 			properties: {
 				"swapBlocks": [
-					[ "neolithicmod:branch-thin-acacia-debarked-ud", "game:sword-flakeswood-{stone}-acacia-{side}", 1 ],
-					[ "neolithicmod:branch-thin-birch-debarked-ud", "game:sword-flakeswood-{stone}-birch-{side}", 1 ],
-					[ "neolithicmod:branch-thin-kapok-debarked-ud", "game:sword-flakeswood-{stone}-kapok-{side}", 1 ],
-					[ "neolithicmod:branch-thin-maple-debarked-ud", "game:sword-flakeswood-{stone}-maple-{side}", 1 ],
-					[ "neolithicmod:branch-thin-oak-debarked-ud", "game:sword-flakeswood-{stone}-oak-{side}", 1 ],
-					[ "neolithicmod:branch-thin-pine-debarked-ud", "game:sword-flakeswood-{stone}-pine-{side}", 1 ],
+					{ "Tool": "neolithicmod:branch-thin-acacia-debarked-ud", "Makes": "game:sword-flakeswood-{stone}-acacia-{side}", "Takes": null, "Count": 1 },
+					{ "Tool": "neolithicmod:branch-thin-birch-debarked-ud", "Makes": "game:sword-flakeswood-{stone}-birch-{side}", "Takes": null, "Count": 1 },
+					{ "Tool": "neolithicmod:branch-thin-kapok-debarked-ud", "Makes": "game:sword-flakeswood-{stone}-kapok-{side}", "Takes": null, "Count": 1 },
+					{ "Tool": "neolithicmod:branch-thin-maple-debarked-ud", "Makes": "game:sword-flakeswood-{stone}-maple-{side}", "Takes": null, "Count": 1 },
+					{ "Tool": "neolithicmod:branch-thin-oak-debarked-ud", "Makes": "game:sword-flakeswood-{stone}-oak-{side}", "Takes": null, "Count": 1 },
+					{ "Tool": "neolithicmod:branch-thin-pine-debarked-ud", "Makes": "game:sword-flakeswood-{stone}-pine-{side}", "Takes": null, "Count": 1 },
 				],
 			}
 		}

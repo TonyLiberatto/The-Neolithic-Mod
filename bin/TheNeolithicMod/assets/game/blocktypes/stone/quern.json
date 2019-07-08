@@ -5,7 +5,10 @@
 	behaviors: [{name: "Container"}, {name: "UnstableFalling"}],
 	attributes: {
 		handbook: {
-			groupBy: ["quern-*"]
+			groupBy: ["quern-*"],
+			extraSections: [
+				{ title: "handbook-block-sources", text: "To make a Quern,  place an Andesite, Granite, Basalt or Peridotite Rock Slab down on any surface and right click with 2 Very Thin Debarked Branches. For the next step right click with some cordage: Leatherstrips, Sinew or Sisal Twine. To finish the block roight click with 3 blocks of Raw Stone of the same type you started." }
+			]
 		}
 	},
 	variantgroups: [
