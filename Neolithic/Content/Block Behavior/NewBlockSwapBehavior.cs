@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,11 +10,42 @@ using Vintagestory.API;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Server;
 
 namespace TheNeolithicMod
 {
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class Swap
+    {
+        public string SwapPairs;
+    }
+
     class SwapSystem : ModSystem
     {
+        IClientNetworkChannel cChannel;
+        IServerNetworkChannel sChannel;
+
+        public override void StartClientSide(ICoreClientAPI api)
+        {
+            cChannel = api.Network.RegisterChannel("swapPairs")
+                .RegisterMessageType<Swap>()
+                .SetMessageHandler<Swap>(a => 
+                {
+                    SwapPairs = JsonConvert.DeserializeObject<Dictionary<string, SwapBlocks>>(a.SwapPairs);
+                });
+        }
+
+        public override void StartServerSide(ICoreServerAPI api)
+        {
+            sChannel = api.Network.RegisterChannel("swapPairs").RegisterMessageType<Swap>();
+            api.Event.PlayerJoin += PlayerJoin;
+        }
+
+        private void PlayerJoin(IServerPlayer byPlayer)
+        {
+            sChannel.SendPacket(new Swap() { SwapPairs = JsonConvert.SerializeObject(SwapPairs) }, byPlayer);
+        }
+
         public Dictionary<string, SwapBlocks> SwapPairs { get; set; } = new Dictionary<string, SwapBlocks>();
     }
 
@@ -63,23 +95,26 @@ namespace TheNeolithicMod
             }
             if (properties["swapBlocks"].Exists)
             {
-                try
+                if (api.World.Side.IsServer())
                 {
-                    SwapBlocks[] swapBlocks = properties["swapBlocks"].AsObject<SwapBlocks[]>();
-                    foreach (var val in swapBlocks)
+                    try
                     {
-                        if (!swapSystem.SwapPairs.ContainsKey(GetKey(val.Makes)) && !val.Makes.Contains("{"))
+                        SwapBlocks[] swapBlocks = properties["swapBlocks"].AsObject<SwapBlocks[]>();
+                        foreach (var val in swapBlocks)
                         {
-                            if (!(val.Takes != null && !val.Takes.Contains("{")))
+                            if (!swapSystem.SwapPairs.ContainsKey(GetKey(val.Makes)) && !val.Makes.Contains("{"))
                             {
-                                swapSystem.SwapPairs.Add(GetKey(val.Tool), val);
+                                if (!(val.Takes != null && !val.Takes.Contains("{")))
+                                {
+                                    swapSystem.SwapPairs.Add(GetKey(val.Tool), val);
+                                }
                             }
                         }
                     }
-                }
-                catch (Exception)
-                {
-                    disabled = true;
+                    catch (Exception)
+                    {
+                        disabled = true;
+                    }
                 }
             }
             else
@@ -91,10 +126,7 @@ namespace TheNeolithicMod
 
         public string GetKey(string holdingstack)
         {
-            string combined = "";
-            combined += holdingstack;
-            combined += block.Code.ToString();
-            return GameMath.Md5Hash(combined);
+            return GameMath.Md5Hash(holdingstack + block.Code.ToString() + block.Id);
         }
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
