@@ -114,6 +114,7 @@ namespace TheNeolithicMod
                     catch (Exception)
                     {
                         disabled = true;
+                        api.World.Logger.Notification("Deprecated or unsupported use of swapblocks in " + block.Code.ToString());
                     }
                 }
             }
