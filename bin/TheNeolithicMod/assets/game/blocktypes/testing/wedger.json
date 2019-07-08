@@ -1,0 +1,49 @@
+{
+	code: "wedger",
+	classByType: {
+		"*": "BlockMetalWedge",
+	},
+	heldTpIdleAnimation: "holdbothhands",
+	entityclassByType: {
+		"*": "Wedger",
+	},
+	shape: { base: "block/metal/wedger" },
+	blockmaterial: "Metal",
+	creativeinventory: { "general": ["wedger"], "decorative": ["wedger"] },
+	replaceable: 400,
+	resistance: 1.5,
+	maxStackSize: 1,
+	lightAbsorption: 0,
+	texturesByType: {
+		"*": { 
+			"metal": { base: "block/metal/ingot/iron" }
+		},
+	},
+	sounds: {
+		walk: "walk/stone",
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	collisionbox: { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.3125, z2: 0.75 },
+	selectionbox: { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.3125, z2: 0.75 },
+	guiTransform: {
+		origin: { x: 0.5, y: 0.2, z: 0.5 },
+		scale: 2
+	},
+	groundTransform: {
+		scale: 3
+	},
+	fpHandTransform: {
+		scale: 2
+	},
+	tpHandTransform: {
+		translation: { x: -0.57, y: 0.03, z: -0.6 },
+		rotation: { x: 45, y: 16, z: -72 },
+		origin: { x: 0.5, y: 0.01, z: 0.5 },
+		scale: 0.76
+	}
+}
