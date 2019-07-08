@@ -5,18 +5,6 @@
 		{ loadFromProperties: "block/wood" },
 		{ code: "style", states: ["bark", "debarked"]},
 	],
-	behaviors: [{
-			name: "BlockSwapBehavior",
-			properties: {
-				"swapBlocks": [
-					[ "game:rock-andesite", "game:quern-andesite", 4 ],
-					[ "game:rock-granite", "game:quern-granite", 4 ],
-					[ "game:rock-basalt", "game:quern-basalt", 4 ],
-					[ "game:rock-peridotite", "game:quern-peridotite", 4 ]					
-				],
-			},
-		},
-	],
 	creativeinventory: { "general": ["*"], "flora": ["*"], "construction": ["*"], "neolithicflora": ["*"] },
 	drawtype: "json",
 	lightabsorption: 0,
