@@ -16,11 +16,24 @@ namespace TheNeolithicMod
 
         public override void Initialize(JsonObject properties)
         {
-            createBlocks = properties["createBlocks"].AsObject<object[][]>();
+            try
+            {
+                createBlocks = properties["createBlocks"].AsObject<object[][]>();
+            }
+            catch (Exception)
+            {
+                createBlocks = null;
+            }
+            
         }
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {
+            if (createBlocks == null)
+            {
+                world.Logger.Notification("CreateBlocks error in " + block.Code.ToString());
+                return true;
+            }
             handling = EnumHandling.PreventDefault;
             var active = byPlayer.InventoryManager.ActiveHotbarSlot;
             BlockPos pos = blockSel.Position;
