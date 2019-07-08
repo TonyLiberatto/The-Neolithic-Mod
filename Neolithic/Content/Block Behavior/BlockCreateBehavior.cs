@@ -33,7 +33,7 @@ namespace TheNeolithicMod
         {
             base.OnLoaded(api);
             this.api = api;
-            PostOLInit(block.GetBehavior<NewBlockSwapBehavior>().properties);
+            PostOLInit(block.GetBehavior<BlockCreateBehavior>().properties);
         }
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
