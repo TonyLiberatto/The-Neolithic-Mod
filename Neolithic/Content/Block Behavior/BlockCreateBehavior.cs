@@ -11,10 +11,11 @@ namespace TheNeolithicMod
         private AssetLocation makes;
         private bool t;
         private int count;
+        ICoreAPI api;
 
         public BlockCreateBehavior(Block block) : base(block) { }
 
-        public override void Initialize(JsonObject properties)
+        public void PostOLInit(JsonObject properties)
         {
             try
             {
@@ -23,8 +24,16 @@ namespace TheNeolithicMod
             catch (Exception)
             {
                 createBlocks = null;
+                api.World.Logger.Notification("CreateBlocks error in " + block.Code.ToString());
             }
             
+        }
+
+        public override void OnLoaded(ICoreAPI api)
+        {
+            base.OnLoaded(api);
+            this.api = api;
+            PostOLInit(block.GetBehavior<NewBlockSwapBehavior>().properties);
         }
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
