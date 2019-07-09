@@ -1,7 +1,5 @@
 {
 	code: "lantern",
-	class: "BlockLantern",
-	entityClass: "Lantern",
 	storageFlags: 257,
 	attributes: {
 		handbook: {
@@ -14,63 +12,223 @@
 	heldLeftTpIdleAnimation: "holdinglanternlefthand",
 	
 	variantgroups: [
+		{ code:"material", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
+		{ code:"lining", states: ["plain", "gold", "silver" ] },
 		{ code:"position", states: ["up", "down"], loadFromProperties: "abstract/horizontalorientation" }
 	],
 	shapebytype: {
-		"lantern-up": { base: "block/metal/lantern/ground" },
-		"lantern-down": { base: "block/metal/lantern/ceiling" },
-		"lantern-north": { base: "block/metal/lantern/wall", rotateY: 180 },
-		"lantern-east": { base: "block/metal/lantern/wall", rotateY: 90 },
-		"lantern-south": { base: "block/metal/lantern/wall", rotateY: 0 },
-		"lantern-west": { base: "block/metal/lantern/wall", rotateY: 270 }
+		"*-up": { base: "block/metal/lantern/ground" },
+		"*-down": { base: "block/metal/lantern/ceiling" },
+		"*-north": { base: "block/metal/lantern/wall", rotateY: 180 },
+		"*-east": { base: "block/metal/lantern/wall", rotateY: 90 },
+		"*-south": { base: "block/metal/lantern/wall", rotateY: 0 },
+		"*-west": { base: "block/metal/lantern/wall", rotateY: 270 }
 	},
 	"_comment": "Must declare textures so they get added to the block texture atlas",
-	textures: {
-		"copper": { base: "block/metal/lantern/copper" },
-		"brass": { base: "block/metal/lantern/brass" },
-		"blackbronze": { base: "block/metal/lantern/blackbronze" },
-		"bismuth": { base: "block/metal/lantern/bismuth" },
-		"tinbronze": { base: "block/metal/lantern/tinbronze" },
-		"bismuthbronze": { base: "block/metal/lantern/bismuthbronze" },
-		"iron": { base: "block/metal/lantern/iron" },
-		"molybdochalkos": { base: "block/metal/lantern/molybdochalkos" },
-		"silver": { base: "block/metal/lantern/silver" },
-		"gold": { base: "block/metal/lantern/gold" },
-
-		"deco-copper": { base: "block/metal/lantern/copper-deco" },
-		"deco-brass": { base: "block/metal/lantern/brass-deco" },
-		"deco-blackbronze": { base: "block/metal/lantern/blackbronze-deco" },
-		"deco-bismuth": { base: "block/metal/lantern/bismuth-deco" },
-		"deco-tinbronze": { base: "block/metal/lantern/tinbronze-deco" },
-		"deco-bismuthbronze": { base: "block/metal/lantern/bismuthbronze-deco" },
-		"deco-iron": { base: "block/metal/lantern/iron-deco" },
-		"deco-molybdochalkos": { base: "block/metal/lantern/molybdochalkos-deco" },
-		"deco-silver": { base: "block/metal/lantern/silver-deco" },
-		"deco-gold": { base: "block/metal/lantern/gold-deco" },
+	texturesByType: {
+		"lantern-copper-plain-*": {
+			"material": { base: "block/metal/lantern/copper" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/copper" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/copper-deco" }
+		},
+		"lantern-brass-plain-*": {
+			"material": { base: "block/metal/lantern/brass" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/brass" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/brass-deco" }
+		},
+		"lantern-blackbronze-plain-*": {
+			"material": { base: "block/metal/lantern/blackbronze" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/blackbronze" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/blackbronze-deco" }
+		},
+		"lantern-bismuth-plain-*": {
+			"material": { base: "block/metal/lantern/bismuth" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/bismuth" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/bismuth-deco" }
+		},
+		"lantern-tinbronze-plain-*": {
+			"material": { base: "block/metal/lantern/tinbronze" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/tinbronze" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/tinbronze-deco" }
+		},
+		"lantern-bismuthbronze-plain-*": {
+			"material": { base: "block/metal/lantern/bismuthbronze" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/bismuthbronze" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/bismuthbronze-deco" }
+		},
+		"lantern-molybdochalkos-plain-*": {
+			"material": { base: "block/metal/lantern/molybdochalkos" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/molybdochalkos" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/molybdochalkos-deco" }
+		},
+		"lantern-silver-plain-*": {
+			"material": { base: "block/metal/lantern/silver" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/silver" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/silver-deco" }
+		},
+		"lantern-gold-plain-*": {
+			"material": { base: "block/metal/lantern/gold" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/gold" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/gold-deco" }
+		},
+		
+		
+		
+		"lantern-copper-gold-*": {
+			"material": { base: "block/metal/lantern/copper" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/gold" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/copper-deco" }
+		},
+		"lantern-brass-gold-*": {
+			"material": { base: "block/metal/lantern/brass" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/gold" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/brass-deco" }
+		},
+		"lantern-blackbronze-gold-*": {
+			"material": { base: "block/metal/lantern/blackbronze" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/gold" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/blackbronze-deco" }
+		},
+		"lantern-bismuth-gold-*": {
+			"material": { base: "block/metal/lantern/bismuth" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/gold" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/bismuth-deco" }
+		},
+		"lantern-tinbronze-gold-*": {
+			"material": { base: "block/metal/lantern/tinbronze" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/gold" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/tinbronze-deco" }
+		},
+		"lantern-bismuthbronze-gold-*": {
+			"material": { base: "block/metal/lantern/bismuthbronze" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/gold" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/bismuthbronze-deco" }
+		},
+		"lantern-molybdochalkos-gold-*": {
+			"material": { base: "block/metal/lantern/molybdochalkos" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/gold" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/molybdochalkos-deco" }
+		},
+		"lantern-silver-gold-*": {
+			"material": { base: "block/metal/lantern/silver" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/gold" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/silver-deco" }
+		},
+		"lantern-gold-gold-*": {
+			"material": { base: "block/metal/lantern/gold" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/gold" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/gold-deco" }
+		},
+		
+		
+		"lantern-copper-silver-*": {
+			"material": { base: "block/metal/lantern/copper" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/silver" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/copper-deco" }
+		},
+		"lantern-brass-silver-*": {
+			"material": { base: "block/metal/lantern/brass" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/silver" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/brass-deco" }
+		},
+		"lantern-blackbronze-silver-*": {
+			"material": { base: "block/metal/lantern/blackbronze" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/silver" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/blackbronze-deco" }
+		},
+		"lantern-bismuth-silver-*": {
+			"material": { base: "block/metal/lantern/bismuth" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/silver" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/bismuth-deco" }
+		},
+		"lantern-tinbronze-silver-*": {
+			"material": { base: "block/metal/lantern/tinbronze" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/silver" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/tinbronze-deco" }
+		},
+		"lantern-bismuthbronze-silver-*": {
+			"material": { base: "block/metal/lantern/bismuthbronze" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/silver" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/bismuthbronze-deco" }
+		},
+		"lantern-molybdochalkos-silver-*": {
+			"material": { base: "block/metal/lantern/molybdochalkos" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/silver" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/molybdochalkos-deco" }
+		},
+		"lantern-silver-silver-*": {
+			"material": { base: "block/metal/lantern/silver" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/silver" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/silver-deco" }
+		},
+		"lantern-gold-silver-*": {
+			"material": { base: "block/metal/lantern/gold" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/silver" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/gold-deco" }
+		},		
 	},
-	creativeinventory: {  },
-	creativeinventoryStacksByType: {
-		"*-up": [
-			{
-				tabs: [ "general", "decorative" ],
-				stacks: [
-					{ type: "block", code: "lantern-up", attributes: { material: "copper", lining: "plain" } },
-					{ type: "block", code: "lantern-up", attributes: { material: "brass", lining: "plain" } },
-					{ type: "block", code: "lantern-up", attributes: { material: "blackbronze", lining: "plain" } },
-					{ type: "block", code: "lantern-up", attributes: { material: "bismuth", lining: "plain" } },
-					{ type: "block", code: "lantern-up", attributes: { material: "tinbronze", lining: "plain" } },
-					{ type: "block", code: "lantern-up", attributes: { material: "bismuthbronze", lining: "plain" } },
-					{ type: "block", code: "lantern-up", attributes: { material: "iron", lining: "plain" } },
-					{ type: "block", code: "lantern-up", attributes: { material: "molybdochalkos", lining: "plain" } },
-					{ type: "block", code: "lantern-up", attributes: { material: "silver", lining: "plain" } },
-					{ type: "block", code: "lantern-up", attributes: { material: "gold", lining: "plain" } }
-				]
-			}
-		]
-	},
+	creativeinventory: { "general": ["*-up"], "decorative": ["*-up"], "neolithicdeco": ["*-up"] },
 	blockmaterial: "Metal",
 	lightAbsorption: 0,
-	lightHsv: [7, 4, 18],
+	lightHsvByType: {
+		"lantern-*-plain-*": [7, 4, 18],
+		"lantern-*": [7, 4, 20],
+		
+	},
 	sidesolid: {
 		all: false
 	},

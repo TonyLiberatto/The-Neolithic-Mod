@@ -13,21 +13,25 @@
 		"*-blue-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
+			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
 			"drop": { class:"Block", code: "glasslanternframe-{metal}-down" }
 		},
 		"*-brown-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
+			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
 			"drop": { class:"Block", code: "glasslanternframe-{metal}-down" }
 		},
 		"*-fire-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
+			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
 			"drop": { class:"Block", code: "glasslanternframe-{metal}-down" }
 		},
 		"*-red-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
+			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
 			"drop": { class:"Block", code: "glasslanternframe-{metal}-down" }
 		},
 	},
