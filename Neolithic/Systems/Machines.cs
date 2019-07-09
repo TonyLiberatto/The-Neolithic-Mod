@@ -44,7 +44,6 @@ namespace TheNeolithicMod
         InventoryGeneric input;
         InventoryGeneric processing;
         InventoryGeneric output;
-        long id;
 
         byte[] Serialized() {
             return SerializerUtil.Serialize(JsonConvert.SerializeObject(Device));
@@ -72,24 +71,12 @@ namespace TheNeolithicMod
                 }
 
                 sapi.WorldManager.SaveGame.StoreData(Key, Serialized());
-                id = sapi.World.RegisterGameTickListener(dt => 
-                {
-                    if (Device.StoredPower < Device.MaxPower)
-                    {
-                        Device.StoredPower += 0.025;
-                    }
-                    UpdateForAllPlayers(sapi);
-                }, 100);
             }
         }
 
         public override void OnBlockRemoved()
         {
             base.OnBlockRemoved();
-            if (api.Side.IsServer())
-            {
-                api.World.UnregisterGameTickListener(id);
-            }
         }
 
         public void UpdateForAllPlayers(ICoreServerAPI sapi)

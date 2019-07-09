@@ -167,6 +167,7 @@
     <Compile Include="Neolithic\Content\Utility\ArrayStuff.cs" />
     <Compile Include="Neolithic\Content\Utility\HandAnimations.cs" />
     <Compile Include="Neolithic\Debugging\RedirectLogs.cs" />
+    <Compile Include="Neolithic\Systems\MetalWedge.cs" />
     <Compile Include="Neolithic\Systems\PalmTreeMod.cs" />
     <Compile Include="Neolithic\Systems\Remapper.cs" />
     <Compile Include="Neolithic\TheNeolithicMod.cs" />
@@ -245,6 +246,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\slab-branch.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\stonebrick\staircornerbrick.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\stonebrick\stonebrickstairs.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\testing\wedger.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\testing\machine.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\adze.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\axe.json" />
