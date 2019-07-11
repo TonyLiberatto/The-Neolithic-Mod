@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
@@ -32,8 +33,9 @@ namespace TheNeolithicMod
                     {
                         wedge.animState += 0.25f;
                         world.SpawnCubeParticles(blockSel.Position, blockSel.Position.ToVec3d().Add(0.5, 0.5, 0.5), 2, 16);
+                        ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
                     }
-                    else
+                    else if (world.Side.IsServer())
                     {
                         Block dBlock = api.World.BlockAccessor.GetBlock(blockSel.Position.DownCopy());
                         if (dBlock.GetBehavior<BlockBehaviorWedgable>() != null)
