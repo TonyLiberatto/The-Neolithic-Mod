@@ -6,7 +6,8 @@
 		}
 	},
   creativeinventory: { "general": [ "*-east" ], "construction": [ "*-east" ], "totems": [ "*-east" ] },
-  shapebytype: { "*-north": {  base: "block/wood/totem/pig/crucible", rotateY: 0  },
+  shapebytype: { 
+	"*-north": {  base: "block/wood/totem/pig/crucible", rotateY: 0  },
     "*-east": {  base: "block/wood/totem/pig/crucible", rotateY: 270  },
     "*-south": { base: "block/wood/totem/pig/crucible", rotateY: 180  },
     "*-west": {  base: "block/wood/totem/pig/crucible", rotateY: 90   }
@@ -20,10 +21,10 @@
     { name: "BlockCreateBehavior",
       properties: {
         "createBlocks": [
-          { "Tool": "game:clay-blue", "Makes": "game:crucibleblue-raw", "Takes": null, "Count": 10 },
-		  { "Tool": "game:clay-fire", "Makes": "game:cruciblefire-raw", "Takes": null, "Count": 10 },
-		  { "Tool": "game:clay-red", "Makes": "game:cruciblered-raw", "Takes": null, "Count": 10 },
-		  { "Tool": "game:clay-brown", "Makes": "game:cruciblebrown-raw", "Takes": null, "Count": 10 },
+          [ "game:clay-blue",  "game:crucibleblue-raw",  10 ],
+		  [ "game:clay-fire",  "game:cruciblefire-raw",  10 ],
+		  [ "game:clay-red",  "game:cruciblered-raw",  10 ],
+		  [ "game:clay-brown",  "game:cruciblebrown-raw",  10 ],
         ],
       },
     },

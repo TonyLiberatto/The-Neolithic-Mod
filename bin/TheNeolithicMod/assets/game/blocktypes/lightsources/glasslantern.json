@@ -1,0 +1,58 @@
+{
+	code: "glasslantern",
+	variantgroups: [
+		{ code:"sheet", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
+		{ code:"metal", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
+		{ code:"layer", states: ["plain", "gold", "silver" ] },
+		{ code:"frame", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
+		
+	],
+	creativeinventory: { "general": ["*"], "decorative": ["*"], "neolithicdeco": ["*"] },
+	blockmaterial: "Metal",
+	lightAbsorption: 0,
+	lightHsv: [8, 2, 31],
+	glowLevel: 32,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	drawtype: "json",
+	shape: { base: "block/lightsources/glass-lantern" },
+	texturesByType: {
+		"glasslantern-*-*-plain-*": {
+			"base": { base: "block/metal/lantern/{sheet}" },
+			"material": { base: "block/metal/lantern/{metal}" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/{metal}" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
+			"Glasscase": { base: "block/glasscase/{frame}" },
+		},
+		"glasslantern-*-*-gold-*": {
+			"base": { base: "block/metal/lantern/{sheet}" },
+			"material": { base: "block/metal/lantern/{metal}" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/gold" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
+			"Glasscase": { base: "block/glasscase/{frame}" },
+		},
+		"glasslantern-*-*-silver-*": {
+			"base": { base: "block/metal/lantern/{sheet}" },
+			"material": { base: "block/metal/lantern/{metal}" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/silver" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
+			"Glasscase": { base: "block/glasscase/{frame}" },
+		},
+	},
+	replaceable: 1000,
+	resistance: 1,
+	sounds: {
+		"place": "player/buildhigh",
+		"break": "block/glass"
+	}
+}

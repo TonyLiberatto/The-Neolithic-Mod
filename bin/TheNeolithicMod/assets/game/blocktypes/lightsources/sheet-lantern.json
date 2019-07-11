@@ -1,0 +1,69 @@
+{
+	code: "sheet-lantern",
+	behaviors: [
+		{
+			name: "BlockSwapBehavior",
+			properties: {		
+				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
+				"particleRadius": 2,
+				"particleQuantity": 16,				
+				"swapBlocks": [					
+					{ "Tool": "game:glass-plain", "Makes": "game:sheet-lantern-glass-{sheet}-{metal}-{layer}-up", "Takes": null, "Count": 1 },
+									
+				],
+			},
+		},
+	],
+	variantgroups: [
+		{ code:"sheet", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
+		{ code:"metal", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
+		{ code:"layer", states: ["plain", "gold", "silver" ] },
+		{ code:"position", states: ["up", "down"], loadFromProperties: "abstract/horizontalorientation" }
+	],
+	creativeinventory: { "general": [""], "decorative": [""], "neolithicdeco": [""] },
+	blockmaterial: "Metal",
+	lightAbsorption: 0,	
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	drawtype: "json",
+	shape: { base: "block/lightsources/glass-lantern" },
+	texturesByType: {
+		"sheet-lantern-*-plain-*": {
+			"base": { base: "block/metal/lantern/{sheet}" },
+			"material": { base: "block/metal/lantern/{metal}" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/{metal}" },
+			"quartz":  { base: "block/transparent" },
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
+			"Glasscase": { base: "block/transparent" },
+		},
+		"sheet-lantern-*-gold-*": {
+			"base": { base: "block/metal/lantern/{sheet}" },
+			"material": { base: "block/metal/lantern/{metal}" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/gold" },
+			"quartz":  { base: "block/transparent" },
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
+			"Glasscase": { base: "block/transparent" },
+		},
+		"sheet-lantern-*-silver-*": {
+			"base": { base: "block/metal/lantern/{sheet}" },
+			"material": { base: "block/metal/lantern/{metal}" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/silver" },
+			"quartz":  { base: "block/transparent" },
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
+			"Glasscase": { base: "block/transparent" },
+		},
+	},
+	replaceable: 1000,
+	resistance: 1,
+	sounds: {
+		"place": "player/buildhigh",
+		"break": "block/glass"
+	}
+}

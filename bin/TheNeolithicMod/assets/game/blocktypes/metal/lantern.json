@@ -6,14 +6,14 @@
 			groupBy: ["lantern-*"]
 		},
 	},
-	behaviors: [{name: "OmniAttachable", properties: { facingPos: 1 }}],
+	behaviors: [{name: "OmniAttachable", properties: { facingPos: 3 }}],
 	
 	heldRightTpIdleAnimation: "holdinglanternrighthand",
 	heldLeftTpIdleAnimation: "holdinglanternlefthand",
 	
 	variantgroups: [
-		{ code:"material", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
-		{ code:"lining", states: ["plain", "gold", "silver" ] },
+		{ code:"metal", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
+		{ code:"layer", states: ["plain", "gold", "silver" ] },
 		{ code:"position", states: ["up", "down"], loadFromProperties: "abstract/horizontalorientation" }
 	],
 	shapebytype: {
@@ -26,200 +26,27 @@
 	},
 	"_comment": "Must declare textures so they get added to the block texture atlas",
 	texturesByType: {
-		"lantern-copper-plain-*": {
-			"material": { base: "block/metal/lantern/copper" },
+		"lantern-*-plain-*": {
+			"material": { base: "block/metal/lantern/{metal}" },
 			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/copper" },
+			"lining":  { base: "block/metal/lantern/{metal}" },
 			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/copper-deco" }
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" }
 		},
-		"lantern-brass-plain-*": {
-			"material": { base: "block/metal/lantern/brass" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/brass" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/brass-deco" }
-		},
-		"lantern-blackbronze-plain-*": {
-			"material": { base: "block/metal/lantern/blackbronze" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/blackbronze" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/blackbronze-deco" }
-		},
-		"lantern-bismuth-plain-*": {
-			"material": { base: "block/metal/lantern/bismuth" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/bismuth" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/bismuth-deco" }
-		},
-		"lantern-tinbronze-plain-*": {
-			"material": { base: "block/metal/lantern/tinbronze" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/tinbronze" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/tinbronze-deco" }
-		},
-		"lantern-bismuthbronze-plain-*": {
-			"material": { base: "block/metal/lantern/bismuthbronze" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/bismuthbronze" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/bismuthbronze-deco" }
-		},
-		"lantern-molybdochalkos-plain-*": {
-			"material": { base: "block/metal/lantern/molybdochalkos" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/molybdochalkos" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/molybdochalkos-deco" }
-		},
-		"lantern-silver-plain-*": {
-			"material": { base: "block/metal/lantern/silver" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/silver" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/silver-deco" }
-		},
-		"lantern-gold-plain-*": {
-			"material": { base: "block/metal/lantern/gold" },
+		"lantern-*-gold-*": {
+			"material": { base: "block/metal/lantern/{metal}" },
 			"candle":  { base: "block/candle" },
 			"lining":  { base: "block/metal/lantern/gold" },
 			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/gold-deco" }
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" }
 		},
-		
-		
-		
-		"lantern-copper-gold-*": {
-			"material": { base: "block/metal/lantern/copper" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/gold" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/copper-deco" }
-		},
-		"lantern-brass-gold-*": {
-			"material": { base: "block/metal/lantern/brass" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/gold" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/brass-deco" }
-		},
-		"lantern-blackbronze-gold-*": {
-			"material": { base: "block/metal/lantern/blackbronze" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/gold" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/blackbronze-deco" }
-		},
-		"lantern-bismuth-gold-*": {
-			"material": { base: "block/metal/lantern/bismuth" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/gold" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/bismuth-deco" }
-		},
-		"lantern-tinbronze-gold-*": {
-			"material": { base: "block/metal/lantern/tinbronze" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/gold" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/tinbronze-deco" }
-		},
-		"lantern-bismuthbronze-gold-*": {
-			"material": { base: "block/metal/lantern/bismuthbronze" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/gold" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/bismuthbronze-deco" }
-		},
-		"lantern-molybdochalkos-gold-*": {
-			"material": { base: "block/metal/lantern/molybdochalkos" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/gold" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/molybdochalkos-deco" }
-		},
-		"lantern-silver-gold-*": {
-			"material": { base: "block/metal/lantern/silver" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/gold" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/silver-deco" }
-		},
-		"lantern-gold-gold-*": {
-			"material": { base: "block/metal/lantern/gold" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/gold" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/gold-deco" }
-		},
-		
-		
-		"lantern-copper-silver-*": {
-			"material": { base: "block/metal/lantern/copper" },
+		"lantern-*-silver-*": {
+			"material": { base: "block/metal/lantern/{metal}" },
 			"candle":  { base: "block/candle" },
 			"lining":  { base: "block/metal/lantern/silver" },
 			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/copper-deco" }
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" }
 		},
-		"lantern-brass-silver-*": {
-			"material": { base: "block/metal/lantern/brass" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/silver" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/brass-deco" }
-		},
-		"lantern-blackbronze-silver-*": {
-			"material": { base: "block/metal/lantern/blackbronze" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/silver" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/blackbronze-deco" }
-		},
-		"lantern-bismuth-silver-*": {
-			"material": { base: "block/metal/lantern/bismuth" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/silver" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/bismuth-deco" }
-		},
-		"lantern-tinbronze-silver-*": {
-			"material": { base: "block/metal/lantern/tinbronze" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/silver" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/tinbronze-deco" }
-		},
-		"lantern-bismuthbronze-silver-*": {
-			"material": { base: "block/metal/lantern/bismuthbronze" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/silver" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/bismuthbronze-deco" }
-		},
-		"lantern-molybdochalkos-silver-*": {
-			"material": { base: "block/metal/lantern/molybdochalkos" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/silver" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/molybdochalkos-deco" }
-		},
-		"lantern-silver-silver-*": {
-			"material": { base: "block/metal/lantern/silver" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/silver" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/silver-deco" }
-		},
-		"lantern-gold-silver-*": {
-			"material": { base: "block/metal/lantern/gold" },
-			"candle":  { base: "block/candle" },
-			"lining":  { base: "block/metal/lantern/silver" },
-			"quartz":  { base: "block/glass/quartz" },
-			"material-deco": { base: "block/metal/lantern/gold-deco" }
-		},		
 	},
 	creativeinventory: { "general": ["*-up"], "decorative": ["*-up"], "neolithicdeco": ["*-up"] },
 	blockmaterial: "Metal",

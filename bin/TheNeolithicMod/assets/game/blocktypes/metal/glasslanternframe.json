@@ -8,7 +8,7 @@
 		}
 	},
 	variantgroups: [
-		{  code:"metal", states: ["copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "gold", "lead", "tin", "zinc", "silver", "bismuth", "molybdochalkos" ] },
+		{  code:"frame", states: ["copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "gold", "lead", "tin", "zinc", "silver", "bismuth", "molybdochalkos" ] },
 		{ code:"side", states: ["north", "east", "south", "west", "up", "down"] }
 	],
 	shapebytype: {
@@ -33,8 +33,8 @@
 	lightAbsorption: 1,
 	textures: {
 		all: { 
-			base: "block/metal/sheet/{metal}1", 
-			alternates: [{ base: "block/metal/sheet/{metal}2"}, { base: "block/metal/sheet/{metal}3" }, { base: "block/metal/sheet/{metal}4" }, { base: "block/metal/sheet/{metal}5" }],
+			base: "block/metal/sheet/{frame}1", 
+			alternates: [{ base: "block/metal/sheet/{frame}2"}, { base: "block/metal/sheet/{frame}3" }, { base: "block/metal/sheet/{frame}4" }, { base: "block/metal/sheet/{frame}5" }],
 		}
 	},
 	selectionbox: {
