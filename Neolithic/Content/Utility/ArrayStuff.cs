@@ -48,6 +48,7 @@ namespace TheNeolithicMod
         }
 
         public static Block GetBlock(this BlockPos pos, IWorldAccessor world) { return world.BlockAccessor.GetBlock(pos); }
+        public static Block GetBlock(this BlockPos pos, ICoreAPI api) { return pos.GetBlock(api.World); }
 
         public static Block GetBlock(this AssetLocation asset, ICoreAPI api)
         {

@@ -8,10 +8,8 @@
 	},
 	heldTpIdleAnimation: "holdbothhands",
 	attributesByType: {
-		"*": { 
-			"InputSlots": 1,
-			"OutputSlots": 1,
-		},
+		"*": {
+		}, 
 	},
 	variantgroups: [
 	],
