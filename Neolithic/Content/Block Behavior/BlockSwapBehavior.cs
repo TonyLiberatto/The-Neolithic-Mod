@@ -28,7 +28,7 @@ namespace TheNeolithicMod
         {
             api.Network.RegisterChannel("swapPairs")
                 .RegisterMessageType<Swap>()
-                .SetMessageHandler<Swap>(a => 
+                .SetMessageHandler<Swap>(a =>
                 {
                     SwapPairs = JsonConvert.DeserializeObject<Dictionary<string, SwapBlocks>>(a.SwapPairs);
                 });
@@ -50,10 +50,21 @@ namespace TheNeolithicMod
 
     class SwapBlocks
     {
-        public string Takes = "";
-        public string Makes = "";
-        public string Tool = null;
-        public int Count = 0;
+        public string Takes { get; set; } = "";
+        public string Makes { get; set; } = "";
+        public string Tool { get; set; } = null;
+        public int Count { get; set; } = 0;
+
+        public SwapBlocks(string takes, string makes, string tool, int count)
+        {
+            Takes = takes; Makes = makes; Tool = tool; Count = count;
+        }
+
+        public SwapBlocks Copy()
+        {
+            SwapBlocks copy = new SwapBlocks(Takes, Makes, Tool, Count);
+            return copy;
+        }
     }
 
     class BlockSwapBehavior : BlockBehavior
@@ -99,14 +110,43 @@ namespace TheNeolithicMod
                     try
                     {
                         SwapBlocks[] swapBlocks = properties["swapBlocks"].AsObject<SwapBlocks[]>();
-                        foreach (var val in swapBlocks)
+                        foreach (SwapBlocks val in swapBlocks)
                         {
-                            if (!swapSystem.SwapPairs.ContainsKey(GetKey(val.Makes)) && !val.Makes.Contains("{"))
+
+                            if (val.Tool.Contains("*"))
                             {
-                                if (!(val.Takes != null && !val.Takes.Contains("{")))
+                                for (int i = 0; i < api.World.Blocks.Length; i++)
                                 {
-                                    swapSystem.SwapPairs.Add(GetKey(val.Tool), val);
+                                    Block iBlock = api.World.Blocks[i];
+                                    if (iBlock != null && iBlock.WildCardMatch(new AssetLocation(val.Tool)))
+                                    {
+                                        SwapBlocks tmp = val.Copy();
+                                        string code = iBlock.Code.ToString().IndexOf(":") == -1 ? code = "game:" + iBlock.Code.ToString() : iBlock.Code.ToString();
+                                        tmp.Tool = code;
+                                        if (!swapSystem.SwapPairs.ContainsKey(GetKey(tmp.Tool)))
+                                        {
+                                            swapSystem.SwapPairs.Add(GetKey(tmp.Tool), tmp);
+                                        }
+                                    }
                                 }
+                                for (int i = 0; i < api.World.Items.Length; i++)
+                                {
+                                    Item iItem = api.World.Items[i];
+                                    if (iItem != null && iItem.WildCardMatch(new AssetLocation(val.Tool)))
+                                    {
+                                        SwapBlocks tmp = val.Copy();
+                                        string code = iItem.Code.ToString().IndexOf(":") == -1 ? code = "game:" + iItem.Code.ToString() : iItem.Code.ToString();
+                                        tmp.Tool = code;
+                                        if (!swapSystem.SwapPairs.ContainsKey(GetKey(tmp.Tool)))
+                                        {
+                                            swapSystem.SwapPairs.Add(GetKey(tmp.Tool), tmp);
+                                        }
+                                    }
+                                }
+                            }
+                            else if (!swapSystem.SwapPairs.ContainsKey(GetKey(val.Tool)))
+                            {
+                                swapSystem.SwapPairs.Add(GetKey(val.Tool), val);
                             }
                         }
                     }
@@ -159,8 +199,7 @@ namespace TheNeolithicMod
                         AssetLocation toAsset = new AssetLocation(toCode);
                         Block toBlock = toAsset.GetBlock(world.Api);
 
-                        int count = 0;
-                        try { count = Convert.ToInt32(swap.Count); } catch (Exception) { }
+                        int count = swap.Count;
 
                         if (count > 0 && slot.Itemstack.StackSize >= count)
                         {
