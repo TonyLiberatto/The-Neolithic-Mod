@@ -23,11 +23,42 @@ namespace TheNeolithicMod
         }
     }
 
+    class PowerNetwork
+    {
+        public EnumPowerType PowerType { get; set; } = EnumPowerType.Mechanical;
+        public List<PowerDevice> Connected { get; set; } = new List<PowerDevice>();
+
+        public PowerNetwork(EnumPowerType powerType, List<PowerDevice> connected)
+        {
+            PowerType = powerType;
+            Connected = connected;
+        }
+    }
+
     class PowerDevice
     {
         public double StoredPower { get; set; } = 0;
-        public EnumPowerType PowerType = EnumPowerType.Mechanical;
+        public double PowerDelta { get; set; } = 0;
+        public double StorageCap { get; set; } = 256.0;
+        public EnumPowerType PowerType { get; set; } = EnumPowerType.Mechanical;
         public WorkItem ContainedWorkItem { get; set; } = null;
+
+        public PowerDevice(EnumPowerType powerType, WorkItem containedWorkItem, double storedPower = 0, double storagecap = 256.0, double powerdelta = 0)
+        {
+            StoredPower = storedPower;
+            PowerType = powerType;
+            ContainedWorkItem = containedWorkItem;
+            StorageCap = storagecap;
+            PowerDelta = powerdelta;
+        }
+
+        public PowerDevice Copy()
+        {
+            WorkItem tmp = ContainedWorkItem != null ? ContainedWorkItem : new WorkItem(new List<ItemStack>(), new List<ItemStack>(), 256, 256);
+            PowerDevice copy = new PowerDevice(PowerType, tmp.Copy(), StoredPower, StorageCap, PowerDelta);
+            return copy;
+        }
+        
     }
 
     class WorkItem
@@ -36,6 +67,20 @@ namespace TheNeolithicMod
         public List<ItemStack> Output { get; set; } = new List<ItemStack>();
         public int WorkRequired { get; set; } = 256;
         public int WorkLeft { get; set; } = 256;
+
+        public WorkItem(List<ItemStack> required, List<ItemStack> output, int workRequired, int workLeft)
+        {
+            Required = required;
+            Output = output;
+            WorkRequired = workRequired;
+            WorkLeft = workLeft;
+        }
+
+        public WorkItem Copy()
+        {
+            WorkItem copy = new WorkItem(Required, Output, WorkRequired, WorkLeft);
+            return copy;
+        }
     }
 
     class BlockEntityMachine : BlockEntityAnimatable
@@ -46,6 +91,35 @@ namespace TheNeolithicMod
         {
             base.Initialize(api);
             block = pos.GetBlock(api);
+            if (device == null)
+            {
+                device = new PowerDevice(
+                    (EnumPowerType)block.Attributes["PowerType"].AsInt(), null, 
+                    block.Attributes["PowerStored"].AsDouble(), 
+                    block.Attributes["PowerCap"].AsDouble(256), 
+                    block.Attributes["PowerDelta"].AsDouble());
+            }
+            RegisterGameTickListener(OnGameTick, 30);
+        }
+
+        public void OnGameTick(float dt)
+        {
+            if (device.StoredPower >= 0)
+            {
+                if (device.StoredPower < device.StorageCap)
+                {
+                    device.StoredPower += device.PowerDelta;
+                }
+                else
+                {
+                    device.StoredPower = device.StorageCap;
+                }
+            }
+            else
+            {
+                device.StoredPower = 0;
+            }
+
         }
 
         public override void OnBlockRemoved()
@@ -59,7 +133,6 @@ namespace TheNeolithicMod
             {
                 device = JsonConvert.DeserializeObject<PowerDevice>(tree.GetString("powerdevice"));
             }
-            else device = new PowerDevice();
             base.FromTreeAtributes(tree, worldAccessForResolve);
         }
 
