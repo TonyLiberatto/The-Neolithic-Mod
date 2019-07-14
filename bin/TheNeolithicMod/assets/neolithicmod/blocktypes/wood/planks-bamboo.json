@@ -1,5 +1,6 @@
 {
 	code: "planks",
+	
 	variantgroups: [
 		{ code: "type", states: ["bamboo-brown", "bamboo-green"] },
 	],

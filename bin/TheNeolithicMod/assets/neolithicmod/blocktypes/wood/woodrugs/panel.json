@@ -1,50 +1,24 @@
 {
-	code: "linen",
+	code: "panel",
 	class: "BlockSimpleCoating",
 	attributes: {
 		handbook: {
 			groupBy: ["linen-*"],
-			excludeByType: {
-				"*-diamond-*": true,
-				"*-offset-*": true,
-				"*-square-*": true
-			}
+			
 		}
 	},
-	behaviors: [
-		{
-            name: "BlockCreateBehavior",
-            properties: {
-                "createBlocks": [
-                    [ "game:planks-*", "game:bed-wood-head-north", 0 ],
-                ],
-            },
-        },
-		 {
-            name: "BlockSwapBehavior",
-            properties: {
-                "swapBlocks": [
-                    { "Tool": "game:planks-acacia", "Makes": "game:air", "Takes": null, "Count": 3 },
-					{ "Tool": "game:planks-birch", "Makes": "game:air", "Takes": null, "Count": 3 },
-					{ "Tool": "game:planks-kapok", "Makes": "game:air", "Takes": null, "Count": 3 },
-					{ "Tool": "game:planks-maple", "Makes": "game:air", "Takes": null, "Count": 3 },
-					{ "Tool": "game:planks-oak", "Makes": "game:air", "Takes": null, "Count": 3 },
-					{ "Tool": "game:planks-pine", "Makes": "game:air", "Takes": null, "Count": 3 },
-                ],
-            },
-        },		
-	],
 	variantgroups: [
-		{ code:"pattern", states: ["diamond", "normal", "offset", "square"] },
+		{ loadFromProperties: "block/wood" },
+		{ code: "style", states: ["bark", "debarked", "planks"]},
 		{ code:"side", states: ["north", "east", "south", "west", "up", "down"] }
 	],
 	shapebytype: {
-		"*-down": { base: "block/basic/layered_0" },
-		"*-up": { base: "block/basic/layered_0", rotateX: 180 },
-		"*-north": { base: "block/basic/layered_0", rotateX: 90 },
-		"*-east": { base: "block/basic/layered_0", rotateX: 90, rotateY: 180, rotateZ: 270 },
-		"*-west": { base: "block/basic/layered_0", rotateX: 90, rotateY: 0, rotateZ: 270 },
-		"*-south": { base: "block/basic/layered_0", rotateX: 270 },
+		"*-down": { base: "game:block/basic/layered_0" },
+		"*-up": { base: "game:block/basic/layered_0", rotateX: 180 },
+		"*-north": { base: "game:block/basic/layered_0", rotateX: 90 },
+		"*-east": { base: "game:block/basic/layered_0", rotateX: 90, rotateY: 180, rotateZ: 270 },
+		"*-west": { base: "game:block/basic/layered_0", rotateX: 90, rotateY: 0, rotateZ: 270 },
+		"*-south": { base: "game:block/basic/layered_0", rotateX: 270 },
 	},
 	sidesolidByType: {
 		"*-down": { all: false, down: true },
@@ -63,13 +37,13 @@
 		"*-south": { all: false, south: true },
 	},
 	blockmaterial: "Cloth",
-	creativeinventory: { "general": ["*-down"], "decorative": ["*-down"] },
+	creativeinventory: { "general": ["*-down"], "decorative": ["*-down"], "neolithicdeco": ["*-down"] },
 	replaceable: 700,
 	resistance: 1,
 	lightAbsorption: 1,
 	textures: {
 		all: { 
-			base: "block/cloth/linen/{pattern}1"
+			base: "game:block/wood/{style}/{wood}*"
 		}
 	},
 	selectionbox: {

@@ -11,7 +11,10 @@
 			"bed-woodaged-*": 0.625
 		},
 		handbook: {
-			groupBy: ["bed-{material}-*"]
+			groupBy: ["bed-{material}-*"],
+			extraSections: [
+				{ title: "handbook-block-sources", text: "To make a Hay Bed,  place a Hay block down and right click with reeds. To make a wood Bed, place a linen block down and right click with at least 3 wood planks." }
+			]
 		},
 	},
 	sidesolid: {
