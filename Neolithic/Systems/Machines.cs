@@ -43,7 +43,7 @@ namespace TheNeolithicMod
         public EnumPowerType PowerType { get; set; } = EnumPowerType.Mechanical;
         public WorkItem ContainedWorkItem { get; set; } = null;
 
-        public PowerDevice(EnumPowerType powerType, WorkItem containedWorkItem, double storedPower = 0, double storagecap = 256.0, double powerdelta = 0)
+        public PowerDevice(EnumPowerType powerType = EnumPowerType.Mechanical, WorkItem containedWorkItem = null, double storedPower = 0, double storagecap = 256.0, double powerdelta = 0)
         {
             StoredPower = storedPower;
             PowerType = powerType;
@@ -85,7 +85,7 @@ namespace TheNeolithicMod
 
     class BlockEntityMachine : BlockEntityAnimatable
     {
-        PowerDevice device;
+        public PowerDevice device;
         Block block;
         public override void Initialize(ICoreAPI api)
         {
@@ -96,10 +96,18 @@ namespace TheNeolithicMod
                 device = new PowerDevice(
                     (EnumPowerType)block.Attributes["PowerType"].AsInt(), null, 
                     block.Attributes["PowerStored"].AsDouble(), 
-                    block.Attributes["PowerCap"].AsDouble(256), 
+                    block.Attributes["PowerCap"].AsDouble(256),
                     block.Attributes["PowerDelta"].AsDouble());
             }
+            Update();
             RegisterGameTickListener(OnGameTick, 30);
+        }
+
+        public void Update()
+        {
+            device.PowerType = (EnumPowerType)block.Attributes["PowerType"].AsInt();
+            device.StorageCap = block.Attributes["PowerCap"].AsDouble(256);
+            device.PowerDelta = block.Attributes["PowerDelta"].AsDouble();
         }
 
         public void OnGameTick(float dt)
@@ -160,7 +168,13 @@ namespace TheNeolithicMod
 
         public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
         {
-            return base.GetPlacedBlockInfo(world, pos, forPlayer);
+            string a = "";
+            BlockEntityMachine be = world.BlockAccessor.GetBlockEntity(pos) as BlockEntityMachine;
+            if (be != null)
+            {
+                a += "StoredPower: " + be.device.StoredPower;
+            }
+            return base.GetPlacedBlockInfo(world, pos, forPlayer) + a;
         }
     }
 
