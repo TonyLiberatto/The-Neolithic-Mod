@@ -18,7 +18,7 @@
 				{ x1: 4, z1: 4, x2: 13, z2: 13 },
 				{ x1: 4, z1: 4, x2: 13, z2: 13 },
 			],	
-			"drop": { class:"item", code: "candle-{metal}" , stacksize: 9, }
+			"drop": { type:"item", code: "candle-{metal}" , stacksize: 9, }
 		},
 		"*-brown-burned": {
 			"requiredUnits": 100,
@@ -28,7 +28,7 @@
 				{ x1: 4, z1: 4, x2: 13, z2: 13 },
 				{ x1: 4, z1: 4, x2: 13, z2: 13 },
 			],
-			"drop": { class:"item", code: "candle-{metal}" , stacksize: 9,}
+			"drop": { type:"item", code: "candle-{metal}" , stacksize: 9,}
 		},
 		"*-fire-burned": {
 			"requiredUnits": 100,
@@ -38,7 +38,7 @@
 				{ x1: 4, z1: 4, x2: 13, z2: 13 },
 				{ x1: 4, z1: 4, x2: 13, z2: 13 },
 			],
-			"drop": { class:"item", code: "candle-{metal}" , stacksize: 9,}
+			"drop": { type:"item", code: "candle-{metal}" , stacksize: 9,}
 		},
 		"*-red-burned": {
 			"requiredUnits": 100,
@@ -48,7 +48,7 @@
 				{ x1: 4, z1: 4, x2: 13, z2: 13 },
 				{ x1: 4, z1: 4, x2: 13, z2: 13 },
 			],
-			"drop": { class:"item", code: "candle-{metal}" , stacksize: 9,}
+			"drop": { type:"item", code: "candle-{metal}" , stacksize: 9,}
 		},
 	},
 	entityClassByType: {
