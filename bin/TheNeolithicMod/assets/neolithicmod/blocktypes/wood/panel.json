@@ -1,0 +1,121 @@
+{
+	code: "panel",
+	class: "BlockLogWall",
+	behaviors: [
+		{
+			name: "OmniRotatable",
+			properties: {
+				"rotateH": true,
+				"rotateV": true,
+				"rotateV4": true,
+				"facing": "block",
+			}
+		}
+	],
+	attributes: {
+		handbook: {
+			groupBy: ["linen-*"],
+			
+		}
+	},
+	variantgroups: [
+		{ loadFromProperties: "block/wood" },
+		{ code: "style", states: ["bark", "debarked", "planks"]},
+		{ code: "v", states: ["up", "left", "down", "right"] },
+		{ loadFromProperties: "abstract/horizontalorientation" }
+	],
+	shapebytype: {
+		"*-up-north": { base: "game:block/basic/layered_0",  rotateY: 0, rotateZ: 0 },
+		"*-up-west": { base: "game:block/basic/layered_0",  rotateY: 90, rotateX: 0 },
+		"*-up-south": { base: "game:block/basic/layered_0",  rotateY: 180, rotateZ: 0 },
+		"*-up-east": { base: "game:block/basic/layered_0", rotateY: 270, rotateX: 0 },
+		
+		"*-left-north": { base: "game:block/basic/layered_0", rotateY: 0, rotateZ: 270 },
+		"*-left-west": { base: "game:block/basic/layered_0", rotateY: 90, rotateX: 90 },
+		"*-left-south": { base: "game:block/basic/layered_0", rotateY: 180, rotateZ: 90 },
+		"*-left-east": { base: "game:block/basic/layered_0" , rotateY: 270, rotateX: 90 },
+		
+		"*-down-north": { base: "game:block/basic/layered_0", rotateY: 0, rotateZ: 180 },
+		"*-down-west": { base: "game:block/basic/layered_0", rotateY: 90, rotateX: 180 },
+		"*-down-south": { base: "game:block/basic/layered_0", rotateY: 180, rotateZ: 180 },
+		"*-down-east": { base: "game:block/basic/layered_0", rotateY: 270, rotateX: 180 },
+		
+		"*-right-north": { base: "game:block/basic/layered_0", rotateY: 0, rotateZ: 90 },
+		"*-right-west": { base: "game:block/basic/layered_0", rotateY: 90, rotateX: 270 },
+		"*-right-south": { base: "game:block/basic/layered_0", rotateY: 180, rotateZ: 270 },
+		"*-right-east": { base: "game:block/basic/layered_0", rotateY: 270, rotateX: 270 },
+		},
+	sideopaque: { all: false },
+	sidesolid: { all: false },
+	blockmaterial: "Cloth",
+	creativeinventory: { "general": ["*-up-north"], "decorative": ["*-up-north"], "neolithicdeco": ["*-up-north"] },
+	replaceable: 700,
+	resistance: 1,
+	lightAbsorption: 1,
+	textures: {
+		all: { 
+			base: "game:block/wood/{style}/{wood}*"
+		}
+	},
+	selectionbox: {
+		x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1,
+		rotateXByType: {
+				"*-up-east": 0,
+				"*-left-east": 90,
+				"*-down-east": 180,
+				"*-right-east": 270,
+				"*-up-west": 0,
+				"*-left-west": 90,
+				"*-down-west": 180,
+				"*-right-west": 270,
+			},
+		rotateZByType: {
+				"*-up-north": 0,
+				"*-left-north": 270,
+				"*-down-north": 180,
+				"*-right-north": 90,
+				"*-up-south": 0,
+				"*-left-south": 270,
+				"*-down-south": 180,
+				"*-right-south": 90,
+			}
+	},
+	collisionbox: {
+		x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1,
+		rotateXByType: {
+				"*-up-east": 0,
+				"*-left-east": 90,
+				"*-down-east": 180,
+				"*-right-east": 270,
+				"*-up-west": 0,
+				"*-left-west": 90,
+				"*-down-west": 180,
+				"*-right-west": 270,
+			},
+			rotateZByType: {
+				"*-up-north": 0,
+				"*-left-north": 270,
+				"*-down-north": 180,
+				"*-right-north": 90,
+				"*-up-south": 0,
+				"*-left-south": 270,
+				"*-down-south": 180,
+				"*-right-south": 90,
+			}
+	},
+	combustibleProps: {
+		burnTemperature: 400,
+		burnDuration: 15,
+	},
+	sounds: {
+		place: "game:block/planks",
+		break: "game:block/planks",
+		hit: "game:block/planks",
+		walk: "game:block/planks"
+	},
+	materialDensity: 200,
+	guiTransform: {
+		translation: { x: 0, y: 3, z: 0 },
+		origin: { x: 0.5, y: 0.0625, z: 0.5 }
+	}
+}
