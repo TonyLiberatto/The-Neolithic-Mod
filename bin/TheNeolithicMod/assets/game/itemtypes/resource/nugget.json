@@ -34,13 +34,13 @@
 			meltingPoint: 45,
 			meltingDuration: 30,
 			smeltedRatio: 20,
-			smeltedStack: { type: "item", code: "candle-tallow" }
+			smeltedStack: { type: "item", code: "ingot-tallow" }
 		},
 		"*-wax": {
 			meltingPoint: 64,
 			meltingDuration: 30,
 			smeltedRatio: 20,
-			smeltedStack: { type: "item", code: "candle-wax" }
+			smeltedStack: { type: "item", code: "ingot-wax" }
 		},
 		"*-nativecopper": {
 			meltingPoint: 1084,

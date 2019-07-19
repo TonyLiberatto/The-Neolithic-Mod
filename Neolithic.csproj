@@ -123,7 +123,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>..\..\Lib\websocket-sharp.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -1363,6 +1363,9 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\post\railroad\connector-nsw.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\post\railroad\connector-sw.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\post\railroad\connector-w.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\resource\leatherstrip.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\resource\sinew.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\resource\sisal.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\road\road-bricks.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\road\road-circle.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\shapes\block\road\road-cobble-normal.json" />
@@ -2110,6 +2113,9 @@
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\plant\wicker\wicker3.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\plant\wicker\wicker4.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\plant\wicker\wood.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\resource\leatherstrip.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\resource\sinew.png" />
+    <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\resource\sisal.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\rope.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\rotten\fly.png" />
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\block\rotten\large.png" />

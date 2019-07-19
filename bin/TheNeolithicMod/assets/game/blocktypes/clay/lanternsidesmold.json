@@ -14,25 +14,25 @@
 			"requiredUnits": 50,
 			"fillHeight": 1,
 			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
-			"drop": { class:"Block", code: "lantern-sides-{metal}" , quantity: { avg: 4, var: 0 },  }
+			"drop": { class:"Block", code: "lantern-sides-{metal}" , stacksize: 4,  }
 		},
 		"*-brown-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
 			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
-			"drop": { class:"Block", code: "lantern-sides-{metal}", quantity: { avg: 4, var: 0 }, }
+			"drop": { class:"Block", code: "lantern-sides-{metal}", stacksize: 4, }
 		},
 		"*-fire-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
 			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
-			"drop": { class:"Block", code: "lantern-sides-{metal}" , quantity: { avg: 4, var: 0 }, }
+			"drop": { class:"Block", code: "lantern-sides-{metal}" , stacksize: 4, }
 		},
 		"*-red-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
 			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
-			"drop": { class:"Block", code: "lantern-sides-{metal}" , quantity: { avg: 4, var: 0 }, }
+			"drop": { class:"Block", code: "lantern-sides-{metal}" , stacksize: 4, }
 		},
 	},
 	entityClassByType: {
