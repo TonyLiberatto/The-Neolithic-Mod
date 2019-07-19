@@ -2,7 +2,8 @@
 	code: "tallowcandle",
 	class: "ItemCandle",
 	attributes: {
-		blockfirstcodepart: "bunchotallowcandles"
+		blockfirstcodepart: "bunchotallowcandles",
+		isCandle: true,
 	},
 	maxstacksize: 64,
 	shape: { base: "block/lightsources/tallow/tallowcandle3" },
