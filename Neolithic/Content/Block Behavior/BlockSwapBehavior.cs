@@ -23,6 +23,12 @@ namespace TheNeolithicMod
     class SwapSystem : ModSystem
     {
         IServerNetworkChannel sChannel;
+        ICoreAPI api;
+
+        public override void Start(ICoreAPI api)
+        {
+            this.api = api;
+        }
 
         public override void StartClientSide(ICoreClientAPI api)
         {
@@ -228,19 +234,16 @@ namespace TheNeolithicMod
 
         public void PlaySoundDispenseParticles(IWorldAccessor world, BlockPos pos, ItemSlot slot)
         {
-            if (world.Side.IsServer())
+            try
             {
-                try
+                if (world.Side.IsServer())
                 {
                     world.SpawnCubeParticles(pos, pos.ToVec3d().Add(particleOrigin), pRadius, pQuantity);
                     world.SpawnCubeParticles(pos.ToVec3d().Add(particleOrigin), slot.Itemstack, pRadius, pQuantity);
+                    world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
                 }
-                catch (Exception) { }
             }
-            else
-            {
-                world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
-            }
+            catch (Exception) { }
         }
     }
 }
