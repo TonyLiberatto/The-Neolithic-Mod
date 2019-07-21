@@ -223,12 +223,9 @@ namespace TheNeolithicMod
 
                         ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
 
-                        if (block.EntityClass != null && toBlock.EntityClass != null)
-                        {
-                            if (toBlock.EntityClass == block.EntityClass)
-                            {
-                                world.BlockAccessor.ExchangeBlock(toBlock.BlockId, pos);
-                            }
+                        if ((block.EntityClass != null && toBlock.EntityClass != null) && (toBlock.EntityClass == block.EntityClass))
+                        {   
+                            world.BlockAccessor.ExchangeBlock(toBlock.BlockId, pos);
                         }
                         else
                         {
