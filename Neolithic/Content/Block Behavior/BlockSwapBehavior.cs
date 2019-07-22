@@ -23,6 +23,12 @@ namespace TheNeolithicMod
     class SwapSystem : ModSystem
     {
         IServerNetworkChannel sChannel;
+        ICoreAPI api;
+
+        public override void Start(ICoreAPI api)
+        {
+            this.api = api;
+        }
 
         public override void StartClientSide(ICoreClientAPI api)
         {
@@ -177,9 +183,7 @@ namespace TheNeolithicMod
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
             BlockPos pos = blockSel.Position;
 
-            if (requireSneak && !byPlayer.Entity.Controls.Sneak) return true;
-
-            if (slot.Itemstack != null)
+            if (!(requireSneak && !byPlayer.Entity.Controls.Sneak) && slot.Itemstack != null)
             {
                 string key = GetKey(slot.Itemstack.Collectible.Code.ToString());
 
@@ -192,8 +196,6 @@ namespace TheNeolithicMod
                     AssetLocation asset = slot.Itemstack.Collectible.Code;
                     if (asset.ToString() == swap.Tool)
                     {
-                        ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
-
                         string toCode = swap.Makes;
                         if (toCode.IndexOf(":") == -1) toCode = block.Code.Domain + ":" + toCode;
                         AssetLocation toAsset = new AssetLocation(toCode);
@@ -201,25 +203,36 @@ namespace TheNeolithicMod
 
                         int count = swap.Count;
 
-                        if (count > 0 && slot.Itemstack.StackSize >= count)
+                        if (count != 0)
                         {
-                            if (byPlayer.WorldData.CurrentGameMode == EnumGameMode.Survival) slot.TakeOut(count); slot.MarkDirty();
-                            world.BlockAccessor.SetBlock(toBlock.BlockId, pos);
-                            PlaySoundDispenseParticles(world, pos, slot);
+                            if (count < 0)
+                            {
+                                ItemStack withCount = slot.Itemstack.Clone();
+                                withCount.StackSize = Math.Abs(count);
+                                if (!byPlayer.InventoryManager.TryGiveItemstack(withCount))
+                                {
+                                    world.SpawnItemEntity(withCount, pos.ToVec3d().Add(0.5, 0.5, 0.5));
+                                }
+                            }
+                            else if (slot.Itemstack.StackSize >= count)
+                            {
+                                if (byPlayer.WorldData.CurrentGameMode.IsSurvival()) slot.TakeOut(count);
+                            }
+                            else return true;
                         }
-                        else if (count == 0)
+
+                        ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+
+                        if ((block.EntityClass != null && toBlock.EntityClass != null) && (toBlock.EntityClass == block.EntityClass))
+                        {   
+                            world.BlockAccessor.ExchangeBlock(toBlock.BlockId, pos);
+                        }
+                        else
                         {
                             world.BlockAccessor.SetBlock(toBlock.BlockId, pos);
-                            PlaySoundDispenseParticles(world, pos, slot);
                         }
-                        else if (count < 0)
-                        {
-                            ItemStack withCount = slot.Itemstack.Clone();
-                            withCount.StackSize = Math.Abs(count);
-                            byPlayer.InventoryManager.TryGiveItemstack(withCount); slot.MarkDirty();
-                            world.BlockAccessor.SetBlock(toBlock.BlockId, pos);
-                            PlaySoundDispenseParticles(world, pos, slot);
-                        }
+                        slot.MarkDirty();
+                        PlaySoundDispenseParticles(world, pos, slot);
                     }
                 }
             }
@@ -228,19 +241,16 @@ namespace TheNeolithicMod
 
         public void PlaySoundDispenseParticles(IWorldAccessor world, BlockPos pos, ItemSlot slot)
         {
-            if (world.Side.IsServer())
+            try
             {
-                try
+                if (world.Side.IsServer())
                 {
                     world.SpawnCubeParticles(pos, pos.ToVec3d().Add(particleOrigin), pRadius, pQuantity);
                     world.SpawnCubeParticles(pos.ToVec3d().Add(particleOrigin), slot.Itemstack, pRadius, pQuantity);
+                    world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
                 }
-                catch (Exception) { }
             }
-            else
-            {
-                world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
-            }
+            catch (Exception) { }
         }
     }
 }

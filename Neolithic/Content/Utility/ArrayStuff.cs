@@ -116,6 +116,12 @@ namespace TheNeolithicMod
         }
 
         public static int IndexOfMin(this int[] self) => IndexOfMin(self.ToList());
+
+        public static bool IsSurvival(this EnumGameMode gamemode) => gamemode == EnumGameMode.Survival;
+        public static bool IsCreative(this EnumGameMode gamemode) => gamemode == EnumGameMode.Creative;
+        public static bool IsSpectator(this EnumGameMode gamemode) => gamemode == EnumGameMode.Spectator;
+        public static bool IsGuest(this EnumGameMode gamemode) => gamemode == EnumGameMode.Guest;
+
     }
 
     public class NAssetLocation : AssetLocation
