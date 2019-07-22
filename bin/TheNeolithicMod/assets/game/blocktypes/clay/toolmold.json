@@ -4,7 +4,10 @@
 		"toolmold-*-raw-*": "Block",
 		"toolmold-*-burned-*": "BlockToolMold",
 	},
-	behaviors: [{name: "UnstableFalling"}],
+	behaviorsByType: {
+		"*-raw-*": [{name: "UnstableFalling"}, {name: "RightClickPickup" }],
+		"*": [{name: "UnstableFalling"}],
+	},
 	variantgroups: [
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },
 		{ code:"materialtype", states: ["raw", "burned"] },
@@ -28,17 +31,17 @@
 				{ x1: 1, z1: 5, x2: 15, z2: 11 },
 				{ x1: 1, z1: 5, x2: 15, z2: 11 },
 			],
-			"drop": { class:"Block", code: "anvil-{metal}" }
+			"drop": { type:"Block", code: "anvil-{metal}" }
 		},
 		"toolmold-*-burned-sword": {
-			"requiredUnits": 50,
+			"requiredUnits": 100,
 			"fillHeight": 1,
-			"drop": { class:"Item", code: "{tooltype}blade-{metal}" }
+			"drop": { type:"Item", code: "{tooltype}blade-{metal}" }
 		},
 		"toolmold-*-burned-*": {
 			"requiredUnits": 100,
 			"fillHeight": 1,
-			"drop": { class:"Item", code: "{tooltype}head-{metal}" }
+			"drop": { type:"Item", code: "{tooltype}head-{metal}" }
 		},
 	},
 	entityClassByType: {

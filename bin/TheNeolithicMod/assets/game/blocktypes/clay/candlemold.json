@@ -1,58 +1,46 @@
 {
-	code: "candlemold",
-	classByType: {
+  code: "candlemold",
+  classByType: {
 		"*-raw": "Block",
+		"*-plain": "Block",
 		"*-burned": "BlockToolMold",
 	},
-	behaviors: [{name: "UnstableFalling"}],
-	variantgroups: [
-		{ code:"color", states: ["blue", "brown", "fire", "red"] },
-		{ code:"materialtype", states: ["raw", "burned"] },
-	],
-	attributesByType: {
-		"*-blue-burned": {
+  variantgroups: [
+    { code:"color", states: ["blue", "brown", "fire", "red"] },
+	{  code: "type",  states: [ "raw", "plain", "burned" ]  },
+  ],
+  blockmaterial: "Ceramic",
+  behaviors: [
+    { name: "UnstableFalling" },
+	{
+			name: "BlockSwapBehavior",
+			properties: {		
+				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
+				"particleRadius": 2,
+				"particleQuantity": 16,
+				"allowedVariants": [ "game:candlemold-{color}-plain" ],
+				"swapBlocks": [
+					{ "Tool": "neolithicmod:sisal-twine", "Makes": "game:candlemold-{color}-burned", "Takes": null, "Count": 9 },					
+				],
+			},
+		},
+    
+  ],
+  entityClassByType: {
+		"*-burned": "ToolMold",
+	},
+  attributesByType: {
+		"*-burned": {
 			"requiredUnits": 100,
-			"fillHeight": 3,
+			"fillHeight": 4,
 			"fillQuadsByLevel": [
+				{ x1: 4, z1: 4, x2: 13, z2: 13 },
 				{ x1: 4, z1: 4, x2: 13, z2: 13 },
 				{ x1: 4, z1: 4, x2: 13, z2: 13 },
 				{ x1: 4, z1: 4, x2: 13, z2: 13 },
 			],	
 			"drop": { type:"item", code: "candle-{metal}" , stacksize: 9, }
-		},
-		"*-brown-burned": {
-			"requiredUnits": 100,
-			"fillHeight": 3,
-			"fillQuadsByLevel": [
-				{ x1: 4, z1: 4, x2: 13, z2: 13 },
-				{ x1: 4, z1: 4, x2: 13, z2: 13 },
-				{ x1: 4, z1: 4, x2: 13, z2: 13 },
-			],
-			"drop": { type:"item", code: "candle-{metal}" , stacksize: 9,}
-		},
-		"*-fire-burned": {
-			"requiredUnits": 100,
-			"fillHeight": 3,
-			"fillQuadsByLevel": [
-				{ x1: 4, z1: 4, x2: 13, z2: 13 },
-				{ x1: 4, z1: 4, x2: 13, z2: 13 },
-				{ x1: 4, z1: 4, x2: 13, z2: 13 },
-			],
-			"drop": { type:"item", code: "candle-{metal}" , stacksize: 9,}
-		},
-		"*-red-burned": {
-			"requiredUnits": 100,
-			"fillHeight": 3,
-			"fillQuadsByLevel": [
-				{ x1: 4, z1: 4, x2: 13, z2: 13 },
-				{ x1: 4, z1: 4, x2: 13, z2: 13 },
-				{ x1: 4, z1: 4, x2: 13, z2: 13 },
-			],
-			"drop": { type:"item", code: "candle-{metal}" , stacksize: 9,}
-		},
-	},
-	entityClassByType: {
-		"*-burned": "ToolMold",
+		},		
 	},
 	combustiblePropsByType: {
 		"*-blue-raw": {
@@ -60,7 +48,7 @@
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "candlemold-blue-burned" },
+			smeltedStack: { type: "block", code: "candlemold-blue-plain" },
 			requiresContainer: false
 		},
 		"*-fire-raw": {
@@ -68,7 +56,7 @@
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "candlemold-fire-burned" },
+			smeltedStack: { type: "block", code: "candlemold-fire-plain" },
 			requiresContainer: false
 		},
 		"*-red-raw": {
@@ -76,7 +64,7 @@
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "candlemold-red-burned" },
+			smeltedStack: { type: "block", code: "candlemold-red-plain" },
 			requiresContainer: false
 		},
 		"*-brown-raw": {
@@ -84,35 +72,65 @@
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "candlemold-brown-burned" },
+			smeltedStack: { type: "block", code: "candlemold-brown-plain" },
 			requiresContainer: false
 		},
 	},
-	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicblocks": ["*"] },
-	replaceable: 700,
-	resistance: 1.5,
-	maxStackSize: 8,
-	lightAbsorption: 0,
-	texturesByType: {
-		"*-raw": {  ceramic: { base: "block/clay/{color}-raw" } },
-		"*-burned": {  ceramic: { base: "block/clay/{color}-burned" }  }
+  replaceable: 300,
+  resistance: 0.75,
+  creativeinventory: {   "general": [ "*" ],  },
+  maxStackSize: 8,
+  drawtype: "json",
+  shapeByType: {
+		"*-raw":{ base: "block/clay/mold/candlemold" },
+		"*-plain":{ base: "block/clay/mold/candlemold" },
+		"*-burned":{ base: "block/clay/mold/candlemoldwick" }
 	},
-	shape: { base: "block/clay/mold/candlemold", rotateY: 90 },
-	sounds: {
-		walk: "walk/stone",
-	},
-	collisionbox: { x1: 0.1875, y1: 0, z1: 0.1875, x2: 0.8125, y2: 0.25, z2: 0.8125 },
-	selectionbox: { x1: 0.1875, y1: 0, z1: 0.1875, x2: 0.8125, y2: 0.25, z2: 0.8125 },
-	sideopaque: {
-		all: false
-	},
-	sidesolid: {
-		all: false
-	},
-	guiTransformByType: {
-			translation: { x: 0, y: 3, z: 0 },
-			origin: { x: 0.5, y: 0.0625, z: 0.5 },
-			scale: 1.33
+  texturesByType: {
+		"*-raw": {  
+			all: { base: "block/clay/{color}-raw" } 
+		},
+		"*-plain": { 
+		all: { base: "block/clay/{color}-burned" } 
+		},
+		"*-burned": { 
+			ceramic: { base: "block/clay/{color}-burned" },
+			candle: { base: "block/candle" }
 		}
+	},
+  lightAbsorption: 0,
+  sideopaque: {
+    all: false
+  },
+  sidesolid: {
+    all: false
+  },
+  sounds: {
+    walk: "walk/stone",
+    place: "block/anvil1",
+    break: "block/anvil2",
+  },
+  collisionbox: { x1: 0.3125,  y1: 0,  z1: 0.3125, x2: 0.6875, y2: 0.125, z2: 0.6875  },
+  selectionbox: { x1: 0.3125,  y1: 0,  z1: 0.3125, x2: 0.6875, y2: 0.125, z2: 0.6875  },
+  fpHandTransform: {  
+	translation: {  x: 0.3, y: -0.4,  z: 0   },
+    rotation: {  x: 15, y: 15,  z: 270   },
+    scale: 1.5
+  },
+  guiTransform: {
+    translation: {  x: 0, y: 3, z: 0  },
+    origin: {  x: 0.5, y: 0.0625,  z: 0.5 },
+    scale: 1.5
+  },
+  groundTransform: {
+    translation: {  x: 0.046875, y: 0, z: 0    },
+    rotation: {  x: 0, y: 0, z: 0  },
+    scale: 1.5
+  },
+  tpHandTransform: {
+    translation: {  x: -0.9, y: -0.1, z: -0.8   },
+    rotation: {  x: 0, y: -56,  z: 0  },
+    origin: {  x: 0.5,  y: 0.1, z: 0.5  },
+    scale: 0.66
+  }
 }

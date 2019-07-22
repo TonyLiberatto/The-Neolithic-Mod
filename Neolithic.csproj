@@ -43,23 +43,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
@@ -67,15 +67,15 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -97,7 +97,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -111,19 +111,19 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>..\..\Lib\websocket-sharp.dll</HintPath>
+      <HintPath>..\..\VS-1.9.X\Lib\websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -235,6 +235,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\lightsources\sheet-lantern-glass.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\lightsources\sheet-lantern.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\metal\bowlstamp.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\metal\chandelier.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\metal\glasslanternframe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\metal\ingotstamp.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\metal\lantern-base-candle-sides-glass-layer.json" />
@@ -301,6 +302,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\slaughteringaxe.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\spear.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\tools\sword.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wax\bunchocandles.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\generic\trough-large.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\generic\trough-small.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\wood\leavesbranchy.json" />
@@ -357,6 +359,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\clay.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\clayworkitem.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\curdsportion.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\fat.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\giantreedsroot.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\ingot.json" />
     <None Include="bin\TheNeolithicMod\assets\game\itemtypes\resource\milkportion.json" />

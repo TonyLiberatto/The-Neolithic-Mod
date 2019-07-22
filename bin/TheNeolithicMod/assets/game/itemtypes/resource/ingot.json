@@ -22,7 +22,7 @@
 		}
 	},
 	variantgroups: [
-		{ code: "metal", states: ["wax", "tallow"], loadFromProperties: "block/metal" },
+		{ code: "metal", states: ["wax", "tallow", ], loadFromProperties: "block/metal" },
 	],
 	attributesByType: {
 		"ingot-lead": {
@@ -60,7 +60,7 @@
 			meltingDuration: 30,
 			smeltedRatio: 1,
 			smeltedStack: { type: "item", code: "ingot-tallow" }
-		},
+		},		
 		"*-wax": {
 			meltingPoint: 64,
 			meltingDuration: 30,
