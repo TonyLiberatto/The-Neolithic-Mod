@@ -1,15 +1,14 @@
 {
   code: "candlemold",
-  classByType: {
-		"*-raw": "Block",
+  classByType: {		
 		"*-plain": "Block",
 		"*-burned": "BlockToolMold",
 	},
   variantgroups: [
-    { code:"color", states: ["blue", "brown", "fire", "red"] },
-	{  code: "type",  states: [ "raw", "plain", "burned" ]  },
+    { code:"metal", states: [ "tinbronze", "bismuthbronze", "blackbronze", "copper" ] },
+	{  code: "type",  states: [ "plain", "burned" ]  },
   ],
-  blockmaterial: "Ceramic",
+  blockmaterial: "Metal",
   behaviors: [
     { name: "UnstableFalling" },
 	{
@@ -18,9 +17,9 @@
 				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
 				"particleRadius": 2,
 				"particleQuantity": 16,
-				"allowedVariants": [ "game:candlemold-{color}-plain" ],
+				"allowedVariants": [ "game:candlemold-{metal}-plain" ],
 				"swapBlocks": [
-					{ "Tool": "neolithicmod:sisal-twine", "Makes": "game:candlemold-{color}-burned", "Takes": null, "Count": 9 },					
+					{ "Tool": "neolithicmod:sisal-twine", "Makes": "game:candlemold-{metal}-burned", "Takes": null, "Count": 9 },					
 				],
 			},
 		},
@@ -42,59 +41,21 @@
 			"drop": { type:"item", code: "candle-{metal}" , stacksize: 9, }
 		},		
 	},
-	combustiblePropsByType: {
-		"*-blue-raw": {
-			meltingPoint: 600,
-			meltingDuration: 45,
-			smeltedRatio: 1,
-			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "candlemold-blue-plain" },
-			requiresContainer: false
-		},
-		"*-fire-raw": {
-			meltingPoint: 600,
-			meltingDuration: 45,
-			smeltedRatio: 1,
-			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "candlemold-fire-plain" },
-			requiresContainer: false
-		},
-		"*-red-raw": {
-			meltingPoint: 600,
-			meltingDuration: 45,
-			smeltedRatio: 1,
-			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "candlemold-red-plain" },
-			requiresContainer: false
-		},
-		"*-brown-raw": {
-			meltingPoint: 600,
-			meltingDuration: 45,
-			smeltedRatio: 1,
-			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "candlemold-brown-plain" },
-			requiresContainer: false
-		},
-	},
   replaceable: 300,
   resistance: 0.75,
   creativeinventory: {   "general": [ "*" ],  },
   maxStackSize: 8,
   drawtype: "json",
   shapeByType: {
-		"*-raw":{ base: "block/clay/mold/candlemold" },
-		"*-plain":{ base: "block/clay/mold/candlemold" },
-		"*-burned":{ base: "block/clay/mold/candlemoldwick" }
+		"*-plain":{ base: "block/metal/candlemold" },
+		"*-burned":{ base: "block/metal/candlemoldwick" }
 	},
   texturesByType: {
-		"*-raw": {  
-			all: { base: "block/clay/{color}-raw" } 
-		},
 		"*-plain": { 
-		all: { base: "block/clay/{color}-burned" } 
+		all: { base: "game:block/metal/ingot/{metal}" }
 		},
 		"*-burned": { 
-			ceramic: { base: "block/clay/{color}-burned" },
+			metal: { base: "game:block/metal/ingot/{metal}" },
 			candle: { base: "block/candle" }
 		}
 	},
@@ -110,8 +71,8 @@
     place: "block/anvil1",
     break: "block/anvil2",
   },
-  collisionbox: { x1: 0.3125,  y1: 0,  z1: 0.3125, x2: 0.6875, y2: 0.125, z2: 0.6875  },
-  selectionbox: { x1: 0.3125,  y1: 0,  z1: 0.3125, x2: 0.6875, y2: 0.125, z2: 0.6875  },
+  collisionbox: { x1: 0.1875,  y1: 0,  z1: 0.1875, x2: 0.8125, y2: 0.3125, z2: 0.8125  },
+  selectionbox: { x1: 0.1875,  y1: 0,  z1: 0.1875, x2: 0.8125, y2: 0.3125, z2: 0.8125  },
   fpHandTransform: {  
 	translation: {  x: 0.3, y: -0.4,  z: 0   },
     rotation: {  x: 15, y: 15,  z: 270   },
