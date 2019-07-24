@@ -1,5 +1,5 @@
 {
-	code: "panel",
+	code: "panel-bamboo",
 	class: "BlockSign",
 	behaviors: [{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
 	attributes: {
@@ -8,9 +8,8 @@
 			
 		}
 	},
-	variantgroups: [
-		{ loadFromProperties: "block/wood" },
-		{ code: "style", states: ["bark", "debarked", "planks"]},
+	variantgroups: [		
+		{ code: "color", states: ["brown", "green"]},
 		{ code:"attachment", states: ["ground", "wall"] },
 		{ loadFromProperties: "abstract/horizontalorientation" }
 	],
@@ -34,7 +33,7 @@
 	lightAbsorption: 1,
 	textures: {
 		all: { 
-			base: "game:block/wood/{style}/{wood}*"
+			base: "block/wood/planks/bamboo-{color}-side"
 		}
 	},
 	selectionbox: {

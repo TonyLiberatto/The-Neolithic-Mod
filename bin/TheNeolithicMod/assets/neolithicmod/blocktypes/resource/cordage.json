@@ -1,5 +1,29 @@
 {
 	code: "cordage",	
+	behaviors: [
+		{
+            name: "BlockCreateBehavior",
+            properties: {
+                "createBlocks": [
+                    [ "neolithicmod:panel-bamboo-brown-ground-east", "neolithicmod:browndoor-north-down-closed-left", 0 ],
+					[ "neolithicmod:panel-bamboo-green-ground-east", "neolithicmod:greendoor-north-down-closed-left", 0 ],
+                ],
+            },
+        },
+		{
+			name: "BlockSwapBehavior",
+			properties: {		
+				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
+				"particleRadius": 2,
+				"particleQuantity": 16,
+				"allowedVariants": [ "cordage-leatherstrips", ],
+				"swapBlocks": [
+					{ "Tool": "neolithicmod:panel-bamboo-brown-ground-east", "Makes": "game:air", "Takes": null, "Count": 2 },
+					{ "Tool": "neolithicmod:panel-bamboo-green-ground-east", "Makes": "game:air", "Takes": null, "Count": 2 },
+				],
+			},
+		},
+	],
 	variantgroups: [
         { code: "type", states: ["leatherstrips", "sinew", "sisal-twine"] },
     ],    

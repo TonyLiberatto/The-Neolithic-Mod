@@ -913,7 +913,7 @@
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\plant\gate.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\plant\haybale.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\plant\wicker.json" />
-    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\resources\cordage.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\resource\cordage.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\rugs\bighornrug.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\rugs\boarrug.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\rugs\hyenarug.json" />
