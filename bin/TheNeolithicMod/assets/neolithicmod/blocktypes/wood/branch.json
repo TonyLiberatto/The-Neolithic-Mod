@@ -2,7 +2,17 @@
 	code: "branch",
 	behaviors: [	
 		{ name: "Pillar"},
-	
+		{
+			name: "BlockSwapBehavior",
+			properties: {
+				"swapBlocks": [
+					{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "neolithicmod:branch-cordage-very-thin-{wood}-{style}-leatherstrips", "Takes": null, "Count": 2 },
+					{ "Tool": "neolithicmod:byproducts-sinew", "Makes": "neolithicmod:branch-cordage-very-thin-{wood}-{style}-sinew", "Takes": null, "Count": 2 },
+					{ "Tool": "neolithicmod:sisal-twine", "Makes": "neolithicmod:branch-cordage-very-thin-{wood}-{style}-sisal", "Takes": null, "Count": 2 },
+					{ "Tool": "game:reeds", "Makes": "neolithicmod:branch-cordage-very-thin-{wood}-{style}-reeds", "Takes": null, "Count": 2 },					
+				],
+			},
+		},
 	],
 	attributes: {
 		handbook: {

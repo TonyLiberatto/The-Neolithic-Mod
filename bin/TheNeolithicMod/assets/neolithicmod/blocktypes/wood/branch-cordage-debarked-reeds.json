@@ -1,9 +1,10 @@
 {
-	code: "branch-cross",
+	code: "branch-cordage",
 	variantgroups: [
 		{ code: "size", states: ["very-thin"] },
 		{ loadFromProperties: "block/wood" },
-		{ code: "style", states: ["bark", "debarked"]},
+		{ code: "style", states: ["debarked"]},
+		{ code: "cordage", states: ["reeds"]},
 	],
 	creativeinventory: { "general": ["*"],  "construction": ["*"], "neolithicdeco": ["*"] },
 	drawtype: "json",
@@ -15,21 +16,21 @@
 	sideopaque: {
 		all: false
 	},
-	shape: { base: "block/wood/branch-cross"},	
+	shape: { base: "block/wood/branch-cordage"},	
 	blockmaterial: "Wood",
 	requiredMiningTier: 1,
 	textures: {	
-		"all": { base: "block/wood/{style}/{wood}" },
+		"acacia": { base: "block/wood/{style}/{wood}" },
 		"acaciatop": { base: "block/wood/treetrunk/{wood}" },
-		},
+		"cordage": { base: "block/{cordage}" },
+	},
 	replaceable: 500,
 	resistance: 4.5,
 	sounds: {
 		"place": "game:block/planks",
 		"walk": "game:walk/wood"
 	},
-	collisionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.15, z2: 1 },
-	selectionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.15, z2: 1 },
+	collisionSelectionBox: { x1: 0.40625, y1: 0, z1: 0.40625, x2: 0.59375, y2: 1, z2: 0.59375 },
 	maxStackSize: 64,
 	materialDensity: 700
 }

@@ -1,0 +1,43 @@
+{
+	code: "backpack",
+	maxstacksize: 1,
+	shape: { base: "game:item/bag/backpack" },
+	textures: {
+		"straps": { base: "game:item/bag/backpack/straps" },
+		"leather": { base: "game:item/bag/backpack/leather" } 
+	},
+	storageFlags: 2,
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	drawtype: "json",
+	lightAbsorption: 0,
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -20, y: 21, z: 180 },
+		origin: { x: 0.5299, y: 0.22, z: 0.5 },
+		scale: 3.3,
+		rotate: true
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0, z: 0.2 },
+		rotation: { x: 20, y: -73, z: 10 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.6, y: -0.3, z: -0.5 },
+		rotation: { x: -14, y: 51, z: -21 },
+		scale: 1.07
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 180, y: 33, z: -180 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 3.8
+	},
+	attributes: {
+		backpack: {
+			quantitySlots: 6
+		}
+	}
+}
