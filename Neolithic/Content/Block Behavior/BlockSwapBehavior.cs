@@ -102,6 +102,10 @@ namespace TheNeolithicMod
             if (properties["allowedVariants"].Exists)
             {
                 string[] allowed = properties["allowedVariants"].AsArray<string>();
+                for (int i = 0; i < allowed.Length; i++)
+                {
+                    if (allowed[i].IndexOf(":") == -1) allowed[i] = block.Code.Domain + ":" + allowed[i];
+                }
                 disabled = true;
                 if (allowed.Contains(block.Code.ToString()))
                 {

@@ -16,7 +16,7 @@
 				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
 				"particleRadius": 2,
 				"particleQuantity": 16,
-				"allowedVariants": [ "cordage-leatherstrips", ],
+				"allowedVariants": [ "neolithicmod:cordage-leatherstrips", ],
 				"swapBlocks": [
 					{ "Tool": "neolithicmod:panel-bamboo-brown-ground-east", "Makes": "game:air", "Takes": null, "Count": 2 },
 					{ "Tool": "neolithicmod:panel-bamboo-green-ground-east", "Makes": "game:air", "Takes": null, "Count": 2 },
