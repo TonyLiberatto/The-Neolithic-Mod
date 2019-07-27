@@ -173,7 +173,7 @@ namespace TheNeolithicMod
 
         public string GetKey(string holdingstack)
         {
-            return GameMath.Md5Hash(holdingstack + block.Code.ToString() + block.Id);
+            return holdingstack + block.Code.ToString() + block.Id;
         }
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
