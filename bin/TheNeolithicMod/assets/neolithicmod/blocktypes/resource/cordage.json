@@ -27,8 +27,20 @@
 	],
 	variantgroups: [
         { code: "type", states: ["leatherstrips", "sinew", "sisal-twine"] },
-    ],    
-    shapeByType: { 
+  ],    
+	texturesByType: {
+		"*-leatherstrips": {
+			"0":{
+					base: "item/resource/animal/leatherstrips" 
+			},
+		},
+		"*-sinew": {
+			"0":{
+					base: "item/resource/byproducts/sinew-fibers" 
+			},
+		}
+	},
+  shapeByType: { 
 		"cordage-leatherstrips": { base: "block/resource/leatherstrips" },
 		"cordage-sinew": { base: "block/resource/sinew" },
 		"cordage-sisal-twine": { base: "block/resource/sisal" },
@@ -60,10 +72,12 @@
 		x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1
 	},
 	materialDensity: 600,
-	guiTransform: {
-		translation: { x: 0, y: 3, z: 0 },
-		origin: { x: 0.5, y: 0.0625, z: 0.5 },
-		scale: 3
+	guiTransformByType: {
+		"*": {
+			rotation: { x: -83, y: -174, z: 12 },
+			origin: { x: 0.5, y: 0.0625, z: 0.5 },
+			scale: 1.64
+		},
 	},
 	groundTransform: {
 		scale: 3.5
