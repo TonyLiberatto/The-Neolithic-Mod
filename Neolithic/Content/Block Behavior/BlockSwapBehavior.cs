@@ -15,7 +15,7 @@ using Vintagestory.API.Server;
 namespace TheNeolithicMod
 {
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public class Swap
+    public class SwapMessage
     {
         public string SwapPairs;
     }
@@ -33,8 +33,8 @@ namespace TheNeolithicMod
         public override void StartClientSide(ICoreClientAPI api)
         {
             api.Network.RegisterChannel("swapPairs")
-                .RegisterMessageType<Swap>()
-                .SetMessageHandler<Swap>(a =>
+                .RegisterMessageType<SwapMessage>()
+                .SetMessageHandler<SwapMessage>(a =>
                 {
                     SwapPairs = JsonConvert.DeserializeObject<Dictionary<string, SwapBlocks>>(a.SwapPairs);
                 });
@@ -42,13 +42,13 @@ namespace TheNeolithicMod
 
         public override void StartServerSide(ICoreServerAPI api)
         {
-            sChannel = api.Network.RegisterChannel("swapPairs").RegisterMessageType<Swap>();
+            sChannel = api.Network.RegisterChannel("swapPairs").RegisterMessageType<SwapMessage>();
             api.Event.PlayerJoin += PlayerJoin;
         }
 
         private void PlayerJoin(IServerPlayer byPlayer)
         {
-            sChannel.SendPacket(new Swap() { SwapPairs = JsonConvert.SerializeObject(SwapPairs) }, byPlayer);
+            sChannel.SendPacket(new SwapMessage() { SwapPairs = JsonConvert.SerializeObject(SwapPairs) }, byPlayer);
         }
 
         public Dictionary<string, SwapBlocks> SwapPairs { get; set; } = new Dictionary<string, SwapBlocks>();
@@ -79,6 +79,7 @@ namespace TheNeolithicMod
         Vec3d particleOrigin = new Vec3d(0.5, 0.5, 0.5);
         bool requireSneak = false;
         bool disabled = false;
+        bool playSound = true;
         int pRadius = 2;
         int pQuantity = 16;
 
@@ -98,14 +99,12 @@ namespace TheNeolithicMod
             particleOrigin = properties["particleOrigin"].Exists ? properties["particleOrigin"].AsObject<Vec3d>() : particleOrigin;
             pRadius = properties["particleRadius"].AsInt(pRadius);
             pQuantity = properties["particleQuantity"].AsInt(pQuantity);
+            playSound = properties["playSound"].AsBool(true);
 
             if (properties["allowedVariants"].Exists)
             {
-                string[] allowed = properties["allowedVariants"].AsArray<string>();
-                for (int i = 0; i < allowed.Length; i++)
-                {
-                    if (allowed[i].IndexOf(":") == -1) allowed[i] = block.Code.Domain + ":" + allowed[i];
-                }
+                string[] allowed = properties["allowedVariants"].AsArray<string>().WithDomain();
+
                 disabled = true;
                 if (allowed.Contains(block.Code.ToString()))
                 {
@@ -131,8 +130,7 @@ namespace TheNeolithicMod
                                     if (iBlock != null && iBlock.WildCardMatch(new AssetLocation(val.Tool)))
                                     {
                                         SwapBlocks tmp = val.Copy();
-                                        string code = iBlock.Code.ToString().IndexOf(":") == -1 ? code = "game:" + iBlock.Code.ToString() : iBlock.Code.ToString();
-                                        tmp.Tool = code;
+                                        tmp.Tool = iBlock.Code.ToString();
                                         if (!swapSystem.SwapPairs.ContainsKey(GetKey(tmp.Tool)))
                                         {
                                             swapSystem.SwapPairs.Add(GetKey(tmp.Tool), tmp);
@@ -145,8 +143,7 @@ namespace TheNeolithicMod
                                     if (iItem != null && iItem.WildCardMatch(new AssetLocation(val.Tool)))
                                     {
                                         SwapBlocks tmp = val.Copy();
-                                        string code = iItem.Code.ToString().IndexOf(":") == -1 ? code = "game:" + iItem.Code.ToString() : iItem.Code.ToString();
-                                        tmp.Tool = code;
+                                        tmp.Tool = iItem.Code.ToString();
                                         if (!swapSystem.SwapPairs.ContainsKey(GetKey(tmp.Tool)))
                                         {
                                             swapSystem.SwapPairs.Add(GetKey(tmp.Tool), tmp);
@@ -200,9 +197,7 @@ namespace TheNeolithicMod
                     AssetLocation asset = slot.Itemstack.Collectible.Code;
                     if (asset.ToString() == swap.Tool)
                     {
-                        string toCode = swap.Makes;
-                        if (toCode.IndexOf(":") == -1) toCode = block.Code.Domain + ":" + toCode;
-                        AssetLocation toAsset = new AssetLocation(toCode);
+                        AssetLocation toAsset = new AssetLocation(swap.Makes.WithDomain());
                         Block toBlock = toAsset.GetBlock(world.Api);
 
                         int count = swap.Count;
@@ -251,7 +246,10 @@ namespace TheNeolithicMod
                 {
                     world.SpawnCubeParticles(pos, pos.ToVec3d().Add(particleOrigin), pRadius, pQuantity);
                     world.SpawnCubeParticles(pos.ToVec3d().Add(particleOrigin), slot.Itemstack, pRadius, pQuantity);
-                    world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
+                    if (playSound)
+                    {
+                        world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
+                    }
                 }
             }
             catch (Exception) { }

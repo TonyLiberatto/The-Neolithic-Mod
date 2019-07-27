@@ -62,7 +62,8 @@ namespace TheNeolithicMod
                 if (t && active.Itemstack.StackSize >= count)
                 {
                     
-                    if (world.Side == EnumAppSide.Client) world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
+                    if (world.Side.IsServer()) world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
+
                     if (count < 0 && active.Itemstack.StackSize >= 64 )
                     {
                         world.SpawnItemEntity(new ItemStack(active.Itemstack.Collectible, -count), pos.ToVec3d().Add(0.5, 0.5, 0.5), new Vec3d(0.0, 0.1, 0.0));
