@@ -122,6 +122,16 @@ namespace TheNeolithicMod
         public static bool IsSpectator(this EnumGameMode gamemode) => gamemode == EnumGameMode.Spectator;
         public static bool IsGuest(this EnumGameMode gamemode) => gamemode == EnumGameMode.Guest;
 
+        public static string WithDomain(this string a) => a.IndexOf(":") == -1 ? "game:" + a : a;
+
+        public static string[] WithDomain(this string[] a)
+        {
+            for (int i = 0; i < a.Length; i++)
+            {
+                a[i] = a[i].WithDomain();
+            }
+            return a;
+        }
     }
 
     public class NAssetLocation : AssetLocation
