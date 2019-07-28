@@ -12,14 +12,13 @@
 			"name": "Cube1",
 			"from": [ 0.0, 0.0, 0.0 ], 
 			"to": [ 16.0, 0.2, 16.0 ], 
-			"renderPass": 1,
 			"faces": {
-				"north": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 0.0 ], "enabled": false },
-				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 0.0 ], "enabled": false },
-				"south": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 0.0 ], "enabled": false },
-				"west": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 0.0 ], "enabled": false },
-				"up": { "texture": "#black", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
-				"down": { "texture": "#black", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false }
+				"north": { "texture": "#north" },
+				"east": { "texture": "#east" },
+				"south": { "texture": "#south" },
+				"west": { "texture": "#west" },
+				"up": { "texture": "#up" },
+				"down": { "texture": "#down" }
 			}
 		}
 	]}

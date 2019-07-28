@@ -6,6 +6,16 @@
 		{ code: "style", states: ["bark"]},
 		{ code: "cordage", states: [ "sisal"]},
 	],
+	behaviors: [
+		{
+			name: "BlockSwapBehavior",
+			properties: {
+				"swapBlocks": [
+					{ "Tool": "neolithicmod:branch-very-thin-{wood}-bark-ud", "Makes": "neolithicmod:bag-assembly-{wood}-bark-sisal", "Takes": null, "Count": 4 },				
+				],
+			},
+		},
+	],
 	creativeinventory: { "general": ["*"],  "construction": ["*"], "neolithicdeco": ["*"] },
 	drawtype: "json",
 	lightabsorption: 0,

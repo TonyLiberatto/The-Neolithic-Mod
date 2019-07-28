@@ -1,5 +1,5 @@
 {
-	code: "dooroak",
+	code: "greendoor",
 	class: "BlockDoor",
 	renderpass: "OpaqueNoCull",
 	heldTpIdleAnimation: "holdunderarm",
@@ -13,16 +13,15 @@
 		{ loadFromProperties: "abstract/horizontalorientation" },
 		{ code: "part", states: ["down", "up"] },
 		{ code: "state", states: ["closed", "opened"] },
-		{ code: "knobOrientation", states: ["left", "right"] },
+		{ code: "knobOrientation", states: ["left", "right"] }		
 	],
-	creativeinventory: { "general": ["*-north-down-closed-left"], "decorative": ["*-north-down-closed-left"], "neolithicdeco": ["*-north-down-closed-left"] },
+	creativeinventory: { "general": ["greendoor-north-down-closed-left"], "decorative": ["greendoor-north-down-closed-left"] },
 	shapeinventory: { base: "block/wood/door/inventory" },
-	
 	textures: {
-		bottom_left: { base: "block/wood/doors/oak/bottom_left" },
-		bottom_right: { base: "block/wood/doors/oak/bottom_right" },
-		top_left: { base: "block/wood/doors/oak/top_left" },
-		top_right: { base: "block/wood/doors/oak/top_right" },
+		bottom_left: { base: "block/wood/doors/bamboo-green/bottom_left" },
+		bottom_right: { base: "block/wood/doors/bamboo-green/bottom_right" },
+		top_left: { base: "block/wood/doors/bamboo-green/top_left" },
+		top_right: { base: "block/wood/doors/bamboo-green/top_right" },
 	},
 	shapebytype: {
 		"*-north-down-closed-left": { base: "block/wood/door/down_closed_left", rotateY: 90 },

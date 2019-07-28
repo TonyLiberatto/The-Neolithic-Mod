@@ -1,0 +1,41 @@
+{
+	code: "door-assemble",
+	variantgroups: [
+		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bamboo-brown", "bamboo-green"] },
+	],
+	attributes: {
+		handbook: {
+			groupBy: ["door-assemble-*"]
+		},
+	},
+	shape: { base: "block/door/door-assemble" },
+	creativeinventory: { "general": ["*"], "decorative": ["*"], "neolithicdeco": ["*"] },
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 1,
+	sidesolid: {
+		all: false
+	},	
+	sideopaque: {
+		all: false
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 30,
+	},
+	sounds: {
+		"place": "block/planks",
+		"walk": "walk/wood"
+	},
+	textures: {
+		"all": { base: "block/wood/doors/{wood}/bottom_left" },		
+	},
+	materialDensity: 400,
+	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.5, z2: 0.9375 },
+	collisionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.5, z2: 0.9375 },
+	guiTransform: {
+		translation: { x: 0, y: 2, z: 0 },
+		origin: { x: 0.5, y: 0.25, z: 0.5 }
+	}
+}

@@ -6,6 +6,16 @@
 		{ code: "style", states: ["bark"]},
 		{ code: "cordage", states: ["leatherstrips"]},
 	],
+	behaviors: [
+		{
+			name: "BlockSwapBehavior",
+			properties: {
+				"swapBlocks": [
+					{ "Tool": "neolithicmod:branch-very-thin-{wood}-bark-ud", "Makes": "neolithicmod:bag-assembly-{wood}-bark-leatherstrips", "Takes": null, "Count": 4 },				
+				],
+			},
+		},
+	],
 	creativeinventory: { "general": ["*"],  "construction": ["*"], "neolithicdeco": ["*"] },
 	drawtype: "json",
 	lightabsorption: 0,

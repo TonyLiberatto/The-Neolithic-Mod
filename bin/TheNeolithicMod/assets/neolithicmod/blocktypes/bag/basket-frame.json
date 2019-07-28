@@ -1,17 +1,21 @@
 {
-	code: "basket",
+	code: "basket-frame",
+	variantgroups: [		
+		{ loadFromProperties: "block/wood" },
+		{ code: "style", states: ["bark", "debarked"]},
+		{ code: "cordage", states: ["leatherstrips", "reeds", "sinew", "sisal"]},
+	],
 	maxstacksize: 1,
-	shape: { base: "block/bag/basket" },
-	shapeinventory: { base: "game:item/bag/basket" },
-	textures: {
-		"basket": { base: "game:item/bag/basket/basket" }
+	shape: { base: "block/bag/basket-frame" },
+	textures: {		
+		"acacia": { base: "block/wood/{style}/{wood}" },
+		"acaciatop": { base: "block/wood/treetrunk/{wood}" },
+		"cordage": { base: "block/{cordage}" },
 	},
-	storageFlags: 2,
-	creativeinventory: { "general": ["*"], "items": ["*"] },
-	drawtype: "json",
-	lightAbsorption: 0,
 	sidesolid: { all: false },
 	sideopaque: { all: false },
+	lightAbsorption: 0,
+	creativeinventory: { "general": ["*"], "items": ["*"] },
 	guiTransform: {
 		translation: { x: 1, y: 0, z: 0 },
 		rotation: { x: -21, y: 16, z: 180 },
@@ -35,9 +39,4 @@
 		origin: { x: 0.5, y: 0, z: 0.5 },
 		scale: 2.75
 	},
-	attributes: {
-		backpack: {
-			quantitySlots: 2 
-		}
-	}
 }

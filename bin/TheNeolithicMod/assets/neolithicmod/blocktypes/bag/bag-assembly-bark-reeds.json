@@ -2,22 +2,22 @@
 	code: "bag-assembly",
 	variantgroups: [		
 		{ loadFromProperties: "block/wood" },
-		{ code: "style", states: ["bark", "debarked"]},
-		{ code: "cordage", states: ["leatherstrips", "reeds", "sinew", "sisal"]},
+		{ code: "style", states: ["bark"]},
+		{ code: "cordage", states: [ "reeds"]},
 	],
 	behaviors: [
 		{
 			name: "BlockSwapBehavior",
 			properties: {
 				"swapBlocks": [
-					{ "Tool": "game:hide-raw", "Makes": "neolithicmod:backpack", "Takes": null, "Count": 4 },				
+					{ "Tool": "game:reeds", "Makes": "neolithicmod:basket", "Takes": null, "Count": 4 },
 				],
 			},
 		},
 	],
 	maxstacksize: 1,
 	drawtype: "json",
-	shape: { base: "block/bag/burdenbasket-stage" },
+	shape: { base: "block/bag/bag-assembly" },
 	textures: {
 		"burdenbasket": { base: "block/bag/burdenbasket" },
 		"acacia": { base: "block/wood/{style}/{wood}" },

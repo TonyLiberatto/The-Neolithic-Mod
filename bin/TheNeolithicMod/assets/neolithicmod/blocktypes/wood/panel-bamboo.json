@@ -1,7 +1,6 @@
 {
 	code: "panel-bamboo",
-	class: "BlockSign",
-	behaviors: [{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
+	class: "BlockSimpleCoating",	
 	attributes: {
 		handbook: {
 			groupBy: ["panel-*"],
@@ -10,24 +9,34 @@
 	},
 	variantgroups: [		
 		{ code: "color", states: ["brown", "green"]},
-		{ code:"attachment", states: ["ground", "wall"] },
-		{ loadFromProperties: "abstract/horizontalorientation" }
+		{ code:"side", states: ["north", "east", "south", "west", "up", "down"] }
 	],
-	drawtype: "json",
-	shapeByType: {
-		"*-ground-north": { base: "block/floormats/peltsmall", rotateY: 0 },
-		"*-ground-east": { base: "block/floormats/peltsmall", rotateY: 270 },
-		"*-ground-south": { base: "block/floormats/peltsmall", rotateY: 180 },
-		"*-ground-west": { base: "block/floormats/peltsmall", rotateY: 90 },
-		"*-wall-north": { base: "block/wallmats/peltsmall", rotateY: 0 },
-		"*-wall-east": { base: "block/wallmats/peltsmall", rotateY: 270 },
-		"*-wall-south": { base: "block/wallmats/peltsmall", rotateY: 180 },
-		"*-wall-west": { base: "block/wallmats/peltsmall", rotateY: 90 }
+	shapebytype: {
+		"*-down": { base: "game:block/basic/layered_0" },
+		"*-up": { base: "game:block/basic/layered_0", rotateX: 180 },
+		"*-north": { base: "game:block/basic/layered_0", rotateX: 90 },
+		"*-east": { base: "game:block/basic/layered_0", rotateX: 90, rotateY: 180, rotateZ: 270 },
+		"*-west": { base: "game:block/basic/layered_0", rotateX: 90, rotateY: 0, rotateZ: 270 },
+		"*-south": { base: "game:block/basic/layered_0", rotateX: 270 },
 	},
-	sideopaque: { all: false },
-	sidesolid: { all: false },
-	blockmaterial: "Cloth",
-	creativeinventory: { "general": ["*-ground-east"], "decorative": ["*-ground-east"], "neolithicdeco": ["*-ground-east"] },
+	sidesolidByType: {
+		"*-down": { all: false, down: true },
+		"*-up": { all: false, up: true },
+		"*-north": { all: false, north: true },
+		"*-east": { all: false, east: true },
+		"*-west": { all: false, west: true },
+		"*-south": { all: false, south: true },
+	},
+	sideopaqueByType: {
+		"*-down": { all: false, down: true },
+		"*-up": { all: false, down: true },
+		"*-north": { all: false, north: true },
+		"*-east": { all: false, east: true },
+		"*-west": { all: false, west: true },
+		"*-south": { all: false, south: true },
+	},
+	blockmaterial: "Wood",
+	creativeinventory: { "general": ["*-east"], "decorative": ["*-east"], "neolithicdeco": ["*-east"] },
 	replaceable: 4000,
 	resistance: 1,
 	lightAbsorption: 1,
@@ -37,29 +46,29 @@
 		}
 	},
 	selectionbox: {
-		x1: 0, y1: 0, z1: 0, 
-		x2: 1, y2: 0.0625, z2: 1,
+		x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1,
+		rotateXByType: {
+			"*-up": 180, "*-north": 90, "*-east": 90, "*-west": 90, "*-south": 270,
+		},
 		rotateYByType: {
-			"*-ground-east": 270,
-			"*-ground-south": 180,
-			"*-ground-west": 90,
-			"*-ground-north": 0,
+			"*-east": 180, "*-west": 0,
 		},
 		rotateZByType: {
-			"*-wall-east": 90,
-			"*-wall-south": 180,
-			"*-wall-west": 270,
-			"*-wall-north": 0
-		},
-		rotateXByType: {
-			"*-wall-east": 90,
-			"*-wall-south": 90,
-			"*-wall-west": 90,
-			"*-wall-north": 90
+			"*-east": 270, "*-west": 270
 		}
+	},
+	collisionbox: {
+		x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1,
+		rotateXByType: {
+			"*-up": 180, "*-north": 90, "*-east": 90, "*-west": 90, "*-south": 270,
 		},
-	sideao: { all: false },
-	collisionbox: null,
+		rotateYByType: {
+			"*-east": 180, "*-west": 0,
+		},
+		rotateZByType: {
+			"*-east": 270, "*-west": 270
+		}
+	},
 	combustibleProps: {
 		burnTemperature: 400,
 		burnDuration: 15,

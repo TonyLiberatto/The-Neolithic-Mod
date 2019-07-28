@@ -1,10 +1,10 @@
 {
 	code: "miningbag",
 	maxstacksize: 1,
-	shape: { base: "item/bag/linensack" },
+	shape: { base: "block/bag/linensack" },
 	textures: {
-		"linen": { base: "item/bag/miningbag/linen" },
-		"top": { base: "item/bag/miningbag/top" } 
+		"linen": { base: "game:item/bag/miningbag/linen" },
+		"top": { base: "game:item/bag/miningbag/top" } 
 	},
 	storageFlags: 2,
 	creativeinventory: { "general": ["*"], "items": ["*"] },
