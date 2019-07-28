@@ -78,7 +78,7 @@ namespace TheNeolithicMod
         }
     }
 
-    class BlockEntityMetalWedge : BlockEntityAnimatable
+    class BlockEntityMetalWedge : BlockEntity
     {
         public float animState { get; set; } = 0.0f;
         public bool interacting { get; set; } = false;
@@ -89,22 +89,24 @@ namespace TheNeolithicMod
         public override void Initialize(ICoreAPI api)
         {
             base.Initialize(api);
+            BlockEntityAnimationUtil util = new BlockEntityAnimationUtil(api, this);
             Block block = api.World.BlockAccessor.GetBlock(pos);
             if (api.World.Side.IsClient())
             {
                 for (int i = 0; i < pause.Length; i++)
                 {
-                    InitializeAnimator(pause[i], new Vec3f(0, block.Shape.rotateY, 0));
+                    
+                    util.InitializeAnimator(pause[i], new Vec3f(0, block.Shape.rotateY, 0));
                 }
 
                 for (int i = 0; i < transition.Length; i++)
                 {
-                    InitializeAnimator(transition[i], new Vec3f(0, block.Shape.rotateY, 0));
+                    util.InitializeAnimator(transition[i], new Vec3f(0, block.Shape.rotateY, 0));
                 }
 
                 if (prev != null)
                 {
-                    StartAnimation(new AnimationMetaData() { Code = prev });
+                    util.StartAnimation(new AnimationMetaData() { Code = prev });
                 }
             }
             float lastState = animState;
@@ -116,14 +118,14 @@ namespace TheNeolithicMod
                     {
                         if (prev != null)
                         {
-                            StopAnimation(prev);
+                            util.StopAnimation(prev);
                         }
-                        StartAnimation(new AnimationMetaData() { Code = transition[(int)Math.Round(animState * (transition.Length - 1))] });
+                        util.StartAnimation(new AnimationMetaData() { Code = transition[(int)Math.Round(animState * (transition.Length - 1))] });
                         api.World.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
                         api.World.RegisterCallback(dtb => 
                         {
-                            StopAnimation(transition[(int)Math.Round(animState * (transition.Length - 1))]);
-                            StartAnimation(new AnimationMetaData() { Code = pause[(int)Math.Round(animState * (pause.Length - 1))] });
+                            util.StopAnimation(transition[(int)Math.Round(animState * (transition.Length - 1))]);
+                            util.StartAnimation(new AnimationMetaData() { Code = pause[(int)Math.Round(animState * (pause.Length - 1))] });
                         }, 100);
                     }
                     prev = pause[(int)Math.Round(animState * (pause.Length - 1))];

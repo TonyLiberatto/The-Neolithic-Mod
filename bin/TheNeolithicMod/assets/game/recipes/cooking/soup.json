@@ -1,5 +1,11 @@
 {
 	code: "soup",
+	perishableProps: {
+		freshHours: { avg: 144 },
+		transitionHours: { avg: 36 },
+		transitionRatio: 1,
+		transitionedStack: { type: "block", code: "rot" }
+	},
 	shape: { base: "block/meal/soup" },
 	ingredients: [
 		{ 

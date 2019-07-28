@@ -13,7 +13,7 @@
 		}
 	},
 	variantgroups: [
-		{ code: "type", states: ["raw", "cooked" ] },
+		{ code: "type", states: ["raw", "cooked", "cured" ] },
 	],
 	texturesbytype: {
 		"*-raw": { 
@@ -62,5 +62,30 @@
 			smeltedStack: { type: "item", code: "porkchops-cooked" },
 			requiresContainer: false
 		}
-	}
+	},
+	transitionablePropsByType: {
+		"*-raw": [
+			{
+				type: "Perish",
+				freshHours: { avg: 36 },
+				transitionHours: { avg: 24 },
+				transitionedStack: { type: "item", code: "rot" },
+				transitionRatio: 1
+			}
+		],
+		"*-cooked": [{
+			type: "Perish",
+			freshHours: { avg: 120 },
+			spoilHours: { avg: 36 },
+			transitionedStack: { type: "item", code: "rot" },
+			transitionRatio: 1
+		}],
+		"*-cured": [{
+			type: "Perish",
+			freshHours: { avg: 8760 },
+			spoilHours: { avg: 4380 },
+			transitionedStack: { type: "item", code: "rot" },
+			transitionRatio: 1
+		}]
+	},
 }
