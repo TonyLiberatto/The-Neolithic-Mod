@@ -1,8 +1,20 @@
 {
-	code: "door-assemble",
-	behaviors: [ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
-	variantgroups: [
-		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
+	code: "door-assemble-bamboo-brown",
+	behaviors: [ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},
+		{
+			name: "BlockSwapBehavior",
+			properties: {		
+				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
+				"particleRadius": 2,
+				"particleQuantity": 16,
+				"playSound": false, "_comment": "so sound isn't duplicated",				
+				"swapBlocks": [
+					{ "Tool": "neolithicmod:panel-bamboo-brown-east", "Makes": "neolithicmod:door-full-bamboo-brown-east", "Takes": null, "Count": 1 },					
+				],
+			},
+		},
+		],
+	variantgroups: [		
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
 	],
 	attributes: {
@@ -36,7 +48,7 @@
 		"walk": "walk/wood"
 	},
 	textures: {
-		"all": { base: "block/wood/doors/{wood}/bottom_left" },		
+		"all": { base: "block/wood/doors/bamboo-brown/bottom_left" },		
 	},
 	materialDensity: 400,
 	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.5, z2: 0.9375 },

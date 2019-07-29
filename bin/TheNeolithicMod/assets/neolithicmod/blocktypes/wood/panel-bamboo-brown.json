@@ -1,6 +1,20 @@
 {
-	code: "panel-bamboo",
-	class: "BlockSimpleCoating",	
+	code: "panel-bamboo-brown",
+	class: "BlockSimpleCoating",
+	behaviors: [		
+		{
+			name: "BlockSwapBehavior",
+			properties: {		
+				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
+				"particleRadius": 2,
+				"particleQuantity": 16,
+				"playSound": false, "_comment": "so sound isn't duplicated",				
+				"swapBlocks": [
+					{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "neolithicmod:door-assemble-bamboo-brown-east", "Takes": null, "Count": 2 },					
+				],
+			},
+		},
+	],	
 	attributes: {
 		handbook: {
 			groupBy: ["panel-*"],
@@ -8,8 +22,7 @@
 		}
 	},
 	variantgroups: [		
-		{ code: "color", states: ["brown", "green"]},
-		{ code:"side", states: ["north", "east", "south", "west", "up", "down"] }
+		{ code:"side", states: ["north", "east", "south", "west", "up", "down"] } 
 	],
 	shapebytype: {
 		"*-down": { base: "game:block/basic/layered_0" },
@@ -42,7 +55,7 @@
 	lightAbsorption: 1,
 	textures: {
 		all: { 
-			base: "block/wood/planks/bamboo-{color}-side"
+			base: "block/wood/planks/bamboo-brown-side"
 		}
 	},
 	selectionbox: {
