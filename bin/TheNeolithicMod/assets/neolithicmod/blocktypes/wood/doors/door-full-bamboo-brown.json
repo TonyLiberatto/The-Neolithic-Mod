@@ -1,8 +1,7 @@
 {
-	code: "door-assemble",
+	code: "door-full-bamboo-brown",
 	behaviors: [ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
-	variantgroups: [
-		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
+	variantgroups: [		
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
 	],
 	attributes: {
@@ -11,11 +10,18 @@
 		},
 	},
 	shapeByType: {
-		"*-north": { base: "block/wood/door/door-assemble", rotateY: 0 },
-		"*-east": { base: "block/wood/door/door-assemble", rotateY: 270 },
-		"*-south": { base: "block/wood/door/door-assemble", rotateY: 180 },
-		"*-west": { base: "block/wood/door/door-assemble", rotateY: 90 },		
+		"*-north": { base: "block/wood/door/inventory", rotateY: 0 },
+		"*-east": { base: "block/wood/door/inventory", rotateY: 270 },
+		"*-south": { base: "block/wood/door/inventory", rotateY: 180 },
+		"*-west": { base: "block/wood/door/inventory", rotateY: 90 },		
 	},
+	drop: [
+		{ 
+			type: "block",
+			code:"neolithicmod:browndoor-north-down-closed-left",
+			quantity: { avg: 1, var: 0} ,
+		}
+	],
 	creativeinventory: { "general": ["*-east"], "decorative": ["*-east"], "neolithicdeco": ["*-east"] },
 	blockmaterial: "Wood",
 	replaceable: 900,
@@ -36,7 +42,10 @@
 		"walk": "walk/wood"
 	},
 	textures: {
-		"all": { base: "block/wood/doors/{wood}/bottom_left" },		
+		bottom_left: { base: "block/wood/doors/bamboo-brown/bottom_left" },
+		bottom_right: { base: "block/wood/doors/bamboo-brown/bottom_right" },
+		top_left: { base: "block/wood/doors/bamboo-brown/top_left" },
+		top_right: { base: "block/wood/doors/bamboo-brown/top_right" },		
 	},
 	materialDensity: 400,
 	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.5, z2: 0.9375 },

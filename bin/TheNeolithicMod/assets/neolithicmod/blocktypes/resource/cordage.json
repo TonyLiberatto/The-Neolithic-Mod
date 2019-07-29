@@ -6,7 +6,7 @@
             properties: {
                 "createBlocks": [
                     [ "neolithicmod:panel-bamboo-brown-ground-east", "neolithicmod:browndoor-north-down-closed-left", 0 ],
-										[ "neolithicmod:panel-bamboo-green-ground-east", "neolithicmod:greendoor-north-down-closed-left", 0 ],
+					[ "neolithicmod:panel-bamboo-green-ground-east", "neolithicmod:greendoor-north-down-closed-left", 0 ],
                 ],
             },
         },
