@@ -11,6 +11,7 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
+using Vintagestory.GameContent;
 
 namespace TheNeolithicMod
 {
@@ -178,11 +179,14 @@ namespace TheNeolithicMod
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {
-            if (disabled) return base.OnBlockInteractStart(world, byPlayer, blockSel, ref handling);
+            BlockPos pos = blockSel.Position;
+            ModSystemBlockReinforcement bR = api.ModLoader.GetModSystem<ModSystemBlockReinforcement>();
+            if (disabled || bR.IsReinforced(pos) || bR.IsLocked(pos, byPlayer)) return base.OnBlockInteractStart(world, byPlayer, blockSel, ref handling);
+
             SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
             handling = EnumHandling.PreventDefault;
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
-            BlockPos pos = blockSel.Position;
+            
 
             if (!(requireSneak && !byPlayer.Entity.Controls.Sneak) && slot.Itemstack != null)
             {
