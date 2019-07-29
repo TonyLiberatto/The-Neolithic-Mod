@@ -125,7 +125,7 @@ namespace TheNeolithicMod
 
                             if (val.Tool.Contains("*"))
                             {
-                                for (int i = 0; i < api.World.Blocks.Length; i++)
+                                for (int i = 0; i < api.World.Blocks.Count; i++)
                                 {
                                     Block iBlock = api.World.Blocks[i];
                                     if (iBlock != null && iBlock.WildCardMatch(new AssetLocation(val.Tool)))
@@ -138,7 +138,7 @@ namespace TheNeolithicMod
                                         }
                                     }
                                 }
-                                for (int i = 0; i < api.World.Items.Length; i++)
+                                for (int i = 0; i < api.World.Items.Count; i++)
                                 {
                                     Item iItem = api.World.Items[i];
                                     if (iItem != null && iItem.WildCardMatch(new AssetLocation(val.Tool)))
@@ -186,6 +186,7 @@ namespace TheNeolithicMod
             SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
             handling = EnumHandling.PreventDefault;
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
+            
 
             if (!(requireSneak && !byPlayer.Entity.Controls.Sneak) && slot.Itemstack != null)
             {

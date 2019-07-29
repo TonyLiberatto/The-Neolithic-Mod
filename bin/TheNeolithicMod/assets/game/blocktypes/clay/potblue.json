@@ -75,7 +75,7 @@
 	],
 	entityclassByType: {
 		"*-raw": null,
-		"*-cooked": "CookedContainerFix",
+		"*-cooked": "CookedContainer",
 	},
 	combustiblePropsByType: {
 		"potblue-raw": {

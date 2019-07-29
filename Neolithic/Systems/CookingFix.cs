@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -954,22 +955,23 @@ namespace CookingFix
             {
                 BlockEntitySmeltedContainer belmc = (BlockEntitySmeltedContainer)be;
                 belmc.contents.ResolveBlockOrItem(world);
+                */
 
                 /*return
                     "Units: " + (int)(belmc.units) + "\n" +
                     "Metal: " + belmc.contents.GetName() + "\n" +
                     "Temperature: " + (int)belmc.Temperature + " °C\n"
                 ;*/
+                /*
                 return Lang.Get("blocksmeltedcontainer-contents", (int)(belmc.units), belmc.contents.GetName(), (int)belmc.Temperature);
             }
 
             return base.GetPlacedBlockInfo(world, pos, forPlayer);
         }
 
-
-        public override void GetHeldItemInfo(ItemStack stack, StringBuilder dsc, IWorldAccessor world, bool withDebugInfo)
+        public override void GetHeldItemInfo(ItemSlot inSlot, StringBuilder dsc, IWorldAccessor world, bool withDebugInfo)
         {
-            KeyValuePair<ItemStack, int> contents = GetContents(world, stack);
+            KeyValuePair<ItemStack, int> contents = GetContents(world, inSlot.Itemstack);
 
             if (contents.Key != null)
             {
@@ -979,17 +981,13 @@ namespace CookingFix
 
                 dsc.Append(Lang.Get("item-unitdrop", (int)(contents.Value), metal));
 
-                if (HasSolidifed(stack, contents.Key, world))
+                if (HasSolidifed(inSlot.Itemstack, contents.Key, world))
                 {
                     dsc.Append(Lang.Get("metalwork-toocold"));
                 }
             }
-
-
-
-            base.GetHeldItemInfo(stack, dsc, world, withDebugInfo);
+            base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
         }
-
 
         public bool HasSolidifed(ItemStack ownStack, ItemStack contentstack, IWorldAccessor world)
         {
@@ -1018,3 +1016,4 @@ namespace CookingFix
         }
     }
 }
+*/
