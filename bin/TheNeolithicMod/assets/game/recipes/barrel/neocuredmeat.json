@@ -1,0 +1,9 @@
+{
+	code: "neocuredmeat",
+	sealHours: 480,
+	ingredients: [
+		{ type: "item", code: "salt",  quantity: 4 },
+		{ type: "item", code: "neolithicmod:*-raw", name: "meat", quantity: 4, allowedVariants: ["carnivoremeat", "chicken", "hare", "mutton", "porkchops"] }
+	],
+	output: { type: "item", code: "neolithicmod:{meat}-cured", stackSize: 4 }
+}

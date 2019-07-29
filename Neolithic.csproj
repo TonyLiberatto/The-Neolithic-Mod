@@ -179,6 +179,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".vs\Neolithic\v15\" />
+    <Folder Include="bin\TheNeolithicMod\assets\game\recipes\barrel\" />
     <Folder Include="bin\TheNeolithicMod\assets\game\shapes\block\clay\flowerpot\" />
     <Folder Include="bin\TheNeolithicMod\assets\game\shapes\block\wood\" />
     <Folder Include="bin\TheNeolithicMod\assets\game\sounds\block\" />
