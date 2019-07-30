@@ -372,7 +372,6 @@
 			stacks: [
 				{ type: "item", code: "stick", quantity: { avg: 12, var: 6 }, chance: 12 },
 				{ type: "block", code: "torch-extinct-up", quantity: { avg: 8, var: 6 }, chance: 10 },
-				{ type: "item", code: "crushedchalk", quantity: { avg: 16, var: 8 }, chance: 9 },
 				{ type: "item", code: "flint", quantity: { avg: 6, var: 4 }, chance: 8 },
 				{ type: "item", code: "flaxtwine", quantity: { avg: 4, var: 3 }, chance: 7 },
 				{ type: "item", code: "blastingpowder", quantity: { avg: 6, var: 5 }, chance: 6 },

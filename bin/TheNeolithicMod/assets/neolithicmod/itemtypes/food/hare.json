@@ -13,26 +13,16 @@
 		}
 	},
 	variantgroups: [
-		{ code: "type", states: ["raw", "cooked" ] },
+		{ code: "type", states: ["raw", "cooked", "cured" ] },
 	],
-	texturesbytype: {
-		"*-raw": { 
-			"meat": {base: "item/food/meat/hare-raw" }
-		},
-		"*-cooked":  { 
-			"meat": {base: "item/food/meat/hare-cooked" }
-		}
+	textures: {
+		"meat": {base: "item/food/meat/hare-{type}" },
 	},
 	shape: { base: "item/food/meat/hare" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	nutritionPropsByType: {
-		"hare-cooked": 
-		{ 
-		saturation: 180, 
-		health: 0, 
-		foodcategory: "Protein",
-		eatenStack: { type: "item", code: "animal-small-bones" }
-		}
+		"hare-cooked": { saturation: 180, health: 0, foodcategory: "Protein", eatenStack: { type: "item", code: "animal-small-bones" } },
+		"hare-cured": { saturation: 180, health: 0, foodcategory: "Protein", eatenStack: { type: "item", code: "animal-small-bones" } }
 	},
 	materialDensity: 600,
 	guiTransform: {
@@ -68,5 +58,30 @@
 			smeltedStack: { type: "item", code: "hare-cooked" },
 			requiresContainer: false
 		}
-	}
+	},
+	transitionablePropsByType: {
+		"*-raw": [
+			{
+				type: "Perish",
+				freshHours: { avg: 36 },
+				transitionHours: { avg: 24 },
+				transitionedStack: { type: "item", code: "game:rot" },
+				transitionRatio: 1
+			}
+		],
+		"*-cooked": [{
+			type: "Perish",
+			freshHours: { avg: 120 },
+			transitionHours: { avg: 36 },
+			transitionedStack: { type: "item", code: "game:rot" },
+			transitionRatio: 1
+		}],
+		"*-cured": [{
+			type: "Perish",
+			freshHours: { avg: 8760 },
+			spoilHours: { avg: 4380 },
+			transitionedStack: { type: "item", code: "game:rot" },
+			transitionRatio: 1
+		}]
+	},
 }

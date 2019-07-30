@@ -67,7 +67,7 @@ namespace TheNeolithicMod
                     {
                         ItemStack curds = new ItemStack(CodeWithPart("curds", 2).GetBlock(api), 1);
                         ItemStack wheyportion = new ItemStack(new AssetLocation("wheyportion").GetItem(api), 1);
-                        bucket.TryAddContent(api.World, pos, wheyportion, 1);
+                        bucket.TryPutContent(api.World, pos, wheyportion, 1);
 
                         TryGiveItem(curds, slot, byEntity, contentProps, pos);
                         return;

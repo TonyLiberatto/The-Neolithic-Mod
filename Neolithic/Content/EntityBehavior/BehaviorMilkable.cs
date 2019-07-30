@@ -80,7 +80,7 @@ namespace TheNeolithicMod
                 ItemStack contents = bucket.GetContent(byEntity.World, itemslot.Itemstack);
                 if ((contents == null || contents.Item == milk) && RemainingLiters > 0)
                 {
-                    if (bucket.TryAddContent(byEntity.World, itemslot.Itemstack, milkstack, 1) > 0)
+                    if (bucket.TryPutContent(byEntity.World, itemslot.Itemstack, milkstack, 1) > 0)
                     {
                         RemainingLiters -= 1;
                         if (byEntity.World.Side == EnumAppSide.Client)

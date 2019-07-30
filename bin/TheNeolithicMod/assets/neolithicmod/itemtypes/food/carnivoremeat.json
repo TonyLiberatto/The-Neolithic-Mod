@@ -13,20 +13,16 @@
 		}
 	},
 	variantgroups: [
-		{ code: "type", states: ["raw", "cooked" ] },
+		{ code: "type", states: ["raw", "cooked", "cured" ] },
 	],
-	texturesbytype: {
-		"*-raw": { 
-			"meat": {base: "item/food/meat/carnivoremeat-raw" }
-		},
-		"*-cooked":  { 
-			"meat": {base: "item/food/meat/carnivoremeat-cooked" }
-		}
+	textures: {
+		"meat": {base: "item/food/meat/carnivoremeat-{type}" },
 	},
 	shape: { base: "item/food/meat/carnivoremeat" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	nutritionPropsByType: {
 		"carnivoremeat-cooked": { saturation: 160, health: -1, foodcategory: "Protein" },
+		"carnivoremeat-cured": { saturation: 160, health: 0, foodcategory: "Protein" },
 	},
 	materialDensity: 600,
 	guiTransform: {
@@ -62,5 +58,30 @@
 			smeltedStack: { type: "item", code: "carnivoremeat-cooked" },
 			requiresContainer: false
 		}
+	},
+	transitionablePropsByType: {
+		"*-raw": [
+			{
+				type: "Perish",
+				freshHours: { avg: 36 },
+				transitionHours: { avg: 24 },
+				transitionedStack: { type: "item", code: "game:rot" },
+				transitionRatio: 1
+			}
+		],
+		"*-cooked":[{
+			type: "Perish",
+			freshHours: { avg: 120 },
+			transitionHours: { avg: 36 },
+			transitionedStack: { type: "item", code: "game:rot" },
+			transitionRatio: 1
+		}],
+		"*-cured": [{
+			type: "Perish",
+			freshHours: { avg: 8760 },
+			spoilHours: { avg: 4380 },
+			transitionedStack: { type: "item", code: "game:rot" },
+			transitionRatio: 1
+		}]
 	}
 }

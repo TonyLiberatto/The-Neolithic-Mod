@@ -146,7 +146,7 @@ namespace TheNeolithicMod
             NotMissingBlocks.Clear();
             NotMissingItems.Clear();
 
-            for (int i = 0; i < sapi.World.Blocks.Length; i++)
+            for (int i = 0; i < sapi.World.Blocks.Count; i++)
             {
                 if (sapi.World.Blocks[i].IsMissing)
                 {
@@ -157,7 +157,7 @@ namespace TheNeolithicMod
                     NotMissingBlocks.Add(sapi.World.Blocks[i].Code);
                 }
             }
-            for (int i = 0; i < sapi.World.Items.Length; i++)
+            for (int i = 0; i < sapi.World.Items.Count; i++)
             {
                 if (sapi.World.Items[i].IsMissing)
                 {
