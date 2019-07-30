@@ -7,9 +7,9 @@
 	"website": "https://github.com/TonyLiberatto/The-Neolithic-Mod",
 	"authors": [ "Tony Liberatto","Novocain","Balduranne","BunnyViking" ],
 	"contributors": ["Tyron", "Milo", "Stroam","Elwood","copygirl", "MarcAFK"],
-	"version": "2.0.9",
+	"version": "2.0.10",
 	"dependencies": {
 	"carrycapacity": "0.4.3",
-	"game": "1.9.11",
+	"game": "1.10-pre.3",
 	}
 }

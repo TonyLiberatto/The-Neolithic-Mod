@@ -1,0 +1,48 @@
+{
+	code: "door-full-bamboo-purple",	
+	attributes: {
+		handbook: {
+			groupBy: ["door-full-*"]
+		},
+	},
+	shape:  { base: "block/wood/door/inventory", rotateY: 0 },
+	drops: [
+		{ 
+			type: "block",
+			code: "neolithicmod:browndoor-north-down-closed-left",
+			quantity: { avg: 1, var: 0} ,
+		}
+	],
+	creativeinventory: { "general": ["*"], "decorative": ["*"], "neolithicdeco": ["*"] },
+	blockmaterial: "Wood",
+	resistance: 1.5,
+	lightAbsorption: 1,
+	sidesolid: {
+		all: false
+	},	
+	sideopaque: {
+		all: false
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 30,
+	},
+	sounds: {
+		"place": "block/planks",
+		"walk": "walk/wood"
+	},
+	textures: {
+		bottom_left: { base: "block/wood/doors/bamboo-brown/bottom_left" },
+		bottom_right: { base: "block/wood/doors/bamboo-brown/bottom_right" },
+		top_left: { base: "block/wood/doors/bamboo-brown/top_left" },
+		top_right: { base: "block/wood/doors/bamboo-brown/top_right" },		
+	},
+	materialDensity: 400,
+	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.5, z2: 0.9375 },
+	collisionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.5, z2: 0.9375 },
+	guiTransform: {
+		translation: { x: 0, y: 2, z: 0 },
+		origin: { x: 0.5, y: 0.25, z: 0.5 },
+		scale: 0.6
+	}
+}

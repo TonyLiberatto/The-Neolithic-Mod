@@ -45,16 +45,16 @@
   rainPermeable: true,
   materialDensity: 200,
   dropsByType: {
-    "bamboo-brown-grown-segment1": [ { type: "item", code: "bamboostakes-brown", quantity: { avg: 1 } } ],
+    "bamboo-brown-grown-segment1": [ { type: "block", code: "bamboostakes-brown", quantity: { avg: 1 } } ],
     "bamboo-*-brown-*": [ 
-		{ type: "item", code: "bamboostakes-brown", quantity: { avg: 1 } },
+		{ type: "block", code: "bamboostakes-brown", quantity: { avg: 1 } },
 		{ "type": "block", "code": "sapling-bamboobrown", "quantity": { "avg": 0.25 } }
     ],
     "bamboo-green-grown-segment1": [
-      { type: "item", code: "bamboostakes-green", quantity: { avg: 1 } }
+      { type: "block", code: "bamboostakes-green", quantity: { avg: 1 } }
     ],
     "bamboo-*-green-*": [
-      { type: "item", code: "bamboostakes-green", quantity: { avg: 1 } },
+      { type: "block", code: "bamboostakes-green", quantity: { avg: 1 } },
       { type: "block", code: "sapling-bamboogreen", quantity: { avg: 0.25 } }
     ],
   }
