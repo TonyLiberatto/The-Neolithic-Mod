@@ -10,7 +10,7 @@
 				"particleQuantity": 16,
 				"playSound": false, "_comment": "so sound isn't duplicated",				
 				"swapBlocks": [
-					{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "neolithicmod:door-assemble-bamboo-brown-east", "Takes": null, "Count": 2 },					
+					{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "neolithicmod:door-assemble-bamboo-brown-north", "Takes": null, "Count": 2 },					
 				],
 			},
 		},
@@ -49,7 +49,7 @@
 		"*-south": { all: false, south: true },
 	},
 	blockmaterial: "Wood",
-	creativeinventory: { "general": ["*-east"], "decorative": ["*-east"], "neolithicdeco": ["*-east"] },
+	creativeinventory: { "general": ["*-north"], "decorative": ["*-north"], "neolithicdeco": ["*-north"] },
 	replaceable: 4000,
 	resistance: 1,
 	lightAbsorption: 1,

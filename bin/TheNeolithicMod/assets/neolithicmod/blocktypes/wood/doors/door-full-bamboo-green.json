@@ -1,6 +1,5 @@
 {
 	code: "door-full-bamboo-green",
-	behaviors: [ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
 	variantgroups: [		
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
 	],
@@ -15,14 +14,14 @@
 		"*-south": { base: "block/wood/door/inventory", rotateY: 180 },
 		"*-west": { base: "block/wood/door/inventory", rotateY: 90 },		
 	},
-	drop: [
+	drops: [
 		{ 
 			type: "block",
 			code: "neolithicmod:greendoor-north-down-closed-left",
 			quantity: { avg: 1, var: 0} ,
 		}
 	],
-	creativeinventory: { "general": ["*-east"], "decorative": ["*-east"], "neolithicdeco": ["*-east"] },
+	creativeinventory: { "general": ["*-north"], "decorative": ["*-north"], "neolithicdeco": ["*-north"] },
 	blockmaterial: "Wood",
 	replaceable: 900,
 	resistance: 1.5,

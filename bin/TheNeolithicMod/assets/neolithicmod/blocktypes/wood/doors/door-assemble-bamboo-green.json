@@ -1,6 +1,6 @@
 {
 	code: "door-assemble-bamboo-green",
-	behaviors: [ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},
+	behaviors: [ {name: "HorizontalOrientable", properties: {  dropBlockFace: "north" }},
 		{
 			name: "BlockSwapBehavior",
 			properties: {		
@@ -9,7 +9,7 @@
 				"particleQuantity": 16,
 				"playSound": false, "_comment": "so sound isn't duplicated",				
 				"swapBlocks": [
-					{ "Tool": "neolithicmod:panel-bamboo-green-east", "Makes": "neolithicmod:door-full-bamboo-green-east", "Takes": null, "Count": 1 },					
+					{ "Tool": "neolithicmod:panel-bamboo-green-north", "Makes": "neolithicmod:door-full-bamboo-green-north", "Takes": null, "Count": 1 },					
 				],
 			},
 		},
@@ -28,7 +28,7 @@
 		"*-south": { base: "block/wood/door/door-assemble", rotateY: 180 },
 		"*-west": { base: "block/wood/door/door-assemble", rotateY: 90 },		
 	},
-	creativeinventory: { "general": ["*-east"], "decorative": ["*-east"], "neolithicdeco": ["*-east"] },
+	creativeinventory: { "general": ["*-north"], "decorative": ["*-north"], "neolithicdeco": ["*-north"] },
 	blockmaterial: "Wood",
 	replaceable: 900,
 	resistance: 1.5,
