@@ -10,6 +10,6 @@
 	"version": "2.0.10",
 	"dependencies": {
 	"carrycapacity": "0.4.3",
-	"game": "1.10-pre.3",
+	"game": "1.10.0-pre.3",
 	}
 }

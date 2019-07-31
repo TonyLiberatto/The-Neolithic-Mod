@@ -1,5 +1,20 @@
 {
 	code: "bamboostakes",
+	behaviors: [ 
+		{
+			name: "BlockSwapBehavior",
+			properties: {		
+				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
+				"particleRadius": 2,
+				"particleQuantity": 16,
+				"playSound": false, "_comment": "so sound isn't duplicated",				
+				"swapBlocks": [
+					{ "Tool": "neolithicmod:sisal-twine", "Makes": "neolithicmod:panel-bamboo-brown-down", "Takes": "game:bamboostakes-brown", "Count": 1 },
+					{ "Tool": "neolithicmod:sisal-twine", "Makes": "neolithicmod:panel-bamboo-green-down", "Takes": "game:bamboostakes-green", "Count": 1 },					
+				],
+			},
+		},
+		],
 	maxstacksize: 64,
 	attributes: {
 		firepitConstructable: true
@@ -11,8 +26,16 @@
 	{
 		all: { base: "block/plant/bamboo/stem-{type}" },
 	},
-	shape: { base: "game:item/bamboostakes" },
+	shape: { base: "block/plant/bamboostakes" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicflora": ["*"] },
+	collisionselectionbox:{ x1: 0, y1: 0, z1: 0.3125, x2: 1, y2: 0.4375, z2: 0.71875 },
+	lightabsorption: 0,
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
 	guiTransform: {
 		rotate: true,
 		translation: { x: 3, y: 0, z: 0 },
