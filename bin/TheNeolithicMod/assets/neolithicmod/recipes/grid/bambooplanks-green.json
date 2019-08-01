@@ -1,9 +1,0 @@
-{
-	ingredientPattern: "SS	SS",
-	ingredients: {
-		"S": { type: "item", code: "game:bamboostakes-green"  },
-	},
-	width: 2,
-	height: 2,
-	output: { type: "block", code: "neolithicmod:planks-bamboo-green", quantity: 1  }
-}

@@ -10,7 +10,8 @@
 				"particleQuantity": 16,
 				"playSound": false, "_comment": "so sound isn't duplicated",				
 				"swapBlocks": [
-					{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "neolithicmod:door-assemble-bamboo-green-north", "Takes": null, "Count": 2 },					
+					{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "neolithicmod:door-assemble-bamboo-green-north", "Takes": null, "Count": 2 },
+					{ "Tool": "game:bamboostakes-green", "Makes": "neolithicmod:planks-bamboo-green", "Takes": null, "Count": 3 },	
 				],
 			},
 		},

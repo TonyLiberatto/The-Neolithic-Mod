@@ -1,5 +1,6 @@
 {
 	code: "door-full-bamboo-brown",
+	behaviors: [{name: "HorizontalOrientable", properties: {  dropBlockFace: "north" }}],
 	variantgroups: [		
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
 	],
@@ -17,8 +18,8 @@
 	drops: [
 		{ 
 			type: "block",
-			code: "neolithicmod:browndoor-north-down-closed-left",
-			quantity: { avg: 1, var: 0} ,
+			code: "browndoor-north-down-closed-left",
+			quantity: { avg: 1} ,
 		}
 	],
 	creativeinventory: { "general": ["*-north"], "decorative": ["*-north"], "neolithicdeco": ["*-north"] },
