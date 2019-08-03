@@ -18,7 +18,7 @@ namespace TheNeolithicMod
             {
                 if (Attributes["returnBlock"].Exists)
                 {
-                    world.BlockAccessor.ExchangeBlock(Attributes["returnBlock"].AsString().WithDomain().ToBlock(api).BlockId, blockSel.Position);
+                    world.BlockAccessor.SetBlock(Attributes["returnBlock"].AsString().WithDomain().ToBlock(api).BlockId, blockSel.Position);
                 }
             }
             return ok;
