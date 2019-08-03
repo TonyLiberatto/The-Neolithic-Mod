@@ -69,6 +69,7 @@ namespace TheNeolithicMod
         }
 
         public static AssetLocation ToAsset(this string asset) { return new AssetLocation(asset); }
+        public static Block ToBlock(this string block, ICoreAPI api) => block.ToAsset().GetBlock(api);
 
         public static void PlaySoundAtWithDelay(this IWorldAccessor world, AssetLocation location, BlockPos pos, int delay)
         {
