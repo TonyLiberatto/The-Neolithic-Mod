@@ -1,0 +1,71 @@
+{
+	code: "chest-frame-bamboo",
+	behaviors: [ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},
+		{
+			name: "BlockSwapBehavior",
+			properties: {		
+				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
+				"particleRadius": 2,
+				"particleQuantity": 16,								
+				"swapBlocks": [
+					{ "Tool": "neolithicmod:panel-bamboo-{color}-east", "Makes": "neolithicmod:chest-assemble-bamboo-{color}-east", "Takes": null, "Count": 4 },					
+				],
+			},
+		},
+		],
+	variantgroups: [		
+		{ code: "color", states: ["brown", "green"] },
+		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },
+		
+	],
+	attributes: {
+		handbook: {
+			groupBy: ["chest-assemble-*"]
+		},
+	},
+	shapeByType: {
+		"*-north": { base: "block/wood/chest/chest-assemble", rotateY: 0 },
+		"*-east": { base: "block/wood/chest/chest-assemble", rotateY: 270 },
+		"*-south": { base: "block/wood/chest/chest-assemble", rotateY: 180 },
+		"*-west": { base: "block/wood/chest/chest-assemble", rotateY: 90 },		
+	},
+	creativeinventory: { "general": ["*-east"], "decorative": ["*-east"], "neolithicdeco": ["*-east"] },
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 1,
+	sidesolid: {
+		all: false
+	},	
+	sideopaque: {
+		all: false
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 30,
+	},
+	sounds: {
+		"place": "block/planks",
+		"walk": "walk/wood"
+	},
+	texturesByType: {
+		"*-green-*": {
+			"corners": { base: "block/wood/chest/bamboo-green/corners" },
+			"sides": { base: "game:block/transparent" },
+			"floor": { base: "block/wood/chest/bamboo-green/floor" },
+		},
+		"*-brown-*": {
+			"corners": { base: "block/wood/chest/bamboo-brown/corners" },
+			"sides": { base: "game:block/transparent" },
+			"floor": { base: "block/wood/chest/bamboo-brown/floor" },		
+		},
+	},
+	materialDensity: 400,
+	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.5, z2: 0.9375 },
+	collisionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.5, z2: 0.9375 },
+	guiTransform: {
+		translation: { x: 0, y: 2, z: 0 },
+		origin: { x: 0.5, y: 0.25, z: 0.5 },
+		scale: 0.6
+	}
+}

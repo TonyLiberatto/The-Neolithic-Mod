@@ -1,16 +1,16 @@
 {
-	code: "planks",
+	code: "planks-bamboo",
 	
 	variantgroups: [
-		{ code: "type", states: ["bamboo-brown", "bamboo-green"] },
+		{ code: "color", states: ["brown", "green"] },
 	],
 	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicblocks": ["*"] },
 	shape: { base: "game:block/basic/cube" },
 	blockmaterial: "Wood",
 	drawtype: "cube",
 	textures: {
-		horizontals: { base: "block/wood/planks/{type}-side" },
-		verticals: { base: "block/wood/planks/{type}-top" },
+		horizontals: { base: "block/wood/planks/bamboo-{color}-side" },
+		verticals: { base: "block/wood/planks/bamboo-{color}-top" },
 	},
 	resistance: 2.75,
 	sounds: {
