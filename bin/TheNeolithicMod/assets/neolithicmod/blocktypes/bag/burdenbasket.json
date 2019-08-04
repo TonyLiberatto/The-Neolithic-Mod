@@ -6,6 +6,13 @@
 	textures: {
 		"burdenbasket": { base: "block/bag/burdenbasket" }
 	},
+	attributes: {
+		handbook: {
+			extraSections: [
+				{ title: "handbook-collectible-sources", text: "handbook-burdenbasket-obtain" }
+			]
+		}
+	},
 	storageFlags: 2,
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	sidesolid: { all: false },
@@ -17,7 +24,7 @@
 		translation: { x: -1, y: 3, z: 0 },
 		rotation: { x: -14, y: 145, z: 1 },
 		origin: { x: 0.5299, y: 0.22, z: 0.5 },
-		scale: 2.96
+		scale: 1
 	},
 	fpHandTransform: {
 		translation: { x: 0.05, y: 0.5, z: 0.2 },

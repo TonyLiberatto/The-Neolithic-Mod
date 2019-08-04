@@ -736,7 +736,7 @@
             },
             {
                 "name": "Copper Lantern",
-                "code": "lantern-up",
+                "code": "lantern-copper-plain-up",
                 "type": "block",
                 "stacksize": 1,
                 "stock": {
@@ -747,14 +747,10 @@
                     "avg": 4,
                     "var": 1
                 },
-                "attributes": {
-                    "material": "copper",
-                    "lining": "plain"
-                }
             },
             {
                 "name": "Tin Bronze Lantern",
-                "code": "lantern-up",
+                "code": "lantern-tinbronze-plain-up",
                 "type": "block",
                 "stacksize": 1,
                 "stock": {
@@ -765,14 +761,10 @@
                     "avg": 6,
                     "var": 1.5
                 },
-                "attributes": {
-                    "material": "tinbronze",
-                    "lining": "plain"
-                }
             },
             {
                 "name": "Bismuth Bronze Lantern",
-                "code": "lantern-up",
+                "code": "lantern-bismuthbronze-plain-up",
                 "type": "block",
                 "stacksize": 1,
                 "stock": {
@@ -783,14 +775,10 @@
                     "avg": 6,
                     "var": 1.5
                 },
-                "attributes": {
-                    "material": "bismuthbronze",
-                    "lining": "plain"
-                }
             },
             {
                 "name": "Black Bronze Lantern",
-                "code": "lantern-up",
+                "code": "lantern-blackbronze-plain-up",
                 "type": "block",
                 "stacksize": 1,
                 "stock": {
@@ -801,10 +789,6 @@
                     "avg": 6,
                     "var": 1.5
                 },
-                "attributes": {
-                    "material": "blackbronze",
-                    "lining": "plain"
-                }
             },
             {
                 "name": "Copper Ingot",

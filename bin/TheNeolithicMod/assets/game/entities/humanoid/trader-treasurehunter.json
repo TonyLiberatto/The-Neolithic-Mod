@@ -684,7 +684,7 @@
             },
             {
                 "name": "Candle",
-                "code": "candle",
+                "code": "candle-wax",
                 "type": "item",
                 "stacksize": 2,
                 "stock": {

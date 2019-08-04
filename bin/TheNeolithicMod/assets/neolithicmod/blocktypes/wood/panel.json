@@ -37,7 +37,7 @@
 		"*-south": { all: false, south: true },
 	},
 	blockmaterial: "Wood",
-	creativeinventory: { "general": ["*-north"], "decorative": ["*-north"], "neolithicdeco": ["*-north"] },
+	creativeinventory: { "general": ["*-east"], "decorative": ["*-east"], "neolithicdeco": ["*-east"] },
 	replaceable: 4000,
 	resistance: 1,
 	lightAbsorption: 1,

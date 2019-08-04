@@ -59,5 +59,12 @@
 		burnTemperature: 600,
 		burnDuration: 10,
 	},
-	materialDensity: 600
+	materialDensity: 600,
+	guiTransform: {
+		translation: { x: 1, y: 0, z: 0 },
+		rotation: { x: -21, y: 16, z: 180 },
+		origin: { x: 0.52, y: 0.75, z: 0.5 },
+		scale: 0.8,
+		rotate: true
+	},
 }

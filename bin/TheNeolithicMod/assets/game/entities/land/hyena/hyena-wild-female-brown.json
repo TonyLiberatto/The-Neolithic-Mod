@@ -168,7 +168,7 @@
 	},
 	sounds: {
 		hurt: "creature/hyena/hurt",
-		death: "creature/wolf/hurt",
+		death: "creature/hyena/death",
 		idle: "creature/hyena/laugh"
 	},
 	idleSoundChance: 0.02

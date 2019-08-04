@@ -29,11 +29,11 @@
 		firepitConstructable: true
 	},
 	variantgroups: [ 
-		{ code: "type", states: ["brown", "green"] },
+		{ code: "color", states: ["brown", "green"] },
 		],
 		textures: 
 	{
-		all: { base: "block/plant/bamboo/stem-{type}" },
+		all: { base: "block/plant/bamboo/stem-{color}" },
 	},
 	shape: { base: "block/plant/bamboostakes" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicflora": ["*"] },
