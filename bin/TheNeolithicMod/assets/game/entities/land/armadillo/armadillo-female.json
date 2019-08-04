@@ -136,7 +136,7 @@
 	},
 	sounds: {
 		hurt: "creature/pig/hurt",
-		death: "creature/pig/hurt",
+		death: "creature/pig/die",
 		idle: "creature/pig/idle"
 	},
 	idleSoundChance: 0.01

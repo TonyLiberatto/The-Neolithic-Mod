@@ -103,7 +103,7 @@
             damagePlayerAtMs: 500,
             animation: "Attack",
             animationSpeed: 2.5,
-            sound: "creature/fox/fox-attack",
+            sound: "creature/fox/attack",
             whenInEmotionState: "aggressiveondamage"
           },
  					{
@@ -123,7 +123,7 @@
             seekingRange: 20,
             animation: "Run",
             animationSpeed: 1.5,
-            sound: "creature/fox/fox-growl",
+            sound: "creature/fox/growl",
             whenInEmotionState: "aggressiveondamage"
           },
           {
@@ -148,7 +148,7 @@
             damagePlayerAtMs: 500,
             animation: "Attack",
             animationSpeed: 2.5,
-            sound: "creature/fox/fox-attack",
+            sound: "creature/fox/attack",
             whenNotInEmotionState: "saturated"
           },
           {
@@ -159,7 +159,7 @@
             seekingRange: 20,
             animation: "Run",
             animationSpeed: 1.5,
-            sound: "creature/fox/fox-growl",
+            sound: "creature/fox/growl",
             whenNotInEmotionState: "saturated"
           },
 
@@ -194,7 +194,7 @@
             maxcooldown: 400000,
             animation: "Yip",
             animationSpeed: 0.25,
-            sound: "creature/fox/fox-yip",
+            sound: "creature/fox/yip",
             soundRange: 110
           },
           {
@@ -269,7 +269,7 @@
   },
   sounds: {
     hurt: "creature/fox/hurt",
-    death: "creature/wolf/hurt",
+    death: "creature/fox/die",
     idle: "creature/fox/yip"
   },
   idleSoundChance: 0

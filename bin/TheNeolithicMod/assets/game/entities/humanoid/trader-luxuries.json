@@ -1,5 +1,5 @@
 {
-	code: "humanoid-trader-survivalgoods",
+	code: "humanoid-trader-luxuries",
 	class: "EntityTrader",
 	canClimb: true,
 	hitboxSize: { x: 0.6, y: 1.75 },
@@ -40,446 +40,12 @@
 				money: { avg: 30, var: 10 },
 
 
+
     "selling": {
         "maxItems": 8,
         "list": [
             {
-                "name": "Linen Sack",
-                "code": "linensack",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 8,
-                    "var": 2
-                },
-                "price": {
-                    "avg": 2,
-                    "var": 0.5
-                }
-            },
-            {
-                "name": "Tin Bronze Arrow",
-                "code": "arrow-tinbronze",
-                "type": "item",
-                "stacksize": 8,
-                "stock": {
-                    "avg": 8,
-                    "var": 2
-                },
-                "price": {
-                    "avg": 2,
-                    "var": 0.5
-                }
-            },
-            {
-                "name": "Bismuth Bronze Arrow",
-                "code": "arrow-bismuthbronze",
-                "type": "item",
-                "stacksize": 8,
-                "stock": {
-                    "avg": 4,
-                    "var": 1
-                },
-                "price": {
-                    "avg": 2,
-                    "var": 0.5
-                }
-            },
-            {
-                "name": "Black Bronze Arrow",
-                "code": "arrow-blackbronze",
-                "type": "item",
-                "stacksize": 8,
-                "stock": {
-                    "avg": 4,
-                    "var": 1
-                },
-                "price": {
-                    "avg": 3,
-                    "var": 0.75
-                }
-            },
-            {
-                "name": "Bow",
-                "code": "bow-simple",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 4,
-                    "var": 1
-                }
-            },
-            {
-                "name": "Tin Bronze Sword",
-                "code": "sword-tinbronze",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 6,
-                    "var": 1.5
-                }
-            },
-            {
-                "name": "Bismuth Bronze Sword",
-                "code": "sword-bismuthbronze",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 6,
-                    "var": 1.5
-                }
-            },
-            {
-                "name": "Black Bronze Sword",
-                "code": "sword-blackbronze",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 7,
-                    "var": 1.75
-                }
-            },
-            {
-                "name": "Tin Bronze Pickaxe",
-                "code": "pickaxe-tinbronze",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 4,
-                    "var": 1
-                },
-                "price": {
-                    "avg": 6,
-                    "var": 1.5
-                }
-            },
-            {
-                "name": "Bismuth Bronze Pickaxe",
-                "code": "pickaxe-bismuthbronze",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 4,
-                    "var": 1
-                },
-                "price": {
-                    "avg": 6,
-                    "var": 1.5
-                }
-            },
-            {
-                "name": "Black Bronze Pickaxe",
-                "code": "pickaxe-blackbronze",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 4,
-                    "var": 1
-                },
-                "price": {
-                    "avg": 7,
-                    "var": 1.75
-                }
-            },
-            {
-                "name": "Tin Bronze Axe",
-                "code": "axe-tinbronze",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 6,
-                    "var": 1.5
-                }
-            },
-            {
-                "name": "Bismuth Bronze Axe",
-                "code": "axe-bismuthbronze",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 6,
-                    "var": 1.5
-                }
-            },
-            {
-                "name": "Black Bronze Axe",
-                "code": "axe-blackbronze",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 7,
-                    "var": 1.75
-                }
-            },
-            {
-                "name": "Tin Bronze Spear",
-                "code": "spear-tinbronze",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 6,
-                    "var": 1.5
-                }
-            },
-            {
-                "name": "Bismuth Bronze Spear",
-                "code": "spear-bismuthbronze",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 6,
-                    "var": 1.5
-                }
-            },
-            {
-                "name": "Black Bronze Spear",
-                "code": "spear-blackbronze",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 7,
-                    "var": 1.75
-                }
-            },
-            {
-                "name": "Fur",
-                "code": "clothes-upperbodyover-fur-coat",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 2,
-                    "var": 0.5
-                }
-            },
-            {
-                "name": "Fur Gloves",
-                "code": "clothes-hand-fur-gloves",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 2,
-                    "var": 0.5
-                }
-            },
-            {
-                "name": "Knee High Fur Boots",
-                "code": "clothes-foot-knee-high-fur-boots",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 2,
-                    "var": 0.5
-                }
-            },
-            {
-                "name": "Leather Bracers",
-                "code": "clothes-arm-leather-bracers",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 2,
-                    "var": 0.5
-                }
-            },
-            {
-                "name": "Bronze Armlet",
-                "code": "clothes-arm-bronze-armlet",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 3,
-                    "var": 0.75
-                }
-            },
-           {
-                "name": "Wolf Ashgrey (Pup)",
-                "code": "creature-wolf-pup-ashgrey",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-			{
-                "name": "Wolf Black (Pup)",
-                "code": "creature-wolf-pup-black",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-			{
-                "name": "Wolf Brown (Pup)",
-                "code": "creature-wolf-pup-brown",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-			{
-                "name": "Wolf Darkgrey(Pup)",
-                "code": "creature-wolf-pup-darkgrey",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-			{
-                "name": "Wolf Gold(Pup)",
-                "code": "creature-wolf-pup-gold",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-			{
-                "name": "Wolf Grey(Pup)",
-                "code": "creature-wolf-pup-grey",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-			{
-                "name": "Wolf Silver (Pup)",
-                "code": "creature-wolf-pup-silver",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-			{
-                "name": "Wolf Smokegrey (Pup)",
-                "code": "creature-wolf-pup-smokegrey",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-			{
-                "name": "Wolf White (Pup)",
-                "code": "creature-wolf-pup-white",
-                "type": "item",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-            {
-                "name": "Hay Bed",
-                "code": "bed-hay-head-north",
+                "code": "chandelier-candle0",
                 "type": "block",
                 "stacksize": 1,
                 "stock": {
@@ -487,18 +53,103 @@
                     "var": 0.25
                 },
                 "price": {
+                    "avg": 15,
+                    "var": 3.75
+                }
+            },
+            {
+                "code": "glass-green",
+                "type": "block",
+                "stacksize": 4,
+                "stock": {
+                    "avg": 16,
+                    "var": 4
+                },
+                "price": {
                     "avg": 1,
                     "var": 0.25
                 }
-            }
-        ]
-    },
-    "buying": {
-        "maxItems": 8,
-        "list": [
+            },
             {
-                "name": "Huntsman's Tunic",
-                "code": "clothes-upperbodyover-huntsmans-tunic",
+                "code": "glass-blue",
+                "type": "block",
+                "stacksize": 4,
+                "stock": {
+                    "avg": 16,
+                    "var": 4
+                },
+                "price": {
+                    "avg": 1,
+                    "var": 0.25
+                }
+            },
+            {
+                "code": "glass-violet",
+                "type": "block",
+                "stacksize": 4,
+                "stock": {
+                    "avg": 16,
+                    "var": 4
+                },
+                "price": {
+                    "avg": 1,
+                    "var": 0.25
+                }
+            },
+            {
+                "code": "glass-red",
+                "type": "block",
+                "stacksize": 4,
+                "stock": {
+                    "avg": 16,
+                    "var": 4
+                },
+                "price": {
+                    "avg": 1,
+                    "var": 0.25
+                }
+            },
+            {
+                "code": "glass-yellow",
+                "type": "block",
+                "stacksize": 4,
+                "stock": {
+                    "avg": 16,
+                    "var": 4
+                },
+                "price": {
+                    "avg": 1,
+                    "var": 0.25
+                }
+            },
+            {
+                "code": "glass-brown",
+                "type": "block",
+                "stacksize": 4,
+                "stock": {
+                    "avg": 16,
+                    "var": 4
+                },
+                "price": {
+                    "avg": 1,
+                    "var": 0.25
+                }
+            },
+            {
+                "code": "clothes-foot-aristocrat-shoes",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                }
+            },
+            {
+                "code": "clothes-lowerbody-aristocrat-leggings",
                 "type": "item",
                 "stacksize": 1,
                 "stock": {
@@ -511,8 +162,311 @@
                 }
             },
             {
-                "name": "Sturdy Leather Belt",
-                "code": "clothes-waist-sturdy-leather-belt",
+                "code": "clothes-shoulder-aristocrat-mantle",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 14,
+                    "var": 3.5
+                }
+            },
+            {
+                "code": "clothes-upperbody-aristocrat-shirt",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 10,
+                    "var": 2.5
+                }
+            },
+            {
+                "code": "clothes-waist-aristocrat-belt",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                }
+            },
+            {
+                "code": "clothes-upperbody-scarlet-ornate-linen-tunic",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 16,
+                    "var": 4
+                }
+            },
+            {
+                "code": "clothes-foot-tigh-high-boots",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 8,
+                    "var": 2
+                }
+            },
+            {
+                "code": "clothes-neck-bronze-gem-necklace",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 8,
+                    "var": 2
+                }
+            },
+            {
+                "code": "clothes-neck-pearl-necklace",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 12,
+                    "var": 3
+                }
+            },
+            {
+                "code": "clothes-head-silver-diadem",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 16,
+                    "var": 4
+                }
+            },
+            {
+                "code": "clothes-arm-silver-chain",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 12,
+                    "var": 3
+                }
+            },
+            {
+                "code": "clothes-arm-silver-bracelet",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 8,
+                    "var": 2
+                }
+            },
+            {
+                "code": "sword-silver",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 16,
+                    "var": 4
+                }
+            },
+            {
+                "code": "spear-silver",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 16,
+                    "var": 4
+                }
+            },
+            {
+                "code": "arrow-silver",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 2,
+                    "var": 0.5
+                }
+            },
+            {
+                "code": "lantern-gold-plain-up",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 14,
+                    "var": 3.5
+                },
+            },
+            {
+                "code": "smallcarpet-blue",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 10,
+                    "var": 2.5
+                }
+            },
+            {
+                "code": "smallcarpet-brown",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 8,
+                    "var": 2
+                }
+            },
+            {
+                "code": "smallcarpet-red",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 10,
+                    "var": 2.5
+                }
+            },
+            {
+                "code": "smallcarpet-turqoise",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 8,
+                    "var": 2
+                }
+            }
+        ]
+    },
+    "buying": {
+        "maxItems": 8,
+        "list": [
+            {
+                "code": "clothes-foot-prince-boots",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 9,
+                    "var": 2.25
+                }
+            },
+            {
+                "code": "clothes-hand-prince-gloves",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 9,
+                    "var": 2.25
+                }
+            },
+            {
+                "code": "clothes-lowerbody-prince-breeches",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 11,
+                    "var": 2.75
+                }
+            },
+            {
+                "code": "clothes-upperbody-prince-tunic",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 11,
+                    "var": 2.75
+                }
+            },
+            {
+                "code": "clothes-waist-prince-waistband",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 9,
+                    "var": 2.25
+                }
+            },
+            {
+                "code": "clothes-foot-noble-shoes",
                 "type": "item",
                 "stacksize": 1,
                 "stock": {
@@ -525,8 +479,7 @@
                 }
             },
             {
-                "name": "Blacksmith Apron",
-                "code": "clothes-shoulder-blacksmith-apron",
+                "code": "clothes-hand-noble-riding-gloves",
                 "type": "item",
                 "stacksize": 1,
                 "stock": {
@@ -539,13 +492,298 @@
                 }
             },
             {
-                "name": "Snow Goggles",
-                "code": "clothes-head-snow-goggles",
+                "code": "clothes-head-noble-fillet",
                 "type": "item",
                 "stacksize": 1,
                 "stock": {
                     "avg": 1,
                     "var": 0.25
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                }
+            },
+            {
+                "code": "clothes-lowerbody-noble-pants",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                }
+            },
+            {
+                "code": "clothes-neck-noble-necklace",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 6,
+                    "var": 1.5
+                }
+            },
+            {
+                "code": "clothes-shoulder-noble-fur-collar",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 6,
+                    "var": 1.5
+                }
+            },
+            {
+                "code": "clothes-upperbody-noble-shirt",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                }
+            },
+            {
+                "code": "clothes-waist-noble-sash",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                }
+            },
+            {
+                "code": "clothes-neck-golden-necklace",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 9,
+                    "var": 2.25
+                }
+            },
+            {
+                "code": "clothes-head-gold-coronet",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 16,
+                    "var": 4
+                }
+            },
+            {
+                "code": "clothes-head-gem-encrusted-fur-hat",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 10,
+                    "var": 2.5
+                }
+            },
+            {
+                "code": "clothes-neck-fancy-royal-collar",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 12,
+                    "var": 3
+                }
+            },
+            {
+                "code": "clothes-shoulder-royal-fur",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 16,
+                    "var": 4
+                }
+            },
+            {
+                "code": "clothes-waist-gold-waist-chain",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 16,
+                    "var": 4
+                }
+            },
+            {
+                "code": "clothes-waist-fancy-royal-belt",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 10,
+                    "var": 2.5
+                }
+            },
+            {
+                "code": "painting-howl-north",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 9,
+                    "var": 2.25
+                }
+            },
+            {
+                "code": "painting-elk-north",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 9,
+                    "var": 2.25
+                }
+            },
+            {
+                "code": "painting-underwater-north",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 9,
+                    "var": 2.25
+                }
+            },
+            {
+                "code": "painting-prey-north",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 9,
+                    "var": 2.25
+                }
+            },
+            {
+                "code": "painting-forestdawn-north",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 9,
+                    "var": 2.25
+                }
+            },
+            {
+                "code": "ingot-gold",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 3,
+                    "var": 0.75
+                }
+            },
+            {
+                "code": "ingot-silver",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 3,
+                    "var": 0.75
+                },
+                "price": {
+                    "avg": 2,
+                    "var": 0.5
+                }
+            },
+            {
+                "code": "ore-emerald",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 5,
+                    "var": 1.25
+                },
+                "price": {
+                    "avg": 9,
+                    "var": 2.25
+                }
+            },
+            {
+                "code": "ore-lapislazuli",
+                "type": "item",
+                "stacksize": 4,
+                "stock": {
+                    "avg": 5,
+                    "var": 1.25
+                },
+                "price": {
+                    "avg": 1,
+                    "var": 0.25
+                }
+            },
+            {
+                "code": "omoktabletop",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
                 },
                 "price": {
                     "avg": 4,
@@ -553,280 +791,47 @@
                 }
             },
             {
-                "name": "Stained Leather Poncho",
-                "code": "clothes-shoulder-stained-leather-poncho",
+                "code": "lore-book",
                 "type": "item",
                 "stacksize": 1,
                 "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 4,
-                    "var": 1
-                }
-            },
-            {
-                "name": "Twine",
-                "code": "flaxtwine",
-                "type": "item",
-                "stacksize": 6,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "name": "Feather",
-                "code": "feather",
-                "type": "item",
-                "stacksize": 32,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "name": "Charcoal",
-                "code": "charcoal",
-                "type": "item",
-                "stacksize": 16,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "name": "Leather",
-                "code": "leather",
-                "type": "block",
-                "stacksize": 10,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "name": "Spelt Bread",
-                "code": "bread-spelt",
-                "type": "item",
-                "stacksize": 8,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "name": "Rye Bread",
-                "code": "bread-rye",
-                "type": "item",
-                "stacksize": 8,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "name": "Flax Bread",
-                "code": "bread-flax",
-                "type": "item",
-                "stacksize": 8,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "name": "Rice Bread",
-                "code": "bread-rice",
-                "type": "item",
-                "stacksize": 8,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "name": "Blue Bowl of Honey",
-                "code": "bowl-blue-honey",
-                "type": "block",
-                "stacksize": 4,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-			{
-                "name": "Brown Bowl of Honey",
-                "code": "bowl-brown-honey",
-                "type": "block",
-                "stacksize": 4,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-			{
-                "name": "Fire Bowl of Honey",
-                "code": "bowl-fire-honey",
-                "type": "block",
-                "stacksize": 4,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-			{
-                "name": "Red Bowl of Honey",
-                "code": "bowl-red-honey",
-                "type": "block",
-                "stacksize": 4,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "name": "Copper Lantern",
-                "code": "lantern-copper-plain-up",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
+                    "avg": 3,
+                    "var": 0.75
                 },
                 "price": {
                     "avg": 4,
                     "var": 1
                 },
-            },
-            {
-                "name": "Tin Bronze Lantern",
-                "code": "lantern-tinbronze-plain-up",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 6,
-                    "var": 1.5
-                },
-            },
-            {
-                "name": "Bismuth Bronze Lantern",
-                "code": "lantern-bismuthbronze-plain-up",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 6,
-                    "var": 1.5
-                },
-            },
-            {
-                "name": "Black Bronze Lantern",
-                "code": "lantern-blackbronze-plain-up",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "price": {
-                    "avg": 6,
-                    "var": 1.5
-                },
-            },
-            {
-                "name": "Copper Ingot",
-                "code": "ingot-copper",
-                "type": "item",
-                "stacksize": 3,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
+                "attributes": {
+                    "category": "diaries"
                 }
             },
             {
-                "name": "Tin Ingot",
-                "code": "ingot-tin",
-                "type": "item",
-                "stacksize": 2,
+                "code": "chest-east",
+                "type": "block",
+                "stacksize": 1,
                 "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
                     "avg": 1,
                     "var": 0.25
+                },
+                "price": {
+                    "avg": 10,
+                    "var": 2.5
+                },
+                "attributes": {
+                    "type": "golden"
                 }
             }
         ]
     }
+    
 
 
 				
 			}
 		},
 		behaviors: [
-			{ code: "nametag", selectFromRandomName: ["Hubert", "Wilding", "Shem", "Tybal", "Loon", "Axe", "Karl", "Sprig"] }, 
+			{ code: "nametag", selectFromRandomName: ["Alfonse", "Rigby", "Marco", "Rote", "Horace", "Two Tongue", "Optal", "Veera"] }, 
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.01 }, 
 			{ code: "reviveondeath", minHours: 24, maxHours: 72 },
