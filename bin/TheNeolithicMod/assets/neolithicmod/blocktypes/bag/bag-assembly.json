@@ -2,19 +2,13 @@
 	code: "bag-assembly",
 	variantgroups: [		
 		{ loadFromProperties: "block/wood" },
-		{ code: "style", states: ["bark"]},
-		{ code: "cordage", states: [ "reeds"]},
+		{ code: "style", states: ["bark", "debarked"]},
+		{ code: "cordage", states: ["leatherstrips", "reeds", "sinew", "sisal", ]},
 	],
-	behaviors: [
-		{
-			name: "BlockSwapBehavior",
-			properties: {
-				"swapBlocks": [
-					{ "Tool": "game:reeds", "Makes": "neolithicmod:basket", "Takes": null, "Count": 4 },
-				],
-			},
-		},
-	],
+	behaviorsByType: {
+		"*-bark-leatherstrips":	[{	name: "BlockSwapBehavior",	properties: { "swapBlocks": [{ "Tool": "game:hide-raw", "Makes": "neolithicmod:backpack", "Takes": null, "Count": 4 }]}}],		
+		"*-bark-sisal": [{ name: "BlockSwapBehavior", properties: {	"swapBlocks": [{ "Tool": "neolithicmod:sisalrug-large-ground-east", "Makes": "neolithicmod:burdenbasket", "Takes": null, "Count": 1 }]}}],
+	},
 	maxstacksize: 1,
 	drawtype: "json",
 	shape: { base: "block/bag/bag-assembly" },
@@ -22,7 +16,7 @@
 		"burdenbasket": { base: "block/bag/burdenbasket" },
 		"acacia": { base: "block/wood/{style}/{wood}" },
 		"acaciatop": { base: "block/wood/treetrunk/{wood}" },
-		"cordage": { base: "block/{cordage}" },
+		"rope": { base: "block/{cordage}" },
 	},
 	storageFlags: 2,
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
@@ -35,7 +29,7 @@
 		translation: { x: -1, y: 3, z: 0 },
 		rotation: { x: -14, y: 145, z: 1 },
 		origin: { x: 0.5299, y: 0.22, z: 0.5 },
-		scale: 2.96
+		scale: 1
 	},
 	fpHandTransform: {
 		translation: { x: 0.05, y: 0.5, z: 0.2 },

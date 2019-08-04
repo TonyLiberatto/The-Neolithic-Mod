@@ -3,9 +3,14 @@
 	variantgroups: [
 		{ code: "size", states: ["very-thin"] },
 		{ loadFromProperties: "block/wood" },
-		{ code: "style", states: ["debarked"]},
-		{ code: "cordage", states: ["sisal"]},
+		{ code: "style", states: ["bark", "debarked"]},
+		{ code: "cordage", states: [ "leatherstrips", "reeds","sinew", "sisal"]},
 	],
+	behaviorsByType: {
+	"*-bark-leatherstrips": [{ name: "BlockSwapBehavior", properties: {	"swapBlocks": [	{ "Tool": "neolithicmod:branch-very-thin-{wood}-bark-ud", "Makes": "neolithicmod:bag-assembly-{wood}-bark-leatherstrips", "Takes": null, "Count": 4 }]}}],
+	"*-bark-sisal": [{ name: "BlockSwapBehavior", properties: { "swapBlocks": [	{ "Tool": "neolithicmod:branch-very-thin-{wood}-bark-ud", "Makes": "neolithicmod:bag-assembly-{wood}-bark-sisal", "Takes": null, "Count": 4 }]}}],
+	"*-bark-reeds": [{ name: "BlockSwapBehavior", properties: { "swapBlocks": [ { "Tool": "neolithicmod:branch-very-thin-{wood}-bark-ud", "Makes": "neolithicmod:basket-frame-{wood}-bark-reeds", "Takes": null, "Count": 4 }]}}],
+	},
 	creativeinventory: { "general": ["*"],  "construction": ["*"], "neolithicdeco": ["*"] },
 	drawtype: "json",
 	lightabsorption: 0,

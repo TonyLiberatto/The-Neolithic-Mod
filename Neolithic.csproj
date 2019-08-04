@@ -864,7 +864,13 @@
     <None Include="bin\TheNeolithicMod\assets\game\worldgen\schematics\village\village-8.json" />
     <None Include="bin\TheNeolithicMod\assets\game\worldgen\schematics\village\village-9.json" />
     <None Include="bin\TheNeolithicMod\assets\game\worldgen\treengenproperties.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bag\backpack.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bag\bag-assembly.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bag\basket-frame.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bag\basket.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bag\burdenbasket.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bag\linensack.json" />
+    <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bag\miningbag.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bone\skulls\skullboar.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bone\skulls\skullewe.json" />
     <None Include="bin\TheNeolithicMod\assets\neolithicmod\blocktypes\bone\skulls\skullhyena.json" />

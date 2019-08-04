@@ -183,59 +183,59 @@
 			]
 		},
 		{
-			"name": "cordage",
+			"name": "rope",
 			"from": [ 1.19, 7.38, 1.19 ], 
 			"to": [ 2.52, 8.71, 2.52 ], 
 			"rotationOrigin": [ 1.0, 7.0, 1.0 ],
 			"faces": {
-				"north": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-				"east": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-				"south": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-				"west": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-				"up": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-				"down": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
+				"north": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"east": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"south": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"west": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"up": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"down": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
 			},
 			"children": [
 				{
-					"name": "cordage14",
+					"name": "rope14",
 					"from": [ 12.19, 0.0, 0.0 ], 
 					"to": [ 13.52, 1.33, 1.33 ], 
 					"rotationOrigin": [ 0.0, -1.0, 0.0 ],
 					"faces": {
-						"north": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"east": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"south": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"west": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"up": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"down": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
+						"north": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"east": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"south": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"west": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"up": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"down": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
 					}
 				},
 				{
-					"name": "cordage15",
+					"name": "rope15",
 					"from": [ 0.0, 0.0, 12.19 ], 
 					"to": [ 1.33, 1.33, 13.52 ], 
 					"rotationOrigin": [ 0.0, 0.0, 12.0 ],
 					"faces": {
-						"north": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"east": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"south": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"west": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"up": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"down": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
+						"north": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"east": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"south": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"west": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"up": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"down": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
 					},
 					"children": [
 						{
-							"name": "cordage16",
+							"name": "rope16",
 							"from": [ 12.19, 0.0, 0.0 ], 
 							"to": [ 13.52, 1.33, 1.33 ], 
 							"rotationOrigin": [ 0.0, -1.0, 0.0 ],
 							"faces": {
-								"north": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-								"east": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-								"south": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-								"west": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-								"up": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-								"down": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
+								"north": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"east": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"south": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"west": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"up": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"down": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
 							}
 						}
 					]
@@ -243,59 +243,59 @@
 			]
 		},
 		{
-			"name": "cordage17",
+			"name": "rope17",
 			"from": [ 1.19, 0.19, 1.19 ], 
 			"to": [ 2.52, 1.52, 2.52 ], 
 			"rotationOrigin": [ 1.0, 0.0, 1.0 ],
 			"faces": {
-				"north": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-				"east": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-				"south": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-				"west": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-				"up": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-				"down": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
+				"north": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"east": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"south": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"west": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"up": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"down": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
 			},
 			"children": [
 				{
-					"name": "cordage18",
+					"name": "rope18",
 					"from": [ 12.19, 0.0, 0.0 ], 
 					"to": [ 13.52, 1.33, 1.33 ], 
 					"rotationOrigin": [ 0.0, -1.0, 0.0 ],
 					"faces": {
-						"north": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"east": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"south": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"west": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"up": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"down": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
+						"north": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"east": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"south": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"west": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"up": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"down": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
 					}
 				},
 				{
-					"name": "cordage19",
+					"name": "rope19",
 					"from": [ 0.0, 0.0, 12.19 ], 
 					"to": [ 1.33, 1.33, 13.52 ], 
 					"rotationOrigin": [ 0.0, 0.0, 12.0 ],
 					"faces": {
-						"north": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"east": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"south": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"west": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"up": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"down": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
+						"north": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"east": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"south": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"west": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"up": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"down": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
 					},
 					"children": [
 						{
-							"name": "cordage20",
+							"name": "rope20",
 							"from": [ 12.19, 0.0, 0.0 ], 
 							"to": [ 13.52, 1.33, 1.33 ], 
 							"rotationOrigin": [ 0.0, -1.0, 0.0 ],
 							"faces": {
-								"north": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-								"east": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-								"south": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-								"west": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-								"up": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-								"down": { "texture": "#cordage", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
+								"north": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"east": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"south": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"west": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"up": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"down": { "texture": "#rope", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
 							}
 						}
 					]

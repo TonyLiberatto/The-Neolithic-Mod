@@ -1,5 +1,18 @@
 ﻿{
 
+  "handbook-collectible-sources": "Sources",  
+  "handbook-burdenbasket-obtain": "Place a Very-thin barked branch down, right click with sisal twine, right click again with 4 of the same very thin bark branch to make the structure. Now right click with a large sisal rug to make the Burdenbasket.",
+  "Place a Very-thin barked branch down, right click with leather strips, right click again with 4 of the same very thin bark branch to make the structure. Now right click with 4 hides to make the Backpack.": "Place a Very-thin barked branch down, right click with leather strips, right click again with 4 of the same very thin bark branch to make the structure. Now right click with 4 hides to make the Backpack.",
+  "Place a Very-thin barked branch down, right click with reeds, right click again with 4 of the same very thin bark branch to make the structure. Now right click with 4 reeds to make the Basket.": "Place a Very-thin barked branch down, right click with reeds, right click again with 4 of the same very thin bark branch to make the structure. Now right click with 4 reeds to make the Basket.",
+  
+  
+  
+  "handbook-item-sources": "Sources",
+  "Place a Very-thin barked branch down, right click with leather strips, right click again with 4 of the same very thin bark branch to make the structure. Now right click with 4 hides to make the Backpack.": "Place a Very-thin barked branch down, right click with leather strips, right click again with 4 of the same very thin bark branch to make the structure. Now right click with 4 hides to make the Backpack.",
+  "Place a Very-thin barked branch down, right click with reeds, right click again with 4 of the same very thin bark branch to make the structure. Now right click with 4 reeds to make the Basket.": "Place a Very-thin barked branch down, right click with reeds, right click again with 4 of the same very thin bark branch to make the structure. Now right click with 4 reeds to make the Basket.",
+  "Place a Very-thin barked branch down, right click with sisal twine, right click again with 4 of the same very thin bark branch to make the structure. Now right click with a large sisal rug to make the Burdenbasket.": "Place a Very-thin barked branch down, right click with sisal twine, right click again with 4 of the same very thin bark branch to make the structure. Now right click with a large sisal rug to make the Burdenbasket.",
+  
+  
   "recipeingredient-item-mutton-raw": "mutton",
   "recipeingredient-item-chicken-raw": "chicken",
   "recipeingredient-item-porkchops-raw": "pork chops",
