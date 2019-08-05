@@ -13,15 +13,19 @@ namespace TheNeolithicMod
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
             if (blockSel == null) return false;
-            bool ok = (world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityToolMold)?.OnPlayerInteract(byPlayer, blockSel.Face, blockSel.HitPosition) != null ? true : false;
-            if (ok)
+            BlockEntityToolMold be = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityToolMold;
+            if (be != null)
             {
-                if (Attributes["returnBlock"].Exists)
+                if (be.IsFull && be.IsHardened && world.Side.IsServer())
                 {
-                    world.BlockAccessor.SetBlock(Attributes["returnBlock"].AsString().WithDomain().ToBlock(api).BlockId, blockSel.Position);
+                    if (Attributes["returnBlock"].Exists)
+                    {
+                        world.BlockAccessor.SetBlock(Attributes["returnBlock"].AsString().ToBlock(api).BlockId, blockSel.Position);
+                    }
                 }
-            }
-            return ok;
+                return be.OnPlayerInteract(byPlayer, blockSel.Face, blockSel.HitPosition);
+            } 
+            return false;
         }
     }
 }
