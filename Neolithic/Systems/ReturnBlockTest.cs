@@ -16,8 +16,6 @@ namespace TheNeolithicMod
             BlockEntityToolMold be = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityToolMold;
             if (be != null)
             {
-                be.OnPlayerInteract(byPlayer, blockSel.Face, blockSel.HitPosition);
-
                 if (be.IsFull && be.IsHardened && world.Side.IsServer())
                 {
                     if (Attributes["returnBlock"].Exists)
@@ -25,7 +23,7 @@ namespace TheNeolithicMod
                         world.BlockAccessor.SetBlock(Attributes["returnBlock"].AsString().ToBlock(api).BlockId, blockSel.Position);
                     }
                 }
-                return true;
+                return be.OnPlayerInteract(byPlayer, blockSel.Face, blockSel.HitPosition);
             } 
             return false;
         }
