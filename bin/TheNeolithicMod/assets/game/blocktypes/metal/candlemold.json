@@ -38,7 +38,7 @@
 				{ x1: 4, z1: 4, x2: 13, z2: 13 },
 				{ x1: 4, z1: 4, x2: 13, z2: 13 },
 			],	
-			"drop": { type:"item", code: "candle-{metal}" , stacksize: 9, },
+			"drop": { type:"item", code: "candle-wax" , stacksize: 9, },
 			"returnBlock": "game:candlemold-{metal}-plain",
 		},		
 	},
