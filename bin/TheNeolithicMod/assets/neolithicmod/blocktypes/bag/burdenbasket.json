@@ -11,6 +11,9 @@
 			extraSections: [
 				{ title: "handbook-collectible-sources", text: "handbook-burdenbasket-obtain" }
 			]
+		},
+		backpack: {
+			quantitySlots: 10
 		}
 	},
 	storageFlags: 2,
@@ -40,10 +43,5 @@
 		translation: { x: 0, y: 0, z: 0 },
 		rotation: { x: 180, y: 33, z: -180 },
 		scale: 8
-	},
-	attributes: {
-		backpack: {
-			quantitySlots: 10
-		}
 	}
 }

@@ -1,8 +1,8 @@
 {
 	code: "labeledchest-complete-bamboo",
 	behaviorsByType: { 
-		"*-brown-*": [{name: "HorizontalOrientable", properties: {  dropBlock: "neolithicmod:labeledchest-east", attributes: { type: "normal-labeled-bamboo-brown" }}},],
-		"*-green-*": [{name: "HorizontalOrientable", properties: {  dropBlock: "neolithicmod:labeledchest-east", attributes: { type: "normal-labeled-bamboo-green" }}}],
+		"*-brown-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:labeledchest-east", attributes: { type: "normal-labeled-bamboo-brown" }}}}],
+		"*-green-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:labeledchest-east", attributes: { type: "normal-labeled-bamboo-green" }}}}],
 	},
 	variantgroups: [		
 		{ code: "color", states: ["brown", "green"] },
