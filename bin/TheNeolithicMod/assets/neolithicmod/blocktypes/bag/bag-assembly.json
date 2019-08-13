@@ -19,7 +19,7 @@
 		"rope": { base: "block/{cordage}" },
 	},
 	storageFlags: 2,
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	creativeinventory: { "general": [""], "items": [""], "neolithicitems": [""] },
 	sidesolid: { all: false },
 	sideopaque: { all: false },
 	lightAbsorption: 0,

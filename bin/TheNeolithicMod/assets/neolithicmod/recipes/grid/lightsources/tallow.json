@@ -1,9 +1,0 @@
-{
-	ingredientPattern: "F,F,F",
-	ingredients: {
-		"F": { type: "item", code: "game:fat" }
-	},
-	width: 1,
-	height: 3,
-	output: { type: "item", code: "game:tallow", quantity: 9 }
-}

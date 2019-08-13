@@ -1,3 +1,5 @@
 [
 	{ file: "game:blocktypes/wood/stackedbamboo", op: "add", path: "/enabled",  value: false },
+	{ file: "game:itemtypes/bag/backpack", op: "add", path: "/enabled",  value: false },
+	{ file: "game:itemtypes/bag/basket", op: "add", path: "/enabled",  value: false },
 ]

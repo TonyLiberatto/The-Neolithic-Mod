@@ -25,7 +25,7 @@
 	sidesolid: { all: false },
 	sideopaque: { all: false },
 	lightAbsorption: 0,
-	creativeinventory: { "general": ["*"], "items": ["*"] },
+	creativeinventory: { "general": [""], "items": [""] },
 	guiTransform: {
 		translation: { x: 1, y: 0, z: 0 },
 		rotation: { x: -21, y: 16, z: 180 },

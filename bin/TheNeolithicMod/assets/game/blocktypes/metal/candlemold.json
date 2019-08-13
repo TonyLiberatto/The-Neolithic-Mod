@@ -30,6 +30,12 @@
 	},
   attributesByType: {
 		"*-burned": {
+			handbook:{ 				
+				extraSections: [
+					{ title: "handbook-item-sources", text: "To make a wicked candle mold  you need to place sisal twine  over an empty candle mold " }
+					]
+
+			},			
 			"requiredUnits": 100,
 			"fillHeight": 4,
 			"fillQuadsByLevel": [
@@ -40,7 +46,15 @@
 			],	
 			"drop": { type:"item", code: "candle-wax" , stacksize: 9, },
 			"returnBlock": "game:candlemold-{metal}-plain",
-		},		
+		},
+		"*-plain":{
+			handbook:{ 				
+				extraSections: [
+					{ title: "handbook-item-sources", text: "To make an empty candle mold use clayforming to create a clay candlemold, and pour metal into it." }
+					]
+
+			},
+		},
 	},
   replaceable: 300,
   resistance: 0.75,

@@ -20,7 +20,7 @@
 		"*-south": { base: "block/wood/door/inventory", rotateY: 180 },
 		"*-west": { base: "block/wood/door/inventory", rotateY: 90 },		
 	},	
-	creativeinventory: { "general": ["*-east"], "decorative": ["*-east"], "neolithicdeco": ["*-east"] },
+	creativeinventory: { "general": [""], "decorative": [""], "neolithicdeco": [""] },
 	blockmaterial: "Wood",
 	resistance: 1.5,
 	lightAbsorption: 1,
