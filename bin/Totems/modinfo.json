@@ -6,9 +6,9 @@
 	"website": "https://github.com/TonyLiberatto/The-Neolithic-Mod",
 	"authors": [ "Tony Liberatto","Balduranne", "Novocain"],
 	"contributors": [],
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"dependencies": {
-	"game": "1.9.11",
-	"theneolithicmod": "2.0.1"
+	"game": "1.10.0-pre.11",
+	"theneolithicmod": "2.0.13"
 	}
 }
