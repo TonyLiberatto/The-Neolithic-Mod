@@ -1,6 +1,6 @@
 {
 	code: "roofstairs",
-  class: "BlockLogWall",
+	class: "BlockLogWall",
 	behaviors: [{name: "HorizontalOrientable"}],
 	attributes: {
 		handbook: {
