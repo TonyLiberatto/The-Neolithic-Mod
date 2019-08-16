@@ -1,105 +1,144 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
+using Vintagestory.ServerMods.NoObf;
 
 namespace TheNeolithicMod
 {
     class BlockLogWall : Block
     {
-        public readonly string[] walltypes =
-        {
-            "wall",
-            "corner",
-            "jut",
-        };
+        public string Wood { get => Variant["wood"]; }
+        public string Key { get => FirstCodePart() + Wood; }
 
-        public readonly string[] wallverticals =
-        {
-            "up",
-            "right",
-            "down",
-            "left",
-        };
+        public string WallType { get => Variant.ContainsKey("type") ? Variant["type"] : null; }
+        public string Bark { get => Variant.ContainsKey("style") ? Variant["style"] : null; }
+        public string Hor { get => Variant.ContainsKey("horizontal") ? Variant["horizontal"] : null; }
+        public string Vert { get => Variant.ContainsKey("vertical") ? Variant["vertical"] : null; }
 
-        public readonly string[] rooftypes =
-        {
-            "corner",
-            "cornerin",
-            "cornertop",
-            "slope",
-            "slopewall",
-            "top",
-            "topwall",
-            "topend",
-        };
-
-        public readonly string[] directions =
-        {
-            "north",
-            "east",
-            "south",
-            "west",
-        };
-
-        private static uint dIndex;
-        private static uint tIndex;
-        private static uint vIndex;
+        WallSystem wallSystem;
 
         public override void OnLoaded(ICoreAPI api)
         {
             base.OnLoaded(api);
+            wallSystem = api.ModLoader.GetModSystem<WallSystem>();
+            if (!wallSystem.styles.ContainsKey(Key))
+            {
+                WallStyle style = new WallStyle();
+                foreach (var val in api.World.Blocks)
+                {
+                    BlockLogWall tmp = (val as BlockLogWall);
+                    if (tmp?.Key == Key)
+                    {
+                        if (tmp.WallType != null) style.types.Add(tmp.WallType);
+                        if (tmp.Hor != null) style.hors.Add(tmp.Hor);
+                        if (tmp.Vert != null) style.verts.Add(tmp.Vert);
+                    }
+                }
+                wallSystem.styles.Add(Key, style);
+            }
         }
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            ItemSlot activeslot = byPlayer.InventoryManager.ActiveHotbarSlot;
-            if (activeslot.Itemstack == null || activeslot.Itemstack.Item == null) return false;
-            if (activeslot.Itemstack.Item.Tool == EnumTool.Hammer)
-            {
-                return true;
-            }
-            return false;
+            BlockEntityLogwall be = (blockSel.BlockEntity(api) as BlockEntityLogwall);
+            be?.OnInteract(world, byPlayer, blockSel);
+            base.OnBlockInteractStart(world, byPlayer, blockSel);
+            return true;
         }
 
-        public override bool OnBlockInteractStep(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
+    }
+
+    class WallIndexing
+    {
+        public uint typeIndex = 0;
+        public uint vertIndex = 0;
+        public uint horIndex = 0;
+    }
+
+    class WallStyle
+    {
+        public HashSet<string> types = new HashSet<string>();
+        public HashSet<string> verts = new HashSet<string>();
+        public HashSet<string> hors = new HashSet<string>();
+    }
+
+    class WallSystem : ModSystem
+    {
+        public override void Start(ICoreAPI api)
         {
-            return HandAnimations.Hit(byPlayer.Entity, secondsUsed);
+            api.RegisterBlockClass("BlockLogWall", typeof(BlockLogWall));
+            api.RegisterBlockEntityClass("LogWall", typeof(BlockEntityLogwall));
         }
 
-        public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
+        public Dictionary<string, WallStyle> styles = new Dictionary<string, WallStyle>();
+    }
+
+    class BlockEntityLogwall : BlockEntity
+    {
+        WallIndexing indexing;
+        bool interact = true;
+
+        public override void Initialize(ICoreAPI api)
         {
-            ItemSlot activeslot = byPlayer.InventoryManager.ActiveHotbarSlot;
-            if (activeslot.Itemstack.Item.Tool == EnumTool.Hammer && world.Side == EnumAppSide.Server)
-            {
-                world.PlaySoundAt(Sounds.Place, byPlayer);
-                Swap(world, byPlayer, blockSel);
-                world.SpawnCubeParticles(blockSel.Position, blockSel.Position.ToVec3d().Add(0.5, 0.5, 0.5), 2, 32);
-            }
+            base.Initialize(api);
         }
 
-        public void Swap(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
+        public override void FromTreeAtributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve)
         {
-            BlockPos pos = blockSel.Position;
-            AssetLocation nextAsset;
-            string[] types = FirstCodePart() == "rooframp" || FirstCodePart() == "roofstairs" ? rooftypes : walltypes;
+            indexing = JsonConvert.DeserializeObject<WallIndexing>(tree.GetString("wallindexing"));
+            base.FromTreeAtributes(tree, worldAccessForResolve);
+        }
 
-            if (byPlayer.Entity.Controls.Sneak) 
+        public override void ToTreeAttributes(ITreeAttribute tree)
+        {
+            tree.SetString("wallindexing", JsonConvert.SerializeObject(indexing));
+            base.ToTreeAttributes(tree);
+        }
+
+        public void OnInteract(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
+        {
+            indexing = indexing == null ? new WallIndexing() : indexing;
+            if (interact)
             {
-                nextAsset = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + directions.Next(ref dIndex));
+                interact = false;
+                if (byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack?.Item?.Tool == EnumTool.Hammer)
+                {
+                    if (world.Side.IsServer())
+                    {
+                        BlockLogWall block = (BlockLogWall)blockSel.Block(api);
+                        WallSystem wallSystem = api.ModLoader.GetModSystem<WallSystem>();
+                        if (wallSystem.styles.TryGetValue(block.Key, out WallStyle val))
+                        {
+                            string type = block.WallType, wood = block.Wood, style = block.Bark, vert = block.Vert, hor = block.Hor;
+
+                            if (byPlayer.Entity.Controls.Sneak && val.types.Count > 0) type = val.types.Next(ref indexing.typeIndex);
+                            else if (byPlayer.Entity.Controls.Sprint && val.verts.Count > 0) vert = val.verts.Next(ref indexing.vertIndex);
+                            else if (val.hors.Count > 0) hor = val.hors.Next(ref indexing.horIndex);
+
+                            string code = block.Code.Domain + ":" + block.FirstCodePart().Apd(type).Apd(wood).Apd(style);
+
+                            if (vert != null) code = code.Apd(vert);
+                            if (hor != null) code = code.Apd(hor);
+
+                            world.BlockAccessor.ExchangeBlock(code.ToBlock(api).Id, pos);
+                            world.PlaySoundAt(block.Sounds.Place, pos);
+                            world.SpawnCubeParticles(pos, pos.MidPoint(), 2, 32);
+                        }
+                    }
+                    else
+                    {
+                        ((byPlayer.Entity as EntityPlayer).Player as IClientPlayer).TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+                    }
+                }
+                world.RegisterCallback(dt => interact = true, 30);
             }
-            else if (byPlayer.Entity.Controls.Sprint && FirstCodePart() == "logwall") 
-            {
-                nextAsset = CodeWithPart(wallverticals.Next(ref vIndex), 4);
-            }
-            else 
-            {
-                nextAsset = CodeWithPart(types.Next(ref tIndex), 1);
-            }
-            world.BlockAccessor.SetBlock(world.BlockAccessor.GetBlock(nextAsset).BlockId, pos);
         }
     }
 }

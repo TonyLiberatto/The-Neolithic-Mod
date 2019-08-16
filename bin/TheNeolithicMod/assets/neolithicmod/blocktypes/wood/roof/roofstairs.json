@@ -1,6 +1,7 @@
 {
 	code: "roofstairs",
 	class: "BlockLogWall",
+	entityClass: "LogWall",
 	behaviors: [{name: "HorizontalOrientable"}],
 	attributes: {
 		handbook: {
@@ -12,7 +13,7 @@
 		{ code: "type", states: [ "corner","cornerin", "cornertop","slope", "slopewall", "top", "topwall", "topend" ]},
 		{ code: "wood", loadFromProperties: "block/wood" },
 		{ code: "style", states: ["bark", "debarked"]},
-		{ code:"orientation", loadFromProperties: "abstract/horizontalorientation" },
+		{ code: "horizontal", loadFromProperties: "abstract/horizontalorientation" },
 	],
 	shapebytype: {
 		"*-north":  {base: "block/wood/roof/stairs/{type}", rotateY: 0 },
