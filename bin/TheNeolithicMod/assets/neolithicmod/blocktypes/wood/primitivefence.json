@@ -3,7 +3,15 @@
 	behaviors: [{name: "NWOrientable"}],
 	attributes: {
 		handbook: {
-			groupBy: ["primitivefence-*"]
+			groupBy: ["primitivefence-*"],
+			extraSectionsByType: {
+				"primitivefence-support-*":[
+					{ title: "handbook-item-sources", text: "Place a Barked Thin Branch vertically down on the ground, right click with any cordage, then right click again with 3 more Bark Thin Branches." }
+					],
+				"primitivefence-midsection-*": [
+					{ title: "handbook-item-sources", text: "Place a Barked Very Thin Branch horizontally , right click with any cordage, then right click again with 3 more Barked Very Thin Branches." }
+					],
+				}
 		},
 	},
 	variantgroups: [
