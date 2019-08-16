@@ -1,6 +1,7 @@
 {
 	code: "logwall",
   class: "BlockLogWall",
+	entityClass: "LogWall",
 	behaviors: [
 		{
 			name: "OmniRotatable",
@@ -20,10 +21,10 @@
 	creativeinventory: { "general": ["*-up-north"], "construction": ["*-up-north"], "neolithicblocks": ["*-up-north"] },
 		variantgroups: [
 		{ code: "type", states: ["wall", "corner", "jut"]},
-		{ loadFromProperties: "block/wood" },
+		{ code: "wood", loadFromProperties: "block/wood" },
 		{ code: "style", states: ["bark", "debarked"]},
-		{ code: "v", states: ["up", "left", "down", "right"] },
-		{ loadFromProperties: "abstract/horizontalorientation" }
+		{ code: "vertical", states: ["up", "left", "down", "right"] },
+		{ code: "horizontal", loadFromProperties: "abstract/horizontalorientation" }
 	],
 	shapebytype: {
 		"*-up-north": { base: "block/wood/logwall/{type}", rotateY: 0, rotateZ: 0 },

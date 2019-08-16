@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API.Client;
@@ -25,6 +26,18 @@ namespace TheNeolithicMod
         {
             index = (uint)(++index % array.Length);
             return array[index];
+        }
+
+        public static T Next<T>(this List<T> array, ref uint index)
+        {
+            index = (uint)(++index % array.Count);
+            return array[(int)index];
+        }
+
+        public static T Next<T>(this HashSet<T> array, ref uint index)
+        {
+            index = (uint)(++index % array.Count);
+            return array.ToArray()[index];
         }
 
         public static T Prev<T>(this T[] array, ref uint index)
@@ -70,6 +83,8 @@ namespace TheNeolithicMod
 
         public static AssetLocation ToAsset(this string asset) { return new AssetLocation(asset); }
         public static Block ToBlock(this string block, ICoreAPI api) => block.WithDomain().ToAsset().GetBlock(api);
+        public static Block Block(this BlockSelection sel, ICoreAPI api) => api.World.BlockAccessor.GetBlock(sel.Position);
+        public static BlockEntity BlockEntity(this BlockSelection sel, ICoreAPI api) => api.World.BlockAccessor.GetBlockEntity(sel.Position);
 
         public static void PlaySoundAtWithDelay(this IWorldAccessor world, AssetLocation location, BlockPos pos, int delay)
         {
@@ -122,6 +137,7 @@ namespace TheNeolithicMod
         public static bool IsCreative(this EnumGameMode gamemode) => gamemode == EnumGameMode.Creative;
         public static bool IsSpectator(this EnumGameMode gamemode) => gamemode == EnumGameMode.Spectator;
         public static bool IsGuest(this EnumGameMode gamemode) => gamemode == EnumGameMode.Guest;
+        public static void PlaySoundAt(this IWorldAccessor world, AssetLocation loc, BlockPos pos) => world.PlaySoundAt(loc, pos.X, pos.Y, pos.Z);
 
         public static string WithDomain(this string a) => a.IndexOf(":") == -1 ? "game:" + a : a;
 
@@ -132,6 +148,20 @@ namespace TheNeolithicMod
                 a[i] = a[i].WithDomain();
             }
             return a;
+        }
+
+        public static Vec3d MidPoint(this BlockPos pos) => pos.ToVec3d().AddCopy(0.5, 0.5, 0.5);
+
+        public static string Apd(this string a, string appended)
+        {
+            return a + "-" + appended;
+        }
+
+        public static object GetInstanceField<T>(this T instance, string fieldName)
+        {
+            BindingFlags bindFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
+            FieldInfo field = instance.GetType().GetField(fieldName, bindFlags);
+            return field?.GetValue(instance);
         }
     }
 }
