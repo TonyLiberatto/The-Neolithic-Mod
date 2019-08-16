@@ -28,17 +28,8 @@ namespace TheNeolithicMod
             return array[index];
         }
 
-        public static T Next<T>(this List<T> array, ref uint index)
-        {
-            index = (uint)(++index % array.Count);
-            return array[(int)index];
-        }
-
-        public static T Next<T>(this HashSet<T> array, ref uint index)
-        {
-            index = (uint)(++index % array.Count);
-            return array.ToArray()[index];
-        }
+        public static T Next<T>(this List<T> array, ref uint index) => array.ToArray().Next(ref index);
+        public static T Next<T>(this HashSet<T> array, ref uint index) => array.ToArray().Next(ref index);
 
         public static T Prev<T>(this T[] array, ref uint index)
         {
