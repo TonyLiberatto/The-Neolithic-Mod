@@ -77,6 +77,17 @@ namespace TheNeolithicMod
         public static Block Block(this BlockSelection sel, ICoreAPI api) => api.World.BlockAccessor.GetBlock(sel.Position);
         public static BlockEntity BlockEntity(this BlockSelection sel, ICoreAPI api) => api.World.BlockAccessor.GetBlockEntity(sel.Position);
 
+        public static AssetLocation[] ToAssets(this string[] strings)
+        {
+            List<AssetLocation> assets = new List<AssetLocation>();
+            foreach (var val in strings)
+            {
+                assets.Add(val.ToAsset());
+            }
+            return assets.ToArray();
+        }
+        public static AssetLocation[] ToAssets(this List<string> strings) => strings.ToArray().ToAssets();
+
         public static void PlaySoundAtWithDelay(this IWorldAccessor world, AssetLocation location, BlockPos pos, int delay)
         {
             world.RegisterCallback(dt => world.PlaySoundAt(location, pos.X, pos.Y, pos.Z), delay);

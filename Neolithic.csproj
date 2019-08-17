@@ -131,6 +131,7 @@
     <Compile Include="Neolithic\Content\Block Behavior\ChimneyBehavior.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\BlockSwapBehavior.cs" />
     <Compile Include="Neolithic\Content\Block\BlockChandelierFix.cs" />
+    <Compile Include="Neolithic\Systems\LootVesselFix.cs" />
     <Compile Include="Neolithic\Systems\Machines.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Neolithic\Content\Block\BlockLooseStonesModified.cs" />

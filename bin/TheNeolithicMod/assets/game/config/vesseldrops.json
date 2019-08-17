@@ -1,0 +1,296 @@
+{
+    "vessels": [
+        {
+            "name": "seed",
+            "tries": 1,
+            "drops": [
+                {
+                    "chance": 1,
+                    "minQuantity": 5,
+                    "maxQuantity": 7,
+                    "items": [
+                        "seeds-carrot", "seeds-onion", "seeds-spelt", "seeds-turnip", "seeds-rice", "seeds-rye", "seeds-soybean", "seeds-pumpkin", "seeds-cabbage"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "food",
+            "tries": 1,
+            "drops": [
+                {
+                    "chance": 3,
+                    "minQuantity": 8,
+                    "maxQuantity": 15,
+                    "items": [
+                        "grain-spelt", "grain-rice", "grain-flax", "grain-rye"
+                    ]
+                },
+                {
+                    "chance": 0.1,
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "items": [
+                        "resonancearchive-1", "resonancearchive-2", "resonancearchive-3", "resonancearchive-4", "resonancearchive-5", "resonancearchive-6", "resonancearchive-7", "resonancearchive-8", "resonancearchive-9"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "forage",
+            "tries": 2.5,
+            "drops": [
+                {
+                    "chance": 1,
+                    "minQuantity": 2,
+                    "maxQuantity": 6,
+                    "items": [
+                        "flint"
+                    ]
+                },
+                {
+                    "chance": 1,
+                    "minQuantity": 3,
+                    "maxQuantity": 9,
+                    "items": [
+                        "stick"
+                    ]
+                },
+                {
+                    "chance": 1,
+                    "minQuantity": 3,
+                    "maxQuantity": 16,
+                    "items": [
+                        "drygrass"
+                    ]
+                },
+                {
+                    "chance": 1,
+                    "minQuantity": 3,
+                    "maxQuantity": 24,
+                    "items": [
+                        "stone-andesite", "stone-chalk", "stone-claystone", "stone-granite", "stone-sandstone", "stone-shale", "clay-blue", "clay-fire", "cattailtops"
+                    ]
+                },
+                {
+                    "chance": 1,
+                    "minQuantity": 1,
+                    "maxQuantity": 4,
+                    "items": [
+                        "poultice-linen-horsetail"
+                    ]
+                },
+                {
+                    "chance": 0.5,
+                    "minQuantity": 1,
+                    "maxQuantity": 12,
+                    "items": [
+                        "flaxfibers"
+                    ]
+                },
+                {
+                    "chance": 0.3,
+                    "minQuantity": 1,
+                    "maxQuantity": 3,
+                    "items": [
+                        "honeycomb"
+                    ]
+                },
+                {
+                    "chance": 0.3,
+                    "minQuantity": 2,
+                    "maxQuantity": 6,
+                    "items": [
+                        "bamboostakes", "beenade-closed"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "ore",
+            "tries": 1.35,
+            "drops": [
+                {
+                    "chance": 1,
+                    "minQuantity": 2,
+                    "maxQuantity": 12,
+                    "items": [
+                        "ore-lignite", "ore-bituminouscoal"
+                    ]
+                },
+                {
+                    "chance": 1,
+                    "minQuantity": 2,
+                    "maxQuantity": 8,
+                    "items": [
+                        "nugget-nativecopper", "ore-quartz", "nugget-galena"
+                    ]
+                },
+                {
+                    "chance": 0.2,
+                    "minQuantity": 4,
+                    "maxQuantity": 12,
+                    "items": [
+                        "nugget-galena", "nugget-cassiterite", "nugget-sphalerite", "nugget-bismuthinite"
+                    ]
+                },
+                {
+                    "chance": 0.1,
+                    "minQuantity": 4,
+                    "maxQuantity": 12,
+                    "items": [
+                        "nugget-limonite", "nugget-nativegold", "nugget-chromite", "nugget-ilmenite", "nugget-nativesilver", "nugget-magnetite"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "tool",
+            "tries": 2.2,
+            "drops": [
+                {
+                    "chance": 1,
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "items": [
+                        "axe-flint-acacia-sinew"
+                    ]
+                },
+                {
+                    "chance": 1,
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "items": [
+                        "shovel-flint-acacia-sinew"
+                    ]
+                },
+                {
+                    "chance": 0.1,
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "items": [
+                        "axe-copper",
+                        "axe-copper",
+                        "axe-tinbronze"
+                    ]
+                },
+                {
+                    "chance": 0.1,
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "items": [
+                        "shovel-copper",
+                        "shovel-copper",
+                        "axe-tinbronze"
+                    ]
+                },
+                {
+                    "chance": 0.1,
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "items": [
+                        "pickaxe-copper"
+                    ]
+                },
+                {
+                    "chance": 0.1,
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "items": [
+                        "knife-copper",
+                        "knife-copper",
+                        "knife-tinbronze"
+                    ]
+                },
+                {
+                    "chance": 0.1,
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "items": [
+                        "sword-copper",
+                        "sword-copper",
+                        "sword-tinbronze"
+                    ]
+                },
+                {
+                    "chance": 0.1,
+                    "minQuantity": 1,
+                    "maxQuantity": 4,
+                    "items": [
+                        "gear-rusty"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "farming",
+            "tries": 2.5,
+            "drops": [
+                {
+                    "chance": 0.1,
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "items": [
+                        "linensack"
+                    ]
+                },
+                {
+                    "chance": 0.5,
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "items": [
+                        "basket"
+                    ]
+                },
+                {
+                    "chance": 0.75,
+                    "minQuantity": 3,
+                    "maxQuantity": 10,
+                    "items": [
+                        "feather"
+                    ]
+                },
+                {
+                    "chance": 0.75,
+                    "minQuantity": 2,
+                    "maxQuantity": 10,
+                    "items": [
+                        "flaxfibers"
+                    ]
+                },
+                {
+                    "chance": 0.35,
+                    "minQuantity": 2,
+                    "maxQuantity": 10,
+                    "items": [
+                        "flaxtwine"
+                    ]
+                },
+                {
+                    "chance": 0.75,
+                    "minQuantity": 2,
+                    "maxQuantity": 4,
+                    "items": [
+                        "seeds-cabbage"
+                    ]
+                },
+                {
+                    "chance": 0.75,
+                    "minQuantity": 5,
+                    "maxQuantity": 10,
+                    "items": [
+                        "cattailtops"
+                    ]
+                },
+                {
+                    "chance": 0.1,
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "items": [
+                        "scythe-copper", "scythe-tinbronze"
+                    ]
+                }
+            ]
+        }
+    ]
+}
