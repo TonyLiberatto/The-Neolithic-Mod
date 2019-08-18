@@ -101,7 +101,7 @@
                     "minQuantity": 2,
                     "maxQuantity": 6,
                     "items": [
-                        "bamboostakes", "beenade-closed"
+                       "beenade-closed"
                     ]
                 }
             ]
@@ -233,15 +233,7 @@
                     "items": [
                         "linensack"
                     ]
-                },
-                {
-                    "chance": 0.5,
-                    "minQuantity": 1,
-                    "maxQuantity": 1,
-                    "items": [
-                        "basket"
-                    ]
-                },
+                },                
                 {
                     "chance": 0.75,
                     "minQuantity": 3,
