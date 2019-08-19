@@ -1,9 +1,14 @@
 {
 	code: "primitivegate",
-	class: "BlockFenceGate",
+	class: "BlockFenceGate",	
 	attributes: {
 		handbook: {
-			groupBy: ["primitivegate-*"]
+			groupBy: ["primitivegate-*"],
+			handbook: {
+			extraSections: [
+					{ title: "handbook-item-sources", text: "Place a Barked Thin Branch vertically on the ground, right click with any cordage, next right click again with Barked Very Thin Branch to make the Primitive Gate." },
+					]
+		},
 		},
 	},
 	variantgroups: [
