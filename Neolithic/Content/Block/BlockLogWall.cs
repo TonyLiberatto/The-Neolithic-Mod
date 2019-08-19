@@ -14,6 +14,7 @@ namespace TheNeolithicMod
 {
     class BlockLogWall : Block
     {
+        ICoreClientAPI capi;
         public string Wood { get => Variant["wood"]; }
         public string Key { get => FirstCodePart() + Wood; }
 
@@ -26,6 +27,7 @@ namespace TheNeolithicMod
 
         public override void OnLoaded(ICoreAPI api)
         {
+            capi = (api as ICoreClientAPI) != null ? api as ICoreClientAPI : null;
             base.OnLoaded(api);
             wallSystem = api.ModLoader.GetModSystem<WallSystem>();
             if (!wallSystem.styles.ContainsKey(Key))
@@ -51,6 +53,13 @@ namespace TheNeolithicMod
             be?.OnInteract(world, byPlayer, blockSel);
             base.OnBlockInteractStart(world, byPlayer, blockSel);
             return true;
+        }
+
+        public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
+        {
+            StringBuilder builder = new StringBuilder(base.GetPlacedBlockInfo(world, pos, forPlayer));
+            builder = capi.Settings.Bool["extendedDebugInfo"] ? builder.AppendLine(Code.ToString()) : builder;
+            return builder.ToString();
         }
 
     }
@@ -132,10 +141,7 @@ namespace TheNeolithicMod
                             world.SpawnCubeParticles(pos, pos.MidPoint(), 2, 32);
                         }
                     }
-                    else
-                    {
-                        ((byPlayer.Entity as EntityPlayer).Player as IClientPlayer).TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
-                    }
+                    (byPlayer as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
                 }
                 world.RegisterCallback(dt => interact = true, 30);
             }
