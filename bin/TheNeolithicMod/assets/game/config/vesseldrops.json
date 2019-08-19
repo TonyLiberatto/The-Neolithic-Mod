@@ -101,7 +101,7 @@
                     "minQuantity": 2,
                     "maxQuantity": 6,
                     "type": "item", "codes": [
-                        "bamboostakes", "beenade-closed"
+											"beenade-closed"
                     ]
                 }
             ]
