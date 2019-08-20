@@ -1,9 +1,0 @@
-{
-	ingredientPattern: "BB	BB	BB",
-	ingredients: {
-		"B": { type: "block", code: "game:planks-acacia" },
-	},
-	width: 2,
-	height: 3,
-	output: { type: "block", code: "neolithicmod:dooracacia-north-down-closed-left"  }
-}

@@ -1,9 +1,0 @@
-{
-	ingredientPattern: "BB	BB	BB",
-	ingredients: {
-		"B": { type: "block", code: "game:planks-kapok" },
-	},
-	width: 2,
-	height: 3,
-	output: { type: "block", code: "neolithicmod:doorkapok-north-down-closed-left"  }
-}
