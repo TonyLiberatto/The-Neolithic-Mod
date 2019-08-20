@@ -58,7 +58,7 @@ namespace TheNeolithicMod
         public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
         {
             StringBuilder builder = new StringBuilder(base.GetPlacedBlockInfo(world, pos, forPlayer));
-            builder = capi.Settings.Bool["extendedDebugInfo"] ? builder.AppendLine(Code.ToString()) : builder;
+            builder = capi.Settings.Bool["extendedDebugInfo"] ? builder.AppendLine("Code: " + Code.ToString()) : builder;
             return builder.ToString();
         }
 
