@@ -8,6 +8,7 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
+using Vintagestory.GameContent;
 
 namespace TheNeolithicMod
 {
@@ -157,6 +158,42 @@ namespace TheNeolithicMod
         public static string Apd(this string a, string appended)
         {
             return a + "-" + appended;
+        }
+
+        public static void SpawnItemEntity(this IWorldAccessor world, ItemStack[] stacks, Vec3d pos, Vec3d velocity = null)
+        {
+            foreach (ItemStack stack in stacks)
+            {
+                world.SpawnItemEntity(stack, pos, velocity);
+            }
+        }
+
+        public static void SpawnItemEntity(this IWorldAccessor world, JsonItemStack[] stacks, Vec3d pos, Vec3d velocity = null)
+        {
+            foreach (JsonItemStack stack in stacks)
+            {
+                string err = "";
+                stack.Resolve(world, err);
+                world.SpawnItemEntity(stack.ResolvedItemstack, pos, velocity);
+            }
+        }
+
+        public static BlockEntity BlockEntity(this BlockPos pos, IWorldAccessor world)
+        {
+            return world.BlockAccessor.GetBlockEntity(pos);
+        }
+
+        public static BlockEntity BlockEntity(this BlockSelection sel, IWorldAccessor world)
+        {
+            return sel.Position.BlockEntity(world);
+        }
+
+        public static void InitializeAnimators(this BlockEntityAnimationUtil util, Vec3f rot, params string[] CacheDictKeys )
+        {
+            foreach (var val in CacheDictKeys)
+            {
+                util.InitializeAnimator(val, rot);
+            }
         }
 
         public static object GetInstanceField<T>(this T instance, string fieldName)

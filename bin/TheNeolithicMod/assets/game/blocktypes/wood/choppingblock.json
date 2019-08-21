@@ -3,6 +3,12 @@
     "class": "BlockChoppingBlock",
     "entityClass": "ChoppingBlock",
     "behaviors": [ { "name": "HorizontalOrientable"} ],
+    "attributes": {
+        "choppingprops": [ 
+            { "input": { "Type": "block", "Code": "log-placed-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }, 
+            { "input": { "Type": "block", "Code": "branch-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }
+        ]
+    },
     "shapeByType": {
          "*-west":  {"base": "block/wood/choppingblock", "rotateY": 0 },
          "*-south":  {"base": "block/wood/choppingblock", "rotateY": 90 },

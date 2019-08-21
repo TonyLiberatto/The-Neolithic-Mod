@@ -151,10 +151,21 @@
 			"name": "idle",
 			"code": "idle",
 			"quantityframes": 30,
-			"onActivityStopped": "Rewind",
-			"onAnimationEnd": "Repeat",
+			"onActivityStopped": "Stop",
+			"onAnimationEnd": "Hold",
 			"keyframes": [
-
+				{
+					"frame": 0,
+					"elements": {
+						"Cube1": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 }
+					}
+				},
+				{
+					"frame": 29,
+					"elements": {
+						"Cube1": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 }
+					}
+				}
 			]
 		},
 
@@ -162,7 +173,7 @@
 			"name": "chop",
 			"code": "chop",
 			"quantityframes": 30,
-			"onActivityStopped": "Rewind",
+			"onActivityStopped": "Stop",
 			"onAnimationEnd": "Repeat",
 			"keyframes": [
 				{
@@ -208,7 +219,7 @@
 			"name": "chopidle",
 			"code": "chopidle",
 			"quantityframes": 30,
-			"onActivityStopped": "Rewind",
+			"onActivityStopped": "Stop",
 			"onAnimationEnd": "Repeat",
 			"keyframes": [
 				{
