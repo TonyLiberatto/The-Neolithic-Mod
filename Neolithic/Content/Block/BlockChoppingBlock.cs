@@ -120,7 +120,7 @@ namespace TheNeolithicMod
                     }
                 }
             }
-            else if (byPlayer.Entity.Controls.Sprint)
+            else if (!byPlayer.Entity.Controls.Sneak)
             {
                 foreach (var val in props)
                 {
