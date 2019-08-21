@@ -1,9 +1,0 @@
-{
-	ingredientPattern: "BB	BB	BB",
-	ingredients: {
-		"B": { type: "block", code: "game:planks-maple" },
-	},
-	width: 2,
-	height: 3,
-	output: { type: "block", code: "neolithicmod:doormaple-north-down-closed-left"  }
-}
