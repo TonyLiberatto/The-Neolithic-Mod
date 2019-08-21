@@ -1,0 +1,24 @@
+{
+    "code": "choppingblock",
+    "class": "BlockChoppingBlock",
+    "entityClass": "ChoppingBlock",
+    "behaviors": [ { "name": "HorizontalOrientable"} ],
+    "shapeByType": {
+         "*-west":  {"base": "block/wood/choppingblock", "rotateY": 0 },
+         "*-south":  {"base": "block/wood/choppingblock", "rotateY": 90 },
+         "*-east":  {"base": "block/wood/choppingblock", "rotateY": 180 },
+         "*-north":  {"base": "block/wood/choppingblock", "rotateY": 270 }
+    },
+    "variantgroups": [
+        { "code": "wood", "loadFromProperties": "block/wood" },
+        { "code": "rotation", "loadFromProperties": "abstract/horizontalorientation" }
+    ],
+    "textures": {
+        "all": { "base": "block/wood/choppingblock/{wood}" }
+    },
+    "creativeinventory": { "general": ["*-north"] },
+    "sideopaque": { "all": false },
+    "sidesolid": { "all": false },
+    "lightAbsorption": 1,
+    "collisionSelectionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 }
+}

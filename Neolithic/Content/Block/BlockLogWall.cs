@@ -8,6 +8,7 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
+using Vintagestory.Client.NoObf;
 using Vintagestory.ServerMods.NoObf;
 
 namespace TheNeolithicMod
@@ -61,7 +62,6 @@ namespace TheNeolithicMod
             builder = capi.Settings.Bool["extendedDebugInfo"] ? builder.AppendLine("Code: " + Code.ToString()) : builder;
             return builder.ToString();
         }
-
     }
 
     class WallIndexing

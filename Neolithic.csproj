@@ -30,7 +30,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>Neolithic</RootNamespace>
+    <RootNamespace>TheNeolithicMod</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Deploy|AnyCPU'">
     <OutputPath>bin\TheNeolithicMod\</OutputPath>
@@ -131,6 +131,7 @@
     <Compile Include="Neolithic\Content\BlockEntity\BEBucketOverride.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\ChimneyBehavior.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\BlockSwapBehavior.cs" />
+    <Compile Include="Neolithic\Content\Block\BlockChoppingBlock.cs" />
     <Compile Include="Neolithic\Content\Block\BlockChandelierFix.cs" />
     <Compile Include="Neolithic\Systems\LootVesselFix.cs" />
     <Compile Include="Neolithic\Systems\Machines.cs" />
