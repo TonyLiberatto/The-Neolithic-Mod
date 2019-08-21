@@ -192,7 +192,7 @@
     <Folder Include="Neolithic\Content\Entity\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\CarryCapacity-0.4.3.zip" />
+    <None Include="bin\CarryCapacity-0.4.4.zip" />
     <None Include="bin\TheNeolithicMod\All about The Neolithic Mod.docx" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\cheesecloth.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\clay\bowl-fat.json" />
