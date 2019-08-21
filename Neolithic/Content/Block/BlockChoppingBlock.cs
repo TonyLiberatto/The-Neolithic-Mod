@@ -77,7 +77,7 @@ namespace TheNeolithicMod
                     StopAllAnims();
                     if (!action)
                     {
-                        
+
                         util.StartAnimation(new AnimationMetaData() { Code = "chop" });
                     }
                     else
@@ -98,40 +98,36 @@ namespace TheNeolithicMod
         public void OnInteract(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
             ItemSlot slot = byPlayer?.InventoryManager.ActiveHotbarSlot;
-            if (slot?.Itemstack?.Item?.Tool == EnumTool.Axe && action)
+            if (action)
             {
-                foreach (var val in props)
+                if (slot.Itemstack != null)
                 {
-                    if (inventory?[0]?.Itemstack?.Collectible?.WildCardMatch(val.input.Code) != null && inventory?[0]?.StackSize >= val.input.StackSize)
+                    foreach (var val in props)
                     {
-                        action = false;
-                        inventory[0].TakeOut(val.input.StackSize);
-                        api.World.RegisterCallback(dt => action = true, 500);
+                        if (slot.Itemstack.Item?.Tool == val.tool && inventory?[0]?.Itemstack?.Collectible?.WildCardMatch(val.input.Code) != null && inventory?[0]?.StackSize >= val.input.StackSize)
+                        {
+                            action = false;
+                            inventory[0].TakeOut(val.input.StackSize);
+                            api.World.RegisterCallback(dt => action = true, 500);
 
-                        world.SpawnItemEntity(val.output, pos.MidPoint());
+                            world.SpawnItemEntity(val.output, pos.MidPoint());
 
-                        slot.Itemstack.Collectible.DamageItem(api.World, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, 1);
+                            slot.Itemstack.Collectible.DamageItem(api.World, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, 1);
 
-                        (byPlayer as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemAttack);
-                        (world as IServerWorldAccessor)?.PlaySoundAt(new AssetLocation("sounds/block/wood-tool"), blockSel.Position);
-                        (world as IServerWorldAccessor)?.SpawnCubeParticles(pos, pos.MidPoint(), 1, 32, 0.5f);
-                        MarkDirty();
-                        break;
-                    }
-                }
-            }
-            else if (!byPlayer.Entity.Controls.Sneak)
-            {
-                foreach (var val in props)
-                {
-                    if (slot?.Itemstack?.Collectible?.WildCardMatch(val.input.Code) != null)
-                    {
-                        if (inventory?[0] != null)
+                            (byPlayer as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemAttack);
+                            (world as IServerWorldAccessor)?.PlaySoundAt(new AssetLocation("sounds/block/wood-tool"), blockSel.Position);
+                            (world as IServerWorldAccessor)?.SpawnCubeParticles(pos, pos.MidPoint(), 1, 32, 0.5f);
+                            MarkDirty();
+                            break;
+                        }
+                        else if (slot.Itemstack.Collectible.WildCardMatch(val.input.Code))
                         {
                             slot.TryPutInto(world, inventory[0]);
+                            break;
                         }
                     }
                 }
+
             }
         }
 
@@ -154,5 +150,6 @@ namespace TheNeolithicMod
     {
         public JsonItemStack input { get; set; }
         public JsonItemStack[] output { get; set; }
+        public EnumTool tool { get; set; } = EnumTool.Axe;
     }
 }

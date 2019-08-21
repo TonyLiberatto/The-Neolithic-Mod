@@ -5,8 +5,8 @@
     "behaviors": [ { "name": "HorizontalOrientable"} ],
     "attributes": {
         "choppingprops": [ 
-            { "input": { "Type": "block", "Code": "log-placed-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }, 
-            { "input": { "Type": "block", "Code": "branch-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }
+            { "tool": "axe", "input": { "Type": "block", "Code": "log-placed-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }, 
+            { "tool": "axe", "input": { "Type": "block", "Code": "neolithicmod:branch-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }
         ]
     },
     "shapeByType": {
