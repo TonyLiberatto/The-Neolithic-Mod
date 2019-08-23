@@ -19,12 +19,12 @@ namespace TheNeolithicMod
 {
     class BlockChoppingBlock : Block
     {
-        public ChoppingProp[] props;
+        public CraftingProp[] props;
 
         public override void OnLoaded(ICoreAPI api)
         {
             base.OnLoaded(api);
-            props = Attributes["choppingprops"].AsObject<ChoppingProp[]>();
+            props = Attributes["craftingprops"].AsObject<CraftingProp[]>();
         }
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
@@ -47,7 +47,7 @@ namespace TheNeolithicMod
     {
         private bool action = true;
         internal InventoryGeneric inventory;
-        private ChoppingProp[] props;
+        private CraftingProp[] props;
         BlockEntityAnimationUtil util;
 
         public override InventoryBase Inventory { get => inventory; }
@@ -146,10 +146,10 @@ namespace TheNeolithicMod
         }
     }
 
-    class ChoppingProp
+    class CraftingProp
     {
         public JsonItemStack input { get; set; }
         public JsonItemStack[] output { get; set; }
-        public EnumTool tool { get; set; } = EnumTool.Axe;
+        public EnumTool? tool { get; set; } = EnumTool.Axe;
     }
 }
