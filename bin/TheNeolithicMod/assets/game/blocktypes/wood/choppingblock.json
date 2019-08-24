@@ -5,9 +5,10 @@
     "behaviors": [ { "name": "HorizontalOrientable"} ],
     "attributes": {
         "animprops": { "actionAnim": "chop", "hasContentAnim": "chopidle", "idleAnim": "idle" },
+        "__comment": "craftTime is time before next action in milliseconds, ideal time is the same as how long the actionAnim takes to play",
         "craftingprops": [ 
-            { "craftSound": "sounds/block/wood-tool", "tool": "axe", "input": { "Type": "block", "Code": "log-placed-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }, 
-            { "craftSound": "sounds/block/wood-tool", "tool": "axe", "input": { "Type": "block", "Code": "neolithicmod:branch-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }
+            { "craftTime": 500, "craftSound": "sounds/block/wood-tool", "tool": "axe", "input": { "Type": "block", "Code": "log-placed-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }, 
+            { "craftTime": 500, "craftSound": "sounds/block/wood-tool", "tool": "axe", "input": { "Type": "block", "Code": "neolithicmod:branch-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }
         ]
     },
     "shapeByType": {
