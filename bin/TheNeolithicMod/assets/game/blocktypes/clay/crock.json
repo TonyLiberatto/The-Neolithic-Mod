@@ -53,6 +53,9 @@
 		"*-burned-*": {
 			ceramic: { base: "block/clay/{color}-burned" },
 			label: { base: "block/clay/crock/label" }
+		},
+		"*": {
+			label: { base: "block/clay/crock/label" }
 		}
 	},
 	sounds: {

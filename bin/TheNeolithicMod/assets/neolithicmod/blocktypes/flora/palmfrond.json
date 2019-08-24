@@ -21,7 +21,7 @@
     },
     { loadFromProperties: "abstract/horizontalorientation" }
   ],
-  creativeinventory: {  "general": [ "*-placed-north" ], "flora": [ "*-placed-north" ], "neolithicflora": [ "*-placed-north" ]  },
+  creativeinventory: {  "general": [ "" ], "flora": [ "" ], "neolithicflora": [ "" ]  },
   randomDrawOffset: false,
   shapeByType: {
     "*-north": {

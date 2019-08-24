@@ -981,15 +981,23 @@
 
   "item-porkchops-cooked": "Cooked Pork Chops",
   "item-porkchops-raw": "Raw Pork Chops",
+  "item-porkchops-cured": "Cured Pork Chops",
 
   "item-mutton-cooked": "Cooked Mutton",
   "item-mutton-raw": "Raw Mutton",
+  "item-mutton-cured": "Cured Mutton",
 
   "item-chicken-raw": "Raw Chicken",
   "item-chicken-cooked": "Cooked Chicken",
+  "item-chicken-cured": "Cured Chicken",
 
   "item-rabbit-raw": "Raw Rabbit",
   "item-rabbit-cooked": "Cooked Rabbit",
+  "item-rabbit-cured": "Cured Rabbit",
+  
+  "item-hare-raw": "Hare (Raw)",   
+  "item-hare-cooked": "Hare (Cooked)",
+  "item-hare-cured": "Hare (Cured)",    
 
   "item-hammer-primitive-granite": "Primitive Granite Hammer",
   "item-hammer-primitive-andesite": "Primitive Andesite Hammer",
@@ -1995,8 +2003,7 @@
 	"block-3droad-sandstone-flat": "Road Sandstone (Flat)",
 	"block-3droad-shale-flat": "Road Shale (Flat)",
 	"block-3droad-slate-flat": "Road Slate (Flat)",
-	"item-hare-raw": "Hare (Raw)",   
-	"item-hare-cooked": "Hare (Cooked)",   
+	
 	"item-settinghammer-bismuthbronze": "Settinghammer (Bismuthbronze)",   
 	"item-settinghammer-blackbronze": "Settinghammer (Blackbronze)",   
 	"item-settinghammer-copper": "Settinghammer (Copper)",   

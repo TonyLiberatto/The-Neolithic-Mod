@@ -26,30 +26,30 @@
   
   "block-glasslanternframemold-blue-raw": "Raw Glass Lantern Frame Blue Mold",
   "block-glasslanternframemold-fire-raw": "Raw Glass Lantern Frame Fire Mold",
-  "block-glasslanternframemold-Red-raw": "Raw Glass Lantern Frame red Mold",
-  "block-glasslanternframemold-Brown-raw": "Raw Glass Lantern Frame brown Mold",
+  "block-glasslanternframemold-red-raw": "Raw Glass Lantern Frame red Mold",
+  "block-glasslanternframemold-brown-raw": "Raw Glass Lantern Frame brown Mold",
   "block-glasslanternframemold-blue-burned": "Burned Glass Lantern Frame Blue Mold",
   "block-glasslanternframemold-fire-burned": "Burned Glass Lantern Frame Fire Mold",
-  "block-glasslanternframemold-Red-burned": "Burned Glass Lantern Frame red Mold",
-  "block-glasslanternframemold-Brown-burned": "Burned Glass Lantern Frame brown Mold",
+  "block-glasslanternframemold-red-burned": "Burned Glass Lantern Frame red Mold",
+  "block-glasslanternframemold-brown-burned": "Burned Glass Lantern Frame brown Mold",
   
   "block-lanternbasetopmold-blue-raw": "Raw Blue Mold for lantern Base and Top",
   "block-lanternbasetopmold-fire-raw": "Raw  Fire Mold for lantern Base and Top",
-  "block-lanternbasetopmold-Red-raw": "Raw Red Mold for lantern Base and Top",
-  "block-lanternbasetopmold-Brown-raw": "Raw Brown Mold for lantern Base and Top",
+  "block-lanternbasetopmold-red-raw": "Raw Red Mold for lantern Base and Top",
+  "block-lanternbasetopmold-brown-raw": "Raw Brown Mold for lantern Base and Top",
   "block-lanternbasetopmold-blue-burned": "Burned Blue Mold for lantern Base and Top",
   "block-lanternbasetopmold-fire-burned": "Burned Fire Mold for lantern Base and Top",
-  "block-lanternbasetopmold-Red-burned": "Burned Red Mold for lantern Base and Top",
-  "block-lanternbasetopmold-Brown-burned": "Burned Brown Mold for lantern Base and Top",
+  "block-lanternbasetopmold-red-burned": "Burned Red Mold for lantern Base and Top",
+  "block-lanternbasetopmold-brown-burned": "Burned Brown Mold for lantern Base and Top",
   
   "block-lanternsidesmold-blue-raw": "Raw Blue Mold for lantern Sides",
   "block-lanternsidesmold-fire-raw": "Raw  Fire Mold for lantern Sides",
-  "block-lanternsidesmold-Red-raw": "Raw Red Mold for lantern Sides",
-  "block-lanternsidesmold-Brown-raw": "Raw Brown Mold for lantern Sides",
+  "block-lanternsidesmold-red-raw": "Raw Red Mold for lantern Sides",
+  "block-lanternsidesmold-brown-raw": "Raw Brown Mold for lantern Sides",
   "block-lanternsidesmold-blue-burned": "Burned Blue Mold for lantern Sides",
   "block-lanternsidesmold-fire-burned": "Burned Fire Mold for lantern Sides",
-  "block-lanternsidesmold-Red-burned": "Burned Red Mold for lantern Sides",
-  "block-lanternsidesmold-Brown-burned": "Burned Brown Mold for lantern Sides",
+  "block-lanternsidesmold-red-burned": "Burned Red Mold for lantern Sides",
+  "block-lanternsidesmold-brown-burned": "Burned Brown Mold for lantern Sides",
   
   
   
@@ -57,8 +57,8 @@
   
   
   
-  "block-bamboostakes-brown-*": "Brown Bamboo Stakes",
-  "block-bamboostakes-green-*": "Green Bamboo Stakes",
+  "block-bamboostakes-brown": "Brown Bamboo Stakes",
+  "block-bamboostakes-green": "Green Bamboo Stakes",
   
   "block-rockslab-andesite-*": "Andesite Rock Slab",
   "block-rockslab-chalk-*": "Chalk Rock Slab",

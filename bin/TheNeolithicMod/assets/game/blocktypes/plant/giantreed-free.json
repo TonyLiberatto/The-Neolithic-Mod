@@ -14,7 +14,7 @@
 		{ code: "habitat", states: ["free"] },
 		{ code: "state", states: ["normal", "harvested"] }
 	],
-	creativeinventory: { "general": ["*-normal"], "neolithicflora": ["*-normal"] },
+	creativeinventory: { "general": [""], "neolithicflora": [""] },
 	shape: { base: "block/basic/giantreeds-free" },
 	drawtype: "json",
 	renderpass: "OpaqueNoCull",
