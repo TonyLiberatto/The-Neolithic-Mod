@@ -65,7 +65,7 @@ namespace TheNeolithicMod
             api.RegisterBlockClass("BlockMetalWedge", typeof(BlockMetalWedge));
             api.RegisterBlockClass("BlockChandelier", typeof(BlockChandelierFix));
             api.RegisterBlockClass("BlockToolMold", typeof(BlockToolMoldReturnBlock));
-            api.RegisterBlockClass("BlockChoppingBlock", typeof(BlockChoppingBlock));
+            api.RegisterBlockClass("BlockCraftingStation", typeof(BlockCraftingStation));
 
             api.RegisterItemClass("ItemSickle", typeof(ItemSickle));
             api.RegisterItemClass("ItemGiantReedsRoot", typeof(ItemGiantReedsRoot));
@@ -84,7 +84,7 @@ namespace TheNeolithicMod
             api.RegisterBlockEntityClass("BucketB", typeof(BEBucketOverride));           
             api.RegisterBlockEntityClass("NeolithicRoads", typeof(BENeolithicRoads));
             api.RegisterBlockEntityClass("Wedger", typeof(BlockEntityMetalWedge));
-            api.RegisterBlockEntityClass("ChoppingBlock", typeof(BlockEntityChoppingBlock));
+            api.RegisterBlockEntityClass("CraftingStation", typeof(BlockEntityCraftingStation));
 
             AiTaskRegistry.Register("fleepoi", typeof(AiTaskFleePOI));
             AiTaskRegistry.Register("sleep", typeof(AiTaskSleep));

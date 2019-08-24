@@ -1,60 +1,25 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Vintagestory.API.Client;
+﻿using Vintagestory.API.Client;
 using Vintagestory.API.Common;
-using Vintagestory.API.Common.Entities;
-using Vintagestory.API.Config;
-using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
-using Vintagestory.Client.NoObf;
 using Vintagestory.GameContent;
-using Vintagestory.ServerMods.NoObf;
 
 namespace TheNeolithicMod
 {
-    class BlockChoppingBlock : Block
-    {
-        public CraftingProp[] props;
-
-        public override void OnLoaded(ICoreAPI api)
-        {
-            base.OnLoaded(api);
-            props = Attributes["craftingprops"].AsObject<CraftingProp[]>();
-        }
-
-        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
-        {
-            base.OnBlockInteractStart(world, byPlayer, blockSel);
-            (blockSel.BlockEntity(world) as BlockEntityChoppingBlock)?.OnInteract(world, byPlayer, blockSel);
-            return true;
-        }
-
-        public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
-        {
-            StringBuilder builder = new StringBuilder(base.GetPlacedBlockInfo(world, pos, forPlayer));
-            BlockEntityChoppingBlock choppingBlock = (pos.BlockEntity(world) as BlockEntityChoppingBlock);
-            builder = choppingBlock?.inventory?[0]?.Itemstack != null ? builder.AppendLine().AppendLine(choppingBlock.inventory[0].StackSize + "x " + Lang.Get(choppingBlock.inventory[0].Itemstack.Collectible.Code.ToString())) : builder;
-            return builder.ToString();
-        }
-    }
-
-    class BlockEntityChoppingBlock : BlockEntityContainer
+    class BlockEntityCraftingStation : BlockEntityContainer, IBlockShapeSupplier
     {
         private bool action = true;
         internal InventoryGeneric inventory;
-        private CraftingProp[] props;
+        public BlockCraftingStation block;
+        public CraftingProp[] props;
         BlockEntityAnimationUtil util;
 
         public override InventoryBase Inventory { get => inventory; }
         public override string InventoryClassName { get => "choppingblock"; }
-        string[] anims = new string[] { "idle", "chop", "chopidle" };
+        
+        public bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator) => true;
 
-        public BlockEntityChoppingBlock()
+        public BlockEntityCraftingStation()
         {
             inventory = new InventoryGeneric(1, null, null, (id, self) =>
             {
@@ -65,12 +30,12 @@ namespace TheNeolithicMod
         public override void Initialize(ICoreAPI api)
         {
             base.Initialize(api);
-            props = (pos.GetBlock(api) as BlockChoppingBlock).props;
+            block = pos.GetBlock(api) as BlockCraftingStation;
+            props = block?.craftingProps;
             util = new BlockEntityAnimationUtil(api, this);
             if (api.Side.IsClient())
             {
-                util.InitializeAnimators(new Vec3f(pos.GetBlock(api).Shape.rotateX, pos.GetBlock(api).Shape.rotateY, pos.GetBlock(api).Shape.rotateZ), anims);
-                pos.GetBlock(api).DrawType = EnumDrawType.Empty;
+                util.InitializeAnimators(new Vec3f(block.Shape.rotateX, block.Shape.rotateY, block.Shape.rotateZ), block.animProps.allAnims);
 
                 RegisterGameTickListener(dt =>
                 {
@@ -78,18 +43,15 @@ namespace TheNeolithicMod
                     if (!action)
                     {
 
-                        util.StartAnimation(new AnimationMetaData() { Code = "chop" });
+                        util.StartAnimation(new AnimationMetaData() { Code = block.animProps.actionAnim });
+                    }
+                    else if (inventory[0].Itemstack?.StackSize > 0)
+                    {
+                        util.StartAnimation(new AnimationMetaData() { Code = block.animProps.hasContentAnim });
                     }
                     else
                     {
-                        if (inventory[0].Itemstack?.StackSize > 0)
-                        {
-                            util.StartAnimation(new AnimationMetaData() { Code = "chopidle" });
-                        }
-                        else
-                        {
-                            util.StartAnimation(new AnimationMetaData() { Code = "idle" });
-                        }
+                        util.StartAnimation(new AnimationMetaData() { Code = block.animProps.idleAnim });
                     }
                 }, 30);
             }
@@ -115,7 +77,7 @@ namespace TheNeolithicMod
                             slot.Itemstack.Collectible.DamageItem(api.World, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, 1);
 
                             (byPlayer as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemAttack);
-                            (world as IServerWorldAccessor)?.PlaySoundAt(new AssetLocation("sounds/block/wood-tool"), blockSel.Position);
+                            (world as IServerWorldAccessor)?.PlaySoundAt(new AssetLocation(val.craftSound), blockSel.Position);
                             (world as IServerWorldAccessor)?.SpawnCubeParticles(pos, pos.MidPoint(), 1, 32, 0.5f);
                             MarkDirty();
                             break;
@@ -133,7 +95,7 @@ namespace TheNeolithicMod
 
         public void StopAllAnims()
         {
-            foreach (var val in anims)
+            foreach (var val in block.animProps.allAnims)
             {
                 util.StopAnimation(val);
             }
@@ -144,12 +106,5 @@ namespace TheNeolithicMod
             base.OnBlockRemoved();
             StopAllAnims();
         }
-    }
-
-    class CraftingProp
-    {
-        public JsonItemStack input { get; set; }
-        public JsonItemStack[] output { get; set; }
-        public EnumTool? tool { get; set; } = EnumTool.Axe;
     }
 }

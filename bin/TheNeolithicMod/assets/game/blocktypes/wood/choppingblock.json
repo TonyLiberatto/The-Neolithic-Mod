@@ -1,12 +1,13 @@
 {
     "code": "choppingblock",
-    "class": "BlockChoppingBlock",
-    "entityClass": "ChoppingBlock",
+    "class": "BlockCraftingStation",
+    "entityClass": "CraftingStation",
     "behaviors": [ { "name": "HorizontalOrientable"} ],
     "attributes": {
+        "animprops": { "actionAnim": "chop", "hasContentAnim": "chopidle", "idleAnim": "idle" },
         "craftingprops": [ 
-            { "tool": "axe", "input": { "Type": "block", "Code": "log-placed-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }, 
-            { "tool": "axe", "input": { "Type": "block", "Code": "neolithicmod:branch-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }
+            { "craftSound": "sounds/block/wood-tool", "tool": "axe", "input": { "Type": "block", "Code": "log-placed-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }, 
+            { "craftSound": "sounds/block/wood-tool", "tool": "axe", "input": { "Type": "block", "Code": "neolithicmod:branch-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }
         ]
     },
     "shapeByType": {

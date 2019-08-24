@@ -128,10 +128,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Neolithic\Content\Properties\CraftingProp.cs" />
+    <Compile Include="Neolithic\Content\Properties\AnimProps.cs" />
+    <Compile Include="Neolithic\Content\BlockEntity\BECraftingStation.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BEBucketOverride.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\ChimneyBehavior.cs" />
     <Compile Include="Neolithic\Content\Block Behavior\BlockSwapBehavior.cs" />
-    <Compile Include="Neolithic\Content\Block\BlockChoppingBlock.cs" />
+    <Compile Include="Neolithic\Content\Block\BlockCraftingStation.cs" />
     <Compile Include="Neolithic\Content\Block\BlockChandelierFix.cs" />
     <Compile Include="Neolithic\Systems\LootVesselFix.cs" />
     <Compile Include="Neolithic\Systems\Machines.cs" />
