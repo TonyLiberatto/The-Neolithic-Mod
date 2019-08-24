@@ -196,6 +196,11 @@ namespace TheNeolithicMod
             }
         }
 
+        public static void InitializeAnimators(this BlockEntityAnimationUtil util, Vec3f rot, List<string> CacheDictKeys)
+        {
+            InitializeAnimators(util, rot, CacheDictKeys.ToArray());
+        }
+
         public static object GetInstanceField<T>(this T instance, string fieldName)
         {
             BindingFlags bindFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
