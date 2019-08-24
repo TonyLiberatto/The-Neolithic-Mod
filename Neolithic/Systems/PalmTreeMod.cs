@@ -124,7 +124,7 @@ namespace TheNeolithicMod
             }
         }
 
-        public override bool TryPlaceBlockForWorldGen(IBlockAccessor blockAccessor, BlockPos pos, BlockFacing onBlockFace, Random worldgenRandom)
+        public override bool TryPlaceBlockForWorldGen(IBlockAccessor blockAccessor, BlockPos pos, BlockFacing onBlockFace, LCGRandom worldgenRandom)
         {
             int fruit = (int)Math.Round(worldgenRandom.NextDouble() * 2.0);            
             GenPalmTree(blockAccessor, pos, fruit);
