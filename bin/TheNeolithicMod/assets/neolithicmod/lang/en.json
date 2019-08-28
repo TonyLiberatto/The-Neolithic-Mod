@@ -10,6 +10,26 @@
   "Place a Barked Very Thin Branch horizontally , right click with any cordage, then right click again with 3 more Barked Very Thin Branches.":"Place a Barked Very Thin Branch horizontally , right click with any cordage, then right click again with 3 more Barked Very Thin Branches.",
   "Place a Debarked Very Thin Branch vertically on the ground, right click with any cordage, next right click again with Debarked Very Thin Branch to make the scafolding.":"Place a Debarked Very Thin Branch vertically on the ground, right click with any cordage, next right click again with Debarked Very Thin Branch to make the scafolding.",
   
+  "block-backpack": "Backpack",
+  "block-basket": "Basket",
+  "block-cordage-leatherstrips": "Cordage (Leatherstrips)",
+  "block-cordage-sinew": "Cordage (Sinew)",
+  "block-cordage-sisal-twine": "Cordage Sisal (Twine)",
+  "block-dooracacia-east-down-closed-left": "Dooracacia Closed (Left)",
+  "block-doorbirch-east-down-closed-left": "Doorbirch Closed (Left)",
+  "block-doorkapok-east-down-closed-left": "Doorkapok Closed (Left)",
+  "block-doormaple-east-down-closed-left": "Doormaple Closed (Left)",
+  "block-dooroak-east-down-closed-left": "Dooroak Closed (Left)",
+  "block-panel-birch-planks-east": "Panel Birch Planks",
+  "block-panel-oak-planks-east": "Panel Oak Planks",
+  "block-panel-maple-planks-east": "Panel Maple Planks",
+  "block-panel-pine-planks-east": "Panel Pine Planks",
+  "block-panel-acacia-planks-east": "Panel Acacia Planks",
+  "block-panel-kapok-planks-east": "Panel Kapok Planks",
+  
+  "item-carnivoremeat-cured": "Carnivoremeat (Cured)",
+  
+  
   "block-branch-cordage-acacia-bark-*":"Acacia Barked Very Thin Branch with Cordage",
   "block-branch-cordage-birch-bark-*":"Birch Barked Very Thin Branch with Cordage",
   "block-branch-cordage-oak-bark-*":"Oak Barked Very Thin Branch with Cordage",

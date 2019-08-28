@@ -1,0 +1,10 @@
+{
+	code: "hinges",
+	variantgroups: [
+		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver" ] },
+	],
+	texture: { base: "item/resource/metal/hinges" },
+    creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	maxstacksize: 64,	
+	materialDensity: 100,
+}

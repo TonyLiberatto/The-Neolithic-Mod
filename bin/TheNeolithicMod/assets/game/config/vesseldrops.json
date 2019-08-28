@@ -238,8 +238,8 @@
                     "chance": 0.5,
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "type": "item", "codes": [
-                        "basket"
+                    "type": "block", "codes": [
+                        "neolithicmod:basket"
                     ]
                 },
                 {
