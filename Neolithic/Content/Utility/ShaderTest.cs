@@ -21,6 +21,7 @@ namespace TheNeolithicMod
         public static Vec3f[] vec3s;
         public static float[] floats;
         ITreeAttribute healthTree;
+        long id;
 
         readonly string[] uniforms = new string[]
         {
@@ -43,13 +44,20 @@ namespace TheNeolithicMod
         public override void StartClientSide(ICoreClientAPI api)
         {
             capi = api;
-            
-            api.Event.PlayerJoin += StartShade;
+
+            id = api.Event.RegisterGameTickListener(dt =>
+            {
+                if (capi.World.Player?.Entity != null)
+                {
+                    StartShade(capi.World.Player);
+                    api.Event.UnregisterGameTickListener(id);
+                }
+            }, 500);
         }
 
         public void StartShade(IPlayer player)
         {
-            healthTree = capi.World.Player.Entity.WatchedAttributes.GetTreeAttribute("health");
+            healthTree = player.Entity.WatchedAttributes.GetTreeAttribute("health");
 
             controls = GetControls();
             vec3s = GetVec3s();
