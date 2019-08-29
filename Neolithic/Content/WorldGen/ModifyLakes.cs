@@ -17,7 +17,7 @@ using Vintagestory.ServerMods.NoObf;
 
 namespace TheNeolithicMod
 {
-    public class DisableVanillaLakes : ModSystem
+    public class ModifyLakes : ModSystem
     {
         ICoreServerAPI api;
         public override double ExecuteOrder() => 0;

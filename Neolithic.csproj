@@ -136,6 +136,7 @@
     <Compile Include="Neolithic\Content\Block Behavior\BlockSwapBehavior.cs" />
     <Compile Include="Neolithic\Content\Block\BlockCraftingStation.cs" />
     <Compile Include="Neolithic\Content\Block\BlockChandelierFix.cs" />
+    <Compile Include="Neolithic\Content\Utility\ShaderTest.cs" />
     <Compile Include="Neolithic\Content\WorldGen\ModifyLakes.cs" />
     <Compile Include="Neolithic\Systems\LootVesselFix.cs" />
     <Compile Include="Neolithic\Systems\Machines.cs" />
@@ -182,6 +183,7 @@
     <Compile Include="Neolithic\Systems\PalmTreeMod.cs" />
     <Compile Include="Neolithic\Systems\Remapper.cs" />
     <Compile Include="Neolithic\Systems\ReturnBlockTest.cs" />
+    <Compile Include="Neolithic\Systems\UnderSeaWaterEffects.cs" />
     <Compile Include="Neolithic\TheNeolithicMod.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -261,6 +263,7 @@
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\plant\giantreed-free.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\plant\giantreed-water.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\plant\plaintreesapling.json" />
+    <None Include="bin\TheNeolithicMod\assets\game\blocktypes\plant\seaweed.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\plant\sisal\sisal.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\soil\clay.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\stone\cobble\cobblestonestairs.json" />
