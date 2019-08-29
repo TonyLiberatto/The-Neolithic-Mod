@@ -22,11 +22,12 @@ namespace TheNeolithicMod
         ICoreServerAPI api;
         public override double ExecuteOrder() => 0;
         public override bool ShouldLoad(EnumAppSide forSide) => forSide.IsServer();
-        long id;
+        long[] ids = new long[2];
 
         public override void StartServerSide(ICoreServerAPI api)
         {
             this.api = api;
+            
             api.Event.ServerRunPhase(EnumServerRunPhase.LoadGamePre, ChangeLakeWater);
         }
 
@@ -34,15 +35,22 @@ namespace TheNeolithicMod
         {
             NeolithicGlobalConfig config = api.Assets.Get("worldgen/global.json").ToObject<NeolithicGlobalConfig>();
             config.SetApi(api);
-            id = api.Event.RegisterGameTickListener(dt => 
+            ids[0] = api.Event.RegisterGameTickListener(dt => 
             {
                 if (api.ModLoader.GetModSystem<GenLakes>().GlobalConfig != null)
                 {
                     api.ModLoader.GetModSystem<GenLakes>().GlobalConfig.waterBlockCode = config.lakeWaterBlockCode;
                     api.ModLoader.GetModSystem<GenLakes>().GlobalConfig.waterBlockId = config.lakeWaterBlockId;
-                    api.ModLoader.GetModSystem<GenLakes>().GlobalConfig.lakeIceBlockCode = config.lakeIceBlockCode;
-                    api.ModLoader.GetModSystem<GenLakes>().GlobalConfig.lakeIceBlockId = config.lakeIceBlockId;
-                    api.Event.UnregisterGameTickListener(id);
+                    api.Event.UnregisterGameTickListener(ids[0]);
+                }
+            }, 30);
+            ids[1] = api.Event.RegisterGameTickListener(dt =>
+            {
+                if (api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig != null)
+                {
+                    api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig.waterBlockCode = config.lakeWaterBlockCode;
+                    api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig.waterBlockId = config.lakeWaterBlockId;
+                    api.Event.UnregisterGameTickListener(ids[1]);
                 }
             }, 30);
         }

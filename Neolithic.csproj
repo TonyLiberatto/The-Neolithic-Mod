@@ -136,7 +136,7 @@
     <Compile Include="Neolithic\Content\Block Behavior\BlockSwapBehavior.cs" />
     <Compile Include="Neolithic\Content\Block\BlockCraftingStation.cs" />
     <Compile Include="Neolithic\Content\Block\BlockChandelierFix.cs" />
-    <Compile Include="Neolithic\Content\WorldGen\GenLakes.cs" />
+    <Compile Include="Neolithic\Content\WorldGen\ModifyLakes.cs" />
     <Compile Include="Neolithic\Systems\LootVesselFix.cs" />
     <Compile Include="Neolithic\Systems\Machines.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BlockEntityChimney.cs" />
