@@ -51,7 +51,12 @@
 		"all": { base: "block/wood/doors/{wood}/bottom_left" },		
 	},
 	materialDensity: 400,
-	collisionSelectionBox: { x1: 0, y1: 0, z1: 0.4375, x2: 1, y2: 1, z2: 0.5625 },
+	collisionSelectionBoxByType: { 
+		"*-north": { x1: 0, y1: 0, z1: 0.4375, x2: 1, y2: 1, z2: 0.5625 },
+		"*-east": { x1: 0.4375, y1: 0, z1: 0, x2: 0.5625, y2: 1, z2: 1 },
+		"*-south": { x1: 0, y1: 0, z1: 0.4375, x2: 1, y2: 1, z2: 0.5625 },
+		"*-west": { x1: 0.4375, y1: 0, z1: 0, x2: 0.5625, y2: 1, z2: 1 },		
+	},
 	
 	guiTransform: {
 		translation: { x: 0, y: 2, z: 0 },
