@@ -64,6 +64,7 @@ namespace TheNeolithicMod
 
             capi.Event.ReloadShader += LoadShaders;
             LoadShaders();
+            if (orthoRenderers == null) return;
 
             for (int i = 0; i < orthoRenderers.Length; i++)
             {
@@ -74,7 +75,8 @@ namespace TheNeolithicMod
         public bool LoadShaders()
         {
             List<OrthoRenderer> rendererers = new List<OrthoRenderer>();
-            orthoShaderKeys = capi.Assets.TryGet("config/orthoshaderlist.json")?.ToObject<string[]>() ?? new string[] { "underwater" };
+            orthoShaderKeys = capi.Assets.TryGet("config/orthoshaderlist.json")?.ToObject<string[]>();
+            if (orthoShaderKeys == null) return false;
 
             for (int i = 0; i < orthoShaderKeys.Length; i++)
             {

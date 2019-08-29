@@ -28,14 +28,16 @@ namespace TheNeolithicMod
                 GetPlayerWaterDepth(api, out WaterProps prop, out float num);
                 if (num > 0)
                 {
-                    activeColor = prop.Color.Clone();
-                    activeColor.W = GameMath.Max(activeColor.W, GameMath.Min(activeColor.W * (num*0.5f), 0.8f));
+                    activeColor.X = prop.Color.X;
+                    activeColor.Y = prop.Color.Y;
+                    activeColor.Z = prop.Color.Z;
+                    activeColor.W = GameMath.Max(prop.Color.W, GameMath.Min(activeColor.W * (num*0.5f), 0.8f));
                 }
                 else
                 {
                     activeColor.W = 0;
                 }
-            }, 30);
+            }, 7);
         }
 
         public void GetPlayerWaterDepth(ICoreClientAPI api, out WaterProps prop, out float num)
