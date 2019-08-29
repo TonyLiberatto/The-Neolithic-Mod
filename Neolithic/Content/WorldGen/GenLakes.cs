@@ -11,6 +11,7 @@ using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.Client.NoObf;
+using Vintagestory.GameContent;
 using Vintagestory.ServerMods;
 using Vintagestory.ServerMods.NoObf;
 
@@ -33,7 +34,6 @@ namespace TheNeolithicMod
         {
             NeolithicGlobalConfig config = api.Assets.Get("worldgen/global.json").ToObject<NeolithicGlobalConfig>();
             config.SetApi(api);
-            //api.ModLoader.GetModSystem<GenLakes>()
             id = api.Event.RegisterGameTickListener(dt => 
             {
                 if (api.ModLoader.GetModSystem<GenLakes>().GlobalConfig != null)
@@ -45,6 +45,22 @@ namespace TheNeolithicMod
                     api.Event.UnregisterGameTickListener(id);
                 }
             }, 30);
+        }
+    }
+
+    public class BlockSeaweedOverride : BlockSeaweed
+    {
+        public override bool TryPlaceBlockForWorldGen(IBlockAccessor blockAccessor, BlockPos pos, BlockFacing onBlockFace, LCGRandom worldGenRand)
+        {
+            bool gen = false;
+            BlockPos pos1 = pos.DownCopy(1);
+            if (blockAccessor.GetBlock(pos1).LiquidCode == "seawater")
+            {
+                blockAccessor.GetBlock(pos1).LiquidCode = "water";
+                gen = base.TryPlaceBlockForWorldGen(blockAccessor, pos, onBlockFace, worldGenRand);
+                blockAccessor.GetBlock(pos1).LiquidCode = "seawater";
+            }
+            return gen;
         }
     }
 
