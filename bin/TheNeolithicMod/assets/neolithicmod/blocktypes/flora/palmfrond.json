@@ -21,6 +21,10 @@
     },
     { loadFromProperties: "abstract/horizontalorientation" }
   ],
+	vertexFlags: {
+		zOffset: 4,
+		leavesWindWave: true
+	},
   creativeinventory: {  "general": [ "" ], "flora": [ "" ], "neolithicflora": [ "" ]  },
   randomDrawOffset: false,
   shapeByType: {
