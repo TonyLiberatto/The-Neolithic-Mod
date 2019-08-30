@@ -2,6 +2,7 @@
 	code: "door-full",
 	behaviorsByType: { 
 		"*-acacia-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:dooracacia-east-down-closed-left"}}}],
+		"*-aged-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:dooraged-east-down-closed-left"}}}],
 		"*-birch-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:doorbirch-east-down-closed-left"}}}],
 		"*-kapok-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:doorkapok-east-down-closed-left"}}}],
 		"*-maple-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:doormaple-east-down-closed-left"}}}],
@@ -9,7 +10,7 @@
 		"*-pine-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:doorpine-east-down-closed-left"}}}],
 	},
 	variantgroups: [
-		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
+		{ code: "wood", states: ["acacia", "aged", "birch", "kapok", "maple", "oak", "pine"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
 	],
 	attributes: {
