@@ -10,6 +10,13 @@
                 "requiresdaylight": true,
                 "dryingtime": 12,
                 "texturesource": { "type": "block", "code": "seawater-still-7" }
+            },
+            {
+                "input": { "type": "item", "code": "salt", "stacksize": 1 },
+                "output": null,
+                "requiresdaylight": true,
+                "dryingtime": null,
+                "texturesource": { "type": "block", "code": "gravel-chalk" }
             }
         ]
     },

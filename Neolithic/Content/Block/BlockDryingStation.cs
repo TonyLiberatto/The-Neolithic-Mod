@@ -66,32 +66,32 @@ namespace TheNeolithicMod
 
             RegisterGameTickListener(dt =>
             {
-            if (api.Side.IsClient())
-            {
+                if (api.Side.IsClient())
+                {
+                    ICoreClientAPI capi = api as ICoreClientAPI;
+                    float? translateY = (((float?)inventory[0].Itemstack?.StackSize / inventory[0].Itemstack?.Collectible?.MaxStackSize) * 0.35f) + 0.01f;
+                    float y = translateY ?? 0;
+
+                    capi.Tesselator.TesselateBlock(block, out mesh);
+
                     foreach (var val in props)
                     {
                         if (inventory[0].Itemstack?.Collectible?.Code?.ToString() == val.Input.Code.ToString())
                         {
-                            ICoreClientAPI capi = api as ICoreClientAPI;
-
-                            float? translateY = (((float?)inventory[0].Itemstack?.StackSize / inventory[0].Itemstack?.Collectible?.MaxStackSize) * 0.35f) + 0.01f;
-                            float y = translateY ?? 0;
-
-                            capi.Tesselator.TesselateBlock(block, out mesh);
                             MeshData fillPlane = QuadMeshUtil.GetCustomQuad(0, 0, 0, 0.9f, 0.9f, 255, 255, 255, 255);
                             fillPlane.Rotate(new Vec3f(0, 0, 0), GameMath.DEG2RAD * -90, 0, 0).Translate(0.05f, y, 0.95f);
                             TextureAtlasPosition texPos = new TextureAtlasPosition();
 
                             texPos = val.TextureSource.Type == EnumItemClass.Block ? capi.BlockTextureAtlas.GetPosition(val.TextureSource.Code.GetBlock(api), "up")
                             : capi.ItemTextureAtlas.GetPosition(val.TextureSource.Code.GetItem(api));
-                            if (val.TextureSource.Code.GetBlock(api)?.ShapeHasWaterTint != null) fillPlane.AddTintIndex(2);
+                            if ((bool)val.TextureSource.Code.GetBlock(api).ShapeHasWaterTint) fillPlane.AddTintIndex(2);
                             fillPlane.SetUv(texPos);
                             mesh.AddMeshData(fillPlane);
-                            MarkDirty(true);
                             break;
                         }
                     }
-                    
+                    MarkDirty(true);
+
                 }
             }, 30);
         }
@@ -122,20 +122,29 @@ namespace TheNeolithicMod
                             }
                         }
                     }
-                    else
+                    else if (bucket.TryPutContent(world, slot.Itemstack, inventory[0].Itemstack, 1) > 0)
                     {
-                        if (bucket.TryPutContent(world, slot.Itemstack, inventory[0].Itemstack, 1) > 0)
-                        {
-                            inventory[0].TakeOut(1);
-                        }
+                        inventory[0].TakeOut(1);
                     }
                 }
                 else
                 {
                     foreach (var val in props)
                     {
-
+                        if (val.Input.Code.ToString() == slot.Itemstack?.Collectible?.Code?.ToString())
+                        {
+                            if (byPlayer.Entity.Controls.Sneak)
+                            {
+                                inventory[0].TryPutInto(world, slot);
+                            }
+                            else
+                            {
+                                slot.TryPutInto(world, inventory[0]);
+                            }
+                            return;
+                        }
                     }
+                    inventory[0].TryPutInto(world, slot);
                 }
             }
         }

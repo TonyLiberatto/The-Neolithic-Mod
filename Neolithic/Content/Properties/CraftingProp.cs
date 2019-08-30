@@ -15,7 +15,7 @@ namespace TheNeolithicMod
     {
         public JsonItemStack Input { get; set; }
         public JsonItemStack[] Output { get; set; }
-        public int DryingTime { get; set; } = 12;
+        public int? DryingTime { get; set; } = 12;
         public bool RequiresDaylight { get; set; } = true;
         public JsonItemStack TextureSource { get; set; }
     }
