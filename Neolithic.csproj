@@ -128,6 +128,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Neolithic\Content\Block\BlockDryingStation.cs" />
     <Compile Include="Neolithic\Content\Properties\CraftingProp.cs" />
     <Compile Include="Neolithic\Content\Properties\AnimProps.cs" />
     <Compile Include="Neolithic\Content\BlockEntity\BECraftingStation.cs" />

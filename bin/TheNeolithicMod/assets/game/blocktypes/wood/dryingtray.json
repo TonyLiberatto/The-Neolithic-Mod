@@ -1,0 +1,30 @@
+{
+    "code": "dryingtray",
+    "class": "BlockDryingStation",
+    "entityClass": "DryingStation",
+    "attributes": {
+        "dryingprops": [ 
+            {
+                "input": { "type": "item", "code": "seawaterportion", "stacksize": 1 },
+                "output": [ { "type": "item", "code": "salt", "stacksize": 1 } ],
+                "requiresdaylight": true,
+                "dryingtime": 12,
+                "texturesource": { "type": "block", "code": "seawater-still-7" }
+            }
+        ]
+    },
+    "shapeByType": {
+         "*":  {"base": "block/wood/dryingtray"}
+    },
+    "variantgroups": [
+        { "code": "wood", "loadFromProperties": "block/wood" }
+    ],
+    "textures": {
+        "all": { "base": "block/wood/planks/{wood}*" }
+    },
+    "creativeinventory": { "general": ["*"] },
+    "sideopaque": { "all": false },
+    "sidesolid": { "all": false },
+    "lightAbsorption": 1,
+    "collisionSelectionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 }
+}

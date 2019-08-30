@@ -184,6 +184,8 @@ namespace TheNeolithicMod
             return world.BlockAccessor.GetBlockEntity(pos);
         }
 
+        public static BlockEntity BlockEntity(this BlockPos pos, ICoreAPI api) => pos.BlockEntity(api.World);
+
         public static BlockEntity BlockEntity(this BlockSelection sel, IWorldAccessor world)
         {
             return sel.Position.BlockEntity(world);
@@ -201,6 +203,8 @@ namespace TheNeolithicMod
         {
             InitializeAnimators(util, rot, CacheDictKeys.ToArray());
         }
+
+        public static void SetUv(this MeshData mesh, TextureAtlasPosition texPos) => mesh.SetUv(new float[] {texPos.x1, texPos.y1, texPos.x2, texPos.y1, texPos.x2, texPos.y2, texPos.x1, texPos.y2 });
 
         public static object GetInstanceField<T>(this T instance, string fieldName)
         {
