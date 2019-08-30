@@ -24,6 +24,14 @@
     "file": "game:blocktypes/wood/generic/bucket.json"
   },
   {
+    "op": "add",
+    "path": "/textures/seawaterportion",
+    "value": {
+      "base": "block/liquid/seawater"
+    },
+    "file": "game:blocktypes/wood/generic/bucket.json"
+  },
+  {
     "op": "replace",
     "path": "/entityClass",
     "value": "BucketB",

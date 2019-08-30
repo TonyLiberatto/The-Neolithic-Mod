@@ -141,6 +141,7 @@ namespace TheNeolithicMod
         public static bool IsSpectator(this EnumGameMode gamemode) => gamemode == EnumGameMode.Spectator;
         public static bool IsGuest(this EnumGameMode gamemode) => gamemode == EnumGameMode.Guest;
         public static void PlaySoundAt(this IWorldAccessor world, AssetLocation loc, BlockPos pos) => world.PlaySoundAt(loc, pos.X, pos.Y, pos.Z);
+        public static int GetID(this AssetLocation loc, ICoreAPI api) => loc.GetBlock(api).BlockId;
 
         public static string WithDomain(this string a) => a.IndexOf(":") == -1 ? "game:" + a : a;
 

@@ -100,5 +100,35 @@
 			chance: 1,
 			placement: "NearWater"
 		}
+  },
+  {
+    file: "game:worldgen/blockpatches", op: "replace", path: "/patches/2", value: 
+			
+        {
+			comment: "Large patches of seaweed",
+			blockCodes: ["seaweed-section"],
+			minTemp: 3,
+			maxTemp: 40,
+			minRain: 0,
+			maxRain: 1,
+			quantity: { avg: 25, var: 15 },
+			offsetX: { avg: 0, var: 12 },
+			offsetZ: { avg: 0, var: 12 },
+			chance: 1,
+		}
+  },
+  {
+    file: "game:worldgen/blockpatches", op: "replace", path: "/patches/3", value: 
+			
+        {
+			comment: "Small patches of seaweed",
+			blockCodes: ["seaweed-section"],
+			minTemp: 3,
+			maxTemp: 40,
+			minRain: 0,
+			maxRain: 1,
+			quantity: { avg: 5, var: 5 },
+			chance: 1,
+		}
   }
 ]
