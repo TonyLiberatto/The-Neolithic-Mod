@@ -14,7 +14,7 @@
 		},
 		],
 	variantgroups: [
-		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
+		{ code: "wood", states: ["acacia", "aged", "birch", "kapok", "maple", "oak", "pine"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
 	],
 	attributes: {

@@ -1,20 +1,35 @@
 {
 	code: "door-assemble-bamboo",
-	behaviors: [ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},
-		{
-			name: "BlockSwapBehavior",
-			properties: {		
-				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
-				"particleRadius": 2,
-				"particleQuantity": 16,								
-				"swapBlocks": [
-					{ "Tool": "neolithicmod:panel-bamboo-{color}-east", "Makes": "neolithicmod:door-full-bamboo-{color}-east", "Takes": null, "Count": 1 },					
-				],
+	behaviorsByType: {
+		"*-green-*":[ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},
+			{
+				name: "BlockSwapBehavior",
+				properties: {		
+					"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
+					"particleRadius": 2,
+					"particleQuantity": 16,								
+					"swapBlocks": [
+						{ "Tool": "neolithicmod:panel-bamboo-green-east", "Makes": "neolithicmod:door-full-bamboo-green-east", "Takes": null, "Count": 1 },					
+					],
+				},
 			},
-		},
 		],
+		"*-brown-*":[ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},
+			{
+				name: "BlockSwapBehavior",
+				properties: {		
+					"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
+					"particleRadius": 2,
+					"particleQuantity": 16,								
+					"swapBlocks": [
+						{ "Tool": "neolithicmod:panel-bamboo-brown-east", "Makes": "neolithicmod:door-full-bamboo-brown-east", "Takes": null, "Count": 1 },					
+					],
+				},
+			},
+		],
+	},	
 	variantgroups: [		
-		{ code: "color", states: ["brown", "green"] },
+		{ code: "wood", states: ["brown", "green"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },
 		
 	],
@@ -49,11 +64,15 @@
 		"walk": "walk/wood"
 	},
 	textures: {
-		"all": { base: "block/wood/doors/bamboo-{color}/bottom_left" },		
+		"all": { base: "block/wood/doors/bamboo-{wood}/bottom_left" },		
 	},
 	materialDensity: 400,
-	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.5, z2: 0.9375 },
-	collisionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.5, z2: 0.9375 },
+	collisionSelectionBoxByType: { 
+		"*-north": { x1: 0, y1: 0, z1: 0.4375, x2: 1, y2: 1, z2: 0.5625 },
+		"*-east": { x1: 0.4375, y1: 0, z1: 0, x2: 0.5625, y2: 1, z2: 1 },
+		"*-south": { x1: 0, y1: 0, z1: 0.4375, x2: 1, y2: 1, z2: 0.5625 },
+		"*-west": { x1: 0.4375, y1: 0, z1: 0, x2: 0.5625, y2: 1, z2: 1 },		
+	},
 	guiTransform: {
 		translation: { x: 0, y: 2, z: 0 },
 		origin: { x: 0.5, y: 0.25, z: 0.5 },
