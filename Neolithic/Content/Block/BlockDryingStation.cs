@@ -50,6 +50,7 @@ namespace TheNeolithicMod
         public override string InventoryClassName { get => "dryingstation"; }
         public DryingProp[] props;
         public MeshData mesh;
+        public double timeWhenDone = 0;
 
         public BlockEntityDryingStation()
         {
@@ -93,7 +94,42 @@ namespace TheNeolithicMod
                     MarkDirty(true);
 
                 }
+                else if (api.Side.IsServer())
+                {
+                    foreach (var val in props)
+                    {
+                        if (inventory[0].Itemstack?.Collectible?.Code?.ToString() == val.Input.Code.ToString() && val.Output != null)
+                        {
+                            if (api.World.Calendar.TotalHours > timeWhenDone && timeWhenDone != 0)
+                            {
+                                timeWhenDone = 0;
+                                ItemStack tmpStack = val.Output.Type == EnumItemClass.Block ? new ItemStack(val.Output.Code.GetBlock(api)) : new ItemStack(val.Output.Code.GetItem(api));
+                                tmpStack.StackSize = inventory[0].Itemstack.StackSize * val.Output.StackSize;
+                                inventory[0].Itemstack = tmpStack;
+                                inventory.MarkSlotDirty(0);
+                                MarkDirty(true);
+                            }
+                            else
+                            {
+                                timeWhenDone = api.World.Calendar.TotalHours + (double)val.DryingTime;
+                            }
+                            break;
+                        }
+                    }
+                }
             }, 30);
+        }
+
+        public override void FromTreeAtributes(ITreeAttribute tree, IWorldAccessor worldForResolving)
+        {
+            timeWhenDone = tree.GetDouble("timewhendone", 0);
+            base.FromTreeAtributes(tree, worldForResolving);
+        }
+
+        public override void ToTreeAttributes(ITreeAttribute tree)
+        {
+            tree.SetDouble("timewhendone", timeWhenDone);
+            base.ToTreeAttributes(tree);
         }
 
         public bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
@@ -112,6 +148,13 @@ namespace TheNeolithicMod
                     BlockBucket bucket = (slot.Itemstack.Block as BlockBucket);
                     if (byPlayer.Entity.Controls.Sneak)
                     {
+                        if (bucket.TryPutContent(world, slot.Itemstack, inventory[0].Itemstack, 1) > 0)
+                        {
+                            inventory[0].TakeOut(1);
+                        }
+                    }
+                    else
+                    {
                         foreach (var val in props)
                         {
                             if (val.Input.Code.ToString() == bucket.GetContent(world, slot.Itemstack)?.Collectible?.Code?.ToString())
@@ -122,10 +165,6 @@ namespace TheNeolithicMod
                             }
                         }
                     }
-                    else if (bucket.TryPutContent(world, slot.Itemstack, inventory[0].Itemstack, 1) > 0)
-                    {
-                        inventory[0].TakeOut(1);
-                    }
                 }
                 else
                 {
@@ -135,11 +174,11 @@ namespace TheNeolithicMod
                         {
                             if (byPlayer.Entity.Controls.Sneak)
                             {
-                                inventory[0].TryPutInto(world, slot);
+                                slot.TryPutInto(world, inventory[0]);
                             }
                             else
                             {
-                                slot.TryPutInto(world, inventory[0]);
+                                inventory[0].TryPutInto(world, slot);
                             }
                             return;
                         }
