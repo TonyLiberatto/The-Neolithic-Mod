@@ -1,5 +1,5 @@
 {
-	code: "chest-complete-latched",
+	code: "chest-latched",
 	behaviorsByType: { 
 		"*-bamboo-brown-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:chest-east", attributes: { type: "normal-generic-bamboo-brown" }}}},
 			{name: "BlockSwapBehavior",	properties: { "particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	}, "particleRadius": 2,	"particleQuantity": 16,
@@ -117,8 +117,8 @@
 			"floor": { base: "block/wood/chest/{wood}/floor" },
 	},
 	materialDensity: 400,
-	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.5, z2: 0.9375 },
-	collisionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.5, z2: 0.9375 },
+	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.8125, z2: 0.9375 },
+	collisionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.8125, z2: 0.9375 },
 	guiTransform: {
 		translation: { x: 0, y: 2, z: 0 },
 		origin: { x: 0.5, y: 0.25, z: 0.5 },
