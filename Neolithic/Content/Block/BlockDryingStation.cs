@@ -170,7 +170,7 @@ namespace TheNeolithicMod
                 {
                     foreach (var val in props)
                     {
-                        if (val.Input.Code.ToString() == slot.Itemstack?.Collectible?.Code?.ToString())
+                        if (val.Input.Code.ToString() == slot.Itemstack?.Collectible?.Code?.ToString() && !val.Input.Code.ToString().Contains("portion"))
                         {
                             if (byPlayer.Entity.Controls.Sneak)
                             {
