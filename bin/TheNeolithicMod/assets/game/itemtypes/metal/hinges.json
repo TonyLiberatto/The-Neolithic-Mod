@@ -3,8 +3,28 @@
 	variantgroups: [
 		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver" ] },
 	],
-	texture: { base: "item/resource/metal/hinges" },
+	shape: { base: "item/hinges"},
+	texture: { base: "item/tool/material/{metal}" },
     creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	maxstacksize: 64,	
 	materialDensity: 100,
+	guiTransform: {
+		rotation: { x: -48, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.6, z: 0 },
+		scale: 5.32
+	},
+	fpHandTransform: {
+		rotation: { x: 106, y: 13, z: 18 },
+		scale: 1.7
+	},
+		tpHandTransform: {
+		rotation: { x: 106, y: 13, z: 18 },
+		scale: 1.7
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 180, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.1, z: 0.5299 },
+		scale: 4.39
+	}
 }

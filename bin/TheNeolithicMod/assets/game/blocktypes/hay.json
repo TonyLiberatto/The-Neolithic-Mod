@@ -6,6 +6,7 @@
             properties: {
                 "createBlocks": [
                     [ "game:reeds", "game:bed-hay-head-north", 0 ],
+					{ "Takes": { "Code": "game:reeds", "StackSize": 0 }, "Makes": [ { "Code": "game:bed-hay-head-north", "StackSize": 1 } ]},
                 ],
             },
         },
