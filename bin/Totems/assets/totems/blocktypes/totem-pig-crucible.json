@@ -21,10 +21,10 @@
     { name: "BlockCreateBehavior",
       properties: {
         "createBlocks": [
-          [ "game:clay-blue",  "game:crucibleblue-raw",  10 ],
-		  [ "game:clay-fire",  "game:cruciblefire-raw",  10 ],
-		  [ "game:clay-red",  "game:cruciblered-raw",  10 ],
-		  [ "game:clay-brown",  "game:cruciblebrown-raw",  10 ],
+          { "MakeTime": 2, "Takes": { "Code": "game:clay-blue", "StackSize": 4 }, "Makes": [ { "Code": "game:crucibleblue-raw", "StackSize": 10 }, ]},
+		  { "MakeTime": 2, "Takes": { "Code": "game:clay-fire", "StackSize": 4 }, "Makes": [ { "Code": "game:cruciblefire-raw", "StackSize": 10 }, ]},
+		  { "MakeTime": 2, "Takes": { "Code": "game:clay-red", "StackSize": 4 }, "Makes": [ { "Code": "game:cruciblered-raw", "StackSize": 10 }, ]},
+		  { "MakeTime": 2, "Takes": { "Code": "game:clay-brown", "StackSize": 4 }, "Makes": [ { "Code": "game:cruciblebrown-raw", "StackSize": 10 }, ]},		  
         ],
       },
     },
