@@ -15,29 +15,14 @@ namespace TheNeolithicMod
 {
     public class ShaderTest : ModSystem
     {
-        public static ICoreClientAPI capi;
+        public ICoreClientAPI capi;
         OrthoRenderer[] orthoRenderers;
-        public static float[] controls;
-        public static Vec3f[] vec3s;
-        public static float[] floats;
+        public float[] controls;
+        public Vec3f[] vec3s;
+        public float[] floats;
         ITreeAttribute healthTree;
+        public float progressBar = 0;
         long id;
-
-        readonly string[] uniforms = new string[]
-        {
-            "iTime", "iResolution",
-            "iMouse", "iCamera",
-            "iSunPos", "iMoonPos",
-            "iMoonPhase", "iPlayerPosition",
-            "iTemperature", "iRainfall",
-            "iControls1", "iControls2",
-            "iControls3", "iControls4",
-            "iCurrentHealth", "iMaxHealth",
-            "iActiveItem", "iLookingAtBlock",
-            "iLookingAtEntity", "iLookBlockPos",
-            "iLookEntityPos", "iActiveTool", "iDepthBuffer", "iTempScalar", "iColor", "iLight",
-            "iCameraPos",
-        };
 
         public string[] orthoShaderKeys;
 
@@ -202,7 +187,7 @@ namespace TheNeolithicMod
             prog.Use();
 
             capi.Render.GlToggleBlend(true);
-            prog.SetDefaultUniforms();
+            prog.SetDefaultUniforms(capi);
             prog.BindTexture2D("iDepthBuffer", capi.Render.FrameBuffers[(int)EnumFrameBuffer.Primary].DepthTextureId, 0);
             prog.BindTexture2D("iColor", capi.Render.FrameBuffers[(int)EnumFrameBuffer.Primary].ColorTextureIds[0], 1);
             prog.BindTexture2D("iLight", capi.Render.FrameBuffers[(int)EnumFrameBuffer.Primary].ColorTextureIds[1], 2);
@@ -219,12 +204,12 @@ namespace TheNeolithicMod
 
     public static class DefaultUniforms
     {
-        public static void SetDefaultUniforms(this IShaderProgram prog)
+        public static void SetDefaultUniforms(this IShaderProgram prog, ICoreClientAPI capi)
         {
-            ICoreClientAPI capi = ShaderTest.capi;
-            float[] controls = ShaderTest.controls;
-            Vec3f[] vec3s = ShaderTest.vec3s;
-            float[] floats = ShaderTest.floats;
+            ShaderTest shaderTest = capi.ModLoader.GetModSystem<ShaderTest>();
+            float[] controls = shaderTest.controls;
+            Vec3f[] vec3s = shaderTest.vec3s;
+            float[] floats = shaderTest.floats;
 
             prog.Uniform("iUnderwater", capi.ModLoader.GetModSystem<UnderSeaWaterEffects>().activeColor);
             prog.Uniform("iTime", capi.World.ElapsedMilliseconds / 500f);
@@ -243,7 +228,6 @@ namespace TheNeolithicMod
             prog.Uniform("iPlayerPosition", vec3s[2]);
             prog.Uniform("iLookBlockPos", vec3s[3]);
             prog.Uniform("iLookEntityPos", vec3s[4]);
-            
 
             prog.Uniform("iMoonPhase", floats[0]);
             prog.Uniform("iTemperature", floats[1]);
@@ -255,6 +239,7 @@ namespace TheNeolithicMod
             prog.Uniform("iLookingAtEntity", floats[7]);
             prog.Uniform("iActiveTool", floats[8]);
             prog.Uniform("iTempScalar", floats[9]);
+            prog.Uniform("iProgressBar", shaderTest.progressBar);
         }
 
         public static void ReRegisterRenderer(this IClientEventAPI events, IRenderer renderer, EnumRenderStage stage)

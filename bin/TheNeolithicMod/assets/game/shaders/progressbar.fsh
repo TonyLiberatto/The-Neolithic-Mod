@@ -42,6 +42,7 @@ uniform float iTempScalar;
 uniform float iActiveItem;
 uniform float iLookingAtBlock;
 uniform float iLookingAtEntity;
+uniform float iProgressBar;
 
 vec3 red = vec3(1, 0, 0);
 vec3 yellow = vec3(1, 1, 0);
@@ -146,7 +147,20 @@ vec3 FakeInfrared(vec3 c)
 
 void main () 
 {
-	outColor = iUnderwater;
+	vec2 uv2 = uv;
+	uv2 -= .5;
+	uv2.x *= iResolution.x / iResolution.y;
+	vec4 c = vec4(0.5, 0, 0, 0);
+	
+	if (iProgressBar > 0) {
+		for (float i = 0.0; i < 1.0; i += 0.1){
+			c.a += Circle(uv2, Rotate(i*5,1-i*5,0.05), 0.01, 0.001);
+			c.rgb = 1*sin(iTime+uv.xyx+vec3(0,2,4)*4);
+		}
+		c.a *= iProgressBar;
+	}
+	
+	outColor = c;
 }
 
 

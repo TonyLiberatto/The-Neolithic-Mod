@@ -39,14 +39,19 @@ namespace TheNeolithicMod
             handled = EnumHandling.PreventDefault;
             var active = byPlayer.InventoryManager.ActiveHotbarSlot;
 
-            ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
-
             if (active.Itemstack?.Collectible?.Code != null)
             {
                 foreach (var val in createBlocks)
                 {
                     if (active.Itemstack.Collectible.WildCardMatch(val.Takes.Code))
                     {
+                        if (world.Side.IsClient() && secondsUsed != 0 && val.MakeTime != 0)
+                        {
+                            ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+                            float animstep = (secondsUsed / val.MakeTime) * 1.0f;
+                            api.ModLoader.GetModSystem<ShaderTest>().progressBar = animstep;
+                        }
+
                         return secondsUsed < val.MakeTime;
                     }
                 }
@@ -69,11 +74,19 @@ namespace TheNeolithicMod
             {
                 foreach (var val in createBlocks)
                 {
+                    if (api.Side.IsClient()) api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
+
                     if (secondsUsed > val.MakeTime && active.ActiveHotbarSlot.Itemstack.Collectible.WildCardMatch(val.Takes.Code) && active.ActiveHotbarSlot.StackSize >= val.Takes.StackSize)
                     {
                         if (world.Side.IsServer()) world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
-
-                        if (!active.TryGiveItemstack(val.Makes))
+                        if (val.IntoInv)
+                        {
+                            if (!active.TryGiveItemstack(val.Makes))
+                            {
+                                world.SpawnItemEntity(val.Makes, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
+                            }
+                        }
+                        else
                         {
                             world.SpawnItemEntity(val.Makes, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
                         }
@@ -97,6 +110,7 @@ namespace TheNeolithicMod
 
         public override bool OnBlockInteractCancel(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
         {
+            if (world.Side.IsClient()) api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
             return false;
         }
 

@@ -27,6 +27,7 @@ uniform float iTemperature;
 uniform float iRainfall;
 uniform float iCurrentHealth;
 uniform float iMaxHealth;
+uniform float iProgressBar;
 
 //scalar
 uniform float iTempScalar;
