@@ -39,7 +39,7 @@ namespace TheNeolithicMod
             handled = EnumHandling.PreventDefault;
             var active = byPlayer.InventoryManager.ActiveHotbarSlot;
 
-            if (Math.Sin(secondsUsed) == 0) ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+            ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
 
             if (active.Itemstack?.Collectible?.Code != null)
             {
@@ -69,7 +69,7 @@ namespace TheNeolithicMod
             {
                 foreach (var val in createBlocks)
                 {
-                    if (active.ActiveHotbarSlot.Itemstack.Collectible.WildCardMatch(val.Takes.Code) && active.ActiveHotbarSlot.StackSize >= val.Takes.StackSize)
+                    if (secondsUsed > val.MakeTime && active.ActiveHotbarSlot.Itemstack.Collectible.WildCardMatch(val.Takes.Code) && active.ActiveHotbarSlot.StackSize >= val.Takes.StackSize)
                     {
                         if (world.Side.IsServer()) world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
 
@@ -93,6 +93,11 @@ namespace TheNeolithicMod
                     }
                 }
             }
+        }
+
+        public override bool OnBlockInteractCancel(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
+        {
+            return false;
         }
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)

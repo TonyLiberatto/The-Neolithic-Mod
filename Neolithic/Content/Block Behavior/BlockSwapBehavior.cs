@@ -171,7 +171,7 @@ namespace TheNeolithicMod
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
             string key = GetKey(slot.Itemstack.Collectible.Code.ToString());
 
-            if (Math.Sin(secondsUsed) == 0) ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+            ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
 
             return swapSystem.SwapPairs.TryGetValue(key, out SwapBlocks swap) && secondsUsed < swap.MakeTime;
         }
@@ -193,7 +193,7 @@ namespace TheNeolithicMod
 
                 if (swapSystem.SwapPairs.TryGetValue(key, out SwapBlocks swap))
                 {
-                    if (swap.Takes != null && swap.Takes != block.Code.ToString())
+                    if (swap.Takes != null && swap.Takes != block.Code.ToString() || secondsUsed < swap.MakeTime)
                     {
                         return;
                     }
@@ -236,6 +236,11 @@ namespace TheNeolithicMod
                     }
                 }
             }
+        }
+
+        public override bool OnBlockInteractCancel(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
+        {
+            return false;
         }
 
         public void PlaySoundDispenseParticles(IWorldAccessor world, BlockPos pos, ItemSlot slot)
