@@ -172,8 +172,17 @@ namespace TheNeolithicMod
             string key = GetKey(slot.Itemstack.Collectible.Code.ToString());
 
             ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
-
-            return swapSystem.SwapPairs.TryGetValue(key, out SwapBlocks swap) && secondsUsed < swap.MakeTime;
+            if (swapSystem.SwapPairs.TryGetValue(key, out SwapBlocks swap))
+            {
+                if (world.Side.IsClient() && secondsUsed != 0 && swap.MakeTime != 0)
+                {
+                    ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+                    float animstep = (secondsUsed / swap.MakeTime) * 1.0f;
+                    api.ModLoader.GetModSystem<ShaderTest>().progressBar = animstep;
+                }
+                return secondsUsed < swap.MakeTime;
+            }
+            return false;
         }
 
         public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
@@ -193,10 +202,13 @@ namespace TheNeolithicMod
 
                 if (swapSystem.SwapPairs.TryGetValue(key, out SwapBlocks swap))
                 {
+                    if (world.Side.IsClient()) api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
+
                     if (swap.Takes != null && swap.Takes != block.Code.ToString() || secondsUsed < swap.MakeTime)
                     {
                         return;
                     }
+
                     AssetLocation asset = slot.Itemstack.Collectible.Code;
                     if (asset.ToString() == swap.Tool)
                     {
@@ -240,6 +252,7 @@ namespace TheNeolithicMod
 
         public override bool OnBlockInteractCancel(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
         {
+            if (world.Side.IsClient()) api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
             return false;
         }
 
