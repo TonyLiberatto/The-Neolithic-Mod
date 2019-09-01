@@ -1,5 +1,6 @@
 ﻿using System;
 using Vintagestory.API;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 
@@ -8,9 +9,6 @@ namespace TheNeolithicMod
     class BlockCreateBehavior : BlockBehavior
     {
         private CreateBlocks[] createBlocks;
-        private JsonItemStack[] makesArr;
-        private bool t;
-        private int count;
         ICoreAPI api;
 
         public BlockCreateBehavior(Block block) : base(block) { }
@@ -33,63 +31,73 @@ namespace TheNeolithicMod
         {
             base.OnLoaded(api);
             this.api = api;
-            PostOLInit(block.GetBehavior<BlockCreateBehavior>().properties);
+            PostOLInit(properties);
         }
 
-        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
+        public override bool OnBlockInteractStep(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
         {
-            if (createBlocks == null)
-            {
-                world.Logger.Notification("CreateBlocks error in " + block.Code.ToString());
-                return true;
-            }
-            handling = EnumHandling.PreventDefault;
+            handled = EnumHandling.PreventDefault;
             var active = byPlayer.InventoryManager.ActiveHotbarSlot;
-            BlockPos pos = blockSel.Position;
-            t = false;
-            if (active.Itemstack != null)
+
+            if (Math.Sin(secondsUsed) == 0) ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+
+            if (active.Itemstack?.Collectible?.Code != null)
             {
                 foreach (var val in createBlocks)
                 {
                     if (active.Itemstack.Collectible.WildCardMatch(val.Takes.Code))
                     {
-                        makesArr = val.Makes;
-                        count = val.Takes.StackSize;
-                        t = true;
-                        break;
+                        return secondsUsed < val.MakeTime;
                     }
                 }
-                if (t && active.Itemstack.StackSize >= count)
+            }
+
+            return false;
+        }
+
+        public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
+        {
+            if (createBlocks == null)
+            {
+                world.Logger.Notification("CreateBlocks error in " + block.Code.ToString());
+                return;
+            }
+            handled = EnumHandling.PreventDefault;
+            var active = byPlayer.InventoryManager;
+            BlockPos pos = blockSel.Position;
+            if (active.ActiveHotbarSlot.Itemstack?.Collectible?.Code != null)
+            {
+                foreach (var val in createBlocks)
                 {
-                    foreach (var val in makesArr)
+                    if (active.ActiveHotbarSlot.Itemstack.Collectible.WildCardMatch(val.Takes.Code) && active.ActiveHotbarSlot.StackSize >= val.Takes.StackSize)
                     {
-                        val.Resolve(world, null);
                         if (world.Side.IsServer()) world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
 
-                        if (count < 0 && active.Itemstack.StackSize >= 64)
+                        if (!active.TryGiveItemstack(val.Makes))
                         {
-                            world.SpawnItemEntity(new ItemStack(active.Itemstack.Collectible, -count), pos.ToVec3d().Add(0.5, 0.5, 0.5), new Vec3d(0.0, 0.1, 0.0));
+                            world.SpawnItemEntity(val.Makes, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
                         }
-                        else
-                        {
-                            active.Itemstack.StackSize -= count;
-                        }
-                        if (active.Itemstack.StackSize <= 0) active.Itemstack = null;
-                        world.SpawnItemEntity(val.ResolvedItemstack, pos.ToVec3d().Add(0.5, 0.5, 0.5), new Vec3d(0.0, 0.1, 0.0));
+                        active.ActiveHotbarSlot.TakeOut(val.Takes.StackSize);
+
                         try
                         {
-                            if (world.Side.IsClient()) world.SpawnCubeParticles(pos.ToVec3d().Add(0.5, 0.5, 0.5), active.Itemstack, 2, 16);
+                            if (world.Side.IsClient()) world.SpawnCubeParticles(pos.MidPoint(), active.ActiveHotbarSlot.Itemstack, 2, 16);
                         }
                         catch (Exception)
                         {
                             world.Logger.Error("Could not create particles, missing itemstack?");
                         }
 
-                        active.MarkDirty();
-                        return true;
+                        active.ActiveHotbarSlot.MarkDirty();
+                        break;
                     }
                 }
             }
+        }
+
+        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
+        {
+            handled = EnumHandling.PreventDefault;
             return true;
         }
     }

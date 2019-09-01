@@ -175,7 +175,7 @@ namespace TheNeolithicMod
             {
                 string err = "";
                 stack.Resolve(world, err);
-                world.SpawnItemEntity(stack.ResolvedItemstack, pos, velocity);
+                if (stack.ResolvedItemstack != null) world.SpawnItemEntity(stack.ResolvedItemstack, pos, velocity);
             }
         }
 
@@ -205,6 +205,32 @@ namespace TheNeolithicMod
         }
 
         public static void SetUv(this MeshData mesh, TextureAtlasPosition texPos) => mesh.SetUv(new float[] {texPos.x1, texPos.y1, texPos.x2, texPos.y1, texPos.x2, texPos.y2, texPos.x1, texPos.y2 });
+
+        public static bool TryGiveItemstack(this IPlayerInventoryManager manager, ItemStack[] stacks)
+        {
+            foreach (var val in stacks)
+            {
+                if (manager.TryGiveItemstack(val)) continue;
+                return false;
+            }
+            return true;
+        }
+
+        public static bool TryGiveItemstack(this IPlayerInventoryManager manager, JsonItemStack[] stacks)
+        {
+            return manager.TryGiveItemstack(stacks.ResolvedStacks(manager.ActiveHotbarSlot.Inventory.Api.World));
+        }
+
+        public static ItemStack[] ResolvedStacks(this JsonItemStack[] stacks, IWorldAccessor world)
+        {
+            List<ItemStack> stacks1 = new List<ItemStack>();
+            foreach (JsonItemStack stack in stacks)
+            {
+                stack.Resolve(world, null);
+                stacks1.Add(stack.ResolvedItemstack);
+            }
+            return stacks1.ToArray();
+        }
 
         public static object GetInstanceField<T>(this T instance, string fieldName)
         {

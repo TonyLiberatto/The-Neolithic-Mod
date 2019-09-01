@@ -158,16 +158,34 @@ namespace TheNeolithicMod
             return holdingstack + block.Code.ToString() + block.Id;
         }
 
-        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
+        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
+        {
+            handled = EnumHandling.PreventDefault;
+            return true;
+        }
+
+        public override bool OnBlockInteractStep(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
+        {
+            handled = EnumHandling.PreventDefault;
+            SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
+            ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
+            string key = GetKey(slot.Itemstack.Collectible.Code.ToString());
+
+            if (Math.Sin(secondsUsed) == 0) ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+
+            return swapSystem.SwapPairs.TryGetValue(key, out SwapBlocks swap) && secondsUsed < swap.MakeTime;
+        }
+
+        public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {
             BlockPos pos = blockSel.Position;
             ModSystemBlockReinforcement bR = api.ModLoader.GetModSystem<ModSystemBlockReinforcement>();
-            if (disabled || bR.IsReinforced(pos) || bR.IsLocked(pos, byPlayer)) return base.OnBlockInteractStart(world, byPlayer, blockSel, ref handling);
+            if (disabled || bR.IsReinforced(pos) || bR.IsLocked(pos, byPlayer)) return;
 
             SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
             handling = EnumHandling.PreventDefault;
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
-            
+
 
             if (!(requireSneak && !byPlayer.Entity.Controls.Sneak) && slot.Itemstack != null)
             {
@@ -177,7 +195,7 @@ namespace TheNeolithicMod
                 {
                     if (swap.Takes != null && swap.Takes != block.Code.ToString())
                     {
-                        return true;
+                        return;
                     }
                     AssetLocation asset = slot.Itemstack.Collectible.Code;
                     if (asset.ToString() == swap.Tool)
@@ -202,13 +220,11 @@ namespace TheNeolithicMod
                             {
                                 if (byPlayer.WorldData.CurrentGameMode.IsSurvival()) slot.TakeOut(count);
                             }
-                            else return true;
+                            else return;
                         }
 
-                        ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
-
                         if ((block.EntityClass != null && toBlock.EntityClass != null) && (toBlock.EntityClass == block.EntityClass))
-                        {   
+                        {
                             world.BlockAccessor.ExchangeBlock(toBlock.BlockId, pos);
                         }
                         else
@@ -220,7 +236,6 @@ namespace TheNeolithicMod
                     }
                 }
             }
-            return true;
         }
 
         public void PlaySoundDispenseParticles(IWorldAccessor world, BlockPos pos, ItemSlot slot)

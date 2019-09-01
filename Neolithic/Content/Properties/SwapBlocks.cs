@@ -8,6 +8,7 @@ namespace TheNeolithicMod
         public string Makes { get; set; } = "";
         public string Tool { get; set; } = null;
         public int Count { get; set; } = 0;
+        public float MakeTime { get; set; } = 0;
 
         public SwapBlocks(string takes, string makes, string tool, int count)
         {
@@ -25,5 +26,6 @@ namespace TheNeolithicMod
     {
         public JsonItemStack Takes { get; set; }
         public JsonItemStack[] Makes { get; set; }
+        public float MakeTime { get; set; } = 0;
     }
 }
