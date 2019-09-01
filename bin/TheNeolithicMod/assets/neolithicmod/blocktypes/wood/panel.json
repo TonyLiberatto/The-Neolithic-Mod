@@ -17,7 +17,7 @@
 				"swapBlocks": [
 				{ "Tool": "game:hinges-*", "Makes": "neolithicmod:door-assemble-{wood}-east", "Takes": null, "Count": 2 },
 				{ "Tool": "neolithicmod:branch-very-thin-*", "Makes": "neolithicmod:chest-frame-{wood}-east", "Takes": null, "Count": 4 },
-				]}}],
+				]}}],		
 	},
 	variantgroups: [
 		{ code: "wood", states: ["aged"], loadFromProperties: "block/wood" },
@@ -58,6 +58,10 @@
 			base: "game:block/wood/{style}/{wood}*"
 		}
 	},
+	drops: [		
+		{ type: "block", code: "neolithicmod:halfpanel-{wood}-{style}-east", quantity: { avg: 2 }, tool:"saw", lastDrop: true,  },
+		{ type: "block", code: "neolithicmod:panel-{wood}-{style}-east", quantity: { avg: 1 }, tool:"axe", lastDrop: true,  },
+	],
 	selectionbox: {
 		x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1,
 		rotateXByType: {
