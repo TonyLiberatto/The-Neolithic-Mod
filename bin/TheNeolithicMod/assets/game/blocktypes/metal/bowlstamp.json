@@ -1,118 +1,136 @@
 {
-  code: "bowlstamp",
-  variantgroups: [
-    {  code: "metal",  states: [ "tinbronze", "bismuthbronze", "blackbronze", "copper" ]  }
-  ],
-  blockmaterial: "Metal",
-  behaviors: [
-    { name: "UnstableFalling" },
-    {
-      name: "BlockCreateBehavior",
-      properties: {
-        "createBlocks": [
-          [ "game:clay-blue", "game:bowl-blue-raw", 4 ],
-		  [ "game:clay-fire", "game:bowl-fire-raw", 4 ],
-		  [ "game:clay-red", "game:bowl-red-raw", 4 ],
-		  [ "game:clay-brown", "game:bowl-brown-raw", 4 ],
+    "code": "bowlstamp",
+    "variantgroups": [
+        {
+            "code": "metal",
+            "states": [
+                "tinbronze",
+                "bismuthbronze",
+                "blackbronze",
+                "copper"
+            ]
+        }
+    ],
+    "blockmaterial": "Metal",
+    "behaviors": [
+        {
+            "name": "UnstableFalling"
+        },
+        {
+            "name": "BlockCreateBehavior",
+            "properties": {
+                "createBlocks": [
+                    { "Takes": { "Code": "game:clay-blue", "StackSize": 4 }, "Makes": [ { "Code": "game:bowl-blue-raw", "StackSize": 1 } ]},
+                    { "Takes": { "Code": "game:clay-fire", "StackSize": 4 }, "Makes": [ { "Code": "game:bowl-fire-raw", "StackSize": 1 } ]},
+                    { "Takes": { "Code": "game:clay-red", "StackSize": 4 }, "Makes": [ { "Code": "game:bowl-red-raw", "StackSize": 1 } ]},
+                    { "Takes": { "Code": "game:clay-brown", "StackSize": 4 }, "Makes": [ { "Code": "game:bowl-blue-brown", "StackSize": 1 } ]}
+                ]
+            }
+        }
+    ],
+    "replaceable": 300,
+    "resistance": 0.75,
+    "creativeinventory": {
+        "general": [
+            "*"
         ],
-      },
+        "items": [
+            "*"
+        ]
     },
-  ],
-  replaceable: 300,
-  resistance: 0.75,
-  creativeinventory: {
-    "general": [ "*" ],
-    "items": [ "*" ]
-  },
-  maxStackSize: 8,
-  drawtype: "json",
-  shape: { base: "block/bowlstamp" },
-  textures: {
-    all: { base: "game:block/metal/ingot/{metal}" }
-  },
-  lightAbsorption: 0,
-  sideopaque: {
-    all: false
-  },
-  sidesolid: {
-    all: false
-  },
-  sounds: {
-    walk: "walk/stone",
-    place: "block/anvil1",
-    break: "block/anvil2",
-  },
-  collisionbox: {
-    x1: 0.3125,
-    y1: 0,
-    z1: 0.3125,
-    x2: 0.6875,
-    y2: 0.125,
-    z2: 0.6875
-  },
-  selectionbox: {
-    x1: 0.3125,
-    y1: 0,
-    z1: 0.3125,
-    x2: 0.6875,
-    y2: 0.125,
-    z2: 0.6875
-  },
-  fpHandTransform: {
-    translation: {
-      x: 0.3,
-      y: -0.4,
-      z: 0
+    "maxStackSize": 8,
+    "drawtype": "json",
+    "shape": {
+        "base": "block/bowlstamp"
     },
-    rotation: {
-      x: 15,
-      y: 15,
-      z: 270
+    "textures": {
+        "all": {
+            "base": "game:block/metal/ingot/{metal}"
+        }
     },
-    scale: 2.5
-  },
-  guiTransform: {
-    translation: {
-      x: 0,
-      y: 3,
-      z: 0
+    "lightAbsorption": 0,
+    "sideopaque": {
+        "all": false
     },
-    origin: {
-      x: 0.5,
-      y: 0.0625,
-      z: 0.5
+    "sidesolid": {
+        "all": false
     },
-    scale: 2.5
-  },
-  groundTransform: {
-    translation: {
-      x: 0.046875,
-      y: 0,
-      z: 0
+    "sounds": {
+        "walk": "walk/stone",
+        "place": "block/anvil1",
+        "break": "block/anvil2"
     },
-    rotation: {
-      x: 0,
-      y: 0,
-      z: 0
+    "collisionbox": {
+        "x1": 0.3125,
+        "y1": 0,
+        "z1": 0.3125,
+        "x2": 0.6875,
+        "y2": 0.125,
+        "z2": 0.6875
     },
-    scale: 2.5
-  },
-  tpHandTransform: {
-    translation: {
-      x: -0.9,
-      y: -0.1,
-      z: -0.8
+    "selectionbox": {
+        "x1": 0.3125,
+        "y1": 0,
+        "z1": 0.3125,
+        "x2": 0.6875,
+        "y2": 0.125,
+        "z2": 0.6875
     },
-    rotation: {
-      x: 0,
-      y: -56,
-      z: 0
+    "fpHandTransform": {
+        "translation": {
+            "x": 0.3,
+            "y": -0.4,
+            "z": 0
+        },
+        "rotation": {
+            "x": 15,
+            "y": 15,
+            "z": 270
+        },
+        "scale": 2.5
     },
-    origin: {
-      x: 0.5,
-      y: 0.1,
-      z: 0.5
+    "guiTransform": {
+        "translation": {
+            "x": 0,
+            "y": 3,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0.0625,
+            "z": 0.5
+        },
+        "scale": 2.5
     },
-    scale: 0.66
-  }
+    "groundTransform": {
+        "translation": {
+            "x": 0.046875,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "scale": 2.5
+    },
+    "tpHandTransform": {
+        "translation": {
+            "x": -0.9,
+            "y": -0.1,
+            "z": -0.8
+        },
+        "rotation": {
+            "x": 0,
+            "y": -56,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0.1,
+            "z": 0.5
+        },
+        "scale": 0.66
+    }
 }

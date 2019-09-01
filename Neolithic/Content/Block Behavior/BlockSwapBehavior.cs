@@ -55,25 +55,6 @@ namespace TheNeolithicMod
         public Dictionary<string, SwapBlocks> SwapPairs { get; set; } = new Dictionary<string, SwapBlocks>();
     }
 
-    class SwapBlocks
-    {
-        public string Takes { get; set; } = "";
-        public string Makes { get; set; } = "";
-        public string Tool { get; set; } = null;
-        public int Count { get; set; } = 0;
-
-        public SwapBlocks(string takes, string makes, string tool, int count)
-        {
-            Takes = takes; Makes = makes; Tool = tool; Count = count;
-        }
-
-        public SwapBlocks Copy()
-        {
-            SwapBlocks copy = new SwapBlocks(Takes, Makes, Tool, Count);
-            return copy;
-        }
-    }
-
     class BlockSwapBehavior : BlockBehavior
     {
         ICoreAPI api;

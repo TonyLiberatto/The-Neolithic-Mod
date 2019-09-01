@@ -7,8 +7,8 @@ namespace TheNeolithicMod
 {
     class BlockCreateBehavior : BlockBehavior
     {
-        private object[][] createBlocks;
-        private AssetLocation makes;
+        private CreateBlocks[] createBlocks;
+        private JsonItemStack[] makesArr;
         private bool t;
         private int count;
         ICoreAPI api;
@@ -19,7 +19,7 @@ namespace TheNeolithicMod
         {
             try
             {
-                createBlocks = properties["createBlocks"].AsObject<object[][]>();
+                createBlocks = properties["createBlocks"].AsObject<CreateBlocks[]>();
             }
             catch (Exception)
             {
@@ -51,40 +51,43 @@ namespace TheNeolithicMod
             {
                 foreach (var val in createBlocks)
                 {
-                    if (active.Itemstack.Collectible.WildCardMatch(new AssetLocation(val[0].ToString())))
+                    if (active.Itemstack.Collectible.WildCardMatch(val.Takes.Code))
                     {
-                        makes = new AssetLocation(val[1].ToString());
-                        count = Convert.ToInt32(val[2]);
+                        makesArr = val.Makes;
+                        count = val.Takes.StackSize;
                         t = true;
                         break;
                     }
                 }
                 if (t && active.Itemstack.StackSize >= count)
                 {
-                    
-                    if (world.Side.IsServer()) world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
+                    foreach (var val in makesArr)
+                    {
+                        val.Resolve(world, null);
+                        if (world.Side.IsServer()) world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
 
-                    if (count < 0 && active.Itemstack.StackSize >= 64 )
-                    {
-                        world.SpawnItemEntity(new ItemStack(active.Itemstack.Collectible, -count), pos.ToVec3d().Add(0.5, 0.5, 0.5), new Vec3d(0.0, 0.1, 0.0));
+                        if (count < 0 && active.Itemstack.StackSize >= 64)
+                        {
+                            world.SpawnItemEntity(new ItemStack(active.Itemstack.Collectible, -count), pos.ToVec3d().Add(0.5, 0.5, 0.5), new Vec3d(0.0, 0.1, 0.0));
+                        }
+                        else
+                        {
+                            active.Itemstack.StackSize -= count;
+                        }
+                        if (active.Itemstack.StackSize <= 0) active.Itemstack = null;
+                        world.SpawnItemEntity(val.ResolvedItemstack, pos.ToVec3d().Add(0.5, 0.5, 0.5), new Vec3d(0.0, 0.1, 0.0));
+                        try
+                        {
+                            if (world.Side.IsClient()) world.SpawnCubeParticles(pos.ToVec3d().Add(0.5, 0.5, 0.5), active.Itemstack, 2, 16);
+                        }
+                        catch (Exception)
+                        {
+                            world.Logger.Error("Could not create particles, missing itemstack?");
+                        }
+
+                        active.MarkDirty();
+                        return true;
                     }
-                    else
-                    {
-                        active.Itemstack.StackSize -= count;
-                    }
-                    if (active.Itemstack.StackSize <= 0) active.Itemstack = null;
-                    world.SpawnItemEntity(new ItemStack(world.GetBlock(makes)), pos.ToVec3d().Add(0.5, 0.5, 0.5), new Vec3d(0.0, 0.1, 0.0));
-                    try
-                    {
-                        if (world.Side.IsClient()) world.SpawnCubeParticles(pos.ToVec3d().Add(0.5, 0.5, 0.5), active.Itemstack, 2, 16);
-                    }
-                    catch (Exception)
-                    {
-                        world.Logger.Error("Could not create particles, missing itemstack?");
-                    }
-                    
-                    active.MarkDirty();
-                    return true;
                 }
             }
             return true;
