@@ -15,8 +15,8 @@
 		{
             name: "BlockCreateBehavior",
             properties: {
-                "createBlocks": [
-                    [ "game:planks-*", "game:bed-wood-head-north", 0 ],
+                "createBlocks": [                   
+					{ "Takes": { "Code": "game:planks-*", "StackSize": 0 }, "Makes": [ { "Code": "game:bed-wood-head-north", "StackSize": 1 } ]},
                 ],
             },
         },

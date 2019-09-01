@@ -13,10 +13,10 @@
       name: "BlockCreateBehavior",
       properties: {
         "createBlocks": [
-          [ "game:clay-blue", "game:ingotmold-blue-raw", 4 ],
-		  [ "game:clay-fire", "game:ingotmold-fire-raw", 4 ],
-		  [ "game:clay-red", "game:ingotmold-red-raw", 4 ],
-		  [ "game:clay-brown", "game:ingotmold-brown-raw", 4 ],
+			{ "Takes": { "Code": "game:clay-blue", "StackSize": 4 }, "Makes": [ { "Code": "game:ingotmold-blue-raw", "StackSize": 1 } ]},
+			{ "Takes": { "Code": "game:clay-fire", "StackSize": 4 }, "Makes": [ { "Code": "game:ingotmold-fire-raw", "StackSize": 1 } ]},
+			{ "Takes": { "Code": "game:clay-red", "StackSize": 4 }, "Makes": [ { "Code": "game:ingotmold-red-raw", "StackSize": 1 } ]},
+			{ "Takes": { "Code": "game:clay-brown", "StackSize": 4 }, "Makes": [ { "Code": "game:ingotmold-brown-raw", "StackSize": 1 } ]},          
         ],
       },
     },

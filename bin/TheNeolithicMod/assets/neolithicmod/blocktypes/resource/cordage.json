@@ -5,8 +5,8 @@
             name: "BlockCreateBehavior",
             properties: {
                 "createBlocks": [
-                    [ "neolithicmod:panel-bamboo-brown-ground-east", "neolithicmod:browndoor-north-down-closed-left", 0 ],
-					[ "neolithicmod:panel-bamboo-green-ground-east", "neolithicmod:greendoor-north-down-closed-left", 0 ],
+                    { "Takes": { "Code": "neolithicmod:panel-bamboo-brown-ground-east", "StackSize": 0 }, "Makes": [ { "Code": "neolithicmod:browndoor-north-down-closed-left", "StackSize": 1 } ]},
+					{ "Takes": { "Code": "neolithicmod:panel-bamboo-green-ground-east", "StackSize": 0 }, "Makes": [ { "Code": "neolithicmod:greendoor-north-down-closed-left", "StackSize": 1 } ]},			
                 ],
             },
         },
