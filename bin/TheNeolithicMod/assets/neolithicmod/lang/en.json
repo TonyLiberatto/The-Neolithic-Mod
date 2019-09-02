@@ -2147,5 +2147,15 @@
 	"item-tamperhead-blackbronze": "Tamperhead (Blackbronze)",   
 	"item-tamperhead-copper": "Tamperhead (Copper)",   
 	"item-tamperhead-iron": "Tamperhead (Iron)",   
-	"item-tamperhead-tinbronze": "Tamperhead (Tinbronze)",   
+	"item-tamperhead-tinbronze": "Tamperhead (Tinbronze)",
+	"block-dryingtray-birch": "Drying Tray (Birch)",
+	"block-dryingtray-oak": "Drying Tray (Oak)",
+	"block-dryingtray-maple": "Drying Tray (Maple)",
+	"block-dryingtray-pine": "Drying Tray (Pine)",
+	"block-dryingtray-acacia": "Drying Tray (Acacia)",
+	"block-dryingtray-kapok": "Drying Tray (Kapok)",
+	"block-dryingtray-aged": "Drying Tray (Aged)",
+  "item-seawaterportion": "Sea Water",
+  "incontainer-item-seawaterportion": "Sea Water",
+  "incontainer-item-salt": "Salt"
 }
