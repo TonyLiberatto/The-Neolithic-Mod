@@ -39,7 +39,7 @@ namespace TheNeolithicMod
             handled = EnumHandling.PreventDefault;
             var active = byPlayer.InventoryManager.ActiveHotbarSlot;
 
-            if (active.Itemstack?.Collectible?.Code != null)
+            if (active.Itemstack?.Collectible?.Code != null && createBlocks != null)
             {
                 foreach (var val in createBlocks)
                 {
@@ -78,7 +78,15 @@ namespace TheNeolithicMod
 
                     if (secondsUsed > val.MakeTime && active.ActiveHotbarSlot.Itemstack.Collectible.WildCardMatch(val.Takes.Code) && active.ActiveHotbarSlot.StackSize >= val.Takes.StackSize)
                     {
-                        if (world.Side.IsServer()) world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
+                        if (world.Side.IsServer())
+                        {
+                            world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
+                            if (active?.ActiveHotbarSlot?.Itemstack?.Item?.Tool != null)
+                            {
+                                active.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, active.ActiveHotbarSlot);
+                            }
+                        }
+
                         if (val.IntoInv)
                         {
                             if (!active.TryGiveItemstack(val.Makes))
@@ -102,6 +110,8 @@ namespace TheNeolithicMod
                         }
 
                         active.ActiveHotbarSlot.MarkDirty();
+
+                        if (val.RemoveOnFinish) world.BlockAccessor.SetBlock(0, pos);
                         break;
                     }
                 }

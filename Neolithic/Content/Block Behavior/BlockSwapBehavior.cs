@@ -169,12 +169,12 @@ namespace TheNeolithicMod
             handled = EnumHandling.PreventDefault;
             SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
-            string key = GetKey(slot.Itemstack.Collectible.Code.ToString());
+            string key = GetKey(slot?.Itemstack?.Collectible?.Code?.ToString()) ?? "";
 
             ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
             if (swapSystem.SwapPairs.TryGetValue(key, out SwapBlocks swap))
             {
-                if (world.Side.IsClient() && secondsUsed != 0 && swap.MakeTime != 0)
+                if (world.Side.IsClient() && secondsUsed != 0 && swap.MakeTime != 0 && !block.HasBehavior<BlockCreateBehavior>())
                 {
                     ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
                     float animstep = (secondsUsed / swap.MakeTime) * 1.0f;
