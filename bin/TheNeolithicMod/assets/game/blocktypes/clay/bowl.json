@@ -76,10 +76,12 @@
 	lightAbsorption: 0,
 	texturesByType: {
 		"*-raw": { 
-			all: { base: "game:block/clay/{color}-raw" }
+			floor: { base: "block/clay/{color}-burned" },
+			mat: { base: "block/clay/{color}-raw" }
 		},
 		"*-burned": { 
-			all: { base: "block/clay/{color}-burned" }
+			floor: { base: "block/clay/{color}-raw" },
+			mat: { base: "block/clay/{color}-burned" }
 		},
 		"*-honey": {
 			all: { base: "block/clay/{color}-burned" },

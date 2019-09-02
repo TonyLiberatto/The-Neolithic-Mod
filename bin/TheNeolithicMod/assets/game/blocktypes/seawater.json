@@ -49,7 +49,7 @@
 	faceCullMode: "liquid",
 	liquidCode: "seawater",
 	materialdensity: 1000,
-	creativeinventory: { "general": ["seawater-still-7"], "terrain": ["seawater-still-7"] },
+	creativeinventory: { "general": [""], "terrain": [""] },
 	replaceable: 9500,
 	lightAbsorption: 2,
 	tintindex: 2,

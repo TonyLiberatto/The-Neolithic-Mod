@@ -3,7 +3,14 @@
     "class": "BlockDryingStation",
     "entityClass": "DryingStation",
     "attributes": {
-        "dryingprops": [ 
+        handbook:{ 
+				groupBy: ["dryingtray-*"],
+				extraSections: [
+					{ title: "handbook-item-sources", text: "Place a panel down on the ground, right click with 4 half panels of the same wood, then right click with 4 Very-thin branches to complete the Drying Tray."}
+					]
+
+		},
+		"dryingprops": [ 
             {
                 "input": { "type": "item", "code": "seawaterportion", "stacksize": 1 },
                 "output": { "type": "item", "code": "salt", "stacksize": 1 },
@@ -28,7 +35,7 @@
         "material": { "base": "block/wood/planks/{wood}*" },
 		"border": { "base": "block/wood/planks/{wood}*" },
     },
-    "creativeinventory": { "general": ["*"] },
+    "creativeinventory": { "general": ["*"], "neolithicblocks": ["*"] },
     "sideopaque": { "all": false },
     "sidesolid": { "all": false },
     "lightAbsorption": 1,
