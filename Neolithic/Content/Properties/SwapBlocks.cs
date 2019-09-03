@@ -27,6 +27,7 @@ namespace TheNeolithicMod
         public JsonItemStack Takes { get; set; }
         public JsonItemStack[] Makes { get; set; }
         public float MakeTime { get; set; } = 0;
-        public bool IntoInv { get; set; } = false;
+        public bool IntoInv { get; set; }
+        public bool RemoveOnFinish { get; set; } = false;
     }
 }

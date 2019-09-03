@@ -103,37 +103,28 @@ namespace TheNeolithicMod
                         SwapBlocks[] swapBlocks = properties["swapBlocks"].AsObject<SwapBlocks[]>();
                         foreach (SwapBlocks val in swapBlocks)
                         {
+                            if (swapSystem.SwapPairs.ContainsKey(GetKey(val.Tool))) continue;
 
                             if (val.Tool.Contains("*"))
                             {
-                                for (int i = 0; i < api.World.Blocks.Count; i++)
+                                SwapBlocks tmp = val.Copy();
+
+                                foreach (var block in api.World.Blocks.FindAll(a => a.WildCardMatch(new AssetLocation(val.Tool))))
                                 {
-                                    Block iBlock = api.World.Blocks[i];
-                                    if (iBlock != null && iBlock.WildCardMatch(new AssetLocation(val.Tool)))
-                                    {
-                                        SwapBlocks tmp = val.Copy();
-                                        tmp.Tool = iBlock.Code.ToString();
-                                        if (!swapSystem.SwapPairs.ContainsKey(GetKey(tmp.Tool)))
-                                        {
-                                            swapSystem.SwapPairs.Add(GetKey(tmp.Tool), tmp);
-                                        }
-                                    }
+                                    tmp.Tool = block.Code.ToString();
+                                    if (swapSystem.SwapPairs.ContainsKey(GetKey(val.Tool))) continue;
+
+                                    swapSystem.SwapPairs.Add(GetKey(tmp.Tool), tmp);
                                 }
-                                for (int i = 0; i < api.World.Items.Count; i++)
+                                foreach (var item in api.World.Items.FindAll(a => a.WildCardMatch(new AssetLocation(val.Tool))))
                                 {
-                                    Item iItem = api.World.Items[i];
-                                    if (iItem != null && iItem.WildCardMatch(new AssetLocation(val.Tool)))
-                                    {
-                                        SwapBlocks tmp = val.Copy();
-                                        tmp.Tool = iItem.Code.ToString();
-                                        if (!swapSystem.SwapPairs.ContainsKey(GetKey(tmp.Tool)))
-                                        {
-                                            swapSystem.SwapPairs.Add(GetKey(tmp.Tool), tmp);
-                                        }
-                                    }
+                                    tmp.Tool = item.Code.ToString();
+                                    if (swapSystem.SwapPairs.ContainsKey(GetKey(val.Tool))) continue;
+
+                                    swapSystem.SwapPairs.Add(GetKey(tmp.Tool), tmp);
                                 }
                             }
-                            else if (!swapSystem.SwapPairs.ContainsKey(GetKey(val.Tool)))
+                            else
                             {
                                 swapSystem.SwapPairs.Add(GetKey(val.Tool), val);
                             }
@@ -169,12 +160,12 @@ namespace TheNeolithicMod
             handled = EnumHandling.PreventDefault;
             SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
-            string key = GetKey(slot.Itemstack.Collectible.Code.ToString());
+            string key = GetKey(slot?.Itemstack?.Collectible?.Code?.ToString()) ?? "";
 
             ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
             if (swapSystem.SwapPairs.TryGetValue(key, out SwapBlocks swap))
             {
-                if (world.Side.IsClient() && secondsUsed != 0 && swap.MakeTime != 0)
+                if (world.Side.IsClient() && secondsUsed != 0 && swap.MakeTime != 0 && !block.HasBehavior<BlockCreateBehavior>())
                 {
                     ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
                     float animstep = (secondsUsed / swap.MakeTime) * 1.0f;

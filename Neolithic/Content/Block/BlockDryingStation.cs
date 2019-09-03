@@ -36,7 +36,9 @@ namespace TheNeolithicMod
         {
             StringBuilder builder = new StringBuilder(base.GetPlacedBlockInfo(world, pos, forPlayer));
             BlockEntityDryingStation craftingStation = (pos.BlockEntity(world) as BlockEntityDryingStation);
-            builder = craftingStation?.inventory?[0]?.Itemstack != null ? builder.AppendLine().AppendLine(craftingStation.inventory[0].StackSize + "x " + Lang.Get(craftingStation.inventory[0].Itemstack.Collectible.Code.ToString())) : builder;
+            ItemStack stack = craftingStation?.inventory?[0]?.Itemstack;
+            builder = stack != null ? builder.AppendLine().AppendLine(stack.StackSize + "x " +
+                Lang.Get("incontainer-" + stack.Class.ToString().ToLowerInvariant() + "-" + stack.Collectible.Code.Path)) : builder;
             return builder.ToString();
         }
     }
