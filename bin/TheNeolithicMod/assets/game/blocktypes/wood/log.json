@@ -4,7 +4,25 @@
 	class: "BlockLog",
 	behaviorsByType: {
 		"*-grown-*": [{name: "PushEventOnBlockBroken",	properties: {eventName: "testForDecay"}}],
-		"*": [{name: "Pillar"}]
+		"*": [{name: "Pillar"},
+			{
+				"name": "BlockCreateBehavior",
+				"properties": {
+					"createBlocks": [
+						{ "Takes": { "Code": "axe-*", "StackSize": 0 }, "Makes": [ { "Code": "neolithicmod:halflog-{wood}-ud", "StackSize": 2 } ]},						
+					]
+				}
+			},
+			{name: "BlockSwapBehavior",
+			properties: {
+				"particleOrigin": {"X": 0.5,"Y":0.5,"Z": 0.5,},
+				"particleRadius": 2,
+				"particleQuantity": 16,
+				"swapBlocks": [							
+				{ "Tool": "axe-*", "Makes": "air", "Takes": null, "Count": 0 },				
+				]}
+			}
+		]
 	},
 	attributes: {
 		handbook: {
