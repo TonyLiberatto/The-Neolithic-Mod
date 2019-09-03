@@ -4,6 +4,13 @@
     "entityClass": "CraftingStation",
     "behaviors": [ { "name": "HorizontalOrientable"} ],
     "attributes": {
+		handbook:{ 
+				groupBy: ["choppingblock-*"],
+				extraSections: [
+					{ title: "handbook-item-sources", text: "Place a log down, hold right click with an Axe, to make 2 half Logs. Place the Half Log down and hold right click with an Axe again."}
+					]
+
+		},
         "animprops": { "actionAnim": "chop", "hasContentAnim": "chopidle", "idleAnim": "idle" },
         "__comment": "craftTime is time before next action in milliseconds, ideal time is the same as how long the actionAnim takes to play",
         "craftingprops": [ 
@@ -18,7 +25,7 @@
          "*-north":  {"base": "block/wood/choppingblock", "rotateY": 270 }
     },
     "variantgroups": [
-        { "code": "wood", "loadFromProperties": "block/wood" },
+        { code: "wood", states: ["aged"], loadFromProperties: "block/wood" },
         { "code": "rotation", "loadFromProperties": "abstract/horizontalorientation" }
     ],
     "textures": {

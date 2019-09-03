@@ -126,7 +126,7 @@
 		"*-raw": {  ceramic: { base: "block/clay/{color}-raw" } },
 		"*-burned": {  ceramic: { base: "block/clay/{color}-burned" }  }
 	},
-	shape: { base: "block/clay/mold/lanternbasetopmold", rotateY: 90 },
+	shape: { base: "block/clay/mold/lanternbasetopmold" },
 	sounds: {
 		walk: "walk/stone",
 	},
