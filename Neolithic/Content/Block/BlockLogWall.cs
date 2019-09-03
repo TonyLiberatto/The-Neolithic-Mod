@@ -19,10 +19,10 @@ namespace TheNeolithicMod
         public string Wood { get => Variant["wood"]; }
         public string Key { get => FirstCodePart() + Wood; }
 
-        public string WallType { get => Variant.ContainsKey("type") ? Variant["type"] : null; }
-        public string Bark { get => Variant.ContainsKey("style") ? Variant["style"] : null; }
-        public string Hor { get => Variant.ContainsKey("horizontal") ? Variant["horizontal"] : null; }
-        public string Vert { get => Variant.ContainsKey("vertical") ? Variant["vertical"] : null; }
+        public string WallType { get => Variant.TryGetValue("type"); }
+        public string Bark { get => Variant.TryGetValue("style"); }
+        public string Hor { get => Variant.TryGetValue("horizontal"); }
+        public string Vert { get => Variant.TryGetValue("vertical"); }
 
         WallSystem wallSystem;
 
