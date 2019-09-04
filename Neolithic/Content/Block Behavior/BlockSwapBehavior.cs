@@ -160,6 +160,7 @@ namespace TheNeolithicMod
             handled = EnumHandling.PreventDefault;
             SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
+            if (slot?.Itemstack?.Collectible?.Code == null) return false;
             string key = GetKey(slot?.Itemstack?.Collectible?.Code?.ToString()) ?? "";
 
             ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
