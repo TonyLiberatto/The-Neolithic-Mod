@@ -10,6 +10,15 @@
   "Place a Barked Very Thin Branch horizontally , right click with any cordage, then right click again with 3 more Barked Very Thin Branches.":"Place a Barked Very Thin Branch horizontally , right click with any cordage, then right click again with 3 more Barked Very Thin Branches.",
   "Place a Debarked Very Thin Branch vertically on the ground, right click with any cordage, next right click again with Debarked Very Thin Branch to make the scafolding.":"Place a Debarked Very Thin Branch vertically on the ground, right click with any cordage, next right click again with Debarked Very Thin Branch to make the scafolding.",
   
+  "block-halflog-aged-ud": "Half Log Aged ",
+  "block-halflog-birch-ud": "Half Log Birch ",
+  "block-halflog-oak-ud": "Half Log Oak ",
+  "block-halflog-maple-ud": "Half Log Maple ",
+  "block-halflog-pine-ud": "Half Log Pine ",
+  "block-halflog-acacia-ud": "Half Log Acacia ",
+  "block-halflog-kapok-ud": "Half Log Kapok ",
+  "blockdesc-halflog-*": "Hold Right click with an axe to make the Chopping Block ",
+  
   "block-halfpanel-acacia-bark-*":"Acacia Barked Half Panel",
   "block-halfpanel-aged-bark-*":"Aged Barked Half Panel",
   "block-halfpanel-birch-bark-*":"Birch Barked Half Panel",

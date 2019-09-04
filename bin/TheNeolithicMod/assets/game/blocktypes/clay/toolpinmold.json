@@ -1,8 +1,8 @@
 {
-	code: "lanternsidesmold",
+	code: "toolpinmold",
 	classByType: {
-		"lanternsidesmold-*-raw": "Block",
-		"lanternsidesmold-*-burned": "BlockToolMold",
+		"*-raw": "Block",
+		"*-burned": "BlockToolMold",
 	},
 	behaviors: [{name: "UnstableFalling"}],
 	variantgroups: [
@@ -10,30 +10,17 @@
 		{ code:"materialtype", states: ["raw", "burned"] },
 	],
 	attributesByType: {
-		"*-blue-burned": {
-			"requiredUnits": 50,
-			"fillHeight": 1,
-			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
-			"drop": { class:"Block", code: "lantern-sides-{metal}" , stacksize: 4,  }
-		},
-		"*-brown-burned": {
-			"requiredUnits": 50,
-			"fillHeight": 1,
-			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
-			"drop": { class:"Block", code: "lantern-sides-{metal}", stacksize: 4, }
-		},
-		"*-fire-burned": {
-			"requiredUnits": 50,
-			"fillHeight": 1,
-			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
-			"drop": { class:"Block", code: "lantern-sides-{metal}" , stacksize: 4, }
-		},
-		"*-red-burned": {
-			"requiredUnits": 50,
-			"fillHeight": 1,
-			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
-			"drop": { class:"Block", code: "lantern-sides-{metal}" , stacksize: 4, }
-		},
+		"*-burned": {
+			"requiredUnits": 100,
+			"fillHeight": 4,
+			"fillQuadsByLevel": [
+				{ x1: 1, z1: 1, x2: 15, z2: 15 },
+				{ x1: 1, z1: 1, x2: 15, z2: 15 },
+				{ x1: 1, z1: 1, x2: 15, z2: 15 },
+				{ x1: 1, z1: 1, x2: 15, z2: 15 },				
+			],	
+			"drop": { type:"item", code: "toolpin-{metal}", stacksize: 98, }
+		},		
 	},
 	entityClassByType: {
 		"*-burned": "ToolMold",
@@ -44,7 +31,7 @@
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "lanternsidesmold-blue-burned" },
+			smeltedStack: { type: "block", code: "toolpinmold-blue-burned" },
 			requiresContainer: false
 		},
 		"*-fire-raw": {
@@ -52,7 +39,7 @@
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "lanternsidesmold-fire-burned" },
+			smeltedStack: { type: "block", code: "toolpinmold-fire-burned" },
 			requiresContainer: false
 		},
 		"*-red-raw": {
@@ -60,7 +47,7 @@
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "lanternsidesmold-red-burned" },
+			smeltedStack: { type: "block", code: "toolpinmold-red-burned" },
 			requiresContainer: false
 		},
 		"*-brown-raw": {
@@ -68,7 +55,7 @@
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "lanternsidesmold-brown-burned" },
+			smeltedStack: { type: "block", code: "toolpinmold-brown-burned" },
 			requiresContainer: false
 		},
 	},
@@ -82,12 +69,12 @@
 		"*-raw": {  ceramic: { base: "block/clay/{color}-raw" } },
 		"*-burned": {  ceramic: { base: "block/clay/{color}-burned" }  }
 	},
-	shape: { base: "block/clay/mold/lanternsidesmold" },
+	shape: { base: "block/clay/mold/toolpinmold" },
 	sounds: {
 		walk: "walk/stone",
 	},
-	collisionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1875, z2: 1 },
-	selectionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1875, z2: 1 },
+	collisionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.3125, z2: 1 },
+	selectionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.3125, z2: 1 },
 	sideopaque: {
 		all: false
 	},
