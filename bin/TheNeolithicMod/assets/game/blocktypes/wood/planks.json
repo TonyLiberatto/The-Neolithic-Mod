@@ -33,8 +33,8 @@
             "properties": {
                 "createBlocks": [
                     {
-						"MakeTime": 2,
-						"RemoveOnFinish": true,
+                        "MakeTime": 2,
+                        "RemoveOnFinish": true,
                         "Takes": {
                             "Code": "game:saw-*",
                             "StackSize": 0
