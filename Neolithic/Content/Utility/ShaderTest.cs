@@ -11,7 +11,7 @@ using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     public class ShaderTest : ModSystem
     {

@@ -1,6 +1,7 @@
 ﻿{
   code: "stair-corner-cbrick",
   class: "FixedStairs",
+	entityClass: "Stairs",
   variantgroups: [
     { code:"clay", states: ["blue", "brown", "fire", "red"] },
     {

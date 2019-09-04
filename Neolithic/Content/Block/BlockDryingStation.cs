@@ -13,7 +13,7 @@ using Vintagestory.Client.NoObf;
 using Vintagestory.GameContent;
 using Vintagestory.ServerMods.NoObf;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     class BlockDryingStation : Block
     {

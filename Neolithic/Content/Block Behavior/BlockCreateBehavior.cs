@@ -4,7 +4,7 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     class BlockCreateBehavior : BlockBehavior
     {
@@ -68,9 +68,9 @@ namespace TheNeolithicMod
                 return;
             }
             handled = EnumHandling.PreventDefault;
-            var active = byPlayer.InventoryManager;
+            var active = byPlayer?.InventoryManager;
             BlockPos pos = blockSel.Position;
-            if (active.ActiveHotbarSlot.Itemstack?.Collectible?.Code != null)
+            if (active?.ActiveHotbarSlot?.Itemstack?.Collectible?.Code != null)
             {
                 foreach (var val in createBlocks)
                 {

@@ -13,7 +13,7 @@ using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class SwapMessage

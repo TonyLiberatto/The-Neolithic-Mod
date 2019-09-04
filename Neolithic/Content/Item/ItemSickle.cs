@@ -2,7 +2,7 @@
 using Vintagestory.GameContent;
 
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     public class ItemSickle : ItemShears
     {

@@ -9,7 +9,7 @@ using Vintagestory.API.Datastructures;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     public class FixedBESapling : BlockEntity
     {

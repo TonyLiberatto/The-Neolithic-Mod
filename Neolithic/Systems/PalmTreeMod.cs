@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TheNeolithicMod;
-using TheNeolithicMod.Utility;
+using Neolithic;
+using Neolithic.Utility;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
@@ -12,22 +12,8 @@ using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
-    public class RegisterClasses : ModSystem
-    {
-        public override void Start(ICoreAPI api)
-        {
-            api.RegisterBlockClass("BlockPalmTree", typeof(BlockPalmTree));
-            api.RegisterBlockEntityClass("PalmTree", typeof(BEPalmTree));
-        }
-
-        public override void StartClientSide(ICoreClientAPI api)
-        {
-
-        }
-    }
-
     public class BlockPalmTree : Block
     {
         public static BlockPos[] bottomOffsets;

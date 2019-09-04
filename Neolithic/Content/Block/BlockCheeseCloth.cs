@@ -7,7 +7,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     class BlockCheeseCloth : Block
     {

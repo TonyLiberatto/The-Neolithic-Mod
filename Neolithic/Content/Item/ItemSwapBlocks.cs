@@ -9,7 +9,7 @@ using Vintagestory.GameContent;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     class ItemSwapBlocks : Item
     {

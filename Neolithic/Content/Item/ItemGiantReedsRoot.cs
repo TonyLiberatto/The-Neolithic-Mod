@@ -1,7 +1,7 @@
 ﻿using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     public class ItemGiantReedsRoot : Item
     {

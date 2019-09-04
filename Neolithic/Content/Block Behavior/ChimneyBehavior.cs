@@ -3,7 +3,7 @@ using Vintagestory.API;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     class ChimneyBehavior : BlockBehavior
     {

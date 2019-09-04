@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
+using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     class BlockNeolithicRoads : Block
     {
@@ -71,12 +72,24 @@ namespace TheNeolithicMod
 
         public override void OnBlockRemoved(IWorldAccessor world, BlockPos pos)
         {
-            if (world.BlockAccessor.GetBlock(pos).Class != this.Class) base.OnBlockRemoved(world, pos);
+            if (world.BlockAccessor.GetBlock(pos).Class != Class) base.OnBlockRemoved(world, pos);
         }
     }
 
     class BENeolithicRoads : BlockEntity
     {
         public uint index = 0;
+
+        public override void ToTreeAttributes(ITreeAttribute tree)
+        {
+            tree.SetInt("roadindex", (int)index);
+            base.ToTreeAttributes(tree);
+        }
+
+        public override void FromTreeAtributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve)
+        {
+            index = (uint)tree.TryGetInt("roadindex");
+            base.FromTreeAtributes(tree, worldAccessForResolve);
+        }
     }
 }
