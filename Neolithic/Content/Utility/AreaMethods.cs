@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 
-namespace TheNeolithicMod.Utility
+namespace Neolithic.Utility
 {
     class AreaMethods
     {

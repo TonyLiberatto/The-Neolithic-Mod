@@ -7,15 +7,17 @@ using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     public class FixedStairs : BlockStairs
     {
 		string type, material, updown, outside, inside;
 		Block north, south, east, west;
-		bool side, corner;
 
-		public override void OnLoaded(ICoreAPI api)
+        public bool Side { get => Code.ToString().Contains("stair-side"); }
+        public bool Corner { get => Code.ToString().Contains("stair-corner"); }
+
+        public override void OnLoaded(ICoreAPI api)
 		{
 			base.OnLoaded(api);
 
@@ -28,36 +30,30 @@ namespace TheNeolithicMod
 			south = new AssetLocation("stair-side-" + type + "-" + material + "-" + updown + "-south").GetBlock(api);
 			east = new AssetLocation("stair-side-" + type + "-" + material + "-" + updown + "-east").GetBlock(api);
 			west = new AssetLocation("stair-side-" + type + "-" + material + "-" + updown + "-west").GetBlock(api);
-
-			side = WildCardMatch(new AssetLocation("*stair-side*"));
-			corner = WildCardMatch(new AssetLocation("*stair-corner*"));
 		}
 
 		public override void OnNeighourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos)
         {
             Block nBlock = neibpos.GetBlock(world);
-            if (!nBlock.WildCardMatch(new AssetLocation("stair*")) && !nBlock.WildCardMatch(new AssetLocation("air*"))) return;
+            if (!(nBlock is FixedStairs)) return;
 
-            AssetLocation[] cardinal = GetCardinal(world, pos);
-
-            if (side)
+            if (Side)
             {
-                StairsCheck(world, pos, cardinal);
+                StairsCheck(world, pos);
             }
-            else if (corner)
+            else if (Corner)
             {
-                CornersCheck(world, pos, cardinal);
+                CornersCheck(world, pos);
             }
         }
 
         public override void OnBlockPlaced(IWorldAccessor world, BlockPos blockPos, ItemStack byItemStack = null)
         {
             base.OnBlockPlaced(world, blockPos, byItemStack);
-            AssetLocation[] cardinal = GetCardinal(world, blockPos);
 
-            if (side)
+            if (Side)
             {
-                StairsCheck(world, blockPos, cardinal);
+                StairsCheck(world, blockPos);
             }
         }
 
@@ -71,9 +67,9 @@ namespace TheNeolithicMod
             return new ItemStack[] { new ItemStack(world.BlockAccessor.GetBlock(new AssetLocation("stair-side-" + FirstCodePart(2) + "-" + FirstCodePart(3) + "-up-north"))) };
         }
 
-        public void StairsCheck(IWorldAccessor world, BlockPos pos, AssetLocation[] cardinal)
+        public void StairsCheck(IWorldAccessor world, BlockPos pos)
         {
-
+            AssetLocation[] cardinal = GetCardinal(world, pos);
             var bA = world.BlockAccessor;
 
             if (!cardinal.Any(val => bA.GetBlock(val).WildCardMatch(new AssetLocation("*stair-side*")))) return;
@@ -129,11 +125,12 @@ namespace TheNeolithicMod
             }
         }
 
-        public void CornersCheck(IWorldAccessor world, BlockPos pos, AssetLocation[] cardinal)
+        public void CornersCheck(IWorldAccessor world, BlockPos pos)
         {
             var bA = world.BlockAccessor;
+            AssetLocation[] cardinal = GetCardinal(world, pos);
 
-			string cardinalN = bA.GetBlock(cardinal[0]).LastCodePart();
+            string cardinalN = bA.GetBlock(cardinal[0]).LastCodePart();
             string cardinalS = bA.GetBlock(cardinal[1]).LastCodePart();
             string cardinalE = bA.GetBlock(cardinal[2]).LastCodePart();
             string cardinalW = bA.GetBlock(cardinal[3]).LastCodePart();
@@ -217,7 +214,7 @@ namespace TheNeolithicMod
 			}
         }
 
-        public static AssetLocation[] GetCardinal(IWorldAccessor world, BlockPos pos)
+        public AssetLocation[] GetCardinal(IWorldAccessor world, BlockPos pos)
         {
             var bA = world.BlockAccessor;
             AssetLocation[] cardinal = {
@@ -227,6 +224,23 @@ namespace TheNeolithicMod
                 bA.GetBlock(pos.WestCopy()).Code,
             };
             return cardinal;
+        }
+    }
+
+    public class BlockEntityStairs : BlockEntity
+    {
+        public override void Initialize(ICoreAPI api)
+        {
+            base.Initialize(api);
+            RegisterGameTickListener(dt =>
+            {
+                FixedStairs fixedStairs = (pos.GetBlock(api) as FixedStairs);
+                if (fixedStairs != null)
+                {
+                    if (fixedStairs.Corner) fixedStairs.CornersCheck(api.World, pos);
+                    else if (fixedStairs.Side) fixedStairs.StairsCheck(api.World, pos);
+                }
+            }, 30);
         }
     }
 }

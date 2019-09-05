@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API.Common;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     public static class HandAnimations
     {

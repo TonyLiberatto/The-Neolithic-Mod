@@ -1,6 +1,6 @@
 ﻿using Vintagestory.API.Common;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     class SwapBlocks
     {

@@ -1,6 +1,7 @@
 {
 	code: "stair-side-shingle",
 	class: "FixedStairs",
+	entityClass: "Stairs",
 	variantgroups: [
 		{ code:"clay", states: ["blue", "brown", "fire", "red"] },
 		{ loadFromProperties: "abstract/verticalorientation" },

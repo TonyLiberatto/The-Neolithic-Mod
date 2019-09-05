@@ -1,4 +1,4 @@
-﻿namespace TheNeolithicMod
+﻿namespace Neolithic
 {
     class AnimProps
     {

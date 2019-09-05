@@ -13,7 +13,7 @@ using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class SwapMessage
@@ -160,6 +160,7 @@ namespace TheNeolithicMod
             handled = EnumHandling.PreventDefault;
             SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
+            if (slot?.Itemstack?.Collectible?.Code == null) return false;
             string key = GetKey(slot?.Itemstack?.Collectible?.Code?.ToString()) ?? "";
 
             ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
@@ -236,8 +237,24 @@ namespace TheNeolithicMod
                         }
                         slot.MarkDirty();
                         PlaySoundDispenseParticles(world, pos, slot);
+                        return;
                     }
                 }
+            }
+
+            ItemStack stack = byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack;
+            if (stack != null)
+            {
+                string r = "";
+                BlockSelection newsel = blockSel.Clone();
+                newsel.Position = blockSel.Position.Offset(blockSel.Face);
+                Block block = stack.Block;
+
+                if (block != null && block.TryPlaceBlock(world, byPlayer, stack, newsel, ref r))
+                {
+                    world.PlaySoundAt(stack.Block?.Sounds.Place, newsel.Position);
+                }
+
             }
         }
 

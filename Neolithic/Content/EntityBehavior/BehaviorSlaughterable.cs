@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API.Common.Entities;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     class BehaviorSlaughterable : EntityBehavior
     {

@@ -8,7 +8,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Client;
 using Vintagestory.API.Util;
 
-namespace TheNeolithicMod
+namespace Neolithic
 {
     class BlockChandelierFix : Block
     {
