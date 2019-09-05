@@ -19,7 +19,6 @@ uniform vec3 iPlayerPosition;
 uniform vec3 iLookBlockPos;
 uniform vec3 iLookEntityPos;
 uniform vec3 iCameraPos;
-uniform vec4 iUnderwater;
 
 //0 or 1
 uniform vec4 iControls1; //Backward, Down, FloorSitting, Forward

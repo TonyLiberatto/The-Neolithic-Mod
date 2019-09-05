@@ -180,7 +180,6 @@
     <Compile Include="Neolithic\Systems\PalmTreeMod.cs" />
     <Compile Include="Neolithic\Systems\Remapper.cs" />
     <Compile Include="Neolithic\Systems\ReturnBlockTest.cs" />
-    <Compile Include="Neolithic\Systems\UnderSeaWaterEffects.cs" />
     <Compile Include="Neolithic\TheNeolithicMod.cs" />
   </ItemGroup>
   <ItemGroup>
