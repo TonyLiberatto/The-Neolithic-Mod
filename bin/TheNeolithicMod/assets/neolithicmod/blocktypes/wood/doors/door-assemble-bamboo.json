@@ -9,7 +9,7 @@
 					"particleRadius": 2,
 					"particleQuantity": 16,								
 					"swapBlocks": [
-						{ "Tool": "neolithicmod:panel-bamboo-green-east", "Makes": "neolithicmod:door-full-bamboo-green-east", "Takes": null, "Count": 1 },					
+						{ "Tool": "neolithicmod:panel-bamboo-green-down", "Makes": "neolithicmod:door-full-bamboo-green-east", "Takes": null, "Count": 1 },					
 					],
 				},
 			},
@@ -22,7 +22,7 @@
 					"particleRadius": 2,
 					"particleQuantity": 16,								
 					"swapBlocks": [
-						{ "Tool": "neolithicmod:panel-bamboo-brown-east", "Makes": "neolithicmod:door-full-bamboo-brown-east", "Takes": null, "Count": 1 },					
+						{ "Tool": "neolithicmod:panel-bamboo-brown-down", "Makes": "neolithicmod:door-full-bamboo-brown-east", "Takes": null, "Count": 1 },					
 					],
 				},
 			},

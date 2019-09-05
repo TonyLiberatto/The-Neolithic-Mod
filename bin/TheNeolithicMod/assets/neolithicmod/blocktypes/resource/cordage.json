@@ -5,8 +5,8 @@
             name: "BlockCreateBehavior",
             properties: {
                 "createBlocks": [
-                    { "Takes": { "Code": "neolithicmod:panel-bamboo-brown-ground-east", "StackSize": 0 }, "Makes": [ { "Code": "neolithicmod:browndoor-north-down-closed-left", "StackSize": 1 } ]},
-					{ "Takes": { "Code": "neolithicmod:panel-bamboo-green-ground-east", "StackSize": 0 }, "Makes": [ { "Code": "neolithicmod:greendoor-north-down-closed-left", "StackSize": 1 } ]},			
+                    { "Takes": { "Code": "neolithicmod:panel-bamboo-brown-down", "StackSize": 0 }, "Makes": [ { "Code": "neolithicmod:browndoor-north-down-closed-left", "StackSize": 1 } ]},
+					{ "Takes": { "Code": "neolithicmod:panel-bamboo-green-down", "StackSize": 0 }, "Makes": [ { "Code": "neolithicmod:greendoor-north-down-closed-left", "StackSize": 1 } ]},			
                 ],
             },
         },
@@ -19,8 +19,8 @@
 				"playSound": false, "_comment": "so sound isn't duplicated",
 				"allowedVariants": [ "neolithicmod:cordage-leatherstrips", ],
 				"swapBlocks": [
-					{ "Tool": "neolithicmod:panel-bamboo-brown-ground-east", "Makes": "game:air", "Takes": null, "Count": 2 },
-					{ "Tool": "neolithicmod:panel-bamboo-green-ground-east", "Makes": "game:air", "Takes": null, "Count": 2 },
+					{ "Tool": "neolithicmod:panel-bamboo-brown-down", "Makes": "game:air", "Takes": null, "Count": 2 },
+					{ "Tool": "neolithicmod:panel-bamboo-green-down", "Makes": "game:air", "Takes": null, "Count": 2 },
 				],
 			},
 		},

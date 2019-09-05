@@ -101,8 +101,8 @@
 	},
 	drops: [
 		{ type: "block", code: "log-placed-{wood}-ud", quantity: { avg: 1 }, tool:"axe"  },
-		{ type: "block", code: "neolithicmod:panel-{wood}-bark-east", quantity: { avg: 4 }, tool:"saw"  },
-		{ type: "block", code: "neolithicmod:panel-{wood}-debarked-east", quantity: { avg: 4 }, tool:"saw"  },
+		{ type: "block", code: "neolithicmod:panel-{wood}-bark-down", quantity: { avg: 4 }, tool:"saw"  },
+		{ type: "block", code: "neolithicmod:panel-{wood}-debarked-down", quantity: { avg: 4 }, tool:"saw"  },
 		
 	],
 	combustiblePropsByType: {

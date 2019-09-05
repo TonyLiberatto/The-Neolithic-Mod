@@ -8,7 +8,7 @@
 				"particleRadius": 2,
 				"particleQuantity": 16,								
 				"swapBlocks": [
-					{ "Tool": "neolithicmod:panel-{wood}-debarked-east", "Makes": "neolithicmod:door-full-{wood}-east", "Takes": null, "Count": 1 },					
+					{ "Tool": "neolithicmod:panel-{wood}-debarked-down", "Makes": "neolithicmod:door-full-{wood}-east", "Takes": null, "Count": 1 },					
 				],
 			},
 		},

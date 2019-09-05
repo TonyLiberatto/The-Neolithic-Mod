@@ -13,7 +13,7 @@
 				"name": "BlockCreateBehavior",
 				"properties": {
 					"createBlocks": [
-						{ "Takes": { "Code": "game:saw-*", "StackSize": 0 }, "Makes": [ { "Code": "neolithicmod:halfpanel-{wood}-{style}-east", "StackSize": 2 } ]},						
+						{ "Takes": { "Code": "game:saw-*", "StackSize": 0 }, "Makes": [ { "Code": "neolithicmod:halfpanel-{wood}-{style}-down", "StackSize": 2 } ]},						
 					]
 				}
 			},
@@ -34,7 +34,7 @@
 				"name": "BlockCreateBehavior",
 				"properties": {
 					"createBlocks": [
-						{ "Takes": { "Code": "game:saw-*", "StackSize": 0 }, "Makes": [ { "Code": "neolithicmod:halfpanel-{wood}-{style}-east", "StackSize": 2 } ]},						
+						{ "Takes": { "Code": "game:saw-*", "StackSize": 0 }, "Makes": [ { "Code": "neolithicmod:halfpanel-{wood}-{style}-down", "StackSize": 2 } ]},						
 					]
 				}
 			},
@@ -54,7 +54,7 @@
 				"name": "BlockCreateBehavior",
 				"properties": {
 					"createBlocks": [
-						{ "Takes": { "Code": "game:saw-*", "StackSize": 0 }, "Makes": [ { "Code": "neolithicmod:halfpanel-{wood}-{style}-east", "StackSize": 2 } ]},						
+						{ "Takes": { "Code": "game:saw-*", "StackSize": 0 }, "Makes": [ { "Code": "neolithicmod:halfpanel-{wood}-{style}-down", "StackSize": 2 } ]},						
 					]
 				}
 			},
@@ -99,7 +99,7 @@
 		"*-south": { all: false, south: true },
 	},
 	blockmaterial: "Wood",
-	creativeinventory: { "general": ["*-east"], "decorative": ["*-east"], "neolithicdeco": ["*-east"] },
+	creativeinventory: { "general": ["*-down"], "decorative": ["*-down"], "neolithicdeco": ["*-down"] },	
 	replaceable: 4000,
 	resistance: 1,
 	lightAbsorption: 1,

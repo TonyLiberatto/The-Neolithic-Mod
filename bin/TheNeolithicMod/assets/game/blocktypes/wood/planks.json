@@ -41,7 +41,7 @@
                         },
                         "Makes": [
                             {
-                                "Code": "neolithicmod:panel-{wood}-planks-east",
+                                "Code": "neolithicmod:panel-{wood}-planks-down",
                                 "StackSize": 16
                             }
                         ]
