@@ -62,6 +62,7 @@ namespace Neolithic
                         world.PlaySoundAtWithDelay(nextBlock.Sounds.Place, blockSel.Position, 200);
                         world.PlaySoundAtWithDelay(new AssetLocation("sounds/block/chop"), blockSel.Position, 100);
                         world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);
+                        slot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, slot);
                     }
                     return;
                 }
