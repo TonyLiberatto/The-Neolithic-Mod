@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
@@ -219,6 +220,11 @@ namespace Neolithic
         public static bool TryGiveItemstack(this IPlayerInventoryManager manager, JsonItemStack[] stacks)
         {
             return manager.TryGiveItemstack(stacks.ResolvedStacks(manager.ActiveHotbarSlot.Inventory.Api.World));
+        }
+
+        public static double DistanceTo(this SyncedEntityPos pos, Vec3d vec)
+        {
+            return Math.Sqrt(pos.SquareDistanceTo(vec));
         }
 
         public static ItemStack[] ResolvedStacks(this JsonItemStack[] stacks, IWorldAccessor world)

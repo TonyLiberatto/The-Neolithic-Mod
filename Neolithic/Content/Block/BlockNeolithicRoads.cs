@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
@@ -61,7 +62,7 @@ namespace Neolithic
 
                         world.PlaySoundAtWithDelay(nextBlock.Sounds.Place, blockSel.Position, 100);
                         world.PlaySoundAtWithDelay(new AssetLocation("sounds/effect/anvilhit"), blockSel.Position, 150);
-                        world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);
+                        world.BlockAccessor.ExchangeBlock(nextBlock.BlockId, blockSel.Position);
                         slot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, slot);
                     }
                     return;
@@ -70,11 +71,6 @@ namespace Neolithic
         }
 
         public bool IsSettingHammer(ItemSlot slot) => slot.Itemstack.Collectible.FirstCodePart() == "settinghammer";
-
-        public override void OnBlockRemoved(IWorldAccessor world, BlockPos pos)
-        {
-            if (world.BlockAccessor.GetBlock(pos).Class != Class) base.OnBlockRemoved(world, pos);
-        }
     }
 
     class BENeolithicRoads : BlockEntity
