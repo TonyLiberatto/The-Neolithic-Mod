@@ -53,6 +53,22 @@ namespace Neolithic
             BlockEntityLogwall be = (blockSel.BlockEntity(api) as BlockEntityLogwall);
             be?.OnInteract(world, byPlayer, blockSel);
             base.OnBlockInteractStart(world, byPlayer, blockSel);
+
+            ItemStack stack = byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack;
+            if (stack != null)
+            {
+                string r = "";
+                BlockSelection newsel = blockSel.Clone();
+                newsel.Position = blockSel.Position.Offset(blockSel.Face);
+                Block block = stack.Block;
+
+                if (block != null && block.TryPlaceBlock(world, byPlayer, stack, newsel, ref r))
+                {
+                    world.PlaySoundAt(stack.Block?.Sounds.Place, newsel.Position);
+                }
+                
+            }
+
             return true;
         }
 

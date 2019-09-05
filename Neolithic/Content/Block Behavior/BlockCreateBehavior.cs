@@ -62,15 +62,16 @@ namespace Neolithic
 
         public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
         {
+            handled = EnumHandling.PassThrough;
+            base.OnBlockInteractStop(secondsUsed, world, byPlayer, blockSel, ref handled);
             if (createBlocks == null)
             {
                 world.Logger.Notification("CreateBlocks error in " + block.Code.ToString());
                 return;
             }
-            handled = EnumHandling.PreventDefault;
             var active = byPlayer?.InventoryManager;
-            BlockPos pos = blockSel.Position;
-            if (active?.ActiveHotbarSlot?.Itemstack?.Collectible?.Code != null)
+            BlockPos pos = blockSel?.Position;
+            if (active?.ActiveHotbarSlot?.Itemstack?.Collectible?.Code != null && pos != null)
             {
                 foreach (var val in createBlocks)
                 {
@@ -112,9 +113,25 @@ namespace Neolithic
                         active.ActiveHotbarSlot.MarkDirty();
 
                         if (val.RemoveOnFinish) world.BlockAccessor.SetBlock(0, pos);
-                        break;
+                        handled = EnumHandling.PreventDefault;
+                        return;
                     }
                 }
+            }
+
+            ItemStack stack = byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack;
+            if (stack != null)
+            {
+                string r = "";
+                BlockSelection newsel = blockSel.Clone();
+                newsel.Position = blockSel.Position.Offset(blockSel.Face);
+                Block block = stack.Block;
+
+                if (block != null && block.TryPlaceBlock(world, byPlayer, stack, newsel, ref r))
+                {
+                    world.PlaySoundAt(stack.Block?.Sounds.Place, newsel.Position);
+                }
+
             }
         }
 
