@@ -162,6 +162,11 @@ namespace Neolithic
             return a + "-" + appended;
         }
 
+        public static string Apd(this string a, int appended)
+        {
+            return a + "-" + appended;
+        }
+
         public static void SpawnItemEntity(this IWorldAccessor world, ItemStack[] stacks, Vec3d pos, Vec3d velocity = null)
         {
             foreach (ItemStack stack in stacks)
@@ -226,6 +231,8 @@ namespace Neolithic
         {
             return Math.Sqrt(pos.SquareDistanceTo(vec));
         }
+
+        public static bool WildCardMatch(this RegistryObject obj, string a) => obj.WildCardMatch(new AssetLocation(a));
 
         public static ItemStack[] ResolvedStacks(this JsonItemStack[] stacks, IWorldAccessor world)
         {

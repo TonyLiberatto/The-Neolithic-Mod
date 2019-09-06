@@ -62,6 +62,7 @@ namespace Neolithic
         bool requireSneak = false;
         bool disabled = false;
         bool playSound = true;
+        bool allowPlaceOn = true;
         int pRadius = 2;
         int pQuantity = 16;
 
@@ -82,6 +83,7 @@ namespace Neolithic
             pRadius = properties["particleRadius"].AsInt(pRadius);
             pQuantity = properties["particleQuantity"].AsInt(pQuantity);
             playSound = properties["playSound"].AsBool(true);
+            allowPlaceOn = properties["allowPlaceOn"].AsBool(true);
 
             if (properties["allowedVariants"].Exists)
             {
@@ -109,19 +111,27 @@ namespace Neolithic
                             {
                                 SwapBlocks tmp = val.Copy();
 
-                                foreach (var block in api.World.Blocks.FindAll(a => a.WildCardMatch(new AssetLocation(val.Tool))))
+                                foreach (var block in api.World.Blocks)
                                 {
-                                    tmp.Tool = block.Code.ToString();
-                                    if (swapSystem.SwapPairs.ContainsKey(GetKey(val.Tool))) continue;
+                                    if (block.WildCardMatch(val.Tool))
+                                    {
+                                        tmp.Tool = block.Code.ToString();
+                                        string key = GetKey(tmp.Tool);
+                                        if (swapSystem.SwapPairs.ContainsKey(key)) continue;
 
-                                    swapSystem.SwapPairs.Add(GetKey(tmp.Tool), tmp);
+                                        swapSystem.SwapPairs.Add(key, tmp.Copy());
+                                    }
                                 }
-                                foreach (var item in api.World.Items.FindAll(a => a.WildCardMatch(new AssetLocation(val.Tool))))
+                                foreach (var item in api.World.Items)
                                 {
-                                    tmp.Tool = item.Code.ToString();
-                                    if (swapSystem.SwapPairs.ContainsKey(GetKey(val.Tool))) continue;
+                                    if (item.WildCardMatch(val.Tool))
+                                    {
+                                        tmp.Tool = item.Code.ToString();
+                                        string key = GetKey(tmp.Tool);
+                                        if (swapSystem.SwapPairs.ContainsKey(key)) continue;
 
-                                    swapSystem.SwapPairs.Add(GetKey(tmp.Tool), tmp);
+                                        swapSystem.SwapPairs.Add(key, tmp.Copy());
+                                    }
                                 }
                             }
                             else
@@ -144,10 +154,7 @@ namespace Neolithic
             }
         }
 
-        public string GetKey(string holdingstack)
-        {
-            return holdingstack + block.Code.ToString() + block.Id;
-        }
+        public string GetKey(string holdingstack) => holdingstack.Apd(block.Code.ToString());
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
         {
@@ -241,13 +248,12 @@ namespace Neolithic
                     }
                 }
             }
-
             ItemStack stack = byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack;
-            if (stack != null)
+            if (stack != null && allowPlaceOn)
             {
                 string r = "";
                 BlockSelection newsel = blockSel.Clone();
-                newsel.Position = blockSel.Position.Offset(blockSel.Face);
+                newsel.Position = newsel.Position.Offset(blockSel.Face);
                 Block block = stack.Block;
 
                 if (block != null && block.TryPlaceBlock(world, byPlayer, stack, newsel, ref r))

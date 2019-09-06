@@ -62,7 +62,7 @@ namespace Neolithic
 
         public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
         {
-            handled = EnumHandling.PassThrough;
+            handled = EnumHandling.PreventDefault;
             base.OnBlockInteractStop(secondsUsed, world, byPlayer, blockSel, ref handled);
             if (createBlocks == null)
             {
