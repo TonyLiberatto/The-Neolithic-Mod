@@ -21,8 +21,8 @@
 	shape: { base: "item/food/meat/porkchops" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
 	nutritionPropsByType: {
-		"porkchops-cooked": { saturation: 280, health: 0, foodcategory: "Protein" },
-		"porkchops-cured": { saturation: 280, health: 0, foodcategory: "Protein" }
+		"porkchops-cooked": { saturation: 2800, health: 0, foodcategory: "Protein" },
+		"porkchops-cured": { saturation: 2800, health: 0, foodcategory: "Protein" }
 	},
 	materialDensity: 600,
 	guiTransform: {
