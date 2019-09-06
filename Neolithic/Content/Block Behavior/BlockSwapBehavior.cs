@@ -62,7 +62,7 @@ namespace Neolithic
         bool requireSneak = false;
         bool disabled = false;
         bool playSound = true;
-        bool allowPlaceOn = true;
+        bool allowPlaceOn = false;
         int pRadius = 2;
         int pQuantity = 16;
 
@@ -83,7 +83,7 @@ namespace Neolithic
             pRadius = properties["particleRadius"].AsInt(pRadius);
             pQuantity = properties["particleQuantity"].AsInt(pQuantity);
             playSound = properties["playSound"].AsBool(true);
-            allowPlaceOn = properties["allowPlaceOn"].AsBool(true);
+            allowPlaceOn = properties["allowPlaceOn"].AsBool(false);
 
             if (properties["allowedVariants"].Exists)
             {
@@ -248,6 +248,7 @@ namespace Neolithic
                     }
                 }
             }
+            
             ItemStack stack = byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack;
             if (stack != null && allowPlaceOn)
             {

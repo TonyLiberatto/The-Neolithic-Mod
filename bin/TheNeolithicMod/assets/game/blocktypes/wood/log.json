@@ -8,6 +8,7 @@
 			{
             "name": "BlockCreateBehavior",
             "properties": {
+								"allowPlaceOn": true,
                 "createBlocks": [
                     {
 						"MakeTime": 2,

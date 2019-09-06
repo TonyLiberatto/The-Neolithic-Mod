@@ -9,6 +9,7 @@ namespace Neolithic
     class BlockCreateBehavior : BlockBehavior
     {
         private CreateBlocks[] createBlocks;
+        public bool allowPlaceOn = false;
         ICoreAPI api;
 
         public BlockCreateBehavior(Block block) : base(block) { }
@@ -18,6 +19,7 @@ namespace Neolithic
             try
             {
                 createBlocks = properties["createBlocks"].AsObject<CreateBlocks[]>();
+                allowPlaceOn = properties["allowPlaceOn"].AsBool(false);
             }
             catch (Exception)
             {
@@ -120,7 +122,7 @@ namespace Neolithic
             }
 
             ItemStack stack = byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack;
-            if (stack != null)
+            if (stack != null && allowPlaceOn)
             {
                 string r = "";
                 BlockSelection newsel = blockSel.Clone();
