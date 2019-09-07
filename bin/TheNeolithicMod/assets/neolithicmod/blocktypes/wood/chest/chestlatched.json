@@ -1,5 +1,5 @@
 {
-	code: "chest-frame",
+	code: "chestlatched",
 	behaviorsByType: {
 		"*-bamboo-*":[ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},
 			{
@@ -9,8 +9,8 @@
 					"particleRadius": 2,
 					"particleQuantity": 16,								
 					"swapBlocks": [					
-						{ "Tool": "neolithicmod:panel-bamboo-brown-down", "Makes": "neolithicmod:chest-assemble-bamboo-brown-east", "Takes": "neolithicmod:chest-frame-bamboo-brown-{side}", "Count": 4 },
-						{ "Tool": "neolithicmod:panel-bamboo-green-down", "Makes": "neolithicmod:chest-assemble-bamboo-green-east", "Takes": "neolithicmod:chest-frame-bamboo-green-{side}", "Count": 4 },
+						{ "Tool": "neolithicmod:panel-bamboo-brown-down", "Makes": "neolithicmod:chestcomplete-bamboo-brown-east", "Takes": "neolithicmod:chestlatched-bamboo-brown-{side}", "Count": 1 },
+						{ "Tool": "neolithicmod:panel-bamboo-green-down", "Makes": "neolithicmod:chestcomplete-bamboo-green-east", "Takes": "neolithicmod:chestlatched-bamboo-green-{side}", "Count": 1 },
 					],
 				},
 			},
@@ -23,24 +23,29 @@
 					"particleRadius": 2,
 					"particleQuantity": 16,								
 					"swapBlocks": [
-						{ "Tool": "neolithicmod:panel-{wood}-debarked-down", "Makes": "neolithicmod:chest-assemble-{wood}-east", "Takes": null, "Count": 4 },					
+						{ "Tool": "neolithicmod:panel-{wood}-debarked-down", "Makes": "neolithicmod:chestcomplete-{wood}-east", "Takes": null, "Count": 1 },					
 					],
 				},
 			},
 		],
 	},
 	variantgroups: [		
-		{ code: "wood", states: ["acacia", "aged", "birch", "kapok", "maple", "oak", "pine", "bamboo-brown", "bamboo-green"] },
+		{ code: "wood", states: ["bamboo-brown", "bamboo-green", "acacia", "aged", "birch", "kapok", "maple", "oak", "pine"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },
 		
 	],	
+	attributes: {
+		handbook: {
+			groupBy: ["chestlatched-*"]
+		},
+	},
 	shapeByType: {
 		"*-north": { base: "block/wood/chest/chest-assemble", rotateY: 0 },
 		"*-east": { base: "block/wood/chest/chest-assemble", rotateY: 270 },
 		"*-south": { base: "block/wood/chest/chest-assemble", rotateY: 180 },
-		"*-west": { base: "block/wood/chest/chest-assemble", rotateY: 90 },		
+		"*-west": { base: "block/wood/chest/chest-assemble", rotateY: 90 },				
 	},
-	creativeinventory: { "general": [""], "decorative": [""], "neolithicdeco": [""] },
+	creativeinventory: { "general": ["*"], "decorative": [""], "neolithicdeco": [""] },
 	blockmaterial: "Wood",
 	replaceable: 900,
 	resistance: 1.5,
@@ -59,10 +64,12 @@
 		"place": "block/planks",
 		"walk": "walk/wood"
 	},
-	textures: {		
+	textures: {
 			"corners": { base: "block/wood/chest/{wood}/corners" },
-			"sides": { base: "game:block/transparent" },
-			"floor": { base: "block/wood/chest/{wood}/floor" },		
+			"lid": { base: "game:block/transparent" },
+			"sides": { base: "block/wood/chest/{wood}/sides" },
+			"floor": { base: "block/wood/chest/{wood}/floor" },
+			"hinges": { "base": "game:item/tool/material/blackbronze" },
 	},
 	materialDensity: 400,
 	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.8125, z2: 0.9375 },

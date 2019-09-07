@@ -8,7 +8,7 @@
 		handbook:{ 
 				groupBy: ["chest-*"],
 				extraSections: [
-					{ title: "handbook-item-sources", text: "Place a panel down on the ground, right click with a Very-thin branch to create the chest frame, right click with 4 panels to complete the box, right click with 2 leatherstrips for bamboo or 2 metal hinges for wood as the final step. Pick it up to have the chest, or right click with a small sisal rug to get a Labeled chest." }
+					{ title: "handbook-item-sources", text: "Place a panel down on the ground, right click with 4 Very-thin branch to create the chest frame, right click with 4 panels to complete the box, right click with 2 leatherstrips for bamboo or 2 metal hinges for wood, right click again with a panel to finalize the block. Pick it up to have the chest, or right click with a small sisal rug to get a Labeled chest." }
 					]
 
 		},

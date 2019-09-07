@@ -24,7 +24,7 @@
 				"particleQuantity": 16,
 				"swapBlocks": [
 				{ "Tool": "game:hinges-*", "Makes": "neolithicmod:door-assemble-{wood}-east", "Takes": null, "Count": 2 },
-				{ "Tool": "neolithicmod:branch-very-thin-*", "Makes": "neolithicmod:chest-frame-{wood}-east", "Takes": null, "Count": 4 },				
+				{ "Tool": "neolithicmod:branch-very-thin-*", "Makes": "neolithicmod:chestframe-{wood}-east", "Takes": null, "Count": 4 },				
 				{ "Tool": "game:saw-*", "Makes": "game:air", "Takes": null, "Count": 0 },				
 				]}
 			}
