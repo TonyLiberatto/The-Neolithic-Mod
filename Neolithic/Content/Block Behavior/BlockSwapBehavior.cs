@@ -186,7 +186,9 @@ namespace Neolithic
 
         public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {
-            BlockPos pos = blockSel.Position;
+            BlockPos pos = blockSel?.Position;
+            if (pos == null) return;
+
             ModSystemBlockReinforcement bR = api.ModLoader.GetModSystem<ModSystemBlockReinforcement>();
             if (disabled || bR.IsReinforced(pos) || bR.IsLocked(pos, byPlayer)) return;
 
