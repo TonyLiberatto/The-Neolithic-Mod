@@ -15,7 +15,10 @@
 	],
 	attributes: {
 		handbook: {
-			groupBy: ["logwall-*-up-north"]
+			groupBy: ["logwall-*-up-north"],
+			extraSections: [
+					{ title: "handbook-item-sources", text: "Place a medium branch upwards on the ground, right click with leather strips, sinew, sisal twine or reeds, then right click again with another medium branch." }
+					]
 		},
 	},
 	creativeinventory: { "general": ["*-up-north"], "construction": ["*-up-north"], "neolithicblocks": ["*-up-north"] },

@@ -1,10 +1,10 @@
 {
-	code: "chest-complete",
+	code: "chestcomplete",
 	behaviorsByType: { 
 		"*-bamboo-brown-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:chest-east", attributes: { type: "normal-generic-bamboo-brown" }}}},
 			{name: "BlockSwapBehavior",	properties: { "particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	}, "particleRadius": 2,	"particleQuantity": 16,
 				"requireSneak": true,					
-				"swapBlocks": [{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "neolithicmod:chest-latched-bamboo-brown-east", "Takes": null, "Count": 2 },					
+				"swapBlocks": [{ "Tool": "neolithicmod:sisalrug-small-ground-east", "Makes": "neolithicmod:labeledchestcomplete-bamboo-brown-east", "Takes": null, "Count": 1 },					
 				],
 			},
 		}
@@ -12,7 +12,7 @@
 		"*-bamboo-green-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:chest-east", attributes: { type: "normal-generic-bamboo-green" }}}},
 			{name: "BlockSwapBehavior",	properties: { "particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	}, "particleRadius": 2,	"particleQuantity": 16,
 				"requireSneak": true,					
-				"swapBlocks": [{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "neolithicmod:chest-latched-bamboo-green-east", "Takes": null, "Count": 2 },					
+				"swapBlocks": [{ "Tool": "neolithicmod:sisalrug-small-ground-east", "Makes": "neolithicmod:labeledchestcomplete-bamboo-green-east", "Takes": null, "Count": 1 },					
 					],
 				},
 			}
@@ -20,7 +20,7 @@
 		"*-acacia-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:chest-east", attributes: { type: "normal-generic-acacia" }}}},
 			{name: "BlockSwapBehavior",	properties: { "particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	}, "particleRadius": 2,	"particleQuantity": 16,
 				"requireSneak": true,					
-				"swapBlocks": [{ "Tool": "game:hinges-*", "Makes": "neolithicmod:chest-latched-acacia-east", "Takes": null, "Count": 2 },					
+				"swapBlocks": [{ "Tool": "neolithicmod:sisalrug-small-ground-east", "Makes": "neolithicmod:labeledchestcomplete-acacia-east", "Takes": null, "Count": 1 },					
 					],
 				},
 			}
@@ -28,7 +28,7 @@
 		"*-aged-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:chest-east", attributes: { type: "normal-generic-aged" }}}},
 			{name: "BlockSwapBehavior",	properties: { "particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	}, "particleRadius": 2,	"particleQuantity": 16,
 				"requireSneak": true,					
-				"swapBlocks": [{ "Tool": "game:hinges-*", "Makes": "neolithicmod:chest-latched-aged-east", "Takes": null, "Count": 2 },					
+				"swapBlocks": [{ "Tool": "neolithicmod:sisalrug-small-ground-east", "Makes": "neolithicmod:labeledchestcomplete-aged-east", "Takes": null, "Count": 1 },					
 					],
 				},
 			}
@@ -36,7 +36,7 @@
 		"*-birch-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:chest-east", attributes: { type: "normal-generic-birch" }}}},
 			{name: "BlockSwapBehavior",	properties: { "particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	}, "particleRadius": 2,	"particleQuantity": 16,
 				"requireSneak": true,					
-				"swapBlocks": [{ "Tool": "game:hinges-*", "Makes": "neolithicmod:chest-latched-birch-east", "Takes": null, "Count": 2 },					
+				"swapBlocks": [{ "Tool": "neolithicmod:sisalrug-small-ground-east", "Makes": "neolithicmod:labeledchestcomplete-birch-east", "Takes": null, "Count": 1 },					
 					],
 				},
 			}
@@ -44,7 +44,7 @@
 		"*-kapok-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:chest-east", attributes: { type: "normal-generic-kapok" }}}},
 			{name: "BlockSwapBehavior",	properties: { "particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	}, "particleRadius": 2,	"particleQuantity": 16,
 				"requireSneak": true,					
-				"swapBlocks": [{ "Tool": "game:hinges-*", "Makes": "neolithicmod:chest-latched-kapok-east", "Takes": null, "Count": 2 },					
+				"swapBlocks": [{ "Tool": "neolithicmod:sisalrug-small-ground-east", "Makes": "neolithicmod:labeledchestcomplete-kapok-east", "Takes": null, "Count": 1 },					
 					],
 				},
 			}
@@ -52,7 +52,7 @@
 		"*-maple-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:chest-east", attributes: { type: "normal-generic-maple" }}}},
 			{name: "BlockSwapBehavior",	properties: { "particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	}, "particleRadius": 2,	"particleQuantity": 16,
 				"requireSneak": true,					
-				"swapBlocks": [{ "Tool": "game:hinges-*", "Makes": "neolithicmod:chest-latched-maple-east", "Takes": null, "Count": 2 },					
+				"swapBlocks": [{ "Tool": "neolithicmod:sisalrug-small-ground-east", "Makes": "neolithicmod:labeledchestcomplete-maple-east", "Takes": null, "Count": 1 },					
 					],
 				},
 			}
@@ -60,7 +60,7 @@
 		"*-oak-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:chest-east", attributes: { type: "normal-generic-oak" }}}},
 			{name: "BlockSwapBehavior",	properties: { "particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	}, "particleRadius": 2,	"particleQuantity": 16,
 				"requireSneak": true,					
-				"swapBlocks": [{ "Tool": "game:hinges-*", "Makes": "neolithicmod:chest-latched-oak-east", "Takes": null, "Count": 2 },					
+				"swapBlocks": [{ "Tool": "neolithicmod:sisalrug-small-ground-east", "Makes": "neolithicmod:labeledchestcomplete-oak-east", "Takes": null, "Count": 1 },					
 					],
 				},
 			}
@@ -68,7 +68,7 @@
 		"*-pine-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:chest-east", attributes: { type: "normal-generic-pine" }}}},
 			{name: "BlockSwapBehavior",	properties: { "particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	}, "particleRadius": 2,	"particleQuantity": 16,
 				"requireSneak": true,					
-				"swapBlocks": [{ "Tool": "game:hinges-*", "Makes": "neolithicmod:chest-latched-pine-east", "Takes": null, "Count": 2 },					
+				"swapBlocks": [{ "Tool": "neolithicmod:sisalrug-small-ground-east", "Makes": "neolithicmod:labeledchestcomplete-pine-east", "Takes": null, "Count": 1 },					
 					],
 				},
 			}
