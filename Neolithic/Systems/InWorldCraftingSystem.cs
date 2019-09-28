@@ -75,6 +75,7 @@ namespace Neolithic
                                 make.Resolve(api.World, null);
                                 if (make.Type == EnumItemClass.Block)
                                 {
+                                    if (recipe.Remove) api.World.BlockAccessor.SetBlock(0, pos);
                                     api.World.BlockAccessor.SetBlock(make.ResolvedItemstack.Block.BlockId, pos);
                                     TakeOrDamage(recipe, slot, byPlayer);
                                     shouldbreak = true;
@@ -88,6 +89,7 @@ namespace Neolithic
                                     api.World.SpawnItemEntity(make.ResolvedItemstack, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
                                 }
                                 TakeOrDamage(recipe, slot, byPlayer);
+                                if (recipe.Remove) api.World.BlockAccessor.SetBlock(0, pos);
                                 shouldbreak = true;
                             }
                             api.World.PlaySoundAt(recipe.CraftSound, pos);
@@ -126,6 +128,7 @@ namespace Neolithic
         public AssetLocation CraftSound { get; set; } = new AssetLocation("sounds/block/planks");
         public bool IsTool { get; set; } = false;
         public bool Disabled { get; set; } = false;
+        public bool Remove { get; set; } = false;
         public float MakeTime { get; set; } = 0f;
     }
 
