@@ -11,29 +11,7 @@
 			}
 		}
 	},
-	behaviors: [
-		{
-            name: "BlockCreateBehavior",
-            properties: {
-                "createBlocks": [                   
-					{ "Takes": { "Code": "game:planks-*", "StackSize": 0 }, "Makes": [ { "Code": "game:bed-wood-head-north", "StackSize": 1 } ]},
-                ],
-            },
-        },
-		 {
-            name: "BlockSwapBehavior",
-            properties: {
-                "swapBlocks": [
-                    { "Tool": "game:planks-acacia", "Makes": "game:air", "Takes": null, "Count": 3 },
-					{ "Tool": "game:planks-birch", "Makes": "game:air", "Takes": null, "Count": 3 },
-					{ "Tool": "game:planks-kapok", "Makes": "game:air", "Takes": null, "Count": 3 },
-					{ "Tool": "game:planks-maple", "Makes": "game:air", "Takes": null, "Count": 3 },
-					{ "Tool": "game:planks-oak", "Makes": "game:air", "Takes": null, "Count": 3 },
-					{ "Tool": "game:planks-pine", "Makes": "game:air", "Takes": null, "Count": 3 },
-                ],
-            },
-        },		
-	],
+	
 	variantgroups: [
 		{ code:"pattern", states: ["diamond", "normal", "offset", "square"] },
 		{ code:"side", states: ["north", "east", "south", "west", "up", "down"] }

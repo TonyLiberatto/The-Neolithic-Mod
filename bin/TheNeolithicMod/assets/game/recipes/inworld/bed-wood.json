@@ -1,0 +1,22 @@
+{
+    "Mode": "Create",
+    "Takes": {
+		"Code": "game:linen-*",
+        "Type": "Block",
+        "AllowedVariants": [ "game:linen-*" ]        
+    },
+    "Tool": {
+        "Code": "game:planks-*",
+        "Type": "Block",
+        "AllowedVariants": [ "game:planks-acacia", "game:planks-birch", "game:planks-kapok", "game:planks-maple", "game:planks-oak", "game:planks-pine" ],
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "game:bed-wood-head-north",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+}
