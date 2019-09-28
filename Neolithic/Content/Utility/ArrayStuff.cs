@@ -268,5 +268,8 @@ namespace Neolithic
 
             return assets;
         }
+
+        public static bool IsBlock(this JsonItemStack stack) => stack.Type == EnumItemClass.Block;
+        public static bool IsItem(this JsonItemStack stack) => stack.Type == EnumItemClass.Item;
     }
 }
