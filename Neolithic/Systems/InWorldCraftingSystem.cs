@@ -26,7 +26,6 @@ namespace Neolithic
         {
             this.api = api;
             api.Event.SaveGameLoaded += OnSaveGameLoaded;
-            api.Event.DidUseBlock += OnPlayerInteract;
             api.RegisterCommand("fireiwcinteract", "", "", (a, b, c) => OnPlayerInteract(a, a.CurrentBlockSelection));
         }
 
@@ -50,13 +49,13 @@ namespace Neolithic
             InWorldCraftingRecipes = api.Assets.GetMany<InWorldCraftingRecipe[]>(api.Server.Logger, "recipes/inworld");
         }
 
-        private void OnPlayerInteract(IServerPlayer byPlayer, BlockSelection blockSel)
+        private bool OnPlayerInteract(IServerPlayer byPlayer, BlockSelection blockSel)
         {
             BlockPos pos = blockSel?.Position;
             Block block = pos?.GetBlock(api);
             ItemSlot slot = byPlayer?.InventoryManager?.ActiveHotbarSlot;
 
-            if (block == null || slot?.Itemstack == null) return;
+            if (block == null || slot?.Itemstack == null) return false;
             bool shouldbreak = false;
 
             foreach (var val in InWorldCraftingRecipes)
@@ -98,8 +97,9 @@ namespace Neolithic
                     }
                     slot.MarkDirty();
                 }
-                if (shouldbreak) break;
+                if (shouldbreak) return true;
             }
+            return false;
         }
 
         public void TakeOrDamage(InWorldCraftingRecipe recipe, ItemSlot slot, IServerPlayer byPlayer)
