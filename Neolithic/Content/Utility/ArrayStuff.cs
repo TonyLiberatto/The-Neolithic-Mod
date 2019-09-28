@@ -251,5 +251,22 @@ namespace Neolithic
             FieldInfo field = instance.GetType().GetField(fieldName, bindFlags);
             return field?.GetValue(instance);
         }
+
+        public static List<AssetLocation> GetMatches(this AssetLocation code, ICoreAPI api)
+        {
+            List<AssetLocation> assets = new List<AssetLocation>();
+            foreach (var block in api.World.Blocks)
+            {
+                if (block?.Code == null) continue;
+                if (block.WildCardMatch(code)) assets.Add(block.Code);
+            }
+            foreach (var item in api.World.Items)
+            {
+                if (item?.Code == null) continue;
+                if (item.WildCardMatch(code)) assets.Add(item.Code);
+            }
+
+            return assets;
+        }
     }
 }

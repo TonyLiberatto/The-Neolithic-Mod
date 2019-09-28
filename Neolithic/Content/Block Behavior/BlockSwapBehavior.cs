@@ -24,12 +24,6 @@ namespace Neolithic
     class SwapSystem : ModSystem
     {
         IServerNetworkChannel sChannel;
-        ICoreAPI api;
-
-        public override void Start(ICoreAPI api)
-        {
-            this.api = api;
-        }
 
         public override void StartClientSide(ICoreClientAPI api)
         {

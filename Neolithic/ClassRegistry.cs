@@ -63,13 +63,13 @@ namespace Neolithic
             api.RegisterBlockClass("BlockMortarAndPestle", typeof(BlockMortarAndPestle));
             api.RegisterBlockClass("BlockCheeseCloth", typeof(BlockCheeseCloth));
             api.RegisterBlockClass("BlockNeolithicRoads", typeof(BlockNeolithicRoads));
-            api.RegisterBlockClass("BlockLooseStones", typeof(BlockLooseStonesModified));
+            api.RegisterBlockClass("BlockLooseStones", typeof(BlockLooseStonesModified)); //
             api.RegisterBlockClass("FixedStairs", typeof(FixedStairs));
             api.RegisterBlockClass("BlockChandelier", typeof(BlockChandelierFix));
-            api.RegisterBlockClass("BlockToolMold", typeof(BlockToolMoldReturnBlock));
+            api.RegisterBlockClass("BlockToolMold", typeof(BlockToolMoldReturnBlock)); //
             api.RegisterBlockClass("BlockCraftingStation", typeof(BlockCraftingStation));
             api.RegisterBlockClass("BlockDryingStation", typeof(BlockDryingStation));
-            api.RegisterBlockClass("BlockSeaweed", typeof(BlockSeaweedOverride));
+            api.RegisterBlockClass("BlockSeaweed", typeof(BlockSeaweedOverride)); //
             api.RegisterBlockClass("BlockPalmTree", typeof(BlockPalmTree));
         }
 
