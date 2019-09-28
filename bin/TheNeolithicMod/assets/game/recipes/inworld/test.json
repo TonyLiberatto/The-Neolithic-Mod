@@ -1,0 +1,21 @@
+{
+    "Mode": "Create",
+    "Takes": {
+        "Code": "game:rock-*",
+        "Type": "Block",
+        "AllowedVariants": [ "game:rock-granite" ]
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",
+        "AllowedVariants": [ "game:axe-granite-*" ]
+    },
+    "Makes": [{
+        "Code": "game:rock-basalt",
+        "Type": "Block",
+        "StackSize": 64
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": true
+}
