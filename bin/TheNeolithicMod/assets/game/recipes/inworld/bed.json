@@ -1,9 +1,11 @@
-{
+[
+ {
     "Mode": "Create",
     "Takes": {
 		"Code": "game:linen-*",
         "Type": "Block",
-        "AllowedVariants": [ "game:linen-*" ]        
+        "AllowedVariants": [ "game:linen-*" ],
+		"Remove": true	
     },
     "Tool": {
         "Code": "game:planks-*",
@@ -16,7 +18,29 @@
         "Type": "Block",
         "StackSize": 1
     }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "game:hay-*",
+        "Type": "Block",
+        "AllowedVariants": [ "game:hay-normal" ]        
+    },
+    "Tool": {
+        "Code": "game:reeds",
+        "Type": "Item",        
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "game:bed-hay-head-north",
+        "Type": "Block",
+        "StackSize": 1
+    }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
-}
+ },
+]
