@@ -19,7 +19,7 @@ namespace Neolithic
     {
         ICoreServerAPI api;
         ICoreClientAPI capi;
-        public Dictionary<AssetLocation, InWorldCraftingRecipe> InWorldCraftingRecipes { get; set; } = new Dictionary<AssetLocation, InWorldCraftingRecipe>();
+        public Dictionary<AssetLocation, InWorldCraftingRecipe[]> InWorldCraftingRecipes { get; set; } = new Dictionary<AssetLocation, InWorldCraftingRecipe[]>();
         public override double ExecuteOrder() => 1;
 
         public override void StartServerSide(ICoreServerAPI api)
@@ -47,7 +47,7 @@ namespace Neolithic
 
         public void OnSaveGameLoaded()
         {
-            InWorldCraftingRecipes = api.Assets.GetMany<InWorldCraftingRecipe>(api.Server.Logger, "recipes/inworld");
+            InWorldCraftingRecipes = api.Assets.GetMany<InWorldCraftingRecipe[]>(api.Server.Logger, "recipes/inworld");
         }
 
         private void OnPlayerInteract(IServerPlayer byPlayer, BlockSelection blockSel)
@@ -57,41 +57,47 @@ namespace Neolithic
             ItemSlot slot = byPlayer?.InventoryManager?.ActiveHotbarSlot;
 
             if (block == null || slot?.Itemstack == null) return;
+            bool shouldbreak = false;
 
             foreach (var val in InWorldCraftingRecipes)
             {
-                InWorldCraftingRecipe recipe = val.Value;
-                if (recipe.Disabled || (recipe.Takes.AllowedVariants != null && !block.WildCardMatch(recipe.Takes.AllowedVariants)) || (recipe.Tool.AllowedVariants != null && !slot.Itemstack.Collectible.WildCardMatch(recipe.Tool.AllowedVariants))) continue;
-
-                if (block.WildCardMatch(recipe.Takes.Code))
+                foreach (var recipe in val.Value)
                 {
-                    if (IsValid(recipe, slot))
+                    if (recipe.Disabled || (recipe.Takes.AllowedVariants != null && !block.WildCardMatch(recipe.Takes.AllowedVariants)) || (recipe.Tool.AllowedVariants != null && !slot.Itemstack.Collectible.WildCardMatch(recipe.Tool.AllowedVariants))) continue;
+
+                    if (block.WildCardMatch(recipe.Takes.Code))
                     {
-                        if (recipe.Mode == EnumInWorldCraftingMode.Swap)
+                        if (IsValid(recipe, slot))
                         {
-                            var make = recipe.Makes[0];
-                            make.Resolve(api.World, null);
-                            if (make.Type == EnumItemClass.Block)
+                            if (recipe.Mode == EnumInWorldCraftingMode.Swap)
                             {
-                                api.World.BlockAccessor.SetBlock(make.ResolvedItemstack.Block.BlockId, pos);
-                                TakeOrDamage(recipe, slot, byPlayer);
-                            }
-                        }
-                        else if (recipe.Mode == EnumInWorldCraftingMode.Create)
-                        {
-                            foreach (var make in recipe.Makes)
-                            {
+                                var make = recipe.Makes[0];
                                 make.Resolve(api.World, null);
-                                api.World.SpawnItemEntity(make.ResolvedItemstack, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
+                                if (make.Type == EnumItemClass.Block)
+                                {
+                                    api.World.BlockAccessor.SetBlock(make.ResolvedItemstack.Block.BlockId, pos);
+                                    TakeOrDamage(recipe, slot, byPlayer);
+                                    shouldbreak = true;
+                                }
                             }
-                            TakeOrDamage(recipe, slot, byPlayer);
+                            else if (recipe.Mode == EnumInWorldCraftingMode.Create)
+                            {
+                                foreach (var make in recipe.Makes)
+                                {
+                                    make.Resolve(api.World, null);
+                                    api.World.SpawnItemEntity(make.ResolvedItemstack, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
+                                }
+                                TakeOrDamage(recipe, slot, byPlayer);
+                                shouldbreak = true;
+                            }
+                            api.World.PlaySoundAt(recipe.CraftSound, pos);
                         }
-                        api.World.PlaySoundAt(recipe.CraftSound, pos);
+                        break;
                     }
-                    break;
+                    slot.MarkDirty();
                 }
+                if (shouldbreak) break;
             }
-            slot.MarkDirty();
         }
 
         public void TakeOrDamage(InWorldCraftingRecipe recipe, ItemSlot slot, IServerPlayer byPlayer)
