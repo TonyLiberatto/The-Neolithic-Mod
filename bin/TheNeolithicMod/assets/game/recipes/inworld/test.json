@@ -1,5 +1,5 @@
 {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
         "Code": "game:rock-*",
         "Type": "Block",
@@ -17,5 +17,5 @@
     }],
     "IsTool": true,
     "CraftSound": "sounds/block/planks",
-    "Disabled": true
+    "Disabled": false
 }

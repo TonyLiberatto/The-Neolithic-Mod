@@ -1,23 +1,5 @@
 {
 	code: "hay",
-	behaviors: [
-		{
-            name: "BlockCreateBehavior",
-            properties: {
-                "createBlocks": [                   
-					{ "Takes": { "Code": "game:reeds", "StackSize": 0 }, "Makes": [ { "Code": "game:bed-hay-head-north", "StackSize": 1 } ]},
-                ],
-            },
-        },
-		 {
-            name: "BlockSwapBehavior",
-            properties: {
-                "swapBlocks": [
-                    { "Tool": "game:reeds", "Makes": "game:air", "Takes": null, "Count": 1 },
-                ],
-            },
-        }	
-	],
 	shape: { base: "block/basic/cube" },
 	drawtype: "cube",
 	attributes: {
