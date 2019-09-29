@@ -37,7 +37,11 @@ namespace Neolithic
             this.sapi = api;
             sChannel = api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>((a, b) => 
             {
-                OnPlayerInteract(a, a.CurrentBlockSelection);
+                if (a?.CurrentBlockSelection?.Position == null) return;
+                if (api.World.Claims.TryAccess(a, a.CurrentBlockSelection.Position, EnumBlockAccessFlags.BuildOrBreak))
+                {
+                    OnPlayerInteract(a, a.CurrentBlockSelection);
+                }
             });
             api.Event.SaveGameLoaded += OnSaveGameLoaded;
             api.Event.PlayerJoin += SendCraftingRecipes;
