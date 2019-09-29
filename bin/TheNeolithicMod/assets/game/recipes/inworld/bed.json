@@ -1,6 +1,6 @@
 [
  {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "game:linen-*",
         "Type": "Block",
@@ -18,12 +18,12 @@
         "Type": "Block",
         "StackSize": 1
     }],
-    "IsTool": true,
+    "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
  {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "game:hay-*",
         "Type": "Block",

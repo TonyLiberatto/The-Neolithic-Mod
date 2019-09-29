@@ -4,7 +4,9 @@
 	attributes: {
 		handbook: {
 			groupBy: ["panel-*"],
-			
+			extraSections: [
+					{ title: "handbook-item-sources", text: "Use a saw to break a log, it will drop 4 barked panels and 4 debarked panels."}
+					]
 		}
 	},
 	behaviorsByType: {
@@ -44,8 +46,7 @@
 				"particleRadius": 2,
 				"particleQuantity": 16,
 				"swapBlocks": [
-				{ "Tool": "game:saw-*", "Makes": "game:air", "Takes": null, "Count": 0 },
-				{ "Tool": "neolithicmod:halfpanel-{wood}-planks-*", "Makes": "game:dryingtraysides-{wood}", "Takes": null, "Count": 4 },
+				{ "Tool": "game:saw-*", "Makes": "game:air", "Takes": null, "Count": 0 },				
 				]}
 			}
 			],

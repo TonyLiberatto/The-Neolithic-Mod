@@ -1,29 +1,5 @@
 {
 	code: "bamboostakes",
-	behaviorsByType: { 
-		"*-brown": [{
-			name: "BlockSwapBehavior",
-			properties: {		
-				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
-				"particleRadius": 2,
-				"particleQuantity": 16,								
-				"swapBlocks": [
-					{ "Tool": "neolithicmod:sisal-twine", "Makes": "neolithicmod:panel-bamboo-brown-down", "Takes": "game:bamboostakes-brown", "Count": 1 },										
-					],
-				},
-			}],
-		"*-green":	[{
-			name: "BlockSwapBehavior",
-			properties: {		
-				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
-				"particleRadius": 2,
-				"particleQuantity": 16,								
-				"swapBlocks": [					
-					{ "Tool": "neolithicmod:sisal-twine", "Makes": "neolithicmod:panel-bamboo-green-down", "Takes": "game:bamboostakes-green", "Count": 1 },					
-					],
-				},
-			}],
-	},
 	maxstacksize: 64,
 	attributes: {
 		firepitConstructable: true

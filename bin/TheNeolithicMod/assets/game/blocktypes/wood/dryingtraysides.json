@@ -3,9 +3,7 @@
     "shapeByType": {
          "*":  {"base": "block/wood/dryingtray"}
     },
-    "variantgroups": [
-        { "code": "wood", "loadFromProperties": "block/wood" }
-    ],
+    "variantgroups": [ { "code": "wood", "states": [ "aged" ], "loadFromProperties": "block/wood" } ],
     "textures": {
         "material": { "base": "block/wood/planks/{wood}*" },
 		"border": { base: "game:block/transparent" },
