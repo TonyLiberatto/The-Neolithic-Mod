@@ -1,0 +1,46 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:bamboostakes-*",
+        "Type": "Block",
+        "AllowedVariants": [ "game:bamboostakes-brown"],
+		"StackSize": 1
+    },
+    "Tool": {
+        "Code": "neolithicmod:sisal-twine",
+        "Type": "Item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "neolithicmod:panel-bamboo-brown-down",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:bamboostakes-*",
+        "Type": "Block",
+        "AllowedVariants": [ "game:bamboostakes-green"],
+		"StackSize": 1
+    },
+    "Tool": {
+        "Code": "neolithicmod:sisal-twine",
+        "Type": "Item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "neolithicmod:panel-bamboo-green-down",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+}
+]

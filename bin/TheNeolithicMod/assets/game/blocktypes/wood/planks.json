@@ -1,22 +1,7 @@
 {
     "code": "planks",
-    "variantgroups": [
-        {
-            "code": "wood",
-            "states": [
-                "aged"
-            ],
-            "loadFromProperties": "block/wood"
-        }
-    ],
-    "creativeinventory": {
-        "general": [
-            "*"
-        ],
-        "construction": [
-            "*"
-        ]
-    },
+    "variantgroups": [ { "code": "wood", "states": [ "aged" ], "loadFromProperties": "block/wood" } ],
+    "creativeinventory": { "general": [  "*" ], "construction": ["*"] },
     "shape": {
         "base": "block/basic/cube"
     },
@@ -27,29 +12,10 @@
             "base": "block/wood/planks/{wood}*"
         }
     },
-    "behaviors": [
-        {
-            "name": "BlockCreateBehavior",
-            "properties": {
-                "createBlocks": [
-                    {
-                        "MakeTime": 2,
-                        "RemoveOnFinish": true,
-                        "Takes": {
-                            "Code": "game:saw-*",
-                            "StackSize": 0
-                        },
-                        "Makes": [
-                            {
-                                "Code": "neolithicmod:panel-{wood}-planks-down",
-                                "StackSize": 16
-                            }
-                        ]
-                    }
-                ]
-            }
-        }
-    ],
+	"drops": [
+		{ type: "block", code: "planks-{wood}", quantity: { avg: 1 }, tool:"axe"  },
+		{ type: "block", code: "neolithicmod:panel-{wood}-planks-down", quantity: { avg: 8 }, tool:"saw"  },		
+	],
     "resistance": 3.5,
     "sounds": {
         "hit": "block/planks",
