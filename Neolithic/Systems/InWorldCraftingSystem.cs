@@ -37,7 +37,7 @@ namespace Neolithic
 
         private void FireCommand(MouseEvent e)
         {
-            if (e.Button == EnumMouseButton.Right)
+            if (e.Button == EnumMouseButton.Right && capi.World.Player.Entity.Controls.Sneak)
             {
                 capi.SendChatMessage("/fireiwcinteract");
                 capi.World.Player.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
@@ -72,7 +72,7 @@ namespace Neolithic
                             {
                                 var make = recipe.Makes[0];
                                 make.Resolve(api.World, null);
-                                if (make.Type == EnumItemClass.Block)
+                                if (make.IsBlock())
                                 {
                                     if (recipe.Remove) api.World.BlockAccessor.SetBlock(0, pos);
                                     api.World.BlockAccessor.SetBlock(make.ResolvedItemstack.Block.BlockId, pos);
@@ -122,9 +122,9 @@ namespace Neolithic
     class InWorldCraftingRecipe
     {
         public EnumInWorldCraftingMode Mode { get; set; } = EnumInWorldCraftingMode.Swap;
-        public JsonAllowedVariants Takes { get; set; }
-        public JsonAllowedVariants Tool { get; set; }
-        public JsonItemStack[] Makes { get; set; }
+        public JsonCraftingIngredient Takes { get; set; }
+        public JsonCraftingIngredient Tool { get; set; }
+        public JsonCraftingOutput[] Makes { get; set; }
         public AssetLocation CraftSound { get; set; } = new AssetLocation("sounds/block/planks");
         public bool IsTool { get; set; } = false;
         public bool Disabled { get; set; } = false;
@@ -132,9 +132,24 @@ namespace Neolithic
         public float MakeTime { get; set; } = 0f;
     }
 
-    class JsonAllowedVariants : JsonItemStack
+    class JsonCraftingIngredient : JsonItemStack
     {
         public AssetLocation[] AllowedVariants { get; set; }
+
+        public int Count
+        {
+            get => StackSize;
+            set => StackSize = value;
+        }
+    }
+
+    class JsonCraftingOutput : JsonItemStack
+    {
+        public int Count
+        {
+            get => StackSize;
+            set => StackSize = value;
+        }
     }
 
     enum EnumInWorldCraftingMode
