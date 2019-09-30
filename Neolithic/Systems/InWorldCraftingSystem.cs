@@ -19,6 +19,7 @@ namespace Neolithic
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     class IWCSPacket
     {
+        public string DataType { get; set; }
         public string SerializedData { get; set; }
     }
 
@@ -28,6 +29,7 @@ namespace Neolithic
         ICoreClientAPI capi;
         IServerNetworkChannel sChannel;
         IClientNetworkChannel cChannel;
+        public bool ownInteraction;
 
         public Dictionary<AssetLocation, InWorldCraftingRecipe[]> InWorldCraftingRecipes { get; set; } = new Dictionary<AssetLocation, InWorldCraftingRecipe[]>();
         public override double ExecuteOrder() => 1;
@@ -37,10 +39,13 @@ namespace Neolithic
             this.sapi = api;
             sChannel = api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>((a, b) => 
             {
-                if (a?.CurrentBlockSelection?.Position == null) return;
-                if (api.World.Claims.TryAccess(a, a.CurrentBlockSelection.Position, EnumBlockAccessFlags.BuildOrBreak))
+                if (b.DataType == "Action")
                 {
-                    OnPlayerInteract(a, a.CurrentBlockSelection);
+                    if (a?.CurrentBlockSelection?.Position == null) return;
+                    if (api.World.Claims.TryAccess(a, a.CurrentBlockSelection.Position, EnumBlockAccessFlags.BuildOrBreak))
+                    {
+                        OnPlayerInteract(a, a.CurrentBlockSelection);
+                    }
                 }
             });
             api.Event.SaveGameLoaded += OnSaveGameLoaded;
@@ -50,7 +55,7 @@ namespace Neolithic
         private void SendCraftingRecipes(IServerPlayer byPlayer)
         {
             string data = JsonConvert.SerializeObject(InWorldCraftingRecipes);
-            sChannel.SendPacket(new IWCSPacket() { SerializedData = data }, byPlayer);
+            sChannel.SendPacket(new IWCSPacket() { DataType = "Recipes", SerializedData = data }, byPlayer);;
         }
 
         public override void StartClientSide(ICoreClientAPI api)
@@ -59,7 +64,10 @@ namespace Neolithic
             api.Event.MouseDown += SendBlockAction;
             cChannel = api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>(h =>
             {
-                InWorldCraftingRecipes = JsonConvert.DeserializeObject<Dictionary<AssetLocation, InWorldCraftingRecipe[]>>(h.SerializedData);
+                if (h.DataType == "Recipes")
+                {
+                    InWorldCraftingRecipes = JsonConvert.DeserializeObject<Dictionary<AssetLocation, InWorldCraftingRecipe[]>>(h.SerializedData);
+                }
             });
         }
 
@@ -67,8 +75,13 @@ namespace Neolithic
         {
             if (e.Button == EnumMouseButton.Right && capi.World.Player.Entity.Controls.Sneak)
             {
-                cChannel.SendPacket(new IWCSPacket());
-                capi.World.Player.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+                if (OnPlayerInteract(capi.World.Player, capi.World.Player.CurrentBlockSelection))
+                {
+                    cChannel.SendPacket(new IWCSPacket() { DataType = "Action" });
+                    capi.World.Player.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+                    e.Handled = true;
+                }
+
             }
         }
 
@@ -80,7 +93,7 @@ namespace Neolithic
         public bool OnPlayerInteract(IPlayer byPlayer, BlockSelection blockSel)
         {
             BlockPos pos = blockSel?.Position;
-            Block block = pos?.GetBlock(sapi);
+            Block block = pos?.GetBlock(byPlayer.Entity.World);
             ItemSlot slot = byPlayer?.InventoryManager?.ActiveHotbarSlot;
 
             if (block == null || slot?.Itemstack == null) return false;
@@ -94,16 +107,17 @@ namespace Neolithic
 
                     if (block.WildCardMatch(recipe.Takes.Code))
                     {
-                        if (IsValid(recipe, slot))
+                        if (IsValid(byPlayer, recipe, slot))
                         {
                             if (recipe.Mode == EnumInWorldCraftingMode.Swap)
                             {
                                 var make = recipe.Makes[0];
-                                make.Resolve(sapi.World, null);
+                                make.Resolve(byPlayer.Entity.World, null);
                                 if (make.IsBlock())
                                 {
-                                    if (recipe.Remove) sapi.World.BlockAccessor.SetBlock(0, pos);
-                                    sapi.World.BlockAccessor.SetBlock(make.ResolvedItemstack.Block.BlockId, pos);
+                                    if (recipe.Remove) byPlayer.Entity.World.BlockAccessor.SetBlock(0, pos);
+                                    byPlayer.Entity.World.BlockAccessor.SetBlock(make.ResolvedItemstack.Block.BlockId, pos);
+                                    make.ResolvedItemstack.Block.OnBlockPlaced(byPlayer.Entity.World, pos);
                                     TakeOrDamage(recipe, slot, byPlayer);
                                     shouldbreak = true;
                                 }
@@ -112,18 +126,18 @@ namespace Neolithic
                             {
                                 foreach (var make in recipe.Makes)
                                 {
-                                    make.Resolve(sapi.World, null);
-                                    sapi.World.SpawnItemEntity(make.ResolvedItemstack, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
+                                    make.Resolve(byPlayer.Entity.World, null);
+                                    byPlayer.Entity.World.SpawnItemEntity(make.ResolvedItemstack, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
                                 }
                                 TakeOrDamage(recipe, slot, byPlayer);
-                                if (recipe.Remove) sapi.World.BlockAccessor.SetBlock(0, pos);
+                                if (recipe.Remove) byPlayer.Entity.World.BlockAccessor.SetBlock(0, pos);
                                 shouldbreak = true;
                             }
-                            sapi.World.PlaySoundAt(recipe.CraftSound, pos);
+                            byPlayer.Entity.World.PlaySoundAt(recipe.CraftSound, pos);
                         }
+                        slot.MarkDirty();
                         break;
                     }
-                    slot.MarkDirty();
                 }
                 if (shouldbreak) return true;
             }
@@ -134,7 +148,7 @@ namespace Neolithic
         {
             if (recipe.IsTool)
             {
-                slot.Itemstack.Collectible.DamageItem(sapi.World, byPlayer.Entity, slot);
+                slot.Itemstack.Collectible.DamageItem(byPlayer.Entity.World, byPlayer.Entity, slot);
             }
             else
             {
@@ -142,9 +156,9 @@ namespace Neolithic
             }
         }
 
-        public bool IsValid(InWorldCraftingRecipe recipe, ItemSlot slot) =>
+        public bool IsValid(IPlayer byPlayer, InWorldCraftingRecipe recipe, ItemSlot slot) =>
             (recipe.Tool.Code.ToString() == slot.Itemstack?.Collectible?.Code?.ToString() && slot.Itemstack?.StackSize >= recipe.Tool.StackSize) ||
-            (recipe.Tool.Code.IsWildCard && recipe.Tool.Code.GetMatches(sapi).Any(t => t.ToString() == slot.Itemstack?.Collectible?.Code?.ToString() && slot.Itemstack?.StackSize >= recipe.Tool.StackSize));
+            (recipe.Tool.Code.IsWildCard && recipe.Tool.Code.GetMatches(byPlayer.Entity.Api).Any(t => t.ToString() == slot.Itemstack?.Collectible?.Code?.ToString() && slot.Itemstack?.StackSize >= recipe.Tool.StackSize));
     }
 
     class InWorldCraftingRecipe
@@ -163,6 +177,7 @@ namespace Neolithic
     class JsonCraftingIngredient : JsonItemStack
     {
         public AssetLocation[] AllowedVariants { get; set; }
+        public AssetLocation name;
 
         public int Count
         {
