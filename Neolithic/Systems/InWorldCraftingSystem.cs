@@ -133,7 +133,7 @@ namespace Neolithic
                                 if (recipe.Remove) byPlayer.Entity.World.BlockAccessor.SetBlock(0, pos);
                                 shouldbreak = true;
                             }
-                            byPlayer.Entity.World.PlaySoundAt(recipe.CraftSound, pos);
+                            if (byPlayer.Entity.World.Side.IsServer()) byPlayer.Entity.World.PlaySoundAt(recipe.CraftSound, pos);
                         }
                         slot.MarkDirty();
                         break;
