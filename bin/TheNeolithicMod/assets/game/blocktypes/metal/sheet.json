@@ -14,48 +14,6 @@
 			}
 		}
 	},
-	behaviors: [
-		{
-			name: "BlockSwapBehavior",
-			properties: {		
-				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
-				"particleRadius": 2,
-				"particleQuantity": 16,
-				"allowedVariants": [ "game:metalsheet-copper-down", "game:metalsheet-brass-down", "game:metalsheet-blackbronze-down", "game:metalsheet-bismuth-down", "game:metalsheet-tinbronze-down", "game:metalsheet-bismuthbronze-down", "game:metalsheet-molybdochalkos-down", "game:metalsheet-silver-down", "game:metalsheet-gold-down"],
-				"swapBlocks": [
-					{ "Tool": "game:lantern-copper-plain-up", "Makes": "game:sheet-lantern-{sheet}-copper-plain-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-brass-plain-up", "Makes": "game:sheet-lantern-{sheet}-brass-plain-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-blackbronze-plain-up", "Makes": "game:sheet-lantern-{sheet}-blackbronze-plain-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-bismuth-plain-up", "Makes": "game:sheet-lantern-{sheet}-bismuth-plain-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-tinbronze-plain-up", "Makes": "game:sheet-lantern-{sheet}-tinbronze-plain-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-bismuthbronze-plain-up", "Makes": "game:sheet-lantern-{sheet}-bismuthbronze-plain-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-molybdochalkos-plain-up", "Makes": "game:sheet-lantern-{sheet}-molybdochalkos-plain-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-silver-plain-up", "Makes": "game:sheet-lantern-{sheet}-silver-plain-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-gold-plain-up", "Makes": "game:sheet-lantern-{sheet}-gold-plain-up", "Takes": null, "Count": 1 },
-					
-					{ "Tool": "game:lantern-copper-gold-up", "Makes": "game:sheet-lantern-{sheet}-copper-gold-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-brass-gold-up", "Makes": "game:sheet-lantern-{sheet}-brass-gold-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-blackbronze-gold-up", "Makes": "game:sheet-lantern-{sheet}-blackbronze-gold-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-bismuth-gold-up", "Makes": "game:sheet-lantern-{sheet}-bismuth-gold-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-tinbronze-gold-up", "Makes": "game:sheet-lantern-{sheet}-tinbronze-gold-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-bismuthbronze-gold-up", "Makes": "game:sheet-lantern-{sheet}-bismuthbronze-gold-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-molybdochalkos-gold-up", "Makes": "game:sheet-lantern-{sheet}-molybdochalkos-gold-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-silver-gold-up", "Makes": "game:sheet-lantern-{sheet}-silver-gold-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-gold-gold-up", "Makes": "game:sheet-lantern-{sheet}-gold-gold-up", "Takes": null, "Count": 1 },
-					
-					{ "Tool": "game:lantern-copper-silver-up", "Makes": "game:sheet-lantern-{sheet}-copper-silver-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-brass-silver-up", "Makes": "game:sheet-lantern-{sheet}-brass-silver-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-blackbronze-silver-up", "Makes": "game:sheet-lantern-{sheet}-blackbronze-silver-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-bismuth-silver-up", "Makes": "game:sheet-lantern-{sheet}-bismuth-silver-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-tinbronze-silver-up", "Makes": "game:sheet-lantern-{sheet}-tinbronze-silver-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-bismuthbronze-silver-up", "Makes": "game:sheet-lantern-{sheet}-bismuthbronze-silver-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-molybdochalkos-silver-up", "Makes": "game:sheet-lantern-{sheet}-molybdochalkos-silver-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-silver-silver-up", "Makes": "game:sheet-lantern-{sheet}-silver-silver-up", "Takes": null, "Count": 1 },
-					{ "Tool": "game:lantern-gold-silver-up", "Makes": "game:sheet-lantern-{sheet}-gold-silver-up", "Takes": null, "Count": 1 },
-				],
-			},
-		},
-	],
 	variantgroups: [
 		{ code: "sheet", loadFromProperties: "block/metal" },
 		{ code:"side", states: ["north", "east", "south", "west", "up", "down"] }

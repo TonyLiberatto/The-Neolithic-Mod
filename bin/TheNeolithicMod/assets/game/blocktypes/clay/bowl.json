@@ -3,15 +3,7 @@
 	behaviors: [
 		{name: "UnstableFalling"}, 
 		{ name: "RightClickPickup"}, 
-		{ name: "SneakPlacing"},
-		{
-			name: "BlockSwapBehavior",
-			properties: {
-				"swapBlocks": [
-					{ "Tool": "game:fat", "Makes": "game:bowl-fat-{color}", "Takes": null, "Count": 1 },					
-				],
-			},
-		}
+		{ name: "SneakPlacing"},		
 	],
 	variantgroups: [
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },

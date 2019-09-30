@@ -1,18 +1,5 @@
 {
 	code: "lantern-base",
-	behaviors: [
-		{
-			name: "BlockSwapBehavior",
-			properties: {		
-				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
-				"particleRadius": 2,
-				"particleQuantity": 16,				
-				"swapBlocks": [
-					{ "Tool": "game:candle-wax", "Makes": "game:lantern-base-candle-{metal}", "Takes": null, "Count": 1 },					
-				],
-			},
-		},
-	],
 	variantgroups: [
 		{ code:"metal", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
 	],
