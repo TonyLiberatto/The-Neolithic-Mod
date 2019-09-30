@@ -177,7 +177,7 @@ namespace Neolithic
     class JsonCraftingIngredient : JsonItemStack
     {
         public AssetLocation[] AllowedVariants { get; set; }
-        public AssetLocation name;
+        public AssetLocation Name { get; set; }
 
         public int Count
         {
