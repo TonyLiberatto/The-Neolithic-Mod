@@ -29,7 +29,6 @@ namespace Neolithic
         ICoreClientAPI capi;
         IServerNetworkChannel sChannel;
         IClientNetworkChannel cChannel;
-        public bool ownInteraction;
 
         public Dictionary<AssetLocation, InWorldCraftingRecipe[]> InWorldCraftingRecipes { get; set; } = new Dictionary<AssetLocation, InWorldCraftingRecipe[]>();
         public override double ExecuteOrder() => 1;
