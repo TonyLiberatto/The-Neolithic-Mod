@@ -1,24 +1,8 @@
 {
 	code: "sheet-lantern",
-	behaviors: [
-		{
-			name: "BlockSwapBehavior",
-			properties: {		
-				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
-				"particleRadius": 2,
-				"particleQuantity": 16,				
-				"swapBlocks": [					
-					{ "Tool": "game:glass-plain", "Makes": "game:sheet-lantern-glass-{sheet}-{metal}-{layer}-up", "Takes": null, "Count": 1 },
-									
-				],
-			},
-		},
-	],
-	variantgroups: [
-		{ code:"sheet", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
+	variantgroups: [		
 		{ code:"metal", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
-		{ code:"layer", states: ["plain", "gold", "silver" ] },
-		{ code:"position", states: ["up", "down"], loadFromProperties: "abstract/horizontalorientation" }
+		{ code:"layer", states: ["plain", "gold", "silver" ] },		
 	],
 	creativeinventory: { "general": [""], "decorative": [""], "neolithicdeco": [""] },
 	blockmaterial: "Metal",
@@ -32,8 +16,8 @@
 	drawtype: "json",
 	shape: { base: "block/lightsources/glass-lantern" },
 	texturesByType: {
-		"sheet-lantern-*-plain-*": {
-			"base": { base: "block/metal/lantern/{sheet}" },
+		"sheet-lantern-*-plain": {
+			"base": { base: "block/metal/lantern/{metal}" },
 			"material": { base: "block/metal/lantern/{metal}" },
 			"candle":  { base: "block/candle" },
 			"lining":  { base: "block/metal/lantern/{metal}" },
@@ -41,8 +25,8 @@
 			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
 			"Glasscase": { base: "block/transparent" },
 		},
-		"sheet-lantern-*-gold-*": {
-			"base": { base: "block/metal/lantern/{sheet}" },
+		"sheet-lantern-*-gold": {
+			"base": { base: "block/metal/lantern/{metal}" },
 			"material": { base: "block/metal/lantern/{metal}" },
 			"candle":  { base: "block/candle" },
 			"lining":  { base: "block/metal/lantern/gold" },
@@ -50,8 +34,8 @@
 			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
 			"Glasscase": { base: "block/transparent" },
 		},
-		"sheet-lantern-*-silver-*": {
-			"base": { base: "block/metal/lantern/{sheet}" },
+		"sheet-lantern-*-silver": {
+			"base": { base: "block/metal/lantern/{metal}" },
 			"material": { base: "block/metal/lantern/{metal}" },
 			"candle":  { base: "block/candle" },
 			"lining":  { base: "block/metal/lantern/silver" },

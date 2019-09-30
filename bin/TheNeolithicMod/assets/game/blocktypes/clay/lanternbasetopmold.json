@@ -13,7 +13,7 @@
 		"*-blue-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
-			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
+			"fillQuadsByLevel": [ { x1: 1, z1: 3, x2: 14, z2: 13} ],
 			"drops": [
 				{ 
 				type:"Block", 
@@ -30,7 +30,7 @@
 		"*-brown-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
-			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
+			"fillQuadsByLevel": [ { x1: 1, z1: 3, x2: 14, z2: 13} ],
 			"drops": [
 				{ 
 				type:"Block", 
@@ -47,7 +47,7 @@
 		"*-fire-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
-			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
+			"fillQuadsByLevel": [ { x1: 1, z1: 3, x2: 14, z2: 13} ],
 			"drops": [
 				{ 
 				type:"Block", 
@@ -64,7 +64,7 @@
 		"*-red-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
-			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
+			"fillQuadsByLevel": [ { x1: 1, z1: 3, x2: 14, z2: 13} ],
 			"drops": [
 				{ 
 				type:"Block", 

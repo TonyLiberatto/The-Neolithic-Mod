@@ -3,16 +3,7 @@
 	behaviors: [
 		{name: "UnstableFalling"}, 
 		{ name: "RightClickPickup"}, 
-		{ name: "SneakPlacing"},
-		{
-			name: "BlockSwapBehavior",
-			properties: {
-				"requireSneak": true,
-				"swapBlocks": [
-					{ "Tool": "game:torch-up", "Makes": "game:oillamp{color}-up", "Takes": null, "Count": 0 },					
-				],
-			},
-		}
+		{ name: "SneakPlacing"},		
 	],
 	variantgroups: [
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },

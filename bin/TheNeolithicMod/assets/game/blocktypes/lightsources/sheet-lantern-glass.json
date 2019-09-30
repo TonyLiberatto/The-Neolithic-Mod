@@ -1,31 +1,8 @@
 {
 	code: "sheet-lantern-glass",
-	behaviors: [
-		{
-			name: "BlockSwapBehavior",
-			properties: {		
-				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
-				"particleRadius": 2,
-				"particleQuantity": 16,				
-				"swapBlocks": [
-					{ "Tool": "game:glasslanternframe-copper-down", "Makes": "game:glasslantern-{sheet}-{metal}-{layer}-copper", "Takes": null, "Count": 5 },
-					{ "Tool": "game:glasslanternframe-brass-down", "Makes": "game:glasslantern-{sheet}-{metal}-{layer}-brass", "Takes": null, "Count": 5 },
-					{ "Tool": "game:glasslanternframe-blackbronze-down", "Makes": "game:glasslantern-{sheet}-{metal}-{layer}-blackbronze", "Takes": null, "Count": 5 },
-					{ "Tool": "game:glasslanternframe-bismuth-down", "Makes": "game:glasslantern-{sheet}-{metal}-{layer}-bismuth", "Takes": null, "Count": 5 },
-					{ "Tool": "game:glasslanternframe-tinbronze-down", "Makes": "game:glasslantern-{sheet}-{metal}-{layer}-tinbronze", "Takes": null, "Count": 5 },
-					{ "Tool": "game:glasslanternframe-bismuthbronze-down", "Makes": "game:glasslantern-{sheet}-{metal}-{layer}-bismuthbronze", "Takes": null, "Count": 5 },
-					{ "Tool": "game:glasslanternframe-molybdochalkos-down", "Makes": "game:glasslantern-{sheet}-{metal}-{layer}-molybdochalkos", "Takes": null, "Count": 5 },
-					{ "Tool": "game:glasslanternframe-silver-down", "Makes": "game:glasslantern-{sheet}-{metal}-{layer}-silver", "Takes": null, "Count": 5 },
-					{ "Tool": "game:glasslanternframe-gold-down", "Makes": "game:glasslantern-{sheet}-{metal}-{layer}-gold", "Takes": null, "Count": 5 },
-				],
-			},
-		},
-	],
-	variantgroups: [
-		{ code:"sheet", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
+	variantgroups: [		
 		{ code:"metal", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
-		{ code:"layer", states: ["plain", "gold", "silver" ] },
-		{ code:"position", states: ["up", "down"], loadFromProperties: "abstract/horizontalorientation" }
+		{ code:"layer", states: ["plain", "gold", "silver" ] },		
 	],
 	creativeinventory: { "general": [""], "decorative": [""], "neolithicdeco": [""] },
 	blockmaterial: "Glass",
@@ -40,8 +17,8 @@
 	drawtype: "json",
 	shape: { base: "block/lightsources/glass-lantern" },
 	texturesByType: {
-		"sheet-lantern-glass-*-plain-*": {
-			"base": { base: "block/metal/lantern/{sheet}" },
+		"sheet-lantern-glass-*-plain": {
+			"base": { base: "block/metal/lantern/{metal}" },
 			"material": { base: "block/metal/lantern/{metal}" },
 			"candle":  { base: "block/candle" },
 			"lining":  { base: "block/metal/lantern/{metal}" },
@@ -49,8 +26,8 @@
 			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
 			"Glasscase": { base: "block/glass/frame" },
 		},
-		"sheet-lantern-glass-*-gold-*": {
-			"base": { base: "block/metal/lantern/{sheet}" },
+		"sheet-lantern-glass-*-gold": {
+			"base": { base: "block/metal/lantern/{metal}" },
 			"material": { base: "block/metal/lantern/{metal}" },
 			"candle":  { base: "block/candle" },
 			"lining":  { base: "block/metal/lantern/gold" },
@@ -58,8 +35,8 @@
 			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
 			"Glasscase": { base: "block/glass/frame" },
 		},
-		"sheet-lantern-glass-*-silver-*": {
-			"base": { base: "block/metal/lantern/{sheet}" },
+		"sheet-lantern-glass-*-silver": {
+			"base": { base: "block/metal/lantern/{metal}" },
 			"material": { base: "block/metal/lantern/{metal}" },
 			"candle":  { base: "block/candle" },
 			"lining":  { base: "block/metal/lantern/silver" },

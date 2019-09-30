@@ -1,11 +1,8 @@
 {
 	code: "glasslantern",
-	variantgroups: [
-		{ code:"sheet", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
+	variantgroups: [		
 		{ code:"metal", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
-		{ code:"layer", states: ["plain", "gold", "silver" ] },
-		{ code:"frame", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
-		
+		{ code:"layer", states: ["plain", "gold", "silver" ] },		
 	],
 	attributes: {		
 		handbook:{ 
@@ -30,32 +27,32 @@
 	drawtype: "json",
 	shape: { base: "block/lightsources/glass-lantern" },
 	texturesByType: {
-		"glasslantern-*-*-plain-*": {
-			"base": { base: "block/metal/lantern/{sheet}" },
+		"glasslantern-*-plain": {
+			"base": { base: "block/metal/lantern/{metal}" },
 			"material": { base: "block/metal/lantern/{metal}" },
 			"candle":  { base: "block/candle" },
 			"lining":  { base: "block/metal/lantern/{metal}" },
 			"quartz":  { base: "block/glass/quartz" },
 			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
-			"Glasscase": { base: "block/glasscase/{frame}" },
+			"Glasscase": { base: "block/glasscase/{metal}" },
 		},
-		"glasslantern-*-*-gold-*": {
-			"base": { base: "block/metal/lantern/{sheet}" },
+		"glasslantern-*-gold": {
+			"base": { base: "block/metal/lantern/{metal}" },
 			"material": { base: "block/metal/lantern/{metal}" },
 			"candle":  { base: "block/candle" },
 			"lining":  { base: "block/metal/lantern/gold" },
 			"quartz":  { base: "block/glass/quartz" },
 			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
-			"Glasscase": { base: "block/glasscase/{frame}" },
+			"Glasscase": { base: "block/glasscase/{metal}" },
 		},
-		"glasslantern-*-*-silver-*": {
-			"base": { base: "block/metal/lantern/{sheet}" },
+		"glasslantern-*-silver": {
+			"base": { base: "block/metal/lantern/{metal}" },
 			"material": { base: "block/metal/lantern/{metal}" },
 			"candle":  { base: "block/candle" },
 			"lining":  { base: "block/metal/lantern/silver" },
 			"quartz":  { base: "block/glass/quartz" },
 			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
-			"Glasscase": { base: "block/glasscase/{frame}" },
+			"Glasscase": { base: "block/glasscase/{metal}" },
 		},
 	},
 	replaceable: 1000,
