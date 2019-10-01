@@ -134,6 +134,8 @@ namespace Neolithic
                             }
                             if (byPlayer.Entity.World.Side.IsServer()) byPlayer.Entity.World.PlaySoundAt(recipe.CraftSound, pos);
                         }
+                        else continue;
+
                         slot.MarkDirty();
                         break;
                     }
