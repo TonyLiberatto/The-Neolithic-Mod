@@ -1,17 +1,7 @@
 {
 	code: "adze-headshaft",
 	behaviors: [
-		{ name: "HorizontalOrientable" },
-		{
-			name: "BlockSwapBehavior",
-			properties: {
-				"swapBlocks": [
-					{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "game:adze-{stone}-{shaft}-leatherstrips-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:byproducts-sinew", "Makes": "game:adze-{stone}-{shaft}-sinew-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:sisal-twine", "Makes": "game:adze-{stone}-{shaft}-rope-{side}", "Takes": null, "Count": 1 },
-				],
-			},
-		},
+		{ name: "HorizontalOrientable" },		
 	],
 
 	variantgroups: [
