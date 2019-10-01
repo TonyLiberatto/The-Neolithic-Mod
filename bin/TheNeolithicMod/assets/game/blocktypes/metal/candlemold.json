@@ -10,20 +10,7 @@
   ],
   blockmaterial: "Metal",
   behaviors: [
-    { name: "UnstableFalling" },
-	{
-			name: "BlockSwapBehavior",
-			properties: {		
-				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
-				"particleRadius": 2,
-				"particleQuantity": 16,
-				"allowedVariants": [ "game:candlemold-{metal}-plain" ],
-				"swapBlocks": [
-					{ "Tool": "neolithicmod:sisal-twine", "Makes": "game:candlemold-{metal}-burned", "Takes": null, "Count": 9 },					
-				],
-			},
-		},
-    
+    { name: "UnstableFalling" },    
   ],
   entityClassByType: {
 		"*-burned": "ToolMold",

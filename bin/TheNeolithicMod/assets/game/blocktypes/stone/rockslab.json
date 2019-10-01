@@ -7,24 +7,7 @@
 				"rotateSides": true,
 				"facing": "block"
 			}
-		},
-		{
-			name: "BlockSwapBehavior",
-			properties: {		
-				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
-				"particleRadius": 2,
-				"particleQuantity": 16,
-				"allowedVariants": [ "game:rockslab-andesite-down", "game:rockslab-granite-down", "game:rockslab-basalt-down", "game:rockslab-peridotite-down",],
-				"swapBlocks": [
-					{ "Tool": "neolithicmod:branch-very-thin-acacia-debarked-ud", "Makes": "game:slab-branch-{rock}-acacia-debarked", "Takes": null, "Count": 2 },
-					{ "Tool": "neolithicmod:branch-very-thin-birch-debarked-ud", "Makes": "game:slab-branch-{rock}-birch-debarked", "Takes": null, "Count": 2 },
-					{ "Tool": "neolithicmod:branch-very-thin-kapok-debarked-ud", "Makes": "game:slab-branch-{rock}-kapok-debarked", "Takes": null, "Count": 2 },
-					{ "Tool": "neolithicmod:branch-very-thin-maple-debarked-ud", "Makes": "game:slab-branch-{rock}-maple-debarked", "Takes": null, "Count": 2 },
-					{ "Tool": "neolithicmod:branch-very-thin-oak-debarked-ud", "Makes": "game:slab-branch-{rock}-oak-debarked", "Takes": null, "Count": 2 },
-					{ "Tool": "neolithicmod:branch-very-thin-pine-debarked-ud", "Makes": "game:slab-branch-{rock}-pine-debarked", "Takes": null, "Count": 2 },
-				],
-			},
-		},
+		},		
 	],
 	variantgroups: [
 		{ code: "rock", loadFromProperties: "block/rockwithdeposit" },
@@ -37,7 +20,7 @@
 		}
 	},
 	replaceable: 150,
-	creativeinventory: { "general": ["*-down"], "construction": ["*-down"] },
+	creativeinventory: { "general": ["*-down"], "construction": ["*-down"], "neolithicblocks": ["*-down"] },
 	drops: [{ code: "rockslab-{rock}-down" }],
 	shape: { base: "block/basic/slab-{rot}"},
 	sidesolidByType: {

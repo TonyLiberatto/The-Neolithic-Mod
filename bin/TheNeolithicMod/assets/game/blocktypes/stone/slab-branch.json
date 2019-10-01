@@ -1,16 +1,6 @@
 {
 	code: "slab-branch",	
 	behaviors: [ {name: "UnstableFalling"},
-		{
-			name: "BlockSwapBehavior",
-			properties: {
-				"swapBlocks": [
-					{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "game:slab-branch-cordage-{rock}-{wood}-debarked-leatherstrips", "Takes": null, "Count": 2 },
-					{ "Tool": "neolithicmod:byproducts-sinew", "Makes": "game:slab-branch-cordage-{rock}-{wood}-debarked-sinew", "Takes": null, "Count": 2 },
-					{ "Tool": "neolithicmod:sisal-twine", "Makes": "game:slab-branch-cordage-{rock}-{wood}-debarked-rope", "Takes": null, "Count": 2 },						
-				],
-			},
-		},
 	],
 	attributes: {
 		handbook: {
@@ -22,7 +12,7 @@
 		{ loadFromProperties: "block/wood" },
 		{ code: "style", states: ["debarked"]}		
 	],
-	creativeinventory: { "general": [""], "terrain": [""] },
+	creativeinventory: { "general": [""], "terrain": [""], "neolithicblocks": ["*"] },
 	shape: { base: "block/slab-branch-cross" },
 	blockmaterial: "Stone",
 	textures: {
