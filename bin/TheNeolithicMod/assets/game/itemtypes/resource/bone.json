@@ -1,6 +1,6 @@
 {
 	code: "bone",
-	class: "ItemBone",
+	class: "ItemFlint",
 	attributes: {
 		knappable: true
 	},
