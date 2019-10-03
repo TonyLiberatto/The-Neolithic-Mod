@@ -52,6 +52,7 @@ namespace Neolithic
             api.RegisterItemClass("ItemSickle", typeof(ItemSickle));
             api.RegisterItemClass("ItemGiantReedsRoot", typeof(ItemGiantReedsRoot));
             api.RegisterItemClass("ItemAdze", typeof(ItemAdze));
+            api.RegisterItemClass("ItemBone", typeof(ItemBone));
             api.RegisterItemClass("ItemChisel", typeof(ItemChiselFix));
             api.RegisterItemClass("ItemSwapBlocks", typeof(ItemSwapBlocks));
             api.RegisterItemClass("ItemSlaughteringAxe", typeof(ItemSlaughteringAxe));

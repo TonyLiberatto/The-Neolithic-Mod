@@ -1,0 +1,17 @@
+{
+	ingredient: { type: "item", code: "bone" },
+	pattern: [
+			"___#__#___",
+			"___#__#___",
+			"___#__#___",
+			"___#__#___",
+			"___#__#___",
+			"__##__##__",
+			"__##__##__",
+			"__##__##__",
+			"__##__##__",
+			"__##__##__"
+		],
+	name: "Javelin Head",
+	output: { type: "block", code: "javelin-head-north", stacksize: 2  }
+}
