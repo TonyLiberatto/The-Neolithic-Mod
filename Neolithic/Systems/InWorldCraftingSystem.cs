@@ -54,7 +54,7 @@ namespace Neolithic
         private void SendCraftingRecipes(IServerPlayer byPlayer)
         {
             string data = JsonConvert.SerializeObject(InWorldCraftingRecipes);
-            sChannel.SendPacket(new IWCSPacket() { DataType = "Recipes", SerializedData = data }, byPlayer);;
+            sChannel.SendPacket(new IWCSPacket() { DataType = "Recipes", SerializedData = data }, byPlayer);
         }
 
         public override void StartClientSide(ICoreClientAPI api)
@@ -87,6 +87,8 @@ namespace Neolithic
         public void OnSaveGameLoaded()
         {
             InWorldCraftingRecipes = sapi.Assets.GetMany<InWorldCraftingRecipe[]>(sapi.Server.Logger, "recipes/inworld");
+            sapi.World.Logger.Event("{0} in world recipes loaded", InWorldCraftingRecipes.Count);
+            sapi.World.Logger.StoryEvent("Neolithic crafting...");
         }
 
         public bool OnPlayerInteract(IPlayer byPlayer, BlockSelection blockSel)
@@ -108,7 +110,7 @@ namespace Neolithic
                     {
                         if (IsValid(byPlayer, recipe, slot))
                         {
-                            if (recipe.Mode == EnumInWorldCraftingMode.Swap)
+                            if (recipe.IsSwap)
                             {
                                 var make = recipe.Makes[0];
                                 make.Resolve(byPlayer.Entity.World, null);
@@ -121,7 +123,7 @@ namespace Neolithic
                                     shouldbreak = true;
                                 }
                             }
-                            else if (recipe.Mode == EnumInWorldCraftingMode.Create)
+                            else if (recipe.IsCreate)
                             {
                                 foreach (var make in recipe.Makes)
                                 {
@@ -173,6 +175,9 @@ namespace Neolithic
         public bool Disabled { get; set; } = false;
         public bool Remove { get; set; } = false;
         public float MakeTime { get; set; } = 0f;
+
+        public bool IsSwap { get => Mode == EnumInWorldCraftingMode.Swap; }
+        public bool IsCreate { get => Mode == EnumInWorldCraftingMode.Create;  }
     }
 
     class JsonCraftingIngredient : JsonItemStack
