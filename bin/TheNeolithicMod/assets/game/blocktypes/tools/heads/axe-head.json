@@ -1,21 +1,7 @@
 {
 	code: "axe-head",
 	behaviors: [
-		{ name: "HorizontalOrientable" },
-		{
-			name: "BlockSwapBehavior",
-			properties: {
-				"swapBlocks": [
-					{ "Tool": "neolithicmod:branch-very-thin-acacia-debarked-ud", "Makes": "game:axe-headshaft-{stone}-acacia-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:branch-very-thin-birch-debarked-ud", "Makes": "game:axe-headshaft-{stone}-birch-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:branch-very-thin-kapok-debarked-ud", "Makes": "game:axe-headshaft-{stone}-kapok-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:branch-very-thin-maple-debarked-ud", "Makes": "game:axe-headshaft-{stone}-maple-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:branch-very-thin-oak-debarked-ud", "Makes": "game:axe-headshaft-{stone}-oak-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:branch-very-thin-pine-debarked-ud", "Makes": "game:axe-headshaft-{stone}-pine-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:animal-large-bone", "Makes": "game:axe-headshaft-{stone}-bone-{side}", "Takes": null, "Count": 1 },
-				],
-			},
-		},
+		{ name: "HorizontalOrientable" },		
 	],
 	variantgroups: [
 		{
