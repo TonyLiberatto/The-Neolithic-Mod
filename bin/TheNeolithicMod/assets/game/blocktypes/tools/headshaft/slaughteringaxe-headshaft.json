@@ -1,17 +1,7 @@
 {
 	code: "slaughteringaxe-headshaft",
 	behaviors: [
-		{ name: "HorizontalOrientable" },
-		{
-			name: "BlockSwapBehavior",
-			properties: {
-				"swapBlocks": [
-					{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "game:slaughteringaxe-{stone}-{shaft}-leatherstrips-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:byproducts-sinew", "Makes": "game:slaughteringaxe-{stone}-{shaft}-sinew-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:sisal-twine", "Makes": "game:slaughteringaxe-{stone}-{shaft}-rope-{side}", "Takes": null, "Count": 1 },
-				],
-			},
-		},
+		{ name: "HorizontalOrientable" },		
 	],
 
 	variantgroups: [
