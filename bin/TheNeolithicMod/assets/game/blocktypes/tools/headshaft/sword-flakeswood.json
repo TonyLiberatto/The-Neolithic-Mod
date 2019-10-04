@@ -1,16 +1,7 @@
 {
 	code: "sword-flakeswood",
 	behaviors: [ 
-		{name: "HorizontalOrientable" },	
-		{name: "BlockSwapBehavior",
-			properties: {
-				"swapBlocks": [			
-					{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "game:sword-{stone}-{shaft}-leatherstrips-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:byproducts-sinew", "Makes": "game:sword-{stone}-{shaft}-sinew-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:sisal-twine", "Makes": "game:sword-{stone}-{shaft}-rope-{side}", "Takes": null, "Count": 1 },
-				],
-			}
-		}
+		{name: "HorizontalOrientable" },		
 	],
 	variantgroups: [
 		{ code: "stone", states: ["flint", "obsidian" ] },
