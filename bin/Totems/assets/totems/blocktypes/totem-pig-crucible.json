@@ -16,19 +16,7 @@
   variantgroups: [ { loadFromProperties: "block/wood" },  { code: "side", loadFromProperties: "abstract/horizontalorientation" }
   ],
   drawtype: "json",
-  behaviors: [
-    { name: "HorizontalOrientable" },
-    { name: "BlockCreateBehavior",
-      properties: {
-        "createBlocks": [
-          { "MakeTime": 2, "Takes": { "Code": "game:clay-blue", "StackSize": 4 }, "Makes": [ { "Code": "game:crucibleblue-raw", "StackSize": 10 }, ]},
-		  { "MakeTime": 2, "Takes": { "Code": "game:clay-fire", "StackSize": 4 }, "Makes": [ { "Code": "game:cruciblefire-raw", "StackSize": 10 }, ]},
-		  { "MakeTime": 2, "Takes": { "Code": "game:clay-red", "StackSize": 4 }, "Makes": [ { "Code": "game:cruciblered-raw", "StackSize": 10 }, ]},
-		  { "MakeTime": 2, "Takes": { "Code": "game:clay-brown", "StackSize": 4 }, "Makes": [ { "Code": "game:cruciblebrown-raw", "StackSize": 10 }, ]},		  
-        ],
-      },
-    },
-  ],
+  behaviors: [  { name: "HorizontalOrientable" }, ],
   textures: {
     "wood": { base: "game:block/wood/debarked/{wood}" },
     "bone": { base: "game:block/bone" },
@@ -38,62 +26,24 @@
   },
   particlePropertiesByType: {
     "totem-pig-crucible-*": [
-      {
-        hsvaColor: [
-          {
-            avg: 60,
-            var: 30
-          },
-          {
-            avg: 300,
-            var: 0
-          },
-          {
-            avg: 300,
-            var: 0
-          },
-          {
-            avg: 300,
-            var: 0
-          }
-        ],
-        gravityEffect: {
-          avg: 0,
-          var: 0
-        },
-        posOffset: [
-          {
-            avg: 0,
-            var: 0.2
-          },
-          {
-            avg: 0,
-            var: 0
-          },
-          {
-            avg: 0,
-            var: 0.2
-          }
+		{ hsvaColor: [  
+			{  avg: 60,  var: 30  },
+			{  avg: 300,  var: 0  },
+			{  avg: 300,  var: 0  },
+			{  avg: 300,  var: 0  }
+			],
+        gravityEffect: {  avg: 0, var: 0  },
+        posOffset: [   {  avg: 0, var: 0.2 },
+          {  avg: 0, var: 0 },
+          {  avg: 0, var: 0.2 }
         ],
         velocity: [
-          {
-            avg: 0.0,
-            var: 0.02
-          },
-          {
-            avg: 0.2,
-            var: 0.1
-          },
-          {
-            avg: 0,
-            var: 0.1
-          }
+          {  avg: 0.0,  var: 0.02  },
+          {  avg: 0.2,  var: 0.1   },
+          {  avg: 0,    var: 0.1   }
         ],
         quantity: { avg: 0.07 },
-        size: {
-          avg: 1,
-          var: 0.5
-        },
+        size: {  avg: 1, var: 0.5   },
         glowLevel: 32,
         sizeEvolve: {
           transform: "quadratic",
@@ -102,62 +52,25 @@
         selfPropelled: true,
         lifeLength: { avg: 2 }
       },
-      {
-        hsvaColor: [
-          {
-            avg: 160,
-            var: 30
-          },
-          {
-            avg: 300,
-            var: 0
-          },
-          {
-            avg: 300,
-            var: 0
-          },
-          {
-            avg: 300,
-            var: 0
-          }
+      { hsvaColor: [
+          { avg: 160, var: 30   },
+          { avg: 300, var: 0    },
+          { avg: 300, var: 0    },
+          { avg: 300,  var: 0   }
         ],
-        gravityEffect: {
-          avg: 0,
-          var: 0
-        },
+        gravityEffect: { avg: 0, var: 0   },
         posOffset: [
-          {
-            avg: 0,
-            var: 0.2
-          },
-          {
-            avg: 0,
-            var: 0
-          },
-          {
-            avg: 0,
-            var: 0.2
-          }
+          {  avg: 0,  var: 0.2   },
+          {  avg: 0,  var: 0     },
+          {  avg: 0,  var: 0.2   }
         ],
         velocity: [
-          {
-            avg: 0.0,
-            var: 0.02
-          },
-          {
-            avg: 0.2,
-            var: 0.1
-          },
-          {
-            avg: 0,
-            var: 0.1
-          }
+          {  avg: 0.0, var: 0.02  },
+          {  avg: 0.2, var: 0.1   },
+          {  avg: 0,   var: 0.1   }
         ],
         quantity: { avg: 0.04 },
-        size: {
-          avg: 1,
-          var: 0.5
-        },
+        size: {  avg: 1, var: 0.5  },
         glowLevel: 32,
         sizeEvolve: {
           transform: "quadratic",
@@ -166,62 +79,25 @@
         selfPropelled: true,
         lifeLength: { avg: 2 }
       },
-      {
-        hsvaColor: [
-          {
-            avg: 0,
-            var: 30
-          },
-          {
-            avg: 300,
-            var: 0
-          },
-          {
-            avg: 300,
-            var: 0
-          },
-          {
-            avg: 300,
-            var: 0
-          }
+      {  hsvaColor: [
+          { avg: 0,  var: 30   },
+          { avg: 300, var: 0   },
+          { avg: 300, var: 0   },
+          { avg: 300, var: 0   }
         ],
-        gravityEffect: {
-          avg: 0,
-          var: 0
-        },
+        gravityEffect: {  avg: 0,  var: 0   },
         posOffset: [
-          {
-            avg: 0,
-            var: 0.2
-          },
-          {
-            avg: 0,
-            var: 0
-          },
-          {
-            avg: 0,
-            var: 0.2
-          }
+          {   avg: 0,   var: 0.2   },
+          {   avg: 0,   var: 0     },
+          {   avg: 0,   var: 0.2   }
         ],
         velocity: [
-          {
-            avg: 0.0,
-            var: 0.02
-          },
-          {
-            avg: 0.2,
-            var: 0.1
-          },
-          {
-            avg: 0,
-            var: 0.1
-          }
+          {  avg: 0.0,   var: 0.02  },
+          {  avg: 0.2,   var: 0.1   },
+          {  avg: 0,     var: 0.1   }
         ],
         quantity: { avg: 0.04 },
-        size: {
-          avg: 1,
-          var: 0.5
-        },
+        size: {  avg: 1,  var: 0.5  },
         glowLevel: 32,
         sizeEvolve: {
           transform: "quadratic",

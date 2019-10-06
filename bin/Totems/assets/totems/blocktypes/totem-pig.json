@@ -19,18 +19,7 @@
 	},
 	drawtype: "json",
 	behaviors: [
-		{name: "HorizontalOrientable"},
-		{
-      name: "BlockSwapBehavior",
-      properties: {
-        "swapBlocks": [
-          { "Tool": "totems:offering-bowl-fruit", "Makes": "totems:totem-pig-bowl-{wood}-lit-{side}", "Takes": "totems:totem-pig-new-{wood}-{light}-{side}", "Count": 1 },
-          { "Tool": "totems:offering-bowl-vegetable", "Makes": "totems:totem-pig-eyes-{wood}-lit-{side}", "Takes": "totems:totem-pig-bowl-{wood}-{light}-{side}", "Count":  1 },
-          { "Tool": "totems:offering-bowl-meat", "Makes": "totems:totem-pig-tusk-{wood}-lit-{side}", "Takes": "totems:totem-pig-eyes-{wood}-{light}-{side}", "Count":  1 },
-          { "Tool": "totems:offering-bowl-bread", "Makes": "totems:totem-pig-crucible-{wood}-{side}", "Takes": "totems:totem-pig-tusk-{wood}-{light}-{side}", "Count":  1 },
-        ],
-      },
-    },
+		{name: "HorizontalOrientable"},		
 	],
 	shapebytype: {
 		"*-north": { base: "block/wood/totem/pig/{type}", rotateY: 0 },
