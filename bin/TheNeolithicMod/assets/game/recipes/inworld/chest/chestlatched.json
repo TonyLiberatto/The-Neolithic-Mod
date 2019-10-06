@@ -1,0 +1,191 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestsides-bamboo-brown-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:animal-leatherstrips",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestlatched-bamboo-brown-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestsides-bamboo-green-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:animal-leatherstrips",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestlatched-bamboo-green-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestsides-aged-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestlatched-aged-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestsides-acacia-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestlatched-acacia-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestsides-birch-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestlatched-birch-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+{
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestsides-kapok-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestlatched-kapok-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestsides-maple-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestlatched-maple-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestsides-oaks-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "block",
+		"StackSize": 2
+    },
+    "Makes": [{
+       "Code": "neolithicmod:chestlatched-oaks-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestsides-pine-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestlatched-pine-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

@@ -57,13 +57,7 @@
 	behaviors: [
 		{ name: "Carryable", properties: { translation: [ 0.0625, 0, 0 ], rotation: [ 0, 180, 0 ], slots: { "Hands": {  }, "Back": {  },}}},
 		{name: "Container"}, 
-		{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},
-		{name: "BlockSwapBehavior",	properties: { "particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	}, "particleRadius": 2,	"particleQuantity": 16,
-				"requireSneak": true,					
-				"swapBlocks": [{ "Tool": "game:sign-ground-north", "Makes": "neolithicmod:labeledchest-{side}", attributes: { type: "normal-generic-{wood}" }, "Takes": null, "Count": 1 },					
-				],
-			},
-		},
+		{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},		
 	],
 	
 	creativeinventory: {  },

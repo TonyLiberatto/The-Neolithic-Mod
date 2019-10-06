@@ -1,21 +1,6 @@
 {
 	code: "panel-bamboo",
-	class: "BlockSimpleCoating",	
-	behaviors: [		
-		{
-			name: "BlockSwapBehavior",
-			properties: {		
-				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
-				"particleRadius": 2,
-				"particleQuantity": 16,			
-				"swapBlocks": [
-					{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "neolithicmod:door-assemble-bamboo-{color}-east", "Takes": null, "Count": 2 },
-					{ "Tool": "game:bamboostakes-{color}", "Makes": "neolithicmod:planks-bamboo-{color}", "Takes": null, "Count": 3 },
-					{ "Tool": "neolithicmod:branch-very-thin-*", "Makes": "neolithicmod:chest-frame-bamboo-{color}-east", "Takes": null, "Count": 4 },
-				],
-			},
-		},
-	],	
+	class: "BlockSimpleCoating",		
 	attributes: {
 		handbook: {
 			groupBy: ["panel-*"],

@@ -4,29 +4,7 @@
 	class: "BlockLog",
 	behaviorsByType: {
 		"*-grown-*": [{name: "PushEventOnBlockBroken",	properties: {eventName: "testForDecay"}}],
-		"*": [{name: "Pillar"},
-			{
-            "name": "BlockCreateBehavior",
-            "properties": {
-								"allowPlaceOn": true,
-                "createBlocks": [
-                    {
-						"MakeTime": 2,
-						"RemoveOnFinish": true,
-                        "Takes": {
-                            "Code": "game:axe-*",
-                            "StackSize": 0
-                        },
-                        "Makes": [
-                            {
-                                "Code": "neolithicmod:halflog-{wood}-ud",
-                                "StackSize": 2
-                            }
-                        ]
-                    }
-                ]
-            }
-        }
+		"*": [{name: "Pillar"},			
 		]
 	},
 	attributes: {

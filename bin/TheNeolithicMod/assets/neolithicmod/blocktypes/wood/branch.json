@@ -1,37 +1,5 @@
 {
-	code: "branch",
-	behaviorsByType: {
-		"branch-very-thin-*":[	
-			{ name: "Pillar"},
-			{ name: "BlockSwapBehavior",
-				properties: {
-					"swapBlocks": [
-						{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "neolithicmod:branch-cordage-very-thin-{wood}-{style}-leatherstrips-{rotation}", "Takes": null, "Count": 2 },
-						{ "Tool": "neolithicmod:byproducts-sinew", "Makes": "neolithicmod:branch-cordage-very-thin-{wood}-{style}-sinew-{rotation}", "Takes": null, "Count": 2 },
-						{ "Tool": "neolithicmod:sisal-twine", "Makes": "neolithicmod:branch-cordage-very-thin-{wood}-{style}-sisal-{rotation}", "Takes": null, "Count": 2 },
-						{ "Tool": "game:reeds", "Makes": "neolithicmod:branch-cordage-very-thin-{wood}-{style}-reeds-{rotation}", "Takes": null, "Count": 2 },					
-				]}}],
-		"branch-thin-*": [	
-			{ name: "Pillar"},
-			{ name: "BlockSwapBehavior",
-				properties: {
-					"swapBlocks": [
-						{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "neolithicmod:branch-cordage-thin-{wood}-{style}-leatherstrips-{rotation}", "Takes": null, "Count": 2 },
-						{ "Tool": "neolithicmod:byproducts-sinew", "Makes": "neolithicmod:branch-cordage-thin-{wood}-{style}-sinew-{rotation}", "Takes": null, "Count": 2 },
-						{ "Tool": "neolithicmod:sisal-twine", "Makes": "neolithicmod:branch-cordage-thin-{wood}-{style}-sisal-{rotation}", "Takes": null, "Count": 2 },
-						{ "Tool": "game:reeds", "Makes": "neolithicmod:branch-cordage-thin-{wood}-{style}-reeds-{rotation}", "Takes": null, "Count": 2 },					
-				]}}],
-		"branch-medium-*": [	
-			{ name: "Pillar"},
-			{ name: "BlockSwapBehavior",
-				properties: {
-					"swapBlocks": [
-						{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "neolithicmod:branch-cordage-medium-{wood}-{style}-leatherstrips-{rotation}", "Takes": null, "Count": 2 },
-						{ "Tool": "neolithicmod:byproducts-sinew", "Makes": "neolithicmod:branch-cordage-medium-{wood}-{style}-sinew-{rotation}", "Takes": null, "Count": 2 },
-						{ "Tool": "neolithicmod:sisal-twine", "Makes": "neolithicmod:branch-cordage-medium-{wood}-{style}-sisal-{rotation}", "Takes": null, "Count": 2 },
-						{ "Tool": "game:reeds", "Makes": "neolithicmod:branch-cordage-medium-{wood}-{style}-reeds-{rotation}", "Takes": null, "Count": 2 },					
-				]}}],		
-	},
+	code: "branch",	
 	attributes: {
 		handbook: {
 			groupBy: ["branch-*"]
