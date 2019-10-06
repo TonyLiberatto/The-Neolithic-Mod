@@ -59,7 +59,7 @@ namespace Neolithic
 
         public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
         {
-            StringBuilder builder = new StringBuilder(base.GetPlacedBlockInfo(world, pos, forPlayer));
+            StringBuilder builder = new StringBuilder(base.GetPlacedBlockInfo(world, pos, forPlayer)).AppendLine();
             builder = capi.Settings.Bool["extendedDebugInfo"] ? builder.AppendLine("Code: " + Code.ToString()) : builder;
             return builder.ToString();
         }

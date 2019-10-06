@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using ProtoBuf;
 using System;
 using System.Collections.Generic;
@@ -104,8 +105,8 @@ namespace Neolithic
             {
                 foreach (var recipe in val.Value)
                 {
-                    if (recipe.Disabled || (recipe.Takes.AllowedVariants != null && !block.WildCardMatch(recipe.Takes.AllowedVariants)) || (recipe.Tool.AllowedVariants != null && !slot.Itemstack.Collectible.WildCardMatch(recipe.Tool.AllowedVariants))) continue;
-
+                    if (recipe.Disabled || (recipe.Takes.AllowedVariants != null && !block.WildCardMatch(recipe.Takes.AllowedVariants)) || (recipe.Tool.AllowedVariants != null && !slot.Itemstack.Collectible.WildCardMatch(recipe.Tool.AllowedVariants))
+                        || (recipe.Takes.Attributes != null) && recipe.Takes.Attributes.Token.HasValues && block.Attributes.Token != recipe.Takes.Attributes.Token) continue;
                     if (block.WildCardMatch(recipe.Takes.Code))
                     {
                         if (IsValid(byPlayer, recipe, slot))
@@ -118,7 +119,6 @@ namespace Neolithic
                                 {
                                     if (recipe.Remove) byPlayer.Entity.World.BlockAccessor.SetBlock(0, pos);
                                     Block resolvedBlock = make.ResolvedItemstack.Block;
-                                    resolvedBlock.Attributes = make.Attributes;
                                     byPlayer.Entity.World.BlockAccessor.SetBlock(resolvedBlock.BlockId, pos);
                                     resolvedBlock.OnBlockPlaced(byPlayer.Entity.World, pos);
                                     TakeOrDamage(recipe, slot, byPlayer);
@@ -130,7 +130,6 @@ namespace Neolithic
                                 foreach (var make in recipe.Makes)
                                 {
                                     make.Resolve(byPlayer.Entity.World, null);
-                                    make.ResolvedItemstack.Collectible.Attributes = make.Attributes;
                                     byPlayer.Entity.World.SpawnItemEntity(make.ResolvedItemstack, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
                                 }
                                 TakeOrDamage(recipe, slot, byPlayer);
@@ -164,7 +163,8 @@ namespace Neolithic
 
         public bool IsValid(IPlayer byPlayer, InWorldCraftingRecipe recipe, ItemSlot slot) =>
             (recipe.Tool.Code.ToString() == slot.Itemstack?.Collectible?.Code?.ToString() && slot.Itemstack?.StackSize >= recipe.Tool.StackSize) ||
-            (recipe.Tool.Code.IsWildCard && recipe.Tool.Code.GetMatches(byPlayer.Entity.Api).Any(t => t.ToString() == slot.Itemstack?.Collectible?.Code?.ToString() && slot.Itemstack?.StackSize >= recipe.Tool.StackSize));
+            (recipe.Tool.Code.IsWildCard && recipe.Tool.Code.GetMatches(byPlayer.Entity.Api).Any(t => t.ToString() == slot.Itemstack?.Collectible?.Code?.ToString() && slot.Itemstack?.StackSize >= recipe.Tool.StackSize))
+            && ((recipe.Tool.Attributes != null) && (recipe.Tool.Attributes == slot.Itemstack?.Collectible?.Attributes));
     }
 
     class InWorldCraftingRecipe
