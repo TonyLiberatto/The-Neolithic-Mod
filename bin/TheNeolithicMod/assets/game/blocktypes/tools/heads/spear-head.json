@@ -1,20 +1,7 @@
 {
 	code: "spear-head",
 	behaviors: [
-		{ name: "HorizontalOrientable" },
-		{
-			name: "BlockSwapBehavior",
-			properties: {
-				"swapBlocks": [
-					{ "Tool": "neolithicmod:branch-very-thin-acacia-debarked-ud", "Makes": "game:spear-headshaft-{material}-acacia-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:branch-very-thin-birch-debarked-ud", "Makes": "game:spear-headshaft-{material}-birch-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:branch-very-thin-kapok-debarked-ud", "Makes": "game:spear-headshaft-{material}-kapok-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:branch-very-thin-maple-debarked-ud", "Makes": "game:spear-headshaft-{material}-maple-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:branch-very-thin-oak-debarked-ud", "Makes": "game:spear-headshaft-{material}-oak-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:branch-very-thin-pine-debarked-ud", "Makes": "game:spear-headshaft-{material}-pine-{side}", "Takes": null, "Count": 1 },
-				],
-			},
-		},
+		{ name: "HorizontalOrientable" },		
 	],
 	variantgroups: [
 		{

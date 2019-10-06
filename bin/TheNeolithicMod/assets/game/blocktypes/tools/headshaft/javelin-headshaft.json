@@ -1,17 +1,7 @@
 {
 	code: "javelin-headshaft",
 	behaviors: [
-		{ name: "HorizontalOrientable" },
-		{
-			name: "BlockSwapBehavior",
-			properties: {
-				"swapBlocks": [
-					{ "Tool": "neolithicmod:animal-leatherstrips", "Makes": "game:javelin-headshaft-{shaft}-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:byproducts-sinew", "Makes": "game: javelin-headshaft-{shaft}-{side}", "Takes": null, "Count": 1 },
-					{ "Tool": "neolithicmod:sisal-twine", "Makes": "game:javelin-headshaft-{shaft}-{side}", "Takes": null, "Count": 1 },
-				],
-			},
-		},
+		{ name: "HorizontalOrientable" },		
 	],
 
 	variantgroups: [
