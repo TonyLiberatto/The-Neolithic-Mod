@@ -1,0 +1,191 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestframe-bamboo-brown-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:panel-bamboo-brown-debarked-down",
+        "Type": "Block",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestsides-bamboo-brown-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "neolithicmod:chestframe-bamboo-green-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:panel-bamboo-green-debarked-down",
+        "Type": "Block",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestsides-bamboo-green-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestframe-aged-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:panel-aged-debarked-down",
+        "Type": "Block",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestsides-aged-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "neolithicmod:chestframe-acacia-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:panel-acacia-debarked-down",
+        "Type": "Block",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestsides-acacia-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "neolithicmod:chestframe-birch-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:panel-birch-debarked-down",
+        "Type": "Block",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestsides-birch-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+{
+    "Mode": "Create",
+    "Takes": {
+		"Code": "neolithicmod:chestframe-kapok-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:panel-kapok-debarked-down",
+        "Type": "Block",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestsides-kapok-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "neolithicmod:chestframe-maple-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:panel-maple-debarked-down",
+        "Type": "Block",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestsides-maple-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "neolithicmod:chestframe-oaks-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:panel-oaks-debarked-down",
+        "Type": "block",
+		"StackSize": 4
+    },
+    "Makes": [{
+       "Code": "neolithicmod:chestsides-oaks-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "neolithicmod:chestframe-pine-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:panel-pine-debarked-down",
+        "Type": "Block",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "neolithicmod:chestsides-pine-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

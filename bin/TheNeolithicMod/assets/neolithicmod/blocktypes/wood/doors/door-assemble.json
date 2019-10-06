@@ -1,17 +1,6 @@
 {
 	code: "door-assemble",
-	behaviors: [ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},
-		{
-			name: "BlockSwapBehavior",
-			properties: {		
-				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
-				"particleRadius": 2,
-				"particleQuantity": 16,								
-				"swapBlocks": [
-					{ "Tool": "neolithicmod:panel-{wood}-debarked-down", "Makes": "neolithicmod:door-full-{wood}-east", "Takes": null, "Count": 1 },					
-				],
-			},
-		},
+	behaviors: [ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},		
 		],
 	variantgroups: [
 		{ code: "wood", states: ["acacia", "aged", "birch", "kapok", "maple", "oak", "pine"] },

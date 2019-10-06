@@ -1,31 +1,9 @@
 {
 	code: "door-assemble-bamboo",
 	behaviorsByType: {
-		"*-green-*":[ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},
-			{
-				name: "BlockSwapBehavior",
-				properties: {		
-					"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
-					"particleRadius": 2,
-					"particleQuantity": 16,								
-					"swapBlocks": [
-						{ "Tool": "neolithicmod:panel-bamboo-green-down", "Makes": "neolithicmod:door-full-bamboo-green-east", "Takes": null, "Count": 1 },					
-					],
-				},
-			},
+		"*-green-*":[ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},			
 		],
-		"*-brown-*":[ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},
-			{
-				name: "BlockSwapBehavior",
-				properties: {		
-					"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
-					"particleRadius": 2,
-					"particleQuantity": 16,								
-					"swapBlocks": [
-						{ "Tool": "neolithicmod:panel-bamboo-brown-down", "Makes": "neolithicmod:door-full-bamboo-brown-east", "Takes": null, "Count": 1 },					
-					],
-				},
-			},
+		"*-brown-*":[ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},			
 		],
 	},	
 	variantgroups: [		

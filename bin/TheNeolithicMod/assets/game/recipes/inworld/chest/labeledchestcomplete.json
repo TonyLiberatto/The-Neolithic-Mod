@@ -1,0 +1,191 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestcomplete-bamboo-brown-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "neolithicmod:labeledchestcomplete-bamboo-brown-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestcomplete-bamboo-green-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "neolithicmod:labeledchestcomplete-bamboo-green-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestcomplete-aged-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "neolithicmod:labeledchestcomplete-aged-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestcomplete-acacia-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "neolithicmod:labeledchestcomplete-acacia-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestcomplete-birch-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "neolithicmod:labeledchestcomplete-birch-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+{
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestcomplete-kapok-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "neolithicmod:labeledchestcomplete-kapok-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestcomplete-maple-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "neolithicmod:labeledchestcomplete-maple-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestcomplete-oaks-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:sisalrug-small-ground-east",
+        "Type": "block",
+		"StackSize": 1
+    },
+    "Makes": [{
+       "Code": "neolithicmod:labeledchestcomplete-oaks-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:chestcomplete-pine-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "neolithicmod:labeledchestcomplete-pine-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

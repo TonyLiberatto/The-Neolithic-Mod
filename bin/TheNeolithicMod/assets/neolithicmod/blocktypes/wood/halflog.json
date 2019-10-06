@@ -1,28 +1,5 @@
 {
-	code: "halflog",
-	behaviors: [
-			{
-            "name": "BlockCreateBehavior",
-            "properties": {
-                "createBlocks": [
-                    {
-						"MakeTime": 2,
-						"RemoveOnFinish": true,
-                        "Takes": {
-                            "Code": "game:axe-*",
-                            "StackSize": 0
-                        },
-                        "Makes": [
-                            {
-                                "Code": "game:choppingblock-{wood}-north",
-                                "StackSize": 1
-                            }
-                        ]
-                    }
-                ]
-            }
-        }
-	],	
+	code: "halflog",	
 	attributes: {
 		handbook: {
 			groupBy: ["halflog-*"]

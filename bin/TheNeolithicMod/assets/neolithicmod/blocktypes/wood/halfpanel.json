@@ -9,18 +9,7 @@
 					]
 			
 		}
-	},
-	behaviorsByType: {
-		"*-debarked-*":[
-			{name: "BlockSwapBehavior",
-			properties: {
-				"particleOrigin": {"X": 0.5,"Y":0.5,"Z": 0.5,},
-				"particleRadius": 2,
-				"particleQuantity": 16,
-				"swapBlocks": [
-				{ "Tool": "game:hinges-*", "Makes": "neolithicmod:door-assemble-{wood}-east", "Takes": null, "Count": 2 },				
-				]}}],
-	},
+	},	
 	variantgroups: [
 		{ code: "wood", states: ["aged"], loadFromProperties: "block/wood" },
 		{ code: "style", states: ["bark", "debarked", "planks"]},

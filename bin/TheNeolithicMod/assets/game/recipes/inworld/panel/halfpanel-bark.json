@@ -1,0 +1,142 @@
+[ 
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "neolithicmod:panel-aged-bark-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:saw-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "neolithicmod:halfpanel-aged-bark-down",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "neolithicmod:panel-acacia-bark-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:saw-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "neolithicmod:halfpanel-acacia-bark-down",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "neolithicmod:panel-birch-bark-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:saw-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "neolithicmod:halfpanel-birch-bark-down",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+{
+    "Mode": "Create",
+    "Takes": {
+		"Code": "neolithicmod:panel-kapok-bark-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:saw-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "neolithicmod:halfpanel-kapok-bark-down",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "neolithicmod:panel-maple-bark-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:saw-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "neolithicmod:halfpanel-maple-bark-down",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "neolithicmod:panel-oaks-bark-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:saw-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "neolithicmod:halfpanel-oaks-bark-down",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "neolithicmod:panel-pine-bark-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:saw-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "neolithicmod:halfpanel-pine-bark-down",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

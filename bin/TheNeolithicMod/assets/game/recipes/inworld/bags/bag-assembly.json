@@ -1,0 +1,44 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:bag-assembly-bark-leatherstrips",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hide-raw",
+        "Type": "Block",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "neolithicmod:backpack",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "neolithicmod:bag-assembly-bark-sisal",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:sisalrug-large-ground-east",
+        "Type": "Block",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "neolithicmod:burdenbasket",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]
