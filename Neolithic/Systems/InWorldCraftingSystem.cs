@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vintagestory.API;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
@@ -96,7 +97,6 @@ namespace Neolithic
             BlockPos pos = blockSel?.Position;
             Block block = pos?.GetBlock(byPlayer.Entity.World);
             ItemSlot slot = byPlayer?.InventoryManager?.ActiveHotbarSlot;
-
             if (block == null || slot?.Itemstack == null) return false;
             bool shouldbreak = false;
 
@@ -117,8 +117,10 @@ namespace Neolithic
                                 if (make.IsBlock())
                                 {
                                     if (recipe.Remove) byPlayer.Entity.World.BlockAccessor.SetBlock(0, pos);
-                                    byPlayer.Entity.World.BlockAccessor.SetBlock(make.ResolvedItemstack.Block.BlockId, pos);
-                                    make.ResolvedItemstack.Block.OnBlockPlaced(byPlayer.Entity.World, pos);
+                                    Block resolvedBlock = make.ResolvedItemstack.Block;
+                                    resolvedBlock.Attributes = make.Attributes;
+                                    byPlayer.Entity.World.BlockAccessor.SetBlock(resolvedBlock.BlockId, pos);
+                                    resolvedBlock.OnBlockPlaced(byPlayer.Entity.World, pos);
                                     TakeOrDamage(recipe, slot, byPlayer);
                                     shouldbreak = true;
                                 }
@@ -128,6 +130,7 @@ namespace Neolithic
                                 foreach (var make in recipe.Makes)
                                 {
                                     make.Resolve(byPlayer.Entity.World, null);
+                                    make.ResolvedItemstack.Collectible.Attributes = make.Attributes;
                                     byPlayer.Entity.World.SpawnItemEntity(make.ResolvedItemstack, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
                                 }
                                 TakeOrDamage(recipe, slot, byPlayer);

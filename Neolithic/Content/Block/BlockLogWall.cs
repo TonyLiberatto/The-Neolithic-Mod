@@ -28,7 +28,7 @@ namespace Neolithic
 
         public override void OnLoaded(ICoreAPI api)
         {
-            capi = (api as ICoreClientAPI) != null ? api as ICoreClientAPI : null;
+            capi = api as ICoreClientAPI;
             base.OnLoaded(api);
             wallSystem = api.ModLoader.GetModSystem<WallSystem>();
             if (!wallSystem.styles.ContainsKey(Key))
@@ -43,6 +43,7 @@ namespace Neolithic
                         if (tmp.Hor != null) style.hors.Add(tmp.Hor);
                         if (tmp.Vert != null) style.verts.Add(tmp.Vert);
                     }
+                    if (tmp?.FirstCodePart() != null) style.firstcodeparts.Add(tmp.FirstCodePart());
                 }
                 wallSystem.styles.Add(Key, style);
             }
@@ -53,22 +54,6 @@ namespace Neolithic
             BlockEntityLogwall be = (blockSel.BlockEntity(api) as BlockEntityLogwall);
             be?.OnInteract(world, byPlayer, blockSel);
             base.OnBlockInteractStart(world, byPlayer, blockSel);
-
-            ItemStack stack = byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack;
-            if (stack != null)
-            {
-                string r = "";
-                BlockSelection newsel = blockSel.Clone();
-                newsel.Position = blockSel.Position.Offset(blockSel.Face);
-                Block block = stack.Block;
-
-                if (block != null && block.TryPlaceBlock(world, byPlayer, stack, newsel, ref r))
-                {
-                    world.PlaySoundAt(stack.Block?.Sounds.Place, newsel.Position);
-                }
-                
-            }
-
             return true;
         }
 
@@ -85,6 +70,17 @@ namespace Neolithic
         public uint typeIndex = 0;
         public uint vertIndex = 0;
         public uint horIndex = 0;
+        public uint rampIndex = 0;
+
+        public WallIndexing Clone()
+        {
+            return new WallIndexing(typeIndex, vertIndex, horIndex, rampIndex);
+        }
+
+        public WallIndexing(uint typeIndex = 0, uint vertIndex = 0, uint horIndex = 0, uint rampIndex = 0)
+        {
+            this.typeIndex = typeIndex; this.vertIndex = vertIndex; this.horIndex = horIndex; this.rampIndex = rampIndex;
+        }
     }
 
     class WallStyle
@@ -92,6 +88,7 @@ namespace Neolithic
         public HashSet<string> types = new HashSet<string>();
         public HashSet<string> verts = new HashSet<string>();
         public HashSet<string> hors = new HashSet<string>();
+        public HashSet<string> firstcodeparts = new HashSet<string>();
     }
 
     class WallSystem : ModSystem
@@ -107,6 +104,7 @@ namespace Neolithic
 
     class BlockEntityLogwall : BlockEntity
     {
+        BlockLogWall OwnBlock { get => api.World.BlockAccessor.GetBlock(pos) as BlockLogWall; }
         WallIndexing indexing;
         bool interact = true;
 
@@ -129,32 +127,53 @@ namespace Neolithic
 
         public void OnInteract(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            indexing = indexing == null ? new WallIndexing() : indexing;
+            indexing = indexing ?? new WallIndexing();
             if (interact)
             {
                 interact = false;
+                WallSystem wallSystem = api.ModLoader.GetModSystem<WallSystem>();
+
                 if (byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack?.Item?.Tool == EnumTool.Hammer)
                 {
                     if (world.Side.IsServer())
                     {
-                        BlockLogWall block = (BlockLogWall)blockSel.Block(api);
-                        WallSystem wallSystem = api.ModLoader.GetModSystem<WallSystem>();
-                        if (wallSystem.styles.TryGetValue(block.Key, out WallStyle val))
+                        if (wallSystem.styles.TryGetValue(OwnBlock.Key, out WallStyle val))
                         {
-                            string type = block.WallType, wood = block.Wood, style = block.Bark, vert = block.Vert, hor = block.Hor;
+                            string type = OwnBlock.WallType, wood = OwnBlock.Wood, style = OwnBlock.Bark, vert = OwnBlock.Vert, hor = OwnBlock.Hor;
 
                             if (byPlayer.Entity.Controls.Sneak && val.types.Count > 0) type = val.types.Next(ref indexing.typeIndex);
                             else if (byPlayer.Entity.Controls.Sprint && val.verts.Count > 0) vert = val.verts.Next(ref indexing.vertIndex);
                             else if (val.hors.Count > 0) hor = val.hors.Next(ref indexing.horIndex);
 
-                            string code = block.Code.Domain + ":" + block.FirstCodePart().Apd(type).Apd(wood).Apd(style);
+                            string code = OwnBlock.Code.Domain + ":" + OwnBlock.FirstCodePart().Apd(type).Apd(wood).Apd(style);
 
                             if (vert != null) code = code.Apd(vert);
                             if (hor != null) code = code.Apd(hor);
 
                             world.BlockAccessor.ExchangeBlock(code.ToBlock(api).Id, pos);
-                            world.PlaySoundAt(block.Sounds.Place, pos);
+                            world.PlaySoundAt(OwnBlock.Sounds.Place, pos);
                             world.SpawnCubeParticles(pos, pos.MidPoint(), 2, 32);
+                            byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(api.World, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot);
+                        }
+                    }
+                    (byPlayer as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+                }
+                else if (byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack?.Item?.Tool == EnumTool.Axe)
+                {
+                    if (world.Side.IsServer() && wallSystem.styles.TryGetValue(OwnBlock?.Key, out WallStyle style))
+                    {
+                        while (true)
+                        {
+                            AssetLocation asset = OwnBlock.CodeWithPart(style.firstcodeparts.Next(ref indexing.rampIndex));
+                            Block nextBlock = asset.GetBlock(api);
+                            if (nextBlock != null)
+                            {
+                                world.BlockAccessor.ExchangeBlock(nextBlock.Id, pos);
+                                world.PlaySoundAt(OwnBlock.Sounds.Place, pos);
+                                world.SpawnCubeParticles(pos, pos.MidPoint(), 2, 32);
+                                byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(api.World, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot);
+                                break;
+                            }
                         }
                     }
                     (byPlayer as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);

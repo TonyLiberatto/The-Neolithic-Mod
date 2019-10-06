@@ -2,8 +2,7 @@
 	code: "roofstairs",
 	class: "BlockLogWall",
 	entityClass: "LogWall",
-	behaviors: [{name: "HorizontalOrientable"},		
-	],
+	behaviors: [{name: "HorizontalOrientable"}],
 	attributes: {
 		handbook: {
 			groupBy: ["roofstairs-*"]

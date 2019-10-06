@@ -2,8 +2,7 @@
 	code: "rooframp",
 	class: "BlockLogWall",
 	entityClass: "LogWall",
-	behaviors: [{name: "HorizontalOrientable"},		
-	],
+	behaviors: [{name: "HorizontalOrientable"}],
 	attributes: {
 		handbook: {
 			groupBy: ["rooframp-*"]
