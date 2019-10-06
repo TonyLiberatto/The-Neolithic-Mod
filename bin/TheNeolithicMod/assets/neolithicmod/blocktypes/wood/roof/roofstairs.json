@@ -2,19 +2,7 @@
 	code: "roofstairs",
 	class: "BlockLogWall",
 	entityClass: "LogWall",
-	behaviors: [{name: "HorizontalOrientable"},
-		{
-			name: "BlockSwapBehavior",
-			properties: {		
-				"particleOrigin": {	"X": 0.5,	"Y": 0.5,	"Z": 0.5,	},
-				"particleRadius": 2,
-				"particleQuantity": 16,								
-				"swapBlocks": [
-					{ "Tool": "game:axe-*", "Makes": "neolithicmod:rooframp-{type}-{wood}-{style}-{horizontal}",  "Takes": "neolithicmod:roofstairs-{type}-{wood}-{style}-{horizontal}", "Count": 0 },					
-				],
-			},
-		},
-	],
+	behaviors: [{name: "HorizontalOrientable"}],
 	attributes: {
 		handbook: {
 			groupBy: ["roofstairs-*"]
