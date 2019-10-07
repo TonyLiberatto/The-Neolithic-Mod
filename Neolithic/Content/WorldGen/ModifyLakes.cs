@@ -23,6 +23,7 @@ namespace Neolithic
         public override double ExecuteOrder() => 0;
         public override bool ShouldLoad(EnumAppSide forSide) => forSide.IsServer();
         long[] ids = new long[2];
+        public NeolithicGlobalConfig config;
 
         public override void StartServerSide(ICoreServerAPI api)
         {
@@ -33,14 +34,14 @@ namespace Neolithic
 
         public void ChangeLakeWater()
         {
-            NeolithicGlobalConfig config = api.Assets.Get("worldgen/global.json").ToObject<NeolithicGlobalConfig>();
+            config = api.Assets.Get("worldgen/global.json").ToObject<NeolithicGlobalConfig>();
             config.SetApi(api);
             ids[0] = api.Event.RegisterGameTickListener(dt => 
             {
                 if (api.ModLoader.GetModSystem<GenLakes>().GlobalConfig != null)
                 {
                     api.ModLoader.GetModSystem<GenLakes>().GlobalConfig.waterBlockCode = config.lakeWaterBlockCode;
-                    api.ModLoader.GetModSystem<GenLakes>().GlobalConfig.waterBlockId = config.lakeWaterBlockId;
+                    api.ModLoader.GetModSystem<GenLakes>().GlobalConfig.waterBlockId = config.LakeWaterBlockId;
                     api.Event.UnregisterGameTickListener(ids[0]);
                 }
             }, 30);
@@ -49,7 +50,7 @@ namespace Neolithic
                 if (api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig != null)
                 {
                     api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig.waterBlockCode = config.lakeWaterBlockCode;
-                    api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig.waterBlockId = config.lakeWaterBlockId;
+                    api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig.waterBlockId = config.LakeWaterBlockId;
                     api.Event.UnregisterGameTickListener(ids[1]);
                 }
             }, 30);
@@ -102,13 +103,13 @@ namespace Neolithic
         private ICoreAPI api;
 
         public int waterBlockId { get => waterBlockCode.GetID(api); }
-        public int lakeWaterBlockId { get => lakeWaterBlockCode.GetID(api); }
-        public int lakeIceBlockId { get => lakeIceBlockCode.GetID(api); }
-        public int glacierIceBlockId { get => glacierIceBlockCode.GetID(api); }
-        public int lavaBlockId { get => lavaBlockCode.GetID(api); }
-        public int basaltBlockId { get => basaltBlockCode.GetID(api); }
-        public int mantleBlockId { get => mantleBlockCode.GetID(api); }
-        public int defaultRockId { get => defaultRockCode.GetID(api); }
+        public int LakeWaterBlockId { get => lakeWaterBlockCode.GetID(api); }
+        public int LakeIceBlockId { get => lakeIceBlockCode.GetID(api); }
+        public int GlacierIceBlockId { get => glacierIceBlockCode.GetID(api); }
+        public int LavaBlockId { get => lavaBlockCode.GetID(api); }
+        public int BasaltBlockId { get => basaltBlockCode.GetID(api); }
+        public int MantleBlockId { get => mantleBlockCode.GetID(api); }
+        public int DefaultRockId { get => defaultRockCode.GetID(api); }
 
         public void SetApi(ICoreAPI api)
         {
