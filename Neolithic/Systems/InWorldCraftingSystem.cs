@@ -55,7 +55,7 @@ namespace Neolithic
 
         private void SendCraftingRecipes(IServerPlayer byPlayer)
         {
-            string data = JsonConvert.SerializeObject(InWorldCraftingRecipes);
+            string data = JsonConvert.SerializeObject(InWorldCraftingRecipes, Formatting.None, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
             sChannel.SendPacket(new IWCSPacket() { DataType = "Recipes", SerializedData = data }, byPlayer);
         }
 
@@ -67,7 +67,7 @@ namespace Neolithic
             {
                 if (h.DataType == "Recipes")
                 {
-                    InWorldCraftingRecipes = JsonConvert.DeserializeObject<Dictionary<AssetLocation, InWorldCraftingRecipe[]>>(h.SerializedData);
+                    InWorldCraftingRecipes = JsonConvert.DeserializeObject<Dictionary<AssetLocation, InWorldCraftingRecipe[]>>(h.SerializedData, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
                 }
             });
         }
