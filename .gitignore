@@ -265,3 +265,4 @@ __pycache__/
 /bin/TheNeolithicMod/assets/neolithicmod/textures/block/clay/adobe/newadobe.png
 /bin/CarryCapacity
 /bin/TheNeolithicMod/Newtonsoft.Json.dll
+*.aseprite
