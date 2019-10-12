@@ -23,8 +23,8 @@
 	},
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
-		"*-cooked": { satiety: 2000, foodcategory: "Protein" },
-		"*-cured": { satiety: 1500, foodcategory: "Protein" },
+		"*-cooked": { satiety: 400, foodcategory: "Protein" },
+		"*-cured": { satiety: 300, foodcategory: "Protein" },
 	},
 	transitionablePropsByType: {
 		"*-raw": [

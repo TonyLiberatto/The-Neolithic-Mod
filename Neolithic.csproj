@@ -43,23 +43,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\VS-1.10-X\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\VS-1.10-X\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\VS-1.10-X\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\VS-1.10-X\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\VS-1.10-X\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp">
@@ -67,15 +67,15 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\VS-1.10-X\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\VS-1.10-X\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\VS-1.10-X\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -97,7 +97,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\..\VS-1.10-X\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -111,19 +111,19 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\VS-1.10-X\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\VS-1.10-X\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\VS-1.10-X\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>..\..\Lib\websocket-sharp.dll</HintPath>
+      <HintPath>..\..\VS-1.10-X\Lib\websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -197,7 +197,6 @@
     <Folder Include="WIPAssets\Novocain\classes\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\CarryCapacity-0.4.4.zip" />
     <None Include="bin\TheNeolithicMod\All about The Neolithic Mod.docx" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\bamboostakes.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\cheesecloth.json" />
@@ -1562,6 +1561,9 @@
     <None Include="bin\TheNeolithicMod\LICENSE" />
     <None Include="bin\TheNeolithicMod\Mod-spreadsheets.xlsx" />
     <None Include="bin\TheNeolithicMod\modinfo.json" />
+    <None Include="WIPAssets\Novocain\cheeseblock.json" />
+    <None Include="WIPAssets\Novocain\pigs\pig-domestic-male.json" />
+    <None Include="WIPAssets\Novocain\pigs\pig-domestic-piglet.json" />
     <None Include="WIPAssets\Tony\game\entities\land\panther\panther-female.json" />
     <None Include="WIPAssets\Tony\game\entities\land\panther\panther-kitty.json" />
     <None Include="WIPAssets\Tony\game\entities\land\panther\panther-male.json" />
@@ -2959,6 +2961,10 @@
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\unknown.png" />
     <Content Include="bin\TheNeolithicMod\Neolithic.dll" />
     <Content Include="bin\TheNeolithicMod\Neolithic.pdb" />
+    <Content Include="WIPAssets\Novocain\cheeseblock.png" />
+    <Content Include="WIPAssets\Novocain\pigs\pig-domestic-female.png" />
+    <Content Include="WIPAssets\Novocain\pigs\pig-domestic-male.png" />
+    <Content Include="WIPAssets\Novocain\pigs\pig-domestic-piglet.png" />
     <Content Include="WIPAssets\Tony\game\textures\entity\panther\black.png" />
     <Content Include="WIPAssets\Tony\game\textures\entity\panther\kitty\black.png" />
     <Content Include="WIPAssets\Tony\game\textures\entity\rabbit\baby\black.png" />
