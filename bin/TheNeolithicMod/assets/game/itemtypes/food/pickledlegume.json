@@ -13,7 +13,7 @@
 	},
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
-		"*": { saturation: 1500, health: 0, foodcategory: "Protein" },
+		"*": { saturation: 300, health: 0, foodcategory: "Protein" },
 	},
 	transitionableProps: [{
 		type: "Perish",

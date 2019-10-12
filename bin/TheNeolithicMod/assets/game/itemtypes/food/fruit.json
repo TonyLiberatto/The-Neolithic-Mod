@@ -6,15 +6,15 @@
 	],
 	attributes: {
 		nutritionPropsWhenInMeal: { 
-			satietyByType: { "*-saguaro": 90, "*":  120 },
+			satietyByType: { "*-saguaro": 180, "*":  240 },
 			foodcategory: "Fruit" 
 		},
 	},
 	texture: { base: "item/food/fruit/{type}" },
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
-		"*-saguaro": { satiety: 600, health: 1, foodcategory: "Fruit" },
-		"*": { satiety: 800, foodcategory: "Fruit" }
+		"*-saguaro": { satiety: 120, health: 1, foodcategory: "Fruit" },
+		"*": { satiety: 160, foodcategory: "Fruit" }
 	},
 	transitionableProps: [{
 		type: "Perish",

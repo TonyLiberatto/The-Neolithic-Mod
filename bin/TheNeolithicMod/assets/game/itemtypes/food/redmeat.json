@@ -12,7 +12,7 @@
 			},
 			useFirepitModel: "Cooking"
 		},
-		nutritionPropsWhenInMeal: { satiety: 4200, foodcategory: "Protein" }
+		nutritionPropsWhenInMeal: { satiety: 840, foodcategory: "Protein" }
 	},
 	variantgroups: [
 		{ code: "type", states: ["raw", "cooked", "vintage", "cured" ] },
@@ -37,9 +37,9 @@
 	},
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
-		"redmeat-cooked": { satiety: 2800, health: 0, foodcategory: "Protein" },
-		"redmeat-cured": { satiety: 2000, health: 0, foodcategory: "Protein" },
-		"redmeat-vintage": { satiety: 2800, health: 2, foodcategory: "Protein" },
+		"redmeat-cooked": { satiety: 560, health: 0, foodcategory: "Protein" },
+		"redmeat-cured": { satiety: 400, health: 0, foodcategory: "Protein" },
+		"redmeat-vintage": { satiety: 560, health: 2, foodcategory: "Protein" },
 	},
 	transitionablePropsByType: {
 		"*-raw": [

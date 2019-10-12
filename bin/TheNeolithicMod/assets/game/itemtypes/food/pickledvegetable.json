@@ -19,8 +19,8 @@
 	},
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
-		"*-cabbage": { saturation: 2500, foodcategory: "Vegetable" },
-		"*": { saturation: 800, foodcategory: "Vegetable" },
+		"*-cabbage": { saturation: 500, foodcategory: "Vegetable" },
+		"*": { saturation: 160, foodcategory: "Vegetable" },
 	},
 	transitionableProps: [{
 		type: "Perish",

@@ -12,11 +12,11 @@
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
 		"*-flax": { 
-			satiety: 300, 
+			satiety: 60, 
 			foodcategory: "Grain"
 		},
 		"*": {
-			satiety: 600, 
+			satiety: 120, 
 			foodcategory: "Grain"
 		}
 	},

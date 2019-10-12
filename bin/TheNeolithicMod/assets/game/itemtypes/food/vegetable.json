@@ -32,9 +32,9 @@
 	},
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
-		"*-cabbage": { satiety: 3000, foodcategory: "Vegetable" },
-		"*-pumpkin": { satiety: 1200, foodcategory: "Vegetable" },
-		"*": { satiety: 1000, foodcategory: "Vegetable" },
+		"*-cabbage": { satiety: 600, foodcategory: "Vegetable" },
+		"*-pumpkin": { satiety: 240, foodcategory: "Vegetable" },
+		"*": { satiety: 200, foodcategory: "Vegetable" },
 	},
 	transitionablePropsByType: {
 		"*-pumpkin": [{
