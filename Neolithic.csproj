@@ -129,6 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Neolithic\ClassRegistry.cs" />
+    <Compile Include="Neolithic\Content\EntityBehavior\BehaviorPortionGrow.cs" />
     <Compile Include="Neolithic\Content\Properties\SwapBlocks.cs" />
     <Compile Include="Neolithic\Content\Block\BlockDryingStation.cs" />
     <Compile Include="Neolithic\Content\Properties\CraftingProp.cs" />

@@ -25,6 +25,7 @@ namespace Neolithic
             api.RegisterEntityBehaviorClass("slaughterable", typeof(BehaviorSlaughterable));
             api.RegisterEntityBehaviorClass("featherpluck", typeof(BehaviorFeatherPluck));
             api.RegisterEntityBehaviorClass("damagenotify", typeof(BehaviorNotifyHerdOfDamage));
+            api.RegisterEntityBehaviorClass("portiongrow", typeof(BehaviorPortionGrow));
         }
 
         public void RegisterAiTasks()

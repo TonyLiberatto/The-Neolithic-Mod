@@ -55,8 +55,11 @@ namespace Neolithic
 
         private void SendCraftingRecipes(IServerPlayer byPlayer)
         {
-            string data = JsonConvert.SerializeObject(InWorldCraftingRecipes, Formatting.None, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
-            sChannel.SendPacket(new IWCSPacket() { DataType = "Recipes", SerializedData = data }, byPlayer);
+            foreach (var val in InWorldCraftingRecipes)
+            {
+                string data = JsonConvert.SerializeObject(val, Formatting.None, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+                sChannel.SendPacket(new IWCSPacket() { DataType = "Recipes", SerializedData = data }, byPlayer);
+            }
         }
 
         public override void StartClientSide(ICoreClientAPI api)
@@ -67,7 +70,8 @@ namespace Neolithic
             {
                 if (h.DataType == "Recipes")
                 {
-                    InWorldCraftingRecipes = JsonConvert.DeserializeObject<Dictionary<AssetLocation, InWorldCraftingRecipe[]>>(h.SerializedData, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+                    var recipe = JsonConvert.DeserializeObject<KeyValuePair<AssetLocation, InWorldCraftingRecipe[]>>(h.SerializedData, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+                    InWorldCraftingRecipes.Add(recipe.Key, recipe.Value);
                 }
             });
         }

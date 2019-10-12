@@ -79,7 +79,7 @@ namespace Neolithic
                         {
                             rnd.InitPositionSeed(chunkX * vec.X, chunkZ * vec.Z);
                             if (y < 1 || rnd.NextDouble() > 0.1) continue;
-                            int dX = rnd.NextInt(31), dZ = rnd.NextInt(31);
+                            int dX = rnd.NextInt(chunksize), dZ = rnd.NextInt(chunksize);
 
                             int block = chunk.Blocks[(y * chunksize + dZ) * chunksize + dX];
                             int dBlock = chunk.Blocks[((y - 1) * chunksize + dZ) * chunksize + dX];
