@@ -25,6 +25,8 @@
 		"pig-sow-ashgrey", "pig-sow-brown", "pig-sow-chocolate", "pig-sow-darkgrey", "pig-sow-smokegrey", "pig-sow-walnut", 
 		"pig-piglet",
 		
+		"pig-domestic-boar", "pig-domestic-sow", "pig-domestic-piglet",
+		
 		"raccoon-male", "raccoon-female", "raccoon-pup",
 		"sheep-ram", "sheep-ewe", "sheep-lamb",
 		"wild-sheep-ram", "wild-sheep-ewe", "wild-sheep-lamb",
@@ -57,7 +59,10 @@
 		"*-locust": { base: "entity/land/locust" },
 		"*-pig-boar-*": { base: "entity/land/pig/boar" },
 		"*-pig-sow-*": { base: "entity/land/pig/sow" },
-		"*-pig-piglet": { base: "entity/land/pig-wild-piglet" },		
+		"*-pig-piglet": { base: "entity/land/pig-wild-piglet" },
+		"*-pig-domestic-boar": { base: "entity/land/pig-domestic/boar" },
+		"*-pig-domestic-sow": { base: "entity/land/pig-domestic/sow" },
+		"*-pig-domestic-piglet": { base: "entity/land/pig-domestic/piglet" },
 		"*-raccoon-male*": { base: "entity/land/raccoon-male" },
 		"*-raccoon-female*": { base: "entity/land/raccoon-female" },
 		"*-raccoon-pup*": { base: "entity/land/raccoon-pup" },		
@@ -154,6 +159,10 @@
 		"*-pig-sow-smokegrey":{ "all": { base: "entity/pig/sow/smokegrey"} },
 		"*-pig-sow-walnut":{ "all": { base: "entity/pig/sow/walnut"} },
 		"*-pig-piglet":{ "all": { base: "entity/pig/pig-wild-piglet"} },
+		
+		"*-pig-domestic-boar": { "all": { base: "entity/pig-domestic/boar"} },
+		"*-pig-domestic-sow": { "all": { base: "entity/pig-domestic/sow"} },
+		"*-pig-domestic-piglet": { "all": { base: "entity/pig-domestic/piglet"} },
 		
 		"*-racoon-male":{ "all": { base: "entity/racoon/racoon-male1"} },
 		"*-racoon-female":{ "all": { base: "entity/racoon/racoon-female1"} },
@@ -343,6 +352,27 @@
 			scale: 1.36
 		},
 		"*-pig-piglet-*": {
+			rotate: true,
+			translation: { x: 2, y: 2, z: 0 },
+			rotation: { x: -5, y: -36, z: -180 },
+			origin: { x: 0.5, y: 0.17, z: 0.5 },
+			scale: 3
+		},
+		"*-pig-domestic-boar": {
+			rotate: true,
+			translation: { x: 0, y: 2, z: 0 },
+			rotation: { x: -14, y: -50, z: -180 },
+			origin: { x: 0.5, y: 0.35, z: 0.5 },
+			scale: 1.36
+		},
+		"*-pig-domestic-sow": {
+			rotate: true,
+			translation: { x: 0, y: 2, z: 0 },
+			rotation: { x: -14, y: -50, z: -180 },
+			origin: { x: 0.5, y: 0.35, z: 0.5 },
+			scale: 1.36
+		},
+		"*-pig-domestic-piglet": {
 			rotate: true,
 			translation: { x: 2, y: 2, z: 0 },
 			rotation: { x: -5, y: -36, z: -180 },
@@ -566,6 +596,22 @@
 			origin: { x: 0.5, y: 0.1, z: 0.5 },
 			scale: 0.92
 		},
+		"*-pig-domestic-boar": {
+			translation: { x: -1, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.5
+		},
+		"*-pig-domestic-sow": {
+			translation: { x: -1, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.5
+		},
+		"*-pig-domestic-piglet": {
+			translation: { x: -0.4, y: -0.1, z: -0.4 },
+			rotation: { x: -136, y: -19, z: -135 },
+			origin: { x: 0.5, y: 0.1, z: 0.5 },
+			scale: 0.92
+		},
 		"*-raccoon-male": {
 			translation: { x: -0.8, y: -0.4, z: -0.5 },
 			rotation: { x: -180, y: 0, z: -156 },
@@ -736,6 +782,21 @@
 			scale: 1.36
 		},
 		"*-pig-piglet-*": {
+			translation: { x: 0.5, y: 0.1, z: 0 },
+			rotation: { x: -180, y: -95, z: -180 },
+			scale: 1.36
+		},
+		"*-pig-domestic-boar": {
+			translation: { x: 0.3, y: -0.1, z: 0 },
+			rotation: { x: -130, y: -95, z: -180 },
+			scale: 1.36
+		},
+		"*-pig-domestic-sow": {
+			translation: { x: 0.3, y: -0.1, z: 0 },
+			rotation: { x: -130, y: -95, z: -180 },
+			scale: 1.36
+		},
+		"*-pig-domestic-piglet": {
 			translation: { x: 0.5, y: 0.1, z: 0 },
 			rotation: { x: -180, y: -95, z: -180 },
 			scale: 1.36

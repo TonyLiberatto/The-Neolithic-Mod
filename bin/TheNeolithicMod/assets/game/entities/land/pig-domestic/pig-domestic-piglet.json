@@ -1,5 +1,5 @@
 {
-	code: "pig-piglet",
+	code: "pig-domestic-piglet",
 	class: "EntityAgent",
 	hitboxSize: { x: 0.6, y: 0.5 },
 	eyeHeight: 0.4,
@@ -12,8 +12,8 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/pig/piglet" },
-		texture: { base: "entity/pig/pig-wild-piglet" },
+		shape: { base: "entity/land/pig-domestic/piglet" },
+		texture: { base: "entity/pig-domestic/piglet" },
 		behaviors: [
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
@@ -39,7 +39,7 @@
 			{ 
 				code: "grow",
 				hoursToGrow: 168,
-				adultEntityCodes: [ "pig-sow-ashgrey", "pig-boar-ashgrey", "pig-sow-brown", "pig-boar-brown","pig-sow-chocolate", "pig-boar-chocolate","pig-sow-darkgrey", "pig-boar-darkgrey","pig-sow-smokegrey", "pig-boar-smokegrey","pig-sow-walnut", "pig-boar-walnut"],
+				adultEntityCodes: [ "pig-domestic-sow", "pig-domestic-boar" ],
 			},
 			{ 
 				code: "taskai",
@@ -73,7 +73,7 @@
 					{
 						code: "stayclosetoentity",
 						priority: 1.4,
-						entityCode: "pig-wild-female-*",
+						entityCode: "pig-domestic-sow",
 						movespeed: 0.015,
 						maxDistance: 5,
 						searchRange: 25,

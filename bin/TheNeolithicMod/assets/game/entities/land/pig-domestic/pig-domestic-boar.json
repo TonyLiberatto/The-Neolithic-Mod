@@ -6,7 +6,7 @@
 	drops: [
 		{
 			type: "block",
-			code: "neolithicmod:dead-pig-boar-{color}",
+			code: "neolithicmod:dead-pig-boar-ashgrey",
 		},
 	],
 	client: {
@@ -159,20 +159,7 @@
 				maxTemp: 28,
 				minRain: 0.45,
 				minForest: 0.35,
-				companionsByType: {
-					"pig-boar-ashgrey":
-						["pig-sow-ashgrey", "pig-piglet"],
-					"pig-boar-brown":
-						["pig-sow-brown", "pig-piglet"],
-					"pig-boar-chocolate":
-						["pig-sow-chocolate", "pig-piglet"],
-					"pig-boar-darkgrey":
-						["pig-sow-darkgrey", "pig-piglet"],
-					"pig-boar-smokegrey":
-						["pig-sow-smokegrey", "pig-piglet"],
-					"pig-boar-walnut":
-						["pig-sow-walnut", "pig-piglet"]
-				}
+				companions: ["pig-domestic-sow", "pig-domestic-piglet"]
 			},
 			runtime: {
 				group: "neutral",
@@ -186,20 +173,7 @@
 				maxTemp: 28,
 				minRain: 0.45,
 				minForestOrShrubs: 0.35,
-				companionsByType: {
-					"pig-boar-ashgrey":
-						["pig-sow-ashgrey", "pig-piglet"],
-					"pig-boar-brown":
-						["pig-sow-brown", "pig-piglet"],
-					"pig-boar-chocolate":
-						["pig-sow-chocolate", "pig-piglet"],
-					"pig-boar-darkgrey":
-						["pig-sow-darkgrey", "pig-piglet"],
-					"pig-boar-smokegrey":
-						["pig-sow-smokegrey", "pig-piglet"],
-					"pig-boar-walnut":
-						["pig-sow-walnut", "pig-piglet"]
-				}
+				companions: ["pig-domestic-sow", "pig-domestic-piglet"]
 			}
 		}
 	},

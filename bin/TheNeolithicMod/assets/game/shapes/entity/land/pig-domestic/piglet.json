@@ -5,8 +5,7 @@
 	},
 	"textureWidth": 16,
 	"textureHeight": 32,
-	"textures": {
-		"piglet": ""
+	"textures": {		
 	},
 	"elements": [
 		{

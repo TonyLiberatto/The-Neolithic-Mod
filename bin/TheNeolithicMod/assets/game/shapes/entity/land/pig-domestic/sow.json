@@ -5,8 +5,7 @@
 	},
 	"textureWidth": 64,
 	"textureHeight": 64,
-	"textures": {
-		"sow": ""
+	"textures": {		
 	},
 	"elements": [
 		{
