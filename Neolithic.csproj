@@ -197,7 +197,6 @@
     <Folder Include="WIPAssets\Novocain\classes\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\CarryCapacity-0.4.4.zip" />
     <None Include="bin\TheNeolithicMod\All about The Neolithic Mod.docx" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\bamboostakes.json" />
     <None Include="bin\TheNeolithicMod\assets\game\blocktypes\cheesecloth.json" />
@@ -1562,6 +1561,9 @@
     <None Include="bin\TheNeolithicMod\LICENSE" />
     <None Include="bin\TheNeolithicMod\Mod-spreadsheets.xlsx" />
     <None Include="bin\TheNeolithicMod\modinfo.json" />
+    <None Include="WIPAssets\Novocain\cheeseblock.json" />
+    <None Include="WIPAssets\Novocain\pigs\pig-domestic-male.json" />
+    <None Include="WIPAssets\Novocain\pigs\pig-domestic-piglet.json" />
     <None Include="WIPAssets\Tony\game\entities\land\panther\panther-female.json" />
     <None Include="WIPAssets\Tony\game\entities\land\panther\panther-kitty.json" />
     <None Include="WIPAssets\Tony\game\entities\land\panther\panther-male.json" />
@@ -2959,6 +2961,10 @@
     <Content Include="bin\TheNeolithicMod\assets\neolithicmod\textures\unknown.png" />
     <Content Include="bin\TheNeolithicMod\Neolithic.dll" />
     <Content Include="bin\TheNeolithicMod\Neolithic.pdb" />
+    <Content Include="WIPAssets\Novocain\cheeseblock.png" />
+    <Content Include="WIPAssets\Novocain\pigs\pig-domestic-female.png" />
+    <Content Include="WIPAssets\Novocain\pigs\pig-domestic-male.png" />
+    <Content Include="WIPAssets\Novocain\pigs\pig-domestic-piglet.png" />
     <Content Include="WIPAssets\Tony\game\textures\entity\panther\black.png" />
     <Content Include="WIPAssets\Tony\game\textures\entity\panther\kitty\black.png" />
     <Content Include="WIPAssets\Tony\game\textures\entity\rabbit\baby\black.png" />
