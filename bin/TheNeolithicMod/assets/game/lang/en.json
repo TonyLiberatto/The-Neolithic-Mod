@@ -15,6 +15,11 @@
   "craftinginfo-toolmaking-title": "Neolithic Tool Making",
   "craftinginfo-toolmaking-text": "<strong>toolmaking</strong><br><br>Neolithic Tool Making 101. Only here on The Neolithic Mod.<br><br>In the neolithic mod, hafted <a href=\"handbook://item-flint0\">flint</a> or stone (e.g. <a href=\"handbook://item-stone-granite0\">granite</a>) tools are fully created outside your crafting grid. You will create them step by step on a workspace block in front of you. You will need a flint tool/weapon head, a shaft, and binding material to attach the tool or weapon head to the shaft. The first step is to create the tool head using the <a href=\"handbook://craftinginfo-knapping\">knapping interface</a>.  If you wish to make a tool or weapon using a head that you prepared ahead of time, or you found by panning, Shift (Sneak) + Right click will allow you to place the flint head and create a workspace. Once the head is made or placed, it will remain on the block where you knapped or placed it, which will become your workspace. Next, you will need to add a shaft, either debarked very thin branch or large bone. Right click the workspace to add the shaft to your knapped flint or stone head.  The last step is to secure the shaft to the tool/weapon head using <a href=\"handbook://neolithicmod:item-sisal-twine\">sisal twine</a>, sinew or leather strips. Right click the workspace to add the binding and complete your tool. The completed tool will stay on the workspace block until you Left click (break) and pick it up.<br><br>Congratulations! You are now a master Tool Maker \\o/<br>",
   
+  "block-pumpkin-fruit-*": "Growing pumpkin",
+  "blockdesc-pumpkin-fruit-*": "Not ready for harvesting",
+  "block-pumpkin-fruit-4": "Mature pumpkin",
+  "blockdesc-pumpkin-fruit-4": "Use a knife to break and harvest 4 slices of pumpkin and 2 seeds",
+  
   "incontainer-item-seawaterportion": "Sea Water",
   "item-seawaterportion":"Sea Water Portion",
   "block-dryingtray-acacia":"Acacia Drying Tray",
@@ -515,7 +520,15 @@
   "item-creature-pig-piglet-chocolate": "Chocolate piglet",
   "item-creature-pig-piglet-darkgrey": "DarkGrey piglet",
   "item-creature-pig-piglet-smokegrey": "SmokeGrey piglet",
-  "item-creature-pig-piglet-walnut": "Walnut piglet",
+  "item-creature-pig-piglet-walnut": "Walnut piglet",  
+  
+  "prefixandcreature-pig-domestic-boar": "Domestic Boar",
+  "prefixandcreature-pig-domestic-sow": "Domestic Sow",
+  "prefixandcreature-pig-domestic-piglet": "Domestic piglet",
+  
+  "item-creature-pig-domestic-boar": "Domestic Boar",
+  "item-creature-pig-domestic-sow": "Domestic Sow",
+  "item-creature-pig-domestic-piglet": "Domestic piglet",  
   
   "prefixandcreature-wild-sheep-ewe": "Wild Bighorn Sheep Ewe",
   "prefixandcreature-wild-sheep-ram": "Wild Bighorn Sheep Ram",

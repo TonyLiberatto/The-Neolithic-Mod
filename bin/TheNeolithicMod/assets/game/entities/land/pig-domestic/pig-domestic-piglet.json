@@ -37,8 +37,9 @@
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ code: "breathe" }, 
 			{ 
-				code: "grow",
-				hoursToGrow: 168,
+				code: "portiongrow",
+				hoursToGrow: 1,
+				portionsEatenForGrow: 1.0,
 				adultEntityCodes: [ "pig-domestic-sow", "pig-domestic-boar" ],
 			},
 			{ 
@@ -79,6 +80,17 @@
 						searchRange: 25,
 						animation: "Run",
 						animationSpeed: 7
+					},
+					{
+						code: "seekfoodandeat",
+						movespeed: 0.004,
+						priority: 1.2,
+						animationSpeed: 2,
+						animation: "Walk",
+						eatSound: "player/eat",
+						eatTime: 1.5,
+						mincooldownHours: 1,
+						maxcooldownHours: 4,
 					},
 					{
 						code: "idle",

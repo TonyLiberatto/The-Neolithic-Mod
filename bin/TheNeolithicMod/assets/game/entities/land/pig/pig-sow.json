@@ -44,16 +44,15 @@
 			{ code: "breathe" },
 			{
 				code: "multiply",
-				spawnEntityCode: "pig-piglet",
+				spawnEntityCode: "pig-domestic-piglet",
 				spawnQuantityMin: 2,
-				spawnQuantityMax: 6,
-				growthCapEntityCodes: ["pig-piglet", "pig-sow-*", "pig-boar-*"],
+				spawnQuantityMax: 6,				
 				requiresNearbyEntityCode: "pig-boar-*",
 				requiresNearbyEntityRange: 10,
 				pregnancyDays: 8,
 				multiplyCooldownDaysMin: 12,
 				multiplyCooldownDaysMax: 21,
-				portionsEatenForMultiply: 10
+				portionsEatenForMultiply: 1
 			},
 			{
 				code: "emotionstates",
@@ -114,7 +113,7 @@
 					{
 						code: "stayclosetoentity",
 						priority: 1.3,
-						entityCode: "pig-wild-male",
+						entityCode: "pig-boar-*",
 						maxDistance: 10,
 						searchRange: 25,
 						movespeed: 0.025,

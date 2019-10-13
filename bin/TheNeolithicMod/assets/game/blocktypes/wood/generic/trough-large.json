@@ -51,7 +51,7 @@
 				quantityPerFillLevel: 8,
 				maxFillLevels: 8,
 				shapesPerFillLevel: ["block/wood/trough/large/hayfill1", "block/wood/trough/large/hayfill1", "block/wood/trough/large/hayfill2", "block/wood/trough/large/hayfill2", "block/wood/trough/large/hayfill3", "block/wood/trough/large/hayfill3", "block/wood/trough/large/hayfill4", "block/wood/trough/large/hayfill4"],
-				foodFor: ["pig-*", "sheep-*", "wild-sheep-*"]
+				foodFor: [ "sheep-*", "wild-sheep-*"]
 			}
 		]
 	},

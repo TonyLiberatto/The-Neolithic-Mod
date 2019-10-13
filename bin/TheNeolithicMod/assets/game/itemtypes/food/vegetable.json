@@ -9,7 +9,13 @@
 		},
 		"*-pumpkin": {
 			inContainerTexture: { base: "block/wood/barrel/raw-{type}" },
-			nutritionPropsWhenInMeal: { satiety: 180, foodcategory: "Vegetable" }
+			nutritionPropsWhenInMeal: { satiety: 180, foodcategory: "Vegetable" },
+			handbook:{ 				
+				extraSections: [
+					{ title: "handbook-item-sources", text: "Place a pumpkin down on the ground, break with a knife to get 4 slices of pumpkin and 2 seeds." }
+					]
+
+		},
 		},
 		"*": {
 			inContainerTexture: { base: "block/wood/barrel/raw-{type}" },
