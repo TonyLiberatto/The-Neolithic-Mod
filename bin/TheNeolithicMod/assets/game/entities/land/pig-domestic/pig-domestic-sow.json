@@ -48,10 +48,10 @@
 				growthCapEntityCodes: ["pig-domestic-piglet", "pig-domestic-sow", "pig-domestic-boar"],
 				requiresNearbyEntityCode: "pig-domestic-boar",
 				requiresNearbyEntityRange: 10,
-				pregnancyDays: 8,
-				multiplyCooldownDaysMin: 12,
-				multiplyCooldownDaysMax: 21,
-				portionsEatenForMultiply: 10
+				pregnancyDays: 5,
+				multiplyCooldownDaysMin: 6,
+				multiplyCooldownDaysMax: 11,
+				portionsEatenForMultiply: 1	
 			},
 			{
 				code: "emotionstates",
