@@ -1,0 +1,24 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:log-placed-acacia-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "neolithicmod:branch-thin-acacia-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:mortarandpestle-acacia-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+     
+]
