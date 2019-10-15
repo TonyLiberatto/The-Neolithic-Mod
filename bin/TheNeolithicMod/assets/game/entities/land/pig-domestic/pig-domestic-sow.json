@@ -32,6 +32,7 @@
 	server: {
 		behaviors: [
 			{ code: "repulseagents" },
+			{ code: "slaughterable" },
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ code: "controlledphysics", stepHeight: 1.0001 },
 			{
