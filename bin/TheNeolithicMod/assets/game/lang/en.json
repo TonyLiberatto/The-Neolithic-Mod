@@ -1840,9 +1840,7 @@
 	"item-slaughteringaxe-tinbronze-pine": "Slaughteringaxe Tinbronze (Pine)", 
   
   "item-bamboostakes-brown": "Brown Bamboo Stakes",
-  "item-bamboostakes-green": "Green Bamboo Stakes",
-  "itemdesc-bamboostakes-brown": "Arrange in the grid 2 x 2 to make Brown Bamboo Planks",
-  "itemdesc-bamboostakes-green": "Arrange in the grid 2 x 2 to make Green Bamboo Planks",
+  "item-bamboostakes-green": "Green Bamboo Stakes",  
   
   "block-mortar-acacia": "Acacia Mortar",
   "block-mortar-birch": "Birch Mortar",
