@@ -6,7 +6,7 @@
 	drops: [
 		{
 			type: "block",
-			code: "neolithicmod:dead-pig-sow-ashgrey",
+			code: "neolithicmod:dead-pig-domestic-sow",
 		},
 	],
 	client: {
@@ -14,7 +14,8 @@
 		shape: { base: "entity/land/pig-domestic/sow" },
 		texture: { base: "entity/pig-domestic/sow" },
 		behaviors: [
-			{ code: "repulseagents" }, 
+			{ code: "repulseagents" },
+			{ code: "slaughterable" },
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
 			{ code: "interpolateposition" }, { code: "multiply" },
 		],
@@ -31,14 +32,14 @@
 	server: {
 		behaviors: [
 			{ code: "repulseagents" },
+			{ code: "slaughterable" },
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ code: "controlledphysics", stepHeight: 1.0001 },
 			{
 				code: "health",
 				currenthealth: 20,
 				maxhealth: 20
-			},
-			{ code: "floatupwhenstuck", onlyWhenDead: true },
+			},			
 			{ code: "breathe" },
 			{
 				code: "multiply",
@@ -51,7 +52,7 @@
 				pregnancyDays: 5,
 				multiplyCooldownDaysMin: 6,
 				multiplyCooldownDaysMax: 11,
-				portionsEatenForMultiply: 1	
+				portionsEatenForMultiply: 10	
 			},
 			{
 				code: "emotionstates",
@@ -132,6 +133,7 @@
 						priority: 1.1,
 						animationSpeed: 2,
 						animation: "Walk",
+						eatAnimation: "Dig",
 						eatSound: "player/eat",
 						eatTime: 1.5,
 						mincooldownHours: 1,

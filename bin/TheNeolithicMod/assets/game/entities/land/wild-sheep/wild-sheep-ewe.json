@@ -59,13 +59,14 @@
 			{ 
 				code: "multiply",
 				spawnEntityCode: "sheep-lamb",
-				requiresNearbyEntityCode: "wild-sheep-ram",
-				requiresNearbyEntityRange: 10,
 				spawnQuantityMin: 1,
-				spawnQuantityMax: 1,
-				pregnancyDays: 7,
-				multiplyCooldownDaysMin: 8,
-				multiplyCooldownDaysMax: 20,
+				spawnQuantityMax: 2,
+				growthCapEntityCodes: ["sheep-ram", "sheep-ewe", "sheep-lamb"],
+				requiresNearbyEntityCode: "wild-sheep-ram",
+				requiresNearbyEntityRange: 10,				
+				pregnancyDays: 5,
+				multiplyCooldownDaysMin: 4,
+				multiplyCooldownDaysMax: 11,
 				portionsEatenForMultiply: 10
 			},
 			{ 
@@ -148,6 +149,7 @@
 						eatTime: 1.5,
 						animationSpeed: 1.4,
 						animation: "Walk",
+						eatAnimation: "Eat",
 						mincooldownHours: 1,
 						maxcooldownHours: 4,
 					},

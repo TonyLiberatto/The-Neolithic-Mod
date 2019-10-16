@@ -6,7 +6,7 @@
 	drops: [
 		{
 			type: "block",
-			code: "neolithicmod:dead-pig-boar-ashgrey",
+			code: "neolithicmod:dead-pig-domestic-boar",
 		},
 	],
 	client: {
@@ -14,7 +14,8 @@
 		shape: { base: "entity/land/pig-domestic/boar" },
 		texture: { base: "entity/pig-domestic/boar" },
 		behaviors: [
-			{ code: "repulseagents" }, 
+			{ code: "repulseagents" },
+			{ code: "slaughterable" },
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
 			{ code: "interpolateposition" },
 		],
@@ -30,7 +31,8 @@
 	},
 	server: {
 		behaviors: [
-			{ code: "repulseagents" }, 
+			{ code: "repulseagents" },
+			{ code: "slaughterable" },			
 			{ code: "controlledphysics", stepHeight: 1.0001 },
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ code: "health", currenthealth: 25, maxhealth: 25, },

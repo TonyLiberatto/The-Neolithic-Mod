@@ -4,7 +4,9 @@
 	attributes: {
 		handbook: {
 			groupBy: ["panel-*"],
-			
+			extraSections: [
+					{ title: "handbook-item-sources", text: "Place green or brown bamboo stakes down, right click with cordage (Sisal twine. Leather Strips or Sinew). "}
+					]
 		}
 	},
 	variantgroups: [		

@@ -53,7 +53,7 @@
 				pregnancyDays: 5,
 				multiplyCooldownDaysMin: 6,
 				multiplyCooldownDaysMax: 11,
-				portionsEatenForMultiply: 1					
+				portionsEatenForMultiply: 10				
 			},
 			{
 				code: "emotionstates",
@@ -134,7 +134,7 @@
 						priority: 1.1,
 						animationSpeed: 2,
 						animation: "Walk",
-						eatAnimation: "Eat",
+						eatAnimation: "Dig",
 						eatSound: "player/eat",
 						eatTime: 1.5,
 						mincooldownHours: 1,

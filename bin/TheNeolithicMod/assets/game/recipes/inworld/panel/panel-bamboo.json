@@ -2,9 +2,8 @@
  {
     "Mode": "Swap",
     "Takes": {
-        "Code": "game:bamboostakes-*",
-        "Type": "Block",
-        "AllowedVariants": [ "game:bamboostakes-brown"],
+        "Code": "game:bamboostakes-brown",
+        "Type": "Block",        
 		"StackSize": 1
     },
     "Tool": {
@@ -24,9 +23,8 @@
  {
     "Mode": "Swap",
     "Takes": {
-        "Code": "game:bamboostakes-*",
-        "Type": "Block",
-        "AllowedVariants": [ "game:bamboostakes-green"],
+        "Code": "game:bamboostakes-green",
+        "Type": "Block",        
 		"StackSize": 1
     },
     "Tool": {
@@ -42,5 +40,89 @@
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
-}
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:bamboostakes-brown",
+        "Type": "Block",        
+		"StackSize": 1
+    },
+    "Tool": {
+        "Code": "neolithicmod:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "neolithicmod:panel-bamboo-brown-down",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:bamboostakes-green",
+        "Type": "Block",        
+		"StackSize": 1
+    },
+    "Tool": {
+        "Code": "neolithicmod:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "neolithicmod:panel-bamboo-green-down",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:bamboostakes-brown",
+        "Type": "Block",        
+		"StackSize": 1
+    },
+    "Tool": {
+        "Code": "neolithicmod:byproducts-sinew",
+        "Type": "Item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "neolithicmod:panel-bamboo-brown-down",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:bamboostakes-green",
+        "Type": "Block",        
+		"StackSize": 1
+    },
+    "Tool": {
+        "Code": "neolithicmod:byproducts-sinew",
+        "Type": "Item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "neolithicmod:panel-bamboo-green-down",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
 ]

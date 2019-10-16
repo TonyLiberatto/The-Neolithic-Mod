@@ -17,7 +17,7 @@
 	},
 	creativeinventory: { "general": ["*"], "neolithicfauna": ["*"] },
 	variantgroups: [
-		{ code: "type", states: ["ewe","ram","boar","sow","wolf-male","wolf-female","hyena" ] }
+		{ code: "type", states: ["ewe","ram","boar","sow","wolf-male","wolf-female","hyena", "domestic-boar", "domestic-sow" ] }
 	],
 		texturesByType: { base: "block/skinned/{type}"},
 	shapeByType: {
@@ -235,6 +235,34 @@
 				lastDrop: true
 			},
 		],
+		
+		"skinned-domestic-boar": [
+			{
+				type: "item",
+				code: "porkchops-raw",
+				quantity: {avg: 9.5, var: 2.5 },
+				tool: "knife"
+			},
+			{
+				type: "item",
+				code: "game:fat",
+				quantity: { avg: 10, var: 2 },
+				tool: "knife"
+			},
+			{
+				type: "item",
+				code: "animal-tendon",
+				quantity: { avg: 4, var: 1 },
+				tool: "knife"
+			},
+			{
+				type: "item",
+				code: "animal-large-bone",
+				quantity: { avg: 4, var: 0 },
+				tool: "knife"
+			},
+			
+		],
 
 		"skinned-sow": [
 			{
@@ -269,6 +297,35 @@
 				lastDrop: true
 			},
 		],
+		
+		"skinned-domestic-sow": [
+			{
+				type: "item", 
+				code: "porkchops-raw", 
+				quantity: { avg: 9, var: 2 } ,
+				tool:"knife"
+			},
+			{
+				type: "item", 
+				code: "game:fat", 
+				quantity: { avg: 10, var: 2 } ,
+				tool:"knife"
+			},
+			{
+				type: "item", 
+				code: "animal-tendon", 
+				quantity: { avg: 4, var: 1 } ,
+				tool:"knife"
+			},
+			{
+				type: "item", 
+				code: "animal-large-bone", 
+				quantity: { avg: 4, var: 0 } ,
+				tool:"knife"
+			},
+			
+		],
+		
 		"skinned-hyena": [		
 			{
 				type: "item", 
