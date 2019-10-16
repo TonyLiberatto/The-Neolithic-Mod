@@ -49,7 +49,6 @@ namespace Neolithic
 
         private void OnChunkColumnGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams = null)
         {
-            
             Dictionary<Vec3i, int> ores = new Dictionary<Vec3i, int>();
             for (int cY = 0; cY < chunks.Length; cY++)
             {

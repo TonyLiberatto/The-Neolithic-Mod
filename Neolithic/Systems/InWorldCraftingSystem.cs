@@ -21,7 +21,7 @@ namespace Neolithic
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     class IWCSPacket
     {
-        public string DataType { get; set; }
+        public EnumDataType DataType { get; set; }
         public string SerializedData { get; set; }
     }
 
@@ -40,7 +40,7 @@ namespace Neolithic
             this.sapi = api;
             sChannel = api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>((a, b) => 
             {
-                if (b.DataType == "Action")
+                if (b.DataType == EnumDataType.Action)
                 {
                     if (a?.CurrentBlockSelection?.Position == null) return;
                     if (api.World.Claims.TryAccess(a, a.CurrentBlockSelection.Position, EnumBlockAccessFlags.BuildOrBreak))
@@ -58,7 +58,7 @@ namespace Neolithic
             foreach (var val in InWorldCraftingRecipes)
             {
                 string data = JsonConvert.SerializeObject(val, Formatting.None, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
-                sChannel.SendPacket(new IWCSPacket() { DataType = "Recipes", SerializedData = data }, byPlayer);
+                sChannel.SendPacket(new IWCSPacket() { DataType = EnumDataType.Recipes, SerializedData = data }, byPlayer);
             }
         }
 
@@ -68,7 +68,7 @@ namespace Neolithic
             api.Event.MouseDown += SendBlockAction;
             cChannel = api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>(h =>
             {
-                if (h.DataType == "Recipes")
+                if (h.DataType == EnumDataType.Recipes)
                 {
                     var recipe = JsonConvert.DeserializeObject<KeyValuePair<AssetLocation, InWorldCraftingRecipe[]>>(h.SerializedData, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
                     InWorldCraftingRecipes.Add(recipe.Key, recipe.Value);
@@ -82,7 +82,7 @@ namespace Neolithic
             {
                 if (OnPlayerInteract(capi.World.Player, capi.World.Player.CurrentBlockSelection))
                 {
-                    cChannel.SendPacket(new IWCSPacket() { DataType = "Action" });
+                    cChannel.SendPacket(new IWCSPacket() { DataType = EnumDataType.Action });
                     capi.World.Player.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
                     e.Handled = true;
                 }
@@ -211,5 +211,10 @@ namespace Neolithic
     enum EnumInWorldCraftingMode
     {
         Swap, Create
+    }
+
+    enum EnumDataType
+    {
+        Action, Recipes
     }
 }
