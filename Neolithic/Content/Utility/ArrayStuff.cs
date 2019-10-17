@@ -269,6 +269,21 @@ namespace Neolithic
             return assets;
         }
 
+        public static bool WildCardMatch(this AssetLocation asset, AssetLocation match, EnumItemClass itemClass, ICoreAPI api)
+        {
+            if (asset == null || match == null) return false;
+
+            if (itemClass == EnumItemClass.Item)
+            {
+                return asset.GetItem(api).WildCardMatch(match);
+            }
+            else if(itemClass == EnumItemClass.Block)
+            {
+                return asset.GetBlock(api).WildCardMatch(match);
+            }
+            return false;
+        }
+
         public static bool IsBlock(this JsonItemStack stack) => stack.Type == EnumItemClass.Block;
         public static bool IsItem(this JsonItemStack stack) => stack.Type == EnumItemClass.Item;
     }

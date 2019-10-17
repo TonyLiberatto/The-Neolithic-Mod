@@ -166,7 +166,7 @@ namespace Neolithic
         }
 
         public bool IsValid(IPlayer byPlayer, InWorldCraftingRecipe recipe, ItemSlot slot) =>
-            (recipe.Tool.Code.ToString() == slot.Itemstack?.Collectible?.Code?.ToString() && slot.Itemstack?.StackSize >= recipe.Tool.StackSize) ||
+            (slot.Itemstack?.Collectible?.Code?.WildCardMatch(recipe?.Tool?.Code, slot.Itemstack.Collectible.ItemClass, byPlayer.Entity.World.Api) ?? false && slot.Itemstack?.StackSize >= recipe.Tool.StackSize) ||
             (recipe.Tool.Code.IsWildCard && recipe.Tool.Code.GetMatches(byPlayer.Entity.Api).Any(t => t.ToString() == slot.Itemstack?.Collectible?.Code?.ToString() && slot.Itemstack?.StackSize >= recipe.Tool.StackSize))
             && ((recipe.Tool.Attributes != null) && (recipe.Tool.Attributes == slot.Itemstack?.Collectible?.Attributes));
     }
