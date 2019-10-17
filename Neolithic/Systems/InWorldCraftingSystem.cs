@@ -70,8 +70,15 @@ namespace Neolithic
             {
                 if (h.DataType == EnumDataType.Recipes)
                 {
-                    var recipe = JsonConvert.DeserializeObject<KeyValuePair<AssetLocation, InWorldCraftingRecipe[]>>(h.SerializedData, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
-                    InWorldCraftingRecipes.Add(recipe.Key, recipe.Value);
+                    try
+                    {
+                        var recipe = JsonConvert.DeserializeObject<KeyValuePair<AssetLocation, InWorldCraftingRecipe[]>>(h.SerializedData, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+                        InWorldCraftingRecipes.Add(recipe.Key, recipe.Value);
+                    }
+                    catch (Exception ex)
+                    {
+                        api.World.Logger.Error("Exception thrown while receiving an In World Recipe packet: {0}", ex);
+                    }
                 }
             });
         }
