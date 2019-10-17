@@ -1,6 +1,6 @@
 [ 
  {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-bamboo-brown-*",
         "Type": "Block",		
@@ -8,19 +8,20 @@
     },
     "Tool": {
         "Code": "neolithicmod:animal-leatherstrips",
-        "Type": "Item",				
+        "Type": "Item",
+		"StackSize": 2
     },
     "Makes": [{
         "Code": "neolithicmod:door-assemble-bamboo-brown-east",
         "Type": "Block",		
-        "StackSize": 2
+        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
  {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-bamboo-green-*",
         "Type": "Block",		
@@ -28,19 +29,20 @@
     },
     "Tool": {
         "Code": "neolithicmod:animal-leatherstrips",
-        "Type": "Item",				
+        "Type": "Item",
+		"StackSize": 2
     },
     "Makes": [{
         "Code": "neolithicmod:door-assemble-bamboo-green-east",
         "Type": "Block",		
-        "StackSize": 2
+        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  }, 
  {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-aged-debarked-*",
         "Type": "Block",		
@@ -48,19 +50,20 @@
     },
     "Tool": {
         "Code": "game:hinges-*",
-        "Type": "Item",				
+        "Type": "Item",
+		"StackSize": 2
     },
     "Makes": [{
         "Code": "neolithicmod:door-assemble-aged-east",
         "Type": "Block",		
-        "StackSize": 2
+        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },  
   {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-acacia-debarked-*",
         "Type": "Block",		
@@ -68,19 +71,20 @@
     },
     "Tool": {
         "Code": "game:hinges-*",
-        "Type": "Item",				
+        "Type": "Item",
+		"StackSize": 2
     },
     "Makes": [{
         "Code": "neolithicmod:door-assemble-acacia-east",
         "Type": "Block",		
-        "StackSize": 2
+        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
  {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-birch-debarked-*",
         "Type": "Block",		
@@ -88,19 +92,20 @@
     },
     "Tool": {
         "Code": "game:hinges-*",
-        "Type": "Item",				
+        "Type": "Item",
+		 "StackSize": 2
     },
     "Makes": [{
         "Code": "neolithicmod:door-assemble-birch-east",
         "Type": "Block",		
-        "StackSize": 2
+       
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
 {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-kapok-debarked-*",
         "Type": "Block",		
@@ -108,19 +113,20 @@
     },
     "Tool": {
         "Code": "game:hinges-*",
-        "Type": "Item",				
+        "Type": "Item",	
+		"StackSize": 2
     },
     "Makes": [{
         "Code": "neolithicmod:door-assemble-kapok-east",
         "Type": "Block",		
-        "StackSize": 2
+        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
  {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-maple-debarked-*",
         "Type": "Block",		
@@ -128,19 +134,20 @@
     },
     "Tool": {
         "Code": "game:hinges-*",
-        "Type": "Item",				
+        "Type": "Item",
+		"StackSize": 2
     },
     "Makes": [{
         "Code": "neolithicmod:door-assemble-maple-east",
         "Type": "Block",		
-        "StackSize": 2
+        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
  {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-oaks-debarked-*",
         "Type": "Block",		
@@ -148,19 +155,20 @@
     },
     "Tool": {
         "Code": "game:hinges-*",
-        "Type": "Item",				
+        "Type": "Item",
+		"StackSize": 2
     },
     "Makes": [{
        "Code": "neolithicmod:door-assemble-oaks-east",
         "Type": "Block",		
-        "StackSize": 2
+        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
  {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-pine-debarked-*",
         "Type": "Block",		
@@ -168,12 +176,13 @@
     },
     "Tool": {
         "Code": "game:hinges-*",
-        "Type": "Item",				
+        "Type": "Item",
+		"StackSize": 2
     },
     "Makes": [{
         "Code": "neolithicmod:door-assemble-pine-east",
         "Type": "Block",		
-        "StackSize": 2
+        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",

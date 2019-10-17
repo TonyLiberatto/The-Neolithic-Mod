@@ -28,7 +28,7 @@
 		"*-west": { base: "game:block/wood/chest/normal-labeled", rotateY: 90 },		
 	},
 	drops: [{ code: "neolithicmod:chest-east", attributes: { type: "normal-labeled-{color}" } }],
-	creativeinventory: { "general": [""], "decorative": [""], "neolithicdeco": [""] },
+	creativeinventory: { "general": ["*"], "decorative": [""], "neolithicdeco": [""] },
 	blockmaterial: "Wood",
 	replaceable: 900,
 	resistance: 1.5,

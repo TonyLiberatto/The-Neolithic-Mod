@@ -14,8 +14,16 @@
 		},
 		defaultType: "normal-generic-acacia",
 		types: ["normal-generic-acacia","normal-generic-aged","normal-generic-birch","normal-generic-kapok","normal-generic-maple","normal-generic-oak","normal-generic-pine","normal-generic-bamboo-green","normal-generic-bamboo-brown", ],
-		drop: {
-			"normal-generic-*": true,
+		drop: {			
+			"normal-generic-acacia": true,
+			"normal-generic-aged": true,
+			"normal-generic-birch": true,
+			"normal-generic-kapok": true,
+			"normal-generic-maple": true,
+			"normal-generic-oak": true,
+			"normal-generic-pine": true,
+			"normal-generic-bamboo-green": true,
+			"normal-generic-bamboo-brown": true,
 		},
 		quantitySlots: {
 			"normal-generic-acacia": 32,
@@ -49,14 +57,16 @@
 			"normal-generic-pine": "game:block/wood/chest/normal",
 			"normal-generic-bamboo-green": "game:block/wood/chest/normal",
 			"normal-generic-bamboo-brown": "game:block/wood/chest/normal",
-		}
+		},
+		variantByGroup: "side",
+		variantByGroupInventory: null
 	},
 	variantgroups: [
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
 	],
 	behaviors: [
 		{ name: "Carryable", properties: { translation: [ 0.0625, 0, 0 ], rotation: [ 0, 180, 0 ], slots: { "Hands": {  }, "Back": {  },}}},
-		{name: "Container"}, 
+		{name: "Container"}, {name: "Lockable" },
 		{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},		
 	],
 	
@@ -79,8 +89,14 @@
 			}
 		]
 	},
-	heldTpIdleAnimation: "holdunderarm",
-	shape: { base: "game:block/wood/chest/normal", rotateY: 270 },
+	heldTpIdleAnimation: "holdunderarm",	
+	shapeInventory: { base: "game:block/wood/chest/normal", rotateY: 270 },
+	shapeByType: {
+		"*-north": { base: "game:block/wood/chest/normal", rotateY: 0 },
+		"*-east": { base: "game:block/wood/chest/normal", rotateY: 270 },
+		"*-west": { base: "game:block/wood/chest/normal", rotateY: 90 },
+		"*-south": { base: "game:block/wood/chest/normal", rotateY: 180 },
+	},
 	"_comment": "Must declare textures so they get added to the block texture atlas",
 	textures: {
 		"normal-generic-acacia-corners": { base: "block/wood/chest/acacia/corners" },
@@ -130,7 +146,7 @@
 	},
 	blockmaterial: "Wood",
 	replaceable: 900,
-	resistance: 2,
+	resistance: 3,
 	lightAbsorption: 0,
 	sidesolid: {
 		all: false
@@ -149,10 +165,10 @@
 		burnDuration: 35,
 	},
 	sounds: {
-		"place": "block/planks",
-		"hit": "block/planks",
-		"break": "block/planks",
-		"walk": "walk/wood"
+		"place": "game:block/planks",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		"walk": "game:walk/wood"
 	},
 	materialDensity: 600,
 	tpHandTransform: {

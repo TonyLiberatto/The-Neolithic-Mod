@@ -13,8 +13,7 @@
     },
     "Makes": [{
         "Code": "neolithicmod:chestframe-bamboo-brown-east",
-        "Type": "Block",		
-        "StackSize": 1
+        "Type": "Block",        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
@@ -34,8 +33,7 @@
     },
     "Makes": [{
         "Code": "neolithicmod:chestframe-bamboo-green-east",
-        "Type": "Block",		
-        "StackSize": 1
+        "Type": "Block",        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
@@ -55,15 +53,14 @@
     },
     "Makes": [{
         "Code": "neolithicmod:chestframe-aged-east",
-        "Type": "Block",		
-        "StackSize": 1
+        "Type": "Block",        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },  
   {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-acacia-debarked-*",
         "Type": "Block",		
@@ -76,15 +73,14 @@
     },
     "Makes": [{
         "Code": "neolithicmod:chestframe-acacia-east",
-        "Type": "Block",		
-        "StackSize": 1
+        "Type": "Block",        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
  {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-birch-debarked-*",
         "Type": "Block",		
@@ -97,15 +93,14 @@
     },
     "Makes": [{
         "Code": "neolithicmod:chestframe-birch-east",
-        "Type": "Block",		
-        "StackSize": 1
+        "Type": "Block",        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
 {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-kapok-debarked-*",
         "Type": "Block",		
@@ -118,15 +113,14 @@
     },
     "Makes": [{
         "Code": "neolithicmod:chestframe-kapok-east",
-        "Type": "Block",		
-        "StackSize": 1
+        "Type": "Block",        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
  {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-maple-debarked-*",
         "Type": "Block",		
@@ -139,15 +133,14 @@
     },
     "Makes": [{
         "Code": "neolithicmod:chestframe-maple-east",
-        "Type": "Block",		
-        "StackSize": 1
+        "Type": "Block",        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
  {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-oaks-debarked-*",
         "Type": "Block",		
@@ -160,15 +153,14 @@
     },
     "Makes": [{
        "Code": "neolithicmod:chestframe-oaks-east",
-        "Type": "Block",		
-        "StackSize": 1
+        "Type": "Block",        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
  {
-    "Mode": "Create",
+    "Mode": "Swap",
     "Takes": {
 		"Code": "neolithicmod:panel-pine-debarked-*",
         "Type": "Block",		
@@ -181,8 +173,7 @@
     },
     "Makes": [{
         "Code": "neolithicmod:chestframe-pine-east",
-        "Type": "Block",		
-        "StackSize": 1
+        "Type": "Block",        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
