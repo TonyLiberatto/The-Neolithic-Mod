@@ -77,7 +77,8 @@ namespace Neolithic
                     }
                     catch (Exception ex)
                     {
-                        api.World.Logger.Error("Exception thrown while receiving an In World Recipe packet: {0}", ex);
+                        api.World.Logger.Error("Exception thrown while receiving an In World Recipe packet: {0}, Data: {1}", ex, h.SerializedData);
+                        throw ex;
                     }
                 }
             });
