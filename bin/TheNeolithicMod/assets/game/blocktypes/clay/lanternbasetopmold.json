@@ -10,74 +10,23 @@
 		{ code:"materialtype", states: ["raw", "burned"] },
 	],
 	attributesByType: {
-		"*-blue-burned": {
+		"*-burned": {
 			"requiredUnits": 50,
 			"fillHeight": 1,
-			"fillQuadsByLevel": [ { x1: 1, z1: 3, x2: 14, z2: 13} ],
+			"fillQuadsByLevel": [ { x1: 1, z1: 3, x2: 15, z2: 13} ],
 			"drops": [
 				{ 
-				type:"Block", 
+				class:"Block", 
 				code: "lantern-top-{metal}", 
-				quantity: { avg: 1, var: 0 },
+				stacksize: 1
 				},
 				{ 
-				type:"Block",
+				class:"Block",
 				code: "lantern-base-{metal}",
-				quantity: { avg: 1, var: 0 },
+				stacksize: 1
 				}
 				]
-		},
-		"*-brown-burned": {
-			"requiredUnits": 50,
-			"fillHeight": 1,
-			"fillQuadsByLevel": [ { x1: 1, z1: 3, x2: 14, z2: 13} ],
-			"drops": [
-				{ 
-				type:"Block", 
-				code: "lantern-top-{metal}", 
-				quantity: { avg: 1, var: 0 },
-				},
-				{ 
-				type:"Block",
-				code: "lantern-base-{metal}",
-				quantity: { avg: 1, var: 0 },
-				}
-				]
-		},
-		"*-fire-burned": {
-			"requiredUnits": 50,
-			"fillHeight": 1,
-			"fillQuadsByLevel": [ { x1: 1, z1: 3, x2: 14, z2: 13} ],
-			"drops": [
-				{ 
-				type:"Block", 
-				code: "lantern-top-{metal}", 
-				quantity: { avg: 1, var: 0 },
-				},
-				{ 
-				type:"Block",
-				code: "lantern-base-{metal}",
-				quantity: { avg: 1, var: 0 },
-				}
-				]
-		},
-		"*-red-burned": {
-			"requiredUnits": 50,
-			"fillHeight": 1,
-			"fillQuadsByLevel": [ { x1: 1, z1: 3, x2: 14, z2: 13} ],
-			"drops": [
-				{ 
-				type:"Block", 
-				code: "lantern-top-{metal}", 
-				quantity: { avg: 1, var: 0 },
-				},
-				{ 
-				type:"Block",
-				code: "lantern-base-{metal}",
-				quantity: { avg: 1, var: 0 },
-				}
-				]
-		},
+		}
 	},
 	entityClassByType: {
 		"*-burned": "ToolMold",
