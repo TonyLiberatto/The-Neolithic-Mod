@@ -151,7 +151,7 @@
   "block-candlemold-*-plain": "Empty Metal Candle Mold",
   "blockdesc-candlemold-*-plain": "Right click with sisal twine to make Wicked Candle Mold",
   "block-candlemold-*-burned": "Wicked Metal Candle Mold",
-  "blockdesc-candlemold-*-plain": "Pour smelted bees wax to make wax candle or smelted fat to make tallow candles",
+  "blockdesc-candlemold-*-burned": "Pour smelted bees wax to make wax candle or smelted fat to make tallow candles",
   "block-claycandlemold-*-raw": "Raw Clay Candle Mold",
   "blockdesc-claycandlemold-*-raw": "Burn in a fire pit to make a Clay Candle Mold",
   "block-claycandlemold-*-burned": "Burned Clay Candle Mold",

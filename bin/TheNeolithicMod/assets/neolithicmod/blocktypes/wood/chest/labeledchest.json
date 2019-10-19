@@ -13,8 +13,16 @@
 		inventoryClassName: "chest",
 		defaultType: "normal-labeled-acacia",
 		types: ["normal-labeled-acacia","normal-labeled-aged","normal-labeled-birch","normal-labeled-kapok","normal-labeled-maple","normal-labeled-oak","normal-labeled-pine","normal-labeled-bamboo-green","normal-labeled-bamboo-brown", ],
-		drop: {
-			"normal-labeled-*": true,
+		drop: {			
+			"normal-labeled-acacia": true,
+			"normal-labeled-aged": true,
+			"normal-labeled-birch": true,
+			"normal-labeled-kapok": true,
+			"normal-labeled-maple": true,
+			"normal-labeled-oak": true,
+			"normal-labeled-pine": true,
+			"normal-labeled-bamboo-green": true,
+			"normal-labeled-bamboo-brown": true,
 		},
 		quantitySlots: {
 			"normal-labeled-acacia": 32,
@@ -46,7 +54,9 @@
 			"normal-labeled-pine": "game:block/wood/chest/normal-labeled",
 			"normal-labeled-bamboo-green": "game:block/wood/chest/normal-labeled",
 			"normal-labeled-bamboo-brown": "game:block/wood/chest/normal-labeled",
-		}
+		},
+		variantByGroup: "side",
+		variantByGroupInventory: null
 	},
 	behaviors: [
 		{
@@ -84,7 +94,13 @@
 		]
 	},
 	heldTpIdleAnimation: "holdunderarm",
-	shape: { base: "game:block/wood/chest/normal", rotateY: 270 },
+	shapeInventory: { base: "game:block/wood/chest/normal", rotateY: 270 },
+	shapeByType: {
+		"*-north": { base: "game:block/wood/chest/normal", rotateY: 0 },
+		"*-east": { base: "game:block/wood/chest/normal", rotateY: 270 },
+		"*-west": { base: "game:block/wood/chest/normal", rotateY: 90 },
+		"*-south": { base: "game:block/wood/chest/normal", rotateY: 180 },
+	},
 	"_comment": "Must declare textures so they get added to the block texture atlas",
 	textures: {
 		"normal-labeled-acacia-corners": { base: "block/wood/chest/acacia/corners" },
@@ -162,10 +178,10 @@
 		burnDuration: 35,
 	},
 	sounds: {
-		"place": "block/planks",
-		"hit": "block/planks",
-		"break": "block/planks",
-		"walk": "walk/wood"
+		"place": "game:block/planks",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		"walk": "game:walk/wood"
 	},
 	materialDensity: 600,
 	tpHandTransform: {
