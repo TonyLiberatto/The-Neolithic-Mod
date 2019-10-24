@@ -87,7 +87,7 @@
 			},
 			{
 				type: "item", 
-				code: "animal-large-bone", 
+				code: "game:bone", 
 				quantity: { avg: 4, var: 0 } ,
 				tool:"knife"
 			},
@@ -124,7 +124,7 @@
 			},
 			{
 				type: "item", 
-				code: "animal-large-bone", 
+				code: "game:bone",
 				quantity: { avg: 4, var: 0 } ,
 				tool:"knife"
 			},
@@ -157,7 +157,7 @@
 			},
 			{
 				type: "item", 
-				code: "animal-large-bone", 
+				code: "game:bone",
 				quantity: { avg: 4, var: 0 } ,
 				tool:"knife"
 			},
@@ -189,7 +189,7 @@
 			},
 			{
 				type: "item", 
-				code: "animal-large-bone", 
+				code: "game:bone",
 				quantity: { avg: 4, var: 0 } ,
 				tool:"knife"
 			},
@@ -223,7 +223,7 @@
 			},
 			{
 				type: "item",
-				code: "animal-large-bone",
+				code: "game:bone",
 				quantity: { avg: 4, var: 0 },
 				tool: "knife"
 			},
@@ -257,7 +257,7 @@
 			},
 			{
 				type: "item",
-				code: "animal-large-bone",
+				code: "game:bone",
 				quantity: { avg: 4, var: 0 },
 				tool: "knife"
 			},
@@ -285,7 +285,7 @@
 			},
 			{
 				type: "item", 
-				code: "animal-large-bone", 
+				code: "game:bone",
 				quantity: { avg: 4, var: 0 } ,
 				tool:"knife"
 			},
@@ -319,7 +319,7 @@
 			},
 			{
 				type: "item", 
-				code: "animal-large-bone", 
+				code: "game:bone",
 				quantity: { avg: 4, var: 0 } ,
 				tool:"knife"
 			},
@@ -347,7 +347,7 @@
 			},
 			{
 				type: "item", 
-				code: "animal-large-bone", 
+				code: "game:bone", 
 				quantity: { avg: 4, var: 0 } ,
 				tool:"knife"
 			},

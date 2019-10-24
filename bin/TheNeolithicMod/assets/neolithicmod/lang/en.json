@@ -407,8 +407,9 @@
   "block-panel-kapok-debarked-*":"Kapok Debarked Panel",
   "block-panel-maple-debarked-*":"Maple Debarked Panel",
   "blockdesc-panel-bamboo-*":"place on ground or walls for decoration, on ground right click with leather strips to make Door Assemble, or Very Thin Branches to make a Chest Frame, or bamboo stakes to make bamboo planks.",
-  "blockdesc-panel-*":"place on ground or walls for decoration, on ground right click with hinges to make Door Assemble, or Very Thin Branches to make a Chest Frame.",
-  
+  "blockdesc-panel-*-planks-*":"place on ground or walls for decoration.",
+  "blockdesc-panel-*-bark-*":"place on ground or walls for decoration.",
+  "blockdesc-panel-*-debarked-*":"place on ground or walls for decoration, on ground right click with hinges to make Door Assemble, or Very Thin Branches to make a Chest Frame.",
   
   "recipeingredient-item-mutton-raw": "mutton",
   "recipeingredient-item-chicken-raw": "chicken",
