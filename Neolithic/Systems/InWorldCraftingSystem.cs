@@ -84,6 +84,15 @@ namespace Neolithic
             });
         }
 
+        public override void Dispose()
+        {
+            if (capi != null)
+            {
+                InWorldCraftingRecipes.Clear();
+            }
+            base.Dispose();
+        }
+
         private void SendBlockAction(MouseEvent e)
         {
             if (e.Button == EnumMouseButton.Right && capi.World.Player.Entity.Controls.Sneak)
