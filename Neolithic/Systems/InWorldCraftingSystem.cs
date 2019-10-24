@@ -72,16 +72,25 @@ namespace Neolithic
                 {
                     try
                     {
-                        var recipe = JsonConvert.DeserializeObject<KeyValuePair<AssetLocation, InWorldCraftingRecipe[]>>(h.SerializedData, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+                        var recipe = JsonConvert.DeserializeObject<KeyValuePair<AssetLocation, InWorldCraftingRecipe[]>>(h.SerializedData, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore, NullValueHandling = NullValueHandling.Ignore });
                         InWorldCraftingRecipes.Add(recipe.Key, recipe.Value);
                     }
                     catch (Exception ex)
                     {
-                        api.World.Logger.Error("Exception thrown while receiving an In World Recipe packet: {0}, Data: {1}", ex, h.SerializedData);
+                        api.World.Logger.Error("Exception thrown while receiving an In World Recipe packet: {0}, Data: {1}", ex, h?.SerializedData ?? "");
                         throw ex;
                     }
                 }
             });
+        }
+
+        public override void Dispose()
+        {
+            if (capi != null)
+            {
+                InWorldCraftingRecipes.Clear();
+            }
+            base.Dispose();
         }
 
         private void SendBlockAction(MouseEvent e)
@@ -125,7 +134,7 @@ namespace Neolithic
                         {
                             if (recipe.IsSwap)
                             {
-                                var make = recipe.Makes[0];
+                                var make = recipe.Makes[0].Clone();
                                 make.Resolve(byPlayer.Entity.World, null);
                                 if (make.IsBlock())
                                 {
@@ -141,8 +150,9 @@ namespace Neolithic
                             {
                                 foreach (var make in recipe.Makes)
                                 {
-                                    make.Resolve(byPlayer.Entity.World, null);
-                                    byPlayer.Entity.World.SpawnItemEntity(make.ResolvedItemstack, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
+                                    var makeClone = make.Clone();
+                                    makeClone.Resolve(byPlayer.Entity.World, null);
+                                    byPlayer.Entity.World.SpawnItemEntity(makeClone.ResolvedItemstack, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
                                 }
                                 TakeOrDamage(recipe, slot, byPlayer);
                                 if (recipe.Remove) byPlayer.Entity.World.BlockAccessor.SetBlock(0, pos);

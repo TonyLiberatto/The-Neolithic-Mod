@@ -69,7 +69,7 @@ namespace Neolithic
 
             RegisterGameTickListener(dt =>
             {
-                if (api.Side.IsClient())
+                if (api?.World?.Side.IsClient() ?? false)
                 {
                     ICoreClientAPI capi = api as ICoreClientAPI;
                     float? translateY = (((float?)inventory[0].Itemstack?.StackSize / inventory[0].Itemstack?.Collectible?.MaxStackSize) * 0.35f) + 0.01f;
@@ -79,7 +79,8 @@ namespace Neolithic
 
                     foreach (var val in props)
                     {
-                        if (inventory[0].Itemstack?.Collectible?.Code?.ToString() == val.Input.Code.ToString())
+                        if (val?.Input?.Code == null) continue;
+                        if (inventory[0]?.Itemstack?.Collectible?.Code?.ToString() == val.Input.Code.ToString())
                         {
                             MeshData fillPlane = QuadMeshUtil.GetCustomQuad(0, 0, 0, 0.9f, 0.9f, 255, 255, 255, 255);
                             fillPlane.Rotate(new Vec3f(0, 0, 0), GameMath.DEG2RAD * -90, 0, 0).Translate(0.05f, y, 0.95f);
@@ -96,11 +97,12 @@ namespace Neolithic
                     MarkDirty(true);
 
                 }
-                else if (api.Side.IsServer())
+                else if (api?.World?.Side.IsServer() ?? false)
                 {
                     foreach (var val in props)
                     {
-                        if (inventory[0].Itemstack?.Collectible?.Code?.ToString() == val.Input.Code.ToString() && val.Output != null)
+                        if (val?.Input?.Code == null) continue;
+                        if (inventory[0]?.Itemstack?.Collectible?.Code?.ToString() == val.Input.Code.ToString() && val.Output != null)
                         {
                             if (api.World.Calendar.TotalHours > timeWhenDone && timeWhenDone != 0)
                             {
