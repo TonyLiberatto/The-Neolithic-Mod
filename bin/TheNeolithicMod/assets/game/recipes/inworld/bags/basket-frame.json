@@ -1,24 +1,4 @@
-[ 
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "neolithicmod:branch-cordage-very-thin-acacia-bark-reeds-ud",
-        "Type": "Block",        
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "neolithicmod:branch-very-thin-acacia-bark-*",
-        "Type": "Block",
-		"StackSize": 4		
-    },
-    "Makes": [{
-        "Code": "neolithicmod:basket-frame-acacia-bark-reeds",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
+[
  {
     "Mode": "Swap",
     "Takes": {
@@ -42,26 +22,6 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "neolithicmod:branch-cordage-very-thin-birch-bark-reeds-ud",
-        "Type": "Block",        
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "neolithicmod:branch-very-thin-birch-bark-*",
-        "Type": "Block",
-		"StackSize": 4		
-    },
-    "Makes": [{
-        "Code": "neolithicmod:basket-frame-birch-bark-reeds",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
 		"Code": "neolithicmod:branch-cordage-very-thin-birch-debarked-reeds-ud",
         "Type": "Block",        
 		"Remove": true	
@@ -73,26 +33,6 @@
     },
     "Makes": [{
         "Code": "neolithicmod:basket-frame-birch-debarked-reeds",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "neolithicmod:branch-cordage-very-thin-kapok-bark-reeds-ud",
-        "Type": "Block",        
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "neolithicmod:branch-very-thin-kapok-bark-*",
-        "Type": "Block",
-		"StackSize": 4		
-    },
-    "Makes": [{
-        "Code": "neolithicmod:basket-frame-kapok-bark-reeds",
         "Type": "Block",        
     }],
     "IsTool": false,
@@ -122,26 +62,6 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "neolithicmod:branch-cordage-very-thin-maple-bark-reeds-ud",
-        "Type": "Block",        
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "neolithicmod:branch-very-thin-maple-bark-*",
-        "Type": "Block",
-		"StackSize": 4		
-    },
-    "Makes": [{
-        "Code": "neolithicmod:basket-frame-maple-bark-reeds",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
 		"Code": "neolithicmod:branch-cordage-very-thin-maple-debarked-reeds-ud",
         "Type": "Block",        
 		"Remove": true	
@@ -162,26 +82,6 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "neolithicmod:branch-cordage-very-thin-oak-bark-reeds-ud",
-        "Type": "Block",        
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "neolithicmod:branch-very-thin-oak-bark-*",
-        "Type": "Block",
-		"StackSize": 4		
-    },
-    "Makes": [{
-        "Code": "neolithicmod:basket-frame-oak-bark-reeds",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
 		"Code": "neolithicmod:branch-cordage-very-thin-oak-debarked-reeds-ud",
         "Type": "Block",        
 		"Remove": true	
@@ -193,26 +93,6 @@
     },
     "Makes": [{
         "Code": "neolithicmod:basket-frame-oak-debarked-reeds",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "neolithicmod:branch-cordage-very-thin-pine-bark-reeds-ud",
-        "Type": "Block",        
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "neolithicmod:branch-very-thin-pine-bark-*",
-        "Type": "Block",
-		"StackSize": 4		
-    },
-    "Makes": [{
-        "Code": "neolithicmod:basket-frame-pine-bark-reeds",
         "Type": "Block",        
     }],
     "IsTool": false,

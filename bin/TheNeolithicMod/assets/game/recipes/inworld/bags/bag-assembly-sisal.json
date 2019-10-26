@@ -2,26 +2,6 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "neolithicmod:branch-cordage-very-thin-acacia-bark-sisal-ud",
-        "Type": "Block",        
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "neolithicmod:branch-very-thin-acacia-bark-*",
-        "Type": "Block",
-		"StackSize": 4		
-    },
-    "Makes": [{
-        "Code": "neolithicmod:bag-assembly-acacia-bark-sisal",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
 		"Code": "neolithicmod:branch-cordage-very-thin-acacia-debarked-sisal-ud",
         "Type": "Block",        
 		"Remove": true	
@@ -42,26 +22,6 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "neolithicmod:branch-cordage-very-thin-birch-bark-sisal-ud",
-        "Type": "Block",        
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "neolithicmod:branch-very-thin-birch-bark-*",
-        "Type": "Block",
-		"StackSize": 4		
-    },
-    "Makes": [{
-        "Code": "neolithicmod:bag-assembly-birch-bark-sisal",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
 		"Code": "neolithicmod:branch-cordage-very-thin-birch-debarked-sisal-ud",
         "Type": "Block",        
 		"Remove": true	
@@ -73,26 +33,6 @@
     },
     "Makes": [{
         "Code": "neolithicmod:bag-assembly-birch-debarked-sisal",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "neolithicmod:branch-cordage-very-thin-kapok-bark-sisal-ud",
-        "Type": "Block",        
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "neolithicmod:branch-very-thin-kapok-bark-*",
-        "Type": "Block",
-		"StackSize": 4		
-    },
-    "Makes": [{
-        "Code": "neolithicmod:bag-assembly-kapok-bark-sisal",
         "Type": "Block",        
     }],
     "IsTool": false,
@@ -122,26 +62,6 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "neolithicmod:branch-cordage-very-thin-maple-bark-sisal-ud",
-        "Type": "Block",        
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "neolithicmod:branch-very-thin-maple-bark-*",
-        "Type": "Block",
-		"StackSize": 4		
-    },
-    "Makes": [{
-        "Code": "neolithicmod:bag-assembly-maple-bark-sisal",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
 		"Code": "neolithicmod:branch-cordage-very-thin-maple-debarked-sisal-ud",
         "Type": "Block",        
 		"Remove": true	
@@ -162,26 +82,6 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "neolithicmod:branch-cordage-very-thin-oak-bark-sisal-ud",
-        "Type": "Block",        
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "neolithicmod:branch-very-thin-oak-bark-*",
-        "Type": "Block",
-		"StackSize": 4		
-    },
-    "Makes": [{
-        "Code": "neolithicmod:bag-assembly-oak-bark-sisal",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
 		"Code": "neolithicmod:branch-cordage-very-thin-oak-debarked-sisal-ud",
         "Type": "Block",        
 		"Remove": true	
@@ -193,26 +93,6 @@
     },
     "Makes": [{
         "Code": "neolithicmod:bag-assembly-oak-debarked-sisal",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "neolithicmod:branch-cordage-very-thin-pine-bark-sisal-ud",
-        "Type": "Block",        
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "neolithicmod:branch-very-thin-pine-bark-*",
-        "Type": "Block",
-		"StackSize": 4		
-    },
-    "Makes": [{
-        "Code": "neolithicmod:bag-assembly-pine-bark-sisal",
         "Type": "Block",        
     }],
     "IsTool": false,
